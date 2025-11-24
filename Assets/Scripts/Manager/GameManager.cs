@@ -7,27 +7,27 @@ using Luna.Unity;
 
 public class GameManager : Singleton<GameManager>
 {
-    public void gotoStore()
-    {
-        Debug.Log("Goto Store");
-        LifeCycle.GameEnded();
-        Playable.InstallFullGame();
-        SoundManager.Ins.Mute();
-    }
+  public void gotoStore()
+  {
+    Debug.Log("Goto Store");
+    LifeCycle.GameEnded();
+    Playable.InstallFullGame();
+    SoundManager.Ins.Mute();
+  }
 
-    private void Update()
+  private void Update()
+  {
+    if (isEndGame && Input.GetMouseButtonDown(0))
     {
-        if (isEndGame && Input.GetMouseButtonDown(0))
-        {
-            gotoStore();
-        }
+      gotoStore();
     }
+  }
 
-    public bool isEndGame = false;
+  public bool isEndGame = false;
 
-    public void showEndGame()
-    {
-        Debug.Log("End Game");
-        isEndGame = true;
-    }
+  public void showEndGame()
+  {
+    Debug.Log("End Game");
+    isEndGame = true;
+  }
 }

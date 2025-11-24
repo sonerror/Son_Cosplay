@@ -1,73 +1,92 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public enum FxType
 {
-    Click = 0,
-    Cow = 1,
-    Pig = 2,
-    Chicken = 3,
-    Humm = 4,
-    Engine = 5,
-    Star = 6,
-    CompleteBuild = 7,
-    Happy = 8,
-    Done = 9,
-    OpenPopup = 10,
+  Angry,
+  Happy,
+  WearHairBang,
+  Shower,
+  Towel,
+  Click,
 }
 
 public class SoundManager : Singleton<SoundManager>
 {
-    public AudioClip[] audioClips;
-    public AudioSource sound1;
-    private AudioSource[] fx = new AudioSource[11];
+  public AudioClip[] audioClips;
+  // public AudioSource sound1;
+  private AudioSource[] fx = new AudioSource[11];
 
-    bool isMute = false;
+  bool isMute = false;
+  public bool IsMute => isMute;
 
-    public void PlayFx(FxType fxType)
+  public void PlayFx(FxType fxType)
+  {
+    if (!isMute)
     {
-        if (!isMute)
-        {
-            if (fx[(int)fxType] == null)
-            {
-                fx[(int)fxType] = new GameObject().AddComponent<AudioSource>();
-                fx[(int)fxType].clip = audioClips[(int)fxType];
-            }
+      if (fx[(int)fxType] == null)
+      {
+        fx[(int)fxType] = new GameObject().AddComponent<AudioSource>();
+        fx[(int)fxType].clip = audioClips[(int)fxType];
+      }
 
-            fx[(int)fxType].Play();
-        }
+      fx[(int)fxType].Play();
     }
+  }
 
-    public IEnumerator IE_PlayFxAfterTime(FxType fxType, float time)
+  public void PlaySoundLoop(FxType fxType)
+  {
+    if (!isMute)
     {
-        yield return Cache.GetWFS(time);
-        if (!isMute)
-        {
-            if (fx[(int)fxType] == null)
-            {
-                fx[(int)fxType] = new GameObject().AddComponent<AudioSource>();
-                fx[(int)fxType].clip = audioClips[(int)fxType];
-            }
+      if (fx[(int)fxType] == null)
+      {
+        fx[(int)fxType] = new GameObject().AddComponent<AudioSource>();
+        fx[(int)fxType].clip = audioClips[(int)fxType];
+        fx[(int)fxType].loop = true;
+      }
 
-            fx[(int)fxType].Play();
-        }
+      fx[(int)fxType].Play();
     }
+  }
 
-    public void PlayFxAfterTime(FxType fxType, float time)
+  public void StopSoundLoop(FxType fxType)
+  {
+    if (fx[(int)fxType] != null)
     {
-        StartCoroutine(IE_PlayFxAfterTime(fxType, time));
+      fx[(int)fxType].Stop();
     }
+  }
 
-    public void Mute()
+  public IEnumerator IE_PlayFxAfterTime(FxType fxType, float time)
+  {
+    yield return DTPCache.GetWFS(time);
+    if (!isMute)
     {
-        sound1.Stop();
-        for (int i = 0; i < fx.Length; i++)
-        {
-            if (fx[i] != null)
-            {
-                fx[i].Stop();
-            }
-        }
+      if (fx[(int)fxType] == null)
+      {
+        fx[(int)fxType] = new GameObject().AddComponent<AudioSource>();
+        fx[(int)fxType].clip = audioClips[(int)fxType];
+      }
+
+      fx[(int)fxType].Play();
     }
+  }
+
+  public void PlayFxAfterTime(FxType fxType, float time)
+  {
+    StartCoroutine(IE_PlayFxAfterTime(fxType, time));
+  }
+
+  public void Mute()
+  {
+    isMute = true;
+    // sound1.Stop();
+    for (int i = 0; i < fx.Length; i++)
+    {
+      if (fx[i] != null)
+      {
+        fx[i].Stop();
+      }
+    }
+  }
 }

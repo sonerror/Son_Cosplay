@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class Singleton<T> : MonoBehaviour
 {
-    public static T Ins;
+  public static T Ins;
 
-    public virtual void Awake()
-    {
-        Ins = GetComponent<T>();
-    }
+  protected virtual void Awake()
+  {
+    Ins = GetComponent<T>();
+  }
 }
