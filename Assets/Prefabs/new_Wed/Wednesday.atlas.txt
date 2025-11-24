@@ -1,0 +1,517 @@
+
+Wednesday.png
+size: 2017,1825
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+1facial/dirt
+  rotate: false
+  xy: 1366, 912
+  size: 226, 252
+  orig: 226, 252
+  offset: 0, 0
+  index: -1
+1facial/tan_nhang
+  rotate: true
+  xy: 1362, 191
+  size: 175, 165
+  orig: 175, 165
+  offset: 0, 0
+  index: -1
+Base/back_hair
+  rotate: false
+  xy: 2, 1036
+  size: 446, 787
+  orig: 446, 787
+  offset: 0, 0
+  index: -1
+Base/body
+  rotate: true
+  xy: 1412, 1515
+  size: 308, 559
+  orig: 308, 559
+  offset: 0, 0
+  index: -1
+Base/chin
+  rotate: true
+  xy: 1187, 326
+  size: 52, 17
+  orig: 52, 17
+  offset: 0, 0
+  index: -1
+Base/close_eye
+  rotate: true
+  xy: 1366, 856
+  size: 54, 30
+  orig: 54, 35
+  offset: 0, 0
+  index: -1
+Base/close_eye1
+  rotate: true
+  xy: 1973, 1764
+  size: 59, 40
+  orig: 59, 41
+  offset: 0, 1
+  index: -1
+Base/ear
+  rotate: true
+  xy: 1183, 18
+  size: 44, 70
+  orig: 44, 70
+  offset: 0, 0
+  index: -1
+Base/eye_sphere
+  rotate: false
+  xy: 1362, 128
+  size: 167, 61
+  orig: 167, 61
+  offset: 0, 0
+  index: -1
+Base/hand1
+  rotate: true
+  xy: 1206, 64
+  size: 98, 146
+  orig: 98, 146
+  offset: 0, 0
+  index: -1
+Base/hand2
+  rotate: true
+  xy: 1006, 14
+  size: 77, 116
+  orig: 77, 116
+  offset: 0, 0
+  index: -1
+Base/hand3
+  rotate: true
+  xy: 1354, 60
+  size: 66, 148
+  orig: 66, 148
+  offset: 0, 0
+  index: -1
+Base/hand4
+  rotate: false
+  xy: 1919, 18
+  size: 87, 81
+  orig: 89, 82
+  offset: 0, 1
+  index: -1
+Base/hand7
+  rotate: true
+  xy: 1852, 1197
+  size: 99, 156
+  orig: 103, 162
+  offset: 2, 2
+  index: -1
+Base/hand8
+  rotate: false
+  xy: 1887, 101
+  size: 125, 129
+  orig: 134, 139
+  offset: 2, 4
+  index: -1
+Base/head
+  rotate: true
+  xy: 1605, 1002
+  size: 191, 256
+  orig: 226, 256
+  offset: 18, 0
+  index: -1
+Base/l_arm
+  rotate: false
+  xy: 1016, 314
+  size: 138, 465
+  orig: 138, 473
+  offset: 0, 0
+  index: -1
+Base/line_up
+  rotate: true
+  xy: 1156, 314
+  size: 64, 29
+  orig: 64, 36
+  offset: 0, 6
+  index: -1
+Base/mouth1
+  rotate: false
+  xy: 1334, 1515
+  size: 52, 24
+  orig: 52, 24
+  offset: 0, 0
+  index: -1
+Base/mouth2
+  rotate: true
+  xy: 1973, 1639
+  size: 62, 32
+  orig: 62, 32
+  offset: 0, 0
+  index: -1
+Base/mouth3
+  rotate: false
+  xy: 1255, 22
+  size: 43, 40
+  orig: 43, 40
+  offset: 0, 0
+  index: -1
+Base/mouth4
+  rotate: true
+  xy: 986, 331
+  size: 49, 24
+  orig: 49, 24
+  offset: 0, 0
+  index: -1
+Base/old_face
+  rotate: true
+  xy: 1629, 566
+  size: 191, 256
+  orig: 226, 256
+  offset: 18, 0
+  index: -1
+Base/old_hair
+  rotate: true
+  xy: 2, 18
+  size: 261, 490
+  orig: 261, 490
+  offset: 0, 0
+  index: -1
+Base/r_arm
+  rotate: false
+  xy: 1156, 380
+  size: 138, 473
+  orig: 138, 473
+  offset: 0, 0
+  index: -1
+Base/r_leg
+  rotate: true
+  xy: 450, 1613
+  size: 210, 960
+  orig: 210, 960
+  offset: 0, 0
+  index: -1
+Base/underwear_aL
+  rotate: false
+  xy: 1771, 32
+  size: 80, 146
+  orig: 80, 146
+  offset: 0, 0
+  index: -1
+Base/underwear_aR
+  rotate: false
+  xy: 1529, 194
+  size: 92, 144
+  orig: 92, 144
+  offset: 0, 0
+  index: -1
+Base/underwear_body
+  rotate: true
+  xy: 437, 435
+  size: 344, 577
+  orig: 344, 577
+  offset: 0, 0
+  index: -1
+Phase_1/oil_2
+  rotate: false
+  xy: 1206, 164
+  size: 154, 202
+  orig: 154, 202
+  offset: 0, 0
+  index: -1
+Phase_1/water
+  rotate: false
+  xy: 1852, 1298
+  size: 163, 215
+  orig: 163, 215
+  offset: 0, 0
+  index: -1
+Phase_2_hair/back_hair_comb
+  rotate: true
+  xy: 450, 1163
+  size: 448, 719
+  orig: 448, 719
+  offset: 0, 0
+  index: -1
+Phase_2_hair/bang_new
+  rotate: true
+  xy: 1887, 597
+  size: 186, 111
+  orig: 186, 111
+  offset: 0, 0
+  index: -1
+Phase_2_hair/braid
+  rotate: true
+  xy: 494, 6
+  size: 82, 510
+  orig: 82, 510
+  offset: 0, 0
+  index: -1
+Phase_2_hair/braid_3
+  rotate: true
+  xy: 1629, 759
+  size: 241, 231
+  orig: 241, 231
+  offset: 0, 0
+  index: -1
+Phase_2_hair/hair_band2
+  rotate: true
+  xy: 1153, 855
+  size: 279, 211
+  orig: 279, 211
+  offset: 0, 0
+  index: -1
+Phase_3_makeup/Eyes_shadown
+  rotate: true
+  xy: 1629, 373
+  size: 191, 256
+  orig: 226, 256
+  offset: 18, 0
+  index: -1
+Phase_3_makeup/blended
+  rotate: true
+  xy: 1629, 180
+  size: 191, 256
+  orig: 226, 256
+  offset: 18, 0
+  index: -1
+Phase_3_makeup/blush
+  rotate: true
+  xy: 1863, 1020
+  size: 175, 129
+  orig: 175, 129
+  offset: 0, 0
+  index: -1
+Phase_3_makeup/brows_2
+  rotate: true
+  xy: 456, 363
+  size: 70, 26
+  orig: 70, 26
+  offset: 0, 0
+  index: -1
+Phase_3_makeup/close_eye
+  rotate: true
+  xy: 1973, 1519
+  size: 54, 30
+  orig: 54, 35
+  offset: 0, 0
+  index: -1
+Phase_3_makeup/close_eye1
+  rotate: true
+  xy: 1973, 1703
+  size: 59, 40
+  orig: 59, 41
+  offset: 0, 1
+  index: -1
+Phase_3_makeup/concealer
+  rotate: false
+  xy: 1414, 375
+  size: 115, 62
+  orig: 115, 62
+  offset: 0, 0
+  index: -1
+Phase_3_makeup/contour
+  rotate: false
+  xy: 986, 93
+  size: 161, 219
+  orig: 161, 219
+  offset: 0, 0
+  index: -1
+Phase_3_makeup/line_up
+  rotate: true
+  xy: 1853, 107
+  size: 71, 32
+  orig: 71, 40
+  offset: 0, 6
+  index: -1
+Phase_3_makeup/lipstick1
+  rotate: true
+  xy: 1504, 74
+  size: 52, 24
+  orig: 52, 24
+  offset: 0, 0
+  index: -1
+Phase_3_makeup/lipstick2
+  rotate: true
+  xy: 1973, 1575
+  size: 62, 32
+  orig: 62, 32
+  offset: 0, 0
+  index: -1
+Phase_3_makeup/lipstick3
+  rotate: false
+  xy: 1300, 22
+  size: 43, 40
+  orig: 43, 40
+  offset: 0, 0
+  index: -1
+Phase_3_makeup/lipstick4
+  rotate: false
+  xy: 1627, 52
+  size: 49, 24
+  orig: 49, 24
+  offset: 0, 0
+  index: -1
+Phase_3_makeup/white_liner_2
+  rotate: true
+  xy: 437, 287
+  size: 146, 17
+  orig: 146, 17
+  offset: 0, 0
+  index: -1
+Set/Bown/eye_bown
+  rotate: true
+  xy: 456, 293
+  size: 68, 20
+  orig: 68, 20
+  offset: 0, 0
+  index: -1
+Set/Pupil/pupil
+  rotate: false
+  xy: 1345, 24
+  size: 35, 34
+  orig: 35, 35
+  offset: 0, 1
+  index: -1
+Set/Pupil/pupil_l
+  rotate: true
+  xy: 1206, 368
+  size: 10, 11
+  orig: 11, 11
+  offset: 0, 0
+  index: -1
+Set_Wednesday/arm_gloveL
+  rotate: false
+  xy: 1544, 626
+  size: 83, 284
+  orig: 83, 284
+  offset: 0, 0
+  index: -1
+Set_Wednesday/arm_gloveR
+  rotate: false
+  xy: 1544, 340
+  size: 83, 284
+  orig: 83, 284
+  offset: 0, 0
+  index: -1
+Set_Wednesday/crest
+  rotate: false
+  xy: 1334, 1541
+  size: 71, 70
+  orig: 71, 70
+  offset: 0, 0
+  index: -1
+Set_Wednesday/dress
+  rotate: false
+  xy: 2, 281
+  size: 433, 753
+  orig: 433, 753
+  offset: 0, 0
+  index: -1
+Set_Wednesday/earing
+  rotate: false
+  xy: 986, 382
+  size: 28, 51
+  orig: 28, 51
+  offset: 0, 0
+  index: -1
+Set_Wednesday/hair_tie
+  rotate: true
+  xy: 1853, 2
+  size: 97, 64
+  orig: 97, 64
+  offset: 0, 0
+  index: -1
+Set_Wednesday/shirt_aL
+  rotate: false
+  xy: 1414, 439
+  size: 128, 471
+  orig: 128, 471
+  offset: 0, 0
+  index: -1
+Set_Wednesday/shirt_aR
+  rotate: false
+  xy: 1171, 1136
+  size: 161, 475
+  orig: 161, 475
+  offset: 0, 0
+  index: -1
+Set_Wednesday/shirt_body
+  rotate: false
+  xy: 1334, 1166
+  size: 269, 347
+  orig: 269, 347
+  offset: 0, 0
+  index: -1
+Set_Wednesday/shoe
+  rotate: false
+  xy: 1862, 785
+  size: 105, 215
+  orig: 105, 215
+  offset: 0, 0
+  index: -1
+Set_Wednesday/sock_2
+  rotate: false
+  xy: 1296, 368
+  size: 116, 485
+  orig: 116, 485
+  offset: 0, 0
+  index: -1
+Set_Wednesday/sweater
+  rotate: false
+  xy: 1605, 1195
+  size: 245, 318
+  orig: 245, 318
+  offset: 0, 0
+  index: -1
+Set_Wednesday/tie
+  rotate: false
+  xy: 1149, 67
+  size: 55, 245
+  orig: 55, 245
+  offset: 0, 0
+  index: -1
+Set_Wednesday/vest
+  rotate: true
+  xy: 494, 90
+  size: 343, 490
+  orig: 343, 490
+  offset: 0, 0
+  index: -1
+Set_Wednesday/wednesday_0000_hand
+  rotate: true
+  xy: 1627, 78
+  size: 100, 142
+  orig: 119, 142
+  offset: 0, 0
+  index: -1
+Set_base/old_dress
+  rotate: true
+  xy: 450, 781
+  size: 380, 701
+  orig: 380, 701
+  offset: 0, 0
+  index: -1
+Set_base/old_dress_aL
+  rotate: false
+  xy: 1887, 413
+  size: 118, 182
+  orig: 118, 182
+  offset: 0, 0
+  index: -1
+Set_base/old_dress_aR
+  rotate: false
+  xy: 1887, 232
+  size: 119, 179
+  orig: 119, 179
+  offset: 0, 0
+  index: -1
+Set_base/old_shoe1
+  rotate: false
+  xy: 1531, 61
+  size: 94, 131
+  orig: 94, 131
+  offset: 0, 0
+  index: -1
+Set_base/old_shoe2
+  rotate: true
+  xy: 1124, 2
+  size: 60, 57
+  orig: 60, 57
+  offset: 0, 0
+  index: -1
