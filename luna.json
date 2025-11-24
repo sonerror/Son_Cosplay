@@ -245,8 +245,8 @@
                         "name": "Assets/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF.asset"
                     },
                     {
-                        "maxWidth": 2048,
-                        "maxHeight": 2048,
+                        "maxWidth": 1024,
+                        "maxHeight": 1024,
                         "format": "png32",
                         "compression": "quantSize",
                         "quality": 65,
@@ -263,6 +263,26 @@
                         "script": "",
                         "ext": "",
                         "name": "Assets/Sprites/screenshot.png"
+                    },
+                    {
+                        "maxWidth": 1024,
+                        "maxHeight": 1024,
+                        "format": "png32",
+                        "compression": "quantSize",
+                        "quality": 65,
+                        "script": "",
+                        "ext": "",
+                        "name": "Assets/Textures/BG_back 3.png"
+                    },
+                    {
+                        "maxWidth": 1024,
+                        "maxHeight": 1024,
+                        "format": "png32",
+                        "compression": "quantSize",
+                        "quality": 65,
+                        "script": "",
+                        "ext": "",
+                        "name": "Assets/_GAME/_Costopia/__Gameplay/_Texture/BG/BG-bath.png"
                     }
                 ]
             },
