@@ -24,11 +24,11 @@ public class GamePlayManager : MonoBehaviour
 
   private void Update()
   {
-    // if (!hadClicked && Input.GetMouseButtonDown(0))
-    // {
-    //   hadClicked = true;
-    //   StartGamePlay();
-    // }
+    if (!hadClicked && Input.GetMouseButtonDown(0))
+    {
+      hadClicked = true;
+      StartGamePlay();
+    }
   }
 
   void StartGamePlay()

@@ -1,8 +1,8 @@
 {
     "version": "6.0.0",
     "projectId": "f42e7ff96e4545544bb6cd68f51ab634",
-    "applicationID": 27599,
-    "creativeName": "",
+    "applicationID": 34683,
+    "creativeName": "Cosplaydom_v1",
     "pgServer": "EU",
     "window": {
         "‐ ": true
@@ -11,6 +11,7 @@
         "environmentID": 1144181264,
         "scripts": {
             "excludes": [
+                "Assets/FindMissingScriptsRecursively.cs",
                 "**/Editor/",
                 "**/Luna/RuntimeScripts/",
                 "**/FacebookSDK/",
@@ -103,7 +104,9 @@
                 "Assets/TextMesh Pro/Resources/TMP Settings.asset"
             ]
         },
-        "scenes": [],
+        "scenes": [
+            "Assets/_GAME/Levels/LvCosplayWenesday/Level53.unity"
+        ],
         "disabledScenes": [],
         "startupScene": 0,
         "packages": {
@@ -132,12 +135,43 @@
         "enableMecanimWASM": true,
         "minify": true,
         "forceUncompressed": false,
-        "forceBase64": false,
+        "forceBase64": true,
         "genericCheck": true,
         "disableAntiAliasing": true,
-        "preferWebGl2": false,
+        "preferWebGl2": true,
         "forceStableRandomSeed": false,
-        "unusedModules": [],
+        "unusedModules": [
+            {
+                "name": "physics3d",
+                "excluded": false,
+                "forceIncluded": false
+            },
+            {
+                "name": "physics2d",
+                "excluded": false,
+                "forceIncluded": false
+            },
+            {
+                "name": "particle-system",
+                "excluded": false,
+                "forceIncluded": false
+            },
+            {
+                "name": "reflection",
+                "excluded": false,
+                "forceIncluded": false
+            },
+            {
+                "name": "prefabs",
+                "excluded": false,
+                "forceIncluded": false
+            },
+            {
+                "name": "mecanim-wasm",
+                "excluded": false,
+                "forceIncluded": false
+            }
+        ],
         "disableRuntimeAnalysisForCode": true,
         "disableRuntimeAnalysisForShaders": false,
         "useShadersCache": true,
@@ -179,6 +213,56 @@
                         "script": "",
                         "ext": "",
                         "name": "Resources/unity_builtin_extra/Default-Particle"
+                    },
+                    {
+                        "maxWidth": 512,
+                        "maxHeight": 512,
+                        "format": "png32",
+                        "compression": "none",
+                        "quality": 65,
+                        "script": "",
+                        "ext": "",
+                        "name": "Assets/Fonts/Bubblegum SDF 1.asset"
+                    },
+                    {
+                        "maxWidth": 512,
+                        "maxHeight": 512,
+                        "format": "png32",
+                        "compression": "none",
+                        "quality": 65,
+                        "script": "",
+                        "ext": "",
+                        "name": "Assets/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF - Fallback.asset"
+                    },
+                    {
+                        "maxWidth": 512,
+                        "maxHeight": 512,
+                        "format": "png32",
+                        "compression": "none",
+                        "quality": 65,
+                        "script": "",
+                        "ext": "",
+                        "name": "Assets/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF.asset"
+                    },
+                    {
+                        "maxWidth": 2048,
+                        "maxHeight": 2048,
+                        "format": "png32",
+                        "compression": "quantSize",
+                        "quality": 65,
+                        "script": "",
+                        "ext": "",
+                        "name": "Assets/Prefabs/Wednesday_38_new/Wednesday.png"
+                    },
+                    {
+                        "maxWidth": 2048,
+                        "maxHeight": 2048,
+                        "format": "png32",
+                        "compression": "quantSize",
+                        "quality": 65,
+                        "script": "",
+                        "ext": "",
+                        "name": "Assets/Sprites/screenshot.png"
                     }
                 ]
             },
