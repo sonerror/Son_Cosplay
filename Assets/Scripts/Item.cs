@@ -33,7 +33,11 @@ public class Item : MonoBehaviour
     mainCamera = Camera.main;
   }
 
-  public virtual void MouseDown(BaseEventData eventData) { }
+  public virtual void MouseDown(BaseEventData eventData)
+  {
+    if (IsReady) TutorialManager.Ins.OnCollectSuccess();
+    else TutorialManager.Ins.OnCollectFail();
+  }
 
   public virtual void MouseUp(BaseEventData eventData) { }
 

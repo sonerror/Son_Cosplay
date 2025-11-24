@@ -22,6 +22,8 @@ public class WaterFaucet : Item
     if (isBlocked) return;
     if (isDragging) return;
     if (!IsReady) { OnWrong?.Invoke(); }
+    base.MouseDown(eventData);
+
     OnHandleMouseDown();
 
     if (IsReady) TrigerEvent.SetActive(true);

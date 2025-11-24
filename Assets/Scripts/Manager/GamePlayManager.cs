@@ -4,9 +4,10 @@ using Satisgame;
 using Spine.Unity;
 using UnityEngine;
 
-public class GamePlayManager : MonoBehaviour
+public class GamePlayManager : Singleton<GamePlayManager>
 {
   public EmojiControl emojiControl;
+  public bool isPlayingGame = false;
   public SkeletonAnimation playerSkeleton;
 
   public GameObject Scene0, Scene1;
@@ -24,17 +25,26 @@ public class GamePlayManager : MonoBehaviour
 
   private void Update()
   {
+    if (isPlayingGame && Input.GetMouseButtonDown(0))
+    {
+      EventManager.TriggerEvent("ShowBtnInstall");
+    }
+
     if (!hadClicked && Input.GetMouseButtonDown(0))
     {
       hadClicked = true;
       StartGamePlay();
     }
+
+
   }
 
   void StartGamePlay()
   {
     Scene0.SetActive(false);
     Scene1.SetActive(true);
+    TutorialManager.Ins.enableCountTime = true;
+    isPlayingGame = true;
   }
 
   public void PlayPositiveEmoji()
@@ -95,10 +105,10 @@ public class GamePlayManager : MonoBehaviour
       items[i].SetIsReady(i == currState);
     }
 
-    if (currState >= items.Count)
-    {
-      GameManager.Ins.showEndGame();
-    }
+    // if (currState >= items.Count)
+    // {
+    //   GameManager.Ins.showEndGame();
+    // }
   }
 
 }

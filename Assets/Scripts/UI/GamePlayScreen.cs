@@ -5,20 +5,19 @@ public class GamePlayScreen : UIScreen
   public Transform btnPlay;
   public Transform Text;
 
+  void Start()
+  {
+    EventManager.StartListening("ShowBtnInstall", ShowBtnInstall);
+  }
+
   public void ShowBtnInstall()
   {
+    if (hadShowBtnInstall) return;
+    hadShowBtnInstall = true;
     btnPlay.gameObject.SetActive(true);
     Text.gameObject.SetActive(false);
   }
   bool hadShowBtnInstall = false;
-  void Update()
-  {
-    if (!hadShowBtnInstall && Input.GetMouseButtonDown(0))
-    {
-      hadShowBtnInstall = true;
-      ShowBtnInstall();
-    }
-  }
 
   public void gotoStore()
   {

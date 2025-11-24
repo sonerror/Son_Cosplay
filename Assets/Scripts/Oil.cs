@@ -9,7 +9,7 @@ public class Oil : Item
   private Vector3 _prePos;
   public Vector2 Angle = new Vector2(0, 0);
   public List<Renderer> renderers = new List<Renderer>();
-  public List<TargetInfo> targetsInfos = new List<TargetInfo>();
+  public List<TargetInfo> targetInfos = new List<TargetInfo>();
 
   public Transform headPosCheck;
   protected override void Awake()
@@ -23,6 +23,8 @@ public class Oil : Item
     if (isBlocked) return;
     if (isDragging) return;
     if (!IsReady) { OnWrong?.Invoke(); }
+    base.MouseDown(eventData);
+
     OnHandleMouseDown();
   }
 
@@ -56,26 +58,26 @@ public class Oil : Item
 
   void CheckToTarget()
   {
-    for (var i = 0; i < targetsInfos.Count; i++)
+    for (var i = 0; i < targetInfos.Count; i++)
     {
-      if (targetsInfos[i].hadChecked) continue;
-      float dist = (headPosCheck.position - targetsInfos[i].targetTf.position).magnitude;
-      if (dist <= targetsInfos[i].distance)
+      if (targetInfos[i].hadChecked) continue;
+      float dist = (headPosCheck.position - targetInfos[i].targetTf.position).magnitude;
+      if (dist <= targetInfos[i].distance)
       {
-        targetsInfos[i].targetTf.gameObject.SetActive(true);
-        targetsInfos[i].hadChecked = true;
-        PoolManager.Ins.Spawn(PoolType.SFX_Oil, targetsInfos[i].targetTf.position, Quaternion.identity);
+        targetInfos[i].targetTf.gameObject.SetActive(true);
+        targetInfos[i].hadChecked = true;
+        PoolManager.Ins.Spawn(PoolType.SFX_Oil, targetInfos[i].targetTf.position, Quaternion.identity);
         CheckDone();
-        return;
+        // return;
       }
     }
   }
 
   void CheckDone()
   {
-    for (var i = 0; i < targetsInfos.Count; i++)
+    for (var i = 0; i < targetInfos.Count; i++)
     {
-      if (!targetsInfos[i].hadChecked) return;
+      if (!targetInfos[i].hadChecked) return;
     }
     IsReady = false;
     GameManager.Ins.showEndGame();

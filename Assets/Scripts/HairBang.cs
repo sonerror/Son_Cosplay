@@ -28,6 +28,7 @@ public class HairBang : Item
     if (isBlocked) return;
     if (isDragging) return;
     if (!IsReady) { OnWrong?.Invoke(); }
+    base.MouseDown(eventData);
     OnHandleMouseDown();
   }
 
@@ -62,12 +63,11 @@ public class HairBang : Item
   {
     if (targetInfos.targetTf == null) return;
     float dist = Vector3.Distance(Tf.position, targetInfos.targetTf.position);
-    Debug.Log("ttt" + dist);
     if (dist <= targetInfos.distance)
     {
       IsReady = false;
       isBlocked = true;
-      Tf.DOMove(targetInfos.targetTf.position, 0.3f).SetEase(Ease.OutBack).OnComplete(() =>
+      Tf.DOMove(targetInfos.targetTf.position, 0.5f).SetEase(Ease.OutBack).OnComplete(() =>
       {
         OnFinish?.Invoke();
         foreach (SlotAttachmentPair pair in disableSlot)
