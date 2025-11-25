@@ -25,7 +25,7 @@ public class WaterFace : MonoBehaviour
     {
       isEnable = false;
       enabled = false;
-
+      vfxWater.Stop();
       onComplete.Invoke();
       return;
     }
