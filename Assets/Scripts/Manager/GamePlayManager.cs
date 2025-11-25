@@ -4,7 +4,7 @@ using Satisgame;
 using Spine.Unity;
 using UnityEngine;
 
-public class GamePlayManager : Singleton<GamePlayManager>
+public class GamePlayManager : MonoBehaviour
 {
   public EmojiControl emojiControl;
   public bool isPlayingGame = false;
@@ -91,6 +91,7 @@ public class GamePlayManager : Singleton<GamePlayManager>
   }
 
   private int currState = 0;
+  public int CurrState { get { return currState; } }
 
   public void OnDoneState()
   {

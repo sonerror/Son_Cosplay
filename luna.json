@@ -1,14 +1,14 @@
 {
-    "version": "6.0.0",
+    "version": "7.0.0",
     "projectId": "f42e7ff96e4545544bb6cd68f51ab634",
     "applicationID": 34683,
     "creativeName": "Cosplaydom_v1",
     "pgServer": "EU",
     "window": {
-        "‐ ": true
+        "‐⁏": true
     },
     "unity": {
-        "environmentID": 1144181264,
+        "environmentID": 1603997358,
         "scripts": {
             "excludes": [
                 "Assets/FindMissingScriptsRecursively.cs",
@@ -48,7 +48,33 @@
                 "Stubs/AppsFlyer",
                 "Stubs/IronSource",
                 "Stubs/Vungle",
-                "Stubs/MoreMountains.NiceVibrations"
+                "Stubs/MoreMountains.NiceVibrations",
+                "**/SupersonicWisdom/",
+                "**/StompyRobot/SRDebugger/",
+                "**/StompyRobot/SRF/",
+                "**/StompyRobot/SROptions/",
+                "**/ThirdParty/Obi/",
+                "**/Obi/",
+                "**/UniWebView/",
+                "**/Plugins/Sirenix/Assemblies/",
+                "**/Plugins/Sirenix/Odin Inspector/",
+                "**/Sirenix/Assemblies/",
+                "**/Sirenix/Odin Inspector/",
+                "**/MeshCombiner/",
+                "**/AnimationBaker/",
+                "Stubs/StompyRobot/SRDebugger/",
+                "Stubs/StompyRobot/SRF/",
+                "Stubs/StompyRobot/SROptions/",
+                "Stubs/ThirdParty/Obi/",
+                "Stubs/Obi/",
+                "Stubs/UniWebView/",
+                "Stubs/Plugins/Sirenix/Assemblies/",
+                "Stubs/Plugins/Sirenix/Odin Inspector/",
+                "Stubs/Sirenix/Assemblies/",
+                "Stubs/Sirenix/Odin Inspector/",
+                "Stubs/MeshCombiner/",
+                "Stubs/AnimationBaker/",
+                "Stubs/SupersonicWisdom/"
             ],
             "msbuildMac64": "/Library/Frameworks/Mono.framework/Versions/Current/bin/msbuild",
             "msbuildWin64": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\MSBuild\\Current\\Bin\\MSBuild.exe",
@@ -136,9 +162,9 @@
         "minify": true,
         "forceUncompressed": false,
         "forceBase64": true,
+        "graphicsConstraint": 24,
         "genericCheck": true,
         "disableAntiAliasing": true,
-        "preferWebGl2": true,
         "forceStableRandomSeed": false,
         "unusedModules": [
             {
@@ -188,6 +214,7 @@
             "enabled": false
         },
         "playerPrefs": true,
+        "enableStaticBatching": false,
         "enableDynamicBatching": false,
         "forceSourcesBasedCompilation": false
     },
@@ -245,8 +272,8 @@
                         "name": "Assets/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF.asset"
                     },
                     {
-                        "maxWidth": 1024,
-                        "maxHeight": 1024,
+                        "maxWidth": 2048,
+                        "maxHeight": 2048,
                         "format": "png32",
                         "compression": "quantSize",
                         "quality": 65,
@@ -283,6 +310,26 @@
                         "script": "",
                         "ext": "",
                         "name": "Assets/_GAME/_Costopia/__Gameplay/_Texture/BG/BG-bath.png"
+                    },
+                    {
+                        "maxWidth": 1024,
+                        "maxHeight": 1024,
+                        "format": "png32",
+                        "compression": "quantSize",
+                        "quality": 65,
+                        "script": "",
+                        "ext": "",
+                        "name": "Assets/Textures/bg-back1.png"
+                    },
+                    {
+                        "maxWidth": 1024,
+                        "maxHeight": 1024,
+                        "format": "png32",
+                        "compression": "quantSize",
+                        "quality": 65,
+                        "script": "",
+                        "ext": "",
+                        "name": "Assets/Textures/bg-back2-1.png"
                     }
                 ]
             },
@@ -311,13 +358,17 @@
             },
             "meshes": {
                 "default": {
-                    "halfPrecision": true
+                    "halfPrecision": true,
+                    "useSimplification": false,
+                    "simplificationPercentage": 30,
+                    "linkCloseVertices": true
                 },
                 "overrides": []
             },
             "animations": {
                 "default": {
-                    "halfPrecision": true
+                    "halfPrecision": true,
+                    "stripCurves": true
                 },
                 "overrides": []
             }

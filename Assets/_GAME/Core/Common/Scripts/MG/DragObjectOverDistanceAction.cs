@@ -124,7 +124,7 @@ public class DragObjectOverDistanceAction : DragObject2D
       if (rb != null && isDynamicOnDropTrue)
       {
         rb.isKinematic = false;
-        if (useThrow) rb.velocity = lastMousePosition; // Apply last recorded velocity to simulate a throw
+        if (useThrow) rb.linearVelocity = lastMousePosition; // Apply last recorded velocity to simulate a throw
       }
       if (disableColOnDropTrue && col != null)
       {

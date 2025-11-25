@@ -9,6 +9,13 @@ public class TutorialManager : Singleton<TutorialManager>
   public bool enableCountTime = false;
   public float timeCountHint = 2f;
   [SerializeField] public HandCtrl handCtrl;
+  [SerializeField] private GamePlayManager gamePlayManager;
+
+  private int CountStepDone = 0;
+  public void OnStepDone()
+  {
+    CountStepDone++;
+  }
 
   [SerializeField] private List<Transform> tutorialNode = new List<Transform>();
 
@@ -57,42 +64,40 @@ public class TutorialManager : Singleton<TutorialManager>
   {
     if (disableHand) return;
 
-    var items = GamePlayManager.Ins.items;
+    var items = gamePlayManager.items;
     enableCountTime = false;
     handCtrl.gameObject.SetActive(true);
-    for (int i = 0; i < items.Count; i++)
-    {
-      if (!items[i].IsReady) continue;
 
-      if (i == 0)
+    var i = gamePlayManager.CurrState;
+    if (i == 0)
+    {
+      var item = items[i] as HairBang;
+      handCtrl.ShowHandState2(item.Tf.position, item.targetInfos.targetTf.position);
+      return;
+    }
+    if (i == 1)
+    {
+      var item = items[i];
+      handCtrl.ShowHandState2(item.Tf.position, tutorialNode[0].position);
+      return;
+    }
+    if (i == 2)
+    {
+      var item = items[i];
+      handCtrl.ShowHandState2(item.Tf.position, tutorialNode[1].position);
+      return;
+    }
+    if (i == 3)
+    {
+      var item = items[i] as Oil;
+      for (int j = 0; j < item.targetInfos.Count; j++)
       {
-        var item = items[i] as HairBang;
-        handCtrl.ShowHandState2(item.Tf.position, item.targetInfos.targetTf.position);
+        if (item.targetInfos[j].hadChecked) continue;
+        handCtrl.ShowHandState2(item.Tf.position, item.targetInfos[j].targetTf.position);
         return;
-      }
-      if (i == 1)
-      {
-        var item = items[i];
-        handCtrl.ShowHandState2(item.Tf.position, tutorialNode[0].position);
-        return;
-      }
-      if (i == 2)
-      {
-        var item = items[i];
-        handCtrl.ShowHandState2(item.Tf.position, tutorialNode[1].position);
-        return;
-      }
-      if (i == 3)
-      {
-        var item = items[i] as Oil;
-        for (int j = 0; j < item.targetInfos.Count; j++)
-        {
-          if (item.targetInfos[j].hadChecked) continue;
-          handCtrl.ShowHandState2(item.Tf.position, item.targetInfos[j].targetTf.position);
-          return;
-        }
       }
     }
+
 
     handCtrl.gameObject.SetActive(false);
     resetTimeHint();
@@ -107,6 +112,7 @@ public class TutorialManager : Singleton<TutorialManager>
   public void resetTimeHint()
   {
     HideHint();
-    timeCountHint = TimeHint;
+
+    timeCountHint = gamePlayManager.CurrState < 2 ? 1f : TimeHint;
   }
 }
