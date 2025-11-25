@@ -9,7 +9,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1603424670108934622}
-  - component: {fileID: 6401651952551773213}
   m_Layer: 0
   m_Name: Blended
   m_TagString: Untagged
@@ -32,25 +31,3 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &6401651952551773213
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2127670072277720052}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7f75f78849f44ee5bd482f219283d5fa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  skeletonAnimation: {fileID: 0}
-  skeletonMaterial: {fileID: 2100000, guid: b783c43f34ce71c408a30b93bc424c2d, type: 2}
-  paintableMaterialTemplate: {fileID: 2100000, guid: 539a921251cf5da4999187d7633545a3, type: 2}
-  maskResolution: 32
-  waitProcessPerFrame: 5
-  hideOnStart: 1
-  skeletonDataAsset: {fileID: 0}
-  slotName: Phase_4_Blender
-  attachmentName: Phase_4/Blender/head_m
-  disableOptimizeZeroAlphaPixelOnTexture: 0

@@ -81,7 +81,6 @@
     <Compile Include="Assets\Spine\Editor\spine-unity\Editor\Components\SkeletonUtilityInspector.cs" />
     <Compile Include="Assets\Spine\Editor\spine-unity\Modules\SkeletonRenderSeparator\Editor\SkeletonRenderSeparatorInspector.cs" />
     <Compile Include="Assets\Spine\Editor\spine-unity\Editor\Components\SkeletonUtilityBoneInspector.cs" />
-    <Compile Include="Assets\Spine\Editor\spine-unity\Modules\SlotBlendModes\Editor\SlotBlendModesEditor.cs" />
     <Compile Include="Assets\Spine\Editor\spine-unity\Editor\SpineAttributeDrawers.cs" />
     <Compile Include="Assets\Spine\Editor\spine-unity\Editor\Components\BoundingBoxFollowerGraphicInspector.cs" />
     <Compile Include="Assets\Spine\Editor\spine-unity\Editor\Components\SkeletonAnimationInspector.cs" />
@@ -109,6 +108,8 @@
     <Compile Include="Assets\Spine\Editor\spine-unity\Editor\Components\BoundingBoxFollowerInspector.cs" />
     <Compile Include="Assets\Spine\Editor\spine-unity\Editor\Utility\SpineInspectorUtility.cs" />
     <Compile Include="Assets\Spine\Editor\spine-unity\Editor\Windows\SpinePreferences.cs" />
+    <Compile Include="Assets\Spine\Editor\spine-unity\Editor\Utility\SpineBuildProcessor.cs" />
+    <Compile Include="Assets\Spine\Editor\spine-unity\Editor\Components\SkeletonSubmeshGraphicInspector.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Spine\Editor\spine-unity-editor.asmdef" />
@@ -631,10 +632,6 @@
       <HintPath>Assets\Plugins\Sirenix\Assemblies\Sirenix.Serialization.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="EditorScripts">
-      <HintPath>E:\Luna\7.0.0\scripts\Editor\EditorScripts.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
     <Reference Include="unityplastic">
       <HintPath>Library\PackageCache\com.unity.collab-proxy\Lib\Editor\PlasticSCM\unityplastic.dll</HintPath>
       <Private>False</Private>
@@ -667,16 +664,20 @@
       <HintPath>Assets\Plugins\Sirenix\Assemblies\Sirenix.OdinInspector.Attributes.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="RuntimeScripts">
-      <HintPath>E:\Luna\7.0.0\scripts\Runtime\RuntimeScripts.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
     <Reference Include="Sirenix.Utilities">
       <HintPath>Assets\Plugins\Sirenix\Assemblies\Sirenix.Utilities.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="EditorScripts">
+      <HintPath>E:\Luna\7.0.0\scripts\Editor\EditorScripts.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
     <Reference Include="Unity.VisualScripting.Antlr3.Runtime">
       <HintPath>Library\PackageCache\com.unity.visualscripting\Runtime\VisualScripting.Flow\Dependencies\NCalc\Unity.VisualScripting.Antlr3.Runtime.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="RuntimeScripts">
+      <HintPath>E:\Luna\7.0.0\scripts\Runtime\RuntimeScripts.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="DOTween">
@@ -1221,6 +1222,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="spine-csharp.csproj" />
     <ProjectReference Include="spine-unity.csproj" />
   </ItemGroup>
   <Import Project="Sdk.targets" Sdk="Microsoft.NET.Sdk" />

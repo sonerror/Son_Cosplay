@@ -8,4 +8,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/_GAME/Levels/LvCosplayWenesday/Level53.unity
     guid: dff9ca0ea1346f04384b4047779e36bb
+  - enabled: 1
+    path: Assets/_GAME/Levels/LvCosplayKIdol/Level6.unity
+    guid: 7d277a0c092dacb44a228e2c90071029
   m_configObjects: {}
+  m_UseUCBPForAssetBundles: 0

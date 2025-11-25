@@ -1,0 +1,43 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6b194f808b1af6499c93410e504af42, type: 3}
+  m_Name: School_Girl_Atlas
+  m_EditorClassIdentifier: 
+  textureLoadingMode: 0
+  onDemandTextureLoader: {fileID: 0}
+  atlasFile: {fileID: 4900000, guid: 80fd48622cf48a844ba1037bd1eba2f9, type: 3}
+  materials:
+  - {fileID: 2100000, guid: 510332ffb4d3f834389c42712be1b8a5, type: 2}
+  - {fileID: 2100000, guid: 5b1d20a457d349847a6b41d47b584acf, type: 2}
+  - {fileID: 2100000, guid: 64e946960a0e5334b8dd60daac27ef58, type: 2}
+  - {fileID: 2100000, guid: e64b7d78cbbbbc049a8e6fbc1577c03a, type: 2}
+  - {fileID: 2100000, guid: 07aa4c6b98aa0dc4b99efd3dfbb03c4a, type: 2}
+  - {fileID: 2100000, guid: 2ad65553b27caec48b5ffdbbb9776bb6, type: 2}
+  - {fileID: 2100000, guid: 434b85ced267b144cbd34db2eb370c46, type: 2}
+  - {fileID: 2100000, guid: 601f8353fe46d0c4fbdc15a6267f5768, type: 2}
+  - {fileID: 2100000, guid: 2dbabbd4e20d050428504a6471feceb5, type: 2}
+  - {fileID: 2100000, guid: 5ed0059fbf08a534f8d49f038090bde7, type: 2}
+  - {fileID: 2100000, guid: 0d211a902f961ba4ebc35e2bee6971f4, type: 2}
+  - {fileID: 2100000, guid: 115e5f7c0cd9da04b821303c0b80284c, type: 2}
+  - {fileID: 2100000, guid: 1f88eac7bb89a1f4db08260b4dd93139, type: 2}
+  - {fileID: 2100000, guid: 2ad57bd3aaad55543b98e1c8631c31b2, type: 2}
+  - {fileID: 2100000, guid: 8dc17bed81cbaf84ea4699162d2d90f8, type: 2}
+  - {fileID: 2100000, guid: b8facd9ceb3a5604baa33140c346946b, type: 2}
+  - {fileID: 2100000, guid: fc5cdf11576673848b4d111e03b0b08e, type: 2}
+  - {fileID: 2100000, guid: 8b42f5cc5813e7843b4672ac3f95d581, type: 2}
+  - {fileID: 2100000, guid: e6a7f5e33e42174439af5b68f61e5820, type: 2}
+  - {fileID: 2100000, guid: 492275e92d38b204d99e34ab9d9e8e19, type: 2}
+  - {fileID: 2100000, guid: 280985f206c9e0643a2d2625010d6e0d, type: 2}
+  - {fileID: 2100000, guid: c21b4367bb95a0f45998ad1bd6d92537, type: 2}
+  - {fileID: 2100000, guid: e05b5617e43587b49aa4a38b2fa93142, type: 2}
+  - {fileID: 2100000, guid: 737d39327f787e24f9e1a10b8dcf4582, type: 2}
+  - {fileID: 2100000, guid: a09276618ee5a1f4491b6a5d1fb7f799, type: 2}
