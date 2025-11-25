@@ -4,11 +4,12 @@ using Satisgame;
 using Spine.Unity;
 using UnityEngine;
 
-public class GamePlayManager : MonoBehaviour
+public class GamePlayManager : Singleton<GamePlayManager>
 {
   public EmojiControl emojiControl;
   public bool isPlayingGame = false;
   public SkeletonAnimation playerSkeleton;
+  public CharactorControl characterControl;
 
   public GameObject Scene0, Scene1;
 
@@ -20,7 +21,7 @@ public class GamePlayManager : MonoBehaviour
 
   void Start()
   {
-    Setstate();
+    // Setstate();
   }
 
   private void Update()

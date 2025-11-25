@@ -70,6 +70,7 @@
     <Compile Include="Assets\_GAME\Core\Common\Scripts\Utilities\Anim\AnimatorBehaviourPlayFxOnEnterState.cs" />
     <Compile Include="Assets\_GAME\Core\Common\Scripts\Utilities\Anim\LoopSound.cs" />
     <Compile Include="Assets\Scripts\53\Oil.cs" />
+    <Compile Include="Assets\Scripts\Pimple.cs" />
     <Compile Include="Assets\AllIn1SpriteShader\Scripts\RandomSeed.cs" />
     <Compile Include="Assets\_GAME\Core\Common\Scripts\Utilities\Anim\Loop01Value.cs" />
     <Compile Include="Assets\Scripts\Helper\DTPCache.cs" />
@@ -127,6 +128,7 @@
     <Compile Include="Assets\_GAME\Core\Common\Scripts\Utilities\Shader\GlobalShaderControl.cs" />
     <Compile Include="Assets\_GAME\Core\Common\Scripts\Utilities\Random\XXHash.cs" />
     <Compile Include="Assets\Scripts\53\HairBang.cs" />
+    <Compile Include="Assets\Scripts\Brow_Shaver.cs" />
     <Compile Include="Assets\DOTween\Modules\DOTweenModuleAudio.cs" />
     <Compile Include="Assets\_GAME\Core\Common\Scripts\Utilities\Pattern\MonoSingleton.cs" />
     <Compile Include="Assets\_GAME\Core\Common\Scripts\Utilities\Pattern\CommonDelegate.cs" />
@@ -149,6 +151,7 @@
     <Compile Include="Assets\_GAME\Core\Common\Scripts\Utilities\Anim\LoopAnimUIGradient.cs" />
     <Compile Include="Assets\AllIn1SpriteShader\Scripts\SetGlobalTimeNew.cs" />
     <Compile Include="Assets\AllIn1SpriteShader\Demo\Scripts\All1ShaderDemoController.cs" />
+    <Compile Include="Assets\Scripts\TriggerWithCertainCollider.cs" />
     <Compile Include="Assets\_GAME\Core\Common\Scripts\Utilities\Anim\LoopAnimVibratePosition.cs" />
     <Compile Include="Assets\_GAME\Core\Scripts\HoangHH\Effect\ShowObjectEffect.cs" />
     <Compile Include="Assets\_GAME\Core\Common\Scripts\Utilities\Random\RandomUtility.cs" />
