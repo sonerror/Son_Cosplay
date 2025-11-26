@@ -3,12 +3,14 @@ using Spine;
 using Spine.Unity;
 using UnityEngine;
 using DG.Tweening;
+using Sirenix.OdinInspector;
 
 namespace Utilities
 {
   public class SpineBoneIKControl : MonoBehaviour
   {
     public SkeletonAnimation skeletonAnimation;
+
     public string boneName;
 
     public Transform target;
@@ -22,55 +24,55 @@ namespace Utilities
 
     private Bone _bone;
     private bool _isControl;
-    private float _ikWeight;
+    private float _ikWeight; // blend weight (0..1)
     private Tween _weightTween;
 
-    void Start()
+    private void Start()
     {
       SetBoneByName();
       if (enableOnStart) EnableIKControl();
     }
 
-    void OnDestroy()
+    private void OnDestroy()
     {
-      DisableIKControl(true);
+      DisableIKControl(true); // instantly reset on destroy
     }
 
-    // *** FIXED signature ***
-    private void UpdateIK(ISkeletonAnimation anim)
+    private void UpdateIK(ISkeletonAnimation animated)
     {
       if (_bone == null || target == null) return;
 
+      // target local position in bone's parent space
       float localX, localY;
 
-      // Convert target world/local pos -> skeleton local
       if (_bone.Parent != null)
-      {
         _bone.Parent.WorldToLocal(
             TargetPosition.x + positionOffset.x,
             TargetPosition.y + positionOffset.y,
             out localX, out localY
         );
-      }
       else
-      {
         skeletonAnimation.Skeleton.RootBone.WorldToLocal(
             TargetPosition.x + positionOffset.x,
             TargetPosition.y + positionOffset.y,
             out localX, out localY
         );
-      }
 
-      _bone.X = Mathf.Lerp(_bone.X, localX * scalingX, _ikWeight);
-      _bone.Y = Mathf.Lerp(_bone.Y, localY * scalingY, _ikWeight);
+      // Lerp between animated (setup) pose and IK target
+      float blendedX = Mathf.Lerp(_bone.X, localX * scalingX, _ikWeight);
+      float blendedY = Mathf.Lerp(_bone.Y, localY * scalingY, _ikWeight);
+
+      _bone.X = blendedX;
+      _bone.Y = blendedY;
 
       if (isBoneRotateControlByTarget)
       {
-        float targetRot = target.eulerAngles.z;
+        float targetRot = target.localRotation.eulerAngles.z;
         _bone.Rotation = Mathf.LerpAngle(_bone.Rotation, targetRot, _ikWeight);
       }
     }
 
+    [Button]
     public void DisableIKControl(bool instant = false)
     {
       if (!_isControl) return;
@@ -95,6 +97,7 @@ namespace Utilities
       }
     }
 
+    [Button]
     public void EnableIKControl()
     {
       if (_isControl) return;
@@ -114,9 +117,7 @@ namespace Utilities
       }
 
       _bone = skeletonAnimation.Skeleton.FindBone(boneName);
-
-      if (_bone == null)
-        Debug.LogWarning($"Bone '{boneName}' not found.", this);
+      if (_bone == null) Debug.LogWarning($"Bone '{boneName}' not found in skeleton.", this);
     }
 
     private IEnumerable<string> GetBoneNames()

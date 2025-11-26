@@ -33,7 +33,7 @@ public class Pimple : Item
       trigger.OnTriggerEvent.AddListener(() => RemoveAcne(trigger, i));
     }
   }
-  private List<string> _acneSlots = new()
+  private List<string> _acneSlots = new List<string>()
         {
             SLOT_ACNE_1,
             SLOT_ACNE_2,

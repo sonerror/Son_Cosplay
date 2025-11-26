@@ -8,7 +8,7 @@ public class ToggleBoneSlot : MonoBehaviour
   [SerializeField] private SkeletonAnimation skeletonAnimation;
 
   [SerializeField]
-  private List<SlotAttachmentPair> initialAttachments = new();
+  private List<SlotAttachmentPair> initialAttachments = new List<SlotAttachmentPair>();
 
   public SkeletonAnimation SkeletonAnimation => skeletonAnimation;
 

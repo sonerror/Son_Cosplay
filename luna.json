@@ -1,8 +1,8 @@
 {
     "version": "7.0.0",
     "projectId": "f42e7ff96e4545544bb6cd68f51ab634",
-    "applicationID": 27599,
-    "creativeName": "Cosplaydom_v1GG",
+    "applicationID": 34683,
+    "creativeName": "Cosplaydom_v2",
     "pgServer": "EU",
     "window": {
         "‐⁏": true
@@ -2218,10 +2218,6 @@
             },
             {
                 "name": "UnityEngine.BoxCollider",
-                "excluded": true
-            },
-            {
-                "name": "UnityEngine.BoxCollider2D",
                 "excluded": true
             },
             {
@@ -7421,10 +7417,6 @@
                 "excluded": true
             },
             {
-                "name": "SlotAttachmentPair",
-                "excluded": true
-            },
-            {
                 "name": "Spine.BoneMatrix",
                 "excluded": true
             },
@@ -9075,6 +9067,14 @@
             {
                 "name": "Spine.Pool$1.IPoolable",
                 "excluded": false
+            },
+            {
+                "name": "pc.Debugger.Components.EditorCamera",
+                "excluded": true
+            },
+            {
+                "name": "pc.Debugger.Components.EditorGUI",
+                "excluded": true
             }
         ],
         "unusedMethods": [
@@ -17570,7 +17570,7 @@
                     },
                     {
                         "name": "localScale#set",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "lossyScale#get",
@@ -17598,7 +17598,7 @@
                     },
                     {
                         "name": "localRotation#set",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "rotation#get",
@@ -18652,7 +18652,7 @@
                     },
                     {
                         "name": "sortingOrder#get",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "sortingOrder#set",
@@ -34688,7 +34688,7 @@
                 "instanceMethods": [
                     {
                         "name": "Tf#get",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "BlockItem#get",
@@ -34696,11 +34696,11 @@
                     },
                     {
                         "name": "init",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "Awake",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "MouseDown",
@@ -34770,6 +34770,10 @@
                     },
                     {
                         "name": "Setstate",
+                        "excluded": false
+                    },
+                    {
+                        "name": "inherits",
                         "excluded": false
                     }
                 ]
@@ -35912,7 +35916,7 @@
                     },
                     {
                         "name": "FindBone",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "FindSlot",
@@ -35936,7 +35940,7 @@
                     },
                     {
                         "name": "SetAttachment",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "FindIkConstraint",
@@ -36764,7 +36768,7 @@
                     },
                     {
                         "name": "HandleRebuildRenderer",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "Initialize",
@@ -37194,7 +37198,7 @@
                 "instanceMethods": [
                     {
                         "name": "TargetPosition#get",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "init",
@@ -37210,7 +37214,7 @@
                     },
                     {
                         "name": "UpdateIK",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "DisableIKControl",
@@ -37490,11 +37494,11 @@
                     },
                     {
                         "name": "Skeleton#get",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "Parent#get",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "Children#get",
@@ -37506,19 +37510,19 @@
                     },
                     {
                         "name": "X#get",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "X#set",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "Y#get",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "Y#set",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "Rotation#get",
@@ -37626,7 +37630,7 @@
                     },
                     {
                         "name": "A#get",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "A#set",
@@ -37642,7 +37646,7 @@
                     },
                     {
                         "name": "C#get",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "C#set",
@@ -37658,7 +37662,7 @@
                     },
                     {
                         "name": "WorldX#get",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "WorldX#set",
@@ -37666,7 +37670,7 @@
                     },
                     {
                         "name": "WorldY#get",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "WorldY#set",
@@ -37722,7 +37726,7 @@
                     },
                     {
                         "name": "WorldToLocal",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "LocalToWorld",
@@ -39482,7 +39486,7 @@
                     },
                     {
                         "name": "Skeleton#get",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "PhysicsPositionInheritanceFactor#get",
@@ -39510,7 +39514,7 @@
                     },
                     {
                         "name": "SkeletonDataAsset#get",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "addGenerateMeshOverride",
@@ -39750,7 +39754,7 @@
                     },
                     {
                         "name": "addUpdateLocal",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "removeUpdateLocal",
@@ -41252,7 +41256,7 @@
                     },
                     {
                         "name": "$ctor1",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "ctor",
@@ -41490,7 +41494,7 @@
                     },
                     {
                         "name": "ctor",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "AddForce",
@@ -41628,6 +41632,244 @@
                     },
                     {
                         "name": "Has",
+                        "excluded": true
+                    }
+                ]
+            },
+            {
+                "className": "UnityEngine.BoxCollider2D",
+                "staticMethods": [],
+                "instanceMethods": [
+                    {
+                        "name": "size#get",
+                        "excluded": true
+                    },
+                    {
+                        "name": "size#set",
+                        "excluded": true
+                    },
+                    {
+                        "name": "ctor",
+                        "excluded": false
+                    }
+                ]
+            },
+            {
+                "className": "SlotAttachmentPair",
+                "staticMethods": [],
+                "instanceMethods": [
+                    {
+                        "name": "GetSlotNames",
+                        "excluded": true
+                    }
+                ]
+            },
+            {
+                "className": "ToggleBoneSlot",
+                "staticMethods": [],
+                "instanceMethods": [
+                    {
+                        "name": "SkeletonAnimation#get",
+                        "excluded": true
+                    },
+                    {
+                        "name": "init",
+                        "excluded": false
+                    },
+                    {
+                        "name": "Start",
+                        "excluded": false
+                    },
+                    {
+                        "name": "TurnSlotAttachment",
+                        "excluded": false
+                    }
+                ]
+            },
+            {
+                "className": "TriggerWithCertainCollider",
+                "staticMethods": [],
+                "instanceMethods": [
+                    {
+                        "name": "OnTriggerEvent#get",
+                        "excluded": false
+                    },
+                    {
+                        "name": "Rigidbody#get",
+                        "excluded": true
+                    },
+                    {
+                        "name": "IsDone#get",
+                        "excluded": true
+                    },
+                    {
+                        "name": "EnableCol",
+                        "excluded": true
+                    },
+                    {
+                        "name": "ReEnable$1",
+                        "excluded": true
+                    },
+                    {
+                        "name": "ReEnable",
+                        "excluded": true
+                    },
+                    {
+                        "name": "Disable",
+                        "excluded": true
+                    },
+                    {
+                        "name": "OnTriggerEnter2D",
+                        "excluded": true
+                    },
+                    {
+                        "name": "AddTriggerEvent",
+                        "excluded": true
+                    },
+                    {
+                        "name": "RemoveTriggerEvent",
+                        "excluded": true
+                    }
+                ]
+            },
+            {
+                "className": "Utilities.KeyframeData",
+                "staticMethods": [],
+                "instanceMethods": [
+                    {
+                        "name": "ctor",
+                        "excluded": false
+                    }
+                ]
+            },
+            {
+                "className": "Utilities.LoopAnimTransformFloating",
+                "staticMethods": [],
+                "instanceMethods": [
+                    {
+                        "name": "init",
+                        "excluded": false
+                    },
+                    {
+                        "name": "OnEnable",
+                        "excluded": false
+                    },
+                    {
+                        "name": "ResetFloatingAnchor",
+                        "excluded": false
+                    },
+                    {
+                        "name": "EvaluateCurve",
+                        "excluded": false
+                    },
+                    {
+                        "name": "Update",
+                        "excluded": false
+                    },
+                    {
+                        "name": "OnDisable",
+                        "excluded": true
+                    }
+                ]
+            },
+            {
+                "className": "Brow_Shaver",
+                "staticMethods": [],
+                "instanceMethods": [
+                    {
+                        "name": "init",
+                        "excluded": false
+                    },
+                    {
+                        "name": "MouseDown",
+                        "excluded": true
+                    },
+                    {
+                        "name": "MouseUp",
+                        "excluded": true
+                    },
+                    {
+                        "name": "MouseDrag",
+                        "excluded": true
+                    },
+                    {
+                        "name": "OnHandleMouseDown",
+                        "excluded": true
+                    },
+                    {
+                        "name": "ChangeLayerUp",
+                        "excluded": true
+                    },
+                    {
+                        "name": "ChangeLayerDown",
+                        "excluded": true
+                    }
+                ]
+            },
+            {
+                "className": "CharactorControl",
+                "staticMethods": [],
+                "instanceMethods": [
+                    {
+                        "name": "init",
+                        "excluded": false
+                    },
+                    {
+                        "name": "Start",
+                        "excluded": false
+                    },
+                    {
+                        "name": "TurnSlotAttachment",
+                        "excluded": false
+                    }
+                ]
+            },
+            {
+                "className": "Pimple",
+                "staticMethods": [],
+                "instanceMethods": [
+                    {
+                        "name": "init",
+                        "excluded": false
+                    },
+                    {
+                        "name": "Start",
+                        "excluded": false
+                    },
+                    {
+                        "name": "OnReady",
+                        "excluded": false
+                    },
+                    {
+                        "name": "RemoveAcne",
+                        "excluded": true
+                    },
+                    {
+                        "name": "OnDone",
+                        "excluded": true
+                    },
+                    {
+                        "name": "MouseDown",
+                        "excluded": true
+                    },
+                    {
+                        "name": "MouseUp",
+                        "excluded": true
+                    },
+                    {
+                        "name": "MouseDrag",
+                        "excluded": true
+                    },
+                    {
+                        "name": "OnHandleMouseDown",
+                        "excluded": true
+                    },
+                    {
+                        "name": "ChangeLayerUp",
+                        "excluded": true
+                    },
+                    {
+                        "name": "ChangeLayerDown",
                         "excluded": true
                     }
                 ]

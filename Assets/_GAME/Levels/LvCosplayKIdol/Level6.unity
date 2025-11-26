@@ -46733,7 +46733,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1438584912
 Transform:
   m_ObjectHideFlags: 0
@@ -59473,7 +59473,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1946535968
 Transform:
   m_ObjectHideFlags: 0
@@ -70157,6 +70157,9 @@ MonoBehaviour:
   OnDropItem:
     m_PersistentCalls:
       m_Calls: []
+  triggerCollider: {fileID: 0}
+  Angle: {x: 0, y: 0}
+  rende: {fileID: 0}
 --- !u!61 &2089521687
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -71374,7 +71377,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1447341938800282652
 GameObject:
   m_ObjectHideFlags: 0
@@ -76743,7 +76746,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2183614828246252181
 Transform:
   m_ObjectHideFlags: 0
@@ -78119,7 +78122,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!50 &4261180742259283194
 Rigidbody2D:
   serializedVersion: 5
@@ -80711,6 +80714,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7127597763251802742}
   - component: {fileID: 9011278779647111135}
+  - component: {fileID: 9011278779647111136}
   m_Layer: 0
   m_Name: Eye
   m_TagString: Untagged
@@ -82014,7 +82018,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8cd4854ea1c263149ac933c83864d71c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skeletonAnimation: {fileID: 0}
+  skeletonAnimation: {fileID: 722850701}
   boneName: Control_eyebown
   target: {fileID: 7127597763251802742}
   positionOffset: {x: 0, y: 24, z: 0}
@@ -82024,6 +82028,37 @@ MonoBehaviour:
   controlByTargetLocalPos: 1
   enableOnStart: 1
   transitionDuration: 0.3
+--- !u!114 &9011278779647111136
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7426031139983132070}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a787c2fb69390f4ca10da6eefa997eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cycleDuration: 2.5
+  positionCurveMul: 1.2
+  curveX:
+  - time: 0
+    value: 0
+  - time: 1
+    value: 0
+  curveY:
+  - time: 0
+    value: 0
+  - time: 0.3
+    value: 0.7
+  - time: 0.6
+    value: 0.7
+  - time: 1
+    value: 0
+  isUseScaleTime: 0
+  isRandomTimeOffset: 0
+  timeOffset: {x: 0, y: 0}
 --- !u!1 &9020827546085718471
 GameObject:
   m_ObjectHideFlags: 0
