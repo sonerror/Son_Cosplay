@@ -9,6 +9,31 @@ public class Brow_Shaver : Item
   public Renderer rende;
   private int _oriOrder;
   private Vector3 _prePos;
+  public bool isLeftDone = false;
+  public bool isRightDone = false;
+  public void OnRightDone()
+  {
+    isRightDone = true;
+    if (isLeftDone)
+    {
+      OnDone();
+    }
+  }
+
+  public void OnLeftDone()
+  {
+    isLeftDone = true;
+    if (isRightDone)
+    {
+      OnDone();
+    }
+  }
+
+  public void OnDone()
+  {
+    IsReady = false;
+    OnFinish?.Invoke();
+  }
 
   protected override void Awake()
   {

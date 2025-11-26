@@ -2,10 +2,11 @@ using System;
 using DG.Tweening;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.EventSystems;
 
 namespace HoangHH
 {
-  public class TapOpener : H3MonoBehaviour
+  public class TapOpener : Item
   {
     [SerializeField] private Collider2D col;
     [SerializeField] private SpriteRenderer sprite;
@@ -22,15 +23,15 @@ namespace HoangHH
       _isBlocking = block;
     }
 
-    public Action<bool> onOpenChange;
     public UnityEvent onOpen;
     public UnityEvent onClose;
     public bool IsOpen => isOpen;
     private Tween _openTween;
     private Vector3 _startPosition;
 
-    private void Awake()
+    protected override void Awake()
     {
+      base.Awake();
       _startPosition = Tf.localPosition;
       _initOrder = sprite.sortingOrder;
     }
@@ -40,7 +41,7 @@ namespace HoangHH
       SetOpen(isOpen, false, false);
     }
 
-    private void OnMouseUpAsButton()
+    public override void MouseUp(BaseEventData eventData)
     {
       if (_isBlocking) return;
       SetOpen(!isOpen);
@@ -64,7 +65,6 @@ namespace HoangHH
         Tf.localPosition = _startPosition;
         sprite.sortingOrder = isOpen ? orderOnOpen : _initOrder;
       }
-      onOpenChange?.Invoke(isOpen);
       if (isOpen)
       {
         onOpen.Invoke();

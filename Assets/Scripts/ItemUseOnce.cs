@@ -37,7 +37,6 @@ public class ItemUseOnce : Item
     targetPos.z = 0;
 
     Tf.DOKill();
-    Tf.DOScale(Vector3.one * 1.15f, 0.2f);
     Tf.DORotate(Vector3.forward * Angle.y, 0.2f);
     ChangeLayerUp();
   }
@@ -50,24 +49,25 @@ public class ItemUseOnce : Item
     Vector3 pos = Tf.position;
     pos = Vector3.Lerp(pos, targetPos, 0.4f * Time.deltaTime * 50f);
     Tf.position = pos;
-    if (IsReady) CheckToTarget();
+
   }
 
-  void CheckToTarget()
+  bool CheckToTarget()
   {
-    if (targetInfos.targetTf == null) return;
+    if (targetInfos.targetTf == null) return false;
     float dist = Vector3.Distance(Tf.position, targetInfos.targetTf.position);
     if (dist <= targetInfos.distance)
     {
       IsReady = false;
       isBlocked = true;
-      Tf.DOMove(targetInfos.targetTf.position, 0.5f).SetEase(Ease.OutBack).OnComplete(() =>
+      Tf.DOMove(targetInfos.targetTf.position, 0.2f).SetEase(Ease.OutBack).OnComplete(() =>
       {
         OnFinish?.Invoke();
-
         gameObject.SetActive(false);
       });
+      return true;
     }
+    return false;
   }
 
   public override void MouseUp(BaseEventData eventData)
@@ -75,18 +75,29 @@ public class ItemUseOnce : Item
     if (isBlocked) return;
     if (!isDragging) return;
     isDragging = false;
-    OnDropItem?.Invoke();
-    OnHandleMouseUp();
+
+
+    if (IsReady)
+    {
+      if (!CheckToTarget())
+      {
+        OnHandleMouseUp();
+      }
+    }
+    else
+    {
+      OnHandleMouseUp();
+    }
   }
 
   protected virtual void OnHandleMouseUp()
   {
     Debug.Log("aaaa");
     Tf.DOKill();
-    Tf.DOScale(Vector3.one, 0.3f);
-    Tf.DORotate(Vector3.forward * Angle.x, 0.3f);
-    Tf.DOMove(_prePos, 0.3f).SetEase(Ease.OutBack).OnComplete(() =>
+    Tf.DORotate(Vector3.forward * Angle.x, 0.1f);
+    Tf.DOMove(_prePos, 0.1f).SetEase(Ease.OutBack).OnComplete(() =>
     {
+      OnDropItem?.Invoke();
       ChangeLayerDown();
     });
   }

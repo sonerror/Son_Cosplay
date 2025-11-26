@@ -104,6 +104,7 @@
     <Compile Include="Assets\Scripts\Brow_Shaver.cs" />
     <Compile Include="Assets\DOTween\Modules\DOTweenModuleAudio.cs" />
     <Compile Include="Assets\Scripts\CharactorControl.cs" />
+    <Compile Include="Assets\Scripts\ItemMove.cs" />
     <Compile Include="Assets\Scripts\Pool\PoolManager.cs" />
     <Compile Include="Assets\Scripts\Manager\UIManager.cs" />
     <Compile Include="Assets\Scripts\53\FaceTowel.cs" />
