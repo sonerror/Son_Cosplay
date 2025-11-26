@@ -1,14 +1,25 @@
+using System.Collections.Generic;
 using DG.Tweening;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class Brow_Shaver : Item
+public class PimpleHeal : Item
 {
-  public GameObject nodeTriger;
+  private const string SLOT_ACNE_POP = "Draw_Acne_pop";
+  private const string SLOT_ACNE_POP_2 = "Draw_Acne_pop2";
+  private const string SLOT_ACNE_POP_3 = "Draw_Acne_pop3";
+  public Collider2D triggerCollider;
   public Vector2 Angle = new Vector2(0, 0);
   public Renderer rende;
   private int _oriOrder;
   private Vector3 _prePos;
+  [SerializeField] private List<TriggerWithCertainCollider> acnePimpleColliders;
+
+  private int _currentAcneCreamIndex;
+  [SerializeField]
+  private Collider2D acneCreamTriggerPoint;
+  [SerializeField]
+  private List<SpriteRenderer> acneCreamRenderers;
 
   protected override void Awake()
   {
@@ -17,7 +28,44 @@ public class Brow_Shaver : Item
     _oriOrder = rende.sortingOrder;
   }
 
-  // Start is called once before the first execution of Update after the MonoBehaviour is created
+  void Start()
+  {
+    if (IsReady) OnReady();
+  }
+
+  public void OnReady()
+  {
+    IsReady = true;
+    for (int index = 0; index < acnePimpleColliders.Count; index++)
+    {
+      int i = index;
+      TriggerWithCertainCollider trigger = acnePimpleColliders[i];
+      trigger.ReEnable(acneCreamTriggerPoint);
+      trigger.OnTriggerEvent.AddListener(() => RemoveAcneCream(trigger, i));
+    }
+  }
+  private readonly List<string> _acneCreamSlot = new()
+        {
+            SLOT_ACNE_POP,
+            SLOT_ACNE_POP_2,
+            SLOT_ACNE_POP_3
+        };
+
+  private void RemoveAcneCream(TriggerWithCertainCollider trigger, int index)
+  {
+    trigger.OnTriggerEvent.RemoveAllListeners();
+    // trigger.gameObject.SetActive(false);
+    acneCreamRenderers[index].enabled = true;
+    acneCreamRenderers[index].DOFade(0f, 3f).OnComplete(() =>
+    {
+      acneCreamRenderers[index].gameObject.SetActive(false);
+    });
+    GamePlayManager.Ins.characterControl.TurnSlotAttachment(_acneCreamSlot[index]);
+    _currentAcneCreamIndex++;
+    if (_currentAcneCreamIndex >= acnePimpleColliders.Count) OnDone();
+  }
+  void OnDone() { }
+
   public override void MouseDown(BaseEventData eventData)
   {
     if (isBlocked) return;
@@ -25,7 +73,7 @@ public class Brow_Shaver : Item
     if (!IsReady) { OnWrong?.Invoke(); }
     else
     {
-      nodeTriger.SetActive(true);
+      triggerCollider.enabled = true;
     }
     base.MouseDown(eventData);
 
@@ -45,11 +93,12 @@ public class Brow_Shaver : Item
     Tf.DOScale(Vector3.one, 0.2f);
     Tf.DORotate(Vector3.forward * Angle.x, 0.2f);
     Tf.DOMove(_prePos, 0.3f).SetEase(Ease.OutBack).OnComplete(() =>
-    {
-      ChangeLayerDown();
-    });
+{
+  ChangeLayerDown();
+});
 
-    nodeTriger.SetActive(false);
+
+    triggerCollider.enabled = false;
   }
 
   public override void MouseDrag(BaseEventData eventData)
@@ -86,4 +135,5 @@ public class Brow_Shaver : Item
   {
     rende.sortingOrder = _oriOrder;
   }
+
 }

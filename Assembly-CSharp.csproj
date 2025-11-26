@@ -70,6 +70,8 @@
     <Compile Include="Assets\AllIn1SpriteShader\Scripts\RandomSeed.cs" />
     <Compile Include="Assets\Scripts\Helper\DTPCache.cs" />
     <Compile Include="Assets\AllIn1SpriteShader\Scripts\All1CreateUnifiedOutline.cs" />
+    <Compile Include="Assets\Scripts\ItemUseOnce.cs" />
+    <Compile Include="Assets\Scripts\LoopAnimTransformFloating.cs" />
     <Compile Include="Assets\Scripts\Manager\EventManager.cs" />
     <Compile Include="Assets\DOTween\Modules\DOTweenModuleUnityVersion.cs" />
     <Compile Include="Assets\AllIn1SpriteShader\Demo\Scripts\DemoCircleExpositor.cs" />
@@ -96,6 +98,8 @@
     <Compile Include="Assets\FindMissingScriptsRecursively.cs" />
     <Compile Include="Assets\Scripts\OnTransformGoToAffectZone.cs" />
     <Compile Include="Assets\AllIn1SpriteShader\Demo\Scripts\DemoRandomColorSwap.cs" />
+    <Compile Include="Assets\Scripts\PimpleHeal.cs" />
+    <Compile Include="Assets\Scripts\SpineBoneIKControl.cs" />
     <Compile Include="Assets\Scripts\53\HairBang.cs" />
     <Compile Include="Assets\Scripts\Brow_Shaver.cs" />
     <Compile Include="Assets\DOTween\Modules\DOTweenModuleAudio.cs" />
@@ -103,6 +107,7 @@
     <Compile Include="Assets\Scripts\Pool\PoolManager.cs" />
     <Compile Include="Assets\Scripts\Manager\UIManager.cs" />
     <Compile Include="Assets\Scripts\53\FaceTowel.cs" />
+    <Compile Include="Assets\Scripts\TapOpener.cs" />
     <Compile Include="Assets\Scripts\UI\UIScreen.cs" />
     <Compile Include="Assets\DOTween\Modules\DOTweenModulePhysics.cs" />
     <Compile Include="Assets\Scripts\Helper\ScreenShot.cs" />
@@ -112,8 +117,10 @@
     <Compile Include="Assets\Scripts\TriggerWithCertainCollider.cs" />
     <Compile Include="Assets\AllIn1SpriteShader\Scripts\SetAtlasUvs.cs" />
     <Compile Include="Assets\AllIn1SpriteShader\Demo\Scripts\All1TextureOffsetOverTime.cs" />
+    <Compile Include="Assets\Scripts\FadeSpriteByStep.cs" />
     <Compile Include="Assets\AllIn1SpriteShader\Demo\Scripts\Demo2AutoScroll.cs" />
     <Compile Include="Assets\DOTween\Modules\DOTweenModuleSprite.cs" />
+    <Compile Include="Assets\Scripts\ToggleBoneSlot.cs" />
     <Compile Include="Assets\Scripts\MaskGroupCustom.cs" />
     <Compile Include="Assets\Scripts\53\WaterFaucet.cs" />
     <Compile Include="Assets\Scripts\Manager\GamePlayManager.cs" />
@@ -122,6 +129,7 @@
     <Compile Include="Assets\Scripts\Pool\PoolMember.cs" />
     <Compile Include="Assets\Scripts\Pool\GameUnit.cs" />
     <Compile Include="Assets\Scripts\UI\GamePlayScreen.cs" />
+    <Compile Include="Assets\Scripts\OnTransformMoveInAffectZone.cs" />
     <Compile Include="Assets\AllIn1SpriteShader\Demo\Scripts\DemoRepositionExpositor.cs" />
     <Compile Include="Assets\DOTween\Modules\DOTweenModuleUtils.cs" />
     <Compile Include="Assets\Scripts\Pool\SfxPool.cs" />
@@ -148,6 +156,8 @@
     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Surface.cginc" />
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
     <None Include="Assets\DOTween\DOTween.dll" />
+    <None Include="Assets\Spines\New\school_boy_3.8.atlas.txt" />
+    <None Include="Assets\Spines\school_boy_38\School_Girl.atlas.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Masking.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF Overlay.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Mobile.shader" />

@@ -301,9 +301,23 @@ MonoBehaviour:
     subShaderIndex: 0
     upToDate: 0
     keywords: []
+  - shaderCompilerPlatform: 5
+    shader: {fileID: 4800000, guid: 1e8a610c9e01c3648bac42585e5fc676, type: 3}
+    passType: 0
+    passId: 0
+    subShaderIndex: 0
+    upToDate: 0
+    keywords: []
+  - shaderCompilerPlatform: 9
+    shader: {fileID: 4800000, guid: 1e8a610c9e01c3648bac42585e5fc676, type: 3}
+    passType: 0
+    passId: 0
+    subShaderIndex: 0
+    upToDate: 0
+    keywords: []
   _includedShaderVariants: []
   _excludedShaderVariants: []
-  version: 27
+  version: 58
   _shaderParsedShaders:
   - ParsedSubShaders:
     - Index: 0

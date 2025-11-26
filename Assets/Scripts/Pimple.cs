@@ -16,15 +16,21 @@ public class Pimple : Item
   [SerializeField] private List<TriggerWithCertainCollider> acnePimpleColliders;
 
 
-  void Start()
+  protected override void Awake()
   {
+    base.Awake();
     _prePos = Tf.position;
     _oriOrder = rende.sortingOrder;
+  }
+
+  void Start()
+  {
     if (IsReady) OnReady();
   }
 
-  void OnReady()
+  public void OnReady()
   {
+    IsReady = true;
     for (int index = 0; index < acnePimpleColliders.Count; index++)
     {
       int i = index; // Capture the index for the lambda
@@ -48,7 +54,13 @@ public class Pimple : Item
     if (_currentAcneIndex >= _acneSlots.Count) OnDone();
   }
 
-  void OnDone() { }
+  void OnDone()
+  {
+    if (!IsReady) return;
+    Debug.Log("All pimples removed");
+    IsReady = false;
+    OnFinish?.Invoke();
+  }
 
   public override void MouseDown(BaseEventData eventData)
   {

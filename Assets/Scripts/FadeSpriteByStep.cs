@@ -1,9 +1,7 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class WaterFace : MonoBehaviour
+public class FadeSpriteByStep : MonoBehaviour
 {
   [SerializeField] private bool isEnable = false;
   [SerializeField]
@@ -11,6 +9,7 @@ public class WaterFace : MonoBehaviour
   [SerializeField] private SpriteRenderer spriteShow;
   [SerializeField] private SpriteRenderer spriteHide;
 
+  public ParticleSystem vfxWater;
 
   public UnityEvent onComplete;
 
@@ -24,6 +23,7 @@ public class WaterFace : MonoBehaviour
     {
       isEnable = false;
       enabled = false;
+      vfxWater.Stop();
       onComplete.Invoke();
       return;
     }
@@ -31,6 +31,7 @@ public class WaterFace : MonoBehaviour
     if (!hadPlayVfx && currentTime >= timeChange / 2f)
     {
       hadPlayVfx = true;
+      vfxWater.Play();
     }
     UpdateImage();
   }
