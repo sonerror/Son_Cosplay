@@ -65,7 +65,6 @@
     <Analyzer Include="D:\_App\Unity\UnityInstall\6000.0.27f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.UIToolkit.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\_GAMECooking\Scripts\Editor\DaivqEditorTools.cs" />
     <Compile Include="Assets\AllIn1SpriteShader\Editor\AllIn1SpriteShaderMaterialInspector.cs" />
     <Compile Include="Assets\AllIn1SpriteShader\Editor\AllIn1ShaderGradientDrawer.cs" />
     <Compile Include="Assets\AllIn1SpriteShader\Editor\AllIn1ShaderScriptEditor.cs" />

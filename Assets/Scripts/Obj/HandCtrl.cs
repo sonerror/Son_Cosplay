@@ -59,7 +59,7 @@ public class HandCtrl : MonoBehaviour
 
   IEnumerator IEShowHand()
   {
-    yield return Cache.GetWFS(3f);
+    yield return DTPCache.GetWFS(3f);
     if (gameObject.activeSelf)
       ShowHand();
   }

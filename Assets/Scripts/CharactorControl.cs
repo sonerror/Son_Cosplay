@@ -1,3 +1,4 @@
+using System;
 using Spine.Unity;
 using UnityEngine;
 
@@ -10,7 +11,7 @@ public class CharactorControl : GameUnit
 
 
   [SerializeField] private SkeletonAnimation skeletonAnimation;
-  [SerializeField] private ToggleBoneSlot boneSlotToggle;
+  // [SerializeField] private ToggleBoneSlot boneSlotToggle;
 
   [SerializeField]
   [SpineSlot(dataField: nameof(SkeletonDataAsset))]
@@ -30,7 +31,17 @@ public class CharactorControl : GameUnit
 
   public void TurnSlotAttachment(string slotName, string attachmentName = null)
   {
-    boneSlotToggle.TurnSlotAttachment(slotName, attachmentName);
+    // boneSlotToggle.TurnSlotAttachment(slotName, attachmentName);
+
+    try
+    {
+      // if (string.IsNullOrEmpty(attachmentName)) attachmentName = null;
+      skeletonAnimation.Skeleton.SetAttachment(slotName, attachmentName);
+    }
+    catch (Exception e)
+    {
+      Debug.LogError($"Error setting attachment '{attachmentName}' on slot '{slotName}': {e.Message}");
+    }
   }
 
 }
