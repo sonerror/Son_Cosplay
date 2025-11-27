@@ -8,8 +8,9 @@ public class WaterFace : MonoBehaviour
   [SerializeField] private bool isEnable = false;
   [SerializeField]
   float timeChange = 1f;
-  [SerializeField] private SpriteRenderer spriteShow;
+  // [SerializeField] private SpriteRenderer spriteShow;
   [SerializeField] private SpriteRenderer spriteHide;
+  public FxType fxSound = FxType.Hair_Shave;
 
 
   public UnityEvent onComplete;
@@ -25,6 +26,7 @@ public class WaterFace : MonoBehaviour
       isEnable = false;
       enabled = false;
       onComplete.Invoke();
+      SoundManager.Ins.StopSoundLoop(fxSound);
       return;
     }
 
@@ -38,17 +40,19 @@ public class WaterFace : MonoBehaviour
   void UpdateImage()
   {
     float t = currentTime / timeChange;
-    spriteShow.color = new Color(1, 1, 1, t);
+    // spriteShow.color = new Color(1, 1, 1, t);
     spriteHide.color = new Color(1, 1, 1, 1 - t);
   }
 
   public void SetEnableFade()
   {
     isEnable = true;
+    SoundManager.Ins.PlaySoundLoop(fxSound);
   }
 
   public void SetDisableFade()
   {
     isEnable = false;
+    SoundManager.Ins.StopSoundLoop(fxSound);
   }
 }

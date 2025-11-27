@@ -4,7 +4,8 @@ using UnityEngine;
 
 public enum PoolType
 {
-  SFX_Oil,
+  SFX_Acne,
+  SFX_Acne_Cream,
 }
 
 public class PoolManager : Singleton<PoolManager>

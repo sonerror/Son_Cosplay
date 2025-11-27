@@ -296,7 +296,10 @@ MonoBehaviour:
   poolAmounts:
   - type: 0
     amount: 0
-    poolMember: {fileID: 2235139251160222517, guid: c26487a94ea7f2a429c02d7d9496321a, type: 3}
+    poolMember: {fileID: 2235139251160222517, guid: 8d18b26a80b9eea46bf5db5fb750e951, type: 3}
+  - type: 1
+    amount: 0
+    poolMember: {fileID: 2235139251160222517, guid: f965aec2e1a49c04b84cdcdfcc4a8ab9, type: 3}
 --- !u!4 &39775003
 Transform:
   m_ObjectHideFlags: 0
@@ -1931,8 +1934,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isEnable: 0
   timeChange: 2
-  spriteShow: {fileID: 598915283}
   spriteHide: {fileID: 440182063}
+  fxSound: 10
   onComplete:
     m_PersistentCalls:
       m_Calls:
@@ -2879,7 +2882,6 @@ MonoBehaviour:
   firstDelay: 0
   showOnEnable: 1
   delayFirstFrame: 0
-  hasSound: 0
   soundOnShow: {fileID: 0}
   onComplete:
     m_PersistentCalls:
@@ -3106,8 +3108,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isEnable: 0
   timeChange: 2
-  spriteShow: {fileID: 1465806211}
   spriteHide: {fileID: 1991237173}
+  fxSound: 6
   onComplete:
     m_PersistentCalls:
       m_Calls:
@@ -3744,8 +3746,13 @@ MonoBehaviour:
   - {fileID: 8300000, guid: d8b42fd4ca8dc8e43a9e143400d64daf, type: 3}
   - {fileID: 8300000, guid: 2a54bb4703140b744bb8f7ac2ee8efb2, type: 3}
   - {fileID: 8300000, guid: d4ca4350ae76559438c6a25e1983fab3, type: 3}
-  - {fileID: 8300000, guid: 2b0b1816ac4e9244f8e090fbf8c8f47d, type: 3}
-  - {fileID: 8300000, guid: f35c6518578fa57429687d696bb1c5bc, type: 3}
+  - {fileID: 8300000, guid: ea572c334ae25c34192bc9304b9c5085, type: 3}
+  - {fileID: 8300000, guid: ce56d9949cafb7447b61640ef32576b8, type: 3}
+  - {fileID: 8300000, guid: 54b1ac673fbea6f4fb35bb736151d856, type: 3}
+  - {fileID: 8300000, guid: 07ef039e2388b9a4599a70e6313c0234, type: 3}
+  - {fileID: 8300000, guid: 729117713ef6c46418ae79f7fb9fd2b0, type: 3}
+  - {fileID: 8300000, guid: ad7908740ee7a3e4e9b8498b39a7b1ab, type: 3}
+  - {fileID: 8300000, guid: 54b1ac673fbea6f4fb35bb736151d856, type: 3}
 --- !u!4 &889256036
 Transform:
   m_ObjectHideFlags: 0
@@ -4643,6 +4650,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   distanDoneToMove: 2
+  fxSound: 7
 --- !u!1 &1113598546
 GameObject:
   m_ObjectHideFlags: 0
@@ -5480,8 +5488,8 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0.27
     y: 3.33
-    width: 2.08
-    height: 1.1
+    width: 2.5
+    height: 1.5
   onEnterZone:
     m_PersistentCalls:
       m_Calls:
@@ -8458,7 +8466,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   nodeTriger: {fileID: 1977237898}
-  Angle: {x: 0, y: -10}
+  Angle: {x: 0, y: -15}
   rende: {fileID: 2089521685}
   NodeLeft: {fileID: 475462155}
   NodeRight: {fileID: 722326554}
@@ -8653,8 +8661,8 @@ MonoBehaviour:
     serializedVersion: 2
     x: -2.44
     y: 3.33
-    width: 2.24
-    height: 1.1
+    width: 2.5
+    height: 1.5
   onEnterZone:
     m_PersistentCalls:
       m_Calls:
@@ -10119,6 +10127,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   distanDoneToMove: 2
+  fxSound: 8
 --- !u!212 &8836263049157960101
 SpriteRenderer:
   m_ObjectHideFlags: 0

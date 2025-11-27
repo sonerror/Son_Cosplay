@@ -32,7 +32,7 @@ public class ItemUseOnce : Item
   {
     isDragging = true;
     OnPickItem?.Invoke();
-    SoundManager.Ins.PlayFx(FxType.Click);
+    SoundManager.Ins.PlayFx(FxType.Pick);
     Vector3 mouseWorldPos = GetMouseWorldPos();
     offSet = Tf.position - mouseWorldPos;
     Vector3 targetPos = mouseWorldPos + offSet;
@@ -66,6 +66,7 @@ public class ItemUseOnce : Item
       {
         OnFinish?.Invoke();
         gameObject.SetActive(false);
+        SoundManager.Ins.PlayFx(FxType.AddGel);
       });
       return true;
     }

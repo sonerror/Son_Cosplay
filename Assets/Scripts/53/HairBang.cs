@@ -36,7 +36,7 @@ public class HairBang : Item
   {
     isDragging = true;
     OnPickItem?.Invoke();
-    SoundManager.Ins.PlayFx(FxType.Click);
+    SoundManager.Ins.PlayFx(FxType.Pick);
     Vector3 mouseWorldPos = GetMouseWorldPos();
     offSet = Tf.position - mouseWorldPos;
     Vector3 targetPos = mouseWorldPos + offSet;

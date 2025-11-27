@@ -32,7 +32,7 @@ public class Oil : Item
   {
     isDragging = true;
     OnPickItem?.Invoke();
-    SoundManager.Ins.PlayFx(FxType.Click);
+    SoundManager.Ins.PlayFx(FxType.Pick);
 
     Vector3 mouseWorldPos = GetMouseWorldPos();
     offSet = Tf.position - mouseWorldPos;
@@ -66,7 +66,7 @@ public class Oil : Item
       {
         targetInfos[i].targetTf.gameObject.SetActive(true);
         targetInfos[i].hadChecked = true;
-        PoolManager.Ins.Spawn(PoolType.SFX_Oil, targetInfos[i].targetTf.position, Quaternion.identity);
+        // PoolManager.Ins.Spawn(PoolType.SFX_Oil, targetInfos[i].targetTf.position, Quaternion.identity);
         CheckDone();
         // return;
       }

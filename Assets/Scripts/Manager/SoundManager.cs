@@ -7,8 +7,14 @@ public enum FxType
   Happy,
   StartGame,
   Timer,
-  Towel,
-  Click,
+  Pick,
+  Drop,
+  Hair_Shave,
+  NoseMove,
+  LipMove,
+  AddGel,
+  Hair_Shave1,
+
 }
 
 public class SoundManager : Singleton<SoundManager>

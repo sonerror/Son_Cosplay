@@ -72,6 +72,7 @@ namespace HoangHH
       {
         // AudioManager.PlaySFX(isOpen ? openSound : closeSound);
         // MMVibrationManager.Haptic(HapticTypes.LightImpact);
+        SoundManager.Ins.PlayFx(FxType.Pick);
       }
     }
 

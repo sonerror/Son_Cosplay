@@ -73,6 +73,7 @@ public class Brow_Shaver : Item
     Tf.DOMove(_prePos, 0.3f).SetEase(Ease.OutBack).OnComplete(() =>
     {
       ChangeLayerDown();
+      SoundManager.Ins.PlayFx(FxType.Drop);
     });
 
     nodeTriger.SetActive(false);
@@ -91,7 +92,8 @@ public class Brow_Shaver : Item
   {
     isDragging = true;
     OnPickItem?.Invoke();
-    SoundManager.Ins.PlayFx(FxType.Click);
+    SoundManager.Ins.PlayFx(FxType.Pick);
+
 
     Vector3 mouseWorldPos = GetMouseWorldPos();
     offSet = Tf.position - mouseWorldPos;

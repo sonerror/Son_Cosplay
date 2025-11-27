@@ -51,6 +51,7 @@ public class Pimple : Item
     trigger.OnTriggerEvent.RemoveAllListeners();
     trigger.gameObject.SetActive(false);
     GamePlayManager.Ins.characterControl.TurnSlotAttachment(_acneSlots[index]);
+    PoolManager.Ins.Spawn(PoolType.SFX_Acne, trigger.transform.position, Quaternion.identity);
     _currentAcneIndex++;
     if (_currentAcneIndex >= _acneSlots.Count) OnDone();
   }
@@ -93,9 +94,10 @@ public class Pimple : Item
     Tf.DOScale(Vector3.one, 0.2f);
     Tf.DORotate(Vector3.forward * Angle.x, 0.2f);
     Tf.DOMove(_prePos, 0.3f).SetEase(Ease.OutBack).OnComplete(() =>
-{
-  ChangeLayerDown();
-});
+    {
+      SoundManager.Ins.PlayFx(FxType.Drop);
+      ChangeLayerDown();
+    });
 
 
     triggerCollider.enabled = false;
@@ -114,8 +116,7 @@ public class Pimple : Item
   {
     isDragging = true;
     OnPickItem?.Invoke();
-    SoundManager.Ins.PlayFx(FxType.Click);
-
+    SoundManager.Ins.PlayFx(FxType.Pick);
     Vector3 mouseWorldPos = GetMouseWorldPos();
     offSet = Tf.position - mouseWorldPos;
     Vector3 targetPos = mouseWorldPos + offSet;

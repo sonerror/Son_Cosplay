@@ -6,7 +6,7 @@ public class ItemMove : Item
 {
 
   public float distanDoneToMove = 2f;
-
+  public FxType fxSound = FxType.LipMove;
   private Vector3 _preMousePos;
   private Vector3 _mouseDownPos;
   private float deltaMove = 0f;
@@ -17,6 +17,7 @@ public class ItemMove : Item
     if (isDragging) return;
     if (GamePlayManager.Ins.clockTimer.gameObject.activeSelf) return;
     if (!IsReady) return;
+    SoundManager.Ins.PlayFx(FxType.Pick);
     isDragging = true;
     _preMousePos = GetMouseWorldPos();
     _mouseDownPos = GetMouseWorldPos();
@@ -46,6 +47,7 @@ public class ItemMove : Item
   void Move()
   {
     Tf.DOKill();
+    SoundManager.Ins.PlayFx(fxSound);
     var pos = GetMouseWorldPos();
     float dir = 1f;
     if (pos.x < _mouseDownPos.x) { dir = -1f; }

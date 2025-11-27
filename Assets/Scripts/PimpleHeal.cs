@@ -45,7 +45,7 @@ public class PimpleHeal : Item
       trigger.OnTriggerEvent.AddListener(() => RemoveAcneCream(trigger, i));
     }
   }
-  private readonly List<string> _acneCreamSlot = new()
+  private readonly List<string> _acneCreamSlot = new List<string>()
         {
             SLOT_ACNE_POP,
             SLOT_ACNE_POP_2,
@@ -60,6 +60,8 @@ public class PimpleHeal : Item
     {
       acneCreamRenderers[index].gameObject.SetActive(false);
     });
+    PoolManager.Ins.Spawn(PoolType.SFX_Acne_Cream, trigger.transform.position, Quaternion.identity);
+
     GamePlayManager.Ins.characterControl.TurnSlotAttachment(_acneCreamSlot[index]);
     _currentAcneCreamIndex++;
     if (_currentAcneCreamIndex >= acnePimpleColliders.Count) OnDone();
@@ -119,7 +121,7 @@ public class PimpleHeal : Item
   {
     isDragging = true;
     OnPickItem?.Invoke();
-    SoundManager.Ins.PlayFx(FxType.Click);
+    SoundManager.Ins.PlayFx(FxType.Pick);
 
     Vector3 mouseWorldPos = GetMouseWorldPos();
     offSet = Tf.position - mouseWorldPos;

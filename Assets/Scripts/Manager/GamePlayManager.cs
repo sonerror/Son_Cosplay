@@ -41,6 +41,7 @@ public class GamePlayManager : Singleton<GamePlayManager>
     Scene0.SetActive(false);
     Scene1.SetActive(true);
     TutorialManager.Ins.enableCountTime = true;
+    SoundManager.Ins.PlayFx(FxType.StartGame);
     isPlayingGame = true;
   }
 

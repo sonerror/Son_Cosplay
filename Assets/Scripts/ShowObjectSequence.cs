@@ -19,9 +19,8 @@ namespace HoangHH
     [SerializeField] private ShowObjectSequenceItem[] items;
     [SerializeField] private float firstDelay;
     [SerializeField] private bool showOnEnable = true;
-    [ShowIf("showOnEnable")][SerializeField] private bool delayFirstFrame;
-    [SerializeField] private bool hasSound;
-    [ShowIf("hasSound")][SerializeField] private AudioClip soundOnShow;
+    [SerializeField] private bool delayFirstFrame;
+    [SerializeField] private AudioClip soundOnShow;
 
     private bool _isShowing;
 
@@ -67,16 +66,7 @@ namespace HoangHH
       {
         var item = items[index];
         item.effect.Show();
-        if (hasSound)
-        {
-          switch (index)
-          {
-            case 0:
-            case > 0 when items[index - 1].delayNext > 0.0001f:
-              // AudioManager.PlaySFX(soundOnShow);
-              break;
-          }
-        }
+
 
         yield return new WaitForSeconds(item.delayNext);
       }

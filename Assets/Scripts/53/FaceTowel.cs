@@ -31,8 +31,9 @@ public class FaceTowel : Item
   {
     isDragging = true;
     OnPickItem?.Invoke();
-    SoundManager.Ins.PlaySoundLoop(FxType.Towel);
-    SoundManager.Ins.PlayFx(FxType.Click);
+    // SoundManager.Ins.PlaySoundLoop(fxSound);
+    // SoundManager.Ins.PlayFx(FxType.Click);
+
 
     Vector3 mouseWorldPos = GetMouseWorldPos();
     offSet = Tf.position - mouseWorldPos;
@@ -77,7 +78,7 @@ public class FaceTowel : Item
   protected virtual void OnHandleMouseUp()
   {
     Debug.Log("aaaa");
-    SoundManager.Ins.StopSoundLoop(FxType.Towel);
+    // SoundManager.Ins.StopSoundLoop(fxSound);
     Tf.DOKill();
     Tf.DOScale(Vector3.one, 0.3f);
     Tf.DORotate(Vector3.forward * Angle.x, 0.3f);

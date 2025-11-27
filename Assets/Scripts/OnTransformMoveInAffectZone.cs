@@ -4,103 +4,101 @@ using UnityEngine.Events;
 
 namespace HoangHH
 {
-    public class OnTransformMoveInAffectZone : H3MonoBehaviour
+  public class OnTransformMoveInAffectZone : H3MonoBehaviour
+  {
+    public bool blockCheck;
+
+    [Header("Zone")]
+    [SerializeField] private bool useRadiusZone;
+    [SerializeField] private Rect affectZone;
+    [SerializeField] private Transform target;
+    [SerializeField] private float radius;
+
+    [Header("Events")] public UnityEvent onMovingInZone;
+    public UnityEvent onNotMovingOrOutZone;
+
+    [SerializeField]
+    private float minMoveDistance = 0.01f;
+
+    private bool _hasLastPos;
+
+    // State
+    private bool _isMovingInZone;
+    private Vector2 _lastPos2D;
+
+    private float MinMoveSqr => minMoveDistance * minMoveDistance;
+
+    private void LateUpdate()
     {
-        public bool blockCheck;
+      if (blockCheck) return;
+      Vector2 pos2D = Tf.position;
+      bool inZone = GetInZoneState(pos2D);
 
-        [Header("Zone")] 
-        [SerializeField] private bool useRadiusZone;
-        [HideIf("useRadiusZone")] [SerializeField] private Rect affectZone;
-        [ShowIf("useRadiusZone")] [SerializeField] private Transform target;
-        [ShowIf("useRadiusZone")] [SerializeField] private float radius;
+      bool moving = false;
+      if (_hasLastPos)
+      {
+        Vector2 delta = pos2D - _lastPos2D;
+        moving = delta.sqrMagnitude >= MinMoveSqr;
+      }
 
-        [Header("Events")] public UnityEvent onMovingInZone;
-        public UnityEvent onNotMovingOrOutZone;
+      // TRUE only when both inside AND moving
+      SetMovingInZone(inZone && moving);
 
-        [Header("Movement Settings")]
-        [Tooltip("Minimum per-frame movement (world units) to count as 'moving'.")]
-        [SerializeField]
-        private float minMoveDistance = 0.01f;
+      _lastPos2D = pos2D;
+      _hasLastPos = true;
+    }
 
-        private bool _hasLastPos;
+    private bool GetInZoneState(Vector2 pos2D)
+    {
+      if (useRadiusZone)
+      {
+        return Vector2.Distance(pos2D, target.position) <= radius;
+      }
+      return affectZone.Contains(pos2D);
+    }
 
-        // State
-        private bool _isMovingInZone;
-        private Vector2 _lastPos2D;
+    private void OnDisable()
+    {
+      if (_isMovingInZone)
+        SetMovingInZone(false);
 
-        private float MinMoveSqr => minMoveDistance * minMoveDistance;
-
-        private void LateUpdate()
-        {
-            if (blockCheck) return;
-            Vector2 pos2D = Tf.position;
-            bool inZone = GetInZoneState(pos2D);
-
-            bool moving = false;
-            if (_hasLastPos)
-            {
-                Vector2 delta = pos2D - _lastPos2D;
-                moving = delta.sqrMagnitude >= MinMoveSqr;
-            }
-
-            // TRUE only when both inside AND moving
-            SetMovingInZone(inZone && moving);
-
-            _lastPos2D = pos2D;
-            _hasLastPos = true;
-        }
-
-        private bool GetInZoneState(Vector2 pos2D)
-        {
-            if (useRadiusZone)
-            {
-                return Vector2.Distance(pos2D, target.position) <= radius;
-            }
-            return affectZone.Contains(pos2D);
-        }
-
-        private void OnDisable()
-        {
-            if (_isMovingInZone)
-                SetMovingInZone(false);
-
-            _hasLastPos = false;
-        }
+      _hasLastPos = false;
+    }
 
 #if UNITY_EDITOR
-        private void OnDrawGizmosSelected()
-        {
-            Gizmos.color = Color.cyan;
-            if (useRadiusZone)
-            {
-                Gizmos.DrawWireSphere(target.position, radius);
-            }
-            else
-            {
-                // Simple gizmo to visualize the Rect
-                Vector3 center = new(affectZone.x + affectZone.width * 0.5f, affectZone.y + affectZone.height * 0.5f,
-                    Tf ? Tf.position.z : 0f);
-                Vector3 size = new(affectZone.width, affectZone.height, 0f);
-                Gizmos.DrawWireCube(center, size);
-            }
-        }
+    private void OnDrawGizmosSelected()
+    {
+      Gizmos.color = Color.cyan;
+      if (useRadiusZone)
+      {
+        Gizmos.DrawWireSphere(target.position, radius);
+      }
+      else
+      {
+        // Simple gizmo to visualize the Rect
+        Vector3 center = new(affectZone.x + affectZone.width * 0.5f, affectZone.y + affectZone.height * 0.5f,
+            Tf ? Tf.position.z : 0f);
+        Vector3 size = new(affectZone.width, affectZone.height, 0f);
+        Gizmos.DrawWireCube(center, size);
+      }
+    }
 #endif
 
-        private void SetMovingInZone(bool movingInZone)
-        {
-            if (_isMovingInZone == movingInZone) return;
-            _isMovingInZone = movingInZone;
+    private void SetMovingInZone(bool movingInZone)
+    {
+      if (_isMovingInZone == movingInZone) return;
+      _isMovingInZone = movingInZone;
 
-            if (movingInZone)
-                onMovingInZone?.Invoke();
-            else
-                onNotMovingOrOutZone?.Invoke();
-        }
-
-        // Optional helper if you want to adjust at runtime
-        public void SetZone(Rect newZone)
-        {
-            affectZone = newZone;
-        }
+      if (movingInZone)
+        onMovingInZone?.Invoke();
+      else
+        onNotMovingOrOutZone?.Invoke();
     }
+
+    // Optional helper if you want to adjust at runtime
+    public void SetZone(Rect newZone)
+    {
+      affectZone = newZone;
+    }
+  }
 }
