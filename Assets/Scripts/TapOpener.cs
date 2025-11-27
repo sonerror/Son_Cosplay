@@ -22,9 +22,6 @@ namespace HoangHH
     {
       _isBlocking = block;
     }
-
-    public UnityEvent onOpen;
-    public UnityEvent onClose;
     public bool IsOpen => isOpen;
     private Tween _openTween;
     private Vector3 _startPosition;
@@ -44,6 +41,7 @@ namespace HoangHH
     public override void MouseUp(BaseEventData eventData)
     {
       if (_isBlocking) return;
+      base.MouseUp(eventData);
       SetOpen(!isOpen);
     }
 
@@ -67,12 +65,9 @@ namespace HoangHH
       }
       if (isOpen)
       {
-        onOpen.Invoke();
+        OnFinish?.Invoke();
       }
-      else
-      {
-        onClose.Invoke();
-      }
+
       if (playSound)
       {
         // AudioManager.PlaySFX(isOpen ? openSound : closeSound);

@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.Events;
 
-public class TriggerWithCertainCollider : MonoBehaviour
+public class TriggerWithCertainCollider : GameUnit
 {
   [SerializeField] private Collider2D triggerWith;
   [SerializeField] private Collider2D col;

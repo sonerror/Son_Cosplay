@@ -39,7 +39,10 @@ public class Item : MonoBehaviour
     else TutorialManager.Ins.OnCollectFail();
   }
 
-  public virtual void MouseUp(BaseEventData eventData) { }
+  public virtual void MouseUp(BaseEventData eventData)
+  {
+    TutorialManager.Ins.resetTimeHint();
+  }
 
   public virtual void MouseDrag(BaseEventData eventData) { }
 

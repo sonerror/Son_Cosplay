@@ -1,12 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
+using HoangHH;
 using Satisgame;
+using Sirenix.Utilities;
 using Spine.Unity;
 using UnityEngine;
 
 public class GamePlayManager : Singleton<GamePlayManager>
 {
   public EmojiControl emojiControl;
+  public ClockTimer clockTimer;
   public bool isPlayingGame = false;
   public SkeletonAnimation playerSkeleton;
   public CharactorControl characterControl;
@@ -18,11 +21,6 @@ public class GamePlayManager : Singleton<GamePlayManager>
   private IEnumerator coroutine = null;
 
   private bool hadClicked = false;
-
-  void Start()
-  {
-    // Setstate();
-  }
 
   private void Update()
   {
@@ -36,8 +34,6 @@ public class GamePlayManager : Singleton<GamePlayManager>
       hadClicked = true;
       StartGamePlay();
     }
-
-
   }
 
   void StartGamePlay()
@@ -91,26 +87,33 @@ public class GamePlayManager : Singleton<GamePlayManager>
     coroutine = null;
   }
 
+  public void ShowClockTimer()
+  {
+    clockTimer.Show(2f);
+  }
+
+
+  [SerializeField]
   private int currState = 0;
   public int CurrState { get { return currState; } }
 
-  public void OnDoneState()
+  bool isDoneState1 = false;
+  [SerializeField]
+  private List<int> stateId = new List<int> { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 };
+  public List<int> StateId { get { return stateId; } }
+  public void OnDoneState(int state)
   {
     currState++;
-    Setstate();
-  }
-
-  void Setstate()
-  {
-    for (int i = 0; i < items.Count; i++)
+    stateId.Remove(state);
+    if (!isDoneState1 && !stateId.Contains(0) && !stateId.Contains(1))
     {
-      items[i].SetIsReady(i == currState);
+      isDoneState1 = true;
+      for (int i = 3; i < items.Count; i++)
+      {
+        items[i].IsReady = true;
+      }
     }
 
-    // if (currState >= items.Count)
-    // {
-    //   GameManager.Ins.showEndGame();
-    // }
+    if (stateId.Count <= 1) GameManager.Ins.showEndGame();
   }
-
 }

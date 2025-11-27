@@ -33,7 +33,7 @@ public class WaterFaucet : Item
   {
     isDragging = true;
     OnPickItem?.Invoke();
-    SoundManager.Ins.PlaySoundLoop(FxType.Shower);
+    // SoundManager.Ins.PlaySoundLoop(FxType.Shower);
     Vector3 mouseWorldPos = GetMouseWorldPos();
     offSet = Tf.position - mouseWorldPos;
     Vector3 targetPos = mouseWorldPos + offSet;
@@ -67,7 +67,7 @@ public class WaterFaucet : Item
 
   protected virtual void OnHandleMouseUp()
   {
-    SoundManager.Ins.StopSoundLoop(FxType.Shower);
+    // SoundManager.Ins.StopSoundLoop(FxType.Shower);
     Tf.DOKill();
     Tf.DOScale(Vector3.one, 0.3f);
     Tf.DORotate(Vector3.forward * Angle.x, 0.3f);

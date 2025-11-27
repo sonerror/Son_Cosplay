@@ -9,6 +9,7 @@ public class Brow_Shaver : Item
   public Renderer rende;
   private int _oriOrder;
   private Vector3 _prePos;
+  public Transform NodeLeft, NodeRight;
   public bool isLeftDone = false;
   public bool isRightDone = false;
   public void OnRightDone()

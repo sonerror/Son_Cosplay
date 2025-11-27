@@ -5,8 +5,8 @@ public enum FxType
 {
   Angry,
   Happy,
-  WearHairBang,
-  Shower,
+  StartGame,
+  Timer,
   Towel,
   Click,
 }

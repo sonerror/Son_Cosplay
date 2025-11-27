@@ -10,7 +10,7 @@ public class HandCtrl : MonoBehaviour
 
 
   private bool isShowHandState1 = false;
-  public void ShowHandState1(Vector3 pos)
+  public void ShowHandAtPos(Vector3 pos)
   {
     if (isShowHandState1) return;
     isShowHandState1 = true;

@@ -14,7 +14,10 @@ public class ItemMove : Item
   public override void MouseDown(BaseEventData eventData)
   {
     if (isBlocked) return;
+    if (isDragging) return;
+    if (GamePlayManager.Ins.clockTimer.gameObject.activeSelf) return;
     if (!IsReady) return;
+    isDragging = true;
     _preMousePos = GetMouseWorldPos();
     _mouseDownPos = GetMouseWorldPos();
     deltaMove = 0f;
@@ -22,6 +25,7 @@ public class ItemMove : Item
 
   public override void MouseDrag(BaseEventData eventData)
   {
+    if (isBlocked || !isDragging) return;
     var mousePos = GetMouseWorldPos();
     deltaMove += Vector3.Distance(mousePos, _preMousePos);
     _preMousePos = mousePos;
@@ -34,7 +38,10 @@ public class ItemMove : Item
       Move();
     }
   }
-  public override void MouseUp(BaseEventData eventData) { }
+  public override void MouseUp(BaseEventData eventData)
+  {
+    base.MouseUp(eventData);
+  }
 
   void Move()
   {

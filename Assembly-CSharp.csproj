@@ -65,6 +65,7 @@
     <Analyzer Include="D:\_App\Unity\UnityInstall\6000.0.27f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.UIToolkit.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\ClockTimer.cs" />
     <Compile Include="Assets\Scripts\53\Oil.cs" />
     <Compile Include="Assets\Scripts\Pimple.cs" />
     <Compile Include="Assets\AllIn1SpriteShader\Scripts\RandomSeed.cs" />
@@ -114,6 +115,7 @@
     <Compile Include="Assets\Scripts\Helper\ScreenShot.cs" />
     <Compile Include="Assets\Scripts\Obj\HandCtrl.cs" />
     <Compile Include="Assets\AllIn1SpriteShader\Scripts\SetGlobalTimeNew.cs" />
+    <Compile Include="Assets\Scripts\ShowObjectSequence.cs" />
     <Compile Include="Assets\AllIn1SpriteShader\Demo\Scripts\All1ShaderDemoController.cs" />
     <Compile Include="Assets\Scripts\TriggerWithCertainCollider.cs" />
     <Compile Include="Assets\AllIn1SpriteShader\Scripts\SetAtlasUvs.cs" />
@@ -134,6 +136,7 @@
     <Compile Include="Assets\AllIn1SpriteShader\Demo\Scripts\DemoRepositionExpositor.cs" />
     <Compile Include="Assets\DOTween\Modules\DOTweenModuleUtils.cs" />
     <Compile Include="Assets\Scripts\Pool\SfxPool.cs" />
+    <Compile Include="Assets\Scripts\ShowObjectEffect.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

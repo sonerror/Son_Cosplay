@@ -13,7 +13,7 @@ public class PimpleHeal : Item
   public Renderer rende;
   private int _oriOrder;
   private Vector3 _prePos;
-  [SerializeField] private List<TriggerWithCertainCollider> acnePimpleColliders;
+  [SerializeField] public List<TriggerWithCertainCollider> acnePimpleColliders;
 
   private int _currentAcneCreamIndex;
   [SerializeField]
@@ -40,6 +40,7 @@ public class PimpleHeal : Item
     {
       int i = index;
       TriggerWithCertainCollider trigger = acnePimpleColliders[i];
+      trigger.gameObject.SetActive(true);
       trigger.ReEnable(acneCreamTriggerPoint);
       trigger.OnTriggerEvent.AddListener(() => RemoveAcneCream(trigger, i));
     }
@@ -54,7 +55,6 @@ public class PimpleHeal : Item
   private void RemoveAcneCream(TriggerWithCertainCollider trigger, int index)
   {
     trigger.OnTriggerEvent.RemoveAllListeners();
-    // trigger.gameObject.SetActive(false);
     acneCreamRenderers[index].enabled = true;
     acneCreamRenderers[index].DOFade(0f, 3f).OnComplete(() =>
     {
@@ -64,7 +64,12 @@ public class PimpleHeal : Item
     _currentAcneCreamIndex++;
     if (_currentAcneCreamIndex >= acnePimpleColliders.Count) OnDone();
   }
-  void OnDone() { }
+  void OnDone()
+  {
+    if (!IsReady) return;
+    IsReady = false;
+    OnFinish?.Invoke();
+  }
 
   public override void MouseDown(BaseEventData eventData)
   {

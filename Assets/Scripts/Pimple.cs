@@ -13,7 +13,7 @@ public class Pimple : Item
   public Renderer rende;
   private int _oriOrder;
   private Vector3 _prePos;
-  [SerializeField] private List<TriggerWithCertainCollider> acnePimpleColliders;
+  [SerializeField] public List<TriggerWithCertainCollider> acnePimpleColliders;
 
 
   protected override void Awake()
@@ -49,6 +49,7 @@ public class Pimple : Item
   private void RemoveAcne(TriggerWithCertainCollider trigger, int index)
   {
     trigger.OnTriggerEvent.RemoveAllListeners();
+    trigger.gameObject.SetActive(false);
     GamePlayManager.Ins.characterControl.TurnSlotAttachment(_acneSlots[index]);
     _currentAcneIndex++;
     if (_currentAcneIndex >= _acneSlots.Count) OnDone();
@@ -57,8 +58,11 @@ public class Pimple : Item
   void OnDone()
   {
     if (!IsReady) return;
-    Debug.Log("All pimples removed");
     IsReady = false;
+    for (int index = 0; index < acnePimpleColliders.Count; index++)
+    {
+      acnePimpleColliders[index].gameObject.SetActive(true);
+    }
     OnFinish?.Invoke();
   }
 

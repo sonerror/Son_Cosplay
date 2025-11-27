@@ -64,43 +64,114 @@ public class TutorialManager : Singleton<TutorialManager>
   {
     if (disableHand) return;
 
-    var items = gamePlayManager.items;
     enableCountTime = false;
     handCtrl.gameObject.SetActive(true);
 
-    var i = gamePlayManager.CurrState;
-    if (i == 0)
+    var states = gamePlayManager.StateId;
+
+    if (states.Count > 0)
     {
-      var item = items[i] as HairBang;
-      handCtrl.ShowHandState2(item.Tf.position, item.targetInfos.targetTf.position);
-      return;
-    }
-    if (i == 1)
-    {
-      var item = items[i];
-      handCtrl.ShowHandState2(item.Tf.position, tutorialNode[0].position);
-      return;
-    }
-    if (i == 2)
-    {
-      var item = items[i];
-      handCtrl.ShowHandState2(item.Tf.position, tutorialNode[1].position);
-      return;
-    }
-    if (i == 3)
-    {
-      var item = items[i] as Oil;
-      for (int j = 0; j < item.targetInfos.Count; j++)
+      var i = states[0];
+      switch (i)
       {
-        if (item.targetInfos[j].hadChecked) continue;
-        handCtrl.ShowHandState2(item.Tf.position, item.targetInfos[j].targetTf.position);
-        return;
+        case 0:
+          PlayTut0();
+          return;
+        case 1:
+          PlayTut1();
+          return;
+        case 2:
+          PlayTut2();
+          return;
+        case 3:
+          PlayTut3();
+          return;
+        case 4:
+          PlayTut4();
+          return;
+        case 5:
+          PlayTut5();
+          return;
+        case 6:
+          PlayTut6();
+          return;
+        case 7:
+          PlayTut7();
+          return;
+        case 8:
+          PlayTut8();
+          return;
+        default:
+          return;
       }
     }
 
 
     handCtrl.gameObject.SetActive(false);
     resetTimeHint();
+  }
+  void PlayTut0()
+  {
+    var item = gamePlayManager.items[0] as Brow_Shaver;
+    if (item.isLeftDone) { handCtrl.ShowHandState2(item.Tf.position, item.NodeRight.position); }
+    else { handCtrl.ShowHandState2(item.Tf.position, item.NodeLeft.position); }
+  }
+
+  void PlayTut1()
+  {
+    var item = gamePlayManager.items[1] as Pimple;
+    for (var i = 0; i < item.acnePimpleColliders.Count; i++)
+    {
+      if (item.acnePimpleColliders[i].gameObject.activeSelf)
+      {
+        handCtrl.ShowHandState2(item.Tf.position, item.acnePimpleColliders[i].Tf.position);
+        return;
+      }
+    }
+
+  }
+
+  void PlayTut2()
+  {
+    var item = gamePlayManager.items[2] as PimpleHeal;
+    for (var i = 0; i < item.acnePimpleColliders.Count; i++)
+    {
+      if (item.acnePimpleColliders[i].gameObject.activeSelf)
+      {
+        handCtrl.ShowHandState2(item.Tf.position, item.acnePimpleColliders[i].Tf.position);
+        return;
+      }
+    }
+  }
+
+  void PlayTut3()
+  {
+    handCtrl.ShowHandAtPos(gamePlayManager.items[3].Tf.position);
+  }
+
+  void PlayTut4()
+  {
+    var item = gamePlayManager.items[4] as ItemUseOnce;
+    handCtrl.ShowHandState2(item.Tf.position, item.targetInfos.targetTf.position);
+  }
+  void PlayTut5()
+  {
+    var item = gamePlayManager.items[5];
+    handCtrl.ShowHandState2(item.Tf.position, item.Tf.position + Vector3.right * 2f);
+  }
+  void PlayTut6()
+  {
+    handCtrl.ShowHandAtPos(gamePlayManager.items[6].Tf.position);
+  }
+  void PlayTut7()
+  {
+    var item = gamePlayManager.items[7] as ItemUseOnce;
+    handCtrl.ShowHandState2(item.Tf.position, item.targetInfos.targetTf.position);
+  }
+  void PlayTut8()
+  {
+    var item = gamePlayManager.items[8];
+    handCtrl.ShowHandState2(item.Tf.position, item.Tf.position + Vector3.right * 2f);
   }
 
   void HideHint()

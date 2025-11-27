@@ -97,8 +97,8 @@
     <Compile Include="Assets\Spine\Runtime\spine-unity\Components\SkeletonAnimation.cs" />
     <Compile Include="Assets\Spine\Runtime\spine-unity\Asset Types\BlendModeMaterials.cs" />
     <Compile Include="Assets\Spine\Runtime\spine-unity\Utility\YieldInstructions\WaitForSpineAnimation.cs" />
-    <Compile Include="Assets\Spine\Runtime\spine-unity\Utility\YieldInstructions\WaitForSpineAnimationEnd.cs" />
     <Compile Include="Assets\Spine\Runtime\spine-unity\Asset Types\SpineSpriteAtlasAsset.cs" />
+    <Compile Include="Assets\Spine\Runtime\spine-unity\Utility\YieldInstructions\WaitForSpineAnimationEnd.cs" />
     <Compile Include="Assets\Spine\Runtime\spine-unity\Components\RootMotion\SkeletonMecanimRootMotion.cs" />
     <Compile Include="Assets\Spine\Runtime\spine-unity\Components\SkeletonMecanim.cs" />
     <Compile Include="Assets\Spine\Runtime\spine-unity\Components\EditorSkeletonPlayer.cs" />
