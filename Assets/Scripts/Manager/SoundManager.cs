@@ -14,6 +14,9 @@ public enum FxType
   LipMove,
   AddGel,
   Hair_Shave1,
+  Happy1,
+  Happy2,
+  Angry1,
 
 }
 

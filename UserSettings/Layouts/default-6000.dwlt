@@ -43,7 +43,7 @@ MonoBehaviour:
     width: 1920
     height: 1017
   m_ShowMode: 0
-  m_Title: Console
+  m_Title: Project
   m_RootView: {fileID: 9}
   m_MinSize: {x: 300, y: 100}
   m_MaxSize: {x: 24288, y: 16192}
@@ -98,7 +98,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 50}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 80
+  controlID: 112
   draggingID: 0
 --- !u!114 &5
 MonoBehaviour:
@@ -151,7 +151,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 18
+  controlID: 111
   draggingID: 0
 --- !u!114 &7
 MonoBehaviour:
@@ -229,7 +229,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 100}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 145
+  controlID: 146
   draggingID: 0
 --- !u!114 &10
 MonoBehaviour:
@@ -248,7 +248,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 359
+    width: 360
     height: 979
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 4000, y: 4000}
@@ -272,9 +272,9 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 359
+    x: 360
     y: 0
-    width: 560
+    width: 559
     height: 979
   m_MinSize: {x: 277, y: 76}
   m_MaxSize: {x: 4002, y: 4026}
@@ -308,7 +308,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 50}
   m_MaxSize: {x: 24288, y: 8096}
   vertical: 0
-  controlID: 204
+  controlID: 202
   draggingID: 0
 --- !u!114 &13
 MonoBehaviour:
@@ -445,7 +445,7 @@ MonoBehaviour:
     m_OverlaysVisible: 1
   m_LockTracker:
     m_IsLocked: 0
-  m_LastSelectedObjectID: -1902912
+  m_LastSelectedObjectID: 36212
 --- !u!114 &18
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -565,7 +565,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Textures
+    - Assets/Scripts/Manager
     m_Globs: []
     m_ProductIds: 
     m_AnyWithAssetOrigin: 0
@@ -575,16 +575,16 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
-  - Assets/Textures
+  - Assets/Scripts/Manager
   m_LastFoldersGridSize: 16
   m_LastProjectPath: E:\Unity\Ply_Costopia
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 827}
-    m_SelectedIDs: 2e840000
-    m_LastClickedID: 33838
-    m_ExpandedIDs: 00000000fe82000000830000028300000483000006830000088300000a8300000c8300000e83000010830000128300001483000016830000188300001a8300001c8300001e83000020830000228300002483000026830000288300002a8300002c8300002e83000030830000328300003483000036830000388300003a8300003c8300003e83000040830000428300004483000046830000488300004a8300004c8300004e830000c6830000ca830000fc83000000ca9a3bffffff7f
+    scrollPos: {x: 0, y: 602}
+    m_SelectedIDs: 86840000
+    m_LastClickedID: 33926
+    m_ExpandedIDs: 000000006483000066830000688300006a8300006c8300006e83000070830000728300007483000076830000788300007a8300007c8300007e83000080830000828300008483000086830000888300008a8300008c8300008e83000090830000928300009483000096830000988300009a8300009c8300009e830000a0830000a2830000a4830000a6830000a8830000aa830000ac830000ae830000b0830000b2830000b48300002e84000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -613,7 +613,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000fe82000000830000028300000483000006830000088300000a8300000c8300000e83000010830000128300001483000016830000188300001a8300001c8300001e83000020830000228300002483000026830000288300002a8300002c8300002e83000030830000328300003483000036830000388300003a8300003c8300003e83000040830000428300004483000046830000488300004a8300004c8300004e830000
+    m_ExpandedIDs: 000000006483000066830000688300006a8300006c8300006e83000070830000728300007483000076830000788300007a8300007c8300007e83000080830000828300008483000086830000888300008a8300008c8300008e83000090830000928300009483000096830000988300009a8300009c8300009e830000a0830000a2830000a4830000a6830000a8830000aa830000ac830000ae830000b0830000b2830000b4830000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -692,9 +692,9 @@ MonoBehaviour:
     m_TextWithWhitespace: "Inspector\u200B"
   m_Pos:
     serializedVersion: 2
-    x: 359
+    x: 360
     y: 81
-    width: 558
+    width: 557
     height: 953
   m_SerializedDataModeController:
     m_DataMode: 0
@@ -743,7 +743,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 81
-    width: 358
+    width: 359
     height: 953
   m_SerializedDataModeController:
     m_DataMode: 0
@@ -761,18 +761,18 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: a8cce2ff32cde2ffd6cde2ffc6cee2ffb25fe9ff3860e9ffd860e9ffc261e9ffa437edff2a38edffca38edffb439edff1ad5f0ff96d5f0ff2cd6f0ff0cd7f0ff961af8ff121bf8ffa81bf8ff881cf8ff38e1fcffd4e1fcff9ee2fcff9ee3fcff107afdffac7afdff767bfdff767cfdff6a27ffffea27ffff8428ffff6829ffff82b9ffff8cb9ffff94b9ffff00fbfffff4ffffffea7e0000f47e0000187f0000227f0000267f0000327f00003c7f0000567f00005a7f00006c7f0000787f0000887f0000927f0000ae7f0000c87f0000f47f00001c800000388000007a8000008e800000b0800000ee800000048100000e8100002e8100004481000048810000548100006481000070810000a0810000187c01001c7c0100447c0100607c0100867c0100b87c01004a7e0100aca40100e6a4010000a5010054a5010070a501006ea6010056b6010088b60100aab60100f6b601004ab70100bcb70100
+      m_ExpandedIDs: ac1df5ff321ef5ffd21ef5ffbe1ff5ff4a62faffd062faff7063faff5c64fafff6e1ffff80e2ffff26e3ffff16e4ffff62f5ffff00fbffffbe7f0000ba800000ba8c0000c48c0000f48c0000f88c00000e8d00002a8d0000628d0000808e0000e88e00002a8f0000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
-        m_Name: Pool
-        m_OriginalName: Pool
+        m_Name: Slot
+        m_OriginalName: Slot
         m_EditFieldRect:
           serializedVersion: 2
           x: 0
           y: 0
           width: 0
           height: 0
-        m_UserData: 32484
+        m_UserData: 36480
         m_IsWaitingForDelay: 0
         m_IsRenaming: 0
         m_OriginalEventType: 0
@@ -1421,9 +1421,9 @@ MonoBehaviour:
   m_AudioPlay: 0
   m_DebugDrawModesUseInteractiveLightBakingData: 0
   m_Position:
-    m_Target: {x: -1.6812227, y: 4.9029303, z: 0.03683444}
+    m_Target: {x: -2.4726524, y: -1.1240937, z: -1.1392064}
     speed: 2
-    m_Value: {x: -1.6812227, y: 4.9029303, z: 0.03683444}
+    m_Value: {x: -2.4726524, y: -1.1240937, z: -1.1392064}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -1473,9 +1473,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 7.839989
+    m_Target: 20.920656
     speed: 2
-    m_Value: 7.839989
+    m_Value: 20.920656
   m_Ortho:
     m_Target: 1
     speed: 2

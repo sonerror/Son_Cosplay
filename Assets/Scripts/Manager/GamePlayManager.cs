@@ -56,11 +56,18 @@ public class GamePlayManager : Singleton<GamePlayManager>
     StartCoroutine(coroutine);
   }
 
+  private int idSoundHappy = 0;
   private IEnumerator PlayPositiveEmojiCoroutine()
   {
     emojiControl.ShowPositive();
     playerSkeleton.AnimationState.SetAnimation(0, "happy", false);
-    SoundManager.Ins.PlayFx(FxType.Happy);
+
+    var i = idSoundHappy % 3;
+    if (i == 0) SoundManager.Ins.PlayFx(FxType.Happy);
+    else if (i == 1) SoundManager.Ins.PlayFx(FxType.Happy1);
+    else SoundManager.Ins.PlayFx(FxType.Happy2);
+    idSoundHappy++;
+
     yield return new WaitForSeconds(1f);
     playerSkeleton.AnimationState.SetAnimation(0, "idle", true);
     coroutine = null;
@@ -77,12 +84,18 @@ public class GamePlayManager : Singleton<GamePlayManager>
     StartCoroutine(coroutine);
   }
 
+  private int idSoundAngry = 0;
   private IEnumerator PlayNegativeEmojiCoroutine()
   {
     yield return new WaitForSeconds(1f);
     playerSkeleton.AnimationState.SetAnimation(0, "angry", false);
     emojiControl.ShowNegative();
-    SoundManager.Ins.PlayFx(FxType.Angry);
+
+    var i = idSoundAngry % 2;
+    if (i == 0) SoundManager.Ins.PlayFx(FxType.Angry);
+    else SoundManager.Ins.PlayFx(FxType.Angry1);
+    idSoundAngry++;
+
     yield return new WaitForSeconds(1f);
     playerSkeleton.AnimationState.SetAnimation(0, "idle", true);
     coroutine = null;

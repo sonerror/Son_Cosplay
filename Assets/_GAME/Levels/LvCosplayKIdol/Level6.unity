@@ -1933,7 +1933,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isEnable: 0
-  timeChange: 2
+  timeChange: 1
   spriteHide: {fileID: 440182063}
   fxSound: 10
   onComplete:
@@ -3107,7 +3107,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isEnable: 0
-  timeChange: 2
+  timeChange: 1
   spriteHide: {fileID: 1991237173}
   fxSound: 6
   onComplete:
@@ -3753,6 +3753,9 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 729117713ef6c46418ae79f7fb9fd2b0, type: 3}
   - {fileID: 8300000, guid: ad7908740ee7a3e4e9b8498b39a7b1ab, type: 3}
   - {fileID: 8300000, guid: 54b1ac673fbea6f4fb35bb736151d856, type: 3}
+  - {fileID: 8300000, guid: dd9c0f171cf058b4fa41b773e9e06617, type: 3}
+  - {fileID: 8300000, guid: 0e3fe4a8531ddcf4bb58f7e6433efcbd, type: 3}
+  - {fileID: 8300000, guid: edb246049338d8248afbcb2339e6f8f4, type: 3}
 --- !u!4 &889256036
 Transform:
   m_ObjectHideFlags: 0
