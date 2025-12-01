@@ -887,6 +887,7 @@ MonoBehaviour:
   - {fileID: 1170121497}
   - {fileID: 704746216}
   maskGroup: {fileID: 5651388956190235090}
+  vfxWater: {fileID: 696761445001507818}
 --- !u!114 &209220360
 MonoBehaviour:
   m_ObjectHideFlags: 0

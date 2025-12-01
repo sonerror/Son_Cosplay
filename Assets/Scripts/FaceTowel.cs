@@ -10,6 +10,7 @@ public class FaceTowel : Item
   public Vector2 Angle = new Vector2(0, 0);
   public List<Renderer> renderers = new List<Renderer>();
   public MaskGroupCustom maskGroup;
+  public ParticleSystem vfxWater;
 
   protected override void Awake()
   {
@@ -61,6 +62,7 @@ public class FaceTowel : Item
     if (maskGroup.CheckMasks(Tf.position))
     {
       IsReady = false;
+      vfxWater.Stop();
       OnFinish?.Invoke();
     }
   }
@@ -76,7 +78,6 @@ public class FaceTowel : Item
 
   protected virtual void OnHandleMouseUp()
   {
-    Debug.Log("aaaa");
     SoundManager.Ins.StopSoundLoop(FxType.Towel);
     Tf.DOKill();
     Tf.DOScale(Vector3.one, 0.3f);
