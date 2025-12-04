@@ -21,7 +21,7 @@ public class GamePlayScreen : UIScreen
 
   public void gotoStore()
   {
-    GameManager.Ins.gotoStore();
+    AdsManager.Ins.gotoStore();
   }
 
   public override void Resize(Vector2 gameSize)

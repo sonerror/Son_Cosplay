@@ -1,0 +1,12 @@
+Harley_Queen_minigame.png
+size:547,195
+filter:Linear,Linear
+scale:0.6
+hammer
+bounds:143,23,277,170
+pump
+bounds:422,30,123,163
+pump-2
+bounds:2,2,139,191
+pump-3
+bounds:143,9,368,12

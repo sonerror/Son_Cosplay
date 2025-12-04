@@ -76,9 +76,9 @@ namespace HoangHH
       else
       {
         // Simple gizmo to visualize the Rect
-        Vector3 center = new(affectZone.x + affectZone.width * 0.5f, affectZone.y + affectZone.height * 0.5f,
+        Vector3 center = new Vector3(affectZone.x + affectZone.width * 0.5f, affectZone.y + affectZone.height * 0.5f,
             Tf ? Tf.position.z : 0f);
-        Vector3 size = new(affectZone.width, affectZone.height, 0f);
+        Vector3 size = new Vector3(affectZone.width, affectZone.height, 0f);
         Gizmos.DrawWireCube(center, size);
       }
     }

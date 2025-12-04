@@ -21,7 +21,7 @@ public class ItemUseOnce : Item
   {
     if (isBlocked) return;
     if (isDragging) return;
-    if (GamePlayManager.Ins.clockTimer.gameObject.activeSelf) return;
+    if (GameManager.Ins.clockTimer.gameObject.activeSelf) return;
 
     if (!IsReady) { OnWrong?.Invoke(); }
     base.MouseDown(eventData);
@@ -78,7 +78,7 @@ public class ItemUseOnce : Item
     if (isBlocked) return;
     if (!isDragging) return;
     base.MouseUp(eventData);
-    if (GamePlayManager.Ins.clockTimer.gameObject.activeSelf) return;
+    if (GameManager.Ins.clockTimer.gameObject.activeSelf) return;
 
 
     isDragging = false;

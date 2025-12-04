@@ -131,9 +131,11 @@
             ]
         },
         "scenes": [
+            "Assets/Scenes/LevelMain.unity"
+        ],
+        "disabledScenes": [
             "Assets/_GAME/Levels/LvCosplayKIdol/Level6.unity"
         ],
-        "disabledScenes": [],
         "startupScene": 0,
         "packages": {
             "default": {
@@ -2062,10 +2064,6 @@
             },
             {
                 "name": "UnityEngine.ContactPoint",
-                "excluded": true
-            },
-            {
-                "name": "UnityEngine.MaterialPropertyBlock",
                 "excluded": true
             },
             {
@@ -7729,10 +7727,6 @@
                 "excluded": true
             },
             {
-                "name": "Spine.PhysicsConstraintTimeline",
-                "excluded": true
-            },
-            {
                 "name": "Spine.ScaleXTimeline",
                 "excluded": true
             },
@@ -7753,27 +7747,11 @@
                 "excluded": true
             },
             {
-                "name": "Spine.TranslateXTimeline",
-                "excluded": true
-            },
-            {
-                "name": "Spine.TranslateYTimeline",
-                "excluded": true
-            },
-            {
                 "name": "Spine.Unity.SkeletonMecanim",
                 "excluded": true
             },
             {
-                "name": "Spine.PhysicsConstraintDampingTimeline",
-                "excluded": true
-            },
-            {
                 "name": "Spine.PhysicsConstraintGravityTimeline",
-                "excluded": true
-            },
-            {
-                "name": "Spine.PhysicsConstraintInertiaTimeline",
                 "excluded": true
             },
             {
@@ -8971,6 +8949,26 @@
             {
                 "name": "HoangHH.ShowObjectSequence.ShowObjectSequenceItem",
                 "excluded": false
+            },
+            {
+                "name": "CharacterAnimID",
+                "excluded": true
+            },
+            {
+                "name": "GamePlayManager",
+                "excluded": false
+            },
+            {
+                "name": "Costopia.Gameplay.H3SlotPaintableTexture",
+                "excluded": true
+            },
+            {
+                "name": "Costopia.Gameplay.H3SlotPaintableTexture.CircleDrawRequest",
+                "excluded": true
+            },
+            {
+                "name": "Costopia.Gameplay.H3SlotPaintableTexture.SlotPaintableData",
+                "excluded": true
             }
         ],
         "unusedMethods": [
@@ -18636,11 +18634,11 @@
                     },
                     {
                         "name": "GetPropertyBlock",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "GetPropertyBlock$1",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "SetPropertyBlock",
@@ -18648,11 +18646,11 @@
                     },
                     {
                         "name": "SetPropertyBlock$1",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "HasPropertyBlock",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "GetSharedMaterials",
@@ -23356,7 +23354,7 @@
                     },
                     {
                         "name": "IndexOf",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "IndexOf$1",
@@ -23917,50 +23915,28 @@
                         "excluded": false
                     },
                     {
-                        "name": "gotoStore",
-                        "excluded": true
-                    },
-                    {
                         "name": "Update",
-                        "excluded": false
-                    },
-                    {
-                        "name": "showEndGame",
-                        "excluded": true
-                    }
-                ]
-            },
-            {
-                "className": "GamePlayManager",
-                "staticMethods": [],
-                "instanceMethods": [
-                    {
-                        "name": "inherits",
                         "excluded": false
                     },
                     {
                         "name": "CurrState#get",
-                        "excluded": false
+                        "excluded": true
                     },
                     {
-                        "name": "init",
-                        "excluded": false
-                    },
-                    {
-                        "name": "Update",
-                        "excluded": false
+                        "name": "StateId#get",
+                        "excluded": true
                     },
                     {
                         "name": "StartGamePlay",
-                        "excluded": false
+                        "excluded": true
                     },
                     {
                         "name": "PlayPositiveEmoji",
-                        "excluded": false
+                        "excluded": true
                     },
                     {
                         "name": "PlayPositiveEmojiCoroutine",
-                        "excluded": false
+                        "excluded": true
                     },
                     {
                         "name": "PlayNegativeEmoji",
@@ -23971,15 +23947,11 @@
                         "excluded": true
                     },
                     {
-                        "name": "OnDoneState",
-                        "excluded": false
-                    },
-                    {
-                        "name": "StateId#get",
-                        "excluded": false
-                    },
-                    {
                         "name": "ShowClockTimer",
+                        "excluded": true
+                    },
+                    {
+                        "name": "OnDoneState",
                         "excluded": true
                     }
                 ]
@@ -27056,7 +27028,7 @@
                     },
                     {
                         "name": "$ctor1",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "$ctor2",
@@ -27164,11 +27136,11 @@
                     },
                     {
                         "name": "SetTexture$1",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "SetTexture",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "GetTextureScale$1",
@@ -34214,7 +34186,7 @@
                     },
                     {
                         "name": "FindSlot",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "SetSkin$1",
@@ -34226,7 +34198,7 @@
                     },
                     {
                         "name": "GetAttachment$1",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "GetAttachment",
@@ -34544,7 +34516,7 @@
                     },
                     {
                         "name": "FindPhysicsConstraint",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "toString",
@@ -35552,24 +35524,6 @@
                     },
                     {
                         "name": "Awake",
-                        "excluded": false
-                    }
-                ]
-            },
-            {
-                "className": "CharactorControl",
-                "staticMethods": [],
-                "instanceMethods": [
-                    {
-                        "name": "init",
-                        "excluded": false
-                    },
-                    {
-                        "name": "Start",
-                        "excluded": false
-                    },
-                    {
-                        "name": "TurnSlotAttachment",
                         "excluded": false
                     }
                 ]
@@ -37802,7 +37756,7 @@
                     },
                     {
                         "name": "CustomSlotMaterials#get",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "SkeletonClipping#get",
@@ -37954,7 +37908,7 @@
                     },
                     {
                         "name": "SetMaterialSettingsToFixDrawOrder",
-                        "excluded": true
+                        "excluded": false
                     }
                 ]
             },
@@ -42467,6 +42421,460 @@
                         "excluded": false
                     }
                 ]
+            },
+            {
+                "className": "AdsManager",
+                "staticMethods": [],
+                "instanceMethods": [
+                    {
+                        "name": "inherits",
+                        "excluded": false
+                    },
+                    {
+                        "name": "init",
+                        "excluded": false
+                    },
+                    {
+                        "name": "gotoStore",
+                        "excluded": true
+                    },
+                    {
+                        "name": "Update",
+                        "excluded": false
+                    },
+                    {
+                        "name": "showEndGame",
+                        "excluded": true
+                    }
+                ]
+            },
+            {
+                "className": "UnityEngine.MaterialPropertyBlock",
+                "staticMethods": [],
+                "instanceMethods": [
+                    {
+                        "name": "isEmpty#get",
+                        "excluded": true
+                    },
+                    {
+                        "name": "ctor",
+                        "excluded": false
+                    },
+                    {
+                        "name": "Clear",
+                        "excluded": true
+                    },
+                    {
+                        "name": "SetParameter$3",
+                        "excluded": false
+                    },
+                    {
+                        "name": "SetParameter$4",
+                        "excluded": true
+                    },
+                    {
+                        "name": "SetParameter$5",
+                        "excluded": true
+                    },
+                    {
+                        "name": "SetParameter",
+                        "excluded": false
+                    },
+                    {
+                        "name": "SetParameter$1",
+                        "excluded": true
+                    },
+                    {
+                        "name": "SetParameter$2",
+                        "excluded": true
+                    },
+                    {
+                        "name": "GetFloat$1",
+                        "excluded": true
+                    },
+                    {
+                        "name": "GetFloat",
+                        "excluded": true
+                    },
+                    {
+                        "name": "SetFloat$1",
+                        "excluded": true
+                    },
+                    {
+                        "name": "SetFloat",
+                        "excluded": false
+                    },
+                    {
+                        "name": "GetInt$1",
+                        "excluded": true
+                    },
+                    {
+                        "name": "GetInt",
+                        "excluded": true
+                    },
+                    {
+                        "name": "SetInt$1",
+                        "excluded": true
+                    },
+                    {
+                        "name": "SetInt",
+                        "excluded": true
+                    },
+                    {
+                        "name": "GetMatrix$1",
+                        "excluded": true
+                    },
+                    {
+                        "name": "GetMatrix",
+                        "excluded": true
+                    },
+                    {
+                        "name": "SetMatrix$1",
+                        "excluded": true
+                    },
+                    {
+                        "name": "SetMatrix",
+                        "excluded": true
+                    },
+                    {
+                        "name": "GetTexture$1",
+                        "excluded": true
+                    },
+                    {
+                        "name": "GetTexture",
+                        "excluded": true
+                    },
+                    {
+                        "name": "SetTexture$1",
+                        "excluded": true
+                    },
+                    {
+                        "name": "SetTexture",
+                        "excluded": true
+                    },
+                    {
+                        "name": "GetColor$1",
+                        "excluded": true
+                    },
+                    {
+                        "name": "GetColor",
+                        "excluded": true
+                    },
+                    {
+                        "name": "SetColor$1",
+                        "excluded": true
+                    },
+                    {
+                        "name": "SetColor",
+                        "excluded": true
+                    },
+                    {
+                        "name": "GetVector$1",
+                        "excluded": true
+                    },
+                    {
+                        "name": "GetVector",
+                        "excluded": true
+                    },
+                    {
+                        "name": "SetVector$1",
+                        "excluded": true
+                    },
+                    {
+                        "name": "SetVector",
+                        "excluded": true
+                    },
+                    {
+                        "name": "GetFloatArray$1",
+                        "excluded": true
+                    },
+                    {
+                        "name": "GetFloatArray",
+                        "excluded": true
+                    },
+                    {
+                        "name": "SetFloatArray$1",
+                        "excluded": true
+                    },
+                    {
+                        "name": "SetFloatArray",
+                        "excluded": true
+                    },
+                    {
+                        "name": "GetMatrixArray$1",
+                        "excluded": true
+                    },
+                    {
+                        "name": "GetMatrixArray",
+                        "excluded": true
+                    },
+                    {
+                        "name": "SetMatrixArray$1",
+                        "excluded": true
+                    },
+                    {
+                        "name": "SetMatrixArray",
+                        "excluded": true
+                    },
+                    {
+                        "name": "GetVectorArray$1",
+                        "excluded": true
+                    },
+                    {
+                        "name": "GetVectorArray",
+                        "excluded": true
+                    },
+                    {
+                        "name": "SetVectorArray$1",
+                        "excluded": true
+                    },
+                    {
+                        "name": "SetVectorArray",
+                        "excluded": true
+                    },
+                    {
+                        "name": "SetBuffer$1",
+                        "excluded": true
+                    },
+                    {
+                        "name": "SetBuffer",
+                        "excluded": true
+                    },
+                    {
+                        "name": "SetConstantBuffer$1",
+                        "excluded": true
+                    },
+                    {
+                        "name": "SetConstantBuffer",
+                        "excluded": true
+                    },
+                    {
+                        "name": "CopyProbeOcclusionArrayFrom$2",
+                        "excluded": true
+                    },
+                    {
+                        "name": "CopyProbeOcclusionArrayFrom",
+                        "excluded": true
+                    },
+                    {
+                        "name": "CopyProbeOcclusionArrayFrom$3",
+                        "excluded": true
+                    },
+                    {
+                        "name": "CopyProbeOcclusionArrayFrom$1",
+                        "excluded": true
+                    },
+                    {
+                        "name": "CopySHCoefficientArraysFrom",
+                        "excluded": true
+                    },
+                    {
+                        "name": "CopySHCoefficientArraysFrom$2",
+                        "excluded": true
+                    },
+                    {
+                        "name": "CopySHCoefficientArraysFrom$3",
+                        "excluded": true
+                    },
+                    {
+                        "name": "CopySHCoefficientArraysFrom$1",
+                        "excluded": true
+                    }
+                ]
+            },
+            {
+                "className": "CharacterControl",
+                "staticMethods": [],
+                "instanceMethods": [
+                    {
+                        "name": "Start",
+                        "excluded": false
+                    },
+                    {
+                        "name": "TurnSlotAttachment",
+                        "excluded": true
+                    }
+                ]
+            },
+            {
+                "className": "Spine.PhysicsConstraintTimeline",
+                "staticMethods": [],
+                "instanceMethods": [
+                    {
+                        "name": "PhysicsConstraintIndex#get",
+                        "excluded": true
+                    },
+                    {
+                        "name": "ctor",
+                        "excluded": false
+                    },
+                    {
+                        "name": "Apply",
+                        "excluded": true
+                    }
+                ]
+            },
+            {
+                "className": "Spine.TranslateXTimeline",
+                "staticMethods": [],
+                "instanceMethods": [
+                    {
+                        "name": "BoneIndex#get",
+                        "excluded": true
+                    },
+                    {
+                        "name": "ctor",
+                        "excluded": false
+                    },
+                    {
+                        "name": "Apply",
+                        "excluded": true
+                    }
+                ]
+            },
+            {
+                "className": "Spine.TranslateYTimeline",
+                "staticMethods": [],
+                "instanceMethods": [
+                    {
+                        "name": "BoneIndex#get",
+                        "excluded": true
+                    },
+                    {
+                        "name": "ctor",
+                        "excluded": false
+                    },
+                    {
+                        "name": "Apply",
+                        "excluded": true
+                    }
+                ]
+            },
+            {
+                "className": "Spine.PhysicsConstraintDampingTimeline",
+                "staticMethods": [],
+                "instanceMethods": [
+                    {
+                        "name": "ctor",
+                        "excluded": false
+                    },
+                    {
+                        "name": "Setup",
+                        "excluded": true
+                    },
+                    {
+                        "name": "Get",
+                        "excluded": true
+                    },
+                    {
+                        "name": "Set",
+                        "excluded": true
+                    },
+                    {
+                        "name": "Global",
+                        "excluded": true
+                    }
+                ]
+            },
+            {
+                "className": "Spine.PhysicsConstraintInertiaTimeline",
+                "staticMethods": [],
+                "instanceMethods": [
+                    {
+                        "name": "ctor",
+                        "excluded": false
+                    },
+                    {
+                        "name": "Setup",
+                        "excluded": true
+                    },
+                    {
+                        "name": "Get",
+                        "excluded": true
+                    },
+                    {
+                        "name": "Set",
+                        "excluded": true
+                    },
+                    {
+                        "name": "Global",
+                        "excluded": true
+                    }
+                ]
+            },
+            {
+                "className": "Costopia.Gameplay.H3SlotFadeTexture",
+                "staticMethods": [],
+                "instanceMethods": [
+                    {
+                        "name": "init",
+                        "excluded": false
+                    },
+                    {
+                        "name": "RevealRatio#get",
+                        "excluded": true
+                    },
+                    {
+                        "name": "IsFading#get",
+                        "excluded": true
+                    },
+                    {
+                        "name": "Start",
+                        "excluded": false
+                    },
+                    {
+                        "name": "ApplyLinkWithPaintable",
+                        "excluded": true
+                    },
+                    {
+                        "name": "ApplySlotFade",
+                        "excluded": false
+                    },
+                    {
+                        "name": "SetSlotMaterialToBase",
+                        "excluded": true
+                    },
+                    {
+                        "name": "DisableSlot",
+                        "excluded": true
+                    },
+                    {
+                        "name": "EnableSlot",
+                        "excluded": true
+                    },
+                    {
+                        "name": "SetSlotAlpha",
+                        "excluded": false
+                    },
+                    {
+                        "name": "FadeRoutine",
+                        "excluded": true
+                    },
+                    {
+                        "name": "SetFadeDuration",
+                        "excluded": true
+                    },
+                    {
+                        "name": "FadeIn",
+                        "excluded": true
+                    },
+                    {
+                        "name": "FadeOut",
+                        "excluded": true
+                    },
+                    {
+                        "name": "FadeTo",
+                        "excluded": true
+                    },
+                    {
+                        "name": "PauseFade",
+                        "excluded": true
+                    },
+                    {
+                        "name": "ResumeFade",
+                        "excluded": true
+                    }
+                ]
             }
         ],
         "stubberDataList": [],
@@ -42486,8 +42894,8 @@
         "rules": {
             "texture": {
                 "default": {
-                    "maxWidth": 512,
-                    "maxHeight": 512,
+                    "maxWidth": 2048,
+                    "maxHeight": 2048,
                     "format": "png32",
                     "compression": "quantSize",
                     "quality": 65,
@@ -42506,8 +42914,8 @@
                         "name": "Resources/unity_builtin_extra/Default-Particle"
                     },
                     {
-                        "maxWidth": 512,
-                        "maxHeight": 512,
+                        "maxWidth": 2048,
+                        "maxHeight": 2048,
                         "format": "png32",
                         "compression": "none",
                         "quality": 65,
@@ -42516,8 +42924,8 @@
                         "name": "Assets/Fonts/Bubblegum SDF 1.asset"
                     },
                     {
-                        "maxWidth": 512,
-                        "maxHeight": 512,
+                        "maxWidth": 2048,
+                        "maxHeight": 2048,
                         "format": "png32",
                         "compression": "none",
                         "quality": 65,
@@ -42526,8 +42934,8 @@
                         "name": "Assets/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF - Fallback.asset"
                     },
                     {
-                        "maxWidth": 512,
-                        "maxHeight": 512,
+                        "maxWidth": 2048,
+                        "maxHeight": 2048,
                         "format": "png32",
                         "compression": "none",
                         "quality": 65,

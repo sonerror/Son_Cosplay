@@ -15,7 +15,7 @@ public class ItemMove : Item
   {
     if (isBlocked) return;
     if (isDragging) return;
-    if (GamePlayManager.Ins.clockTimer.gameObject.activeSelf) return;
+    if (GameManager.Ins.clockTimer.gameObject.activeSelf) return;
     if (!IsReady) return;
     SoundManager.Ins.PlayFx(FxType.Pick);
     isDragging = true;

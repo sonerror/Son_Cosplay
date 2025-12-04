@@ -104,7 +104,6 @@
     <Compile Include="Assets\Scripts\53\HairBang.cs" />
     <Compile Include="Assets\Scripts\Brow_Shaver.cs" />
     <Compile Include="Assets\DOTween\Modules\DOTweenModuleAudio.cs" />
-    <Compile Include="Assets\Scripts\CharactorControl.cs" />
     <Compile Include="Assets\Scripts\ItemMove.cs" />
     <Compile Include="Assets\Scripts\Pool\PoolManager.cs" />
     <Compile Include="Assets\Scripts\Manager\UIManager.cs" />
@@ -117,16 +116,19 @@
     <Compile Include="Assets\AllIn1SpriteShader\Scripts\SetGlobalTimeNew.cs" />
     <Compile Include="Assets\Scripts\ShowObjectSequence.cs" />
     <Compile Include="Assets\AllIn1SpriteShader\Demo\Scripts\All1ShaderDemoController.cs" />
+    <Compile Include="Assets\Scripts\53\H3SlotFadeTexture.cs" />
     <Compile Include="Assets\Scripts\TriggerWithCertainCollider.cs" />
     <Compile Include="Assets\AllIn1SpriteShader\Scripts\SetAtlasUvs.cs" />
     <Compile Include="Assets\AllIn1SpriteShader\Demo\Scripts\All1TextureOffsetOverTime.cs" />
     <Compile Include="Assets\Scripts\FadeSpriteByStep.cs" />
     <Compile Include="Assets\AllIn1SpriteShader\Demo\Scripts\Demo2AutoScroll.cs" />
+    <Compile Include="Assets\Scripts\53\H3SlotPaintableTexture.cs" />
     <Compile Include="Assets\DOTween\Modules\DOTweenModuleSprite.cs" />
     <Compile Include="Assets\Scripts\ToggleBoneSlot.cs" />
     <Compile Include="Assets\Scripts\MaskGroupCustom.cs" />
     <Compile Include="Assets\Scripts\53\WaterFaucet.cs" />
     <Compile Include="Assets\Scripts\Manager\GamePlayManager.cs" />
+    <Compile Include="Assets\Scripts\CharacterControl.cs" />
     <Compile Include="Assets\Scripts\Item.cs" />
     <Compile Include="Assets\Scripts\Helper\CameraScaler.cs" />
     <Compile Include="Assets\Scripts\Pool\PoolMember.cs" />
@@ -137,18 +139,24 @@
     <Compile Include="Assets\DOTween\Modules\DOTweenModuleUtils.cs" />
     <Compile Include="Assets\Scripts\Pool\SfxPool.cs" />
     <Compile Include="Assets\Scripts\ShowObjectEffect.cs" />
+    <Compile Include="Assets\Scripts\Manager\AdsManager.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Assets\_GAME\Levels\LvCosplayHarleyQuinn\Animations\Harley_Queen_json\Harley_Queen.atlas.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
     <None Include="Assets\Spine\version.txt" />
     <None Include="Assets\Spines\K_idol_json\School_Girl.atlas.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile-2-Pass.shader" />
+    <None Include="Assets\_GAME\Levels\LvCosplayPolice\Animations\Police_patrol_json\Police_patrol.atlas.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
     <None Include="Assets\AllIn1SpriteShader\Resources_moved\AllIn1SpriteShader.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Mobile.cginc" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF SSD.shader" />
+    <None Include="Assets\Spines\New1\Harley_Queen.atlas.txt" />
+    <None Include="Assets\_GAME\Core\Common\Shaders\TwoSideTexture.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface-Mobile.shader" />
+    <None Include="Assets\_GAME\_Costopia\__Gameplay\_Script\Gameplay\Shader\SpineReveal.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\SDFFunctions.hlsl" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface.shader" />
     <None Include="Assets\TextMesh Pro\Sprites\EmojiOne Attribution.txt" />
@@ -158,15 +166,19 @@
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Properties.cginc" />
     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Surface.cginc" />
+    <None Include="Assets\Spines\New2\Harley_Queen.atlas.txt" />
+    <None Include="Assets\_GAME\Core\Common\Shaders\SpriteOutline.shader" />
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
     <None Include="Assets\DOTween\DOTween.dll" />
     <None Include="Assets\Spines\New\school_boy_3.8.atlas.txt" />
     <None Include="Assets\Spines\school_boy_38\School_Girl.atlas.txt" />
+    <None Include="Assets\_GAME\Levels\LvCosplayHarleyQuinn\Animations\new\Harley_Queen.atlas.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Masking.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF Overlay.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Mobile.shader" />
     <None Include="Assets\TextMesh Pro\Fonts\LiberationSans - OFL.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile.shader" />
+    <None Include="Assets\_GAME\Levels\LvCosplayHarleyQuinn\Animations\minigame_json\Harley_Queen_minigame.atlas.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Sprite.shader" />
     <None Include="Assets\AllIn1SpriteShader\Resources_moved\AllIn1OneShaderFunctions.cginc" />
   </ItemGroup>

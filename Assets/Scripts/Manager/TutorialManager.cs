@@ -9,7 +9,7 @@ public class TutorialManager : Singleton<TutorialManager>
   public bool enableCountTime = false;
   public float timeCountHint = 2f;
   [SerializeField] public HandCtrl handCtrl;
-  [SerializeField] private GamePlayManager gamePlayManager;
+  [SerializeField] private GameManager gamePlayManager;
 
   private int CountStepDone = 0;
   public void OnStepDone()

@@ -1,0 +1,806 @@
+fileFormatVersion: 2
+guid: 6bac75020efca054ab1c7ec4d42142bb
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 438089178025623238
+    second: Police_patrol_0
+  - first:
+      213: 3523361706934097188
+    second: Police_patrol_1
+  - first:
+      213: -1816666256959859714
+    second: Police_patrol_2
+  - first:
+      213: 8642141692520350900
+    second: Police_patrol_3
+  - first:
+      213: 6161613794897208650
+    second: Police_patrol_4
+  - first:
+      213: -2414360345863092774
+    second: Police_patrol_5
+  - first:
+      213: -1218770757534088097
+    second: Police_patrol_6
+  - first:
+      213: -5914089644058889936
+    second: Police_patrol_7
+  - first:
+      213: -1130335643404991405
+    second: Police_patrol_8
+  - first:
+      213: -8400560202801498965
+    second: Police_patrol_9
+  - first:
+      213: -6107628022014705646
+    second: Police_patrol_10
+  - first:
+      213: 3305007118656342982
+    second: Police_patrol_11
+  - first:
+      213: 5090526793858109647
+    second: Police_patrol_12
+  - first:
+      213: -7031800996910488196
+    second: Police_patrol_13
+  - first:
+      213: -1724318148279947325
+    second: Police_patrol_14
+  - first:
+      213: -2350690488436215971
+    second: Police_patrol_15
+  - first:
+      213: -2951174184661591088
+    second: Police_patrol_16
+  - first:
+      213: -582487453820970590
+    second: Police_patrol_17
+  - first:
+      213: 5850876011967219375
+    second: Police_patrol_18
+  - first:
+      213: -4159081554032631983
+    second: Police_patrol_19
+  - first:
+      213: 2611912153880427512
+    second: Police_patrol_20
+  - first:
+      213: 3550230898898418734
+    second: Police_patrol_21
+  - first:
+      213: 4483320340417171097
+    second: Police_patrol_22
+  - first:
+      213: 4324180854436490278
+    second: Police_patrol_23
+  - first:
+      213: -1719474488317626644
+    second: Police_patrol_24
+  - first:
+      213: -6094996219510040838
+    second: Police_patrol_25
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 0
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: 52
+    textureCompression: 1
+    compressionQuality: 100
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 1
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Police_patrol_0
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 496
+        width: 322
+        height: 267
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6cef82c49c7641600800000000000000
+      internalID: 438089178025623238
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Police_patrol_1
+      rect:
+        serializedVersion: 2
+        x: 323
+        y: 500
+        width: 113
+        height: 258
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 425550d0ece75e030800000000000000
+      internalID: 3523361706934097188
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Police_patrol_2
+      rect:
+        serializedVersion: 2
+        x: 436
+        y: 611
+        width: 100
+        height: 148
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ef318761aa7e9c6e0800000000000000
+      internalID: -1816666256959859714
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Police_patrol_3
+      rect:
+        serializedVersion: 2
+        x: 540
+        y: 526
+        width: 254
+        height: 185
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4b4c441d41e0fe770800000000000000
+      internalID: 8642141692520350900
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Police_patrol_4
+      rect:
+        serializedVersion: 2
+        x: 794
+        y: 589
+        width: 132
+        height: 132
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a45aeffc913728550800000000000000
+      internalID: 6161613794897208650
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Police_patrol_5
+      rect:
+        serializedVersion: 2
+        x: 943
+        y: 696
+        width: 72
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ad58a09ae087e7ed0800000000000000
+      internalID: -2414360345863092774
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Police_patrol_6
+      rect:
+        serializedVersion: 2
+        x: 1034
+        y: 692
+        width: 32
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f540c8e047e061fe0800000000000000
+      internalID: -1218770757534088097
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Police_patrol_7
+      rect:
+        serializedVersion: 2
+        x: 1072
+        y: 665
+        width: 33
+        height: 97
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 031bd0c8dceeceda0800000000000000
+      internalID: -5914089644058889936
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Police_patrol_8
+      rect:
+        serializedVersion: 2
+        x: 1120
+        y: 702
+        width: 77
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 35402e998bd3050f0800000000000000
+      internalID: -1130335643404991405
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Police_patrol_9
+      rect:
+        serializedVersion: 2
+        x: 1427
+        y: 476
+        width: 238
+        height: 279
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ba4bbbde0073b6b80800000000000000
+      internalID: -8400560202801498965
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Police_patrol_10
+      rect:
+        serializedVersion: 2
+        x: 436
+        y: 496
+        width: 104
+        height: 115
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 210879f6ca85d3ba0800000000000000
+      internalID: -6107628022014705646
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Police_patrol_11
+      rect:
+        serializedVersion: 2
+        x: 928
+        y: 589
+        width: 53
+        height: 107
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6cb06a7b67ebddd20800000000000000
+      internalID: 3305007118656342982
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Police_patrol_12
+      rect:
+        serializedVersion: 2
+        x: 1009
+        y: 523
+        width: 63
+        height: 169
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fc05583f52f25a640800000000000000
+      internalID: 5090526793858109647
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Police_patrol_13
+      rect:
+        serializedVersion: 2
+        x: 1074
+        y: 597
+        width: 43
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c75a9e7df360a6e90800000000000000
+      internalID: -7031800996910488196
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Police_patrol_14
+      rect:
+        serializedVersion: 2
+        x: 1121
+        y: 213
+        width: 159
+        height: 470
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3cfa30ca7cdf118e0800000000000000
+      internalID: -1724318148279947325
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Police_patrol_15
+      rect:
+        serializedVersion: 2
+        x: 1321
+        y: 213
+        width: 106
+        height: 440
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d5faedb847ba06fd0800000000000000
+      internalID: -2350690488436215971
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Police_patrol_16
+      rect:
+        serializedVersion: 2
+        x: 560
+        y: 213
+        width: 561
+        height: 310
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0db51fc07b25b07d0800000000000000
+      internalID: -2951174184661591088
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Police_patrol_17
+      rect:
+        serializedVersion: 2
+        x: 794
+        y: 523
+        width: 215
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2a911e43fb69ae7f0800000000000000
+      internalID: -582487453820970590
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Police_patrol_18
+      rect:
+        serializedVersion: 2
+        x: 1072
+        y: 523
+        width: 46
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fa6092ecbbc723150800000000000000
+      internalID: 5850876011967219375
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Police_patrol_19
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 356
+        width: 467
+        height: 139
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 15f5104cc59f746c0800000000000000
+      internalID: -4159081554032631983
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Police_patrol_20
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1
+        width: 559
+        height: 355
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8fb7194f3406f3420800000000000000
+      internalID: 2611912153880427512
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Police_patrol_21
+      rect:
+        serializedVersion: 2
+        x: 468
+        y: 356
+        width: 79
+        height: 118
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e2cb47f4134f44130800000000000000
+      internalID: 3550230898898418734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Police_patrol_22
+      rect:
+        serializedVersion: 2
+        x: 1427
+        y: 325
+        width: 68
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 99e49d09814f73e30800000000000000
+      internalID: 4483320340417171097
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Police_patrol_23
+      rect:
+        serializedVersion: 2
+        x: 1523
+        y: 1
+        width: 139
+        height: 475
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 62c6b3d9393920c30800000000000000
+      internalID: 4324180854436490278
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Police_patrol_24
+      rect:
+        serializedVersion: 2
+        x: 560
+        y: 1
+        width: 962
+        height: 212
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ce63b7320133328e0800000000000000
+      internalID: -1719474488317626644
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Police_patrol_25
+      rect:
+        serializedVersion: 2
+        x: 1427
+        y: 213
+        width: 84
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: af651c42b393a6ba0800000000000000
+      internalID: -6094996219510040838
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Police_patrol_0: 438089178025623238
+      Police_patrol_1: 3523361706934097188
+      Police_patrol_10: -6107628022014705646
+      Police_patrol_11: 3305007118656342982
+      Police_patrol_12: 5090526793858109647
+      Police_patrol_13: -7031800996910488196
+      Police_patrol_14: -1724318148279947325
+      Police_patrol_15: -2350690488436215971
+      Police_patrol_16: -2951174184661591088
+      Police_patrol_17: -582487453820970590
+      Police_patrol_18: 5850876011967219375
+      Police_patrol_19: -4159081554032631983
+      Police_patrol_2: -1816666256959859714
+      Police_patrol_20: 2611912153880427512
+      Police_patrol_21: 3550230898898418734
+      Police_patrol_22: 4483320340417171097
+      Police_patrol_23: 4324180854436490278
+      Police_patrol_24: -1719474488317626644
+      Police_patrol_25: -6094996219510040838
+      Police_patrol_3: 8642141692520350900
+      Police_patrol_4: 6161613794897208650
+      Police_patrol_5: -2414360345863092774
+      Police_patrol_6: -1218770757534088097
+      Police_patrol_7: -5914089644058889936
+      Police_patrol_8: -1130335643404991405
+      Police_patrol_9: -8400560202801498965
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

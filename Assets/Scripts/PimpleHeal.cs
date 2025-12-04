@@ -62,7 +62,7 @@ public class PimpleHeal : Item
     });
     PoolManager.Ins.Spawn(PoolType.SFX_Acne_Cream, trigger.transform.position, Quaternion.identity);
 
-    GamePlayManager.Ins.characterControl.TurnSlotAttachment(_acneCreamSlot[index]);
+    GameManager.Ins.characterControl.TurnSlotAttachment(_acneCreamSlot[index]);
     _currentAcneCreamIndex++;
     if (_currentAcneCreamIndex >= acnePimpleColliders.Count) OnDone();
   }
