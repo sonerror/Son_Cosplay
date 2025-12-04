@@ -163,7 +163,7 @@
         "enableMecanimWASM": true,
         "minify": true,
         "forceUncompressed": false,
-        "forceBase64": false,
+        "forceBase64": true,
         "graphicsConstraint": 24,
         "genericCheck": true,
         "disableAntiAliasing": true,
@@ -8957,18 +8957,6 @@
             {
                 "name": "GamePlayManager",
                 "excluded": false
-            },
-            {
-                "name": "Costopia.Gameplay.H3SlotPaintableTexture",
-                "excluded": true
-            },
-            {
-                "name": "Costopia.Gameplay.H3SlotPaintableTexture.CircleDrawRequest",
-                "excluded": true
-            },
-            {
-                "name": "Costopia.Gameplay.H3SlotPaintableTexture.SlotPaintableData",
-                "excluded": true
             }
         ],
         "unusedMethods": [
@@ -23928,7 +23916,7 @@
                     },
                     {
                         "name": "StartGamePlay",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "PlayPositiveEmoji",
@@ -42798,80 +42786,6 @@
                     },
                     {
                         "name": "Global",
-                        "excluded": true
-                    }
-                ]
-            },
-            {
-                "className": "Costopia.Gameplay.H3SlotFadeTexture",
-                "staticMethods": [],
-                "instanceMethods": [
-                    {
-                        "name": "init",
-                        "excluded": false
-                    },
-                    {
-                        "name": "RevealRatio#get",
-                        "excluded": true
-                    },
-                    {
-                        "name": "IsFading#get",
-                        "excluded": true
-                    },
-                    {
-                        "name": "Start",
-                        "excluded": false
-                    },
-                    {
-                        "name": "ApplyLinkWithPaintable",
-                        "excluded": true
-                    },
-                    {
-                        "name": "ApplySlotFade",
-                        "excluded": false
-                    },
-                    {
-                        "name": "SetSlotMaterialToBase",
-                        "excluded": true
-                    },
-                    {
-                        "name": "DisableSlot",
-                        "excluded": true
-                    },
-                    {
-                        "name": "EnableSlot",
-                        "excluded": true
-                    },
-                    {
-                        "name": "SetSlotAlpha",
-                        "excluded": false
-                    },
-                    {
-                        "name": "FadeRoutine",
-                        "excluded": true
-                    },
-                    {
-                        "name": "SetFadeDuration",
-                        "excluded": true
-                    },
-                    {
-                        "name": "FadeIn",
-                        "excluded": true
-                    },
-                    {
-                        "name": "FadeOut",
-                        "excluded": true
-                    },
-                    {
-                        "name": "FadeTo",
-                        "excluded": true
-                    },
-                    {
-                        "name": "PauseFade",
-                        "excluded": true
-                    },
-                    {
-                        "name": "ResumeFade",
                         "excluded": true
                     }
                 ]

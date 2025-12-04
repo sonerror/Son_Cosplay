@@ -74,6 +74,7 @@
     <Compile Include="Assets\Scripts\ItemUseOnce.cs" />
     <Compile Include="Assets\Scripts\LoopAnimTransformFloating.cs" />
     <Compile Include="Assets\Scripts\Manager\EventManager.cs" />
+    <Compile Include="Assets\Scripts\54\ShowSprite.cs" />
     <Compile Include="Assets\DOTween\Modules\DOTweenModuleUnityVersion.cs" />
     <Compile Include="Assets\AllIn1SpriteShader\Demo\Scripts\DemoCircleExpositor.cs" />
     <Compile Include="Assets\Scripts\Helper\H3MonoBehaviour.cs" />
@@ -114,15 +115,14 @@
     <Compile Include="Assets\Scripts\Helper\ScreenShot.cs" />
     <Compile Include="Assets\Scripts\Obj\HandCtrl.cs" />
     <Compile Include="Assets\AllIn1SpriteShader\Scripts\SetGlobalTimeNew.cs" />
+    <Compile Include="Assets\Scripts\54\FoundationBottle.cs" />
     <Compile Include="Assets\Scripts\ShowObjectSequence.cs" />
     <Compile Include="Assets\AllIn1SpriteShader\Demo\Scripts\All1ShaderDemoController.cs" />
-    <Compile Include="Assets\Scripts\53\H3SlotFadeTexture.cs" />
     <Compile Include="Assets\Scripts\TriggerWithCertainCollider.cs" />
     <Compile Include="Assets\AllIn1SpriteShader\Scripts\SetAtlasUvs.cs" />
     <Compile Include="Assets\AllIn1SpriteShader\Demo\Scripts\All1TextureOffsetOverTime.cs" />
     <Compile Include="Assets\Scripts\FadeSpriteByStep.cs" />
     <Compile Include="Assets\AllIn1SpriteShader\Demo\Scripts\Demo2AutoScroll.cs" />
-    <Compile Include="Assets\Scripts\53\H3SlotPaintableTexture.cs" />
     <Compile Include="Assets\DOTween\Modules\DOTweenModuleSprite.cs" />
     <Compile Include="Assets\Scripts\ToggleBoneSlot.cs" />
     <Compile Include="Assets\Scripts\MaskGroupCustom.cs" />
