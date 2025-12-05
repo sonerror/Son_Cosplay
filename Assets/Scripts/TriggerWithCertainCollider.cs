@@ -10,6 +10,8 @@ public class TriggerWithCertainCollider : GameUnit
   [SerializeField] private bool disableTriggerWith;
   private bool _isDone;
 
+  [SerializeField] FxType soundPlay = FxType.None;
+
   public UnityEvent OnTriggerEvent => onTriggerEvent;
   public Rigidbody2D Rigidbody => rb;
   public bool IsDone => _isDone;
@@ -49,6 +51,7 @@ public class TriggerWithCertainCollider : GameUnit
       _isDone = true;
       col.enabled = false;
       rb.simulated = false;
+      SoundManager.Ins.PlayFx(soundPlay);
       if (disableTriggerWith) triggerWith.enabled = false;
       onTriggerEvent.Invoke();
     }

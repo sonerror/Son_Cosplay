@@ -9,7 +9,7 @@ public class TutorialManager : Singleton<TutorialManager>
   public bool enableCountTime = false;
   public float timeCountHint = 2f;
   [SerializeField] public HandCtrl handCtrl;
-  [SerializeField] private GameManager gamePlayManager;
+  [SerializeField] private GamePlayManager gamePlayManager;
 
   private int CountStepDone = 0;
   public void OnStepDone()
@@ -67,42 +67,44 @@ public class TutorialManager : Singleton<TutorialManager>
     enableCountTime = false;
     handCtrl.gameObject.SetActive(true);
 
-    var states = gamePlayManager.StateId;
+    var items = gamePlayManager.items;
 
-    if (states.Count > 0)
+    for (var index = 0; index < items.Count; index++)
     {
-      var i = states[0];
-      switch (i)
+      if (items[index].IsReady)
       {
-        case 0:
-          PlayTut0();
-          return;
-        case 1:
-          PlayTut1();
-          return;
-        case 2:
-          PlayTut2();
-          return;
-        case 3:
-          PlayTut3();
-          return;
-        case 4:
-          PlayTut4();
-          return;
-        case 5:
-          PlayTut5();
-          return;
-        case 6:
-          PlayTut6();
-          return;
-        case 7:
-          PlayTut7();
-          return;
-        case 8:
-          PlayTut8();
-          return;
-        default:
-          return;
+        switch (index)
+        {
+          case 0:
+            PlayTut0();
+            return;
+          case 1:
+            PlayTut1();
+            return;
+          case 2:
+            PlayTut2();
+            return;
+          case 3:
+            PlayTut3();
+            return;
+          case 4:
+            PlayTut4();
+            return;
+          case 5:
+            PlayTut5();
+            return;
+          case 6:
+            PlayTut6();
+            return;
+          case 7:
+            PlayTut7();
+            return;
+          case 8:
+            PlayTut8();
+            return;
+          default:
+            return;
+        }
       }
     }
 
@@ -112,9 +114,8 @@ public class TutorialManager : Singleton<TutorialManager>
   }
   void PlayTut0()
   {
-    var item = gamePlayManager.items[0] as Brow_Shaver;
-    if (item.isLeftDone) { handCtrl.ShowHandState2(item.Tf.position, item.NodeRight.position); }
-    else { handCtrl.ShowHandState2(item.Tf.position, item.NodeLeft.position); }
+    var item = gamePlayManager.items[0] as FoundationBottle;
+    handCtrl.ShowHandState2(item.Tf.position, item.getPosTargetActive());
   }
 
   void PlayTut1()
@@ -184,6 +185,6 @@ public class TutorialManager : Singleton<TutorialManager>
   {
     HideHint();
 
-    timeCountHint = gamePlayManager.CurrState < 2 ? 1f : TimeHint;
+    timeCountHint = TimeHint;
   }
 }

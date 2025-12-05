@@ -6,23 +6,32 @@ using Sirenix.OdinInspector;
 
 using UnityEngine;
 using UnityEngine.EventSystems;
-
-public class FoundationBottle : Item
+using UnityEngine.Rendering;
+public enum BrushBlushState
+{
+  Drag,
+  DragWithPainter,
+  Done
+}
+public class Brush_Blush : Item
 {
   public Collider2D triggerCollider;
   public Vector2 Angle = new Vector2(0, 0);
-  public Renderer rende;
+  public SortingGroup rendeGroup;
   private int _oriOrder;
   private Vector3 _prePos;
-  [SerializeField] public List<TriggerWithCertainCollider> acnePimpleColliders;
+  [SerializeField] public List<TriggerWithCertainCollider> phanColliders;
   [SerializeField] public List<ShowSprite> spriteShows;
-
+  [SerializeField] public TriggerWithCertainCollider hopPhanColliders;
+  public GameObject brushOnPainter;
+  public ParticleSystem brushOnPainterFx;
+  [SerializeField] private BrushBlushState currBrushBlushState = BrushBlushState.Drag;
 
   protected override void Awake()
   {
     base.Awake();
     _prePos = Tf.position;
-    _oriOrder = rende.sortingOrder;
+    _oriOrder = rendeGroup.sortingOrder;
   }
 
   void Start()
@@ -35,44 +44,56 @@ public class FoundationBottle : Item
   public void OnReady()
   {
     IsReady = true;
-    for (int index = 0; index < acnePimpleColliders.Count; index++)
+
+    if (currBrushBlushState == BrushBlushState.DragWithPainter)
     {
-      int i = index; // Capture the index for the lambda
-      TriggerWithCertainCollider trigger = acnePimpleColliders[i];
-      ShowSprite show = spriteShows[i];
+      for (int index = 0; index < phanColliders.Count; index++)
+      {
+        int i = index; // Capture the index for the lambda
+        TriggerWithCertainCollider trigger = phanColliders[i];
+        ShowSprite show = spriteShows[i];
+        trigger.gameObject.SetActive(true);
+        trigger.OnTriggerEvent.AddListener(() => AddPhan(trigger, show, i));
+      }
+    }
+
+    if (currBrushBlushState == BrushBlushState.Drag)
+    {
+      TriggerWithCertainCollider trigger = hopPhanColliders;
       trigger.gameObject.SetActive(true);
-      trigger.OnTriggerEvent.AddListener(() => AddAcne(trigger, show, i));
+      trigger.OnTriggerEvent.AddListener(() => ChangeStatePainter(trigger));
     }
   }
+
+  void ChangeStatePainter(TriggerWithCertainCollider trigger)
+  {
+    trigger.OnTriggerEvent.RemoveAllListeners();
+    trigger.gameObject.SetActive(false);
+    brushOnPainter.SetActive(true);
+    brushOnPainterFx.Play();
+    currBrushBlushState = BrushBlushState.DragWithPainter;
+    OnReady();
+  }
   private int _currentAcneIndex;
-  private void AddAcne(TriggerWithCertainCollider trigger, ShowSprite show, int index)
+  private void AddPhan(TriggerWithCertainCollider trigger, ShowSprite show, int index)
   {
     trigger.OnTriggerEvent.RemoveAllListeners();
     trigger.gameObject.SetActive(true);
     show.ShowSpriteStart();
     // PoolManager.Ins.Spawn(PoolType.SFX_Acne, trigger.transform.position, Quaternion.identity);
     _currentAcneIndex++;
-    if (_currentAcneIndex >= acnePimpleColliders.Count) OnDone();
-  }
-
-  public Vector3 getPosTargetActive()
-  {
-    for (int i = 0; i < acnePimpleColliders.Count; i++)
-    {
-      if (acnePimpleColliders[i].gameObject.activeSelf)
-      {
-        return acnePimpleColliders[i].transform.position;
-      }
-    }
-    return Vector3.zero;
+    if (_currentAcneIndex >= phanColliders.Count) OnDone();
   }
 
   void OnDone()
   {
     if (!IsReady) return;
     IsReady = false;
+    MouseUp(null);
     OnFinish?.Invoke();
   }
+
+
 
   public override void MouseDown(BaseEventData eventData)
   {
@@ -105,8 +126,6 @@ public class FoundationBottle : Item
       SoundManager.Ins.PlayFx(FxType.Drop);
       ChangeLayerDown();
     });
-
-
     triggerCollider.enabled = false;
   }
 
@@ -136,12 +155,12 @@ public class FoundationBottle : Item
   }
   void ChangeLayerUp()
   {
-    rende.sortingOrder = _oriOrder + 100;
+    rendeGroup.sortingOrder = _oriOrder + 100;
   }
 
   void ChangeLayerDown()
   {
-    rende.sortingOrder = _oriOrder;
+    rendeGroup.sortingOrder = _oriOrder;
   }
 
 }

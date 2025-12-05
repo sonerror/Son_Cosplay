@@ -3,6 +3,7 @@ using Animation = Spine.Animation;
 using AnimationState = Spine.AnimationState;
 using UnityEngine;
 using Spine.Unity;
+using Utilities;
 
 public enum CharacterAnimID
 {
@@ -16,14 +17,23 @@ public class CharacterControl : GameUnit
   [SerializeField] private SkeletonAnimation skeletonAnimation;
   [SerializeField] private ToggleBoneSlot boneSlotToggle;
 
+  [SerializeField] private LoopAnimTransformFloating eye;
+
   void Start()
   {
   }
-
-
   public void TurnSlotAttachment(string slotName, string attachmentName = null)
   {
     boneSlotToggle.TurnSlotAttachment(slotName, attachmentName);
+  }
+
+  private bool _isEyeClosed = false;
+
+  public void CloseEye()
+  {
+    if (_isEyeClosed) return;
+    _isEyeClosed = true;
+    eye.enabled = false;
   }
 
 

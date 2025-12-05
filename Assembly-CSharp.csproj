@@ -84,6 +84,7 @@
     <Compile Include="Assets\AllIn1SpriteShader\Demo\Scripts\AllIn1ScrollProperty.cs" />
     <Compile Include="Assets\AllIn1SpriteShader\Scripts\AllIn1Shader.cs" />
     <Compile Include="Assets\Scripts\Helper\DTPUtils.cs" />
+    <Compile Include="Assets\Scripts\53\ItemDragBase.cs" />
     <Compile Include="Assets\Scripts\Manager\SoundManager.cs" />
     <Compile Include="Assets\AllIn1SpriteShader\Demo\Scripts\DemoCamera.cs" />
     <Compile Include="Assets\Scripts\UI\Progress.cs" />
@@ -96,6 +97,7 @@
     <Compile Include="Assets\Scripts\Helper\SlotAttachmentPair.cs" />
     <Compile Include="Assets\Scripts\Manager\Singleton.cs" />
     <Compile Include="Assets\Scripts\53\WaterFace.cs" />
+    <Compile Include="Assets\Scripts\Brush_Eye.cs" />
     <Compile Include="Assets\Scripts\Manager\TutorialManager.cs" />
     <Compile Include="Assets\FindMissingScriptsRecursively.cs" />
     <Compile Include="Assets\Scripts\OnTransformGoToAffectZone.cs" />
@@ -105,6 +107,7 @@
     <Compile Include="Assets\Scripts\53\HairBang.cs" />
     <Compile Include="Assets\Scripts\Brow_Shaver.cs" />
     <Compile Include="Assets\DOTween\Modules\DOTweenModuleAudio.cs" />
+    <Compile Include="Assets\Scripts\54\TapButton.cs" />
     <Compile Include="Assets\Scripts\ItemMove.cs" />
     <Compile Include="Assets\Scripts\Pool\PoolManager.cs" />
     <Compile Include="Assets\Scripts\Manager\UIManager.cs" />
@@ -123,6 +126,7 @@
     <Compile Include="Assets\AllIn1SpriteShader\Demo\Scripts\All1TextureOffsetOverTime.cs" />
     <Compile Include="Assets\Scripts\FadeSpriteByStep.cs" />
     <Compile Include="Assets\AllIn1SpriteShader\Demo\Scripts\Demo2AutoScroll.cs" />
+    <Compile Include="Assets\Scripts\54\Brush_Blush.cs" />
     <Compile Include="Assets\DOTween\Modules\DOTweenModuleSprite.cs" />
     <Compile Include="Assets\Scripts\ToggleBoneSlot.cs" />
     <Compile Include="Assets\Scripts\MaskGroupCustom.cs" />

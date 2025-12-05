@@ -29,7 +29,7 @@ namespace HoangHH
 
 
     [SerializeField] private float timeShow = 0.7f;
-    [SerializeField] private bool showOnEnable;
+    [SerializeField] private bool showOnStart;
     [SerializeField] private Ease easeShow = Ease.OutBack;
     [SerializeField] private Ease easeHide = Ease.InBack;
 
@@ -143,9 +143,9 @@ namespace HoangHH
       this.WaitToDo(Hide, delay);
     }
 
-    private void OnEnable()
+    void Start()
     {
-      if (showOnEnable)
+      if (showOnStart)
       {
         Show();
       }

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using DG.Tweening;
+using Sirenix.OdinInspector;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
@@ -8,15 +9,35 @@ public class FaceTowel : Item
 {
   private Vector3 _prePos;
   public Vector2 Angle = new Vector2(0, 0);
-  public List<Renderer> renderers = new List<Renderer>();
+  public Renderer rende;
+  private int _oriOrder = 0;
   public MaskGroupCustom maskGroup;
+  public GameObject NodeBody;
+  public Transform NodeCheckPos;
 
   protected override void Awake()
   {
     base.Awake();
     _prePos = Tf.position;
     Angle.x = Tf.eulerAngles.z;
+    _oriOrder = rende.sortingOrder;
+    if (!NodeCheckPos) NodeCheckPos = Tf;
   }
+
+#if UNITY_EDITOR
+  [Button]
+#endif
+  public void SetReady()
+  {
+    IsReady = true;
+    _OnReady();
+  }
+
+  private void _OnReady()
+  {
+    NodeBody.SetActive(true);
+  }
+
   public override void MouseDown(BaseEventData eventData)
   {
     if (isBlocked) return;
@@ -59,7 +80,7 @@ public class FaceTowel : Item
 
   void CheckTarget()
   {
-    if (maskGroup.CheckMasks(Tf.position))
+    if (maskGroup.CheckMasks(NodeCheckPos.position))
     {
       IsReady = false;
       OnFinish?.Invoke();
@@ -91,17 +112,12 @@ public class FaceTowel : Item
   }
   void ChangeLayerUp()
   {
-    foreach (var renderer in renderers)
-    {
-      renderer.sortingOrder += 100;
-    }
+    rende.sortingOrder = _oriOrder + 100;
   }
 
   void ChangeLayerDown()
   {
-    foreach (var renderer in renderers)
-    {
-      renderer.sortingOrder -= 100;
-    }
+    rende.sortingOrder = _oriOrder;
+
   }
 }

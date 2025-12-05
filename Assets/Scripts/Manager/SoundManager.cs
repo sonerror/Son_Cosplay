@@ -3,34 +3,42 @@ using UnityEngine;
 
 public enum FxType
 {
-  Angry,
-  Happy,
-  StartGame,
-  Timer,
-  Pick,
-  Drop,
-  Hair_Shave,
-  NoseMove,
-  LipMove,
-  AddGel,
-  Hair_Shave1,
-  Happy1,
-  Happy2,
-  Angry1,
+  Angry = 0,
+  Happy = 1,
+  StartGame = 2,
+  Timer = 3,
+  Pick = 4,
+  Drop = 5,
+  Hair_Shave = 6,
+  NoseMove = 7,
+  LipMove = 8,
+  AddGel = 9,
+  Hair_Shave1 = 10,
+  Happy1 = 11,
+  Happy2 = 12,
+  Angry1 = 13,
+  Cream = 14,
+  CreamBrush = 15,
+  LipStick = 16,
+  MagicSparkle = 17,
+
+
+  None = 100,
 
 }
 
 public class SoundManager : Singleton<SoundManager>
 {
   public AudioClip[] audioClips;
-  // public AudioSource sound1;
-  private AudioSource[] fx = new AudioSource[11];
+  public AudioSource sound1;
+  private AudioSource[] fx = new AudioSource[30];
 
   bool isMute = false;
   public bool IsMute => isMute;
 
   public void PlayFx(FxType fxType)
   {
+    if (fxType == FxType.None) return;
     if (!isMute)
     {
       if (fx[(int)fxType] == null)
@@ -43,8 +51,24 @@ public class SoundManager : Singleton<SoundManager>
     }
   }
 
+  public void PlayFxIfNotPlay(FxType fxType)
+  {
+    if (fxType == FxType.None) return;
+    if (!isMute)
+    {
+      if (fx[(int)fxType] == null)
+      {
+        fx[(int)fxType] = new GameObject().AddComponent<AudioSource>();
+        fx[(int)fxType].clip = audioClips[(int)fxType];
+      }
+
+      if (!fx[(int)fxType].isPlaying) fx[(int)fxType].Play();
+    }
+  }
+
   public void PlaySoundLoop(FxType fxType)
   {
+    if (fxType == FxType.None) return;
     if (!isMute)
     {
       if (fx[(int)fxType] == null)
@@ -60,6 +84,7 @@ public class SoundManager : Singleton<SoundManager>
 
   public void StopSoundLoop(FxType fxType)
   {
+    if (fxType == FxType.None) return;
     if (fx[(int)fxType] != null)
     {
       fx[(int)fxType].Stop();
@@ -83,13 +108,14 @@ public class SoundManager : Singleton<SoundManager>
 
   public void PlayFxAfterTime(FxType fxType, float time)
   {
+    if (fxType == FxType.None) return;
     StartCoroutine(IE_PlayFxAfterTime(fxType, time));
   }
 
   public void Mute()
   {
     isMute = true;
-    // sound1.Stop();
+    sound1.Stop();
     for (int i = 0; i < fx.Length; i++)
     {
       if (fx[i] != null)

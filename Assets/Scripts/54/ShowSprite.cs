@@ -6,6 +6,7 @@ public class ShowSprite : MonoBehaviour
 
   [SerializeField] float fadeDuration = 0.75f;
   private SpriteRenderer _spriteRenderer;
+  [SerializeField] private FxType soundFx = FxType.None;
 
   void Awake()
   {
