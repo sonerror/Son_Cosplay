@@ -1,0 +1,42 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6b194f808b1af6499c93410e504af42, type: 3}
+  m_Name: Cindarella_Atlas
+  m_EditorClassIdentifier: spine-unity::Spine.Unity.SpineAtlasAsset
+  textureLoadingMode: 0
+  onDemandTextureLoader: {fileID: 0}
+  atlasFile: {fileID: 4900000, guid: 8a2ac4a10e16c9a46b0e742f33c0c369, type: 3}
+  materials:
+  - {fileID: 2100000, guid: 82e313e5cec6f9d4ca068646f89263c1, type: 2}
+  - {fileID: 2100000, guid: 3274a05449c68fc4b90b8886849062a5, type: 2}
+  - {fileID: 2100000, guid: 30ae21470f396354c99e91b79021b3a3, type: 2}
+  - {fileID: 2100000, guid: a23f0c7304eedeb49a1e8b88fb0e6f32, type: 2}
+  - {fileID: 2100000, guid: 66ea97797394a8f4f92831d2e1916881, type: 2}
+  - {fileID: 2100000, guid: f258ff83fab21854380828a481bf474a, type: 2}
+  - {fileID: 2100000, guid: 497d88516da5cdf4392337f9dce377c7, type: 2}
+  - {fileID: 2100000, guid: f00c38d9db188bb49a91f475693d3c5a, type: 2}
+  - {fileID: 2100000, guid: a53af5a83d36d42448da142b995d9e68, type: 2}
+  - {fileID: 2100000, guid: f867ffa20d3844746961a13607ba4107, type: 2}
+  - {fileID: 2100000, guid: c652af40c2cfdb74b87caa5e674e2e41, type: 2}
+  - {fileID: 2100000, guid: fceaf403873970742a67b49bd91a168c, type: 2}
+  - {fileID: 2100000, guid: 722666c092eda4c43b790a61c12f1d8d, type: 2}
+  - {fileID: 2100000, guid: bec31f4052d63bb4eb81ac5207a0e2d6, type: 2}
+  - {fileID: 2100000, guid: ff4031794e7192b449665f86e4b7e249, type: 2}
+  - {fileID: 2100000, guid: e2501e3c61447a5499d44e3ef90d4e63, type: 2}
+  - {fileID: 2100000, guid: 79daf7393107a93418bbb3e1c7e374db, type: 2}
+  - {fileID: 2100000, guid: 5b25cbc9700d0cf46b85bcad0c7b09d5, type: 2}
+  - {fileID: 2100000, guid: 1ad3874c604afbd4b8874002566b65b7, type: 2}
+  - {fileID: 2100000, guid: 73c5ed2aaa7eb394eb528b23ef9f7aff, type: 2}
+  - {fileID: 2100000, guid: 709009725a7aa9c4cab132bb4541a619, type: 2}
+  - {fileID: 2100000, guid: f7b27b27b07fad14691e89450d0f0fa9, type: 2}
+  - {fileID: 2100000, guid: 1f1123b2cdd4a3444955c01c6a0bdafe, type: 2}
+  - {fileID: 2100000, guid: 228ed3100eb85b14d97e03b127f4331c, type: 2}

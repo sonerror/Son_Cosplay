@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 3025863988163676382}
   - component: {fileID: 6950205970193713245}
   - component: {fileID: 5237617265256481428}
+  - component: {fileID: 6131676906550566326}
   m_Layer: 0
   m_Name: CompleteFx
   m_TagString: Untagged
@@ -4806,9 +4807,6 @@ ParticleSystemRenderer:
   m_ReflectionProbeUsage: 0
   m_RayTracingMode: 0
   m_RayTraceProcedural: 0
-  m_RayTracingAccelStructBuildFlagsOverride: 0
-  m_RayTracingAccelStructBuildFlags: 1
-  m_SmallMeshCulling: 1
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -4875,8 +4873,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 1220150759414987609, guid: 10d3200ba6085744ab1deaa7e3e821ca, type: 2}
-  m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 8300000, guid: bdd4c2074994e474596ba613037e80a6, type: 3}
+  m_audioClip: {fileID: 8300000, guid: bdd4c2074994e474596ba613037e80a6, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 0.8
   m_Pitch: 1
@@ -4962,6 +4959,20 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &6131676906550566326
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3407794574298415282}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 790b449e2a0846e9aa4add551268db7b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  particle: {fileID: 3025863988163676382}
+  audioSource: {fileID: 5237617265256481428}
 --- !u!1 &7095941170016989788
 GameObject:
   m_ObjectHideFlags: 0
@@ -9815,9 +9826,6 @@ ParticleSystemRenderer:
   m_ReflectionProbeUsage: 0
   m_RayTracingMode: 0
   m_RayTraceProcedural: 0
-  m_RayTracingAccelStructBuildFlagsOverride: 0
-  m_RayTracingAccelStructBuildFlags: 1
-  m_SmallMeshCulling: 1
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:

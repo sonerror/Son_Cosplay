@@ -171,6 +171,7 @@
     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Properties.cginc" />
     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Surface.cginc" />
     <None Include="Assets\Spines\New2\Harley_Queen.atlas.txt" />
+    <None Include="Assets\_GAME\Levels\LvCosplayCinderella\Animations\Cindarella_json\Cindarella.atlas.txt" />
     <None Include="Assets\_GAME\Core\Common\Shaders\SpriteOutline.shader" />
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
     <None Include="Assets\DOTween\DOTween.dll" />
