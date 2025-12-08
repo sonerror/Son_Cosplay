@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
-public class MaskGroupCustom : MonoBehaviour
+public class MaskGroupCustom : GameUnit
 {
   [SerializeField] private List<GameObject> masks;
   [SerializeField] private bool typeActive = true;

@@ -15,7 +15,6 @@ public enum CharacterAnimID
 public class CharacterControl : GameUnit
 {
   [SerializeField] private SkeletonAnimation skeletonAnimation;
-  [SerializeField] private ToggleBoneSlot boneSlotToggle;
 
   [SerializeField] private LoopAnimTransformFloating eye;
 
@@ -24,7 +23,7 @@ public class CharacterControl : GameUnit
   }
   public void TurnSlotAttachment(string slotName, string attachmentName = null)
   {
-    boneSlotToggle.TurnSlotAttachment(slotName, attachmentName);
+    skeletonAnimation.Skeleton.SetAttachment(slotName, attachmentName);
   }
 
   private bool _isEyeClosed = false;
@@ -33,7 +32,7 @@ public class CharacterControl : GameUnit
   {
     if (_isEyeClosed) return;
     _isEyeClosed = true;
-    eye.enabled = false;
+    eye.CloseEye();
   }
 
 

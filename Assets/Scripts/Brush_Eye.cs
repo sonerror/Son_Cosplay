@@ -21,7 +21,7 @@ public class Brush_Eye : Item
   public Vector2 Angle = new Vector2(0, 0);
   public SortingGroup rende;
   private int _oriOrder = 0;
-  public MaskGroupCustom maskGroupBlue, maskGroupPink;
+  public MaskGroupCustom MaskGroupBlue, MaskGroupPink;
   public GameObject headBrushBlue, headBrushPink;
   public ParticleSystem parBlue, parPink, _CurrPar = null, MagicPar = null;
   public Transform NodeCheckPos;
@@ -76,8 +76,8 @@ public class Brush_Eye : Item
   {
     if (!hadShowEyeMask)
     {
-      maskGroupBlue.gameObject.SetActive(true);
-      maskGroupPink.gameObject.SetActive(true);
+      MaskGroupBlue.gameObject.SetActive(true);
+      MaskGroupPink.gameObject.SetActive(true);
       hadShowEyeMask = true;
     }
     if (_CurrBrushEyeState == BrushEyeState.Blue) return;
@@ -95,8 +95,8 @@ public class Brush_Eye : Item
   {
     if (!hadShowEyeMask)
     {
-      maskGroupBlue.gameObject.SetActive(true);
-      maskGroupPink.gameObject.SetActive(true);
+      MaskGroupBlue.gameObject.SetActive(true);
+      MaskGroupPink.gameObject.SetActive(true);
       hadShowEyeMask = true;
     }
     if (_CurrBrushEyeState == BrushEyeState.Pink) return;
@@ -156,9 +156,9 @@ public class Brush_Eye : Item
 
     if (_CurrBrushEyeState == BrushEyeState.Blue)
     {
-      if (maskGroupBlue.CheckMasks(NodeCheckPos.position))
+      if (MaskGroupBlue.CheckMasks(NodeCheckPos.position))
       {
-        if (maskGroupPink.IsDone())
+        if (MaskGroupPink.IsDone())
         {
           IsReady = false;
           OnFinish?.Invoke();
@@ -168,9 +168,9 @@ public class Brush_Eye : Item
 
     if (_CurrBrushEyeState == BrushEyeState.Pink)
     {
-      if (maskGroupPink.CheckMasks(NodeCheckPos.position))
+      if (MaskGroupPink.CheckMasks(NodeCheckPos.position))
       {
-        if (maskGroupBlue.IsDone())
+        if (MaskGroupBlue.IsDone())
         {
           IsReady = false;
           OnFinish?.Invoke();

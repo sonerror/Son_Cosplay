@@ -21,7 +21,7 @@ public enum FxType
   CreamBrush = 15,
   LipStick = 16,
   MagicSparkle = 17,
-
+  DapPhan = 18,
 
   None = 100,
 

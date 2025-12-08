@@ -76,6 +76,12 @@ namespace Utilities
     // Update is called once per frame
     void Update()
     {
+      if (isClose)
+      {
+        CloseEye();
+        return;
+      }
+
       float timeX = Mathf.Repeat(((isUseScaleTime ? Time.time : Time.unscaledTime) + timeOffset.x) / cycleDuration, 1f);
       float timeY = Mathf.Repeat(((isUseScaleTime ? Time.time : Time.unscaledTime) + timeOffset.y) / cycleDuration, 1f);
 
@@ -84,6 +90,17 @@ namespace Utilities
           _startPos.y + positionCurveMul * EvaluateCurve(curveY, timeY),
           _startPos.z
           );
+    }
+
+    private bool isClose = false;
+    public void CloseEye()
+    {
+      isClose = true;
+      _transform.localPosition = new Vector3(
+         _startPos.x + positionCurveMul * EvaluateCurve(curveX, 1f),
+         _startPos.y + positionCurveMul * EvaluateCurve(curveY, 1f),
+         _startPos.z
+         );
     }
 
     private void OnDisable()

@@ -59,9 +59,9 @@ public class FoundationBottle : Item
   {
     for (int i = 0; i < acnePimpleColliders.Count; i++)
     {
-      if (acnePimpleColliders[i].gameObject.activeSelf)
+      if (acnePimpleColliders[i].Col.enabled)
       {
-        return acnePimpleColliders[i].transform.position;
+        return acnePimpleColliders[i].Tf.position;
       }
     }
     return Vector3.zero;

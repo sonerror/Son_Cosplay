@@ -26,6 +26,7 @@ public class Brush_Blush : Item
   public GameObject brushOnPainter;
   public ParticleSystem brushOnPainterFx;
   [SerializeField] private BrushBlushState currBrushBlushState = BrushBlushState.Drag;
+  public BrushBlushState CurrBrushBlushState => currBrushBlushState;
 
   protected override void Awake()
   {
@@ -64,7 +65,17 @@ public class Brush_Blush : Item
       trigger.OnTriggerEvent.AddListener(() => ChangeStatePainter(trigger));
     }
   }
-
+  public Vector3 GetPosTargetActive()
+  {
+    for (int i = 0; i < phanColliders.Count; i++)
+    {
+      if (phanColliders[i].gameObject.activeSelf)
+      {
+        return phanColliders[i].Tf.position;
+      }
+    }
+    return Vector3.zero;
+  }
   void ChangeStatePainter(TriggerWithCertainCollider trigger)
   {
     trigger.OnTriggerEvent.RemoveAllListeners();
@@ -92,8 +103,6 @@ public class Brush_Blush : Item
     MouseUp(null);
     OnFinish?.Invoke();
   }
-
-
 
   public override void MouseDown(BaseEventData eventData)
   {

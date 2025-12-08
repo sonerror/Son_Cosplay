@@ -17,6 +17,11 @@ public class TutorialManager : Singleton<TutorialManager>
     CountStepDone++;
   }
 
+  public void IncreaseTimeHide()
+  {
+    TimeHint = 5f;
+  }
+
   [SerializeField] private List<Transform> tutorialNode = new List<Transform>();
 
   int countCollectFail = 0;
@@ -26,7 +31,7 @@ public class TutorialManager : Singleton<TutorialManager>
     countCollectFail++;
     if (countCollectFail >= 3)
     {
-      timeCountHint = 1f;
+      timeCountHint = 1.5f;
     }
   }
 
@@ -99,15 +104,18 @@ public class TutorialManager : Singleton<TutorialManager>
           case 7:
             PlayTut7();
             return;
-          case 8:
-            PlayTut8();
-            return;
           default:
             return;
         }
       }
-    }
 
+      if (index == items.Count - 1)
+      {
+        PlayTut7();
+        return;
+      }
+
+    }
 
     handCtrl.gameObject.SetActive(false);
     resetTimeHint();
@@ -120,59 +128,75 @@ public class TutorialManager : Singleton<TutorialManager>
 
   void PlayTut1()
   {
-    var item = gamePlayManager.items[1] as Pimple;
-    for (var i = 0; i < item.acnePimpleColliders.Count; i++)
-    {
-      if (item.acnePimpleColliders[i].gameObject.activeSelf)
-      {
-        handCtrl.ShowHandState2(item.Tf.position, item.acnePimpleColliders[i].Tf.position);
-        return;
-      }
-    }
-
+    var item = gamePlayManager.items[1];
+    handCtrl.ShowHandState2(item.Tf.position, tutorialNode[0].position);
   }
 
   void PlayTut2()
   {
-    var item = gamePlayManager.items[2] as PimpleHeal;
-    for (var i = 0; i < item.acnePimpleColliders.Count; i++)
-    {
-      if (item.acnePimpleColliders[i].gameObject.activeSelf)
-      {
-        handCtrl.ShowHandState2(item.Tf.position, item.acnePimpleColliders[i].Tf.position);
-        return;
-      }
-    }
+    var item = gamePlayManager.items[2] as FoundationBottle;
+    handCtrl.ShowHandState2(item.Tf.position, item.getPosTargetActive());
   }
 
   void PlayTut3()
   {
-    handCtrl.ShowHandAtPos(gamePlayManager.items[3].Tf.position);
+    var item = gamePlayManager.items[3] as Brush_Blush;
+    if (item.CurrBrushBlushState == BrushBlushState.Drag)
+    {
+      handCtrl.ShowHandState2(item.Tf.position, item.hopPhanColliders.transform.position);
+    }
+    if (item.CurrBrushBlushState == BrushBlushState.DragWithPainter)
+    {
+      handCtrl.ShowHandState2(item.Tf.position, item.GetPosTargetActive());
+    }
+
   }
 
   void PlayTut4()
   {
-    var item = gamePlayManager.items[4] as ItemUseOnce;
-    handCtrl.ShowHandState2(item.Tf.position, item.targetInfos.targetTf.position);
+    var item = gamePlayManager.items[4] as FoundationBottle;
+    handCtrl.ShowHandState2(item.Tf.position, item.getPosTargetActive());
   }
   void PlayTut5()
   {
-    var item = gamePlayManager.items[5];
-    handCtrl.ShowHandState2(item.Tf.position, item.Tf.position + Vector3.right * 2f);
+    handCtrl.ShowHandAtPos(tutorialNode[2].position);
   }
   void PlayTut6()
   {
-    handCtrl.ShowHandAtPos(gamePlayManager.items[6].Tf.position);
+    var item = gamePlayManager.items[6] as Brush_Eye;
+
+    if (item.CurrBrushEyeState == BrushEyeState.None)
+    {
+      handCtrl.ShowHandState2(item.Tf.position, tutorialNode[4].position);
+    }
+
+    if (item.CurrBrushEyeState == BrushEyeState.Blue)
+    {
+      if (!item.MaskGroupBlue.IsDone())
+      {
+        handCtrl.ShowHandState2(item.Tf.position, item.MaskGroupBlue.Tf.position);
+      }
+      else
+      {
+        handCtrl.ShowHandState2(item.Tf.position, tutorialNode[4].position);
+      }
+    }
+    if (item.CurrBrushEyeState == BrushEyeState.Pink)
+    {
+      if (!item.MaskGroupPink.IsDone())
+      {
+        handCtrl.ShowHandState2(item.Tf.position, item.MaskGroupPink.Tf.position);
+      }
+      else
+      {
+        handCtrl.ShowHandState2(item.Tf.position, tutorialNode[3].position);
+      }
+    }
   }
   void PlayTut7()
   {
-    var item = gamePlayManager.items[7] as ItemUseOnce;
-    handCtrl.ShowHandState2(item.Tf.position, item.targetInfos.targetTf.position);
-  }
-  void PlayTut8()
-  {
-    var item = gamePlayManager.items[8];
-    handCtrl.ShowHandState2(item.Tf.position, item.Tf.position + Vector3.right * 2f);
+    var item = gamePlayManager.items[7];
+    handCtrl.ShowHandState2(item.Tf.position, tutorialNode[1].position);
   }
 
   void HideHint()
@@ -185,6 +209,6 @@ public class TutorialManager : Singleton<TutorialManager>
   {
     HideHint();
 
-    timeCountHint = TimeHint;
+    timeCountHint = countCollectFail >= 3 ? 1.5f : TimeHint;
   }
 }

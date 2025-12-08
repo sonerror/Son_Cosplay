@@ -5,6 +5,7 @@ public class TriggerWithCertainCollider : GameUnit
 {
   [SerializeField] private Collider2D triggerWith;
   [SerializeField] private Collider2D col;
+  public Collider2D Col => col;
   [SerializeField] private Rigidbody2D rb;
   [SerializeField] private UnityEvent onTriggerEvent;
   [SerializeField] private bool disableTriggerWith;

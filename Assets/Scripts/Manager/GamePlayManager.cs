@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using HoangHH;
 using UnityEngine;
 
-public class GamePlayManager : Singleton<GamePlayManager>
+public class GamePlayManager : MonoBehaviour
 {
 
   public ShowObjectEffect Gr1, Gr2;
