@@ -9,7 +9,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6470738964070539390}
-  - component: {fileID: 1315235456081265368}
   m_Layer: 0
   m_Name: VFXForItem
   m_TagString: Untagged
@@ -33,20 +32,6 @@ Transform:
   - {fileID: 3073912593413620600}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1315235456081265368
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6427770480360249274}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 64122cd9e9394d69a03cdb0f6cba96f9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::VinhLB.VFXForItem
-  _zone: {fileID: 2669108160682443905}
-  _mainParticle: {fileID: 0}
 --- !u!1 &8592700571302108909
 GameObject:
   m_ObjectHideFlags: 0
@@ -56,7 +41,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3073912593413620600}
-  - component: {fileID: 2669108160682443905}
   m_Layer: 0
   m_Name: Zone
   m_TagString: Untagged
@@ -79,56 +63,3 @@ Transform:
   m_Children: []
   m_Father: {fileID: 6470738964070539390}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2669108160682443905
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8592700571302108909}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 045f1867a14d480e8a80fad9fdc12984, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::HoangHH.OnTransformMoveInAffectZone
-  blockCheck: 0
-  useRadiusZone: 1
-  affectZone:
-    serializedVersion: 2
-    x: 0
-    y: 0
-    width: 0
-    height: 0
-  target: {fileID: 0}
-  radius: 3.5
-  onMovingInZone:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1315235456081265368}
-        m_TargetAssemblyTypeName: VinhLB.VFXForItem, Assembly-CSharp
-        m_MethodName: Play
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  onNotMovingOrOutZone:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1315235456081265368}
-        m_TargetAssemblyTypeName: VinhLB.VFXForItem, Assembly-CSharp
-        m_MethodName: Stop
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  minMoveDistance: 0.01

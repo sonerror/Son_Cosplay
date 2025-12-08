@@ -153,6 +153,7 @@
     <None Include="Assets\Spines\K_idol_json\School_Girl.atlas.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile-2-Pass.shader" />
+    <None Include="Assets\_GAME\Levels\LvCosplayCinderella\Animations\New\Cindarella.atlas.txt" />
     <None Include="Assets\_GAME\Levels\LvCosplayPolice\Animations\Police_patrol_json\Police_patrol.atlas.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
     <None Include="Assets\AllIn1SpriteShader\Resources_moved\AllIn1SpriteShader.shader" />
@@ -172,6 +173,7 @@
     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Surface.cginc" />
     <None Include="Assets\Spines\New2\Harley_Queen.atlas.txt" />
     <None Include="Assets\_GAME\Levels\LvCosplayCinderella\Animations\Cindarella_json\Cindarella.atlas.txt" />
+    <None Include="Assets\_GAME\Levels\LvCosplayCinderella\Animations\View\Cindarella.atlas.txt" />
     <None Include="Assets\_GAME\Core\Common\Shaders\SpriteOutline.shader" />
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
     <None Include="Assets\DOTween\DOTween.dll" />

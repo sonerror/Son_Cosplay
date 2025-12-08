@@ -187,7 +187,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2038023482273688217}
-  - component: {fileID: 2382126006051068067}
   m_Layer: 0
   m_Name: FillCircleBar
   m_TagString: Untagged
@@ -211,20 +210,6 @@ Transform:
   - {fileID: 8509849150309720343}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2382126006051068067
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3465300286760500269}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c5adf471f9f940ba8eac9ee7d9263c4f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  fillImage: {fileID: 8513794776935509849}
-  showTime: 0.3
 --- !u!1 &4023758403832302625
 GameObject:
   m_ObjectHideFlags: 0
