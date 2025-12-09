@@ -1,15 +1,22 @@
 using System.Collections;
 using System.Collections.Generic;
+using Sirenix.OdinInspector;
+using UnityEngine;
 using Spine;
 using Spine.Unity;
-using UnityEngine;
-
 
 [System.Serializable]
 public class SlotAttachmentPair
 {
+#if UNITY_EDITOR
+  [ValueDropdown(nameof(GetSlotNames), IsUniqueList = true, DropdownWidth = 300)]
+  [SpineSlot(dataField: nameof(skeletonDataAsset))]
+#endif
   public string slotName;
 
+#if UNITY_EDITOR
+  [SpineAttachment(false, slotField: nameof(slotName), dataField: nameof(skeletonDataAsset))]
+#endif
   public string attachmentName;
 
   // This is required so Odin can resolve the slot list contextually

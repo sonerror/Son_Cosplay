@@ -1508,9 +1508,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   skeletonAnimation: {fileID: 391743042}
-  boneSlotToggle: {fileID: 1897322620}
-  slotHeadband: Base_headband
-  slotGlass: Base_glasses
+  eye: {fileID: 0}
 --- !u!1 &401821137
 GameObject:
   m_ObjectHideFlags: 0
@@ -1697,7 +1695,7 @@ MonoBehaviour:
   delayFadeOut: 0.3
   targetAlphaToItsBaseValue: 0
   timeShow: 1
-  showOnEnable: 0
+  showOnStart: 0
   easeShow: 27
   easeHide: 26
   onShow:
@@ -2841,7 +2839,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &693319569
 Transform:
   m_ObjectHideFlags: 0
@@ -3397,7 +3395,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &736424636
 Transform:
   m_ObjectHideFlags: 0
@@ -3756,6 +3754,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: dd9c0f171cf058b4fa41b773e9e06617, type: 3}
   - {fileID: 8300000, guid: 0e3fe4a8531ddcf4bb58f7e6433efcbd, type: 3}
   - {fileID: 8300000, guid: edb246049338d8248afbcb2339e6f8f4, type: 3}
+  sound1: {fileID: 0}
 --- !u!4 &889256036
 Transform:
   m_ObjectHideFlags: 0
@@ -6778,7 +6777,7 @@ MonoBehaviour:
   enableCountTime: 0
   timeCountHint: 2
   handCtrl: {fileID: 8503599624730501112}
-  gamePlayManager: {fileID: 736123645}
+  gamePlayManager: {fileID: 0}
   tutorialNode:
   - {fileID: 2075704649}
   - {fileID: 2104112624}
@@ -7086,7 +7085,7 @@ MonoBehaviour:
   delayFadeOut: 0.3
   targetAlphaToItsBaseValue: 0
   timeShow: 1
-  showOnEnable: 0
+  showOnStart: 0
   easeShow: 27
   easeHide: 26
   onShow:
@@ -9521,6 +9520,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   disableTriggerWith: 0
+  soundPlay: 100
 --- !u!4 &5038377367869383299
 Transform:
   m_ObjectHideFlags: 0
@@ -9814,6 +9814,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   disableTriggerWith: 0
+  soundPlay: 100
 --- !u!1 &7230571829824213049
 GameObject:
   m_ObjectHideFlags: 0
@@ -9919,6 +9920,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   disableTriggerWith: 0
+  soundPlay: 100
 --- !u!4 &7594258068145593372
 Transform:
   m_ObjectHideFlags: 0

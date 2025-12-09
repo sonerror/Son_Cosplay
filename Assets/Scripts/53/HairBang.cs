@@ -11,17 +11,17 @@ public class HairBang : Item
   public Vector2 Angle = new Vector2(0, 0);
   public List<Renderer> renderers = new List<Renderer>();
   public TargetInfo targetInfos = new TargetInfo();
-  [SerializeField] private SkeletonAnimation skeletonAnimation;
-
-  [SerializeField] private List<SlotAttachmentPair> disableSlot = new List<SlotAttachmentPair>();
-
-  [SerializeField] private List<SlotAttachmentPair> enableSlot = new List<SlotAttachmentPair>();
 
   protected override void Awake()
   {
     base.Awake();
     _prePos = Tf.position;
     Angle.x = Tf.eulerAngles.z;
+  }
+
+  public void OnReady()
+  {
+    IsReady = true;
   }
   public override void MouseDown(BaseEventData eventData)
   {
@@ -67,18 +67,10 @@ public class HairBang : Item
     {
       IsReady = false;
       isBlocked = true;
+
       Tf.DOMove(targetInfos.targetTf.position, 0.5f).SetEase(Ease.OutBack).OnComplete(() =>
       {
         OnFinish?.Invoke();
-        foreach (SlotAttachmentPair pair in disableSlot)
-        {
-          skeletonAnimation.Skeleton.SetAttachment(pair.slotName, null);
-        }
-        foreach (SlotAttachmentPair pair in enableSlot)
-        {
-          if (string.IsNullOrEmpty(pair.attachmentName)) pair.attachmentName = null;
-          skeletonAnimation.Skeleton.SetAttachment(pair.slotName, pair.attachmentName);
-        }
         gameObject.SetActive(false);
       });
     }

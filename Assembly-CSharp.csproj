@@ -108,6 +108,7 @@
     <Compile Include="Assets\Scripts\53\HairBang.cs" />
     <Compile Include="Assets\Scripts\Brow_Shaver.cs" />
     <Compile Include="Assets\DOTween\Modules\DOTweenModuleAudio.cs" />
+    <Compile Include="Assets\Scripts\RemoveItem.cs" />
     <Compile Include="Assets\Scripts\54\TapButton.cs" />
     <Compile Include="Assets\Scripts\ItemMove.cs" />
     <Compile Include="Assets\Scripts\Pool\PoolManager.cs" />
@@ -116,6 +117,7 @@
     <Compile Include="Assets\Scripts\TapOpener.cs" />
     <Compile Include="Assets\Scripts\UI\UIScreen.cs" />
     <Compile Include="Assets\DOTween\Modules\DOTweenModulePhysics.cs" />
+    <Compile Include="Assets\Scripts\54\SpineSlotData.cs" />
     <Compile Include="Assets\Scripts\Helper\ScreenShot.cs" />
     <Compile Include="Assets\Scripts\Obj\HandCtrl.cs" />
     <Compile Include="Assets\AllIn1SpriteShader\Scripts\SetGlobalTimeNew.cs" />
@@ -129,6 +131,7 @@
     <Compile Include="Assets\AllIn1SpriteShader\Demo\Scripts\Demo2AutoScroll.cs" />
     <Compile Include="Assets\Scripts\54\Brush_Blush.cs" />
     <Compile Include="Assets\DOTween\Modules\DOTweenModuleSprite.cs" />
+    <Compile Include="Assets\SpineAttributes.cs" />
     <Compile Include="Assets\Scripts\ToggleBoneSlot.cs" />
     <Compile Include="Assets\Scripts\MaskGroupCustom.cs" />
     <Compile Include="Assets\Scripts\53\WaterFaucet.cs" />
