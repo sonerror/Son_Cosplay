@@ -11,6 +11,11 @@ public class ItemMove : Item
   private Vector3 _mouseDownPos;
   private float deltaMove = 0f;
 
+  public void SetReady()
+  {
+    IsReady = true;
+  }
+
   public override void MouseDown(BaseEventData eventData)
   {
     if (isBlocked) return;

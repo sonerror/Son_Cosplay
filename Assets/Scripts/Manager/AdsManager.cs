@@ -25,7 +25,7 @@ public class AdsManager : Singleton<AdsManager>
 
   public bool isEndGame = false;
 
-  public void showEndGame()
+  public void ShowEndGame()
   {
     Debug.Log("End Game");
     isEndGame = true;

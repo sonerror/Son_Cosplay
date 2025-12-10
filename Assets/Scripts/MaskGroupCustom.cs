@@ -1,6 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+#if UNITY_EDITOR
+using Sirenix.OdinInspector;
+#endif
 using UnityEngine;
 
 public class MaskGroupCustom : GameUnit
@@ -43,4 +46,16 @@ public class MaskGroupCustom : GameUnit
       mask.SetActive(!typeActive);
     }
   }
+
+#if UNITY_EDITOR
+  [Button]
+  public void LoadMasksFromChild()
+  {
+    masks = new List<GameObject>();
+    for (var i = 0; i < Tf.childCount; i++)
+    {
+      masks.Add(Tf.GetChild(i).gameObject);
+    }
+  }
+#endif
 }

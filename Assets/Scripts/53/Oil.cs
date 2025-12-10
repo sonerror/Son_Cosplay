@@ -80,7 +80,7 @@ public class Oil : Item
       if (!targetInfos[i].hadChecked) return;
     }
     IsReady = false;
-    AdsManager.Ins.showEndGame();
+    AdsManager.Ins.ShowEndGame();
   }
 
 

@@ -19,8 +19,8 @@ public class RemoveItem : Item
     if (isBlocked) return;
     if (isDragging) return;
     base.MouseDown(eventData);
-    if (!IsReady) { OnWrong?.Invoke(); }
-    else return;
+    if (!IsReady) { OnWrong?.Invoke(); return; }
+
 
     isDragging = true;
     PosMouseDown = GetMouseWorldPos();

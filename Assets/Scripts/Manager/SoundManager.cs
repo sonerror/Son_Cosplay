@@ -22,6 +22,7 @@ public enum FxType
   LipStick = 16,
   MagicSparkle = 17,
   DapPhan = 18,
+  Shower = 19,
 
   None = 100,
 

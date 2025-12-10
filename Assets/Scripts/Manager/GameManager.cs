@@ -16,8 +16,6 @@ public class GameManager : Singleton<GameManager>
 
   public GameObject Scene0, Scene1;
 
-  public List<Item> items = new List<Item>();
-
   private IEnumerator coroutine = null;
 
   private bool hadClicked = false;
@@ -106,28 +104,4 @@ public class GameManager : Singleton<GameManager>
     clockTimer.Show(2f);
   }
 
-
-  [SerializeField]
-  private int currState = 0;
-  public int CurrState { get { return currState; } }
-
-  bool isDoneState1 = false;
-  [SerializeField]
-  private List<int> stateId = new List<int> { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 };
-  public List<int> StateId { get { return stateId; } }
-  public void OnDoneState(int state)
-  {
-    currState++;
-    stateId.Remove(state);
-    if (!isDoneState1 && !stateId.Contains(0) && !stateId.Contains(1))
-    {
-      isDoneState1 = true;
-      for (int i = 3; i < items.Count; i++)
-      {
-        items[i].IsReady = true;
-      }
-    }
-
-    if (stateId.Count <= 1) AdsManager.Ins.showEndGame();
-  }
 }

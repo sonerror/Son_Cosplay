@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using HoangHH;
 using UnityEngine;
 
 public class TutorialManager : Singleton<TutorialManager>
@@ -10,6 +11,8 @@ public class TutorialManager : Singleton<TutorialManager>
   public float timeCountHint = 2f;
   [SerializeField] public HandCtrl handCtrl;
   [SerializeField] private GamePlayManager gamePlayManager;
+
+  [SerializeField] private TapOpener lidTapOpener;
 
   private int CountStepDone = 0;
   public void OnStepDone()
@@ -72,131 +75,91 @@ public class TutorialManager : Singleton<TutorialManager>
     enableCountTime = false;
     handCtrl.gameObject.SetActive(true);
 
-    var items = gamePlayManager.items;
+    int index = gamePlayManager.CurrentStep;
 
-    for (var index = 0; index < items.Count; index++)
+    switch (index)
     {
-      if (items[index].IsReady)
-      {
-        switch (index)
-        {
-          case 0:
-            PlayTut0();
-            return;
-          case 1:
-            PlayTut1();
-            return;
-          case 2:
-            PlayTut2();
-            return;
-          case 3:
-            PlayTut3();
-            return;
-          case 4:
-            PlayTut4();
-            return;
-          case 5:
-            PlayTut5();
-            return;
-          case 6:
-            PlayTut6();
-            return;
-          case 7:
-            PlayTut7();
-            return;
-          default:
-            return;
-        }
-      }
-
-      if (index == items.Count - 1)
-      {
+      case 0:
+        PlayTut0();
+        return;
+      case 1:
+        PlayTut1();
+        return;
+      case 2:
+        PlayTut2();
+        return;
+      case 3:
+        PlayTut3();
+        return;
+      case 4:
+        PlayTut4();
+        return;
+      case 5:
+        PlayTut5();
+        return;
+      case 6:
+        PlayTut6();
+        return;
+      case 7:
         PlayTut7();
         return;
-      }
-
+      default:
+        handCtrl.gameObject.SetActive(false);
+        resetTimeHint();
+        return;
     }
-
-    handCtrl.gameObject.SetActive(false);
-    resetTimeHint();
   }
   void PlayTut0()
   {
-    var item = gamePlayManager.items[0] as FoundationBottle;
-    handCtrl.ShowHandState2(item.Tf.position, item.getPosTargetActive());
+    var item = gamePlayManager.items[0];
+    handCtrl.ShowHandState2(item.Tf.position, item.Tf.position + Vector3.right * 3f);
   }
 
   void PlayTut1()
   {
-    var item = gamePlayManager.items[1];
-    handCtrl.ShowHandState2(item.Tf.position, tutorialNode[0].position);
+    var item = gamePlayManager.items[1] as HairBang;
+    handCtrl.ShowHandState2(item.Tf.position, item.targetInfos.targetTf.position);
   }
 
   void PlayTut2()
   {
-    var item = gamePlayManager.items[2] as FoundationBottle;
-    handCtrl.ShowHandState2(item.Tf.position, item.getPosTargetActive());
+    var item = gamePlayManager.items[2] as WaterFaucet;
+    handCtrl.ShowHandState2(item.Tf.position, tutorialNode[0].position);
   }
 
   void PlayTut3()
   {
-    var item = gamePlayManager.items[3] as Brush_Blush;
-    if (item.CurrBrushBlushState == BrushBlushState.Drag)
-    {
-      handCtrl.ShowHandState2(item.Tf.position, item.hopPhanColliders.transform.position);
-    }
-    if (item.CurrBrushBlushState == BrushBlushState.DragWithPainter)
-    {
-      handCtrl.ShowHandState2(item.Tf.position, item.GetPosTargetActive());
-    }
-
+    var item = gamePlayManager.items[3] as FaceTowel;
+    handCtrl.ShowHandState2(item.Tf.position, tutorialNode[1].position);
   }
 
   void PlayTut4()
   {
-    var item = gamePlayManager.items[4] as FoundationBottle;
-    handCtrl.ShowHandState2(item.Tf.position, item.getPosTargetActive());
+    if (lidTapOpener.IsOpen)
+    {
+      var item = gamePlayManager.items[4];
+      handCtrl.ShowHandState2(item.Tf.position, tutorialNode[2].position);
+    }
+    else
+    {
+      handCtrl.ShowHandAtPos(lidTapOpener.Tf.position);
+    }
   }
   void PlayTut5()
   {
-    handCtrl.ShowHandAtPos(tutorialNode[2].position);
+    var item = gamePlayManager.items[5];
+    handCtrl.ShowHandState2(item.Tf.position, tutorialNode[3].position);
   }
   void PlayTut6()
   {
-    var item = gamePlayManager.items[6] as Brush_Eye;
+    var item = gamePlayManager.items[6] as FoundationBottleWithFx;
+    handCtrl.ShowHandState2(item.Tf.position, item.getPosTargetActive());
 
-    if (item.CurrBrushEyeState == BrushEyeState.None)
-    {
-      handCtrl.ShowHandState2(item.Tf.position, tutorialNode[4].position);
-    }
-
-    if (item.CurrBrushEyeState == BrushEyeState.Blue)
-    {
-      if (!item.MaskGroupBlue.IsDone())
-      {
-        handCtrl.ShowHandState2(item.Tf.position, item.MaskGroupBlue.Tf.position);
-      }
-      else
-      {
-        handCtrl.ShowHandState2(item.Tf.position, tutorialNode[4].position);
-      }
-    }
-    if (item.CurrBrushEyeState == BrushEyeState.Pink)
-    {
-      if (!item.MaskGroupPink.IsDone())
-      {
-        handCtrl.ShowHandState2(item.Tf.position, item.MaskGroupPink.Tf.position);
-      }
-      else
-      {
-        handCtrl.ShowHandState2(item.Tf.position, tutorialNode[3].position);
-      }
-    }
   }
   void PlayTut7()
   {
-    var item = gamePlayManager.items[7];
-    handCtrl.ShowHandState2(item.Tf.position, tutorialNode[1].position);
+    var item = gamePlayManager.items[7] as FoundationBottleWithFx;
+    handCtrl.ShowHandState2(item.Tf.position, item.getPosTargetActive());
   }
 
   void HideHint()

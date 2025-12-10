@@ -114,6 +114,7 @@
     <Compile Include="Assets\Scripts\Pool\PoolManager.cs" />
     <Compile Include="Assets\Scripts\Manager\UIManager.cs" />
     <Compile Include="Assets\Scripts\53\FaceTowel.cs" />
+    <Compile Include="Assets\Scripts\54\FoundationBottleWithVfx.cs" />
     <Compile Include="Assets\Scripts\TapOpener.cs" />
     <Compile Include="Assets\Scripts\UI\UIScreen.cs" />
     <Compile Include="Assets\DOTween\Modules\DOTweenModulePhysics.cs" />

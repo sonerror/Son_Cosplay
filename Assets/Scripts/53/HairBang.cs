@@ -19,7 +19,7 @@ public class HairBang : Item
     Angle.x = Tf.eulerAngles.z;
   }
 
-  public void OnReady()
+  public void SetReady()
   {
     IsReady = true;
   }
@@ -68,10 +68,10 @@ public class HairBang : Item
       IsReady = false;
       isBlocked = true;
 
-      Tf.DOMove(targetInfos.targetTf.position, 0.5f).SetEase(Ease.OutBack).OnComplete(() =>
+      Tf.DOMove(targetInfos.targetTf.position, 0.35f).SetEase(Ease.OutBack).OnComplete(() =>
       {
         OnFinish?.Invoke();
-        gameObject.SetActive(false);
+        // gameObject.SetActive(false);
       });
     }
   }
@@ -83,11 +83,11 @@ public class HairBang : Item
     isDragging = false;
     OnDropItem?.Invoke();
     OnHandleMouseUp();
+
   }
 
   protected virtual void OnHandleMouseUp()
   {
-    Debug.Log("aaaa");
     Tf.DOKill();
     Tf.DOScale(Vector3.one, 0.3f);
     Tf.DORotate(Vector3.forward * Angle.x, 0.3f);

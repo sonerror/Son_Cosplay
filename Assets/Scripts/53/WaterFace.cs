@@ -10,6 +10,7 @@ public class WaterFace : MonoBehaviour
   float timeChange = 1f;
   [SerializeField] private SpriteRenderer spriteShow;
   [SerializeField] private SpriteRenderer spriteHide;
+  [SerializeField] private Item ItemOwner;
   public FxType fxSound = FxType.Hair_Shave;
 
 
@@ -26,6 +27,8 @@ public class WaterFace : MonoBehaviour
       isEnable = false;
       enabled = false;
       onComplete.Invoke();
+      ItemOwner.IsReady = false;
+      ItemOwner.OnFinish?.Invoke();
       SoundManager.Ins.StopSoundLoop(fxSound);
       return;
     }

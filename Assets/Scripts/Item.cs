@@ -51,6 +51,11 @@ public class Item : MonoBehaviour
     IsReady = ready;
   }
 
+  public void SetBlockItem(bool block)
+  {
+    isBlocked = block;
+  }
+
 #if UNITY_EDITOR
 
   [Button]
@@ -78,6 +83,8 @@ public class Item : MonoBehaviour
     Vector3 mousePoint = Input.mousePosition;
     return mainCamera.ScreenToWorldPoint(mousePoint);
   }
+
+
 
 }
 

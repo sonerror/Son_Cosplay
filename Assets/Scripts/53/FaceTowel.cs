@@ -53,7 +53,7 @@ public class FaceTowel : Item
     isDragging = true;
     OnPickItem?.Invoke();
     // SoundManager.Ins.PlaySoundLoop(fxSound);
-    // SoundManager.Ins.PlayFx(FxType.Click);
+    SoundManager.Ins.PlayFx(FxType.Pick);
 
 
     Vector3 mouseWorldPos = GetMouseWorldPos();
@@ -105,6 +105,7 @@ public class FaceTowel : Item
     Tf.DORotate(Vector3.forward * Angle.x, 0.3f);
     Tf.DOMove(_prePos, 0.3f).SetEase(Ease.OutBack).OnComplete(() =>
     {
+      SoundManager.Ins.PlayFx(FxType.Drop);
       ChangeLayerDown();
     });
 
