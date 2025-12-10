@@ -177,68 +177,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!1001 &22038216
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 1959164709}
-    m_Modifications:
-    - target: {fileID: 450428867850034068, guid: 833e183940b0f8b41a4bc8f04d33e940, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 5.7
-      objectReference: {fileID: 0}
-    - target: {fileID: 450428867850034068, guid: 833e183940b0f8b41a4bc8f04d33e940, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.36
-      objectReference: {fileID: 0}
-    - target: {fileID: 450428867850034068, guid: 833e183940b0f8b41a4bc8f04d33e940, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 450428867850034068, guid: 833e183940b0f8b41a4bc8f04d33e940, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 450428867850034068, guid: 833e183940b0f8b41a4bc8f04d33e940, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 450428867850034068, guid: 833e183940b0f8b41a4bc8f04d33e940, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 450428867850034068, guid: 833e183940b0f8b41a4bc8f04d33e940, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 450428867850034068, guid: 833e183940b0f8b41a4bc8f04d33e940, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 450428867850034068, guid: 833e183940b0f8b41a4bc8f04d33e940, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 450428867850034068, guid: 833e183940b0f8b41a4bc8f04d33e940, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6036620119413390960, guid: 833e183940b0f8b41a4bc8f04d33e940, type: 3}
-      propertyPath: m_Name
-      value: HandTapAnim
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 833e183940b0f8b41a4bc8f04d33e940, type: 3}
---- !u!4 &22038217 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 450428867850034068, guid: 833e183940b0f8b41a4bc8f04d33e940, type: 3}
-  m_PrefabInstance: {fileID: 22038216}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &38418582
 GameObject:
   m_ObjectHideFlags: 0
@@ -16252,7 +16190,6 @@ Transform:
   - {fileID: 204122040}
   - {fileID: 746299488639315417}
   - {fileID: 170460513}
-  - {fileID: 22038217}
   m_Father: {fileID: 432905129}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1959164710
@@ -23442,7 +23379,7 @@ Canvas:
   m_VertexColorAlwaysGammaSpace: 0
   m_AdditionalShaderChannelsFlag: 0
   m_UpdateRectTransformForStandalone: 0
-  m_SortingLayerID: 852643421
+  m_SortingLayerID: 0
   m_SortingOrder: 100
   m_TargetDisplay: 0
 --- !u!60 &8056065372100558896
