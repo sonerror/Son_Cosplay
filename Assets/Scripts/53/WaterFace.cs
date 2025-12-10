@@ -8,7 +8,7 @@ public class WaterFace : MonoBehaviour
   [SerializeField] private bool isEnable = false;
   [SerializeField]
   float timeChange = 1f;
-  // [SerializeField] private SpriteRenderer spriteShow;
+  [SerializeField] private SpriteRenderer spriteShow;
   [SerializeField] private SpriteRenderer spriteHide;
   public FxType fxSound = FxType.Hair_Shave;
 
@@ -40,7 +40,7 @@ public class WaterFace : MonoBehaviour
   void UpdateImage()
   {
     float t = currentTime / timeChange;
-    // spriteShow.color = new Color(1, 1, 1, t);
+    spriteShow.color = new Color(1, 1, 1, t);
     spriteHide.color = new Color(1, 1, 1, 1 - t);
   }
 

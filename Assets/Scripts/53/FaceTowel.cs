@@ -35,7 +35,7 @@ public class FaceTowel : Item
 
   private void _OnReady()
   {
-    NodeBody.SetActive(true);
+    // NodeBody.SetActive(true);
   }
 
   public override void MouseDown(BaseEventData eventData)
