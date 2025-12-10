@@ -65,6 +65,7 @@ public class WaterFaucet : Item
   {
     if (isBlocked) return;
     if (!isDragging) return;
+    base.MouseUp(eventData);
     isDragging = false;
     OnDropItem?.Invoke();
     OnHandleMouseUp();

@@ -13,13 +13,18 @@ public class TutorialManager : Singleton<TutorialManager>
   [SerializeField] private GamePlayManager gamePlayManager;
 
   [SerializeField] private TapOpener lidTapOpener;
-
+  private GameObject clock;
   private int CountStepDone = 0;
   public void OnStepDone()
   {
     CountStepDone++;
   }
 
+
+  void Start()
+  {
+    clock = GameManager.Ins.clockTimer.gameObject;
+  }
   public void IncreaseTimeHide()
   {
     TimeHint = 5f;
@@ -41,6 +46,7 @@ public class TutorialManager : Singleton<TutorialManager>
   public void OnCollectSuccess()
   {
     countCollectFail = 0;
+    resetTimeHint();
   }
 
   private void Update()
@@ -54,9 +60,11 @@ public class TutorialManager : Singleton<TutorialManager>
       }
       return;
     }
+
     if (Input.GetMouseButton(0)) return;
     if (!enableCountTime) return;
     if (handCtrl.gameObject.activeSelf) return;
+    if (clock.activeSelf) return;
     CalculateTimeHint();
   }
   private void CalculateTimeHint()
@@ -112,7 +120,7 @@ public class TutorialManager : Singleton<TutorialManager>
   void PlayTut0()
   {
     var item = gamePlayManager.items[0];
-    handCtrl.ShowHandState2(item.Tf.position, item.Tf.position + Vector3.right * 3f);
+    handCtrl.ShowHandState2(item.Tf.position, item.Tf.position + Vector3.right * 4f);
   }
 
   void PlayTut1()

@@ -132,7 +132,7 @@ public class GamePlayManager : Singleton<GamePlayManager>
     TurnCharacterSlotAttachment(frontHairSlotDataList, false);
 
     headBandObject.OnFinish.RemoveListener(OnEndStep1);
-
+    TutorialManager.Ins.IncreaseTimeHide();
     DoneStep();
     TryNextStep();
   }

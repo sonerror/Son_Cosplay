@@ -83,6 +83,7 @@ public class HairBang : Item
     isDragging = false;
     OnDropItem?.Invoke();
     OnHandleMouseUp();
+    base.MouseUp(eventData);
 
   }
 

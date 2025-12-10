@@ -2,7 +2,7 @@
     "version": "7.0.0",
     "projectId": "f42e7ff96e4545544bb6cd68f51ab634",
     "applicationID": 34683,
-    "creativeName": "Cosplaydom_v3",
+    "creativeName": "Cosplaydom_v4",
     "pgServer": "EU",
     "window": {
         "‐⁏": true
@@ -7508,10 +7508,6 @@
                 "excluded": true
             },
             {
-                "name": "HairBang",
-                "excluded": true
-            },
-            {
                 "name": "Oil",
                 "excluded": true
             },
@@ -7597,10 +7593,6 @@
             },
             {
                 "name": "Spine.Unity.WaitForSpineAnimationEnd",
-                "excluded": true
-            },
-            {
-                "name": "WaterFaucet",
                 "excluded": true
             },
             {
@@ -8906,6 +8898,14 @@
             {
                 "name": "BrushEyeState",
                 "excluded": false
+            },
+            {
+                "name": "pc.Debugger.Components.EditorCamera",
+                "excluded": true
+            },
+            {
+                "name": "pc.Debugger.Components.EditorGUI",
+                "excluded": true
             }
         ],
         "unusedMethods": [
@@ -23856,14 +23856,6 @@
                         "excluded": false
                     },
                     {
-                        "name": "CurrState#get",
-                        "excluded": true
-                    },
-                    {
-                        "name": "StateId#get",
-                        "excluded": true
-                    },
-                    {
                         "name": "StartGamePlay",
                         "excluded": false
                     },
@@ -23885,10 +23877,6 @@
                     },
                     {
                         "name": "ShowClockTimer",
-                        "excluded": true
-                    },
-                    {
-                        "name": "OnDoneState",
                         "excluded": true
                     }
                 ]
@@ -24351,6 +24339,10 @@
                     },
                     {
                         "name": "IncreaseTimeHide",
+                        "excluded": false
+                    },
+                    {
+                        "name": "Start",
                         "excluded": false
                     }
                 ]
@@ -32964,6 +32956,10 @@
                     {
                         "name": "GetMouseWorldPos",
                         "excluded": false
+                    },
+                    {
+                        "name": "SetBlockItem",
+                        "excluded": true
                     }
                 ]
             },
@@ -40720,6 +40716,10 @@
                     {
                         "name": "Move",
                         "excluded": true
+                    },
+                    {
+                        "name": "SetReady",
+                        "excluded": true
                     }
                 ]
             },
@@ -42396,8 +42396,8 @@
                         "excluded": false
                     },
                     {
-                        "name": "showEndGame",
-                        "excluded": false
+                        "name": "ShowEndGame",
+                        "excluded": true
                     }
                 ]
             },
@@ -42908,6 +42908,106 @@
                     {
                         "name": "ChangeGroupItemStart",
                         "excluded": false
+                    },
+                    {
+                        "name": "inherits",
+                        "excluded": false
+                    },
+                    {
+                        "name": "CurrentStep#get",
+                        "excluded": true
+                    },
+                    {
+                        "name": "TurnCharacterSlotAttachment",
+                        "excluded": true
+                    },
+                    {
+                        "name": "Start",
+                        "excluded": false
+                    },
+                    {
+                        "name": "DoneStep",
+                        "excluded": true
+                    },
+                    {
+                        "name": "TryNextStep",
+                        "excluded": true
+                    },
+                    {
+                        "name": "StartStep",
+                        "excluded": false
+                    },
+                    {
+                        "name": "OnStartStep0",
+                        "excluded": false
+                    },
+                    {
+                        "name": "OnEndStep0",
+                        "excluded": false
+                    },
+                    {
+                        "name": "OnRemoveHeadscarf",
+                        "excluded": true
+                    },
+                    {
+                        "name": "OnStartStep1",
+                        "excluded": true
+                    },
+                    {
+                        "name": "OnEndStep1",
+                        "excluded": true
+                    },
+                    {
+                        "name": "OnStartStep2",
+                        "excluded": true
+                    },
+                    {
+                        "name": "OnEndStep2",
+                        "excluded": true
+                    },
+                    {
+                        "name": "OnStartStep3",
+                        "excluded": true
+                    },
+                    {
+                        "name": "OnEndStep3",
+                        "excluded": true
+                    },
+                    {
+                        "name": "OnStartStep4",
+                        "excluded": true
+                    },
+                    {
+                        "name": "OnEndStep4",
+                        "excluded": true
+                    },
+                    {
+                        "name": "OnStartStep5",
+                        "excluded": true
+                    },
+                    {
+                        "name": "OnEndStep5",
+                        "excluded": true
+                    },
+                    {
+                        "name": "OnStartStep6",
+                        "excluded": true
+                    },
+                    {
+                        "name": "OnEndStep6",
+                        "excluded": true
+                    },
+                    {
+                        "name": "OnStartStep7",
+                        "excluded": true
+                    },
+                    {
+                        "name": "OnEndStep7",
+                        "excluded": true
+                    },
+                    {
+                        "name": "OnStartStep8",
+                        "excluded": true
                     }
                 ]
             },
@@ -43518,6 +43618,186 @@
                     {
                         "name": "ctor",
                         "excluded": false
+                    }
+                ]
+            },
+            {
+                "className": "FoundationBottleWithFx",
+                "staticMethods": [],
+                "instanceMethods": [
+                    {
+                        "name": "init",
+                        "excluded": false
+                    },
+                    {
+                        "name": "Awake",
+                        "excluded": true
+                    },
+                    {
+                        "name": "Start",
+                        "excluded": true
+                    },
+                    {
+                        "name": "SetReady",
+                        "excluded": true
+                    },
+                    {
+                        "name": "AddAcne",
+                        "excluded": true
+                    },
+                    {
+                        "name": "getPosTargetActive",
+                        "excluded": true
+                    },
+                    {
+                        "name": "OnDone",
+                        "excluded": true
+                    },
+                    {
+                        "name": "MouseDown",
+                        "excluded": true
+                    },
+                    {
+                        "name": "MouseUp",
+                        "excluded": true
+                    },
+                    {
+                        "name": "MouseDrag",
+                        "excluded": true
+                    },
+                    {
+                        "name": "OnHandleMouseDown",
+                        "excluded": true
+                    },
+                    {
+                        "name": "ChangeLayerUp",
+                        "excluded": true
+                    },
+                    {
+                        "name": "ChangeLayerDown",
+                        "excluded": true
+                    }
+                ]
+            },
+            {
+                "className": "HairBang",
+                "staticMethods": [],
+                "instanceMethods": [
+                    {
+                        "name": "init",
+                        "excluded": false
+                    },
+                    {
+                        "name": "Awake",
+                        "excluded": true
+                    },
+                    {
+                        "name": "SetReady",
+                        "excluded": true
+                    },
+                    {
+                        "name": "MouseDown",
+                        "excluded": true
+                    },
+                    {
+                        "name": "OnHandleMouseDown",
+                        "excluded": true
+                    },
+                    {
+                        "name": "MouseDrag",
+                        "excluded": true
+                    },
+                    {
+                        "name": "CheckToTarget",
+                        "excluded": true
+                    },
+                    {
+                        "name": "MouseUp",
+                        "excluded": true
+                    },
+                    {
+                        "name": "OnHandleMouseUp",
+                        "excluded": true
+                    },
+                    {
+                        "name": "ChangeLayerUp",
+                        "excluded": true
+                    },
+                    {
+                        "name": "ChangeLayerDown",
+                        "excluded": true
+                    }
+                ]
+            },
+            {
+                "className": "RemoveItem",
+                "staticMethods": [],
+                "instanceMethods": [
+                    {
+                        "name": "init",
+                        "excluded": false
+                    },
+                    {
+                        "name": "Awake",
+                        "excluded": true
+                    },
+                    {
+                        "name": "MouseDown",
+                        "excluded": true
+                    },
+                    {
+                        "name": "MouseUp",
+                        "excluded": true
+                    },
+                    {
+                        "name": "MouseDrag",
+                        "excluded": true
+                    }
+                ]
+            },
+            {
+                "className": "WaterFaucet",
+                "staticMethods": [],
+                "instanceMethods": [
+                    {
+                        "name": "init",
+                        "excluded": false
+                    },
+                    {
+                        "name": "Awake",
+                        "excluded": true
+                    },
+                    {
+                        "name": "SetReady",
+                        "excluded": true
+                    },
+                    {
+                        "name": "MouseDown",
+                        "excluded": true
+                    },
+                    {
+                        "name": "OnHandleMouseDown",
+                        "excluded": true
+                    },
+                    {
+                        "name": "MouseDrag",
+                        "excluded": true
+                    },
+                    {
+                        "name": "MouseUp",
+                        "excluded": true
+                    },
+                    {
+                        "name": "OnHandleMouseUp",
+                        "excluded": true
+                    },
+                    {
+                        "name": "ChangeLayerUp",
+                        "excluded": true
+                    },
+                    {
+                        "name": "ChangeLayerDown",
+                        "excluded": true
                     }
                 ]
             }
