@@ -2,7 +2,7 @@
     "version": "7.0.0",
     "projectId": "f42e7ff96e4545544bb6cd68f51ab634",
     "applicationID": 34683,
-    "creativeName": "Cosplaydom_v3",
+    "creativeName": "Cosplaydom_v3GG",
     "pgServer": "EU",
     "window": {
         "‐⁏": true
@@ -43667,6 +43667,16 @@
                         "script": "",
                         "ext": "",
                         "name": "Assets/Textures/logo game.png"
+                    },
+                    {
+                        "maxWidth": 2048,
+                        "maxHeight": 2048,
+                        "format": "png32",
+                        "compression": "quantQuality",
+                        "quality": 65,
+                        "script": "",
+                        "ext": "",
+                        "name": "Assets/_GAME/Levels/LvCosplayWitch/_TextureWitch/0_Skincare/desk.png"
                     }
                 ]
             },
