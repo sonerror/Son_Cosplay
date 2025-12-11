@@ -44123,8 +44123,8 @@
                         "name": "Assets/_GAME/Levels/LvCosplayCinderella/Animations/View/Cindarella.png"
                     },
                     {
-                        "maxWidth": 1024,
-                        "maxHeight": 1024,
+                        "maxWidth": 2048,
+                        "maxHeight": 2048,
                         "format": "png32",
                         "compression": "quantSize",
                         "quality": 65,
