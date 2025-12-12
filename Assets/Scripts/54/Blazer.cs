@@ -6,83 +6,34 @@ using Sirenix.OdinInspector;
 
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.Rendering;
 
-public class FoundationBottle : Item
+public class Blazer : Item
 {
-  public Collider2D triggerCollider;
   public Vector2 Angle = new Vector2(0, 0);
-  public Renderer rende;
+  public SortingGroup ren;
   private int _oriOrder;
   private Vector3 _prePos;
-  [SerializeField] public List<TriggerWithCertainCollider> acnePimpleColliders;
-  [SerializeField] public List<ShowSprite> spriteShows;
+
+  public Transform SecondaryNode;
+  public Vector2 SecondaryAngle = new Vector2(0, 0);
 
 
   protected override void Awake()
   {
     base.Awake();
     _prePos = Tf.position;
-    _oriOrder = rende.sortingOrder;
+    _oriOrder = ren.sortingOrder;
   }
 
-  void Start()
-  {
-    if (IsReady) OnReady();
-  }
-#if UNITY_EDITOR
-  [Button]
-#endif
-  public void OnReady()
-  {
-    IsReady = true;
-    for (int index = 0; index < acnePimpleColliders.Count; index++)
-    {
-      int i = index; // Capture the index for the lambda
-      TriggerWithCertainCollider trigger = acnePimpleColliders[i];
-      ShowSprite show = spriteShows[i];
-      trigger.gameObject.SetActive(true);
-      trigger.OnTriggerEvent.AddListener(() => AddAcne(trigger, show, i));
-    }
-  }
-  private int _currentAcneIndex;
-  private void AddAcne(TriggerWithCertainCollider trigger, ShowSprite show, int index)
-  {
-    trigger.OnTriggerEvent.RemoveAllListeners();
-    trigger.gameObject.SetActive(true);
-    show.ShowSpriteStart();
-    // PoolManager.Ins.Spawn(PoolType.SFX_Acne, trigger.transform.position, Quaternion.identity);
-    _currentAcneIndex++;
-    if (_currentAcneIndex >= acnePimpleColliders.Count) OnDone();
-  }
 
-  public Vector3 getPosTargetActive()
-  {
-    for (int i = 0; i < acnePimpleColliders.Count; i++)
-    {
-      if (acnePimpleColliders[i].Col.enabled)
-      {
-        return acnePimpleColliders[i].Tf.position;
-      }
-    }
-    return Vector3.zero;
-  }
-
-  void OnDone()
-  {
-    if (!IsReady) return;
-    IsReady = false;
-    OnFinish?.Invoke();
-  }
 
   public override void MouseDown(BaseEventData eventData)
   {
     if (isBlocked) return;
     if (isDragging) return;
     if (!IsReady) { if (ShowEmoijOnWrong) GameManager.Ins.PlayNegativeEmoji(); }
-    else
-    {
-      if (triggerCollider) triggerCollider.enabled = true;
-    }
+
     base.MouseDown(eventData);
 
     OnHandleMouseDown();
@@ -100,6 +51,11 @@ public class FoundationBottle : Item
     Tf.DOKill();
     Tf.DOScale(Vector3.one, 0.2f);
     Tf.DORotate(Vector3.forward * Angle.x, 0.2f);
+    if (SecondaryNode)
+    {
+      SecondaryNode.DOKill();
+      SecondaryNode.DOLocalRotate(Vector3.forward * SecondaryAngle.x, 0.2f);
+    }
     Tf.DOMove(_prePos, 0.3f).SetEase(Ease.OutBack).OnComplete(() =>
     {
       SoundManager.Ins.PlayFx(FxType.Drop);
@@ -107,7 +63,6 @@ public class FoundationBottle : Item
     });
 
 
-    if (triggerCollider) triggerCollider.enabled = false;
   }
 
   public override void MouseDrag(BaseEventData eventData)
@@ -132,16 +87,22 @@ public class FoundationBottle : Item
     Tf.DOKill();
     Tf.DOScale(Vector3.one * 1.15f, 0.2f);
     Tf.DORotate(Vector3.forward * Angle.y, 0.2f);
+
+    if (SecondaryNode)
+    {
+      SecondaryNode.DOKill();
+      SecondaryNode.DOLocalRotate(Vector3.forward * SecondaryAngle.y, 0.2f);
+    }
     ChangeLayerUp();
   }
   void ChangeLayerUp()
   {
-    rende.sortingOrder = _oriOrder + 100;
+    ren.sortingOrder = _oriOrder + 100;
   }
 
   void ChangeLayerDown()
   {
-    rende.sortingOrder = _oriOrder;
+    ren.sortingOrder = _oriOrder;
   }
 
 }

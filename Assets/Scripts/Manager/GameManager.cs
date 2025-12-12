@@ -74,7 +74,7 @@ public class GameManager : Singleton<GameManager>
   {
     if (coroutine != null)
     {
-      StopCoroutine(coroutine);
+      // StopCoroutine(coroutine);
       return;
     }
 

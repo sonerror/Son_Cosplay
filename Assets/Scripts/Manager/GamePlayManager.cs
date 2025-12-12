@@ -7,16 +7,16 @@ using UnityEngine;
 public class GamePlayManager : Singleton<GamePlayManager>
 {
   public CharacterControl character;
-  public ShowObjectEffect Gr1, Gr2;
+  // public ShowObjectEffect Gr1, Gr2;
 
   public List<Item> items = new List<Item>();
 
-  public void ChangeGroupItemStart()
-  {
-    Debug.Log("ChangeGroupItemStart ");
-    Gr1.Hide(0.5f);
-    Gr2.Show(1f);
-  }
+  // public void ChangeGroupItemStart()
+  // {
+  //   Debug.Log("ChangeGroupItemStart ");
+  //   Gr1.Hide(0.5f);
+  //   Gr2.Show(1f);
+  // }
 
   [SerializeField] private int currentStep = 0;
   public int CurrentStep => currentStep;
@@ -130,14 +130,14 @@ public class GamePlayManager : Singleton<GamePlayManager>
 
   private void OnStartStep1()
   {
-    var LidCreamBox = items[1] as TapOpener;
+    var LidCreamBox = items[1] as TapJumpOpener;
     LidCreamBox.SetReady();
     LidCreamBox.OnFinish.AddListener(OnEndStep1);
   }
 
   private void OnEndStep1()
   {
-    var LidCreamBox = items[1] as TapOpener;
+    var LidCreamBox = items[1] as TapJumpOpener;
     LidCreamBox.OnFinish.RemoveListener(OnEndStep1);
     LidCreamBox.SetBlockItem(true);
     DoneStep();

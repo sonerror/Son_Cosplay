@@ -18,11 +18,6 @@ public class WaterFaucet : Item
     Angle.x = Tf.eulerAngles.z;
   }
 
-  public override void SetReady()
-  {
-    IsReady = true;
-  }
-
   public override void MouseDown(BaseEventData eventData)
   {
     if (isBlocked) return;

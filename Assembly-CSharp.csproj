@@ -105,6 +105,7 @@
     <Compile Include="Assets\Scripts\Manager\TutorialManager.cs" />
     <Compile Include="Assets\FindMissingScriptsRecursively.cs" />
     <Compile Include="Assets\Scripts\OnTransformGoToAffectZone.cs" />
+    <Compile Include="Assets\Scripts\54\Blazer.cs" />
     <Compile Include="Assets\AllIn1SpriteShader\Demo\Scripts\DemoRandomColorSwap.cs" />
     <Compile Include="Assets\Scripts\PimpleHeal.cs" />
     <Compile Include="Assets\Scripts\SpineBoneIKControl.cs" />
