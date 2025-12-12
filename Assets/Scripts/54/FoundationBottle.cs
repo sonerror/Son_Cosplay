@@ -78,7 +78,7 @@ public class FoundationBottle : Item
   {
     if (isBlocked) return;
     if (isDragging) return;
-    if (!IsReady) { OnWrong?.Invoke(); }
+    if (!IsReady) { if (ShowEmoijOnWrong) GameManager.Ins.PlayNegativeEmoji(); }
     else
     {
       triggerCollider.enabled = true;

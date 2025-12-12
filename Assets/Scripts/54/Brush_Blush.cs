@@ -81,7 +81,7 @@ public class Brush_Blush : Item
     trigger.OnTriggerEvent.RemoveAllListeners();
     trigger.gameObject.SetActive(false);
     brushOnPainter.SetActive(true);
-    brushOnPainterFx.Play();
+    brushOnPainterFx?.Play();
     currBrushBlushState = BrushBlushState.DragWithPainter;
     OnReady();
   }
@@ -108,7 +108,7 @@ public class Brush_Blush : Item
   {
     if (isBlocked) return;
     if (isDragging) return;
-    if (!IsReady) { OnWrong?.Invoke(); }
+    if (!IsReady) { if (ShowEmoijOnWrong) GameManager.Ins.PlayNegativeEmoji(); }
     else
     {
       triggerCollider.enabled = true;

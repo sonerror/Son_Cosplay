@@ -23,7 +23,7 @@ public class ItemUseOnce : Item
     if (isDragging) return;
     if (GameManager.Ins.clockTimer.gameObject.activeSelf) return;
 
-    if (!IsReady) { OnWrong?.Invoke(); }
+    if (!IsReady) { if (ShowEmoijOnWrong) GameManager.Ins.PlayNegativeEmoji(); }
     base.MouseDown(eventData);
     OnHandleMouseDown();
   }

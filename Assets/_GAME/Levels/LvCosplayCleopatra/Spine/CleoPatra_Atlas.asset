@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6b194f808b1af6499c93410e504af42, type: 3}
+  m_Name: CleoPatra_Atlas
+  m_EditorClassIdentifier: spine-unity::Spine.Unity.SpineAtlasAsset
+  textureLoadingMode: 0
+  onDemandTextureLoader: {fileID: 0}
+  atlasFile: {fileID: 4900000, guid: 47b23cba31a097f4dbaaa22df759f949, type: 3}
+  materials:
+  - {fileID: 2100000, guid: e5b89da0274f4ad49a9ed5aec6348f68, type: 2}
+  - {fileID: 2100000, guid: 839269f5d840ea7418263b2d0810c9f5, type: 2}
+  - {fileID: 2100000, guid: d47efa94a7184c245afbc19706815420, type: 2}
+  - {fileID: 2100000, guid: f8ab84d0efaca57478f50036e766cd16, type: 2}
+  - {fileID: 2100000, guid: 36a936fbd4060c146ac450d0e22e33d4, type: 2}
+  - {fileID: 2100000, guid: 5f97f5c14d2593b41b4f568a56556efc, type: 2}
+  - {fileID: 2100000, guid: 96463ddfba5786b47873ff884a02c3f8, type: 2}

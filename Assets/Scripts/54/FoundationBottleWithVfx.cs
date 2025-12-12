@@ -33,9 +33,9 @@ public class FoundationBottleWithFx : Item
 #if UNITY_EDITOR
   [Button]
 #endif
-  public void SetReady()
+  public override void SetReady()
   {
-    IsReady = true;
+    base.SetReady();
     for (int index = 0; index < acnePimpleColliders.Count; index++)
     {
       int i = index; // Capture the index for the lambda
@@ -80,7 +80,7 @@ public class FoundationBottleWithFx : Item
   {
     if (isBlocked) return;
     if (isDragging) return;
-    if (!IsReady) { OnWrong?.Invoke(); }
+    if (!IsReady) { if (ShowEmoijOnWrong) GameManager.Ins.PlayNegativeEmoji(); }
     else
     {
       triggerCollider.enabled = true;

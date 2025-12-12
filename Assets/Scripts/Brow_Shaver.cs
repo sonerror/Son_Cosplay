@@ -48,7 +48,7 @@ public class Brow_Shaver : Item
   {
     if (isBlocked) return;
     if (isDragging) return;
-    if (!IsReady) { OnWrong?.Invoke(); }
+    if (!IsReady) { if (ShowEmoijOnWrong) GameManager.Ins.PlayNegativeEmoji(); }
     else
     {
       nodeTriger.SetActive(true);

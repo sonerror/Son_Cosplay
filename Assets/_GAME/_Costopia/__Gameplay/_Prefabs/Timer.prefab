@@ -160,6 +160,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8670534123429937339}
+  - component: {fileID: 401777391853263328}
   - component: {fileID: 2837364603583570013}
   m_Layer: 0
   m_Name: Timer
@@ -184,6 +185,22 @@ Transform:
   - {fileID: 525230101153282562}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &401777391853263328
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5661453761256575841}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c1dac53059842ca8b90eb61f432551d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timerImage: {fileID: 5450282178224792110}
+  showTime: 0.3
+  timeOut: 3
+  sound: {fileID: 2837364603583570013}
 --- !u!82 &2837364603583570013
 AudioSource:
   m_ObjectHideFlags: 0
@@ -194,7 +211,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 1220150759414987609, guid: 10d3200ba6085744ab1deaa7e3e821ca, type: 2}
-  m_audioClip: {fileID: 8300000, guid: d4ca4350ae76559438c6a25e1983fab3, type: 3}
+  m_audioClip: {fileID: 0}
   m_Resource: {fileID: 8300000, guid: d4ca4350ae76559438c6a25e1983fab3, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1

@@ -47,9 +47,9 @@ public class Brush_Eye : Item
 #if UNITY_EDITOR
   [Button]
 #endif
-  public void SetReady()
+  public override void SetReady()
   {
-    IsReady = true;
+    base.SetReady();
     _OnReady();
   }
 
@@ -114,7 +114,7 @@ public class Brush_Eye : Item
   {
     if (isBlocked) return;
     if (isDragging) return;
-    if (!IsReady) { OnWrong?.Invoke(); }
+    if (!IsReady) { if (ShowEmoijOnWrong) GameManager.Ins.PlayNegativeEmoji(); }
     base.MouseDown(eventData);
 
     OnHandleMouseDown();
@@ -156,7 +156,7 @@ public class Brush_Eye : Item
 
     if (_CurrBrushEyeState == BrushEyeState.Blue)
     {
-      if (MaskGroupBlue.CheckMasks(NodeCheckPos.position))
+      if (MaskGroupBlue.CheckMasksColiderAndDone(NodeCheckPos.position))
       {
         if (MaskGroupPink.IsDone())
         {
@@ -168,7 +168,7 @@ public class Brush_Eye : Item
 
     if (_CurrBrushEyeState == BrushEyeState.Pink)
     {
-      if (MaskGroupPink.CheckMasks(NodeCheckPos.position))
+      if (MaskGroupPink.CheckMasksColiderAndDone(NodeCheckPos.position))
       {
         if (MaskGroupBlue.IsDone())
         {

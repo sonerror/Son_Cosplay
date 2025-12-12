@@ -14,14 +14,8 @@ namespace HoangHH
     [SerializeField] private float localYOnOpen;
     [SerializeField] private bool isOpen;
 
-
-    private bool _isBlocking;
     private int _initOrder;
 
-    public void SetBlockAction(bool block)
-    {
-      _isBlocking = block;
-    }
     public bool IsOpen => isOpen;
     private Tween _openTween;
     private Vector3 _startPosition;
@@ -40,9 +34,11 @@ namespace HoangHH
 
     public override void MouseUp(BaseEventData eventData)
     {
-      if (_isBlocking) return;
+      if (isBlocked) return;
       base.MouseUp(eventData);
+      if (!IsReady) return;
       SetOpen(!isOpen);
+      IsReady = false;
     }
 
     private void SetOpen(bool open, bool useTween = true, bool playSound = true)

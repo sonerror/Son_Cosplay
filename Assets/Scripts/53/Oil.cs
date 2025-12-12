@@ -22,7 +22,7 @@ public class Oil : Item
   {
     if (isBlocked) return;
     if (isDragging) return;
-    if (!IsReady) { OnWrong?.Invoke(); }
+    if (!IsReady) { if (ShowEmoijOnWrong) GameManager.Ins.PlayNegativeEmoji(); }
     base.MouseDown(eventData);
 
     OnHandleMouseDown();

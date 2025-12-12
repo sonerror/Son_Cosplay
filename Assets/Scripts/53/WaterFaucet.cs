@@ -18,7 +18,7 @@ public class WaterFaucet : Item
     Angle.x = Tf.eulerAngles.z;
   }
 
-  public void SetReady()
+  public override void SetReady()
   {
     IsReady = true;
   }
@@ -27,7 +27,7 @@ public class WaterFaucet : Item
   {
     if (isBlocked) return;
     if (isDragging) return;
-    if (!IsReady) { OnWrong?.Invoke(); }
+    if (!IsReady) { if (ShowEmoijOnWrong) GameManager.Ins.PlayNegativeEmoji(); }
     base.MouseDown(eventData);
 
     OnHandleMouseDown();

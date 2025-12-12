@@ -9,7 +9,8 @@ public class HairBang : Item
 {
   private Vector3 _prePos;
   public Vector2 Angle = new Vector2(0, 0);
-  public List<Renderer> renderers = new List<Renderer>();
+  public Renderer rende;
+  private int _initOrder;
   public TargetInfo targetInfos = new TargetInfo();
 
   protected override void Awake()
@@ -17,17 +18,13 @@ public class HairBang : Item
     base.Awake();
     _prePos = Tf.position;
     Angle.x = Tf.eulerAngles.z;
-  }
-
-  public void SetReady()
-  {
-    IsReady = true;
+    _initOrder = rende.sortingOrder;
   }
   public override void MouseDown(BaseEventData eventData)
   {
     if (isBlocked) return;
     if (isDragging) return;
-    if (!IsReady) { OnWrong?.Invoke(); }
+    if (!IsReady) { if (ShowEmoijOnWrong) GameManager.Ins.PlayNegativeEmoji(); }
     base.MouseDown(eventData);
     OnHandleMouseDown();
   }
@@ -68,7 +65,7 @@ public class HairBang : Item
       IsReady = false;
       isBlocked = true;
 
-      Tf.DOMove(targetInfos.targetTf.position, 0.35f).SetEase(Ease.OutBack).OnComplete(() =>
+      Tf.DOMove(targetInfos.targetTf.position, 0.5f).SetEase(Ease.OutBack).OnComplete(() =>
       {
         OnFinish?.Invoke();
         // gameObject.SetActive(false);
@@ -101,17 +98,11 @@ public class HairBang : Item
   }
   void ChangeLayerUp()
   {
-    foreach (var renderer in renderers)
-    {
-      renderer.sortingOrder += 100;
-    }
+    rende.sortingOrder = _initOrder + 100;
   }
 
   void ChangeLayerDown()
   {
-    foreach (var renderer in renderers)
-    {
-      renderer.sortingOrder -= 100;
-    }
+    rende.sortingOrder = _initOrder;
   }
 }

@@ -14,15 +14,15 @@ public class Item : MonoBehaviour
   public Transform Tf => _tf ? _tf : _tf = transform;
   public bool IsReady = false;
   [SerializeField] protected bool isBlocked = false;
+  [SerializeField] protected bool ShowEmoijOnWrong = true;
   protected bool isDragging = false;
   protected Vector3 offSet;
 
 
   public bool BlockItem => isBlocked;
-  public int step = 0;
 
-  public UnityEvent OnWrong;
-
+  // public UnityEvent OnWrong;
+  public UnityEvent OnSetupReady;
   public UnityEvent OnFinish;
   public UnityEvent OnPickItem;
   public UnityEvent OnDropItem;
@@ -31,6 +31,12 @@ public class Item : MonoBehaviour
   protected virtual void Awake()
   {
     mainCamera = Camera.main;
+  }
+
+  public virtual void SetReady()
+  {
+    IsReady = true;
+    OnSetupReady?.Invoke();
   }
 
   public virtual void MouseDown(BaseEventData eventData)
@@ -45,11 +51,6 @@ public class Item : MonoBehaviour
   }
 
   public virtual void MouseDrag(BaseEventData eventData) { }
-
-  public void SetIsReady(bool ready)
-  {
-    IsReady = ready;
-  }
 
   public void SetBlockItem(bool block)
   {

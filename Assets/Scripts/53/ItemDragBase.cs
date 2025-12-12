@@ -148,7 +148,7 @@ public class ItemDragBase : Item
 
   public virtual void OnIncorrectUse()
   {
-    OnWrong?.Invoke();
+    if (ShowEmoijOnWrong) GameManager.Ins.PlayNegativeEmoji();
   }
 
   protected void ChangeLayerUp()

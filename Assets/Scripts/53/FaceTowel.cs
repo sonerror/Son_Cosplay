@@ -27,22 +27,12 @@ public class FaceTowel : Item
 #if UNITY_EDITOR
   [Button]
 #endif
-  public void SetReady()
-  {
-    IsReady = true;
-    _OnReady();
-  }
-
-  private void _OnReady()
-  {
-    // NodeBody.SetActive(true);
-  }
 
   public override void MouseDown(BaseEventData eventData)
   {
     if (isBlocked) return;
     if (isDragging) return;
-    if (!IsReady) { OnWrong?.Invoke(); }
+    if (!IsReady) { if (ShowEmoijOnWrong) GameManager.Ins.PlayNegativeEmoji(); }
     base.MouseDown(eventData);
 
     OnHandleMouseDown();
@@ -80,7 +70,7 @@ public class FaceTowel : Item
 
   void CheckTarget()
   {
-    if (maskGroup.CheckMasks(NodeCheckPos.position))
+    if (maskGroup.CheckMasksColiderAndDone(NodeCheckPos.position))
     {
       IsReady = false;
       OnFinish?.Invoke();

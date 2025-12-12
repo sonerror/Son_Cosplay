@@ -74,8 +74,10 @@
     <Compile Include="Assets\Scripts\ItemUseOnce.cs" />
     <Compile Include="Assets\Scripts\LoopAnimTransformFloating.cs" />
     <Compile Include="Assets\Scripts\Manager\EventManager.cs" />
+    <Compile Include="Assets\Scripts\53\FaceTowelWithVfx.cs" />
     <Compile Include="Assets\Scripts\54\ShowSprite.cs" />
     <Compile Include="Assets\DOTween\Modules\DOTweenModuleUnityVersion.cs" />
+    <Compile Include="Assets\Scripts\54\Brush_BlushWithMaskGroup.cs" />
     <Compile Include="Assets\AllIn1SpriteShader\Demo\Scripts\DemoCircleExpositor.cs" />
     <Compile Include="Assets\Scripts\Helper\H3MonoBehaviour.cs" />
     <Compile Include="Assets\AllIn1SpriteShader\Demo\Scripts\DemoItem.cs" />
@@ -98,6 +100,7 @@
     <Compile Include="Assets\Scripts\Helper\SlotAttachmentPair.cs" />
     <Compile Include="Assets\Scripts\Manager\Singleton.cs" />
     <Compile Include="Assets\Scripts\53\WaterFace.cs" />
+    <Compile Include="Assets\Scripts\TapJumpOpener.cs" />
     <Compile Include="Assets\Scripts\Brush_Eye.cs" />
     <Compile Include="Assets\Scripts\Manager\TutorialManager.cs" />
     <Compile Include="Assets\FindMissingScriptsRecursively.cs" />
@@ -166,6 +169,8 @@
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface-Mobile.shader" />
     <None Include="Assets\_GAME\_Costopia\__Gameplay\_Script\Gameplay\Shader\SpineReveal.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\SDFFunctions.hlsl" />
+    <None Include="Assets\_GAME\Levels\LvCosplayCleopatra\Spine\CleoPatra.atlas.txt" />
+    <None Include="Assets\_GAME\Core\Common\Shaders\UIAdditive.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface.shader" />
     <None Include="Assets\TextMesh Pro\Sprites\EmojiOne Attribution.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Custom-Atlas.shader" />
@@ -187,6 +192,7 @@
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF Overlay.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Mobile.shader" />
     <None Include="Assets\TextMesh Pro\Fonts\LiberationSans - OFL.txt" />
+    <None Include="Assets\_GAME\Levels\LvCosplayCleopatra\SpineNew\CleoPatra.atlas.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile.shader" />
     <None Include="Assets\_GAME\Levels\LvCosplayHarleyQuinn\Animations\minigame_json\Harley_Queen_minigame.atlas.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Sprite.shader" />

@@ -18,7 +18,7 @@ public class MaskGroupCustom : GameUnit
     ResetMask();
   }
 
-  public bool CheckMasks(Vector3 pos)
+  public bool CheckMasksColiderAndDone(Vector3 pos)
   {
     foreach (var mask in masks)
     {
@@ -34,6 +34,24 @@ public class MaskGroupCustom : GameUnit
     return masks.All(x => x.activeSelf == typeActive);
   }
 
+  public bool CheckMasksColider(Vector3 pos)
+  {
+    var rs = false;
+    foreach (var mask in masks)
+    {
+      if (mask.activeSelf == typeActive) continue;
+
+      if (Vector2.Distance(pos, mask.transform.position) < distanceCheck)
+      {
+        mask.SetActive(typeActive);
+        SoundManager.Ins.PlayFxIfNotPlay(fxSound);
+        rs = true;
+      }
+    }
+
+    return rs;
+  }
+
   public bool IsDone()
   {
     return masks.All(x => x.activeSelf == typeActive);
@@ -45,6 +63,11 @@ public class MaskGroupCustom : GameUnit
     {
       mask.SetActive(!typeActive);
     }
+  }
+
+  public void SetTypeActive(bool active)
+  {
+    typeActive = active;
   }
 
 #if UNITY_EDITOR
