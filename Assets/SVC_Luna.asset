@@ -373,9 +373,23 @@ MonoBehaviour:
     upToDate: 0
     keywords:
     - _STRAIGHT_ALPHA_INPUT
+  - shaderCompilerPlatform: 5
+    shader: {fileID: 4800000, guid: 6752774470227ff4c9c18859a2d04f5c, type: 3}
+    passType: 0
+    passId: 0
+    subShaderIndex: 0
+    upToDate: 0
+    keywords: []
+  - shaderCompilerPlatform: 9
+    shader: {fileID: 4800000, guid: 6752774470227ff4c9c18859a2d04f5c, type: 3}
+    passType: 0
+    passId: 0
+    subShaderIndex: 0
+    upToDate: 0
+    keywords: []
   _includedShaderVariants: []
   _excludedShaderVariants: []
-  version: 650
+  version: 696
   _shaderParsedShaders:
   - ParsedSubShaders:
     - Index: 0
@@ -3598,8 +3612,8 @@ MonoBehaviour:
     PointLightCount: 0
     SpotLightCount: 0
     DirectionalLightCount: 0
-    LightmapOn: 1
-    DirlightmapCombined: 1
+    LightmapOn: 0
+    DirlightmapCombined: 0
     DirectionalCookieExists: 0
     PointCookieExists: 0
     SpotCookieExists: 0
