@@ -11,9 +11,10 @@ public class FaceTowelWithVfx : Item
   public Vector2 Angle = new Vector2(0, 0);
   public Renderer rende;
   private int _oriOrder = 0;
-  public MaskGroupCustom maskGroup;
+  public MaskGroupCustom MaskGroup;
   public Transform NodeCheckPos;
   [SerializeField] private ParticleSystem vfxUseTowel;
+  [SerializeField] private FxType fxSound = FxType.None;
 
   protected override void Awake()
   {
@@ -38,7 +39,7 @@ public class FaceTowelWithVfx : Item
   {
     isDragging = true;
     OnPickItem?.Invoke();
-    // SoundManager.Ins.PlaySoundLoop(fxSound);
+    SoundManager.Ins.PlaySoundLoop(fxSound);
     SoundManager.Ins.PlayFx(FxType.Pick);
 
 
@@ -66,12 +67,12 @@ public class FaceTowelWithVfx : Item
 
   void CheckTarget()
   {
-    if (maskGroup.CheckMasksColider(NodeCheckPos.position))
+    if (MaskGroup.CheckMasksColider(NodeCheckPos.position))
     {
       vfxUseTowel.Play();
     }
 
-    if (maskGroup.IsDone())
+    if (MaskGroup.IsDone())
     {
       IsReady = false;
       OnFinish?.Invoke();
@@ -90,7 +91,7 @@ public class FaceTowelWithVfx : Item
   protected virtual void OnHandleMouseUp()
   {
     Debug.Log("aaaa");
-    // SoundManager.Ins.StopSoundLoop(fxSound);
+    SoundManager.Ins.StopSoundLoop(fxSound);
     Tf.DOKill();
     Tf.DOScale(Vector3.one, 0.3f);
     Tf.DORotate(Vector3.forward * Angle.x, 0.3f);

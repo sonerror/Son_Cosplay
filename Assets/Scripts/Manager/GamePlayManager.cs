@@ -175,8 +175,9 @@ public class GamePlayManager : Singleton<GamePlayManager>
   {
     var item = items[3] as FaceTowelWithVfx;
     item.OnFinish.AddListener(OnEndStep3);
-    item.maskGroup.SetTypeActive(false);
-    item.maskGroup.ResetMask();
+    item.MaskGroup.SetTypeActive(false);
+    item.MaskGroup.FxSound = FxType.Shaving;
+    item.MaskGroup.ResetMask();
     item.SetReady();
   }
 

@@ -11,7 +11,7 @@ public class MaskGroupCustom : GameUnit
   [SerializeField] private List<GameObject> masks;
   [SerializeField] private bool typeActive = true;
   [SerializeField] private float distanceCheck = 0.75f;
-  [SerializeField] private FxType fxSound = FxType.None;
+  [SerializeField] public FxType FxSound = FxType.None;
 
   private void Start()
   {
@@ -27,7 +27,7 @@ public class MaskGroupCustom : GameUnit
       if (Vector2.Distance(pos, mask.transform.position) < distanceCheck)
       {
         mask.SetActive(typeActive);
-        SoundManager.Ins.PlayFxIfNotPlay(fxSound);
+        SoundManager.Ins.PlayFxIfNotPlay(FxSound);
       }
     }
 
@@ -44,12 +44,25 @@ public class MaskGroupCustom : GameUnit
       if (Vector2.Distance(pos, mask.transform.position) < distanceCheck)
       {
         mask.SetActive(typeActive);
-        SoundManager.Ins.PlayFxIfNotPlay(fxSound);
+        SoundManager.Ins.PlayFxIfNotPlay(FxSound);
         rs = true;
       }
     }
 
     return rs;
+  }
+
+  public Transform GetTranformOfMaskNotActive()
+  {
+    for (int i = 0; i < masks.Count; i++)
+    {
+      if (masks[i].activeSelf != typeActive)
+      {
+        return masks[i].transform;
+      }
+    }
+
+    return null;
   }
 
   public bool IsDone()

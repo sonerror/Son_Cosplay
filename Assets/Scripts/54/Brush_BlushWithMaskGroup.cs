@@ -15,8 +15,8 @@ public class BrushBlushWithMaskGroup : Item
   public SortingGroup rendeGroup;
   private int _oriOrder;
   private Vector3 _prePos;
-  [SerializeField] private MaskGroupCustom phanColliders;
-  [SerializeField] public TriggerWithCertainCollider hopPhanColliders;
+  [SerializeField] public MaskGroupCustom FlourFill;
+  [SerializeField] public TriggerWithCertainCollider BoxFlour;
   public Transform Brush;
   public ParticleSystem brushOnPainterFx;
   [SerializeField] private BrushBlushState currBrushBlushState = BrushBlushState.Drag;
@@ -38,12 +38,12 @@ public class BrushBlushWithMaskGroup : Item
 
     if (currBrushBlushState == BrushBlushState.DragWithPainter)
     {
-      phanColliders.ResetMask();
+      FlourFill.ResetMask();
     }
 
     if (currBrushBlushState == BrushBlushState.Drag)
     {
-      TriggerWithCertainCollider trigger = hopPhanColliders;
+      TriggerWithCertainCollider trigger = BoxFlour;
       trigger.gameObject.SetActive(true);
       trigger.OnTriggerEvent.AddListener(() => ChangeStatePainter(trigger));
     }
@@ -51,11 +51,12 @@ public class BrushBlushWithMaskGroup : Item
   public Vector3 GetPosTargetActive()
   {
 
-    return phanColliders.Tf.position;
+    return FlourFill.Tf.position;
   }
   void ChangeStatePainter(TriggerWithCertainCollider trigger)
   {
     trigger.OnTriggerEvent.RemoveAllListeners();
+    SoundManager.Ins.PlayFx(FxType.MagicSparkle);
     // trigger.gameObject.SetActive(false);
     Brush.gameObject.SetActive(true);
     if (brushOnPainterFx) brushOnPainterFx.Play();
@@ -120,7 +121,7 @@ public class BrushBlushWithMaskGroup : Item
   {
     if (currBrushBlushState != BrushBlushState.DragWithPainter) return;
 
-    if (phanColliders.CheckMasksColiderAndDone(Brush.position))
+    if (FlourFill.CheckMasksColiderAndDone(Brush.position))
     {
       OnDone();
     }

@@ -34,7 +34,7 @@ public class HandCtrl : MonoBehaviour
     transform.position = pos + Vector3.up * 0.5f;
   }
 
-  public void ShowHandState2(Vector3 pos1, Vector3 pos2)
+  public void ShowHandPosToPos(Vector3 pos1, Vector3 pos2)
   {
     StopAllCoroutines();
     transform.DOKill();

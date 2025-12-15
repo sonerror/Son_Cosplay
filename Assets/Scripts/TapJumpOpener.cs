@@ -16,7 +16,7 @@ namespace HoangHH
     [SerializeField] private float time = 1f;
     [SerializeField] private bool isRotate = false;
 
-    private FxType SoundFx = FxType.None;
+    // [SerializeField] private FxType SoundFx = FxType.None;
 
     public override void SetReady()
     {
@@ -38,12 +38,12 @@ namespace HoangHH
       if (!IsReady) return;
       IsReady = false;
       col.enabled = false;
-
+      SoundManager.Ins.PlayFx(FxType.Pick);
       Tf.DOJump(targetLocal.position, jumpPower, 1, time).SetEase(Ease.OutQuad)
         .OnComplete(() =>
         {
           OnFinish?.Invoke();
-          SoundManager.Ins.PlayFx(SoundFx);
+          // SoundManager.Ins.PlayFx(SoundFx);
         });
 
       if (isRotate)

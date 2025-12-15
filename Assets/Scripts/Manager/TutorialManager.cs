@@ -28,6 +28,7 @@ public class TutorialManager : Singleton<TutorialManager>
   public void IncreaseTimeHide()
   {
     TimeHint = 5f;
+    this.resetTimeHint();
   }
 
   [SerializeField] private List<Transform> tutorialNode = new List<Transform>();
@@ -105,12 +106,12 @@ public class TutorialManager : Singleton<TutorialManager>
       case 5:
         PlayTut5();
         return;
-      case 6:
-        PlayTut6();
-        return;
-      case 7:
-        PlayTut7();
-        return;
+      // case 6:
+      //   PlayTut6();
+      //   return;
+      // case 7:
+      //   PlayTut7();
+      //   return;
       default:
         handCtrl.gameObject.SetActive(false);
         resetTimeHint();
@@ -119,56 +120,59 @@ public class TutorialManager : Singleton<TutorialManager>
   }
   void PlayTut0()
   {
-    var item = gamePlayManager.items[0];
-    handCtrl.ShowHandState2(item.Tf.position, item.Tf.position + Vector3.right * 4f);
+    var item = gamePlayManager.items[0] as HairBang;
+    handCtrl.ShowHandPosToPos(item.Tf.position, item.targetInfos.targetTf.position);
   }
 
   void PlayTut1()
   {
-    var item = gamePlayManager.items[1] as HairBang;
-    handCtrl.ShowHandState2(item.Tf.position, item.targetInfos.targetTf.position);
+    var item = gamePlayManager.items[1] as TapJumpOpener;
+    handCtrl.ShowHandAtPos(item.Tf.position);
   }
 
   void PlayTut2()
   {
-    var item = gamePlayManager.items[2] as WaterFaucet;
-    handCtrl.ShowHandState2(item.Tf.position, tutorialNode[0].position);
+    var item = gamePlayManager.items[2] as BrushBlushWithMaskGroup;
+    if (item.CurrBrushBlushState == BrushBlushState.Drag)
+    {
+      handCtrl.ShowHandPosToPos(item.Tf.position, item.BoxFlour.Tf.position);
+      return;
+    }
+    if (item.CurrBrushBlushState == BrushBlushState.DragWithPainter)
+    {
+      handCtrl.ShowHandPosToPos(item.Tf.position, item.FlourFill.Tf.position);
+      return;
+    }
+
   }
 
   void PlayTut3()
   {
-    var item = gamePlayManager.items[3] as FaceTowel;
-    handCtrl.ShowHandState2(item.Tf.position, tutorialNode[1].position);
+    var item = gamePlayManager.items[3] as FaceTowelWithVfx;
+    handCtrl.ShowHandPosToPos(item.Tf.position, item.MaskGroup.GetTranformOfMaskNotActive().position);
   }
 
   void PlayTut4()
   {
-    if (lidTapOpener.IsOpen)
-    {
-      var item = gamePlayManager.items[4];
-      handCtrl.ShowHandState2(item.Tf.position, tutorialNode[2].position);
-    }
-    else
-    {
-      handCtrl.ShowHandAtPos(lidTapOpener.Tf.position);
-    }
+    var item = gamePlayManager.items[4] as FaceTowelWithVfx;
+    handCtrl.ShowHandPosToPos(item.Tf.position, item.MaskGroup.GetTranformOfMaskNotActive().position);
   }
   void PlayTut5()
   {
-    var item = gamePlayManager.items[5];
-    handCtrl.ShowHandState2(item.Tf.position, tutorialNode[3].position);
+    handCtrl.ShowHandPosToPos(tutorialNode[0].position, tutorialNode[1].position);
+    AdsManager.Ins.ShowEndGame();
   }
-  void PlayTut6()
-  {
-    var item = gamePlayManager.items[6] as FoundationBottleWithFx;
-    handCtrl.ShowHandState2(item.Tf.position, item.getPosTargetActive());
+  // void PlayTut6()
+  // {
+  //   var item = gamePlayManager.items[6] as FoundationBottleWithFx;
+  //   handCtrl.ShowHandPosToPos(item.Tf.position, item.getPosTargetActive());
 
-  }
-  void PlayTut7()
-  {
-    var item = gamePlayManager.items[7] as FoundationBottleWithFx;
-    handCtrl.ShowHandState2(item.Tf.position, item.getPosTargetActive());
-  }
+  // }
+  // void PlayTut7()
+  // {
+  //   var item = gamePlayManager.items[7] as FoundationBottleWithFx;
+  //   handCtrl.ShowHandPosToPos(item.Tf.position, item.getPosTargetActive());
+  // }
 
   void HideHint()
   {

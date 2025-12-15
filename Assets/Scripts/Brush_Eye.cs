@@ -85,7 +85,7 @@ public class Brush_Eye : Item
     if (_CurrPar) _CurrPar.Stop();
     _CurrPar = parBlue;
     if (isDragging) _CurrPar.Play();
-    SoundManager.Ins.PlayFx(FxType.MagicSparkle);
+    // SoundManager.Ins.PlayFx(FxType.MagicSparkle);
     MagicPar.Play();
     headBrushBlue.SetActive(true);
     headBrushPink.SetActive(false);
@@ -104,7 +104,7 @@ public class Brush_Eye : Item
     if (_CurrPar) _CurrPar.Stop();
     _CurrPar = parPink;
     if (isDragging) _CurrPar.Play();
-    SoundManager.Ins.PlayFx(FxType.MagicSparkle);
+    // SoundManager.Ins.PlayFx(FxType.MagicSparkle);
     MagicPar.Play();
     headBrushBlue.SetActive(false);
     headBrushPink.SetActive(true);
