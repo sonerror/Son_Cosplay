@@ -375,7 +375,7 @@ MonoBehaviour:
     - _STRAIGHT_ALPHA_INPUT
   _includedShaderVariants: []
   _excludedShaderVariants: []
-  version: 650
+  version: 674
   _shaderParsedShaders:
   - ParsedSubShaders:
     - Index: 0

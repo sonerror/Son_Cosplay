@@ -154,6 +154,7 @@
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
     <None Include="Assets\Spine\version.txt" />
     <None Include="Assets\Spines\K_idol_json\School_Girl.atlas.txt" />
+    <None Include="Assets\_GAME\Levels\LvCosplayCinderella\Animations\Cindarella_new\Cindarella.atlas.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile-2-Pass.shader" />
     <None Include="Assets\_GAME\Levels\LvCosplayCinderella\Animations\New\Cindarella.atlas.txt" />
@@ -176,9 +177,7 @@
     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Surface.cginc" />
     <None Include="Assets\Spines\New2\Harley_Queen.atlas.txt" />
     <None Include="Assets\_GAME\Levels\LvCosplayCinderella\Animations\Cindarella_json\Cindarella.atlas.txt" />
-    <None Include="Assets\_GAME\Levels\LvCosplayCinderella\Animations\View\Cindarella.atlas.txt" />
     <None Include="Assets\_GAME\Core\Common\Shaders\SpriteOutline.shader" />
-    <None Include="Assets\_GAME\Levels\LvCosplayCinderella\Animations\ViewNor\School_Girl.atlas.txt" />
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
     <None Include="Assets\DOTween\DOTween.dll" />
     <None Include="Assets\Spines\school_boy_38\School_Girl.atlas.txt" />

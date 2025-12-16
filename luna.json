@@ -135,7 +135,8 @@
             "Assets/Scenes/LevelMain.unity"
         ],
         "disabledScenes": [
-            "Assets/_GAME/Levels/LvCosplayKIdol/Level6.unity"
+            "Assets/_GAME/Levels/LvCosplayKIdol/Level6.unity",
+            "Assets/_GAME/Levels/LvCosplayWenesday/Level53.unity"
         ],
         "startupScene": 0,
         "packages": {
@@ -44131,6 +44132,16 @@
                         "script": "",
                         "ext": "",
                         "name": "Assets/_GAME/Levels/LvCosplayCinderella/Animations/ViewNor/School_Girl.png"
+                    },
+                    {
+                        "maxWidth": 8192,
+                        "maxHeight": 8192,
+                        "format": "png32",
+                        "compression": "quantSize",
+                        "quality": 65,
+                        "script": "",
+                        "ext": "",
+                        "name": "Assets/_GAME/Levels/LvCosplayCinderella/Animations/Cindarella_new/Cindarella.png"
                     }
                 ]
             },
@@ -44174,6 +44185,36 @@
                         "script": "",
                         "ext": "",
                         "name": "Assets/_GAME/_Costopia/_Audio/BGM/BGM_Gameplay_2.ogg"
+                    },
+                    {
+                        "channels": 1,
+                        "startTime": "00:00.000",
+                        "endTime": "00:16.948",
+                        "lengthInSeconds": 16.947999954223634,
+                        "bitrate": 128,
+                        "script": "",
+                        "ext": "",
+                        "name": "Assets/_GAME/_Costopia/_Audio/SFX/CharacterSFX/Base_Woman/sfx_woman_angry_2.1.ogg"
+                    },
+                    {
+                        "channels": 1,
+                        "startTime": "00:00.000",
+                        "endTime": "00:16.948",
+                        "lengthInSeconds": 16.947999954223634,
+                        "bitrate": 128,
+                        "script": "",
+                        "ext": "",
+                        "name": "Assets/_GAME/_Costopia/_Audio/SFX/cream_brush.ogg"
+                    },
+                    {
+                        "channels": 1,
+                        "startTime": "00:00.000",
+                        "endTime": "00:16.948",
+                        "lengthInSeconds": 16.947999954223634,
+                        "bitrate": 128,
+                        "script": "",
+                        "ext": "",
+                        "name": "Assets/_GAME/_Costopia/_Audio/SFX/CharacterSFX/Base_Woman/sfx_woman_happy_1.1.ogg"
                     }
                 ]
             },

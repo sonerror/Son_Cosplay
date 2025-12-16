@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f1b3b4b945939a54ea0b23d3396115fb, type: 3}
-  m_Name: School_Girl_SkeletonData
+  m_Name: Cindarella_SkeletonData
   m_EditorClassIdentifier: 
   atlasAssets:
-  - {fileID: 11400000, guid: f9a0ed4a2f2179845922e59790682530, type: 2}
+  - {fileID: 11400000, guid: c844c4eda14a4d44ba3c0938428b81df, type: 2}
   scale: 0.01
-  skeletonJSON: {fileID: 4900000, guid: 73cb1ab1a0847864398af591afb6d75e, type: 3}
+  skeletonJSON: {fileID: 4900000, guid: 68db523ae5737b54baf97311be3ae4df, type: 3}
   isUpgradingBlendModeMaterials: 0
   blendModeMaterials:
     requiresBlendModeMaterials: 0
