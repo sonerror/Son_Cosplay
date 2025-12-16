@@ -30,13 +30,8 @@ public class FaceTowel : Item
   public void SetReady()
   {
     IsReady = true;
-    _OnReady();
   }
 
-  private void _OnReady()
-  {
-    // NodeBody.SetActive(true);
-  }
 
   public override void MouseDown(BaseEventData eventData)
   {
@@ -80,7 +75,8 @@ public class FaceTowel : Item
 
   void CheckTarget()
   {
-    if (maskGroup.CheckMasks(NodeCheckPos.position))
+    maskGroup.CheckMasks(NodeCheckPos.position);
+    if (maskGroup.IsDoneRating(true))
     {
       IsReady = false;
       OnFinish?.Invoke();

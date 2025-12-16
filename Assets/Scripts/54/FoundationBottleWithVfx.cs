@@ -16,7 +16,7 @@ public class FoundationBottleWithFx : Item
   private Vector3 _prePos;
   [SerializeField] public List<TriggerWithCertainCollider> acnePimpleColliders;
   [SerializeField] public List<ShowSprite> spriteShows;
-  public ParticleSystem applyFx;
+  // public ParticleSystem applyFx;
 
 
   protected override void Awake()
@@ -51,7 +51,7 @@ public class FoundationBottleWithFx : Item
     trigger.OnTriggerEvent.RemoveAllListeners();
     trigger.gameObject.SetActive(true);
     show.ShowSpriteStart();
-    applyFx.Play();
+    // applyFx.Play();
     // PoolManager.Ins.Spawn(PoolType.SFX_Acne, trigger.transform.position, Quaternion.identity);
     _currentAcneIndex++;
     if (_currentAcneIndex >= acnePimpleColliders.Count) OnDone();

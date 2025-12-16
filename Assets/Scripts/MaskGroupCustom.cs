@@ -12,6 +12,7 @@ public class MaskGroupCustom : GameUnit
   [SerializeField] private bool typeActive = true;
   [SerializeField] private float distanceCheck = 0.75f;
   [SerializeField] private FxType fxSound = FxType.None;
+  [SerializeField] private float RatingDone = 0.85f;
 
   private void Start()
   {
@@ -37,6 +38,29 @@ public class MaskGroupCustom : GameUnit
   public bool IsDone()
   {
     return masks.All(x => x.activeSelf == typeActive);
+  }
+
+  public bool IsDoneRating(bool ActiveIfDone = false)
+  {
+    var countActive = masks.Count(x => x.activeSelf == typeActive);
+    var rating = (float)countActive / masks.Count;
+    if (rating >= RatingDone)
+    {
+      if (ActiveIfDone)
+      {
+        DoneAllMask();
+      }
+      return true;
+    }
+    else return false;
+  }
+
+  public void DoneAllMask()
+  {
+    foreach (var mask in masks)
+    {
+      mask.SetActive(typeActive);
+    }
   }
 
   public void ResetMask()

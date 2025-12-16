@@ -52,7 +52,7 @@ public class TriggerWithCertainCollider : GameUnit
       _isDone = true;
       col.enabled = false;
       rb.simulated = false;
-      SoundManager.Ins.PlayFx(soundPlay);
+      SoundManager.Ins.PlayFxIfNotPlay(soundPlay);
       if (disableTriggerWith) triggerWith.enabled = false;
       onTriggerEvent.Invoke();
     }

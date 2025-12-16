@@ -13,6 +13,7 @@ namespace HoangHH
     [SerializeField] private int orderOnOpen;
     [SerializeField] private float localYOnOpen;
     [SerializeField] private bool isOpen;
+    [SerializeField] private FxType soundOnOpen = FxType.None;
 
 
     private bool _isBlocking;
@@ -71,7 +72,7 @@ namespace HoangHH
       if (playSound)
       {
 
-        SoundManager.Ins.PlayFx(FxType.Pick);
+        SoundManager.Ins.PlayFx(soundOnOpen);
       }
     }
 

@@ -209,6 +209,11 @@ public class GamePlayManager : Singleton<GamePlayManager>
     var item = items[5] as ItemMove;
     item.OnFinish.AddListener(OnEndStep5);
     item.SetReady();
+
+    GameManager.Ins.ShowClockTimer(() =>
+    {
+      item.SetActiveBorder();
+    });
   }
 
   private void OnEndStep5()

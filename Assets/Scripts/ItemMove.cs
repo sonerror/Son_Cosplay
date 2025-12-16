@@ -4,7 +4,6 @@ using UnityEngine.EventSystems;
 
 public class ItemMove : Item
 {
-
   public float distanDoneToMove = 2f;
   public FxType fxSound = FxType.LipMove;
   private Vector3 _preMousePos;
@@ -14,6 +13,22 @@ public class ItemMove : Item
   public void SetReady()
   {
     IsReady = true;
+  }
+
+  private Material mat = null;
+
+  protected override void Awake()
+  {
+    base.Awake();
+    mat = GetComponent<SpriteRenderer>().material;
+  }
+
+  public void SetActiveBorder()
+  {
+    var rendererr = GetComponent<SpriteRenderer>();
+    var material = new Material(rendererr.material);
+    rendererr.material = material;
+    material.SetFloat("_CurlProgress", 0.9f);
   }
 
   public override void MouseDown(BaseEventData eventData)
@@ -51,14 +66,35 @@ public class ItemMove : Item
 
   void Move()
   {
-    Tf.DOKill();
+    // Tf.DOKill();
+    // 
+    // var pos = GetMouseWorldPos();
+    // float dir = 1f;
+    // if (pos.x < _mouseDownPos.x) { dir = -1f; }
+    // Tf.DOMove(Tf.position + Vector3.right * 3f * dir, 0.5f).OnComplete(() =>
+    // {
+    //   gameObject.SetActive(false);
+    // });
     SoundManager.Ins.PlayFx(fxSound);
-    var pos = GetMouseWorldPos();
-    float dir = 1f;
-    if (pos.x < _mouseDownPos.x) { dir = -1f; }
-    Tf.DOMove(Tf.position + Vector3.right * 3f * dir, 0.5f).OnComplete(() =>
-    {
-      gameObject.SetActive(false);
-    });
+    var rendererr = GetComponent<SpriteRenderer>();
+    var material = new Material(rendererr.material);
+    rendererr.material = material;
+    float curlValue = 0.925f;
+    material.SetFloat("_CurlProgress", curlValue);
+    DOTween.To(
+          () => curlValue,
+          x =>
+          {
+            curlValue = x;
+            material.SetFloat("_CurlProgress", curlValue);
+          },
+         0f,    // giá trị đích
+          0.65f     // thời gian tween (1 giây)
+      )
+      .OnComplete(() =>
+      {
+        gameObject.SetActive(false);
+      })
+      .SetEase(Ease.InOutSine);
   }
 }

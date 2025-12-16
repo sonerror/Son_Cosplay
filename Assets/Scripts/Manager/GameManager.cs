@@ -1,10 +1,13 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using DG.Tweening;
 using HoangHH;
 using Satisgame;
 using Sirenix.Utilities;
 using Spine.Unity;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class GameManager : Singleton<GameManager>
 {
@@ -99,9 +102,16 @@ public class GameManager : Singleton<GameManager>
     coroutine = null;
   }
 
-  public void ShowClockTimer()
+  public void ShowClockTimer(UnityAction callback = null)
   {
     clockTimer.Show(2f);
+    if (callback != null)
+    {
+      DOVirtual.DelayedCall(2f, () =>
+      {
+        callback.Invoke();
+      });
+    }
   }
 
 }

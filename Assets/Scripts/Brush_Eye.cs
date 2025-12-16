@@ -156,26 +156,18 @@ public class Brush_Eye : Item
 
     if (_CurrBrushEyeState == BrushEyeState.Blue)
     {
-      if (MaskGroupBlue.CheckMasks(NodeCheckPos.position))
-      {
-        if (MaskGroupPink.IsDone())
-        {
-          IsReady = false;
-          OnFinish?.Invoke();
-        }
-      }
+      MaskGroupBlue.CheckMasks(NodeCheckPos.position);
     }
 
     if (_CurrBrushEyeState == BrushEyeState.Pink)
     {
-      if (MaskGroupPink.CheckMasks(NodeCheckPos.position))
-      {
-        if (MaskGroupBlue.IsDone())
-        {
-          IsReady = false;
-          OnFinish?.Invoke();
-        }
-      }
+      MaskGroupPink.CheckMasks(NodeCheckPos.position);
+    }
+
+    if (MaskGroupPink.IsDone() && MaskGroupBlue.IsDone())
+    {
+      IsReady = false;
+      OnFinish?.Invoke();
     }
   }
 

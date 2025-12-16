@@ -8,30 +8,24 @@ namespace Satisgame
   {
 
     public GameObject nodePositive, nodeNegative;
-
+    bool isHide = true;
     private IEnumerator coroutine = null;
 
     void Start()
     {
-      nodeNegative.SetActive(false);
-      nodePositive.SetActive(false);
+      HideEmoji();
     }
 
     public void ShowPositive()
     {
       nodePositive.SetActive(true);
       nodeNegative.SetActive(false);
-      if (coroutine != null)
-      {
-        StopCoroutine(coroutine);
-      }
-      coroutine = HideNegativeAfterDelay();
-      StartCoroutine(coroutine);
+      ResetTimeHide();
     }
 
-    private IEnumerator HideNegativeAfterDelay()
+    private void HideEmoji()
     {
-      yield return new WaitForSeconds(2f);
+      isHide = true;
       nodePositive.SetActive(false);
       nodeNegative.SetActive(false);
     }
@@ -40,14 +34,27 @@ namespace Satisgame
     {
       nodePositive.SetActive(false);
       nodeNegative.SetActive(true);
-
-      if (coroutine != null)
-      {
-        StopCoroutine(coroutine);
-      }
-      coroutine = HideNegativeAfterDelay();
-      StartCoroutine(coroutine);
+      ResetTimeHide();
     }
+
+    void ResetTimeHide()
+    {
+      isHide = false;
+      timeHide = 1.5f;
+    }
+    float timeHide = 1.5f;
+    void Update()
+    {
+      if (!isHide)
+      {
+        timeHide -= Time.deltaTime;
+        if (timeHide <= 0)
+        {
+          HideEmoji();
+        }
+      }
+    }
+
 
   }
 }
