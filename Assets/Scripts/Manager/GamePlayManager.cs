@@ -112,6 +112,7 @@ public class GamePlayManager : Singleton<GamePlayManager>
     GlassesObject.OnFinish.RemoveListener(OnEndStep0);
     GlassesObject.OnPickItem.RemoveListener(HideGlasses);
     GlassesObject.OnDropItem.RemoveListener(ShowGlasses);
+    SoundManager.Ins.PlayFx(FxType.CloseBox);
     DoneStep();
     TryNextStep();
   }

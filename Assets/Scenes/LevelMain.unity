@@ -2795,6 +2795,7 @@ MonoBehaviour:
   jumpPower: 1
   time: 0.5
   isRotate: 1
+  SoundFx: 8
 --- !u!114 &462311454
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5118,15 +5119,15 @@ MonoBehaviour:
   - {fileID: 8300000, guid: ea572c334ae25c34192bc9304b9c5085, type: 3}
   - {fileID: 8300000, guid: ce56d9949cafb7447b61640ef32576b8, type: 3}
   - {fileID: 8300000, guid: 54b1ac673fbea6f4fb35bb736151d856, type: 3}
-  - {fileID: 8300000, guid: 07ef039e2388b9a4599a70e6313c0234, type: 3}
-  - {fileID: 8300000, guid: 729117713ef6c46418ae79f7fb9fd2b0, type: 3}
-  - {fileID: 8300000, guid: ad7908740ee7a3e4e9b8498b39a7b1ab, type: 3}
+  - {fileID: 8300000, guid: 1297efee64b5c1449baa0544cba006ab, type: 3}
+  - {fileID: 8300000, guid: b04800d536f0fe845937efbd80adcd3a, type: 3}
+  - {fileID: 8300000, guid: 03a1f93806c745145a6c7ac9d89206d4, type: 3}
   - {fileID: 8300000, guid: 54b1ac673fbea6f4fb35bb736151d856, type: 3}
   - {fileID: 8300000, guid: fa8c3575b8e17cf448bf627e278d5218, type: 3}
   - {fileID: 8300000, guid: 51e33f361884e7440ac7ed5a4819434d, type: 3}
   - {fileID: 8300000, guid: e987dca37deb6b64ca36cd8af731a712, type: 3}
   - {fileID: 8300000, guid: 2fedf2206b5658b4da6929c80db511d7, type: 3}
-  - {fileID: 8300000, guid: 50e3119f599b7b149abff135839e3640, type: 3}
+  - {fileID: 8300000, guid: 1b80cbea67fc0b74eae8d4a7fef67e58, type: 3}
   - {fileID: 8300000, guid: 36969d0c73fb7754d8460ce3d897ddc4, type: 3}
   - {fileID: 8300000, guid: 7a53d82ee0629bf48a01e9406d2991ba, type: 3}
   - {fileID: 8300000, guid: c3a0f331cdae9f943a3824ce75c6f007, type: 3}
@@ -12393,7 +12394,7 @@ MonoBehaviour:
   - {fileID: 540568925}
   typeActive: 1
   distanceCheck: 0.5
-  FxSound: 100
+  FxSound: 15
 --- !u!1 &1412243140
 GameObject:
   m_ObjectHideFlags: 0
@@ -19185,9 +19186,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   disableHand: 0
-  TimeHint: 2
+  TimeHint: 1
   enableCountTime: 0
-  timeCountHint: 2
+  timeCountHint: 1
   handCtrl: {fileID: 8503599624730501112}
   gamePlayManager: {fileID: 736123647}
   lidTapOpener: {fileID: 0}
@@ -19991,6 +19992,7 @@ MonoBehaviour:
   jumpPower: 2
   time: 0.5
   isRotate: 1
+  SoundFx: 100
 --- !u!114 &1874118865
 MonoBehaviour:
   m_ObjectHideFlags: 0

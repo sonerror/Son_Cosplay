@@ -2,7 +2,7 @@
     "version": "7.0.0",
     "projectId": "f42e7ff96e4545544bb6cd68f51ab634",
     "applicationID": 34683,
-    "creativeName": "Cosplaydom_v5",
+    "creativeName": "Cosplaydom_v5-1",
     "pgServer": "EU",
     "window": {
         "‐⁏": true
@@ -44770,6 +44770,26 @@
                         "script": "",
                         "ext": "",
                         "name": "Assets/Textures/BG_back 3.png"
+                    },
+                    {
+                        "maxWidth": 512,
+                        "maxHeight": 512,
+                        "format": "png32",
+                        "compression": "none",
+                        "quality": 65,
+                        "script": "",
+                        "ext": "",
+                        "name": "Assets/Fonts/BBHHegarty-Regular SDF.asset"
+                    },
+                    {
+                        "maxWidth": 512,
+                        "maxHeight": 512,
+                        "format": "png32",
+                        "compression": "none",
+                        "quality": 65,
+                        "script": "",
+                        "ext": "",
+                        "name": "Assets/Fonts/TitanOne-Regular SDF.asset"
                     }
                 ]
             },
