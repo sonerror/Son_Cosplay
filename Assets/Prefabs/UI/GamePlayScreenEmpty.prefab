@@ -561,8 +561,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Help him!
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 89d80ef47e43052489e7150df5cedbaa, type: 2}
-  m_sharedMaterial: {fileID: -2065927316068136489, guid: 89d80ef47e43052489e7150df5cedbaa, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 140425e05d5e31b4c93e8009546d6ecc, type: 2}
+  m_sharedMaterial: {fileID: 2406139331143974335, guid: 140425e05d5e31b4c93e8009546d6ecc, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []

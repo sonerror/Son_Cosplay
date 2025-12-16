@@ -12452,7 +12452,7 @@ Transform:
   m_GameObject: {fileID: 1426154855}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -4, z: 0}
+  m_LocalPosition: {x: -0.4949, y: -4, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -12504,11 +12504,11 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: b4cde5287cac287408a8a89a3dd4f5ae, type: 3}
-  m_Color: {r: 1, g: 0.9490196, b: 0.9490196, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 1
-  m_Size: {x: 12, y: 4.5}
+  m_Size: {x: 11.010145, y: 3.52}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -20121,8 +20121,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.3, y: 0}
-  m_SizeDelta: {x: 22, y: 5}
+  m_AnchoredPosition: {x: 0, y: -0.0309}
+  m_SizeDelta: {x: 22, y: 4.9381}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1895513958
 MonoBehaviour:
@@ -20144,10 +20144,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: I've always dreaming of being Erypt queen. Please help me!
+  m_text: My wish is being Egypt queen!
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: fdd0d2d2b930d88488e0a8a766888b2c, type: 2}
-  m_sharedMaterial: {fileID: -8992341082438601067, guid: fdd0d2d2b930d88488e0a8a766888b2c, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: e87e8fefbcfd6fe4d8800121dc35771a, type: 2}
+  m_sharedMaterial: {fileID: 1002628622038477992, guid: e87e8fefbcfd6fe4d8800121dc35771a, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -20209,7 +20209,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 5.3996763, y: 0.94566417, z: 5.839217, w: 1.2097687}
+  m_margin: {x: 6.047638, y: 0.94566417, z: 5.839217, w: 1.2097687}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   _SortingLayer: 0
@@ -20241,7 +20241,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -8992341082438601067, guid: fdd0d2d2b930d88488e0a8a766888b2c, type: 2}
+  - {fileID: 1002628622038477992, guid: e87e8fefbcfd6fe4d8800121dc35771a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
