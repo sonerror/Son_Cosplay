@@ -333,7 +333,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1515596734718592326
 RectTransform:
   m_ObjectHideFlags: 0
@@ -559,7 +559,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Tap To Play!
+  m_text: Tap To Cosplay!
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 140425e05d5e31b4c93e8009546d6ecc, type: 2}
   m_sharedMaterial: {fileID: 2406139331143974335, guid: 140425e05d5e31b4c93e8009546d6ecc, type: 2}

@@ -73,6 +73,7 @@
     <Compile Include="Assets\AllIn1SpriteShader\Scripts\All1CreateUnifiedOutline.cs" />
     <Compile Include="Assets\Scripts\ItemUseOnce.cs" />
     <Compile Include="Assets\Scripts\LoopAnimTransformFloating.cs" />
+    <Compile Include="Assets\DialogText.cs" />
     <Compile Include="Assets\Scripts\Manager\EventManager.cs" />
     <Compile Include="Assets\Scripts\53\FaceTowelWithVfx.cs" />
     <Compile Include="Assets\Scripts\54\ShowSprite.cs" />

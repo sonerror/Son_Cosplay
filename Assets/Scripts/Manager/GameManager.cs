@@ -22,26 +22,21 @@ public class GameManager : Singleton<GameManager>
 
   private void Update()
   {
-    // if (isPlayingGame && Input.GetMouseButtonDown(0))
-    // {
-    //   EventManager.TriggerEvent("ShowBtnInstall");
-    // }
-
-    if (!hadClicked && Input.GetMouseButtonDown(0))
+    if (isPlayingGame && Input.GetMouseButtonDown(0))
     {
-      hadClicked = true;
-      StartGamePlay();
+      EventManager.TriggerEvent("ShowBtnInstall");
     }
+
   }
 
-  void StartGamePlay()
+  public void StartGamePlay()
   {
     Scene0.SetActive(false);
     Scene1.SetActive(true);
     TutorialManager.Ins.enableCountTime = true;
     SoundManager.Ins.PlayFx(FxType.StartGame);
     isPlayingGame = true;
-    EventManager.TriggerEvent("ShowBtnInstall");
+    EventManager.TriggerEvent("ShowText");
   }
 
   public void PlayPositiveEmoji()

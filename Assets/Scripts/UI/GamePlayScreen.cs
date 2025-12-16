@@ -8,6 +8,16 @@ public class GamePlayScreen : UIScreen
   void Start()
   {
     EventManager.StartListening("ShowBtnInstall", ShowBtnInstall);
+    EventManager.StartListening("ShowText", ShowText);
+
+  }
+
+  private bool hadShowText = false;
+  public void ShowText()
+  {
+    if (hadShowText) return;
+    hadShowText = true;
+    Text.gameObject.SetActive(true);
   }
 
   public void ShowBtnInstall()

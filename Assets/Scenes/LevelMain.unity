@@ -5959,7 +5959,7 @@ ParticleSystem:
       serializedVersion: 2
       minMaxState: 3
       scalar: 1
-      minScalar: 0.5
+      minScalar: 0.75
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -6822,7 +6822,7 @@ ParticleSystem:
       countCurve:
         serializedVersion: 2
         minMaxState: 0
-        scalar: 20
+        scalar: 30
         minScalar: 30
         maxCurve:
           serializedVersion: 2
@@ -12437,6 +12437,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1426154856}
   - component: {fileID: 1426154857}
+  - component: {fileID: 1426154858}
   m_Layer: 0
   m_Name: talking buble
   m_TagString: Untagged
@@ -12454,8 +12455,8 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0.4949, y: -4, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 0, y: 0, z: 0}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 1895513957}
   m_Father: {fileID: 1613180905}
@@ -12515,6 +12516,37 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1426154858
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1426154855}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ccbaac9094998d4282ae0f760e50c44, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fullText: My wish is being Egypt queen!
+  typingSpeed: 0.05
+  textMeshPro: {fileID: 1895513958}
+  nodeParent: {fileID: 1426154856}
+  OnCompleteTyping:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 736123645}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: StartGamePlay
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1426631600
 GameObject:
   m_ObjectHideFlags: 0
@@ -13377,7 +13409,7 @@ ParticleSystem:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-  moveWithTransform: 0
+  moveWithTransform: 1
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
   randomSeed: 0
@@ -20106,7 +20138,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1895513957
 RectTransform:
   m_ObjectHideFlags: 0
@@ -20146,7 +20178,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: My wish is being Egypt queen!
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e87e8fefbcfd6fe4d8800121dc35771a, type: 2}
   m_sharedMaterial: {fileID: 1002628622038477992, guid: e87e8fefbcfd6fe4d8800121dc35771a, type: 2}
@@ -20181,7 +20213,7 @@ MonoBehaviour:
   m_fontSizeMax: 72
   m_fontStyle: 1
   m_HorizontalAlignment: 1
-  m_VerticalAlignment: 512
+  m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
