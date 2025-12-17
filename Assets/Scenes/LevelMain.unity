@@ -12455,7 +12455,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0.4949, y: -4, z: 0}
-  m_LocalScale: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 1895513957}
@@ -12505,11 +12505,11 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: b4cde5287cac287408a8a89a3dd4f5ae, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b754a01429162dc49b8fe67d103c233c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
-  m_DrawMode: 1
+  m_DrawMode: 0
   m_Size: {x: 11.010145, y: 3.52}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
@@ -20138,7 +20138,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1895513957
 RectTransform:
   m_ObjectHideFlags: 0
@@ -20180,8 +20180,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: e87e8fefbcfd6fe4d8800121dc35771a, type: 2}
-  m_sharedMaterial: {fileID: 1002628622038477992, guid: e87e8fefbcfd6fe4d8800121dc35771a, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 0f0d5b535e7c6f845ac3cdeb2e4e5676, type: 2}
+  m_sharedMaterial: {fileID: -8621236923631548055, guid: 0f0d5b535e7c6f845ac3cdeb2e4e5676, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -20205,13 +20205,13 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 10
-  m_fontSizeBase: 10
+  m_fontSize: 11
+  m_fontSizeBase: 11
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 1
+  m_fontStyle: 0
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 256
   m_textAlignment: 65535
@@ -20243,7 +20243,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 6.047638, y: 0.94566417, z: 5.839217, w: 1.2097687}
+  m_margin: {x: 6.9471674, y: 0.94566417, z: 6.7648187, w: 1.2097687}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   _SortingLayer: 0
@@ -20275,7 +20275,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 1002628622038477992, guid: e87e8fefbcfd6fe4d8800121dc35771a, type: 2}
+  - {fileID: -8621236923631548055, guid: 0f0d5b535e7c6f845ac3cdeb2e4e5676, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

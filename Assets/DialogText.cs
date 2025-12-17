@@ -18,20 +18,21 @@ public class DialogText : MonoBehaviour
   void Start()
   {
     ZeroText();
-    nodeParent.localScale = Vector3.zero;
-    nodeParent.DOScale(Vector3.one, 0.5f)
-    .SetDelay(0.5f)
-    .SetEase(Ease.OutBack)
-    .OnComplete(() =>
-    {
+    // nodeParent.localScale = Vector3.zero;
+    // nodeParent.DOScale(Vector3.one, 0.5f)
+    // .SetDelay(0.5f)
+    // .SetEase(Ease.OutBack)
+    // .OnComplete(() =>
+    // {
       StartCoroutine(Typing());
-    });
+    // });
   }
 
   IEnumerator Typing()
   {
-    textMeshPro.gameObject.SetActive(true);
     yield return DTPCache.GetWFS(0.5f);
+    textMeshPro.gameObject.SetActive(true);
+    
     foreach (char letter in fullText.ToCharArray())
     {
       textMeshPro.text += letter;
