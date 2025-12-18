@@ -13,6 +13,7 @@ public class GameManager : Singleton<GameManager>
   public bool isPlayingGame = false;
   public SkeletonAnimation playerSkeleton;
   public CharacterControl characterControl;
+  public ChangeScene changeScene;
 
   public GameObject Scene0, Scene1;
 

@@ -5,11 +5,17 @@ using UnityEngine.EventSystems;
 
 public class RemoveItem : Item
 {
+  [SerializeField]
+  SpriteRenderer spriteRenderer;
   public float DistanceCheck = 1f;
+  private Vector3 _prePos;
+  private int _oriOrder;
 
   protected override void Awake()
   {
     base.Awake();
+    _prePos = Tf.position;
+    _oriOrder = spriteRenderer.sortingOrder;
   }
 
   private Vector3 PosMouseDown;
@@ -24,6 +30,8 @@ public class RemoveItem : Item
 
     isDragging = true;
     PosMouseDown = GetMouseWorldPos();
+    offSet = Tf.position - PosMouseDown;
+    ChangeLayerUp();
   }
 
   public override void MouseUp(BaseEventData eventData)
@@ -31,34 +39,53 @@ public class RemoveItem : Item
     if (isBlocked) return;
     if (!isDragging) return;
     base.MouseUp(eventData);
-
     isDragging = false;
+
+    if (IsReady)
+    {
+      var CurrPos = GetMouseWorldPos();
+      if (Vector3.Distance(PosMouseDown, CurrPos) > DistanceCheck)
+      {
+        IsReady = false;
+        SetBlockItem(true);
+        Vector3 newPosMove = Tf.position + Vector3.down * 2f;
+        OnFinish?.Invoke();
+        Tf.DOMove(newPosMove, 0.75f).OnComplete(() =>
+        {
+          gameObject.SetActive(false);
+        });
+        spriteRenderer.DOFade(0f, 0.75f);
+
+        return;
+      }
+    }
+
     OnDropItem?.Invoke();
+    Tf.DOKill();
+    Tf.DOMove(_prePos, 0.3f).SetEase(Ease.OutBack).OnComplete(() =>
+    {
+      ChangeLayerDown();
+    });
   }
 
   public override void MouseDrag(BaseEventData eventData)
   {
     if (isBlocked || !isDragging) return;
-    var CurrPos = GetMouseWorldPos();
-    if (Vector3.Distance(PosMouseDown, CurrPos) > DistanceCheck)
-    {
-      IsReady = false;
-      OnPickItem?.Invoke();
-      Vector3 targetPos = Tf.position;
-      if (CurrPos.x > PosMouseDown.x)
-      {
-        targetPos += Vector3.right * 15f + Vector3.down * 4f;
-      }
-      else
-      {
-        targetPos += Vector3.left * 15f + Vector3.down * 4f;
-      }
-      OnFinish?.Invoke();
-      Tf.DOJump(targetPos, 1f, 1, 0.75f).OnComplete(() =>
-      {
-        gameObject.SetActive(false);
-      });
-      MouseUp(eventData);
-    }
+
+    Vector3 targetPos = GetMouseWorldPos() + offSet;
+    Vector3 pos = Tf.position;
+    pos = Vector3.Lerp(pos, targetPos, 0.4f * Time.deltaTime * 50f);
+    Tf.position = pos;
+  }
+
+  void ChangeLayerUp()
+  {
+    spriteRenderer.sortingOrder = _oriOrder + 100;
+  }
+
+  void ChangeLayerDown()
+  {
+    spriteRenderer.sortingOrder = _oriOrder;
   }
 }
+

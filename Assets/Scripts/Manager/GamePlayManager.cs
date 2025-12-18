@@ -77,19 +77,27 @@ public class GamePlayManager : Singleton<GamePlayManager>
   }
 
   #region Step0
-  private const string SLOT_GLASS = "Set_Base_glass";
-  private const string ATTACHMENT_GLASS = "Set_Base/glass";
+  private const string SLOT_SCARF1 = "TOP-scarf";
+  private const string SLOT_SCARF2 = "TOP-scarf2";
+  private const string SLOT_SCARF3 = "TOP-scarfx";
+  private const string ATTACHMENT_SCARF1 = "TOP-scarf";
+  private const string ATTACHMENT_SCARF2 = "TOP-scarf";
+  private const string ATTACHMENT_SCARF3 = "TOP-scarfx";
 
   [SerializeField] private GameObject NodeOpenGlassBox, NodeCloseGlassBox;
 
   public void HideGlasses()
   {
-    character.TurnSlotAttachment(SLOT_GLASS);
+    character.TurnSlotAttachment(SLOT_SCARF1);
+    character.TurnSlotAttachment(SLOT_SCARF2);
+    character.TurnSlotAttachment(SLOT_SCARF3);
   }
 
   public void ShowGlasses()
   {
-    character.TurnSlotAttachment(SLOT_GLASS, ATTACHMENT_GLASS);
+    character.TurnSlotAttachment(SLOT_SCARF1, ATTACHMENT_SCARF1);
+    character.TurnSlotAttachment(SLOT_SCARF2, ATTACHMENT_SCARF2);
+    character.TurnSlotAttachment(SLOT_SCARF3, ATTACHMENT_SCARF3);
   }
 
   private void OnStartStep0()

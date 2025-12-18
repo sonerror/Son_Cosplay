@@ -8,7 +8,7 @@ public class ScreenShot : MonoBehaviour
   {
     if (Input.GetKeyDown(KeyCode.P))
     {
-      ScreenCapture.CaptureScreenshot("screenshot.png");
+      ScreenCapture.CaptureScreenshot("Assets/screenshot.png");
       Debug.Log("Screenshot taken");
     }
   }
