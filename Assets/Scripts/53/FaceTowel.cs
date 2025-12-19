@@ -12,7 +12,7 @@ public class FaceTowel : Item
   public Renderer rende;
   private int _oriOrder = 0;
   public MaskGroupCustom maskGroup;
-  public GameObject NodeBody;
+  // public GameObject NodeBody;
   public Transform NodeCheckPos;
 
   protected override void Awake()
@@ -70,10 +70,13 @@ public class FaceTowel : Item
 
   void CheckTarget()
   {
-    if (maskGroup.CheckMasksColiderAndDone(NodeCheckPos.position))
+    if (maskGroup.CheckMasksColider(NodeCheckPos.position))
     {
-      IsReady = false;
-      OnFinish?.Invoke();
+      if (maskGroup.IsDoneRating(true))
+      {
+        IsReady = false;
+        OnFinish?.Invoke();
+      }
     }
   }
 

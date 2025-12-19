@@ -15,7 +15,6 @@ public class FoundationBottle : Item
   private int _oriOrder;
   private Vector3 _prePos;
   [SerializeField] public List<TriggerWithCertainCollider> acnePimpleColliders;
-  [SerializeField] public List<ShowSprite> spriteShows;
 
 
   protected override void Awake()
@@ -27,29 +26,26 @@ public class FoundationBottle : Item
 
   void Start()
   {
-    if (IsReady) OnReady();
   }
 #if UNITY_EDITOR
   [Button]
 #endif
-  public void OnReady()
+  public override void SetReady()
   {
-    IsReady = true;
+    base.SetReady();
     for (int index = 0; index < acnePimpleColliders.Count; index++)
     {
       int i = index; // Capture the index for the lambda
       TriggerWithCertainCollider trigger = acnePimpleColliders[i];
-      ShowSprite show = spriteShows[i];
       trigger.gameObject.SetActive(true);
-      trigger.OnTriggerEvent.AddListener(() => AddAcne(trigger, show, i));
+      trigger.OnTriggerEvent.AddListener(() => AddAcne(trigger, i));
     }
   }
-  private int _currentAcneIndex;
-  private void AddAcne(TriggerWithCertainCollider trigger, ShowSprite show, int index)
+  private int _currentAcneIndex = 0;
+  private void AddAcne(TriggerWithCertainCollider trigger, int index)
   {
     trigger.OnTriggerEvent.RemoveAllListeners();
     trigger.gameObject.SetActive(true);
-    show.ShowSpriteStart();
     // PoolManager.Ins.Spawn(PoolType.SFX_Acne, trigger.transform.position, Quaternion.identity);
     _currentAcneIndex++;
     if (_currentAcneIndex >= acnePimpleColliders.Count) OnDone();
@@ -81,7 +77,7 @@ public class FoundationBottle : Item
     if (!IsReady) { if (ShowEmoijOnWrong) GameManager.Ins.PlayNegativeEmoji(); }
     else
     {
-      if (triggerCollider) triggerCollider.enabled = true;
+      if (triggerCollider) triggerCollider.gameObject.SetActive(true);
     }
     base.MouseDown(eventData);
 
@@ -95,19 +91,18 @@ public class FoundationBottle : Item
     base.MouseUp(eventData);
 
     isDragging = false;
-    OnDropItem?.Invoke();
 
+    if (triggerCollider) triggerCollider.gameObject.SetActive(false);
     Tf.DOKill();
     Tf.DOScale(Vector3.one, 0.2f);
     Tf.DORotate(Vector3.forward * Angle.x, 0.2f);
     Tf.DOMove(_prePos, 0.3f).SetEase(Ease.OutBack).OnComplete(() =>
     {
       SoundManager.Ins.PlayFx(FxType.Drop);
-      ChangeLayerDown();
+      ChangeLayerDown(); OnDropItem?.Invoke();
     });
 
 
-    if (triggerCollider) triggerCollider.enabled = false;
   }
 
   public override void MouseDrag(BaseEventData eventData)

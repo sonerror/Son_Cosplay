@@ -14,6 +14,7 @@ public class BrushBlushWithMaskGroup : Item
   public Vector2 Angle = new Vector2(0, 0);
   public SortingGroup rendeGroup;
   private int _oriOrder;
+  [SerializeField] private bool ShowCirBar = false;
   private Vector3 _prePos;
   [SerializeField] public MaskGroupCustom FlourFill;
   [SerializeField] public TriggerWithCertainCollider BoxFlour;
@@ -76,10 +77,14 @@ public class BrushBlushWithMaskGroup : Item
   {
     if (isBlocked) return;
     if (isDragging) return;
-    if (!IsReady) { if (ShowEmoijOnWrong) GameManager.Ins.PlayNegativeEmoji(); }
+    if (!IsReady)
+    {
+      if (ShowEmoijOnWrong) GameManager.Ins.PlayNegativeEmoji();
+      if (ShowCirBar) GameManager.Ins.fillCircleBar.Show();
+    }
     else
     {
-      triggerCollider.enabled = true;
+      triggerCollider.gameObject.SetActive(true);
     }
     base.MouseDown(eventData);
 
@@ -91,7 +96,7 @@ public class BrushBlushWithMaskGroup : Item
     if (isBlocked) return;
     if (!isDragging) return;
     base.MouseUp(eventData);
-
+    if (ShowCirBar) GameManager.Ins.fillCircleBar.Hide();
     isDragging = false;
     OnDropItem?.Invoke();
 
@@ -103,7 +108,7 @@ public class BrushBlushWithMaskGroup : Item
       SoundManager.Ins.PlayFx(FxType.Drop);
       ChangeLayerDown();
     });
-    triggerCollider.enabled = false;
+    triggerCollider.gameObject.SetActive(false);
   }
 
   public override void MouseDrag(BaseEventData eventData)
@@ -121,10 +126,16 @@ public class BrushBlushWithMaskGroup : Item
   {
     if (currBrushBlushState != BrushBlushState.DragWithPainter) return;
 
-    if (FlourFill.CheckMasksColiderAndDone(Brush.position))
+    if (FlourFill.CheckMasksColider(Brush.position))
+    {
+      if (ShowCirBar) GameManager.Ins.fillCircleBar.Fill(FlourFill.GetPercentFill());
+    }
+
+    if (FlourFill.IsDoneRating(true))
     {
       OnDone();
     }
+
   }
 
   void OnHandleMouseDown()

@@ -10,6 +10,7 @@ public class GameManager : Singleton<GameManager>
 {
   public EmojiControl emojiControl;
   public ClockTimer clockTimer;
+  public FillCircleBar fillCircleBar;
   public bool isPlayingGame = false;
   public SkeletonAnimation playerSkeleton;
   public CharacterControl characterControl;
@@ -61,7 +62,6 @@ public class GameManager : Singleton<GameManager>
   {
     emojiControl.ShowPositive();
     playerSkeleton.AnimationState.SetAnimation(0, "happy", false);
-
     var i = idSoundHappy % 3;
     if (i == 0) SoundManager.Ins.PlayFx(FxType.Happy);
     else if (i == 1) SoundManager.Ins.PlayFx(FxType.Happy1);

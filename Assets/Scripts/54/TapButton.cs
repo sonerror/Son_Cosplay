@@ -15,6 +15,8 @@ namespace AnhPD.Cook
 
     public override void MouseDown(BaseEventData eventData)
     {
+
+      Debug.Log("AAAAAAA");
       base.MouseDown(eventData);
       if (isBlocked) return;
       if (!IsReady) return;

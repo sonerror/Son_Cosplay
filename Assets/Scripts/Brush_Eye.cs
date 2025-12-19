@@ -126,7 +126,7 @@ public class Brush_Eye : Item
     OnPickItem?.Invoke();
     // SoundManager.Ins.PlaySoundLoop(fxSound);
     // SoundManager.Ins.PlayFx(FxType.Click);
-    if (IsReady) GameManager.Ins.characterControl.CloseEye();
+    // if (IsReady) GameManager.Ins.characterControl.CloseEye();
     if (_CurrPar) _CurrPar.Play();
     Vector3 mouseWorldPos = GetMouseWorldPos();
     offSet = Tf.position - mouseWorldPos;

@@ -76,6 +76,7 @@
     <Compile Include="Assets\Scripts\Manager\EventManager.cs" />
     <Compile Include="Assets\Scripts\53\FaceTowelWithVfx.cs" />
     <Compile Include="Assets\Scripts\54\ShowSprite.cs" />
+    <Compile Include="Assets\Scripts\Obj\FillCircleBar.cs" />
     <Compile Include="Assets\DOTween\Modules\DOTweenModuleUnityVersion.cs" />
     <Compile Include="Assets\Scripts\54\Brush_BlushWithMaskGroup.cs" />
     <Compile Include="Assets\AllIn1SpriteShader\Demo\Scripts\DemoCircleExpositor.cs" />
@@ -119,10 +120,12 @@
     <Compile Include="Assets\Scripts\Pool\PoolManager.cs" />
     <Compile Include="Assets\Scripts\Manager\UIManager.cs" />
     <Compile Include="Assets\Scripts\53\FaceTowel.cs" />
+    <Compile Include="Assets\Scripts\54\HideSprite.cs" />
     <Compile Include="Assets\Scripts\54\FoundationBottleWithVfx.cs" />
     <Compile Include="Assets\Scripts\TapOpener.cs" />
     <Compile Include="Assets\Scripts\UI\UIScreen.cs" />
     <Compile Include="Assets\DOTween\Modules\DOTweenModulePhysics.cs" />
+    <Compile Include="Assets\Scripts\TapOpenerSingleUse.cs" />
     <Compile Include="Assets\Scripts\54\SpineSlotData.cs" />
     <Compile Include="Assets\Scripts\Helper\ScreenShot.cs" />
     <Compile Include="Assets\Scripts\Obj\HandCtrl.cs" />

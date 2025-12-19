@@ -25,6 +25,7 @@ public class RemoveItem : Item
     if (isBlocked) return;
     if (isDragging) return;
     base.MouseDown(eventData);
+    OnPickItem?.Invoke();
     if (!IsReady) { if (ShowEmoijOnWrong) GameManager.Ins.PlayNegativeEmoji(); return; }
 
 

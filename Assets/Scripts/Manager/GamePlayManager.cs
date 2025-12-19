@@ -1,4 +1,6 @@
+using System;
 using System.Collections.Generic;
+using AnhPD.Cook;
 using DG.Tweening;
 using HoangHH;
 using Sirenix.OdinInspector;
@@ -32,7 +34,18 @@ public class GamePlayManager : Singleton<GamePlayManager>
 
   void Start()
   {
+    character.SetAlphaSlotName("TOP-mouth-1", 0);
     StartStep();
+  }
+
+  public void TurnOnMouthNew()
+  {
+    character.SetAlphaSlotName("TOP-mouth-1", 1);
+    var slot = character.SkeletonAnimation.Skeleton.FindSlot("TOP-mouth-2");
+    DOVirtual.Float(0f, 1f, 1f, (alpha) =>
+    {
+      slot.A = alpha;
+    });
   }
 
   void DoneStep()
@@ -71,7 +84,23 @@ public class GamePlayManager : Singleton<GamePlayManager>
       case 5:
         OnStartStep5();
         break;
+      case 6:
+        OnStartStep6();
+        break;
+      case 7:
+        OnStartStep7();
+        break;
+      case 8:
+        OnStartStep8();
+        break;
+      case 9:
+        OnStartStep9();
+        break;
+      case 10:
+        OnStartStep10();
+        break;
       default:
+        Debug.LogWarning("No more steps!");
         break;
     }
   }
@@ -83,8 +112,6 @@ public class GamePlayManager : Singleton<GamePlayManager>
   private const string ATTACHMENT_SCARF1 = "TOP-scarf";
   private const string ATTACHMENT_SCARF2 = "TOP-scarf";
   private const string ATTACHMENT_SCARF3 = "TOP-scarfx";
-
-  [SerializeField] private GameObject NodeOpenGlassBox, NodeCloseGlassBox;
 
   public void HideGlasses()
   {
@@ -102,7 +129,7 @@ public class GamePlayManager : Singleton<GamePlayManager>
 
   private void OnStartStep0()
   {
-    var GlassesObject = items[0] as HairBang;
+    var GlassesObject = items[0] as RemoveItem;
     GlassesObject.SetReady();
     GlassesObject.SetBlockItem(false);
     GlassesObject.OnPickItem.AddListener(HideGlasses);
@@ -112,24 +139,13 @@ public class GamePlayManager : Singleton<GamePlayManager>
 
   private void OnEndStep0()
   {
-    this.WaitToDo(() =>
-    {
-      CloseGlassBox();
-    }, 0.5f);
-    var GlassesObject = items[0] as HairBang;
+    var GlassesObject = items[0] as RemoveItem;
     GlassesObject.OnFinish.RemoveListener(OnEndStep0);
     GlassesObject.OnPickItem.RemoveListener(HideGlasses);
     GlassesObject.OnDropItem.RemoveListener(ShowGlasses);
     SoundManager.Ins.PlayFx(FxType.CloseBox);
     DoneStep();
     TryNextStep();
-  }
-
-  void CloseGlassBox()
-  {
-    NodeOpenGlassBox.SetActive(false);
-    NodeCloseGlassBox.SetActive(true);
-    items[0].gameObject.SetActive(false);
   }
   #endregion Step0
 
@@ -161,16 +177,16 @@ public class GamePlayManager : Singleton<GamePlayManager>
 
   private void OnStartStep2()
   {
-    var item = items[2] as BrushBlushWithMaskGroup;
+    var item = items[2] as FoundationBottle;
     item.OnFinish.AddListener(OnEndStep2);
     item.SetReady();
   }
 
   private void OnEndStep2()
   {
-    var item = items[2] as BrushBlushWithMaskGroup;
+    var item = items[2] as FoundationBottle;
     item.OnFinish.RemoveListener(OnEndStep2);
-    item.IsReady = false;
+    // item.IsReady = false;
 
     DoneStep();
     TryNextStep();
@@ -182,17 +198,14 @@ public class GamePlayManager : Singleton<GamePlayManager>
 
   private void OnStartStep3()
   {
-    var item = items[3] as FaceTowelWithVfx;
+    var item = items[3] as TapButton;
     item.OnFinish.AddListener(OnEndStep3);
-    item.MaskGroup.SetTypeActive(false);
-    item.MaskGroup.FxSound = FxType.Shaving;
-    item.MaskGroup.ResetMask();
     item.SetReady();
   }
 
   private void OnEndStep3()
   {
-    var item = items[3] as FaceTowelWithVfx;
+    var item = items[3] as TapButton;
     item.OnFinish.RemoveListener(OnEndStep3);
     item.IsReady = false;
     DoneStep();
@@ -205,7 +218,7 @@ public class GamePlayManager : Singleton<GamePlayManager>
 
   private void OnStartStep4()
   {
-    var item = items[4] as FaceTowelWithVfx;
+    var item = items[4] as FoundationBottle;
     item.OnFinish.AddListener(OnEndStep4);
     item.SetReady();
   }
@@ -213,7 +226,7 @@ public class GamePlayManager : Singleton<GamePlayManager>
   private void OnEndStep4()
   {
 
-    var item = items[4] as FaceTowelWithVfx;
+    var item = items[4] as FoundationBottle;
     item.OnFinish.RemoveListener(OnEndStep4);
     item.IsReady = false;
 
@@ -224,68 +237,183 @@ public class GamePlayManager : Singleton<GamePlayManager>
   #endregion Step4
 
   #region Step5
-
   private void OnStartStep5()
+  {
+    var item = items[5] as BrushBlushWithMaskGroup;
+    item.OnFinish.AddListener(OnEndStep5);
+    item.SetReady();
+  }
+
+  private void OnEndStep5()
+  {
+
+    var item = items[5] as BrushBlushWithMaskGroup;
+    item.OnFinish.RemoveListener(OnEndStep5);
+    item.IsReady = false;
+
+    DoneStep();
+    TryNextStep();
+  }
+  #endregion Step5
+
+  #region Step6
+  private void OnStartStep6()
+  {
+    var item = items[6] as FaceTowel;
+    item.OnFinish.AddListener(OnEndStep6);
+    item.SetReady();
+  }
+
+  private void OnEndStep6()
+  {
+
+    var item = items[6] as FaceTowel;
+    item.OnFinish.RemoveListener(OnEndStep6);
+    item.IsReady = false;
+
+    DoneStep();
+    TryNextStep();
+  }
+  #endregion Step6
+
+  #region Step7
+  private void OnStartStep7()
+  {
+    var item = items[7] as TapOpenerSingleUse;
+    item.OnFinish.AddListener(OnEndStep7);
+    item.SetReady();
+  }
+
+  private void OnEndStep7()
+  {
+
+    var item = items[7] as TapOpenerSingleUse;
+    item.OnFinish.RemoveListener(OnEndStep7);
+    item.IsReady = false;
+
+    DoneStep();
+    TryNextStep();
+  }
+  #endregion Step7
+
+  #region Step8
+  private void OnStartStep8()
+  {
+    var item = items[8] as FoundationBottle;
+    item.OnFinish.AddListener(OnEndStep8);
+    item.SetReady();
+  }
+
+  private void OnEndStep8()
+  {
+
+    var item = items[8] as FoundationBottle;
+    item.OnFinish.RemoveListener(OnEndStep8);
+    item.IsReady = false;
+
+    DoneStep();
+    TryNextStep();
+  }
+  #endregion Step8
+  #region Step9
+
+  private void AddHairband()
+  {
+    Debug.Log("AddHairband");
+    character.TurnSlotAttachment("TOP-hair-baseB");
+    character.TurnSlotAttachment("TOP-hair-baseF");
+    character.TurnSlotAttachment("TOP-hair-net", "phase-outfit-solo/TOP-hair-net");
+    character.TurnSlotAttachment("TOP-hair-netcap", "phase-outfit-solo/TOP-hair-netcap");
+
+  }
+
+  private void OnStartStep9()
+  {
+    var item = items[9];
+    item.OnFinish.AddListener(OnEndStep9);
+    item.OnFinish.AddListener(AddHairband);
+
+    item.SetReady();
+  }
+
+  private void OnEndStep9()
+  {
+
+    var item = items[9];
+    item.OnFinish.RemoveListener(OnEndStep9);
+    item.IsReady = false;
+
+    DoneStep();
+    TryNextStep();
+  }
+  #endregion Step9
+
+  #region Step10
+
+  private String[] step10SlotNames = new string[]
+  {
+    "TOP-brow-R12",
+    "TOP-brow-R11",
+    "SANTA-beard3",
+    "SANTA-beardb3",
+    "SANTA-hairB3",
+    "SANTA-hairF3",
+  };
+
+  private String[] step10AttachmentNames = new string[]
+  {
+    "phase-Santa/SANTA-brow",
+    "phase-Santa/SANTA-brow",
+    "phase-Santa/SANTA-beard",
+    "phase-Santa/SANTA-beardb",
+    "phase-Santa/SANTA-hairB",
+    "phase-Santa/SANTA-hairF",
+  };
+
+  private void OnStartStep10()
+  {
+    var indexCount = 0;
+    for (int i = 10; i < 16; i++)
+    {
+      var item = items[i];
+      int indexSlot = indexCount; // Capture the index for the lambda
+      indexCount++;
+      int index = i;
+      item.OnFinish.AddListener(() => CheckDone(indexSlot, index));
+      item.SetReady();
+    }
+  }
+
+  void CheckDone(int indexSlot, int index)
+  {
+    Debug.Log("CheckDone Step10 " + indexSlot);
+    character.TurnSlotAttachment(step10SlotNames[indexSlot], step10AttachmentNames[indexSlot]);
+    items[index].OnFinish.RemoveAllListeners();
+    items[index].IsReady = false;
+    items[index].gameObject.SetActive(false);
+    for (int i = 10; i < 16; i++)
+    {
+      if (items[i].IsReady) return;
+    }
+    OnEndStep10();
+  }
+
+  private void OnEndStep10()
+  {
+
+    DoneStep();
+    TryNextStep();
+  }
+  #endregion Step10
+
+  #region Step11
+
+  private void OnStartStep11()
   {
     AdsManager.Ins.ShowEndGame();
   }
 
-  // private void OnEndStep5()
-  // {
-  //   var item = items[5] as ItemMove;
-  //   item.OnFinish.RemoveListener(OnEndStep5);
-  //   item.IsReady = false;
-  //   ChangeGroupItemStart();
-  //   DoneStep();
-  //   TryNextStep();
-  // }
+  #endregion Step11
 
-  #endregion Step5
 
-  // #region Step6
-
-  // private void OnStartStep6()
-  // {
-  //   var item = items[6] as FoundationBottleWithFx;
-  //   item.OnFinish.AddListener(OnEndStep6);
-  //   item.SetReady();
-  // }
-
-  // private void OnEndStep6()
-  // {
-  //   var item = items[6] as FoundationBottleWithFx;
-  //   item.OnFinish.RemoveListener(OnEndStep6);
-  //   item.IsReady = false;
-
-  //   DoneStep();
-  //   TryNextStep();
-  // }
-
-  // #endregion Step6
-  // #region Step7
-
-  // private void OnStartStep7()
-  // {
-  //   var item = items[7] as FoundationBottleWithFx;
-  //   item.OnFinish.AddListener(OnEndStep7);
-  //   item.SetReady();
-  // }
-
-  // private void OnEndStep7()
-  // {
-  //   var item = items[7] as FoundationBottleWithFx;
-  //   item.OnFinish.RemoveListener(OnEndStep7);
-  //   item.IsReady = false;
-
-  //   DoneStep();
-  //   TryNextStep();
-  // }
-  // #endregion Step7
-
-  // #region  Step8
-  // private void OnStartStep8()
-  // {
-  //   AdsManager.Ins.ShowEndGame();
-  // }
-  // #endregion Step8
 }

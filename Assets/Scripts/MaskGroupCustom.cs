@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,6 +13,8 @@ public class MaskGroupCustom : GameUnit
   [SerializeField] private bool typeActive = true;
   [SerializeField] private float distanceCheck = 0.75f;
   [SerializeField] public FxType FxSound = FxType.None;
+  [SerializeField] private float RatingDone = 0.85f;
+  [SerializeField] private float CurrRating = 0f;
 
   private void Start()
   {
@@ -31,6 +34,8 @@ public class MaskGroupCustom : GameUnit
       }
     }
 
+    CurrRating = (float)masks.Count(x => x.activeSelf == typeActive) / masks.Count;
+
     return masks.All(x => x.activeSelf == typeActive);
   }
 
@@ -44,12 +49,41 @@ public class MaskGroupCustom : GameUnit
       if (Vector2.Distance(pos, mask.transform.position) < distanceCheck)
       {
         mask.SetActive(typeActive);
-        SoundManager.Ins.PlayFxIfNotPlay(FxSound);
         rs = true;
       }
     }
-
+    if (rs)
+    {
+      SoundManager.Ins.PlayFxIfNotPlay(FxSound);
+      CurrRating = (float)masks.Count(x => x.activeSelf == typeActive) / masks.Count;
+    }
     return rs;
+  }
+
+  public bool IsDoneRating(bool ActiveIfDone = false)
+  {
+    if (CurrRating >= RatingDone)
+    {
+      if (ActiveIfDone)
+      {
+        DoneAllMask();
+      }
+      return true;
+    }
+    else return false;
+  }
+
+  public float GetPercentFill()
+  {
+    return CurrRating;
+  }
+
+  public void DoneAllMask()
+  {
+    foreach (var mask in masks)
+    {
+      mask.SetActive(typeActive);
+    }
   }
 
   public Transform GetTranformOfMaskNotActive()
@@ -67,11 +101,12 @@ public class MaskGroupCustom : GameUnit
 
   public bool IsDone()
   {
-    return masks.All(x => x.activeSelf == typeActive);
+    return Mathf.Approximately(CurrRating, 1f);
   }
 
   public void ResetMask()
   {
+    CurrRating = 0f;
     foreach (var mask in masks)
     {
       mask.SetActive(!typeActive);

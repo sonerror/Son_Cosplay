@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using DG.Tweening.Core.Easing;
 using UnityEditor.UIElements;
 using UnityEngine;
@@ -31,7 +31,6 @@ namespace Utilities
       new KeyframeData(1, 0)
     };
 
-    public EaseCurve curveFieldX;
     public bool isUseScaleTime = false;
     public bool isRandomTimeOffset = false;
     public Vector2 timeOffset = Vector2.zero;
