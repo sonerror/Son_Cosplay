@@ -173,7 +173,6 @@
     <None Include="Assets\_GAME\Levels\LvCosplaySanta\Cha_new 1\SANTA.atlas.txt" />
     <None Include="Assets\_GAME\Core\Common\Shaders\TwoSideTexture.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface-Mobile.shader" />
-    <None Include="Assets\_GAME\Levels\LvCosplaySanta\Spine\Tree\tree.atlas.txt" />
     <None Include="Assets\_GAME\_Costopia\__Gameplay\_Script\Gameplay\Shader\SpineReveal.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\SDFFunctions.hlsl" />
     <None Include="Assets\_GAME\Levels\LvCosplayCleopatra\Spine\CleoPatra.atlas.txt" />
@@ -193,7 +192,6 @@
     <None Include="Assets\_GAME\Levels\LvCosplayCinderella\Animations\ViewNor\School_Girl.atlas.txt" />
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
     <None Include="Assets\DOTween\DOTween.dll" />
-    <None Include="Assets\_GAME\Levels\LvCosplaySanta\Spine\Santa.atlas.txt" />
     <None Include="Assets\Spines\school_boy_38\School_Girl.atlas.txt" />
     <None Include="Assets\_GAME\Levels\LvCosplayHarleyQuinn\Animations\new\Harley_Queen.atlas.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Masking.shader" />
@@ -205,7 +203,6 @@
     <None Include="Assets\_GAME\Levels\LvCosplayHarleyQuinn\Animations\minigame_json\Harley_Queen_minigame.atlas.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Sprite.shader" />
     <None Include="Assets\AllIn1SpriteShader\Resources_moved\AllIn1OneShaderFunctions.cginc" />
-    <None Include="Assets\_GAME\Levels\LvCosplaySanta\Cha_new\SANTA - Copy.atlas.txt" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

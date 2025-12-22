@@ -10,8 +10,10 @@ public class SpineBoneIKControl : MonoBehaviour
 {
   public SkeletonAnimation skeletonAnimation;
 
+#if UNITY_EDITOR
   [ValueDropdown(nameof(GetBoneNames), IsUniqueList = true, DropdownWidth = 300)]
   [OnValueChanged(nameof(SetBoneByName))]
+#endif
   public string boneName;
 
   public Transform target;

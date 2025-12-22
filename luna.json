@@ -6834,7 +6834,7 @@
             },
             {
                 "name": "TMPro.FontFeatureLookupFlags",
-                "excluded": true
+                "excluded": false
             },
             {
                 "name": "TMPro.FontStyles",
@@ -7657,10 +7657,6 @@
                 "excluded": true
             },
             {
-                "name": "Spine.ShearTimeline",
-                "excluded": true
-            },
-            {
                 "name": "Spine.ShearXTimeline",
                 "excluded": true
             },
@@ -7678,10 +7674,6 @@
             },
             {
                 "name": "Spine.PhysicsConstraintMassTimeline",
-                "excluded": true
-            },
-            {
-                "name": "Spine.PhysicsConstraintMixTimeline",
                 "excluded": true
             },
             {
@@ -18150,7 +18142,7 @@
                     },
                     {
                         "name": "targetDisplay#get",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "targetDisplay#set",
@@ -18214,7 +18206,7 @@
                     },
                     {
                         "name": "ScreenToViewportPoint",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "ViewportToScreenPoint",
@@ -23855,6 +23847,10 @@
                     {
                         "name": "ShowClockTimer",
                         "excluded": false
+                    },
+                    {
+                        "name": "ChangeToScene2",
+                        "excluded": true
                     }
                 ]
             },
@@ -24312,6 +24308,26 @@
                     },
                     {
                         "name": "Start",
+                        "excluded": false
+                    },
+                    {
+                        "name": "PlayTut6",
+                        "excluded": true
+                    },
+                    {
+                        "name": "PlayTut7",
+                        "excluded": true
+                    },
+                    {
+                        "name": "PlayTut8",
+                        "excluded": true
+                    },
+                    {
+                        "name": "PlayTut9",
+                        "excluded": true
+                    },
+                    {
+                        "name": "PlayTut10",
                         "excluded": false
                     }
                 ]
@@ -26518,7 +26534,7 @@
                     },
                     {
                         "name": "xPlacement#get",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "xPlacement#set",
@@ -26526,7 +26542,7 @@
                     },
                     {
                         "name": "yPlacement#get",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "yPlacement#set",
@@ -26534,7 +26550,7 @@
                     },
                     {
                         "name": "xAdvance#get",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "xAdvance#set",
@@ -26542,7 +26558,7 @@
                     },
                     {
                         "name": "yAdvance#get",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "yAdvance#set",
@@ -30638,7 +30654,7 @@
                     },
                     {
                         "name": "blockingObjects#get",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "blockingObjects#set",
@@ -31228,7 +31244,7 @@
                 "instanceMethods": [
                     {
                         "name": "op_Addition",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "getDefaultValue",
@@ -31236,7 +31252,7 @@
                     },
                     {
                         "name": "xPlacement#get",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "xPlacement#set",
@@ -31244,7 +31260,7 @@
                     },
                     {
                         "name": "yPlacement#get",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "yPlacement#set",
@@ -31260,7 +31276,7 @@
                     },
                     {
                         "name": "yAdvance#get",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "yAdvance#set",
@@ -31292,7 +31308,7 @@
                     },
                     {
                         "name": "$clone",
-                        "excluded": true
+                        "excluded": false
                     }
                 ]
             },
@@ -34594,7 +34610,7 @@
                     },
                     {
                         "name": "A#set",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "R2#get",
@@ -37362,7 +37378,7 @@
                     },
                     {
                         "name": "GetAbsoluteValue",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "GetAbsoluteValue$1",
@@ -40091,50 +40107,6 @@
                 ]
             },
             {
-                "className": "Utilities.KeyframeData",
-                "staticMethods": [],
-                "instanceMethods": [
-                    {
-                        "name": "ctor",
-                        "excluded": false
-                    }
-                ]
-            },
-            {
-                "className": "Utilities.LoopAnimTransformFloating",
-                "staticMethods": [],
-                "instanceMethods": [
-                    {
-                        "name": "init",
-                        "excluded": false
-                    },
-                    {
-                        "name": "OnEnable",
-                        "excluded": false
-                    },
-                    {
-                        "name": "ResetFloatingAnchor",
-                        "excluded": false
-                    },
-                    {
-                        "name": "EvaluateCurve",
-                        "excluded": false
-                    },
-                    {
-                        "name": "Update",
-                        "excluded": false
-                    },
-                    {
-                        "name": "OnDisable",
-                        "excluded": false
-                    },
-                    {
-                        "name": "CloseEye",
-                        "excluded": false
-                    }
-                ]
-            },
-            {
                 "className": "UnityEngine.TrailModule",
                 "staticMethods": [],
                 "instanceMethods": [
@@ -42609,11 +42581,11 @@
                         "excluded": false
                     },
                     {
-                        "name": "init",
+                        "name": "SkeletonAnimation#get",
                         "excluded": false
                     },
                     {
-                        "name": "CloseEye",
+                        "name": "SetAlphaSlotName",
                         "excluded": false
                     }
                 ]
@@ -42632,7 +42604,7 @@
                     },
                     {
                         "name": "Apply",
-                        "excluded": true
+                        "excluded": false
                     }
                 ]
             },
@@ -42947,8 +42919,68 @@
                         "excluded": false
                     },
                     {
-                        "name": "CloseGlassBox",
+                        "name": "ChangeGroupItemStart",
                         "excluded": false
+                    },
+                    {
+                        "name": "TurnOnMouthNew",
+                        "excluded": false
+                    },
+                    {
+                        "name": "OnEndStep5",
+                        "excluded": false
+                    },
+                    {
+                        "name": "OnStartStep6",
+                        "excluded": false
+                    },
+                    {
+                        "name": "OnEndStep6",
+                        "excluded": false
+                    },
+                    {
+                        "name": "OnStartStep7",
+                        "excluded": false
+                    },
+                    {
+                        "name": "OnEndStep7",
+                        "excluded": false
+                    },
+                    {
+                        "name": "OnStartStep8",
+                        "excluded": false
+                    },
+                    {
+                        "name": "OnEndStep8",
+                        "excluded": false
+                    },
+                    {
+                        "name": "AddHairband",
+                        "excluded": false
+                    },
+                    {
+                        "name": "OnStartStep9",
+                        "excluded": false
+                    },
+                    {
+                        "name": "OnEndStep9",
+                        "excluded": false
+                    },
+                    {
+                        "name": "OnStartStep10",
+                        "excluded": false
+                    },
+                    {
+                        "name": "CheckDone",
+                        "excluded": false
+                    },
+                    {
+                        "name": "OnEndStep10",
+                        "excluded": true
+                    },
+                    {
+                        "name": "OnStartStep11",
+                        "excluded": true
                     }
                 ]
             },
@@ -43179,6 +43211,10 @@
                     {
                         "name": "ChangeLayerDown",
                         "excluded": false
+                    },
+                    {
+                        "name": "SetReady",
+                        "excluded": false
                     }
                 ]
             },
@@ -43196,10 +43232,6 @@
                     },
                     {
                         "name": "Start",
-                        "excluded": false
-                    },
-                    {
-                        "name": "OnReady",
                         "excluded": false
                     },
                     {
@@ -43236,6 +43268,10 @@
                     },
                     {
                         "name": "ChangeLayerDown",
+                        "excluded": false
+                    },
+                    {
+                        "name": "SetReady",
                         "excluded": false
                     }
                 ]
@@ -43348,6 +43384,18 @@
                     },
                     {
                         "name": "SetTypeActive",
+                        "excluded": false
+                    },
+                    {
+                        "name": "IsDoneRating",
+                        "excluded": false
+                    },
+                    {
+                        "name": "GetPercentFill",
+                        "excluded": false
+                    },
+                    {
+                        "name": "DoneAllMask",
                         "excluded": false
                     }
                 ]
@@ -43693,6 +43741,14 @@
                     {
                         "name": "MouseDrag",
                         "excluded": false
+                    },
+                    {
+                        "name": "ChangeLayerUp",
+                        "excluded": false
+                    },
+                    {
+                        "name": "ChangeLayerDown",
+                        "excluded": true
                     }
                 ]
             },
@@ -44553,6 +44609,138 @@
                         "excluded": false
                     }
                 ]
+            },
+            {
+                "className": "ChangeScene",
+                "staticMethods": [],
+                "instanceMethods": [
+                    {
+                        "name": "init",
+                        "excluded": false
+                    },
+                    {
+                        "name": "ChangeSceneAndCall",
+                        "excluded": false
+                    },
+                    {
+                        "name": "ChangeSceneCoroutine",
+                        "excluded": false
+                    }
+                ]
+            },
+            {
+                "className": "HideSprite",
+                "staticMethods": [],
+                "instanceMethods": [
+                    {
+                        "name": "init",
+                        "excluded": false
+                    },
+                    {
+                        "name": "Awake",
+                        "excluded": false
+                    },
+                    {
+                        "name": "ShowSpriteStart",
+                        "excluded": false
+                    }
+                ]
+            },
+            {
+                "className": "HoangHH.FillCircleBar",
+                "staticMethods": [],
+                "instanceMethods": [
+                    {
+                        "name": "IsShow#get",
+                        "excluded": true
+                    },
+                    {
+                        "name": "init",
+                        "excluded": false
+                    },
+                    {
+                        "name": "SetUp",
+                        "excluded": true
+                    },
+                    {
+                        "name": "ReFill",
+                        "excluded": false
+                    },
+                    {
+                        "name": "Fill",
+                        "excluded": false
+                    },
+                    {
+                        "name": "Show",
+                        "excluded": false
+                    },
+                    {
+                        "name": "Hide",
+                        "excluded": false
+                    }
+                ]
+            },
+            {
+                "className": "HoangHH.TapOpenerSingleUse",
+                "staticMethods": [],
+                "instanceMethods": [
+                    {
+                        "name": "init",
+                        "excluded": false
+                    },
+                    {
+                        "name": "MouseUp",
+                        "excluded": false
+                    },
+                    {
+                        "name": "SetOpen",
+                        "excluded": false
+                    }
+                ]
+            },
+            {
+                "className": "Spine.ShearTimeline",
+                "staticMethods": [],
+                "instanceMethods": [
+                    {
+                        "name": "BoneIndex#get",
+                        "excluded": true
+                    },
+                    {
+                        "name": "ctor",
+                        "excluded": false
+                    },
+                    {
+                        "name": "Apply",
+                        "excluded": false
+                    }
+                ]
+            },
+            {
+                "className": "Spine.PhysicsConstraintMixTimeline",
+                "staticMethods": [],
+                "instanceMethods": [
+                    {
+                        "name": "ctor",
+                        "excluded": false
+                    },
+                    {
+                        "name": "Setup",
+                        "excluded": false
+                    },
+                    {
+                        "name": "Get",
+                        "excluded": false
+                    },
+                    {
+                        "name": "Set",
+                        "excluded": false
+                    },
+                    {
+                        "name": "Global",
+                        "excluded": true
+                    }
+                ]
             }
         ],
         "stubberDataList": [],
@@ -44800,6 +44988,36 @@
                         "script": "",
                         "ext": "",
                         "name": "Assets/Fonts/Itim-Regular SDF.asset"
+                    },
+                    {
+                        "maxWidth": 512,
+                        "maxHeight": 512,
+                        "format": "png32",
+                        "compression": "none",
+                        "quality": 65,
+                        "script": "",
+                        "ext": "",
+                        "name": "Assets/Fonts/TitanOne-Regular SDF 1.asset"
+                    },
+                    {
+                        "maxWidth": 1024,
+                        "maxHeight": 1024,
+                        "format": "png32",
+                        "compression": "quantSize",
+                        "quality": 65,
+                        "script": "",
+                        "ext": "",
+                        "name": "Assets/_GAME/Levels/LvCosplaySanta/Textures/BG/BG.png"
+                    },
+                    {
+                        "maxWidth": 2048,
+                        "maxHeight": 2048,
+                        "format": "png32",
+                        "compression": "quantSize",
+                        "quality": 65,
+                        "script": "",
+                        "ext": "",
+                        "name": "Assets/_GAME/Levels/LvCosplaySanta/Cha_new 1/SANTA.png"
                     }
                 ]
             },
@@ -44853,6 +45071,16 @@
                         "script": "",
                         "ext": "",
                         "name": "Assets/_GAME/_Costopia/_Audio/BGM/Cleopatra.ogg"
+                    },
+                    {
+                        "channels": 1,
+                        "startTime": "00:00.000",
+                        "endTime": "00:21.389",
+                        "lengthInSeconds": 21.388999938964845,
+                        "bitrate": 64,
+                        "script": "",
+                        "ext": "",
+                        "name": "Assets/_GAME/Levels/LvCosplaySanta/Sounds/bgm_lvSanta.ogg"
                     }
                 ]
             },

@@ -21,6 +21,7 @@ namespace HoangHH
       base.MouseUp(eventData);
       if (!IsReady) return;
       SetOpen();
+      SoundManager.Ins.PlayFx(FxType.Pick);
       IsReady = false;
     }
 

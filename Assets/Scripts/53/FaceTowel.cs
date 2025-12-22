@@ -11,6 +11,7 @@ public class FaceTowel : Item
   public Vector2 Angle = new Vector2(0, 0);
   public Renderer rende;
   private int _oriOrder = 0;
+  [SerializeField] private bool ShowCirBar = false;
   public MaskGroupCustom maskGroup;
   // public GameObject NodeBody;
   public Transform NodeCheckPos;
@@ -24,6 +25,16 @@ public class FaceTowel : Item
     if (!NodeCheckPos) NodeCheckPos = Tf;
   }
 
+  public override void SetReady()
+  {
+    base.SetReady();
+    if (ShowCirBar)
+    {
+      GameManager.Ins.fillCircleBar.ReFill();
+      GameManager.Ins.fillCircleBar.Fill(0f);
+    }
+  }
+
 #if UNITY_EDITOR
   [Button]
 #endif
@@ -34,7 +45,7 @@ public class FaceTowel : Item
     if (isDragging) return;
     if (!IsReady) { if (ShowEmoijOnWrong) GameManager.Ins.PlayNegativeEmoji(); }
     base.MouseDown(eventData);
-
+    if (ShowCirBar) GameManager.Ins.fillCircleBar.Show();
     OnHandleMouseDown();
   }
 
@@ -72,11 +83,15 @@ public class FaceTowel : Item
   {
     if (maskGroup.CheckMasksColider(NodeCheckPos.position))
     {
+      if (ShowCirBar) GameManager.Ins.fillCircleBar.Fill(maskGroup.GetPercentFill());
       if (maskGroup.IsDoneRating(true))
       {
+        if (ShowCirBar) GameManager.Ins.fillCircleBar.Fill(maskGroup.GetPercentFill());
+
         IsReady = false;
         OnFinish?.Invoke();
       }
+
     }
   }
 
@@ -84,6 +99,7 @@ public class FaceTowel : Item
   {
     if (isBlocked) return;
     if (!isDragging) return;
+    if (ShowCirBar) GameManager.Ins.fillCircleBar.Hide();
     isDragging = false;
     OnDropItem?.Invoke();
     OnHandleMouseUp();

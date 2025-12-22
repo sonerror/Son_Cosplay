@@ -44,6 +44,11 @@ public class BrushBlushWithMaskGroup : Item
 
     if (currBrushBlushState == BrushBlushState.Drag)
     {
+      if (ShowCirBar)
+      {
+        GameManager.Ins.fillCircleBar.ReFill();
+        GameManager.Ins.fillCircleBar.Fill(0f);
+      }
       TriggerWithCertainCollider trigger = BoxFlour;
       trigger.gameObject.SetActive(true);
       trigger.OnTriggerEvent.AddListener(() => ChangeStatePainter(trigger));
@@ -80,10 +85,11 @@ public class BrushBlushWithMaskGroup : Item
     if (!IsReady)
     {
       if (ShowEmoijOnWrong) GameManager.Ins.PlayNegativeEmoji();
-      if (ShowCirBar) GameManager.Ins.fillCircleBar.Show();
+
     }
     else
     {
+      if (ShowCirBar) GameManager.Ins.fillCircleBar.Show();
       triggerCollider.gameObject.SetActive(true);
     }
     base.MouseDown(eventData);
@@ -129,12 +135,15 @@ public class BrushBlushWithMaskGroup : Item
     if (FlourFill.CheckMasksColider(Brush.position))
     {
       if (ShowCirBar) GameManager.Ins.fillCircleBar.Fill(FlourFill.GetPercentFill());
+      if (FlourFill.IsDoneRating(true))
+      {
+        if (ShowCirBar) GameManager.Ins.fillCircleBar.Fill(FlourFill.GetPercentFill());
+        OnDone();
+      }
+
     }
 
-    if (FlourFill.IsDoneRating(true))
-    {
-      OnDone();
-    }
+
 
   }
 

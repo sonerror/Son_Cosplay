@@ -9,30 +9,30 @@ namespace HoangHH
     [SerializeField] private Image fillImage;
     [SerializeField] private float showTime = 0.3f;
 
-    private System.Action _onFillComplete;
     private Tween _showTween;
 
     private float _currentFill;
-    private bool _isFilled;
+    [SerializeField] private bool _isFilled;
     private bool _isShow;
 
     public bool IsShow => _isShow;
 
-    public void SetUp(System.Action onFillComplete = null, bool showInstantly = true)
+    public void SetUp(bool showInstantly = true)
     {
       _isFilled = false;
       _currentFill = 0;
-      fillImage.fillAmount = 0;
-      _onFillComplete = onFillComplete;
+      fillImage.fillAmount = 0f;
       _isShow = false;
       if (showInstantly) Show();
     }
 
     public void ReFill()
     {
+      Debug.Log("FillCircleBar ReFill");
       _isFilled = false;
       _currentFill = 0;
-      fillImage.fillAmount = 0;
+      fillImage.fillAmount = 0f;
+
     }
 
     public void Fill(float fillTo)
@@ -42,8 +42,6 @@ namespace HoangHH
       fillImage.fillAmount = _currentFill;
       if (!Mathf.Approximately(_currentFill, 1f)) return;
       _isFilled = true;
-      _onFillComplete?.Invoke();
-      _onFillComplete = null;
       Hide();
     }
 

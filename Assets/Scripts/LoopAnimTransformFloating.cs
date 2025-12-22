@@ -1,8 +1,4 @@
-using System.Collections;
-using DG.Tweening.Core.Easing;
-using UnityEditor.UIElements;
 using UnityEngine;
-using UnityEngine.UI;
 
 namespace Utilities
 {

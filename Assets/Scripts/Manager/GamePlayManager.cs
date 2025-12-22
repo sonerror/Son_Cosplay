@@ -424,6 +424,7 @@ public class GamePlayManager : Singleton<GamePlayManager>
   private void OnStartStep11()
   {
     AdsManager.Ins.ShowEndGame();
+    GameManager.Ins.ChangeToScene2();
   }
 
   #endregion Step11

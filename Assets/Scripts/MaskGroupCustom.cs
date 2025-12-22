@@ -67,6 +67,7 @@ public class MaskGroupCustom : GameUnit
       if (ActiveIfDone)
       {
         DoneAllMask();
+        CurrRating = 1f;
       }
       return true;
     }

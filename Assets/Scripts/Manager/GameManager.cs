@@ -45,7 +45,7 @@ public class GameManager : Singleton<GameManager>
     {
       Scene0.SetActive(false);
       Scene1.SetActive(true);
-      GamePlayManager.Ins.StartStep();
+      // GamePlayManager.Ins.StartStep();
     });
 
 
@@ -53,6 +53,15 @@ public class GameManager : Singleton<GameManager>
     SoundManager.Ins.PlayFx(FxType.StartGame);
     isPlayingGame = true;
     EventManager.TriggerEvent("ShowBtnInstall");
+  }
+
+  public void ChangeToScene2()
+  {
+    changeScene.ChangeSceneAndCall(() =>
+    {
+      Scene1.SetActive(false);
+      Scene2.SetActive(true);
+    });
   }
 
   public void PlayPositiveEmoji()
