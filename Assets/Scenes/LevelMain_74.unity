@@ -1268,6 +1268,7 @@ MonoBehaviour:
     targetTf: {fileID: 499395621}
     distance: 2
     hadChecked: 0
+  sizeScalePick: {x: 1.15, y: 1.15, z: 1.15}
 --- !u!114 &200793883
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2380,7 +2381,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &374657781
 Transform:
   m_ObjectHideFlags: 0
@@ -3417,6 +3418,7 @@ MonoBehaviour:
   triggerCollider: {fileID: 46903597}
   Angle: {x: -25.7, y: -50}
   rendeGroup: {fileID: 547900340}
+  ShowCirBar: 0
   FlourFill: {fileID: 1411338763}
   BoxFlour: {fileID: 1733524887}
   Brush: {fileID: 763820085}
@@ -3957,6 +3959,8 @@ MonoBehaviour:
   typeActive: 0
   distanceCheck: 0.75
   FxSound: 100
+  RatingDone: 0.85
+  CurrRating: 0
 --- !u!1 &684489435
 GameObject:
   m_ObjectHideFlags: 0
@@ -4261,12 +4265,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   emojiControl: {fileID: 1089206829710878596}
   clockTimer: {fileID: 2330175927518235536}
+  fillCircleBar: {fileID: 0}
   isPlayingGame: 0
   playerSkeleton: {fileID: 6311963517468488243}
   characterControl: {fileID: 8529172756960282426}
   changeScene: {fileID: 0}
   Scene0: {fileID: 1613180904}
   Scene1: {fileID: 374657780}
+  Scene2: {fileID: 0}
 --- !u!114 &736123646
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4292,6 +4298,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   character: {fileID: 8529172756960282426}
+  Gr1: {fileID: 0}
+  Gr2: {fileID: 0}
   items:
   - {fileID: 200793882}
   - {fileID: 462311453}
@@ -4299,8 +4307,7 @@ MonoBehaviour:
   - {fileID: 1223426437}
   - {fileID: 1382973288}
   currentStep: 0
-  NodeOpenGlassBox: {fileID: 1455595007}
-  NodeCloseGlassBox: {fileID: 1152557649}
+  spriteStep5: {fileID: 0}
 --- !u!1 &739514850
 GameObject:
   m_ObjectHideFlags: 0
@@ -12396,6 +12403,8 @@ MonoBehaviour:
   typeActive: 1
   distanceCheck: 0.5
   FxSound: 15
+  RatingDone: 0.85
+  CurrRating: 0
 --- !u!1 &1412243140
 GameObject:
   m_ObjectHideFlags: 0
@@ -20981,7 +20990,6 @@ MonoBehaviour:
   Angle: {x: 0, y: 0}
   rende: {fileID: 2011895131}
   acnePimpleColliders: []
-  spriteShows: []
 --- !u!114 &2011895133
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22627,7 +22635,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   skeletonAnimation: {fileID: 6311963517468488243}
-  eye: {fileID: 7426031139983132072}
 --- !u!1 &8545685235850829554
 GameObject:
   m_ObjectHideFlags: 0

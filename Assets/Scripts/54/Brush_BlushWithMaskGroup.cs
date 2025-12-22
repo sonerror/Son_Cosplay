@@ -57,7 +57,7 @@ public class BrushBlushWithMaskGroup : Item
   void ChangeStatePainter(TriggerWithCertainCollider trigger)
   {
     trigger.OnTriggerEvent.RemoveAllListeners();
-    SoundManager.Ins.PlayFx(FxType.AddGel);
+    SoundManager.Ins.PlayFx(FxType.MagicSparkle);
     // trigger.gameObject.SetActive(false);
     Brush.gameObject.SetActive(true);
     if (brushOnPainterFx) brushOnPainterFx.Play();

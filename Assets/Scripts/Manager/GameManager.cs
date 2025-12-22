@@ -16,7 +16,7 @@ public class GameManager : Singleton<GameManager>
   public CharacterControl characterControl;
   public ChangeScene changeScene;
 
-  public GameObject Scene0, Scene1;
+  public GameObject Scene0, Scene1, Scene2;
 
   private IEnumerator coroutine = null;
 
@@ -38,8 +38,17 @@ public class GameManager : Singleton<GameManager>
 
   void StartGamePlay()
   {
-    Scene0.SetActive(false);
-    Scene1.SetActive(true);
+    // Scene0.SetActive(false);
+    // Scene1.SetActive(true);
+
+    changeScene.ChangeSceneAndCall(() =>
+    {
+      Scene0.SetActive(false);
+      Scene1.SetActive(true);
+      GamePlayManager.Ins.StartStep();
+    });
+
+
     TutorialManager.Ins.enableCountTime = true;
     SoundManager.Ins.PlayFx(FxType.StartGame);
     isPlayingGame = true;

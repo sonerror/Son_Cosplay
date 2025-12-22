@@ -9,16 +9,16 @@ using UnityEngine;
 public class GamePlayManager : Singleton<GamePlayManager>
 {
   public CharacterControl character;
-  // public ShowObjectEffect Gr1, Gr2;
+  public ShowObjectEffect Gr1, Gr2;
 
   public List<Item> items = new List<Item>();
 
-  // public void ChangeGroupItemStart()
-  // {
-  //   Debug.Log("ChangeGroupItemStart ");
-  //   Gr1.Hide(0.5f);
-  //   Gr2.Show(1f);
-  // }
+  public void ChangeGroupItemStart()
+  {
+    Debug.Log("ChangeGroupItemStart ");
+    Gr1.Hide(0.5f);
+    Gr2.Show(1f);
+  }
 
   [SerializeField] private int currentStep = 0;
   public int CurrentStep => currentStep;
@@ -56,13 +56,14 @@ public class GamePlayManager : Singleton<GamePlayManager>
   void TryNextStep()
   {
     currentStep++;
+    Debug.LogWarning("nextto" + currentStep);
     StartStep();
   }
 
 #if UNITY_EDITOR
   [Button]
 #endif
-  void StartStep()
+  public void StartStep()
   {
     switch (currentStep)
     {
@@ -98,6 +99,9 @@ public class GamePlayManager : Singleton<GamePlayManager>
         break;
       case 10:
         OnStartStep10();
+        break;
+      case 11:
+        OnStartStep11();
         break;
       default:
         Debug.LogWarning("No more steps!");
@@ -198,6 +202,7 @@ public class GamePlayManager : Singleton<GamePlayManager>
 
   private void OnStartStep3()
   {
+    Debug.Log("OnStartStep3");
     var item = items[3] as TapButton;
     item.OnFinish.AddListener(OnEndStep3);
     item.SetReady();
@@ -218,6 +223,7 @@ public class GamePlayManager : Singleton<GamePlayManager>
 
   private void OnStartStep4()
   {
+    Debug.Log("OnStartStep4");
     var item = items[4] as FoundationBottle;
     item.OnFinish.AddListener(OnEndStep4);
     item.SetReady();
@@ -237,6 +243,8 @@ public class GamePlayManager : Singleton<GamePlayManager>
   #endregion Step4
 
   #region Step5
+
+  public SpriteRenderer spriteStep5;
   private void OnStartStep5()
   {
     var item = items[5] as BrushBlushWithMaskGroup;
@@ -246,10 +254,13 @@ public class GamePlayManager : Singleton<GamePlayManager>
 
   private void OnEndStep5()
   {
-
+    spriteStep5.maskInteraction = SpriteMaskInteraction.None;
     var item = items[5] as BrushBlushWithMaskGroup;
+    item.FlourFill.gameObject.SetActive(false);
     item.OnFinish.RemoveListener(OnEndStep5);
     item.IsReady = false;
+
+    ChangeGroupItemStart();
 
     DoneStep();
     TryNextStep();
@@ -291,7 +302,7 @@ public class GamePlayManager : Singleton<GamePlayManager>
     item.OnFinish.RemoveListener(OnEndStep7);
     item.IsReady = false;
 
-    DoneStep();
+    // DoneStep();
     TryNextStep();
   }
   #endregion Step7
@@ -320,6 +331,7 @@ public class GamePlayManager : Singleton<GamePlayManager>
   private void AddHairband()
   {
     Debug.Log("AddHairband");
+    SoundManager.Ins.PlayFx(FxType.Drop);
     character.TurnSlotAttachment("TOP-hair-baseB");
     character.TurnSlotAttachment("TOP-hair-baseF");
     character.TurnSlotAttachment("TOP-hair-net", "phase-outfit-solo/TOP-hair-net");
@@ -387,6 +399,7 @@ public class GamePlayManager : Singleton<GamePlayManager>
   void CheckDone(int indexSlot, int index)
   {
     Debug.Log("CheckDone Step10 " + indexSlot);
+    SoundManager.Ins.PlayFx(FxType.Drop);
     character.TurnSlotAttachment(step10SlotNames[indexSlot], step10AttachmentNames[indexSlot]);
     items[index].OnFinish.RemoveAllListeners();
     items[index].IsReady = false;

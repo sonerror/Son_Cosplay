@@ -13,6 +13,8 @@ public class HairBang : Item
   private int _initOrder;
   public TargetInfo targetInfos = new TargetInfo();
 
+  [SerializeField] private Vector3 sizeScalePick = Vector3.one * 1.15f;
+
   protected override void Awake()
   {
     base.Awake();
@@ -40,7 +42,7 @@ public class HairBang : Item
     targetPos.z = 0;
 
     Tf.DOKill();
-    Tf.DOScale(Vector3.one * 1.15f, 0.2f);
+    Tf.DOScale(sizeScalePick, 0.2f);
     Tf.DORotate(Vector3.forward * Angle.y, 0.2f);
     ChangeLayerUp();
   }

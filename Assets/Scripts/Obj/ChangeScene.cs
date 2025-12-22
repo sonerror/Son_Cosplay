@@ -11,13 +11,13 @@ public class ChangeScene : MonoBehaviour
   [SerializeField] private Transform NodeMask;
 
 
-  public void ChangeSceneStart(UnityEvent action)
+  public void ChangeSceneAndCall(UnityAction action)
   {
     gameObject.SetActive(true);
     StartCoroutine(ChangeSceneCoroutine(action));
   }
 
-  private IEnumerator ChangeSceneCoroutine(UnityEvent action)
+  private IEnumerator ChangeSceneCoroutine(UnityAction action)
   {
     NodeMask.localScale = SizeStart;
     NodeMask.gameObject.SetActive(true);

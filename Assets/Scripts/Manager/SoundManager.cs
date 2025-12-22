@@ -21,8 +21,8 @@ public enum FxType
   CreamBrush = 15,
   Sfx_Shaver = 16,
   MagicSparkle = 17,
-  DapPhan = 18,
-  Shower = 19,
+  ToPhan = 18,
+  ToPhanDai = 19,
 
   None = 100,
 

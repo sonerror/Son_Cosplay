@@ -37,14 +37,11 @@ namespace HoangHH
       if (isBlocked) return;
       if (!IsReady) return;
       IsReady = false;
+      Debug.Log("TapJumpOpener SetOpen");
+      OnFinish?.Invoke();
       col.enabled = false;
       SoundManager.Ins.PlayFx(SoundFx);
-      Tf.DOJump(targetLocal.position, jumpPower, 1, time).SetEase(Ease.OutQuad)
-        .OnComplete(() =>
-        {
-          OnFinish?.Invoke();
-
-        });
+      Tf.DOJump(targetLocal.position, jumpPower, 1, time).SetEase(Ease.OutQuad);
 
       if (isRotate)
       {
