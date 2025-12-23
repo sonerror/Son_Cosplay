@@ -44,11 +44,6 @@ public class BrushBlushWithMaskGroup : Item
 
     if (currBrushBlushState == BrushBlushState.Drag)
     {
-      if (ShowCirBar)
-      {
-        GameManager.Ins.fillCircleBar.ReFill();
-        GameManager.Ins.fillCircleBar.Fill(0f);
-      }
       TriggerWithCertainCollider trigger = BoxFlour;
       trigger.gameObject.SetActive(true);
       trigger.OnTriggerEvent.AddListener(() => ChangeStatePainter(trigger));
@@ -62,11 +57,13 @@ public class BrushBlushWithMaskGroup : Item
   void ChangeStatePainter(TriggerWithCertainCollider trigger)
   {
     trigger.OnTriggerEvent.RemoveAllListeners();
+    SoundManager.Ins.PlayFx(FxType.BrushAdd);
     SoundManager.Ins.PlayFx(FxType.MagicSparkle);
     // trigger.gameObject.SetActive(false);
     Brush.gameObject.SetActive(true);
     if (brushOnPainterFx) brushOnPainterFx.Play();
     currBrushBlushState = BrushBlushState.DragWithPainter;
+    if (ShowCirBar) GameManager.Ins.fillCircleBar.Show();
     SetReady();
   }
 
@@ -89,7 +86,7 @@ public class BrushBlushWithMaskGroup : Item
     }
     else
     {
-      if (ShowCirBar) GameManager.Ins.fillCircleBar.Show();
+      if (ShowCirBar && currBrushBlushState == BrushBlushState.DragWithPainter) GameManager.Ins.fillCircleBar.Show();
       triggerCollider.gameObject.SetActive(true);
     }
     base.MouseDown(eventData);
@@ -138,6 +135,8 @@ public class BrushBlushWithMaskGroup : Item
       if (FlourFill.IsDoneRating(true))
       {
         if (ShowCirBar) GameManager.Ins.fillCircleBar.Fill(FlourFill.GetPercentFill());
+        Debug.Log(FlourFill.GetPercentFill());
+        Debug.Log("Done");
         OnDone();
       }
 

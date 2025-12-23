@@ -66,7 +66,7 @@ public class ItemUseOnce : Item
       {
         OnFinish?.Invoke();
         gameObject.SetActive(false);
-        SoundManager.Ins.PlayFx(FxType.AddGel);
+        // SoundManager.Ins.PlayFx(FxType.AddGel);
       });
       return true;
     }

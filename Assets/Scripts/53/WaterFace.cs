@@ -11,7 +11,7 @@ public class WaterFace : MonoBehaviour
   [SerializeField] private SpriteRenderer spriteShow;
   [SerializeField] private SpriteRenderer spriteHide;
   [SerializeField] private Item ItemOwner;
-  public FxType fxSound = FxType.Hair_Shave;
+  public FxType fxSound = FxType.None;
 
 
   public UnityEvent onComplete;

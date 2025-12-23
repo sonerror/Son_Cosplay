@@ -35,17 +35,20 @@ public class GamePlayManager : Singleton<GamePlayManager>
   void Start()
   {
     character.SetAlphaSlotName("TOP-mouth-1", 0);
+    character.SetAlphaSlotName("TOP-mouthbase-1", 0);
     StartStep();
   }
 
   public void TurnOnMouthNew()
   {
-    character.SetAlphaSlotName("TOP-mouth-1", 1);
-    var slot = character.SkeletonAnimation.Skeleton.FindSlot("TOP-mouth-2");
-    DOVirtual.Float(0f, 1f, 1f, (alpha) =>
-    {
-      slot.A = alpha;
-    });
+    // character.SetAlphaSlotName("TOP-mouth-1", 1);
+    // var slot = character.SkeletonAnimation.Skeleton.FindSlot("TOP-mouth-2");
+    // DOVirtual.Float(0f, 1f, 1f, (alpha) =>
+    // {
+    //   slot.A = alpha;
+    // });
+
+    character.SetMouseDone();
   }
 
   void DoneStep()
@@ -147,7 +150,6 @@ public class GamePlayManager : Singleton<GamePlayManager>
     GlassesObject.OnFinish.RemoveListener(OnEndStep0);
     GlassesObject.OnPickItem.RemoveListener(HideGlasses);
     GlassesObject.OnDropItem.RemoveListener(ShowGlasses);
-    SoundManager.Ins.PlayFx(FxType.CloseBox);
     DoneStep();
     TryNextStep();
   }

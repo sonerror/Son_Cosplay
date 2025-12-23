@@ -1,8 +1,8 @@
 {
     "version": "7.0.0",
     "projectId": "f42e7ff96e4545544bb6cd68f51ab634",
-    "applicationID": 27599,
-    "creativeName": "Cosplaydom_v5-1GG",
+    "applicationID": 34683,
+    "creativeName": "Cosplaydom_v6",
     "pgServer": "EU",
     "window": {
         "‐⁏": true
@@ -45010,8 +45010,8 @@
                         "name": "Assets/_GAME/Levels/LvCosplaySanta/Textures/BG/BG.png"
                     },
                     {
-                        "maxWidth": 2048,
-                        "maxHeight": 2048,
+                        "maxWidth": 1024,
+                        "maxHeight": 1024,
                         "format": "png32",
                         "compression": "quantSize",
                         "quality": 65,
@@ -45027,7 +45027,7 @@
                     "startTime": "00:00.000",
                     "endTime": "00:00.000",
                     "lengthInSeconds": 0.0,
-                    "bitrate": 128,
+                    "bitrate": 64,
                     "script": "",
                     "ext": ""
                 },
@@ -45081,6 +45081,16 @@
                         "script": "",
                         "ext": "",
                         "name": "Assets/_GAME/Levels/LvCosplaySanta/Sounds/bgm_lvSanta.ogg"
+                    },
+                    {
+                        "channels": 1,
+                        "startTime": "00:00.000",
+                        "endTime": "00:21.389",
+                        "lengthInSeconds": 21.388999938964845,
+                        "bitrate": 128,
+                        "script": "",
+                        "ext": "",
+                        "name": "Assets/_GAME/Levels/LvCosplaySanta/santa-papa-noel-feliz-navidad-01-127494.ogg"
                     }
                 ]
             },

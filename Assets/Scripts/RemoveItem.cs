@@ -10,6 +10,7 @@ public class RemoveItem : Item
   public float DistanceCheck = 1f;
   private Vector3 _prePos;
   private int _oriOrder;
+  [SerializeField] public FxType SoundFx = FxType.None;
 
   protected override void Awake()
   {
@@ -49,6 +50,7 @@ public class RemoveItem : Item
       {
         IsReady = false;
         SetBlockItem(true);
+        SoundManager.Ins.PlayFx(SoundFx);
         Vector3 newPosMove = Tf.position + Vector3.down * 2f;
         OnFinish?.Invoke();
         Tf.DOMove(newPosMove, 0.75f).OnComplete(() =>

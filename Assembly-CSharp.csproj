@@ -77,6 +77,7 @@
     <Compile Include="Assets\Scripts\53\FaceTowelWithVfx.cs" />
     <Compile Include="Assets\Scripts\54\ShowSprite.cs" />
     <Compile Include="Assets\Scripts\Obj\FillCircleBar.cs" />
+    <Compile Include="Assets\HideMouse.cs" />
     <Compile Include="Assets\DOTween\Modules\DOTweenModuleUnityVersion.cs" />
     <Compile Include="Assets\Scripts\54\Brush_BlushWithMaskGroup.cs" />
     <Compile Include="Assets\AllIn1SpriteShader\Demo\Scripts\DemoCircleExpositor.cs" />

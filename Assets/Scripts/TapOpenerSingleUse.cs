@@ -14,6 +14,7 @@ namespace HoangHH
     [SerializeField] private float TimeMove;
     [SerializeField] private bool UseFade;
     [SerializeField] private bool DeactiveAfterUse;
+    [SerializeField] public FxType SoundFx = FxType.None;
 
     public override void MouseUp(BaseEventData eventData)
     {
@@ -21,7 +22,7 @@ namespace HoangHH
       base.MouseUp(eventData);
       if (!IsReady) return;
       SetOpen();
-      SoundManager.Ins.PlayFx(FxType.Pick);
+      SoundManager.Ins.PlayFx(SoundFx);
       IsReady = false;
     }
 

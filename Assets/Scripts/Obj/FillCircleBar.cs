@@ -28,7 +28,6 @@ namespace HoangHH
 
     public void ReFill()
     {
-      Debug.Log("FillCircleBar ReFill");
       _isFilled = false;
       _currentFill = 0;
       fillImage.fillAmount = 0f;
@@ -37,11 +36,12 @@ namespace HoangHH
 
     public void Fill(float fillTo)
     {
+      // Debug.LogWarning($"Fill to: {fillTo}");
       if (_isFilled) return;
       _currentFill = Mathf.Clamp01(fillTo);
       fillImage.fillAmount = _currentFill;
       if (!Mathf.Approximately(_currentFill, 1f)) return;
-      _isFilled = true;
+      // _isFilled = true;
       Hide();
     }
 

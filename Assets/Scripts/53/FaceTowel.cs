@@ -28,11 +28,6 @@ public class FaceTowel : Item
   public override void SetReady()
   {
     base.SetReady();
-    if (ShowCirBar)
-    {
-      GameManager.Ins.fillCircleBar.ReFill();
-      GameManager.Ins.fillCircleBar.Fill(0f);
-    }
   }
 
 #if UNITY_EDITOR
@@ -45,7 +40,11 @@ public class FaceTowel : Item
     if (isDragging) return;
     if (!IsReady) { if (ShowEmoijOnWrong) GameManager.Ins.PlayNegativeEmoji(); }
     base.MouseDown(eventData);
-    if (ShowCirBar) GameManager.Ins.fillCircleBar.Show();
+    if (ShowCirBar)
+    {
+      GameManager.Ins.fillCircleBar.Show();
+      GameManager.Ins.fillCircleBar.Fill(maskGroup.GetPercentFill());
+    }
     OnHandleMouseDown();
   }
 

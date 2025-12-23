@@ -6,7 +6,7 @@ public class ItemMove : Item
 {
 
   public float distanDoneToMove = 2f;
-  public FxType fxSound = FxType.OpenLid;
+  public FxType fxSound = FxType.None;
   private Vector3 _preMousePos;
   private Vector3 _mouseDownPos;
   private float deltaMove = 0f;

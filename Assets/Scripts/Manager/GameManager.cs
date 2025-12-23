@@ -80,14 +80,16 @@ public class GameManager : Singleton<GameManager>
   {
     emojiControl.ShowPositive();
     playerSkeleton.AnimationState.SetAnimation(0, "happy", false);
+    characterControl.SetMouseHappy();
     var i = idSoundHappy % 3;
-    if (i == 0) SoundManager.Ins.PlayFx(FxType.Happy);
+    if (i == 0) SoundManager.Ins.PlayFx(FxType.Happy0);
     else if (i == 1) SoundManager.Ins.PlayFx(FxType.Happy1);
     else SoundManager.Ins.PlayFx(FxType.Happy2);
     idSoundHappy++;
 
     yield return new WaitForSeconds(1f);
     playerSkeleton.AnimationState.SetAnimation(0, "idle", true);
+    characterControl.SetMouseIdle();
     coroutine = null;
   }
   public void PlayNegativeEmoji()
@@ -107,15 +109,18 @@ public class GameManager : Singleton<GameManager>
   {
     yield return new WaitForSeconds(1f);
     playerSkeleton.AnimationState.SetAnimation(0, "angry", false);
+    characterControl.SetMouseAngry();
     emojiControl.ShowNegative();
 
-    var i = idSoundAngry % 2;
-    if (i == 0) SoundManager.Ins.PlayFx(FxType.Angry);
-    else SoundManager.Ins.PlayFx(FxType.Angry1);
+    var i = idSoundAngry % 3;
+    if (i == 0) SoundManager.Ins.PlayFx(FxType.Angry0);
+    else if (i == 1) SoundManager.Ins.PlayFx(FxType.Angry1);
+    else SoundManager.Ins.PlayFx(FxType.Angry2);
     idSoundAngry++;
 
-    yield return new WaitForSeconds(1f);
+    yield return new WaitForSeconds(0.65f);
     playerSkeleton.AnimationState.SetAnimation(0, "idle", true);
+    characterControl.SetMouseIdle();
     coroutine = null;
   }
 
