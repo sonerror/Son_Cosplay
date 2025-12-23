@@ -161,6 +161,7 @@
   <ItemGroup>
     <None Include="Assets\_GAME\Levels\LvCosplayHarleyQuinn\Animations\Harley_Queen_json\Harley_Queen.atlas.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
+    <None Include="Assets\_GAME\Levels\LvCosplayJoker\Spine\Joker.atlas.txt" />
     <None Include="Assets\Spine\version.txt" />
     <None Include="Assets\Spines\K_idol_json\School_Girl.atlas.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
@@ -185,8 +186,10 @@
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile SSD.shader" />
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Properties.cginc" />
+    <None Include="Assets\_GAME\Levels\LvCosplayJoker\Spine\Card\Joker_card.atlas.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Surface.cginc" />
     <None Include="Assets\Spines\New2\Harley_Queen.atlas.txt" />
+    <None Include="Assets\_GAME\Levels\LvCosplayJoker\NewSpine1\Joker.atlas.txt" />
     <None Include="Assets\_GAME\Levels\LvCosplayCinderella\Animations\Cindarella_json\Cindarella.atlas.txt" />
     <None Include="Assets\_GAME\Levels\LvCosplayCinderella\Animations\View\Cindarella.atlas.txt" />
     <None Include="Assets\_GAME\Core\Common\Shaders\SpriteOutline.shader" />
