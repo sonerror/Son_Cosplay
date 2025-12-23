@@ -1,3 +1,4 @@
+using DG.Tweening;
 using UnityEngine;
 
 public class GamePlayScreen : UIScreen
@@ -14,8 +15,11 @@ public class GamePlayScreen : UIScreen
   {
     if (hadShowBtnInstall) return;
     hadShowBtnInstall = true;
-    // btnPlay.gameObject.SetActive(true);
     Text.gameObject.SetActive(false);
+    DOVirtual.DelayedCall(1f, () =>
+    {
+      btnPlay.gameObject.SetActive(true);
+    });
   }
   bool hadShowBtnInstall = false;
 
