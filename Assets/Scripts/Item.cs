@@ -22,9 +22,21 @@ public class Item : MonoBehaviour
   public bool BlockItem => isBlocked;
 
   // public UnityEvent OnWrong;
+#if UNITY_EDITOR
+  [FoldoutGroup("Event")]
+#endif
   public UnityEvent OnSetupReady;
+#if UNITY_EDITOR
+  [FoldoutGroup("Event")]
+#endif
   public UnityEvent OnFinish;
+#if UNITY_EDITOR
+  [FoldoutGroup("Event")]
+#endif
   public UnityEvent OnPickItem;
+#if UNITY_EDITOR
+  [FoldoutGroup("Event")]
+#endif
   public UnityEvent OnDropItem;
 
   protected Camera mainCamera;

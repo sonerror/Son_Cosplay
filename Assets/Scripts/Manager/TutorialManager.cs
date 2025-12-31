@@ -13,18 +13,13 @@ public class TutorialManager : Singleton<TutorialManager>
   [SerializeField] private GamePlayManager gamePlayManager;
 
   [SerializeField] private TapOpener lidTapOpener;
-  private GameObject clock;
+  [SerializeField] private GameObject clock;
   private int CountStepDone = 0;
   public void OnStepDone()
   {
     CountStepDone++;
   }
 
-
-  void Start()
-  {
-    clock = GameManager.Ins.clockTimer.gameObject;
-  }
   public void IncreaseTimeHide()
   {
     TimeHint = 5f;

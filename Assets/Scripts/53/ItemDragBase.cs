@@ -22,9 +22,6 @@ public class ItemDragBase : Item
   protected Vector3 _prePos;
 
   public bool isMouseUpCheck = true;
-  public bool isHideOnDone = true;
-  [SerializeField] protected float dropDistance = 1f;
-  [SerializeField] protected Transform target, center;
 
 #if UNITY_EDITOR
   [FoldoutGroup("Event")]
@@ -41,8 +38,6 @@ public class ItemDragBase : Item
     {
       _ValSortGroup = RenderGroup.sortingOrder;
     }
-
-    if (!center) center = Tf;
 
   }
 
@@ -81,11 +76,12 @@ public class ItemDragBase : Item
   }
   public virtual void OnActionMouseDrag()
   {
-
+    if (!isMouseUpCheck) CheckTarget();
   }
   public virtual void OnActionMouseUp()
   {
     OnDropItem?.Invoke();
+    if (isMouseUpCheck) CheckTarget();
   }
 
   protected virtual void OnHandleMouseDown()
@@ -128,17 +124,9 @@ public class ItemDragBase : Item
 
   }
 
-  protected void CheckTarget()
+  protected virtual void CheckTarget()
   {
-    if (!IsInRange(center.position, target.position)) return;
 
-    if (IsReady) OnComplete();
-    else if (isMouseUpCheck) OnIncorrectUse();
-  }
-
-  protected bool IsInRange(Vector3 pos, Vector3 target, float rangeRation = 1f)
-  {
-    return (Vector2.Distance(pos, target) < dropDistance * rangeRation);
   }
 
   public virtual void OnComplete()

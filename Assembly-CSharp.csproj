@@ -65,14 +65,13 @@
     <Analyzer Include="D:\_App\Unity\UnityInstall\6000.0.27f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.UIToolkit.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\ClockTimer.cs" />
+    <Compile Include="Assets\Scripts\Obj\ShowObjectSequence.cs" />
     <Compile Include="Assets\Scripts\53\Oil.cs" />
     <Compile Include="Assets\Scripts\Pimple.cs" />
     <Compile Include="Assets\AllIn1SpriteShader\Scripts\RandomSeed.cs" />
     <Compile Include="Assets\Scripts\Helper\DTPCache.cs" />
     <Compile Include="Assets\AllIn1SpriteShader\Scripts\All1CreateUnifiedOutline.cs" />
     <Compile Include="Assets\Scripts\ItemUseOnce.cs" />
-    <Compile Include="Assets\Scripts\LoopAnimTransformFloating.cs" />
     <Compile Include="Assets\Scripts\Manager\EventManager.cs" />
     <Compile Include="Assets\Scripts\53\FaceTowelWithVfx.cs" />
     <Compile Include="Assets\Scripts\54\ShowSprite.cs" />
@@ -111,20 +110,22 @@
     <Compile Include="Assets\Scripts\Obj\ChangeScene.cs" />
     <Compile Include="Assets\AllIn1SpriteShader\Demo\Scripts\DemoRandomColorSwap.cs" />
     <Compile Include="Assets\Scripts\PimpleHeal.cs" />
-    <Compile Include="Assets\Scripts\SpineBoneIKControl.cs" />
     <Compile Include="Assets\Scripts\53\HairBang.cs" />
     <Compile Include="Assets\Scripts\Brow_Shaver.cs" />
     <Compile Include="Assets\DOTween\Modules\DOTweenModuleAudio.cs" />
     <Compile Include="Assets\Scripts\RemoveItem.cs" />
     <Compile Include="Assets\Scripts\54\TapButton.cs" />
+    <Compile Include="Assets\Scripts\55\Scissors.cs" />
     <Compile Include="Assets\Scripts\ItemMove.cs" />
     <Compile Include="Assets\Scripts\Pool\PoolManager.cs" />
     <Compile Include="Assets\Scripts\Manager\UIManager.cs" />
     <Compile Include="Assets\Scripts\53\FaceTowel.cs" />
     <Compile Include="Assets\Scripts\54\HideSprite.cs" />
     <Compile Include="Assets\Scripts\54\FoundationBottleWithVfx.cs" />
+    <Compile Include="Assets\Scripts\SpineCtrl\LoopAnimTransformFloating.cs" />
     <Compile Include="Assets\Scripts\TapOpener.cs" />
     <Compile Include="Assets\Scripts\UI\UIScreen.cs" />
+    <Compile Include="Assets\Scripts\Helper\AutoDestroy.cs" />
     <Compile Include="Assets\DOTween\Modules\DOTweenModulePhysics.cs" />
     <Compile Include="Assets\Scripts\TapOpenerSingleUse.cs" />
     <Compile Include="Assets\Scripts\54\SpineSlotData.cs" />
@@ -132,16 +133,19 @@
     <Compile Include="Assets\Scripts\Obj\HandCtrl.cs" />
     <Compile Include="Assets\AllIn1SpriteShader\Scripts\SetGlobalTimeNew.cs" />
     <Compile Include="Assets\Scripts\54\FoundationBottle.cs" />
-    <Compile Include="Assets\Scripts\ShowObjectSequence.cs" />
     <Compile Include="Assets\AllIn1SpriteShader\Demo\Scripts\All1ShaderDemoController.cs" />
     <Compile Include="Assets\Scripts\TriggerWithCertainCollider.cs" />
     <Compile Include="Assets\AllIn1SpriteShader\Scripts\SetAtlasUvs.cs" />
+    <Compile Include="Assets\Scripts\Obj\ClockTimer.cs" />
     <Compile Include="Assets\AllIn1SpriteShader\Demo\Scripts\All1TextureOffsetOverTime.cs" />
     <Compile Include="Assets\Scripts\FadeSpriteByStep.cs" />
+    <Compile Include="Assets\Scripts\SpineCtrl\SpineBoneIKControl.cs" />
+    <Compile Include="Assets\Scripts\SpineCtrl\ToggleBoneSlot.cs" />
     <Compile Include="Assets\AllIn1SpriteShader\Demo\Scripts\Demo2AutoScroll.cs" />
+    <Compile Include="Assets\Scripts\Obj\ShowObjectEffect.cs" />
     <Compile Include="Assets\Scripts\54\Brush_Blush.cs" />
+    <Compile Include="Assets\Scripts\Helper\GizmoUtility.cs" />
     <Compile Include="Assets\DOTween\Modules\DOTweenModuleSprite.cs" />
-    <Compile Include="Assets\Scripts\ToggleBoneSlot.cs" />
     <Compile Include="Assets\Scripts\MaskGroupCustom.cs" />
     <Compile Include="Assets\Scripts\53\WaterFaucet.cs" />
     <Compile Include="Assets\Scripts\Manager\GamePlayManager.cs" />
@@ -155,13 +159,12 @@
     <Compile Include="Assets\AllIn1SpriteShader\Demo\Scripts\DemoRepositionExpositor.cs" />
     <Compile Include="Assets\DOTween\Modules\DOTweenModuleUtils.cs" />
     <Compile Include="Assets\Scripts\Pool\SfxPool.cs" />
-    <Compile Include="Assets\Scripts\ShowObjectEffect.cs" />
     <Compile Include="Assets\Scripts\Manager\AdsManager.cs" />
+    <Compile Include="Assets\Scripts\55\PlayAnimationManually.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\_GAME\Levels\LvCosplayHarleyQuinn\Animations\Harley_Queen_json\Harley_Queen.atlas.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
-    <None Include="Assets\_GAME\Levels\LvCosplayJoker\Spine\Joker.atlas.txt" />
     <None Include="Assets\Spine\version.txt" />
     <None Include="Assets\Spines\K_idol_json\School_Girl.atlas.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />

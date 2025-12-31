@@ -34,8 +34,8 @@ public class GamePlayManager : Singleton<GamePlayManager>
 
   void Start()
   {
-    character.SetAlphaSlotName("TOP-mouth-1", 0);
-    character.SetAlphaSlotName("TOP-mouthbase-1", 0);
+    // character.SetAlphaSlotName("TOP-mouth-1", 0);
+    // character.SetAlphaSlotName("TOP-mouthbase-1", 0);
     StartStep();
   }
 
@@ -113,46 +113,213 @@ public class GamePlayManager : Singleton<GamePlayManager>
   }
 
   #region Step0
-  private const string SLOT_SCARF1 = "TOP-scarf";
-  private const string SLOT_SCARF2 = "TOP-scarf2";
-  private const string SLOT_SCARF3 = "TOP-scarfx";
-  private const string ATTACHMENT_SCARF1 = "TOP-scarf";
-  private const string ATTACHMENT_SCARF2 = "TOP-scarf";
-  private const string ATTACHMENT_SCARF3 = "TOP-scarfx";
+  private const string STEP_0 = "Step 0: Cut hair";
+  private const string SLOT_CUT_HAIR_0 = "Phase_1_hairF_cut_outL1";
+  private const string SLOT_CUT_HAIR_1 = "Phase_1_hairF_cut_outL2";
+  private const string SLOT_CUT_HAIR_2 = "Phase_1_hairF_cut_outL3";
+  private const string SLOT_CUT_HAIR_3 = "Phase_1_hairB_cut_outL1";
+  private const string SLOT_CUT_HAIR_4 = "Phase_1_hairB_cut_outL2";
 
-  public void HideGlasses()
-  {
-    character.TurnSlotAttachment(SLOT_SCARF1);
-    character.TurnSlotAttachment(SLOT_SCARF2);
-    character.TurnSlotAttachment(SLOT_SCARF3);
-  }
+  private const string SLOT_CUT_HAIR_5 = "Phase_1_hairF_cut_outR1";
+  private const string SLOT_CUT_HAIR_6 = "Phase_1_hairF_cut_outR2";
+  private const string SLOT_CUT_HAIR_7 = "Phase_1_hairF_cut_outR3";
+  private const string SLOT_CUT_HAIR_8 = "Phase_1_hairB_cut_outR1";
+  private const string SLOT_CUT_HAIR_9 = "Phase_1_hairB_cut_outR2";
 
-  public void ShowGlasses()
-  {
-    character.TurnSlotAttachment(SLOT_SCARF1, ATTACHMENT_SCARF1);
-    character.TurnSlotAttachment(SLOT_SCARF2, ATTACHMENT_SCARF2);
-    character.TurnSlotAttachment(SLOT_SCARF3, ATTACHMENT_SCARF3);
-  }
+  [FoldoutGroup(STEP_0)]
+  [SerializeField]
+  private Scissors scissor;
+
+  [FoldoutGroup(STEP_0)]
+  [SerializeField]
+  private Collider2D scissorTrigger;
+
+  [FoldoutGroup(STEP_0)]
+  [SerializeField]
+  private List<TriggerWithCertainCollider> hairCutTriggerL, hairCutTriggerR;
+
+  [FoldoutGroup(STEP_0)]
+  [SerializeField]
+  private List<SpineBoneIKControl> hairCutBoneControlL, hairCutBoneControlR;
+
+  [FoldoutGroup(STEP_0)]
+  [SerializeField]
+  private List<AutoDestroy> hairCutAutoDestroyL, hairCutAutoDestroyR;
+
+  [FoldoutGroup(STEP_0)]
+  [SerializeField]
+  private List<OnTransformGoToAffectZone> hairCutTriggers;
+
+  [FoldoutGroup(STEP_0)]
+  [SerializeField]
+  private ParticleSystem hairParticle;
+
+  [FoldoutGroup(STEP_0)]
+  [SerializeField]
+  private List<SlotAttachmentPair> hairCutL, hairCutR, hairCutOldL, hairCutOldR, hairCutNewL, hairCutNewR;
+
+  private readonly List<string> _cutHairSlotNameL = new()
+        {
+            SLOT_CUT_HAIR_0,
+            SLOT_CUT_HAIR_1,
+            SLOT_CUT_HAIR_2,
+            SLOT_CUT_HAIR_3,
+            SLOT_CUT_HAIR_4,
+        };
+
+  private readonly List<string> _cutHairSlotNameR = new()
+        {
+            SLOT_CUT_HAIR_5,
+            SLOT_CUT_HAIR_6,
+            SLOT_CUT_HAIR_7,
+            SLOT_CUT_HAIR_8,
+            SLOT_CUT_HAIR_9
+        };
+
+  private float maxCountHairL, maxCountHairR;
 
   private void OnStartStep0()
   {
-    var GlassesObject = items[0] as RemoveItem;
-    GlassesObject.SetReady();
-    GlassesObject.SetBlockItem(false);
-    GlassesObject.OnPickItem.AddListener(HideGlasses);
-    GlassesObject.OnDropItem.AddListener(ShowGlasses);
-    GlassesObject.OnFinish.AddListener(OnEndStep0);
+    Debug.Log("OnStartStep0");
+    scissor.OnPickItem.AddListener(EnableScissorTrigger);
+    scissor.OnDropItem.AddListener(DisableScissorTrigger);
+    foreach (OnTransformGoToAffectZone trigger in hairCutTriggers)
+    {
+      trigger.onEnterZone.AddListener(EnableCutTrigger);
+      trigger.onOutZone.AddListener(DisableCutTrigger);
+    }
+
+    maxCountHairL = hairCutTriggerL.Count;
+    maxCountHairR = hairCutTriggerR.Count;
+    SetUpCutHairTrigger(hairCutTriggerL, hairCutBoneControlL, hairCutAutoDestroyL, _cutHairSlotNameL, hairCutL,
+        maxCountHairL, hairCutOldL, hairCutNewL
+    );
+    SetUpCutHairTrigger(hairCutTriggerR, hairCutBoneControlR, hairCutAutoDestroyR, _cutHairSlotNameR, hairCutR,
+        maxCountHairR, hairCutOldR, hairCutNewR
+    );
   }
+
+  private void SetUpCutHairTrigger(List<TriggerWithCertainCollider> triggers,
+      List<SpineBoneIKControl> boneControls, List<AutoDestroy> autoDestroys, List<string> _cutHairSlotName,
+      List<SlotAttachmentPair> hairCut
+      , float maxCount,
+      List<SlotAttachmentPair> oldSlot, List<SlotAttachmentPair> newSlot
+  )
+  {
+    for (int i = 0; i < triggers.Count; i++)
+    {
+      int index = i;
+      TriggerWithCertainCollider cutTrigger = triggers[index];
+      cutTrigger.gameObject.SetActive(true);
+      cutTrigger.EnableCol(true);
+      cutTrigger.enabled = true;
+      cutTrigger.OnTriggerEvent.AddListener(() =>
+          CutHair(triggers, boneControls, autoDestroys, cutTrigger, maxCount
+              , oldSlot, newSlot, _cutHairSlotName, hairCut,
+              index));
+    }
+  }
+
+  private void CutHair(List<TriggerWithCertainCollider> triggers, List<SpineBoneIKControl> boneControls,
+      List<AutoDestroy> autoDestroys, TriggerWithCertainCollider cutTrigger, float maxCount,
+      List<SlotAttachmentPair> oldSlot, List<SlotAttachmentPair> newSlot,
+      List<string> _cutHairSlotName, List<SlotAttachmentPair> hairCut,
+      int index)
+  {
+    if (triggers.Remove(cutTrigger))
+    {
+      // DOVirtual.Float(0, 1 - triggers.Count / maxCount, 0.3f, value =>
+      // {
+      // oldSlot.SetSlotAlpha(1 - value / 3);
+      foreach (var slot in oldSlot)
+      {
+        character.SetAlphaSlotName(slot.slotName, 0);
+        character.TurnSlotAttachment(slot.slotName);
+      }
+      // newSlot.SetSlotAlpha(value);
+      foreach (var slot in newSlot)
+      {
+        character.SetAlphaSlotName(slot.slotName, 1);
+        character.TurnSlotAttachment(slot.slotName, slot.attachmentName);
+      }
+
+      // }).SetEase(Ease.OutBack);
+      cutTrigger.Rigidbody.simulated = true;
+      cutTrigger.Rigidbody.bodyType = RigidbodyType2D.Dynamic;
+      boneControls[index].enabled = true;
+      autoDestroys[index].enabled = true;
+      autoDestroys[index].onDestroy += () =>
+      {
+        character.TurnSlotAttachment(_cutHairSlotName[index]);
+        hairCut = hairCut.FindAll(x => x.slotName != _cutHairSlotName[index]);
+      };
+      if (triggers.Count == 0)
+      {
+        // oldSlot.FadeOut(0.3f, true);
+        OnEndStep0();
+      }
+    }
+  }
+  private void EnableScissorTrigger()
+  {
+    foreach (OnTransformGoToAffectZone trigger in hairCutTriggers)
+    {
+      trigger.enabled = true;
+    }
+  }
+
+  private void DisableScissorTrigger()
+  {
+    foreach (OnTransformGoToAffectZone trigger in hairCutTriggers)
+    {
+      trigger.enabled = false;
+    }
+  }
+
+  private void EnableCutTrigger()
+  {
+    hairParticle.Play();
+    scissorTrigger.enabled = true;
+  }
+
+  private void DisableCutTrigger()
+  {
+    hairParticle.Stop();
+    scissorTrigger.enabled = false;
+  }
+
 
   private void OnEndStep0()
   {
-    var GlassesObject = items[0] as RemoveItem;
-    GlassesObject.OnFinish.RemoveListener(OnEndStep0);
-    GlassesObject.OnPickItem.RemoveListener(HideGlasses);
-    GlassesObject.OnDropItem.RemoveListener(ShowGlasses);
+    if (hairCutTriggerL.Count > 0 || hairCutTriggerR.Count > 0) return;
+    DisableScissorTrigger();
+    scissor.OnPickItem.RemoveListener(EnableScissorTrigger);
+    scissor.OnDropItem.RemoveListener(DisableScissorTrigger);
+    foreach (OnTransformGoToAffectZone trigger in hairCutTriggers)
+    {
+      trigger.onEnterZone.RemoveListener(EnableCutTrigger);
+      trigger.onOutZone.RemoveListener(DisableCutTrigger);
+    }
+
     DoneStep();
     TryNextStep();
   }
+
+  // private void OnStartStep0()
+  // {
+  //   var GlassesObject = items[0] as RemoveItem;
+  //   GlassesObject.SetReady();
+  //   GlassesObject.SetBlockItem(false);
+  //   GlassesObject.OnFinish.AddListener(OnEndStep0);
+  // }
+
+  // private void OnEndStep0()
+  // {
+  //   var GlassesObject = items[0] as RemoveItem;
+  //   GlassesObject.OnFinish.RemoveListener(OnEndStep0);
+  //   DoneStep();
+  //   TryNextStep();
+  // }
   #endregion Step0
 
   #region Step1
@@ -161,9 +328,9 @@ public class GamePlayManager : Singleton<GamePlayManager>
 
   private void OnStartStep1()
   {
-    var LidCreamBox = items[1] as TapJumpOpener;
-    LidCreamBox.SetReady();
-    LidCreamBox.OnFinish.AddListener(OnEndStep1);
+    // var LidCreamBox = items[1] as TapJumpOpener;
+    // LidCreamBox.SetReady();
+    // LidCreamBox.OnFinish.AddListener(OnEndStep1);
   }
 
   private void OnEndStep1()
