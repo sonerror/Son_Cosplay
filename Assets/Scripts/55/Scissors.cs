@@ -5,6 +5,7 @@ using UnityEngine;
 public class Scissors : ItemDragBase
 {
 
+  [SerializeField] private Animator anim;
   public override void SetReady()
   {
     base.SetReady();
@@ -18,7 +19,7 @@ public class Scissors : ItemDragBase
   {
     base.OnActionMouseDown();
     if (!IsReady) return;
-    // anim.Play();
+    anim.SetTrigger("Play");
   }
 
   public override void OnActionMouseDrag()
@@ -31,7 +32,7 @@ public class Scissors : ItemDragBase
     base.OnActionMouseUp();
 
     if (!IsReady) return;
-    // anim.Stop();
+    anim.SetTrigger("Idle");
   }
 
 }
