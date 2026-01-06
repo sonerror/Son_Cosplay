@@ -17,8 +17,8 @@ public class CharacterControl : GameUnit
   [SerializeField] private SkeletonAnimation skeletonAnimation;
   public SkeletonAnimation SkeletonAnimation => skeletonAnimation;
 
-  public GameObject Mouse1, Mouse2, Mouse3;
-  public GameObject MouseDone1, MouseDone2, MouseDone3;
+  public GameObject MouseNorBf, MouseHappyBf, MouseAngryBf;
+  public GameObject MouseNorAf, MouseHappyAf, MouseAngryAf;
 
   // [SerializeField] private LoopAnimTransformFloating eye;
 
@@ -48,72 +48,78 @@ public class CharacterControl : GameUnit
   public void SetMouseDone()
   {
     isDoneMouse = true;
-    if (Mouse1.activeSelf)
+    if (MouseNorBf.activeSelf)
     {
-      Mouse1.SetActive(false);
-      MouseDone1.SetActive(true);
+      MouseNorBf.SetActive(false);
+      MouseNorAf.SetActive(true);
     }
 
-    if (Mouse2.activeSelf)
+    if (MouseHappyBf.activeSelf)
     {
-      Mouse2.SetActive(false);
-      MouseDone2.SetActive(true);
+      MouseHappyBf.SetActive(false);
+      MouseHappyAf.SetActive(true);
     }
 
-    if (Mouse3.activeSelf)
+    if (MouseAngryBf.activeSelf)
     {
-      Mouse3.SetActive(false);
-      MouseDone3.SetActive(true);
+      MouseAngryBf.SetActive(false);
+      MouseAngryAf.SetActive(true);
     }
   }
   public void SetMouseHappy()
   {
+    skeletonAnimation.AnimationState.SetAnimation(0, "happy", false);
+
     if (isDoneMouse)
     {
-      MouseDone1.SetActive(false);
-      MouseDone2.SetActive(true);
-      MouseDone3.SetActive(false);
+      MouseNorAf.SetActive(false);
+      MouseHappyAf.SetActive(true);
+      MouseAngryAf.SetActive(false);
       return;
     }
     else
     {
-      Mouse1.SetActive(false);
-      Mouse2.SetActive(true);
-      Mouse3.SetActive(false);
+      MouseNorBf.SetActive(false);
+      MouseHappyBf.SetActive(true);
+      MouseAngryBf.SetActive(false);
     }
   }
 
   public void SetMouseIdle()
   {
+    skeletonAnimation.AnimationState.SetAnimation(0, "idle", true);
+
     if (isDoneMouse)
     {
-      MouseDone1.SetActive(true);
-      MouseDone2.SetActive(false);
-      MouseDone3.SetActive(false);
+      MouseNorAf.SetActive(true);
+      MouseHappyAf.SetActive(false);
+      MouseAngryAf.SetActive(false);
       return;
     }
     else
     {
-      Mouse1.SetActive(true);
-      Mouse2.SetActive(false);
-      Mouse3.SetActive(false);
+      MouseNorBf.SetActive(true);
+      MouseAngryBf.SetActive(false);
+      MouseHappyBf.SetActive(false);
     }
   }
 
   public void SetMouseAngry()
   {
+    skeletonAnimation.AnimationState.SetAnimation(0, "angry", false);
+
     if (isDoneMouse)
     {
-      MouseDone1.SetActive(false);
-      MouseDone2.SetActive(false);
-      MouseDone3.SetActive(true);
+      MouseNorAf.SetActive(false);
+      MouseHappyAf.SetActive(false);
+      MouseAngryAf.SetActive(true);
       return;
     }
     else
     {
-      Mouse1.SetActive(false);
-      Mouse2.SetActive(false);
-      Mouse3.SetActive(true);
+      MouseNorBf.SetActive(false);
+      MouseHappyBf.SetActive(false);
+      MouseAngryBf.SetActive(true);
     }
   }
 

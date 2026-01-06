@@ -12,6 +12,7 @@ public class BrushBlushWithMaskGroup : Item
 {
   public Collider2D triggerCollider;
   public Vector2 Angle = new Vector2(0, 0);
+  public Vector2 Scale = new Vector2(0, 0);
   public SortingGroup rendeGroup;
   private int _oriOrder;
   [SerializeField] private bool ShowCirBar = false;
@@ -28,6 +29,9 @@ public class BrushBlushWithMaskGroup : Item
     base.Awake();
     _prePos = Tf.position;
     _oriOrder = rendeGroup.sortingOrder;
+
+    Angle.x = Tf.eulerAngles.z;
+    Scale.x = Tf.localScale.x;
   }
 
 #if UNITY_EDITOR
@@ -104,7 +108,7 @@ public class BrushBlushWithMaskGroup : Item
     OnDropItem?.Invoke();
 
     Tf.DOKill();
-    Tf.DOScale(Vector3.one, 0.2f);
+    Tf.DOScale(Scale.x, 0.2f);
     Tf.DORotate(Vector3.forward * Angle.x, 0.2f);
     Tf.DOMove(_prePos, 0.3f).SetEase(Ease.OutBack).OnComplete(() =>
     {
@@ -157,7 +161,7 @@ public class BrushBlushWithMaskGroup : Item
     targetPos.z = 0;
 
     Tf.DOKill();
-    Tf.DOScale(Vector3.one * 1.15f, 0.2f);
+    Tf.DOScale(Scale.y, 0.2f);
     Tf.DORotate(Vector3.forward * Angle.y, 0.2f);
     ChangeLayerUp();
   }

@@ -38,6 +38,7 @@ public class FoundationBottle : Item
       int i = index; // Capture the index for the lambda
       TriggerWithCertainCollider trigger = acnePimpleColliders[i];
       trigger.gameObject.SetActive(true);
+      trigger.Col.enabled = true;
       trigger.OnTriggerEvent.AddListener(() => AddAcne(trigger, i));
     }
   }
@@ -45,7 +46,7 @@ public class FoundationBottle : Item
   private void AddAcne(TriggerWithCertainCollider trigger, int index)
   {
     trigger.OnTriggerEvent.RemoveAllListeners();
-    trigger.gameObject.SetActive(true);
+
     // PoolManager.Ins.Spawn(PoolType.SFX_Acne, trigger.transform.position, Quaternion.identity);
     _currentAcneIndex++;
     if (_currentAcneIndex >= acnePimpleColliders.Count) OnDone();

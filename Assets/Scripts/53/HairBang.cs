@@ -4,12 +4,13 @@ using DG.Tweening;
 using Spine.Unity;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.Rendering;
 
 public class HairBang : Item
 {
   private Vector3 _prePos;
   public Vector2 Angle = new Vector2(0, 0);
-  public Renderer rende;
+  public SortingGroup rende;
   private int _initOrder;
   public TargetInfo targetInfos = new TargetInfo();
 

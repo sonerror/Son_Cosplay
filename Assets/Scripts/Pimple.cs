@@ -50,7 +50,7 @@ public class Pimple : Item
   {
     trigger.OnTriggerEvent.RemoveAllListeners();
     trigger.gameObject.SetActive(false);
-    GameManager.Ins.characterControl.TurnSlotAttachment(_acneSlots[index]);
+    GamePlayManager.Ins.character.TurnSlotAttachment(_acneSlots[index]);
     PoolManager.Ins.Spawn(PoolType.SFX_Acne, trigger.transform.position, Quaternion.identity);
     _currentAcneIndex++;
     if (_currentAcneIndex >= _acneSlots.Count) OnDone();

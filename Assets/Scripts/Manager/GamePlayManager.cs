@@ -1,9 +1,11 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using AnhPD.Cook;
 using DG.Tweening;
 using HoangHH;
 using Sirenix.OdinInspector;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class GamePlayManager : Singleton<GamePlayManager>
@@ -111,6 +113,7 @@ public class GamePlayManager : Singleton<GamePlayManager>
     {
       int index = i; // Capture the index for the lambda
       hairCutTrigger[i].OnTriggerEvent.AddListener(OnCutHair);
+      hairCutTrigger[i].Col.enabled = true;
     }
   }
 
@@ -129,22 +132,6 @@ public class GamePlayManager : Singleton<GamePlayManager>
     DoneStep();
     TryNextStep();
   }
-
-  // private void OnStartStep0()
-  // {
-  //   var GlassesObject = items[0] as RemoveItem;
-  //   GlassesObject.SetReady();
-  //   GlassesObject.SetBlockItem(false);
-  //   GlassesObject.OnFinish.AddListener(OnEndStep0);
-  // }
-
-  // private void OnEndStep0()
-  // {
-  //   var GlassesObject = items[0] as RemoveItem;
-  //   GlassesObject.OnFinish.RemoveListener(OnEndStep0);
-  //   DoneStep();
-  //   TryNextStep();
-  // }
   #endregion Step0
 
   #region Step1
@@ -153,16 +140,15 @@ public class GamePlayManager : Singleton<GamePlayManager>
 
   private void OnStartStep1()
   {
-    // var LidCreamBox = items[1] as TapJumpOpener;
-    // LidCreamBox.SetReady();
-    // LidCreamBox.OnFinish.AddListener(OnEndStep1);
+    var item = items[1];
+    item.SetReady();
+    item.OnFinish.AddListener(OnEndStep1);
   }
 
   private void OnEndStep1()
   {
-    var LidCreamBox = items[1] as TapJumpOpener;
-    LidCreamBox.OnFinish.RemoveListener(OnEndStep1);
-    LidCreamBox.SetBlockItem(true);
+    var item = items[1];
+    item.OnFinish.RemoveListener(OnEndStep1);
     DoneStep();
     TryNextStep();
   }
@@ -175,16 +161,15 @@ public class GamePlayManager : Singleton<GamePlayManager>
 
   private void OnStartStep2()
   {
-    var item = items[2] as FoundationBottle;
+    var item = items[2];
     item.OnFinish.AddListener(OnEndStep2);
     item.SetReady();
   }
 
   private void OnEndStep2()
   {
-    var item = items[2] as FoundationBottle;
+    var item = items[2];
     item.OnFinish.RemoveListener(OnEndStep2);
-    // item.IsReady = false;
 
     DoneStep();
     TryNextStep();
@@ -197,16 +182,22 @@ public class GamePlayManager : Singleton<GamePlayManager>
   private void OnStartStep3()
   {
     Debug.Log("OnStartStep3");
-    var item = items[3] as TapButton;
+    var item = items[3];
     item.OnFinish.AddListener(OnEndStep3);
     item.SetReady();
   }
 
+  [SerializeField] List<GameObject> nodeTurnOnOff = new List<GameObject>();
   private void OnEndStep3()
   {
-    var item = items[3] as TapButton;
+    var item = items[3];
     item.OnFinish.RemoveListener(OnEndStep3);
     item.IsReady = false;
+    for (int i = 0; i < nodeTurnOnOff.Count; i++)
+    {
+      nodeTurnOnOff[i].SetActive(false);
+    }
+    ChangeGroupItemStart();
     DoneStep();
     TryNextStep();
   }
@@ -218,7 +209,7 @@ public class GamePlayManager : Singleton<GamePlayManager>
   private void OnStartStep4()
   {
     Debug.Log("OnStartStep4");
-    var item = items[4] as FoundationBottle;
+    var item = items[4];
     item.OnFinish.AddListener(OnEndStep4);
     item.SetReady();
   }
@@ -226,7 +217,7 @@ public class GamePlayManager : Singleton<GamePlayManager>
   private void OnEndStep4()
   {
 
-    var item = items[4] as FoundationBottle;
+    var item = items[4];
     item.OnFinish.RemoveListener(OnEndStep4);
     item.IsReady = false;
 
@@ -240,39 +231,46 @@ public class GamePlayManager : Singleton<GamePlayManager>
 
   private void OnStartStep5()
   {
-    var item = items[5] as BrushBlushWithMaskGroup;
-    item.OnFinish.AddListener(OnEndStep5);
-    item.SetReady();
+    AdsManager.Ins.ShowEndGame();
   }
 
   private void OnEndStep5()
   {
-    var item = items[5] as BrushBlushWithMaskGroup;
-    item.FlourFill.gameObject.SetActive(false);
-    item.OnFinish.RemoveListener(OnEndStep5);
-    item.IsReady = false;
-
-    ChangeGroupItemStart();
-
-    DoneStep();
-    TryNextStep();
   }
   #endregion Step5
 
   #region Step6
   private void OnStartStep6()
   {
-    var item = items[6] as FaceTowel;
+    var item = items[6] as HairBang;
     item.OnFinish.AddListener(OnEndStep6);
     item.SetReady();
   }
 
+  [SerializeField] List<SlotAttachmentPair> slotDisableHairband = new List<SlotAttachmentPair>();
+  [SerializeField] List<SlotAttachmentPair> slotEnableHairband = new List<SlotAttachmentPair>();
+
+  private void AddHairband()
+  {
+    SoundManager.Ins.PlayFx(FxType.Drop);
+    for (int i = 0; i < slotDisableHairband.Count; i++)
+    {
+      character.TurnSlotAttachment(slotDisableHairband[i].slotName, null);
+    }
+
+    for (int i = 0; i < slotEnableHairband.Count; i++)
+    {
+      character.TurnSlotAttachment(slotEnableHairband[i].slotName, slotEnableHairband[i].attachmentName);
+    }
+  }
+
   private void OnEndStep6()
   {
-
-    var item = items[6] as FaceTowel;
+    var item = items[6] as HairBang;
     item.OnFinish.RemoveListener(OnEndStep6);
     item.IsReady = false;
+    item.gameObject.SetActive(false);
+    AddHairband();
 
     DoneStep();
     TryNextStep();
@@ -282,7 +280,7 @@ public class GamePlayManager : Singleton<GamePlayManager>
   #region Step7
   private void OnStartStep7()
   {
-    var item = items[7] as TapOpenerSingleUse;
+    var item = items[7];
     item.OnFinish.AddListener(OnEndStep7);
     item.SetReady();
   }
@@ -290,11 +288,11 @@ public class GamePlayManager : Singleton<GamePlayManager>
   private void OnEndStep7()
   {
 
-    var item = items[7] as TapOpenerSingleUse;
+    var item = items[7];
     item.OnFinish.RemoveListener(OnEndStep7);
     item.IsReady = false;
 
-    // DoneStep();
+    DoneStep();
     TryNextStep();
   }
   #endregion Step7
@@ -302,7 +300,7 @@ public class GamePlayManager : Singleton<GamePlayManager>
   #region Step8
   private void OnStartStep8()
   {
-    var item = items[8] as FoundationBottle;
+    var item = items[8];
     item.OnFinish.AddListener(OnEndStep8);
     item.SetReady();
   }
@@ -310,7 +308,7 @@ public class GamePlayManager : Singleton<GamePlayManager>
   private void OnEndStep8()
   {
 
-    var item = items[8] as FoundationBottle;
+    var item = items[8];
     item.OnFinish.RemoveListener(OnEndStep8);
     item.IsReady = false;
 
@@ -320,23 +318,10 @@ public class GamePlayManager : Singleton<GamePlayManager>
   #endregion Step8
   #region Step9
 
-  private void AddHairband()
-  {
-    Debug.Log("AddHairband");
-    SoundManager.Ins.PlayFx(FxType.Drop);
-    character.TurnSlotAttachment("TOP-hair-baseB");
-    character.TurnSlotAttachment("TOP-hair-baseF");
-    character.TurnSlotAttachment("TOP-hair-net", "phase-outfit-solo/TOP-hair-net");
-    character.TurnSlotAttachment("TOP-hair-netcap", "phase-outfit-solo/TOP-hair-netcap");
-
-  }
-
   private void OnStartStep9()
   {
-    var item = items[9];
+    var item = items[9] as FoundationBottle;
     item.OnFinish.AddListener(OnEndStep9);
-    item.OnFinish.AddListener(AddHairband);
-
     item.SetReady();
   }
 
@@ -353,54 +338,32 @@ public class GamePlayManager : Singleton<GamePlayManager>
   #endregion Step9
 
   #region Step10
-
-  private String[] step10SlotNames = new string[]
-  {
-    "TOP-brow-R12",
-    "TOP-brow-R11",
-    "SANTA-beard3",
-    "SANTA-beardb3",
-    "SANTA-hairB3",
-    "SANTA-hairF3",
-  };
-
-  private String[] step10AttachmentNames = new string[]
-  {
-    "phase-Santa/SANTA-brow",
-    "phase-Santa/SANTA-brow",
-    "phase-Santa/SANTA-beard",
-    "phase-Santa/SANTA-beardb",
-    "phase-Santa/SANTA-hairB",
-    "phase-Santa/SANTA-hairF",
-  };
-
+  private int countItemClickStep10 = 0;
+  [SerializeField] private List<ShowSprite> showSprites = new List<ShowSprite>();
   private void OnStartStep10()
   {
-    var indexCount = 0;
-    for (int i = 10; i < 16; i++)
+    int idSpr = 0;
+    for (int i = 10; i < 13; i++)
     {
+      var index = idSpr;
       var item = items[i];
-      int indexSlot = indexCount; // Capture the index for the lambda
-      indexCount++;
-      int index = i;
-      item.OnFinish.AddListener(() => CheckDone(indexSlot, index));
+      item.GetComponent<BoxCollider2D>().enabled = true;
+      item.OnFinish.AddListener(() => CheckDone(index));
       item.SetReady();
     }
   }
 
-  void CheckDone(int indexSlot, int index)
+  void CheckDone(int id)
   {
-    Debug.Log("CheckDone Step10 " + indexSlot);
-    SoundManager.Ins.PlayFx(FxType.Drop);
-    character.TurnSlotAttachment(step10SlotNames[indexSlot], step10AttachmentNames[indexSlot]);
-    items[index].OnFinish.RemoveAllListeners();
-    items[index].IsReady = false;
-    items[index].gameObject.SetActive(false);
-    for (int i = 10; i < 16; i++)
+    countItemClickStep10++;
+    for (int i = 0; i < showSprites.Count; i++)
     {
-      if (items[i].IsReady) return;
+      if (!showSprites[i].gameObject.activeSelf) continue;
+      showSprites[i].ShowCustomSprite(0.4f + countItemClickStep10 * 0.2f, 0.5f);
     }
-    OnEndStep10();
+
+    if (showSprites.All(x => x.gameObject.activeSelf == true))
+      OnEndStep10();
   }
 
   private void OnEndStep10()
@@ -412,14 +375,12 @@ public class GamePlayManager : Singleton<GamePlayManager>
   #endregion Step10
 
   #region Step11
-
   private void OnStartStep11()
   {
-    AdsManager.Ins.ShowEndGame();
-    GameManager.Ins.ChangeToScene2();
+    DOVirtual.DelayedCall(0.3f, () =>
+    {
+      AdsManager.Ins.ShowEndGame();
+    });
   }
-
   #endregion Step11
-
-
 }

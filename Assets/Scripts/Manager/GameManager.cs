@@ -12,9 +12,8 @@ public class GameManager : Singleton<GameManager>
   public ClockTimer clockTimer;
   public FillCircleBar fillCircleBar;
   public bool isPlayingGame = false;
-  public SkeletonAnimation playerSkeleton;
-  public CharacterControl characterControl;
-  public ChangeScene changeScene;
+  // public SkeletonAnimation playerSkeleton;
+  // public ChangeScene changeScene;
 
   public GameObject Scene0, Scene1, Scene2;
 
@@ -41,12 +40,12 @@ public class GameManager : Singleton<GameManager>
     // Scene0.SetActive(false);
     // Scene1.SetActive(true);
 
-    changeScene.ChangeSceneAndCall(() =>
-    {
-      Scene0.SetActive(false);
-      Scene1.SetActive(true);
-      // GamePlayManager.Ins.StartStep();
-    });
+    // changeScene.ChangeSceneAndCall(() =>
+    // {
+    //   Scene0.SetActive(false);
+    //   Scene1.SetActive(true);
+    //   // GamePlayManager.Ins.StartStep();
+    // });
 
 
     TutorialManager.Ins.enableCountTime = true;
@@ -57,11 +56,11 @@ public class GameManager : Singleton<GameManager>
 
   public void ChangeToScene2()
   {
-    changeScene.ChangeSceneAndCall(() =>
-    {
-      Scene1.SetActive(false);
-      Scene2.SetActive(true);
-    });
+    // changeScene.ChangeSceneAndCall(() =>
+    // {
+    //   Scene1.SetActive(false);
+    //   Scene2.SetActive(true);
+    // });
   }
 
   public void PlayPositiveEmoji()
@@ -79,8 +78,7 @@ public class GameManager : Singleton<GameManager>
   private IEnumerator PlayPositiveEmojiCoroutine()
   {
     emojiControl.ShowPositive();
-    playerSkeleton.AnimationState.SetAnimation(0, "happy", false);
-    characterControl.SetMouseHappy();
+    GamePlayManager.Ins.character.SetMouseHappy();
     var i = idSoundHappy % 3;
     if (i == 0) SoundManager.Ins.PlayFx(FxType.Happy0);
     else if (i == 1) SoundManager.Ins.PlayFx(FxType.Happy1);
@@ -88,8 +86,7 @@ public class GameManager : Singleton<GameManager>
     idSoundHappy++;
 
     yield return new WaitForSeconds(1f);
-    playerSkeleton.AnimationState.SetAnimation(0, "idle", true);
-    characterControl.SetMouseIdle();
+    GamePlayManager.Ins.character.SetMouseIdle();
     coroutine = null;
   }
   public void PlayNegativeEmoji()
@@ -108,8 +105,7 @@ public class GameManager : Singleton<GameManager>
   private IEnumerator PlayNegativeEmojiCoroutine()
   {
     yield return new WaitForSeconds(1f);
-    playerSkeleton.AnimationState.SetAnimation(0, "angry", false);
-    characterControl.SetMouseAngry();
+    GamePlayManager.Ins.character.SetMouseAngry();
     emojiControl.ShowNegative();
 
     var i = idSoundAngry % 3;
@@ -119,8 +115,7 @@ public class GameManager : Singleton<GameManager>
     idSoundAngry++;
 
     yield return new WaitForSeconds(0.65f);
-    playerSkeleton.AnimationState.SetAnimation(0, "idle", true);
-    characterControl.SetMouseIdle();
+    GamePlayManager.Ins.character.SetMouseIdle();
     coroutine = null;
   }
 

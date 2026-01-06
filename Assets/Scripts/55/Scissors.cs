@@ -30,9 +30,8 @@ public class Scissors : ItemDragBase
   public override void OnActionMouseUp()
   {
     base.OnActionMouseUp();
-
-    if (!IsReady) return;
     anim.SetTrigger("Idle");
+    if (!IsReady) return;
   }
 
 }

@@ -15,6 +15,7 @@ public class FaceTowelWithVfx : Item
   public Transform NodeCheckPos;
   [SerializeField] private ParticleSystem vfxUseTowel;
   [SerializeField] private FxType fxSound = FxType.None;
+  [SerializeField] private bool playVfxOnPick = false;
 
   protected override void Awake()
   {
@@ -30,6 +31,10 @@ public class FaceTowelWithVfx : Item
     if (isBlocked) return;
     if (isDragging) return;
     if (!IsReady) { if (ShowEmoijOnWrong) GameManager.Ins.PlayNegativeEmoji(); }
+    else if (playVfxOnPick)
+    {
+      vfxUseTowel.Play();
+    }
     base.MouseDown(eventData);
 
     OnHandleMouseDown();
@@ -69,10 +74,10 @@ public class FaceTowelWithVfx : Item
   {
     if (MaskGroup.CheckMasksColider(NodeCheckPos.position))
     {
-      vfxUseTowel.Play();
+      if (!playVfxOnPick) vfxUseTowel.Play();
     }
 
-    if (MaskGroup.IsDone())
+    if (MaskGroup.IsDoneRating(true))
     {
       IsReady = false;
       OnFinish?.Invoke();
@@ -85,6 +90,7 @@ public class FaceTowelWithVfx : Item
     if (!isDragging) return;
     isDragging = false;
     OnDropItem?.Invoke();
+    if (playVfxOnPick) vfxUseTowel.Stop();
     OnHandleMouseUp();
   }
 
