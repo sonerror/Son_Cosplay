@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using DG.Tweening;
 using HoangHH;
 using Satisgame;
 using Sirenix.Utilities;
@@ -31,7 +32,7 @@ public class GameManager : Singleton<GameManager>
     if (!hadClicked && Input.GetMouseButtonDown(0))
     {
       hadClicked = true;
-      StartGamePlay();
+      // StartGamePlay();
     }
   }
 
@@ -54,13 +55,24 @@ public class GameManager : Singleton<GameManager>
     EventManager.TriggerEvent("ShowBtnInstall");
   }
 
-  public void ChangeToScene2()
+  private bool hadChooseScene = false;
+  public void ChooseScene1()
   {
-    // changeScene.ChangeSceneAndCall(() =>
-    // {
-    //   Scene1.SetActive(false);
-    //   Scene2.SetActive(true);
-    // });
+    if (hadChooseScene) return;
+    hadChooseScene = true;
+    Scene1.SetActive(true);
+    EventManager.TriggerEvent("ShowBtnInstall");
+    Destroy(Scene0);
+    Destroy(Scene2);
+  }
+  public void ChooseScene2()
+  {
+    if (hadChooseScene) return;
+    hadChooseScene = true;
+    EventManager.TriggerEvent("ShowBtnInstall");
+    Scene2.SetActive(true);
+    Destroy(Scene0);
+    Destroy(Scene1);
   }
 
   public void PlayPositiveEmoji()

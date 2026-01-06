@@ -7673,10 +7673,6 @@
                 "excluded": true
             },
             {
-                "name": "Spine.PhysicsConstraintMassTimeline",
-                "excluded": true
-            },
-            {
                 "name": "Spine.PhysicsConstraintStrengthTimeline",
                 "excluded": true
             },
@@ -8875,6 +8871,10 @@
             {
                 "name": "BrushEyeState",
                 "excluded": false
+            },
+            {
+                "name": "HideMouse",
+                "excluded": true
             }
         ],
         "unusedMethods": [
@@ -24307,10 +24307,6 @@
                         "excluded": false
                     },
                     {
-                        "name": "Start",
-                        "excluded": false
-                    },
-                    {
                         "name": "PlayTut6",
                         "excluded": true
                     },
@@ -35886,7 +35882,7 @@
                     },
                     {
                         "name": "WorldRotationX#get",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "WorldRotationY#get",
@@ -40517,12 +40513,16 @@
                         "excluded": false
                     },
                     {
-                        "name": "GetInZoneState",
+                        "name": "OnDisable",
                         "excluded": false
                     },
                     {
-                        "name": "OnDisable",
+                        "name": "CheckInZone",
                         "excluded": false
+                    },
+                    {
+                        "name": "CheckInZoneThis",
+                        "excluded": true
                     }
                 ]
             },
@@ -42587,6 +42587,26 @@
                     {
                         "name": "SetAlphaSlotName",
                         "excluded": false
+                    },
+                    {
+                        "name": "init",
+                        "excluded": false
+                    },
+                    {
+                        "name": "SetMouseDone",
+                        "excluded": true
+                    },
+                    {
+                        "name": "SetMouseHappy",
+                        "excluded": true
+                    },
+                    {
+                        "name": "SetMouseIdle",
+                        "excluded": true
+                    },
+                    {
+                        "name": "SetMouseAngry",
+                        "excluded": true
                     }
                 ]
             },
@@ -42654,15 +42674,15 @@
                     },
                     {
                         "name": "Setup",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "Get",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "Set",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "Global",
@@ -42911,19 +42931,7 @@
                         "excluded": false
                     },
                     {
-                        "name": "HideGlasses",
-                        "excluded": false
-                    },
-                    {
-                        "name": "ShowGlasses",
-                        "excluded": false
-                    },
-                    {
                         "name": "ChangeGroupItemStart",
-                        "excluded": false
-                    },
-                    {
-                        "name": "TurnOnMouthNew",
                         "excluded": false
                     },
                     {
@@ -42981,6 +42989,10 @@
                     {
                         "name": "OnStartStep11",
                         "excluded": true
+                    },
+                    {
+                        "name": "OnCutHair",
+                        "excluded": true
                     }
                 ]
             },
@@ -42999,6 +43011,14 @@
                     {
                         "name": "ShowSpriteStart",
                         "excluded": false
+                    },
+                    {
+                        "name": "ShowCustomSprite",
+                        "excluded": true
+                    },
+                    {
+                        "name": "SetAlphaSprite",
+                        "excluded": true
                     }
                 ]
             },
@@ -43329,10 +43349,6 @@
                         "excluded": true
                     },
                     {
-                        "name": "IsInRange",
-                        "excluded": true
-                    },
-                    {
                         "name": "OnComplete",
                         "excluded": true
                     },
@@ -43532,6 +43548,10 @@
                     },
                     {
                         "name": "DelayOneFrame",
+                        "excluded": true
+                    },
+                    {
+                        "name": "DrawRect",
                         "excluded": true
                     }
                 ]
@@ -44718,6 +44738,124 @@
             },
             {
                 "className": "Spine.PhysicsConstraintMixTimeline",
+                "staticMethods": [],
+                "instanceMethods": [
+                    {
+                        "name": "ctor",
+                        "excluded": false
+                    },
+                    {
+                        "name": "Setup",
+                        "excluded": false
+                    },
+                    {
+                        "name": "Get",
+                        "excluded": false
+                    },
+                    {
+                        "name": "Set",
+                        "excluded": false
+                    },
+                    {
+                        "name": "Global",
+                        "excluded": true
+                    }
+                ]
+            },
+            {
+                "className": "AutoDestroy",
+                "staticMethods": [],
+                "instanceMethods": [
+                    {
+                        "name": "init",
+                        "excluded": false
+                    },
+                    {
+                        "name": "Start",
+                        "excluded": true
+                    },
+                    {
+                        "name": "Update",
+                        "excluded": true
+                    },
+                    {
+                        "name": "OnDestroy",
+                        "excluded": true
+                    }
+                ]
+            },
+            {
+                "className": "Utilities.KeyframeData",
+                "staticMethods": [],
+                "instanceMethods": [
+                    {
+                        "name": "ctor",
+                        "excluded": false
+                    }
+                ]
+            },
+            {
+                "className": "Utilities.LoopAnimTransformFloating",
+                "staticMethods": [],
+                "instanceMethods": [
+                    {
+                        "name": "init",
+                        "excluded": false
+                    },
+                    {
+                        "name": "OnEnable",
+                        "excluded": false
+                    },
+                    {
+                        "name": "ResetFloatingAnchor",
+                        "excluded": false
+                    },
+                    {
+                        "name": "EvaluateCurve",
+                        "excluded": false
+                    },
+                    {
+                        "name": "Update",
+                        "excluded": false
+                    },
+                    {
+                        "name": "CloseEye",
+                        "excluded": true
+                    },
+                    {
+                        "name": "OnDisable",
+                        "excluded": true
+                    }
+                ]
+            },
+            {
+                "className": "Scissors",
+                "staticMethods": [],
+                "instanceMethods": [
+                    {
+                        "name": "SetReady",
+                        "excluded": true
+                    },
+                    {
+                        "name": "Start",
+                        "excluded": true
+                    },
+                    {
+                        "name": "OnActionMouseDown",
+                        "excluded": true
+                    },
+                    {
+                        "name": "OnActionMouseDrag",
+                        "excluded": true
+                    },
+                    {
+                        "name": "OnActionMouseUp",
+                        "excluded": true
+                    }
+                ]
+            },
+            {
+                "className": "Spine.PhysicsConstraintMassTimeline",
                 "staticMethods": [],
                 "instanceMethods": [
                     {
