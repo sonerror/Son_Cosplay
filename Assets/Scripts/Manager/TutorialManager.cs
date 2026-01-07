@@ -11,8 +11,6 @@ public class TutorialManager : Singleton<TutorialManager>
   public float timeCountHint = 2f;
   [SerializeField] public HandCtrl handCtrl;
   [SerializeField] private GamePlayManager gamePlayManager;
-
-  [SerializeField] private TapOpener lidTapOpener;
   [SerializeField] private GameObject clock;
   private int CountStepDone = 0;
   public void OnStepDone()
