@@ -204,7 +204,7 @@
             }
         ],
         "disableRuntimeAnalysisForCode": true,
-        "disableRuntimeAnalysisForShaders": true,
+        "disableRuntimeAnalysisForShaders": false,
         "useShadersCache": true,
         "preventUpdatingRAListWhenRAIsDisabled": false,
         "bakeReferenceAmbientProbe": false,
@@ -8844,14 +8844,6 @@
             {
                 "name": "BrushEyeState",
                 "excluded": false
-            },
-            {
-                "name": "pc.Debugger.Components.EditorCamera",
-                "excluded": true
-            },
-            {
-                "name": "pc.Debugger.Components.EditorGUI",
-                "excluded": true
             }
         ],
         "unusedMethods": [
@@ -9511,7 +9503,7 @@
                 "instanceMethods": [
                     {
                         "name": "format",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "equals",
@@ -41513,7 +41505,7 @@
                     },
                     {
                         "name": "DOScale",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "DOScaleX",
@@ -42811,7 +42803,7 @@
                     },
                     {
                         "name": "alphaCutoff#set",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "sprite#get",
@@ -45506,8 +45498,8 @@
                     {
                         "channels": 1,
                         "startTime": "00:00.000",
-                        "endTime": "00:21.389",
-                        "lengthInSeconds": 21.388999938964845,
+                        "endTime": "00:21.007",
+                        "lengthInSeconds": 21.006999969482423,
                         "bitrate": 64,
                         "script": "",
                         "ext": "",

@@ -17,7 +17,7 @@ public class GameManager : Singleton<GameManager>
   // public ChangeScene changeScene;
 
   public GameObject Scene0, Scene1, Scene2;
-  public Transform ContentGamePlay;
+  public Animator ContentGamePlay;
 
   private bool isLandscape = false;
   void FixedUpdate()
@@ -28,13 +28,15 @@ public class GameManager : Singleton<GameManager>
     {
       isLandscape = true;
       // Show landscape UI
-      ContentGamePlay.localScale = Vector3.one * 1.5f;
+      ContentGamePlay.transform.localScale = Vector3.one * 1.5f;
+      ContentGamePlay.SetTrigger("Land");
     }
     else if (size.x <= size.y && isLandscape)
     {
       isLandscape = false;
       // Show portrait UI
-      ContentGamePlay.localScale = Vector3.one;
+      ContentGamePlay.transform.localScale = Vector3.one * 1.2f;
+      ContentGamePlay.SetTrigger("Por");
     }
 
   }
