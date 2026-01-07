@@ -85,24 +85,32 @@ public class GameManager : Singleton<GameManager>
     if (isPlayingGame) return;
     StartGamePlay();
     Scene1.SetActive(true);
-    Destroy(Scene0);
+
     GamePlayManager.Ins.character = Body1;
     GamePlayManager.Ins.SetStep(0);
     SoundManager.Ins.PlayFx(FxType.StartGame);
     typeGamePlay1 = true;
-    Destroy(Scene2);
+    // Destroy(Scene0);
+    // Destroy(Scene2);
+
+    Scene0.SetActive(false);
+    Scene2.SetActive(false);
   }
   public void ChooseScene2()
   {
     if (isPlayingGame) return;
     StartGamePlay();
     Scene2.SetActive(true);
-    Destroy(Scene0);
+
     GamePlayManager.Ins.character = Body2;
     GamePlayManager.Ins.SetStep(6);
     SoundManager.Ins.PlayFx(FxType.WomanHey);
     typeGamePlay1 = false;
-    Destroy(Scene1);
+    // Destroy(Scene1);
+    //  Destroy(Scene0);
+
+    Scene0.SetActive(false);
+    Scene1.SetActive(false);
   }
 
   public void PlayPositiveEmoji()

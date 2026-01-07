@@ -1,8 +1,8 @@
 {
     "version": "7.0.0",
     "projectId": "f42e7ff96e4545544bb6cd68f51ab634",
-    "applicationID": 27599,
-    "creativeName": "Cosplaydom_v6",
+    "applicationID": 34683,
+    "creativeName": "Cosplaydom_v7",
     "pgServer": "EU",
     "window": {
         "‐⁏": true
@@ -13,6 +13,7 @@
             "excludes": [
                 "Assets/ExportSubSprites.cs",
                 "Assets/FindMissingScriptsRecursively.cs",
+                "Assets/HideMouse.cs",
                 "**/Editor/",
                 "**/Luna/RuntimeScripts/",
                 "**/FacebookSDK/",
@@ -6313,19 +6314,11 @@
                 "excluded": true
             },
             {
-                "name": "UnityEngine.UI.SetPropertyUtility",
-                "excluded": true
-            },
-            {
                 "name": "UnityEngine.UI.AspectRatioFitter",
                 "excluded": true
             },
             {
                 "name": "UnityEngine.UI.CoroutineTween.FloatTween",
-                "excluded": true
-            },
-            {
-                "name": "UnityEngine.UI.LayoutElement",
                 "excluded": true
             },
             {
@@ -6466,7 +6459,7 @@
             },
             {
                 "name": "UnityEngine.UI.ILayoutIgnorer",
-                "excluded": true
+                "excluded": false
             },
             {
                 "name": "UnityEngine.UI.Image.FillMethod",
@@ -8851,10 +8844,6 @@
             {
                 "name": "BrushEyeState",
                 "excluded": false
-            },
-            {
-                "name": "HideMouse",
-                "excluded": true
             },
             {
                 "name": "pc.Debugger.Components.EditorCamera",
@@ -17426,7 +17415,7 @@
                     },
                     {
                         "name": "name#get",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "name#set",
@@ -17554,7 +17543,7 @@
                     },
                     {
                         "name": "SetParent",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "DetachChildren",
@@ -17594,7 +17583,7 @@
                     },
                     {
                         "name": "SetAsFirstSibling",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "GetEnumerator",
@@ -18566,7 +18555,7 @@
                     },
                     {
                         "name": "anchorMax#set",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "anchorMin#get",
@@ -18574,7 +18563,7 @@
                     },
                     {
                         "name": "anchorMin#set",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "offsetMin#get",
@@ -18598,7 +18587,7 @@
                     },
                     {
                         "name": "pivot#set",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "anchoredPosition#get",
@@ -19436,11 +19425,11 @@
                     },
                     {
                         "name": "raycastTarget#set",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "color#get",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "color#set",
@@ -19476,7 +19465,7 @@
                     },
                     {
                         "name": "OnPopulateMesh",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "SetMaterialDirty",
@@ -19492,7 +19481,7 @@
                     },
                     {
                         "name": "GetPixelAdjustedRect",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "OnSelect",
@@ -19560,7 +19549,7 @@
                     },
                     {
                         "name": "OnCanvasGroupChanged",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "Raycast",
@@ -20444,7 +20433,7 @@
                     },
                     {
                         "name": "fontSharedMaterial#get",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "fontSharedMaterial#set",
@@ -20632,7 +20621,7 @@
                     },
                     {
                         "name": "isUsingBold#get",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "horizontalAlignment#get",
@@ -20760,7 +20749,7 @@
                     },
                     {
                         "name": "extraPadding#get",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "extraPadding#set",
@@ -21950,7 +21939,7 @@
                     },
                     {
                         "name": "matchMaterialPreset#get",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "defaultSpriteAsset#get",
@@ -23934,11 +23923,11 @@
                     },
                     {
                         "name": "PlaySoundLoopWater",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "StopSoundLoopWater",
-                        "excluded": true
+                        "excluded": false
                     }
                 ]
             },
@@ -24316,15 +24305,15 @@
                     },
                     {
                         "name": "PlayTut7",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "PlayTut8",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "PlayTut9",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "PlayTut10",
@@ -26806,7 +26795,7 @@
                 "instanceMethods": [
                     {
                         "name": "name#get",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "name#set",
@@ -26898,7 +26887,7 @@
                     },
                     {
                         "name": "shader#get",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "shader#set",
@@ -27186,7 +27175,7 @@
                     },
                     {
                         "name": "ComputeCRC",
-                        "excluded": true
+                        "excluded": false
                     }
                 ]
             },
@@ -27984,7 +27973,7 @@
                     },
                     {
                         "name": "SetColor",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "DisableRectClipping",
@@ -29116,7 +29105,7 @@
                     },
                     {
                         "name": "renderMode#get",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "renderMode#set",
@@ -29124,7 +29113,7 @@
                     },
                     {
                         "name": "sortMode#get",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "sortMode#set",
@@ -29132,7 +29121,7 @@
                     },
                     {
                         "name": "lengthScale#get",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "lengthScale#set",
@@ -29140,7 +29129,7 @@
                     },
                     {
                         "name": "velocityScale#get",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "velocityScale#set",
@@ -29148,7 +29137,7 @@
                     },
                     {
                         "name": "cameraVelocityScale#get",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "cameraVelocityScale#set",
@@ -29156,7 +29145,7 @@
                     },
                     {
                         "name": "normalDirection#get",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "normalDirection#set",
@@ -29164,7 +29153,7 @@
                     },
                     {
                         "name": "sortingFudge#get",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "sortingFudge#set",
@@ -29172,7 +29161,7 @@
                     },
                     {
                         "name": "minParticleSize#get",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "minParticleSize#set",
@@ -29180,7 +29169,7 @@
                     },
                     {
                         "name": "maxParticleSize#get",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "maxParticleSize#set",
@@ -29188,7 +29177,7 @@
                     },
                     {
                         "name": "pivot#get",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "pivot#set",
@@ -29196,7 +29185,7 @@
                     },
                     {
                         "name": "trailMaterial#get",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "trailMaterial#set",
@@ -29586,7 +29575,7 @@
                     },
                     {
                         "name": "ExtractBlocksRaycast",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "alpha#get",
@@ -30018,15 +30007,15 @@
                     },
                     {
                         "name": "AddTriangle",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "AddVert",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "AddVert$1",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "AddVert$2",
@@ -30038,7 +30027,7 @@
                     },
                     {
                         "name": "Clear",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "AddUIVertexQuad",
@@ -31416,11 +31405,11 @@
                     },
                     {
                         "name": "GetFallbackMaterial",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "AddFallbackMaterialReference",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "RemoveFallbackMaterialReference",
@@ -31428,11 +31417,11 @@
                     },
                     {
                         "name": "CleanupFallbackMaterials",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "ReleaseFallbackMaterial",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "CopyMaterialPresetProperties",
@@ -31450,7 +31439,7 @@
                     },
                     {
                         "name": "getDefaultValue",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "$ctor1",
@@ -31482,7 +31471,7 @@
                     },
                     {
                         "name": "ClearUnusedVertices",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "ClearUnusedVertices$1",
@@ -31652,7 +31641,7 @@
                 "instanceMethods": [
                     {
                         "name": "AddSubTextObject",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "fontAsset#get",
@@ -31684,7 +31673,7 @@
                     },
                     {
                         "name": "sharedMaterial#get",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "sharedMaterial#set",
@@ -31696,7 +31685,7 @@
                     },
                     {
                         "name": "fallbackMaterial#set",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "fallbackSourceMaterial#get",
@@ -31704,11 +31693,11 @@
                     },
                     {
                         "name": "fallbackSourceMaterial#set",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "materialForRendering#get",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "isDefaultMaterial#get",
@@ -31720,7 +31709,7 @@
                     },
                     {
                         "name": "padding#get",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "padding#set",
@@ -31728,7 +31717,7 @@
                     },
                     {
                         "name": "mesh#get",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "mesh#set",
@@ -31736,15 +31725,15 @@
                     },
                     {
                         "name": "textComponent#get",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "OnEnable",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "OnDisable",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "OnDestroy",
@@ -31756,11 +31745,11 @@
                     },
                     {
                         "name": "GetModifiedMaterial",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "GetPaddingForMaterial",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "GetPaddingForMaterial$1",
@@ -31776,7 +31765,7 @@
                     },
                     {
                         "name": "SetVerticesDirty",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "SetLayoutDirty",
@@ -31784,7 +31773,7 @@
                     },
                     {
                         "name": "SetMaterialDirty",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "SetPivotDirty",
@@ -31812,11 +31801,11 @@
                     },
                     {
                         "name": "UpdateMaterial",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "RecalculateClipping",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "GetMaterial",
@@ -31836,7 +31825,7 @@
                     },
                     {
                         "name": "SetSharedMaterial",
-                        "excluded": true
+                        "excluded": false
                     }
                 ]
             },
@@ -32932,7 +32921,7 @@
                     },
                     {
                         "name": "MouseDrag",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "GetMouseWorldPos",
@@ -40126,63 +40115,63 @@
                 "instanceMethods": [
                     {
                         "name": "main#get",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "emission#get",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "colorBySpeed#get",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "colorOverLifetime#get",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "rotationBySpeed#get",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "rotationOverLifetime#get",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "shape#get",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "sizeBySpeed#get",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "sizeOverLifetime#get",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "textureSheetAnimation#get",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "velocityOverLifetime#get",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "noise#get",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "inheritVelocity#get",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "forceOverLifetime#get",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "limitVelocityOverLifetime#get",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "enableEmission#get",
@@ -42602,15 +42591,15 @@
                     },
                     {
                         "name": "SetMouseHappy",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "SetMouseIdle",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "SetMouseAngry",
-                        "excluded": true
+                        "excluded": false
                     }
                 ]
             },
@@ -42730,7 +42719,7 @@
                     },
                     {
                         "name": "sortingLayerIndex#get",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "sortingLayerIndex#set",
@@ -42754,7 +42743,7 @@
                     },
                     {
                         "name": "sortingLayerName#get",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "ctor",
@@ -42984,15 +42973,15 @@
                     },
                     {
                         "name": "OnEndStep10",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "OnStartStep11",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "OnCutHair",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "SetStep",
@@ -43018,7 +43007,7 @@
                     },
                     {
                         "name": "ShowCustomSprite",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "SetAlphaSprite",
@@ -43314,43 +43303,43 @@
                     },
                     {
                         "name": "MouseDown",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "MouseUp",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "MouseDrag",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "OnActionMouseDown",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "OnActionMouseDrag",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "OnActionMouseUp",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "OnHandleMouseDown",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "OnHandleMouseDrag",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "OnHandleMouseUp",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "CheckTarget",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "OnComplete",
@@ -43362,11 +43351,11 @@
                     },
                     {
                         "name": "ChangeLayerUp",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "ChangeLayerDown",
-                        "excluded": true
+                        "excluded": false
                     }
                 ]
             },
@@ -43400,7 +43389,7 @@
                     },
                     {
                         "name": "GetTranformOfMaskNotActive",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "SetTypeActive",
@@ -44776,11 +44765,11 @@
                     },
                     {
                         "name": "Start",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "Update",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "OnDestroy",
@@ -44838,23 +44827,23 @@
                 "instanceMethods": [
                     {
                         "name": "SetReady",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "Start",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "OnActionMouseDown",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "OnActionMouseDrag",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "OnActionMouseUp",
-                        "excluded": true
+                        "excluded": false
                     }
                 ]
             },
@@ -45035,6 +45024,122 @@
                     {
                         "name": "$ctor3",
                         "excluded": true
+                    }
+                ]
+            },
+            {
+                "className": "UnityEngine.UI.SetPropertyUtility",
+                "staticMethods": [],
+                "instanceMethods": [
+                    {
+                        "name": "SetColor",
+                        "excluded": true
+                    },
+                    {
+                        "name": "SetStruct",
+                        "excluded": false
+                    },
+                    {
+                        "name": "SetClass",
+                        "excluded": true
+                    }
+                ]
+            },
+            {
+                "className": "UnityEngine.UI.LayoutElement",
+                "staticMethods": [],
+                "instanceMethods": [
+                    {
+                        "name": "minWidth#get",
+                        "excluded": true
+                    },
+                    {
+                        "name": "minWidth#set",
+                        "excluded": true
+                    },
+                    {
+                        "name": "minHeight#get",
+                        "excluded": true
+                    },
+                    {
+                        "name": "minHeight#set",
+                        "excluded": true
+                    },
+                    {
+                        "name": "preferredWidth#get",
+                        "excluded": true
+                    },
+                    {
+                        "name": "preferredWidth#set",
+                        "excluded": true
+                    },
+                    {
+                        "name": "preferredHeight#get",
+                        "excluded": true
+                    },
+                    {
+                        "name": "preferredHeight#set",
+                        "excluded": true
+                    },
+                    {
+                        "name": "flexibleWidth#get",
+                        "excluded": true
+                    },
+                    {
+                        "name": "flexibleWidth#set",
+                        "excluded": true
+                    },
+                    {
+                        "name": "flexibleHeight#get",
+                        "excluded": true
+                    },
+                    {
+                        "name": "flexibleHeight#set",
+                        "excluded": true
+                    },
+                    {
+                        "name": "layoutPriority#get",
+                        "excluded": true
+                    },
+                    {
+                        "name": "ignoreLayout#get",
+                        "excluded": true
+                    },
+                    {
+                        "name": "ignoreLayout#set",
+                        "excluded": false
+                    },
+                    {
+                        "name": "init",
+                        "excluded": false
+                    },
+                    {
+                        "name": "OnEnable",
+                        "excluded": false
+                    },
+                    {
+                        "name": "OnDisable",
+                        "excluded": false
+                    },
+                    {
+                        "name": "OnDidApplyAnimationProperties",
+                        "excluded": true
+                    },
+                    {
+                        "name": "OnTransformParentChanged",
+                        "excluded": true
+                    },
+                    {
+                        "name": "CalculateLayoutInputHorizontal",
+                        "excluded": true
+                    },
+                    {
+                        "name": "CalculateLayoutInputVertical",
+                        "excluded": true
+                    },
+                    {
+                        "name": "SetDirty",
+                        "excluded": false
                     }
                 ]
             }
@@ -45314,6 +45419,36 @@
                         "script": "",
                         "ext": "",
                         "name": "Assets/_GAME/Levels/LvCosplaySanta/Cha_new 1/SANTA.png"
+                    },
+                    {
+                        "maxWidth": 2048,
+                        "maxHeight": 2048,
+                        "format": "png32",
+                        "compression": "quantSize",
+                        "quality": 65,
+                        "script": "",
+                        "ext": "",
+                        "name": "Assets/_GAME/Levels/LvCosplayJoker/NewSpine1/111.png"
+                    },
+                    {
+                        "maxWidth": 2048,
+                        "maxHeight": 2048,
+                        "format": "png32",
+                        "compression": "quantSize",
+                        "quality": 65,
+                        "script": "",
+                        "ext": "",
+                        "name": "Assets/_GAME/Levels/LvCosplayJoker/NewSpine1/Joker.png"
+                    },
+                    {
+                        "maxWidth": 2048,
+                        "maxHeight": 2048,
+                        "format": "png32",
+                        "compression": "quantSize",
+                        "quality": 65,
+                        "script": "",
+                        "ext": "",
+                        "name": "Assets/_GAME/Levels/LvCosplayWenesday/Wed/Wednesday.png"
                     }
                 ]
             },

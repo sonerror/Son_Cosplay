@@ -32,7 +32,10 @@ Material:
     m_Ints: []
     m_Floats:
     - _Cutoff: 0.1
+    - _DoubleSidedLighting: 0
     - _Fill: 0
+    - _FillPhase: 0
+    - _LightAffectsAdditive: 0
     - _OutlineMipLevel: 0
     - _OutlineOpaqueAlpha: 1
     - _OutlineReferenceTexWidth: 1024
@@ -45,6 +48,7 @@ Material:
     - _Use8Neighbourhood: 1
     - _UseScreenSpaceOutlineWidth: 0
     m_Colors:
+    - _FillColor: {r: 1, g: 1, b: 1, a: 1}
     - _OutlineColor: {r: 1, g: 1, b: 0, a: 1}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
