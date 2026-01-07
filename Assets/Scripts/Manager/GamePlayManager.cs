@@ -34,8 +34,14 @@ public class GamePlayManager : Singleton<GamePlayManager>
     }
   }
 
-  void Start()
+  // void Start()
+  // {
+  //   StartStep();
+  // }
+
+  public void SetStep(int step)
   {
+    currentStep = step;
     StartStep();
   }
 
@@ -120,6 +126,7 @@ public class GamePlayManager : Singleton<GamePlayManager>
   void OnCutHair()
   {
     countCutHair++;
+    SoundManager.Ins.PlayFx(FxType.Cut);
     if (countCutHair >= 2)
     {
       OnEndStep0();

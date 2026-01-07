@@ -20,6 +20,7 @@ public class Scissors : ItemDragBase
     base.OnActionMouseDown();
     if (!IsReady) return;
     anim.SetTrigger("Play");
+    // SoundManager.Ins.PlaySoundLoop(FxType.Cut);
   }
 
   public override void OnActionMouseDrag()
@@ -31,6 +32,7 @@ public class Scissors : ItemDragBase
   {
     base.OnActionMouseUp();
     anim.SetTrigger("Idle");
+    // SoundManager.Ins.StopSoundLoop(FxType.Cut);
     if (!IsReady) return;
   }
 

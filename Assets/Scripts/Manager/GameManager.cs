@@ -13,10 +13,31 @@ public class GameManager : Singleton<GameManager>
   public ClockTimer clockTimer;
   public FillCircleBar fillCircleBar;
   public bool isPlayingGame = false;
-  // public SkeletonAnimation playerSkeleton;
+  public CharacterControl Body1, Body2;
   // public ChangeScene changeScene;
 
   public GameObject Scene0, Scene1, Scene2;
+  public Transform ContentGamePlay;
+
+  private bool isLandscape = false;
+  void FixedUpdate()
+  {
+    if (isPlayingGame) return;
+    var size = UIManager.Ins.GameSize;
+    if (size.x > size.y && !isLandscape)
+    {
+      isLandscape = true;
+      // Show landscape UI
+      ContentGamePlay.localScale = Vector3.one * 1.5f;
+    }
+    else if (size.x <= size.y && isLandscape)
+    {
+      isLandscape = false;
+      // Show portrait UI
+      ContentGamePlay.localScale = Vector3.one;
+    }
+
+  }
 
   private IEnumerator coroutine = null;
 
@@ -24,10 +45,10 @@ public class GameManager : Singleton<GameManager>
 
   private void Update()
   {
-    // if (isPlayingGame && Input.GetMouseButtonDown(0))
-    // {
-    //   EventManager.TriggerEvent("ShowBtnInstall");
-    // }
+    if (isPlayingGame && Input.GetMouseButtonDown(0))
+    {
+      EventManager.TriggerEvent("ShowBtnInstall");
+    }
 
     if (!hadClicked && Input.GetMouseButtonDown(0))
     {
@@ -48,30 +69,39 @@ public class GameManager : Singleton<GameManager>
     //   // GamePlayManager.Ins.StartStep();
     // });
 
-
+    EventManager.TriggerEvent("ShowText2");
     TutorialManager.Ins.enableCountTime = true;
-    SoundManager.Ins.PlayFx(FxType.StartGame);
-    isPlayingGame = true;
-    EventManager.TriggerEvent("ShowBtnInstall");
+    // SoundManager.Ins.PlayFx(FxType.StartGame);
+    DOVirtual.DelayedCall(0.2f, () =>
+    {
+      isPlayingGame = true;
+    });
+
   }
 
-  private bool hadChooseScene = false;
+  public bool typeGamePlay1 = true;
   public void ChooseScene1()
   {
-    if (hadChooseScene) return;
-    hadChooseScene = true;
+    if (isPlayingGame) return;
+    StartGamePlay();
     Scene1.SetActive(true);
-    EventManager.TriggerEvent("ShowBtnInstall");
     Destroy(Scene0);
+    GamePlayManager.Ins.character = Body1;
+    GamePlayManager.Ins.SetStep(0);
+    SoundManager.Ins.PlayFx(FxType.StartGame);
+    typeGamePlay1 = true;
     Destroy(Scene2);
   }
   public void ChooseScene2()
   {
-    if (hadChooseScene) return;
-    hadChooseScene = true;
-    EventManager.TriggerEvent("ShowBtnInstall");
+    if (isPlayingGame) return;
+    StartGamePlay();
     Scene2.SetActive(true);
     Destroy(Scene0);
+    GamePlayManager.Ins.character = Body2;
+    GamePlayManager.Ins.SetStep(6);
+    SoundManager.Ins.PlayFx(FxType.WomanHey);
+    typeGamePlay1 = false;
     Destroy(Scene1);
   }
 
@@ -92,9 +122,19 @@ public class GameManager : Singleton<GameManager>
     emojiControl.ShowPositive();
     GamePlayManager.Ins.character.SetMouseHappy();
     var i = idSoundHappy % 3;
-    if (i == 0) SoundManager.Ins.PlayFx(FxType.Happy0);
-    else if (i == 1) SoundManager.Ins.PlayFx(FxType.Happy1);
-    else SoundManager.Ins.PlayFx(FxType.Happy2);
+
+    if (typeGamePlay1)
+    {
+      if (i == 0) SoundManager.Ins.PlayFx(FxType.Happy0);
+      else if (i == 1) SoundManager.Ins.PlayFx(FxType.Happy1);
+      else SoundManager.Ins.PlayFx(FxType.Happy2);
+    }
+    else
+    {
+      if (i == 0) SoundManager.Ins.PlayFx(FxType.Happy0_1);
+      else if (i == 1) SoundManager.Ins.PlayFx(FxType.Happy1_1);
+      else SoundManager.Ins.PlayFx(FxType.Happy2_1);
+    }
     idSoundHappy++;
 
     yield return new WaitForSeconds(1f);
@@ -121,9 +161,20 @@ public class GameManager : Singleton<GameManager>
     emojiControl.ShowNegative();
 
     var i = idSoundAngry % 3;
-    if (i == 0) SoundManager.Ins.PlayFx(FxType.Angry0);
-    else if (i == 1) SoundManager.Ins.PlayFx(FxType.Angry1);
-    else SoundManager.Ins.PlayFx(FxType.Angry2);
+
+
+    if (typeGamePlay1)
+    {
+      if (i == 0) SoundManager.Ins.PlayFx(FxType.Angry0);
+      else if (i == 1) SoundManager.Ins.PlayFx(FxType.Angry1);
+      else SoundManager.Ins.PlayFx(FxType.Angry2);
+    }
+    else
+    {
+      if (i == 0) SoundManager.Ins.PlayFx(FxType.Angry0_1);
+      else if (i == 1) SoundManager.Ins.PlayFx(FxType.Angry1_1);
+      else SoundManager.Ins.PlayFx(FxType.Angry2_1);
+    }
     idSoundAngry++;
 
     yield return new WaitForSeconds(0.65f);

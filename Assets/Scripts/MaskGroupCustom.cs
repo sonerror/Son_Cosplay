@@ -67,6 +67,7 @@ public class MaskGroupCustom : GameUnit
       if (ActiveIfDone)
       {
         DoneAllMask();
+        SoundManager.Ins.PlayFxIfNotPlay(FxSound);
         CurrRating = 1f;
       }
       return true;
