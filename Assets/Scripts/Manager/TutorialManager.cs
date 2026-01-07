@@ -122,37 +122,37 @@ public class TutorialManager : Singleton<TutorialManager>
   }
   void PlayTut0()
   {
-    handCtrl.ShowHandPosToPos(tutorialNode[0].position, tutorialNode[0].position + Vector3.right * 3f);
+    var item = gamePlayManager.items[0];
+    for (var i = 0; i < gamePlayManager.hairCutTrigger.Count; i++)
+    {
+      if (gamePlayManager.hairCutTrigger[i].gameObject.activeSelf)
+      {
+        handCtrl.ShowHandPosToPos(item.Tf.position, gamePlayManager.hairCutTrigger[i].Tf.position);
+        return;
+      }
+    }
   }
 
   void PlayTut1()
   {
-    var item = gamePlayManager.items[1];
-    handCtrl.ShowHandAtPos(item.Tf.position);
+    var item = gamePlayManager.items[1] as FaceTowelWithVfx;
+    handCtrl.ShowHandPosToPos(item.Tf.position, item.MaskGroup.GetTranformOfMaskNotActive().position);
   }
 
   void PlayTut2()
   {
-
-    var item = gamePlayManager.items[2] as FoundationBottle;
-    handCtrl.ShowHandPosToPos(item.Tf.position, item.getPosTargetActive());
-
+    handCtrl.ShowHandAtPos(gamePlayManager.items[2].Tf.position);
   }
 
   void PlayTut3()
   {
-    var item = gamePlayManager.items[3];
-    handCtrl.ShowHandAtPos(item.Tf.position);
+    var item = gamePlayManager.items[3] as FoundationBottle;
+    handCtrl.ShowHandPosToPos(item.Tf.position, item.getPosTargetActive());
   }
 
   void PlayTut4()
   {
-    var item = gamePlayManager.items[4] as FoundationBottle;
-    handCtrl.ShowHandPosToPos(item.Tf.position, item.getPosTargetActive());
-  }
-  void PlayTut5()
-  {
-    var item = gamePlayManager.items[5] as BrushBlushWithMaskGroup;
+    var item = gamePlayManager.items[4] as BrushBlushWithMaskGroup;
     if (item.CurrBrushBlushState == BrushBlushState.Drag)
     {
       handCtrl.ShowHandPosToPos(item.Tf.position, item.BoxFlour.Tf.position);
@@ -164,40 +164,45 @@ public class TutorialManager : Singleton<TutorialManager>
       return;
     }
   }
+
+  void PlayTut5()
+  {
+    handCtrl.ShowHandPosToPos(gamePlayManager.items[5].Tf.position, tutorialNode[0].position);
+  }
   void PlayTut6()
   {
-    var item = gamePlayManager.items[6] as FaceTowel;
-    handCtrl.ShowHandPosToPos(item.Tf.position, item.maskGroup.GetTranformOfMaskNotActive().position);
+    var item = gamePlayManager.items[6] as HairBang;
+    handCtrl.ShowHandPosToPos(item.Tf.position, item.targetInfos.targetTf.position);
 
   }
   void PlayTut7()
   {
     var item = gamePlayManager.items[7];
-    handCtrl.ShowHandAtPos(item.Tf.position);
+    handCtrl.ShowHandPosToPos(item.Tf.position, tutorialNode[1].position);
   }
 
   void PlayTut8()
   {
-    var item = gamePlayManager.items[8] as FoundationBottle;
-    handCtrl.ShowHandPosToPos(item.Tf.position, item.getPosTargetActive());
+    var item = gamePlayManager.items[8] as FaceTowel;
+    handCtrl.ShowHandPosToPos(item.Tf.position, item.maskGroup.GetTranformOfMaskNotActive().position);
   }
 
   void PlayTut9()
   {
-    var item = gamePlayManager.items[9] as HairBang;
-    handCtrl.ShowHandPosToPos(item.Tf.position, item.targetInfos.targetTf.position);
+    var item = gamePlayManager.items[9] as FoundationBottle;
+    handCtrl.ShowHandPosToPos(item.Tf.position, item.getPosTargetActive());
   }
 
   void PlayTut10()
   {
-    for (int index1 = 10; index1 < 16; index1++)
+    var items = gamePlayManager.items;
+    for (int i = 10; i < 13; i++)
     {
-      if (gamePlayManager.items[index1].IsReady)
+      if (items[i].gameObject.activeSelf)
       {
-        var item = gamePlayManager.items[index1] as HairBang;
-        handCtrl.ShowHandPosToPos(item.Tf.position, item.targetInfos.targetTf.position);
+        handCtrl.ShowHandAtPos(items[i].Tf.position);
+        return;
       }
-      return;
     }
   }
 

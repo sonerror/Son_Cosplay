@@ -9,11 +9,8 @@ public class HandCtrl : MonoBehaviour
   private Vector3 pos2;
 
 
-  private bool isShowHandState1 = false;
   public void ShowHandAtPos(Vector3 pos)
   {
-    if (isShowHandState1) return;
-    isShowHandState1 = true;
     gameObject.SetActive(true);
     animator.Play("Hand");
     transform.position = pos;
@@ -25,13 +22,6 @@ public class HandCtrl : MonoBehaviour
     gameObject.SetActive(false);
     StopAllCoroutines();
     transform.DOKill();
-  }
-
-  public void setHandPlayBox(Vector3 pos)
-  {
-    gameObject.SetActive(true);
-    animator.Play("HandCir");
-    transform.position = pos + Vector3.up * 0.5f;
   }
 
   public void ShowHandPosToPos(Vector3 pos1, Vector3 pos2)

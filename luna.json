@@ -168,7 +168,7 @@
         "forceBase64": true,
         "graphicsConstraint": 24,
         "genericCheck": true,
-        "disableAntiAliasing": true,
+        "disableAntiAliasing": false,
         "forceStableRandomSeed": false,
         "unusedModules": [
             {
@@ -203,7 +203,7 @@
             }
         ],
         "disableRuntimeAnalysisForCode": true,
-        "disableRuntimeAnalysisForShaders": false,
+        "disableRuntimeAnalysisForShaders": true,
         "useShadersCache": true,
         "preventUpdatingRAListWhenRAIsDisabled": false,
         "bakeReferenceAmbientProbe": false,
@@ -565,10 +565,6 @@
                 "excluded": true
             },
             {
-                "name": "System.OperationCanceledException",
-                "excluded": true
-            },
-            {
                 "name": "System.OverflowException",
                 "excluded": true
             },
@@ -730,10 +726,6 @@
             },
             {
                 "name": "System.Threading.Thread",
-                "excluded": true
-            },
-            {
-                "name": "System.Threading.Tasks.TaskCanceledException",
                 "excluded": true
             },
             {
@@ -7597,10 +7589,6 @@
                 "excluded": true
             },
             {
-                "name": "Spine.PathAttachment",
-                "excluded": true
-            },
-            {
                 "name": "Spine.PathConstraintMixTimeline",
                 "excluded": true
             },
@@ -7641,10 +7629,6 @@
                 "excluded": true
             },
             {
-                "name": "Spine.PathConstraintPositionTimeline",
-                "excluded": true
-            },
-            {
                 "name": "Spine.PathConstraintSpacingTimeline",
                 "excluded": true
             },
@@ -7670,10 +7654,6 @@
             },
             {
                 "name": "Spine.PhysicsConstraintGravityTimeline",
-                "excluded": true
-            },
-            {
-                "name": "Spine.PhysicsConstraintStrengthTimeline",
                 "excluded": true
             },
             {
@@ -7758,7 +7738,7 @@
             },
             {
                 "name": "Spine.PositionMode",
-                "excluded": true
+                "excluded": false
             },
             {
                 "name": "Spine.Property",
@@ -7766,7 +7746,7 @@
             },
             {
                 "name": "Spine.RotateMode",
-                "excluded": true
+                "excluded": false
             },
             {
                 "name": "Spine.SequenceMode",
@@ -7782,7 +7762,7 @@
             },
             {
                 "name": "Spine.SpacingMode",
-                "excluded": true
+                "excluded": false
             },
             {
                 "name": "Spine.TextureFilter",
@@ -8874,6 +8854,14 @@
             },
             {
                 "name": "HideMouse",
+                "excluded": true
+            },
+            {
+                "name": "pc.Debugger.Components.EditorCamera",
+                "excluded": true
+            },
+            {
+                "name": "pc.Debugger.Components.EditorGUI",
                 "excluded": true
             }
         ],
@@ -11538,7 +11526,7 @@
                     },
                     {
                         "name": "ctor",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "GetEnumerator",
@@ -11546,7 +11534,7 @@
                     },
                     {
                         "name": "System$Collections$Generic$IEnumerable$1$GetEnumerator",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "System$Collections$IEnumerable$GetEnumerator",
@@ -13254,7 +13242,7 @@
                     },
                     {
                         "name": "Count#get",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "System$Collections$ICollection$IsSynchronized#get",
@@ -13282,11 +13270,11 @@
                     },
                     {
                         "name": "ctor",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "getItem",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "System$Collections$Generic$IList$1$getItem",
@@ -23849,8 +23837,16 @@
                         "excluded": false
                     },
                     {
-                        "name": "ChangeToScene2",
-                        "excluded": true
+                        "name": "FixedUpdate",
+                        "excluded": false
+                    },
+                    {
+                        "name": "ChooseScene1",
+                        "excluded": false
+                    },
+                    {
+                        "name": "ChooseScene2",
+                        "excluded": false
                     }
                 ]
             },
@@ -23935,6 +23931,14 @@
                     {
                         "name": "PlayFxIfNotPlay",
                         "excluded": false
+                    },
+                    {
+                        "name": "PlaySoundLoopWater",
+                        "excluded": true
+                    },
+                    {
+                        "name": "StopSoundLoopWater",
+                        "excluded": true
                     }
                 ]
             },
@@ -23986,7 +23990,7 @@
                     },
                     {
                         "name": "Animation#get",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "Loop#get",
@@ -24308,7 +24312,7 @@
                     },
                     {
                         "name": "PlayTut6",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "PlayTut7",
@@ -24342,7 +24346,7 @@
                     },
                     {
                         "name": "GameSize#get",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "init",
@@ -33069,10 +33073,6 @@
                         "excluded": false
                     },
                     {
-                        "name": "setHandPlayBox",
-                        "excluded": true
-                    },
-                    {
                         "name": "ShowHand",
                         "excluded": false
                     },
@@ -33268,7 +33268,7 @@
                     },
                     {
                         "name": "Name#get",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "ctor",
@@ -34048,15 +34048,15 @@
                     },
                     {
                         "name": "SortPathConstraint",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "SortPathConstraintAttachment$1",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "SortPathConstraintAttachment",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "SortPhysicsConstraint",
@@ -34430,7 +34430,7 @@
                     },
                     {
                         "name": "FindPathConstraint",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "FindPhysicsConstraint",
@@ -34462,7 +34462,7 @@
                     },
                     {
                         "name": "Attachments#get",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "Bones#get",
@@ -34528,7 +34528,7 @@
                     },
                     {
                         "name": "SlotIndex#get",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "Name#get",
@@ -34536,7 +34536,7 @@
                     },
                     {
                         "name": "Attachment#get",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "$ctor1",
@@ -34960,7 +34960,7 @@
                     },
                     {
                         "name": "OnDestroy",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "LateUpdate",
@@ -35170,7 +35170,7 @@
                     },
                     {
                         "name": "Dispose",
-                        "excluded": true
+                        "excluded": false
                     }
                 ]
             },
@@ -35188,7 +35188,7 @@
                     },
                     {
                         "name": "Dispose",
-                        "excluded": true
+                        "excluded": false
                     }
                 ]
             },
@@ -35642,7 +35642,7 @@
                     },
                     {
                         "name": "NewPathAttachment",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "NewPointAttachment",
@@ -36244,7 +36244,7 @@
                     },
                     {
                         "name": "AddCurvePosition",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "Position#get",
@@ -36308,7 +36308,7 @@
                     },
                     {
                         "name": "$ctor1",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "ctor",
@@ -36320,11 +36320,11 @@
                     },
                     {
                         "name": "Update",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "ComputeWorldPositions",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "toString",
@@ -36338,7 +36338,7 @@
                 "instanceMethods": [
                     {
                         "name": "Bones#get",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "Target#get",
@@ -36422,11 +36422,11 @@
                     },
                     {
                         "name": "init",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "ctor",
-                        "excluded": true
+                        "excluded": false
                     }
                 ]
             },
@@ -37323,6 +37323,10 @@
                     {
                         "name": "Resize",
                         "excluded": false
+                    },
+                    {
+                        "name": "ShowText2",
+                        "excluded": false
                     }
                 ]
             },
@@ -37754,7 +37758,7 @@
                     },
                     {
                         "name": "OnDestroy",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "ClearState",
@@ -40056,7 +40060,7 @@
                     },
                     {
                         "name": "OnDestroy",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "UpdateIK",
@@ -40064,7 +40068,7 @@
                     },
                     {
                         "name": "DisableIKControl",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "EnableIKControl",
@@ -42782,7 +42786,7 @@
                 "instanceMethods": [
                     {
                         "name": "frontSortingLayerID#get",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "frontSortingLayerID#set",
@@ -42790,7 +42794,7 @@
                     },
                     {
                         "name": "frontSortingOrder#get",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "frontSortingOrder#set",
@@ -42798,7 +42802,7 @@
                     },
                     {
                         "name": "backSortingLayerID#get",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "backSortingLayerID#set",
@@ -42806,7 +42810,7 @@
                     },
                     {
                         "name": "backSortingOrder#get",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "backSortingOrder#set",
@@ -42814,7 +42818,7 @@
                     },
                     {
                         "name": "alphaCutoff#get",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "alphaCutoff#set",
@@ -42822,7 +42826,7 @@
                     },
                     {
                         "name": "sprite#get",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "sprite#set",
@@ -42830,7 +42834,7 @@
                     },
                     {
                         "name": "isCustomRangeActive#get",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "isCustomRangeActive#set",
@@ -42838,7 +42842,7 @@
                     },
                     {
                         "name": "spriteSortPoint#get",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "spriteSortPoint#set",
@@ -42868,10 +42872,6 @@
                     },
                     {
                         "name": "TurnCharacterSlotAttachment",
-                        "excluded": false
-                    },
-                    {
-                        "name": "Start",
                         "excluded": false
                     },
                     {
@@ -42993,6 +42993,10 @@
                     {
                         "name": "OnCutHair",
                         "excluded": true
+                    },
+                    {
+                        "name": "SetStep",
+                        "excluded": false
                     }
                 ]
             },
@@ -44780,7 +44784,7 @@
                     },
                     {
                         "name": "OnDestroy",
-                        "excluded": true
+                        "excluded": false
                     }
                 ]
             },
@@ -44876,6 +44880,160 @@
                     },
                     {
                         "name": "Global",
+                        "excluded": true
+                    }
+                ]
+            },
+            {
+                "className": "Spine.PathAttachment",
+                "staticMethods": [],
+                "instanceMethods": [
+                    {
+                        "name": "Lengths#get",
+                        "excluded": true
+                    },
+                    {
+                        "name": "Lengths#set",
+                        "excluded": true
+                    },
+                    {
+                        "name": "Closed#get",
+                        "excluded": false
+                    },
+                    {
+                        "name": "Closed#set",
+                        "excluded": true
+                    },
+                    {
+                        "name": "ConstantSpeed#get",
+                        "excluded": false
+                    },
+                    {
+                        "name": "ConstantSpeed#set",
+                        "excluded": true
+                    },
+                    {
+                        "name": "$ctor1",
+                        "excluded": false
+                    },
+                    {
+                        "name": "ctor",
+                        "excluded": true
+                    },
+                    {
+                        "name": "Copy",
+                        "excluded": true
+                    }
+                ]
+            },
+            {
+                "className": "Spine.PathConstraintPositionTimeline",
+                "staticMethods": [],
+                "instanceMethods": [
+                    {
+                        "name": "PathConstraintIndex#get",
+                        "excluded": true
+                    },
+                    {
+                        "name": "ctor",
+                        "excluded": false
+                    },
+                    {
+                        "name": "Apply",
+                        "excluded": true
+                    }
+                ]
+            },
+            {
+                "className": "Spine.PhysicsConstraintStrengthTimeline",
+                "staticMethods": [],
+                "instanceMethods": [
+                    {
+                        "name": "ctor",
+                        "excluded": false
+                    },
+                    {
+                        "name": "Setup",
+                        "excluded": true
+                    },
+                    {
+                        "name": "Get",
+                        "excluded": true
+                    },
+                    {
+                        "name": "Set",
+                        "excluded": true
+                    },
+                    {
+                        "name": "Global",
+                        "excluded": true
+                    }
+                ]
+            },
+            {
+                "className": "System.OperationCanceledException",
+                "staticMethods": [],
+                "instanceMethods": [
+                    {
+                        "name": "CancellationToken#get",
+                        "excluded": true
+                    },
+                    {
+                        "name": "CancellationToken#set",
+                        "excluded": true
+                    },
+                    {
+                        "name": "init",
+                        "excluded": true
+                    },
+                    {
+                        "name": "ctor",
+                        "excluded": true
+                    },
+                    {
+                        "name": "$ctor1",
+                        "excluded": true
+                    },
+                    {
+                        "name": "$ctor2",
+                        "excluded": true
+                    },
+                    {
+                        "name": "$ctor5",
+                        "excluded": true
+                    },
+                    {
+                        "name": "$ctor4",
+                        "excluded": true
+                    },
+                    {
+                        "name": "$ctor3",
+                        "excluded": true
+                    }
+                ]
+            },
+            {
+                "className": "System.Threading.Tasks.TaskCanceledException",
+                "staticMethods": [],
+                "instanceMethods": [
+                    {
+                        "name": "Task#get",
+                        "excluded": true
+                    },
+                    {
+                        "name": "ctor",
+                        "excluded": true
+                    },
+                    {
+                        "name": "$ctor1",
+                        "excluded": true
+                    },
+                    {
+                        "name": "$ctor2",
+                        "excluded": true
+                    },
+                    {
+                        "name": "$ctor3",
                         "excluded": true
                     }
                 ]

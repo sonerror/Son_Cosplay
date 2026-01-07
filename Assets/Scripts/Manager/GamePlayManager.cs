@@ -107,8 +107,7 @@ public class GamePlayManager : Singleton<GamePlayManager>
   }
 
   #region Step0
-  [SerializeField]
-  private List<TriggerWithCertainCollider> hairCutTrigger;
+  public List<TriggerWithCertainCollider> hairCutTrigger;
 
   private int countCutHair = 0;
   private void OnStartStep0()
@@ -135,6 +134,8 @@ public class GamePlayManager : Singleton<GamePlayManager>
 
   private void OnEndStep0()
   {
+
+    TutorialManager.Ins.IncreaseTimeHide();
     items[0].IsReady = false;
     DoneStep();
     TryNextStep();
