@@ -2156,7 +2156,7 @@ Transform:
   m_GameObject: {fileID: 171808464}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 4.025, y: 0.8, z: 0}
+  m_LocalPosition: {x: 4.025, y: 0.776, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2621,10 +2621,8 @@ MonoBehaviour:
   calculateTangents: 0
   maskInteraction: 1
   maskMaterials:
-    materialsMaskDisabled:
-    - {fileID: 2100000, guid: f570240416c1ab24f9933ae7c8effecd, type: 2}
-    materialsInsideMask:
-    - {fileID: 2100000, guid: ae6ee95fd9e0e1b4b8c146e7f4d6062a, type: 2}
+    materialsMaskDisabled: []
+    materialsInsideMask: []
     materialsOutsideMask: []
   disableRenderingOnOverride: 1
   physicsPositionInheritanceFactor: {x: 1, y: 1}
@@ -2658,7 +2656,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: ae6ee95fd9e0e1b4b8c146e7f4d6062a, type: 2}
+  - {fileID: 2100000, guid: f570240416c1ab24f9933ae7c8effecd, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -17495,6 +17493,30 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f9f4c58055e4f5499db5e5422c20399, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  direction: 0
+  hideDirection: 0
+  yPositionShow: 2
+  fadeSprite: 1
+  sprites: []
+  timeFade: 0.4
+  delayFadeOut: 0
+  targetAlphaToItsBaseValue: 0
+  timeShow: 0.7
+  showOnStart: 0
+  easeShow: 27
+  easeHide: 26
+  onShow:
+    m_PersistentCalls:
+      m_Calls: []
+  onHide:
+    m_PersistentCalls:
+      m_Calls: []
+  onShowComplete:
+    m_PersistentCalls:
+      m_Calls: []
+  onHideStart:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1968482368
 GameObject:
   m_ObjectHideFlags: 0
@@ -18579,6 +18601,30 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f9f4c58055e4f5499db5e5422c20399, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  direction: 0
+  hideDirection: 0
+  yPositionShow: 2
+  fadeSprite: 1
+  sprites: []
+  timeFade: 0.4
+  delayFadeOut: 1
+  targetAlphaToItsBaseValue: 0
+  timeShow: 0.7
+  showOnStart: 0
+  easeShow: 27
+  easeHide: 26
+  onShow:
+    m_PersistentCalls:
+      m_Calls: []
+  onHide:
+    m_PersistentCalls:
+      m_Calls: []
+  onShowComplete:
+    m_PersistentCalls:
+      m_Calls: []
+  onHideStart:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &2060477245
 GameObject:
   m_ObjectHideFlags: 0
@@ -19809,6 +19855,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 72f1c6ed5bbbf724d95dc4ec854217a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  timerImage: {fileID: 5450282178922989811}
+  showTime: 0.3
+  timeOut: 3
 --- !u!1 &2454959742967707965
 GameObject:
   m_ObjectHideFlags: 0
