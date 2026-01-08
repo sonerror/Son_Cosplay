@@ -14,7 +14,7 @@ public class GamePlayScreen : UIScreen
   {
     if (hadShowBtnInstall) return;
     hadShowBtnInstall = true;
-    // btnPlay.gameObject.SetActive(true);
+    btnPlay.gameObject.SetActive(true);
     Text.gameObject.SetActive(false);
   }
   bool hadShowBtnInstall = false;
