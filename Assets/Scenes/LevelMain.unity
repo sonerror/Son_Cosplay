@@ -6097,8 +6097,10 @@ MonoBehaviour:
   calculateTangents: 0
   maskInteraction: 1
   maskMaterials:
-    materialsMaskDisabled: []
-    materialsInsideMask: []
+    materialsMaskDisabled:
+    - {fileID: 2100000, guid: c1df1b544c30f5646a3c9f0661322743, type: 2}
+    materialsInsideMask:
+    - {fileID: 2100000, guid: 05efea7962579a64ab0bbe78f3abca7c, type: 2}
     materialsOutsideMask: []
   disableRenderingOnOverride: 1
   physicsPositionInheritanceFactor: {x: 1, y: 1}
@@ -6132,7 +6134,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: c1df1b544c30f5646a3c9f0661322743, type: 2}
+  - {fileID: 2100000, guid: 05efea7962579a64ab0bbe78f3abca7c, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
