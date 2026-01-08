@@ -395,7 +395,7 @@ MonoBehaviour:
     keywords: []
   _includedShaderVariants: []
   _excludedShaderVariants: []
-  version: 754
+  version: 764
   _shaderParsedShaders:
   - ParsedSubShaders:
     - Index: 0
