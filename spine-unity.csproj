@@ -173,6 +173,7 @@
     <None Include="Assets\Spine\Runtime\spine-unity\Shaders\Sprite\SpriteDepthNormalsTexture.shader" />
     <None Include="Assets\Spine\Runtime\spine-unity\Shaders\Sprite\CGIncludes\SpriteLighting.cginc" />
     <None Include="Assets\Spine\Runtime\spine-unity\Shaders\Sprite\SpritesVertexLit.shader" />
+    <None Include="Assets\Spine\Runtime\spine-unity\Shaders\Spine-Skeleton-Blur.shader" />
     <None Include="Assets\Spine\Runtime\spine-unity\Shaders\SkeletonGraphic\TintBlack\Spine-SkeletonGraphic-TintBlack-Screen.shader" />
     <None Include="Assets\Spine\Runtime\spine-unity\Shaders\CGIncludes\Spine-Skeleton-Tint-Common.cginc" />
     <None Include="Assets\Spine\Runtime\spine-unity\Shaders\SkeletonGraphic\TintBlack\Spine-SkeletonGraphic-TintBlack-Additive.shader" />
