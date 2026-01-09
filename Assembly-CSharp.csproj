@@ -171,8 +171,10 @@
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile-2-Pass.shader" />
     <None Include="Assets\_GAME\Levels\LvCosplayCinderella\Animations\New\Cindarella.atlas.txt" />
+    <None Include="Assets\_GAME\Levels\LvCosplayCorpseBride\Animations\Corpse_bridge\Corpse-bridges.atlas.txt" />
     <None Include="Assets\_GAME\Levels\LvCosplayPolice\Animations\Police_patrol_json\Police_patrol.atlas.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
+    <None Include="Assets\_GAME\Levels\LvCosplayCorpseBride\Animations\New\corpse bride.atlas.txt" />
     <None Include="Assets\AllIn1SpriteShader\Resources_moved\AllIn1SpriteShader.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Mobile.cginc" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF SSD.shader" />
