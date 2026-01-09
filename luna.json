@@ -2,7 +2,7 @@
     "version": "7.0.0",
     "projectId": "f42e7ff96e4545544bb6cd68f51ab634",
     "applicationID": 34683,
-    "creativeName": "Cosplaydom_v7GG",
+    "creativeName": "Cosplaydom_v7",
     "pgServer": "EU",
     "window": {
         "‐⁏": true
@@ -8844,6 +8844,14 @@
             {
                 "name": "BrushEyeState",
                 "excluded": false
+            },
+            {
+                "name": "pc.Debugger.Components.EditorCamera",
+                "excluded": true
+            },
+            {
+                "name": "pc.Debugger.Components.EditorGUI",
+                "excluded": true
             }
         ],
         "unusedMethods": [
@@ -44409,7 +44417,7 @@
                     },
                     {
                         "name": "UpdateSDFScale",
-                        "excluded": true
+                        "excluded": false
                     }
                 ]
             },
@@ -45441,6 +45449,16 @@
                         "script": "",
                         "ext": "",
                         "name": "Assets/_GAME/Levels/LvCosplayWenesday/Wed/Wednesday.png"
+                    },
+                    {
+                        "maxWidth": 512,
+                        "maxHeight": 512,
+                        "format": "png32",
+                        "compression": "none",
+                        "quality": 65,
+                        "script": "",
+                        "ext": "",
+                        "name": "Assets/Fonts/TitanOne-Regular SDF 2.asset"
                     }
                 ]
             },

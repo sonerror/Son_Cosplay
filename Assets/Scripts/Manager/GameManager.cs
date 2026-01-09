@@ -19,23 +19,23 @@ public class GameManager : Singleton<GameManager>
   public GameObject Scene0, Scene1, Scene2;
   public Animator ContentGamePlay;
 
-  private bool isLandscape = false;
+  private int typeScape = 0; // 0: none, 1: landscape, 2: portrait
   void FixedUpdate()
   {
     if (isPlayingGame) return;
     var size = UIManager.Ins.GameSize;
-    if (size.x > size.y && !isLandscape)
+    if (size.x > size.y && typeScape != 1)
     {
-      isLandscape = true;
+      typeScape = 1;
       // Show landscape UI
-      ContentGamePlay.transform.localScale = Vector3.one * 1.5f;
+      ContentGamePlay.transform.localScale = Vector3.one * 1.3f;
       ContentGamePlay.SetTrigger("Land");
     }
-    else if (size.x <= size.y && isLandscape)
+    else if (size.x <= size.y && typeScape != 2)
     {
-      isLandscape = false;
+      typeScape = 2;
       // Show portrait UI
-      ContentGamePlay.transform.localScale = Vector3.one * 1.2f;
+      ContentGamePlay.transform.localScale = Vector3.one * 1f;
       ContentGamePlay.SetTrigger("Por");
     }
 
