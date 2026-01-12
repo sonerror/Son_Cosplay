@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using DG.Tweening;
 using UnityEngine;
 using UnityEngine.EventSystems;
@@ -10,7 +11,12 @@ public class RemoveItem : Item
   public float DistanceCheck = 1f;
   private Vector3 _prePos;
   private int _oriOrder;
+
+  public CharacterStart characterStart;
   [SerializeField] public FxType SoundFx = FxType.None;
+
+  public List<SlotAttachmentPair> slotActiveClick = new List<SlotAttachmentPair>();
+  public List<SlotAttachmentPair> slotDeactiveClick = new List<SlotAttachmentPair>();
 
   protected override void Awake()
   {
@@ -28,6 +34,12 @@ public class RemoveItem : Item
     base.MouseDown(eventData);
     OnPickItem?.Invoke();
     if (!IsReady) { if (ShowEmoijOnWrong) GameManager.Ins.PlayNegativeEmoji(); return; }
+    else
+    {
+      characterStart.TurnOnSlotsAttachment(slotActiveClick);
+      characterStart.TurnOffSlotsAttachment(slotDeactiveClick);
+      spriteRenderer.enabled = true;
+    }
 
 
     isDragging = true;
@@ -41,7 +53,7 @@ public class RemoveItem : Item
     if (isBlocked) return;
     if (!isDragging) return;
     base.MouseUp(eventData);
-    isDragging = false;
+
 
     if (IsReady)
     {
@@ -56,6 +68,7 @@ public class RemoveItem : Item
         Tf.DOMove(newPosMove, 0.75f).OnComplete(() =>
         {
           gameObject.SetActive(false);
+          isDragging = false;
         });
         spriteRenderer.DOFade(0f, 0.75f);
 
@@ -67,7 +80,11 @@ public class RemoveItem : Item
     Tf.DOKill();
     Tf.DOMove(_prePos, 0.3f).SetEase(Ease.OutBack).OnComplete(() =>
     {
+      isDragging = false;
       ChangeLayerDown();
+      characterStart.TurnOnSlotsAttachment(slotDeactiveClick);
+      characterStart.TurnOffSlotsAttachment(slotActiveClick);
+      spriteRenderer.enabled = false;
     });
   }
 

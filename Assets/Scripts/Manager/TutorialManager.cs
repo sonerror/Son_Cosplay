@@ -122,12 +122,12 @@ public class TutorialManager : Singleton<TutorialManager>
   }
   void PlayTut0()
   {
-    var item = gamePlayManager.items[0];
-    for (var i = 0; i < gamePlayManager.hairCutTrigger.Count; i++)
+    var items = gamePlayManager.ClotherRemove;
+    for (var i = 0; i < items.Count; i++)
     {
-      if (gamePlayManager.hairCutTrigger[i].gameObject.activeSelf)
+      if (items[i].IsReady)
       {
-        handCtrl.ShowHandPosToPos(item.Tf.position, gamePlayManager.hairCutTrigger[i].Tf.position);
+        handCtrl.ShowHandPosToPos(items[i].Tf.position, items[i].Tf.position + (items[i].Tf.position.x < 0 ? Vector3.left : Vector3.right) * 2f);
         return;
       }
     }

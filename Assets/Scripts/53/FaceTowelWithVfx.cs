@@ -13,7 +13,7 @@ public class FaceTowelWithVfx : Item
   private int _oriOrder = 0;
   public MaskGroupCustom MaskGroup;
   public Transform NodeCheckPos;
-  [SerializeField] private ParticleSystem vfxUseTowel;
+  [SerializeField] private GameObject vfxUseTowel;
   [SerializeField] private FxType fxSound = FxType.None;
   [SerializeField] private bool playVfxOnPick = false;
 
@@ -33,7 +33,7 @@ public class FaceTowelWithVfx : Item
     if (!IsReady) { if (ShowEmoijOnWrong) GameManager.Ins.PlayNegativeEmoji(); }
     else if (playVfxOnPick)
     {
-      vfxUseTowel.Play();
+      vfxUseTowel.SetActive(true);
       SoundManager.Ins.PlaySoundLoop(FxType.XitGel);
     }
     base.MouseDown(eventData);
@@ -75,7 +75,7 @@ public class FaceTowelWithVfx : Item
   {
     if (MaskGroup.CheckMasksColider(NodeCheckPos.position))
     {
-      if (!playVfxOnPick) vfxUseTowel.Play();
+      if (!playVfxOnPick) vfxUseTowel.SetActive(true);
     }
 
     if (MaskGroup.IsDoneRating(true))
@@ -93,7 +93,7 @@ public class FaceTowelWithVfx : Item
     OnDropItem?.Invoke();
     if (playVfxOnPick)
     {
-      vfxUseTowel.Stop();
+      vfxUseTowel.SetActive(false);
       SoundManager.Ins.StopSoundLoop(FxType.XitGel);
     }
     OnHandleMouseUp();

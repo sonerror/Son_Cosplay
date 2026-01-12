@@ -15,12 +15,12 @@ public class GamePlayManager : Singleton<GamePlayManager>
 
   public List<Item> items = new List<Item>();
 
-  public void ChangeGroupItemStart()
-  {
-    Debug.Log("ChangeGroupItemStart ");
-    Gr1.Hide(0.5f);
-    Gr2.Show(1f);
-  }
+  // public void ChangeGroupItemStart()
+  // {
+  //   Debug.Log("ChangeGroupItemStart ");
+  //   Gr1.Hide(0.5f);
+  //   Gr2.Show(1f);
+  // }
 
   [SerializeField] private int currentStep = 0;
   public int CurrentStep => currentStep;
@@ -34,10 +34,10 @@ public class GamePlayManager : Singleton<GamePlayManager>
     }
   }
 
-  // void Start()
-  // {
-  //   StartStep();
-  // }
+  void Start()
+  {
+    StartStep();
+  }
 
   public void SetStep(int step)
   {
@@ -107,50 +107,46 @@ public class GamePlayManager : Singleton<GamePlayManager>
   }
 
   #region Step0
-  public List<TriggerWithCertainCollider> hairCutTrigger;
+  public List<RemoveItem> ClotherRemove = new List<RemoveItem>();
 
   private int countCutHair = 0;
   private void OnStartStep0()
   {
-    Debug.Log("OnStartStep0");
-    items[0].SetReady();
-    for (int i = 0; i < hairCutTrigger.Count; i++)
+    ClotherRemove[0].SetReady();
+    ClotherRemove[1].SetReady();
+    ClotherRemove[2].SetReady();
+    for (int i = 0; i < ClotherRemove.Count; i++)
     {
-      int index = i; // Capture the index for the lambda
-      hairCutTrigger[i].OnTriggerEvent.AddListener(OnCutHair);
-      hairCutTrigger[i].Col.enabled = true;
+      ClotherRemove[i].OnFinish.AddListener(OnRemoveClother);
     }
   }
 
-  void OnCutHair()
+  void OnRemoveClother()
   {
     countCutHair++;
     SoundManager.Ins.PlayFx(FxType.Cut);
-    if (countCutHair >= 2)
+    if (countCutHair >= ClotherRemove.Count)
     {
+      TutorialManager.Ins.IncreaseTimeHide();
       OnEndStep0();
     }
   }
 
   private void OnEndStep0()
   {
-
-    TutorialManager.Ins.IncreaseTimeHide();
-    items[0].IsReady = false;
     DoneStep();
     TryNextStep();
   }
   #endregion Step0
 
   #region Step1
-  [SerializeField]
-
-
   private void OnStartStep1()
   {
     var item = items[1];
     item.SetReady();
     item.OnFinish.AddListener(OnEndStep1);
+
+
   }
 
   private void OnEndStep1()
@@ -205,7 +201,7 @@ public class GamePlayManager : Singleton<GamePlayManager>
     {
       nodeTurnOnOff[i].SetActive(false);
     }
-    ChangeGroupItemStart();
+    // ChangeGroupItemStart();
     DoneStep();
     TryNextStep();
   }

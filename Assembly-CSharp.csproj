@@ -152,6 +152,7 @@
     <Compile Include="Assets\Scripts\Manager\GamePlayManager.cs" />
     <Compile Include="Assets\Scripts\CharacterControl.cs" />
     <Compile Include="Assets\Scripts\Item.cs" />
+    <Compile Include="Assets\Scripts\CharacterStart.cs" />
     <Compile Include="Assets\Scripts\Helper\CameraScaler.cs" />
     <Compile Include="Assets\Scripts\Pool\PoolMember.cs" />
     <Compile Include="Assets\Scripts\Pool\GameUnit.cs" />

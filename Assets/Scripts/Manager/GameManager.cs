@@ -19,27 +19,6 @@ public class GameManager : Singleton<GameManager>
   public GameObject Scene0, Scene1, Scene2;
   public Animator ContentGamePlay;
 
-  private int typeScape = 0; // 0: none, 1: landscape, 2: portrait
-  void FixedUpdate()
-  {
-    if (isPlayingGame) return;
-    var size = UIManager.Ins.GameSize;
-    if (size.x > size.y && typeScape != 1)
-    {
-      typeScape = 1;
-      // Show landscape UI
-      ContentGamePlay.transform.localScale = Vector3.one * 1.3f;
-      ContentGamePlay.SetTrigger("Land");
-    }
-    else if (size.x <= size.y && typeScape != 2)
-    {
-      typeScape = 2;
-      // Show portrait UI
-      ContentGamePlay.transform.localScale = Vector3.one * 1f;
-      ContentGamePlay.SetTrigger("Por");
-    }
-
-  }
 
   private IEnumerator coroutine = null;
 
