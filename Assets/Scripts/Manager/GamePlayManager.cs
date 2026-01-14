@@ -212,30 +212,33 @@ public class GamePlayManager : Singleton<GamePlayManager>
 
   #region Step4
 
-  [SerializeField] private List<SlotAttachmentPair> slotEyeL = new List<SlotAttachmentPair>();
-  [SerializeField] private List<SlotAttachmentPair> slotEyeR = new List<SlotAttachmentPair>();
-
   public void AddEyeL()
   {
-    character.TurnOnSlotsAttachment(slotEyeL);
+    character.TurnSlotAttachment("Phase1-lensL", "Phase1/lens_Pupil");
+    character.TurnSlotAttachment("Base_Pupil2", null);
   }
 
   public void AddEyeR()
   {
-    character.TurnOnSlotsAttachment(slotEyeR);
+    character.TurnSlotAttachment("Base_Pupil", null);
+    character.TurnSlotAttachment("Set-P1-lensR", "Phase1/lens_Pupil");
   }
 
   private void OnStartStep4()
   {
     Debug.Log("OnStartStep4");
-    var item = items[4];
-    item.OnFinish.AddListener(CheckEndStep4);
-    item.SetReady();
+    items[4].OnFinish.AddListener(CheckEndStep4);
+    items[4].SetReady();
+    items[5].OnFinish.AddListener(CheckEndStep4);
+    items[5].SetReady();
   }
 
   void CheckEndStep4()
   {
-    // if ()
+    if (!items[4].IsReady && !items[5].IsReady)
+    {
+      OnEndStep4();
+    }
   }
 
   private void OnEndStep4()

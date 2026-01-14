@@ -69,6 +69,7 @@
     <Compile Include="Assets\Scripts\53\Oil.cs" />
     <Compile Include="Assets\Scripts\Pimple.cs" />
     <Compile Include="Assets\AllIn1SpriteShader\Scripts\RandomSeed.cs" />
+    <Compile Include="Assets\Scripts\TapOpenerSprite.cs" />
     <Compile Include="Assets\Scripts\Helper\DTPCache.cs" />
     <Compile Include="Assets\AllIn1SpriteShader\Scripts\All1CreateUnifiedOutline.cs" />
     <Compile Include="Assets\Scripts\ItemUseOnce.cs" />
@@ -172,7 +173,6 @@
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile-2-Pass.shader" />
     <None Include="Assets\_GAME\Levels\LvCosplayCinderella\Animations\New\Cindarella.atlas.txt" />
-    <None Include="Assets\_GAME\Levels\LvCosplayCorpseBride\Animations\Corpse_bridge\Corpse-bridges.atlas.txt" />
     <None Include="Assets\_GAME\Levels\LvCosplayPolice\Animations\Police_patrol_json\Police_patrol.atlas.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
     <None Include="Assets\AllIn1SpriteShader\Resources_moved\AllIn1SpriteShader.shader" />
