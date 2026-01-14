@@ -13,7 +13,7 @@ public enum FxType
   Angry0 = 7,
   Angry1 = 8,
   Angry2 = 9,
-  Cut = 10,
+  Spray = 10,
   AddGel = 11,
   XoaGel = 12,
   BrushAdd = 13,

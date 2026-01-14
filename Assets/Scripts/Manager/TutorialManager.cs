@@ -141,44 +141,46 @@ public class TutorialManager : Singleton<TutorialManager>
 
   void PlayTut2()
   {
-    handCtrl.ShowHandAtPos(gamePlayManager.items[2].Tf.position);
+    var item = gamePlayManager.items[2] as HairBang;
+    handCtrl.ShowHandPosToPos(item.Tf.position, item.targetInfos.targetTf.position);
   }
 
   void PlayTut3()
   {
-    var item = gamePlayManager.items[3] as FoundationBottle;
-    handCtrl.ShowHandPosToPos(item.Tf.position, item.getPosTargetActive());
+    handCtrl.ShowHandAtPos(gamePlayManager.items[3].Tf.position);
   }
 
   void PlayTut4()
   {
-    var item = gamePlayManager.items[4] as BrushBlushWithMaskGroup;
-    if (item.CurrBrushBlushState == BrushBlushState.Drag)
+    var item1 = gamePlayManager.items[4] as HairBang;
+    if (item1.IsReady)
     {
-      handCtrl.ShowHandPosToPos(item.Tf.position, item.BoxFlour.Tf.position);
+      handCtrl.ShowHandPosToPos(item1.Tf.position, item1.targetInfos.targetTf.position);
       return;
     }
-    if (item.CurrBrushBlushState == BrushBlushState.DragWithPainter)
+
+    var item2 = gamePlayManager.items[5] as HairBang;
+    if (item2.IsReady)
     {
-      handCtrl.ShowHandPosToPos(item.Tf.position, item.FlourFill.Tf.position);
+      handCtrl.ShowHandPosToPos(item2.Tf.position, item2.targetInfos.targetTf.position);
       return;
     }
   }
 
   void PlayTut5()
   {
-    handCtrl.ShowHandPosToPos(gamePlayManager.items[5].Tf.position, tutorialNode[0].position);
+    var item = gamePlayManager.items[6] as FoundationBottleWithFx;
+    handCtrl.ShowHandPosToPos(item.Tf.position, item.getPosTargetActive());
   }
   void PlayTut6()
   {
-    var item = gamePlayManager.items[6] as HairBang;
-    handCtrl.ShowHandPosToPos(item.Tf.position, item.targetInfos.targetTf.position);
-
+    var item = gamePlayManager.items[7] as FoundationBottleWithFx;
+    handCtrl.ShowHandPosToPos(item.Tf.position, item.getPosTargetActive());
   }
   void PlayTut7()
   {
-    var item = gamePlayManager.items[7];
-    handCtrl.ShowHandPosToPos(item.Tf.position, tutorialNode[1].position);
+    var item = gamePlayManager.items[8];
+    handCtrl.ShowHandPosToPos(item.Tf.position, tutorialNode[0].position);
   }
 
   void PlayTut8()

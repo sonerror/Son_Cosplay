@@ -50,6 +50,7 @@ public class FoundationBottleWithFx : Item
   {
     trigger.OnTriggerEvent.RemoveAllListeners();
     trigger.gameObject.SetActive(true);
+    trigger.Col.enabled = false;
     show.ShowSpriteStart();
     applyFx.Play();
     // PoolManager.Ins.Spawn(PoolType.SFX_Acne, trigger.transform.position, Quaternion.identity);

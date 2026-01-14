@@ -34,7 +34,7 @@ public class FaceTowelWithVfx : Item
     else if (playVfxOnPick)
     {
       vfxUseTowel.SetActive(true);
-      SoundManager.Ins.PlaySoundLoop(FxType.XitGel);
+      // SoundManager.Ins.PlaySoundLoop(FxType.XitGel);
     }
     base.MouseDown(eventData);
 
@@ -82,6 +82,7 @@ public class FaceTowelWithVfx : Item
     {
       IsReady = false;
       OnFinish?.Invoke();
+      MouseUp(null);
     }
   }
 

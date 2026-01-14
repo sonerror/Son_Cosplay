@@ -88,18 +88,6 @@ public class GamePlayManager : Singleton<GamePlayManager>
       case 7:
         OnStartStep7();
         break;
-      case 8:
-        OnStartStep8();
-        break;
-      case 9:
-        OnStartStep9();
-        break;
-      case 10:
-        OnStartStep10();
-        break;
-      case 11:
-        OnStartStep11();
-        break;
       default:
         Debug.LogWarning("No more steps!");
         break;
@@ -124,10 +112,10 @@ public class GamePlayManager : Singleton<GamePlayManager>
   void OnRemoveClother()
   {
     countCutHair++;
-    SoundManager.Ins.PlayFx(FxType.Cut);
+    TutorialManager.Ins.IncreaseTimeHide();
     if (countCutHair >= ClotherRemove.Count)
     {
-      TutorialManager.Ins.IncreaseTimeHide();
+
       OnEndStep0();
     }
   }
@@ -182,6 +170,8 @@ public class GamePlayManager : Singleton<GamePlayManager>
     item.OnFinish.RemoveListener(OnEndStep2);
     item.gameObject.SetActive(false);
     character.TurnOnSlotsAttachment(slotStep2);
+    SoundManager.Ins.PlayFx(FxType.Drop);
+
 
     DoneStep();
     TryNextStep();
@@ -235,6 +225,7 @@ public class GamePlayManager : Singleton<GamePlayManager>
 
   void CheckEndStep4()
   {
+    SoundManager.Ins.PlayFx(FxType.Drop);
     if (!items[4].IsReady && !items[5].IsReady)
     {
       OnEndStep4();
@@ -253,46 +244,31 @@ public class GamePlayManager : Singleton<GamePlayManager>
 
   private void OnStartStep5()
   {
-    AdsManager.Ins.ShowEndGame();
+    items[6].OnFinish.AddListener(OnEndStep5);
+    items[6].SetReady();
   }
 
   private void OnEndStep5()
   {
+    items[6].OnFinish.RemoveListener(OnEndStep5);
+    items[6].IsReady = false;
+
+    DoneStep();
+    TryNextStep();
   }
   #endregion Step5
 
   #region Step6
   private void OnStartStep6()
   {
-    var item = items[6] as HairBang;
-    item.OnFinish.AddListener(OnEndStep6);
-    item.SetReady();
-  }
-
-  [SerializeField] List<SlotAttachmentPair> slotDisableHairband = new List<SlotAttachmentPair>();
-  [SerializeField] List<SlotAttachmentPair> slotEnableHairband = new List<SlotAttachmentPair>();
-
-  private void AddHairband()
-  {
-    SoundManager.Ins.PlayFx(FxType.Drop);
-    for (int i = 0; i < slotDisableHairband.Count; i++)
-    {
-      character.TurnSlotAttachment(slotDisableHairband[i].slotName, null);
-    }
-
-    for (int i = 0; i < slotEnableHairband.Count; i++)
-    {
-      character.TurnSlotAttachment(slotEnableHairband[i].slotName, slotEnableHairband[i].attachmentName);
-    }
+    items[7].OnFinish.AddListener(OnEndStep6);
+    items[7].SetReady();
   }
 
   private void OnEndStep6()
   {
-    var item = items[6] as HairBang;
-    item.OnFinish.RemoveListener(OnEndStep6);
-    item.IsReady = false;
-    item.gameObject.SetActive(false);
-    AddHairband();
+    items[7].OnFinish.RemoveListener(OnEndStep6);
+    items[7].SetReady();
 
     DoneStep();
     TryNextStep();
@@ -302,107 +278,10 @@ public class GamePlayManager : Singleton<GamePlayManager>
   #region Step7
   private void OnStartStep7()
   {
-    var item = items[7];
-    item.OnFinish.AddListener(OnEndStep7);
-    item.SetReady();
+    AdsManager.Ins.ShowEndGame();
   }
 
-  private void OnEndStep7()
-  {
-
-    var item = items[7];
-    item.OnFinish.RemoveListener(OnEndStep7);
-    item.IsReady = false;
-
-    DoneStep();
-    TryNextStep();
-  }
   #endregion Step7
 
-  #region Step8
-  private void OnStartStep8()
-  {
-    var item = items[8];
-    item.OnFinish.AddListener(OnEndStep8);
-    item.SetReady();
-  }
 
-  private void OnEndStep8()
-  {
-
-    var item = items[8];
-    item.OnFinish.RemoveListener(OnEndStep8);
-    item.IsReady = false;
-
-    DoneStep();
-    TryNextStep();
-  }
-  #endregion Step8
-  #region Step9
-
-  private void OnStartStep9()
-  {
-    var item = items[9] as FoundationBottle;
-    item.OnFinish.AddListener(OnEndStep9);
-    item.SetReady();
-  }
-
-  private void OnEndStep9()
-  {
-
-    var item = items[9];
-    item.OnFinish.RemoveListener(OnEndStep9);
-    item.IsReady = false;
-
-    DoneStep();
-    TryNextStep();
-  }
-  #endregion Step9
-
-  #region Step10
-  private int countItemClickStep10 = 0;
-  [SerializeField] private List<ShowSprite> showSprites = new List<ShowSprite>();
-  private void OnStartStep10()
-  {
-    int idSpr = 0;
-    for (int i = 10; i < 13; i++)
-    {
-      var index = idSpr;
-      var item = items[i];
-      item.GetComponent<BoxCollider2D>().enabled = true;
-      item.OnFinish.AddListener(() => CheckDone(index));
-      item.SetReady();
-    }
-  }
-
-  void CheckDone(int id)
-  {
-    countItemClickStep10++;
-    for (int i = 0; i < showSprites.Count; i++)
-    {
-      if (!showSprites[i].gameObject.activeSelf) continue;
-      showSprites[i].ShowCustomSprite(0.4f + countItemClickStep10 * 0.2f, 0.5f);
-    }
-
-    if (showSprites.All(x => x.gameObject.activeSelf == true))
-      OnEndStep10();
-  }
-
-  private void OnEndStep10()
-  {
-
-    DoneStep();
-    TryNextStep();
-  }
-  #endregion Step10
-
-  #region Step11
-  private void OnStartStep11()
-  {
-    DOVirtual.DelayedCall(0.3f, () =>
-    {
-      AdsManager.Ins.ShowEndGame();
-    });
-  }
-  #endregion Step11
 }

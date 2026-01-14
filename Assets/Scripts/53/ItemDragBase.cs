@@ -13,7 +13,7 @@ public class ItemDragBase : Item
   public FxType soundPick = FxType.None;
   public FxType soundMove = FxType.None;
   public FxType soundDrop = FxType.None;
-  public SortingGroup RenderGroup;
+  public Renderer RenderGroup;
   public int ValSortUp = 0;
   private int _ValSortGroup = 0;
   public Vector2 Angle = Vector2.zero;
@@ -33,11 +33,9 @@ public class ItemDragBase : Item
     base.Awake();
     _prePos = transform.position;
     _originalSize = transform.localScale;
-    RenderGroup = GetComponent<SortingGroup>();
-    if (RenderGroup)
-    {
-      _ValSortGroup = RenderGroup.sortingOrder;
-    }
+
+    _ValSortGroup = RenderGroup.sortingOrder;
+
 
   }
 
