@@ -10,7 +10,7 @@ public class HairBang : Item
 {
   private Vector3 _prePos;
   public Vector2 Angle = new Vector2(0, 0);
-  public SortingGroup rende;
+  public Renderer rende;
   private int _initOrder;
   public TargetInfo targetInfos = new TargetInfo();
 

@@ -3,10 +3,9 @@ using Spine.Unity;
 using UnityEngine;
 using Utilities;
 
-public class CharacterStart : MonoBehaviour
+public class CharacterStart : CharacterControl
 {
 
-  [SerializeField] private SkeletonAnimation skeletonAnimation;
   public List<SlotAttachmentPair> slotActiveStart = new List<SlotAttachmentPair>();
   public List<SlotAttachmentPair> slotDeactiveStart = new List<SlotAttachmentPair>();
 
@@ -47,24 +46,6 @@ public class CharacterStart : MonoBehaviour
     }
   }
 
-  public void TurnSlotAttachment(string slotName, string attachmentName = null)
-  {
-    skeletonAnimation.Skeleton.SetAttachment(slotName, attachmentName);
-  }
 
-  public void TurnOnSlotsAttachment(List<SlotAttachmentPair> slotAttachmentPairs)
-  {
-    foreach (SlotAttachmentPair pair in slotAttachmentPairs)
-    {
-      TurnSlotAttachment(pair.slotName, pair.attachmentName);
-    }
-  }
 
-  public void TurnOffSlotsAttachment(List<SlotAttachmentPair> slotAttachmentPairs)
-  {
-    foreach (SlotAttachmentPair pair in slotAttachmentPairs)
-    {
-      TurnSlotAttachment(pair.slotName, null);
-    }
-  }
 }

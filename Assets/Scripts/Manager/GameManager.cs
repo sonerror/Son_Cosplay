@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using DG.Tweening;
@@ -5,7 +6,9 @@ using HoangHH;
 using Satisgame;
 using Sirenix.Utilities;
 using Spine.Unity;
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class GameManager : Singleton<GameManager>
 {
@@ -14,7 +17,7 @@ public class GameManager : Singleton<GameManager>
   public FillCircleBar fillCircleBar;
   public bool isPlayingGame = false;
   public CharacterControl Body1, Body2;
-  // public ChangeScene changeScene;
+  public ChangeScene changeScene;
 
   public GameObject Scene0, Scene1, Scene2;
   public Animator ContentGamePlay;
@@ -36,6 +39,17 @@ public class GameManager : Singleton<GameManager>
       hadClicked = true;
       // StartGamePlay();
     }
+  }
+
+  public void ChangeSceneToGamePlay2(Action onComplete = null)
+  {
+    changeScene.ChangeSceneAndCall(() =>
+    {
+      Scene1.SetActive(false);
+      Scene2.SetActive(true);
+      onComplete?.Invoke();
+      GamePlayManager.Ins.character = Body2;
+    });
   }
 
   void StartGamePlay()

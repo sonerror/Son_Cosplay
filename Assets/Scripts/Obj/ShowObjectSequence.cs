@@ -20,7 +20,6 @@ namespace HoangHH
     [SerializeField] private float firstDelay;
     [SerializeField] private bool showOnEnable = true;
     [SerializeField] private bool delayFirstFrame;
-    [SerializeField] private AudioClip soundOnShow;
 
     private bool _isShowing;
 

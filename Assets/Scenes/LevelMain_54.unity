@@ -450,6 +450,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fadeDuration: 0.75
+  TargetAlpha: 1
+  delay: 0
   soundFx: 100
 --- !u!114 &138422660
 MonoBehaviour:
@@ -849,22 +851,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   IsReady: 0
   isBlocked: 0
-  step: 0
-  OnWrong:
+  ShowEmoijOnWrong: 1
+  OnSetupReady:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 736123645}
-        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: PlayNegativeEmoji
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   OnFinish:
     m_PersistentCalls:
       m_Calls:
@@ -940,6 +930,7 @@ MonoBehaviour:
     targetTf: {fileID: 1943735149}
     distance: 1.5
     hadChecked: 0
+  sizeScalePick: {x: 1.15, y: 1.15, z: 1.15}
 --- !u!114 &204122043
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2977,6 +2968,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fadeDuration: 0.75
+  TargetAlpha: 1
+  delay: 0
   soundFx: 100
 --- !u!114 &634400464
 MonoBehaviour:
@@ -3503,22 +3496,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   IsReady: 0
   isBlocked: 0
-  step: 0
-  OnWrong:
+  ShowEmoijOnWrong: 1
+  OnSetupReady:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 736123645}
-        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: PlayNegativeEmoji
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   OnFinish:
     m_PersistentCalls:
       m_Calls: []
@@ -3786,8 +3767,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   IsReady: 1
   isBlocked: 0
-  step: 0
-  OnWrong:
+  ShowEmoijOnWrong: 1
+  OnSetupReady:
     m_PersistentCalls:
       m_Calls: []
   OnFinish:
@@ -3811,7 +3792,12 @@ MonoBehaviour:
   OnDropItem:
     m_PersistentCalls:
       m_Calls: []
+  spriteRenderer: {fileID: 0}
   DistanceCheck: 1
+  characterStart: {fileID: 0}
+  SoundFx: 100
+  slotActiveClick: []
+  slotDeactiveClick: []
 --- !u!1 &685694793
 GameObject:
   m_ObjectHideFlags: 0
@@ -4203,11 +4189,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   emojiControl: {fileID: 1089206829710878596}
   clockTimer: {fileID: 2330175927518235536}
+  fillCircleBar: {fileID: 0}
   isPlayingGame: 0
-  playerSkeleton: {fileID: 2112898285}
-  characterControl: {fileID: 2112898289}
+  Body1: {fileID: 0}
+  Body2: {fileID: 0}
   Scene0: {fileID: 1196139559}
   Scene1: {fileID: 1683095078}
+  Scene2: {fileID: 0}
+  ContentGamePlay: {fileID: 0}
+  typeGamePlay1: 1
 --- !u!114 &736123646
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4245,10 +4235,11 @@ MonoBehaviour:
   - {fileID: 673772982}
   - {fileID: 1481007187}
   currentStep: 0
-  GlassesObject: {fileID: 0}
-  NodeOpenGlassBox: {fileID: 0}
-  NodeCloseGlassBox: {fileID: 0}
-  LidCreamBox: {fileID: 0}
+  ClotherRemove: []
+  nodeTurnOnOff: []
+  slotDisableHairband: []
+  slotEnableHairband: []
+  showSprites: []
 --- !u!1 &788781191
 GameObject:
   m_ObjectHideFlags: 0
@@ -4893,6 +4884,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fadeDuration: 0.75
+  TargetAlpha: 1
+  delay: 0
   soundFx: 100
 --- !u!212 &854901548
 SpriteRenderer:
@@ -10128,6 +10121,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fadeDuration: 0.75
+  TargetAlpha: 1
+  delay: 0
   soundFx: 100
 --- !u!114 &942296863
 MonoBehaviour:
@@ -10588,7 +10583,7 @@ GameObject:
   m_Icon: {fileID: -5442936267250999957, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1034850975
 Transform:
   m_ObjectHideFlags: 0
@@ -10858,22 +10853,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   IsReady: 0
   isBlocked: 0
-  step: 0
-  OnWrong:
+  ShowEmoijOnWrong: 1
+  OnSetupReady:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 736123645}
-        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: PlayNegativeEmoji
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   OnFinish:
     m_PersistentCalls:
       m_Calls:
@@ -10973,6 +10956,7 @@ MonoBehaviour:
     targetTf: {fileID: 1873917922}
     distance: 1.5
     hadChecked: 0
+  sizeScalePick: {x: 1.15, y: 1.15, z: 1.15}
 --- !u!1 &1053023184
 GameObject:
   m_ObjectHideFlags: 0
@@ -11164,6 +11148,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fadeDuration: 0.75
+  TargetAlpha: 1
+  delay: 0
   soundFx: 100
 --- !u!114 &1084653143
 MonoBehaviour:
@@ -11588,6 +11574,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fadeDuration: 0.75
+  TargetAlpha: 1
+  delay: 0
   soundFx: 100
 --- !u!212 &1176560690
 SpriteRenderer:
@@ -11882,6 +11870,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fadeDuration: 0.75
+  TargetAlpha: 1
+  delay: 0
   soundFx: 100
 --- !u!212 &1209212523
 SpriteRenderer:
@@ -12232,8 +12222,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   IsReady: 1
   isBlocked: 0
-  step: 0
-  OnWrong:
+  ShowEmoijOnWrong: 1
+  OnSetupReady:
     m_PersistentCalls:
       m_Calls: []
   OnFinish:
@@ -12591,8 +12581,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   IsReady: 1
   isBlocked: 0
-  step: 0
-  OnWrong:
+  ShowEmoijOnWrong: 1
+  OnSetupReady:
     m_PersistentCalls:
       m_Calls: []
   OnFinish:
@@ -13348,22 +13338,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   IsReady: 0
   isBlocked: 0
-  step: 0
-  OnWrong:
+  ShowEmoijOnWrong: 1
+  OnSetupReady:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 736123645}
-        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: PlayNegativeEmoji
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   OnFinish:
     m_PersistentCalls:
       m_Calls: []
@@ -13739,22 +13717,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   IsReady: 0
   isBlocked: 0
-  step: 0
-  OnWrong:
+  ShowEmoijOnWrong: 1
+  OnSetupReady:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 736123645}
-        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: PlayNegativeEmoji
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   OnFinish:
     m_PersistentCalls:
       m_Calls: []
@@ -14578,7 +14544,7 @@ MonoBehaviour:
   timeCountHint: 2
   handCtrl: {fileID: 8503599624730501112}
   gamePlayManager: {fileID: 736123647}
-  lidTapOpener: {fileID: 1342303417}
+  clock: {fileID: 0}
   tutorialNode:
   - {fileID: 2075704649}
   - {fileID: 2104112624}
@@ -15630,22 +15596,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   IsReady: 0
   isBlocked: 0
-  step: 0
-  OnWrong:
+  ShowEmoijOnWrong: 1
+  OnSetupReady:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 736123645}
-        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: PlayNegativeEmoji
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   OnFinish:
     m_PersistentCalls:
       m_Calls: []
@@ -15659,7 +15613,6 @@ MonoBehaviour:
   Angle: {x: 88.156, y: 30}
   rende: {fileID: 1897763203}
   acnePimpleColliders: []
-  spriteShows: []
 --- !u!1 &1925256296
 GameObject:
   m_ObjectHideFlags: 0
@@ -15764,6 +15717,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fadeDuration: 0.75
+  TargetAlpha: 1
+  delay: 0
   soundFx: 100
 --- !u!114 &1925256300
 MonoBehaviour:
@@ -16199,7 +16154,7 @@ GameObject:
   m_Icon: {fileID: -5442936267250999957, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1959164709
 Transform:
   m_ObjectHideFlags: 0
@@ -21467,6 +21422,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fadeDuration: 0.75
+  TargetAlpha: 1
+  delay: 0
   soundFx: 100
 --- !u!114 &2076458685
 MonoBehaviour:
@@ -22023,7 +21980,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   skeletonAnimation: {fileID: 2112898285}
-  eye: {fileID: 7426031139983132072}
+  MouseNorBf: {fileID: 0}
+  MouseHappyBf: {fileID: 0}
+  MouseAngryBf: {fileID: 0}
+  MouseNorAf: {fileID: 0}
+  MouseHappyAf: {fileID: 0}
+  MouseAngryAf: {fileID: 0}
 --- !u!1 &234390703138480767
 GameObject:
   m_ObjectHideFlags: 0
@@ -22888,7 +22850,9 @@ MonoBehaviour:
   - {fileID: 550401734}
   typeActive: 0
   distanceCheck: 0.75
-  fxSound: 6
+  FxSound: 100
+  RatingDone: 0.85
+  CurrRating: 0
 --- !u!1 &5661453761409497532
 GameObject:
   m_ObjectHideFlags: 0
@@ -23460,22 +23424,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   IsReady: 0
   isBlocked: 0
-  step: 0
-  OnWrong:
+  ShowEmoijOnWrong: 1
+  OnSetupReady:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 736123645}
-        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: PlayNegativeEmoji
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   OnFinish:
     m_PersistentCalls:
       m_Calls: []
@@ -23535,8 +23487,8 @@ MonoBehaviour:
         m_CallState: 2
   Angle: {x: -73, y: 0}
   rende: {fileID: 622417094}
+  ShowCirBar: 0
   maskGroup: {fileID: 5651388956190235090}
-  NodeBody: {fileID: 0}
   NodeCheckPos: {fileID: 7045396248277562875}
 --- !u!114 &8056065372100558899
 MonoBehaviour:

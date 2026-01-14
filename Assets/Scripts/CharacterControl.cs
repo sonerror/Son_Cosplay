@@ -4,6 +4,7 @@ using AnimationState = Spine.AnimationState;
 using UnityEngine;
 using Spine.Unity;
 using Utilities;
+using System.Collections.Generic;
 
 public enum CharacterAnimID
 {
@@ -20,14 +21,28 @@ public class CharacterControl : GameUnit
   public GameObject MouseNorBf, MouseHappyBf, MouseAngryBf;
   public GameObject MouseNorAf, MouseHappyAf, MouseAngryAf;
 
-  // [SerializeField] private LoopAnimTransformFloating eye;
-
   void Start()
   {
   }
   public void TurnSlotAttachment(string slotName, string attachmentName = null)
   {
     skeletonAnimation.Skeleton.SetAttachment(slotName, attachmentName);
+  }
+
+  public void TurnOnSlotsAttachment(List<SlotAttachmentPair> slotAttachmentPairs)
+  {
+    foreach (SlotAttachmentPair pair in slotAttachmentPairs)
+    {
+      TurnSlotAttachment(pair.slotName, pair.attachmentName);
+    }
+  }
+
+  public void TurnOffSlotsAttachment(List<SlotAttachmentPair> slotAttachmentPairs)
+  {
+    foreach (SlotAttachmentPair pair in slotAttachmentPairs)
+    {
+      TurnSlotAttachment(pair.slotName, null);
+    }
   }
 
   public void SetAlphaSlotName(string slotName, float alphaSlotName)

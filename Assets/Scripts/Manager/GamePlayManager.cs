@@ -145,23 +145,29 @@ public class GamePlayManager : Singleton<GamePlayManager>
     var item = items[1];
     item.SetReady();
     item.OnFinish.AddListener(OnEndStep1);
-
-
   }
 
   private void OnEndStep1()
   {
     var item = items[1];
     item.OnFinish.RemoveListener(OnEndStep1);
-    DoneStep();
-    TryNextStep();
+
+    DOVirtual.DelayedCall(1f, () =>
+    {
+      GameManager.Ins.ChangeSceneToGamePlay2(() =>
+      {
+        DoneStep();
+        TryNextStep();
+      });
+    });
   }
 
   #endregion Step1
 
   #region Step2
 
-  [SerializeField]
+  [SerializeField] private List<SlotAttachmentPair> slotStep2 = new List<SlotAttachmentPair>();
+
 
   private void OnStartStep2()
   {
@@ -174,6 +180,8 @@ public class GamePlayManager : Singleton<GamePlayManager>
   {
     var item = items[2];
     item.OnFinish.RemoveListener(OnEndStep2);
+    item.gameObject.SetActive(false);
+    character.TurnOnSlotsAttachment(slotStep2);
 
     DoneStep();
     TryNextStep();
@@ -182,7 +190,6 @@ public class GamePlayManager : Singleton<GamePlayManager>
   #endregion Step2
 
   #region Step3
-
   private void OnStartStep3()
   {
     Debug.Log("OnStartStep3");
@@ -191,17 +198,12 @@ public class GamePlayManager : Singleton<GamePlayManager>
     item.SetReady();
   }
 
-  [SerializeField] List<GameObject> nodeTurnOnOff = new List<GameObject>();
   private void OnEndStep3()
   {
     var item = items[3];
     item.OnFinish.RemoveListener(OnEndStep3);
     item.IsReady = false;
-    for (int i = 0; i < nodeTurnOnOff.Count; i++)
-    {
-      nodeTurnOnOff[i].SetActive(false);
-    }
-    // ChangeGroupItemStart();
+
     DoneStep();
     TryNextStep();
   }
@@ -210,21 +212,34 @@ public class GamePlayManager : Singleton<GamePlayManager>
 
   #region Step4
 
+  [SerializeField] private List<SlotAttachmentPair> slotEyeL = new List<SlotAttachmentPair>();
+  [SerializeField] private List<SlotAttachmentPair> slotEyeR = new List<SlotAttachmentPair>();
+
+  public void AddEyeL()
+  {
+    character.TurnOnSlotsAttachment(slotEyeL);
+  }
+
+  public void AddEyeR()
+  {
+    character.TurnOnSlotsAttachment(slotEyeR);
+  }
+
   private void OnStartStep4()
   {
     Debug.Log("OnStartStep4");
     var item = items[4];
-    item.OnFinish.AddListener(OnEndStep4);
+    item.OnFinish.AddListener(CheckEndStep4);
     item.SetReady();
+  }
+
+  void CheckEndStep4()
+  {
+    // if ()
   }
 
   private void OnEndStep4()
   {
-
-    var item = items[4];
-    item.OnFinish.RemoveListener(OnEndStep4);
-    item.IsReady = false;
-
     DoneStep();
     TryNextStep();
   }
