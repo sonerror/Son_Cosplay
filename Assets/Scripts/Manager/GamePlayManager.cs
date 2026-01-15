@@ -210,7 +210,7 @@ public class GamePlayManager : Singleton<GamePlayManager>
 
   void CheckEndStep4()
   {
-    SoundManager.Ins.PlayFx(FxType.Drop);
+    SoundManager.Ins.PlayFx(FxType.AddEye);
     if (!items[4].IsReady && !items[5].IsReady)
     {
       OnEndStep4();

@@ -15,22 +15,14 @@ public enum FxType
   Angry2 = 9,
   Spray = 10,
   AddGel = 11,
-  XoaGel = 12,
-  BrushAdd = 13,
+  Pick1 = 12,
+  AddEye = 13,
   Brush0 = 14,
   Brush1 = 15,
   OpenLid = 16,
   ToSon = 17,
   XitGel = 18,
-  Happy0_1 = 19,
-  Happy1_1 = 20,
-  Happy2_1 = 21,
-  Angry0_1 = 22,
-  Angry1_1 = 23,
-  Angry2_1 = 24,
-  WomanHey = 25,
-  Water = 26,
-  FaceTowel = 27,
+
 
   None = 100,
 }
@@ -43,16 +35,6 @@ public class SoundManager : Singleton<SoundManager>
 
   bool isMute = false;
   public bool IsMute => isMute;
-
-  public void PlaySoundLoopWater()
-  {
-    PlaySoundLoop(FxType.Water);
-  }
-
-  public void StopSoundLoopWater()
-  {
-    StopSoundLoop(FxType.Water);
-  }
 
   public void PlayFx(FxType fxType)
   {

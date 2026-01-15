@@ -41,7 +41,7 @@ public class RemoveItem : Item
       spriteRenderer.enabled = true;
     }
 
-
+    SoundManager.Ins.PlayFx(FxType.Pick1);
     isDragging = true;
     PosMouseDown = GetMouseWorldPos();
     offSet = Tf.position - PosMouseDown;
