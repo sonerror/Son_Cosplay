@@ -29,10 +29,10 @@ public class GameManager : Singleton<GameManager>
 
   private void Update()
   {
-    if (isPlayingGame && Input.GetMouseButtonDown(0))
-    {
-      EventManager.TriggerEvent("ShowBtnInstall");
-    }
+    // if (isPlayingGame && Input.GetMouseButtonDown(0))
+    // {
+    //   EventManager.TriggerEvent("ShowBtnInstall");
+    // }
 
     // if (!hadClicked && Input.GetMouseButtonDown(0))
     // {
@@ -59,7 +59,7 @@ public class GameManager : Singleton<GameManager>
     // EventManager.TriggerEvent("ShowText2");
     TutorialManager.Ins.enableCountTime = true;
     SoundManager.Ins.PlayFx(FxType.StartGame);
-    SoundManager.Ins.PlayBgm();
+    // SoundManager.Ins.PlayBgm();
     DOVirtual.DelayedCall(0.2f, () =>
     {
       isPlayingGame = true;

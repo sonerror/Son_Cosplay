@@ -9,6 +9,6 @@ public class GameVidScreen : UIScreen
   {
     GameManager.Ins.StartGamePlay();
     UIManager.Ins.OpenUI(UIID.GamePlay);
-    UIManager.Ins.CloseUI(UIID.GameVideo);
+    // UIManager.Ins.CloseUI(UIID.GameVideo);
   }
 }

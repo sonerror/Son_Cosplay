@@ -2,7 +2,7 @@
     "version": "7.0.0",
     "projectId": "f42e7ff96e4545544bb6cd68f51ab634",
     "applicationID": 34683,
-    "creativeName": "Cosplaydom_v8GG",
+    "creativeName": "Cosplaydom_v8_kvidGG",
     "pgServer": "EU",
     "window": {
         "‐⁏": true
@@ -23874,14 +23874,6 @@
                         "excluded": false
                     },
                     {
-                        "name": "PlaySoundLoopWater",
-                        "excluded": false
-                    },
-                    {
-                        "name": "StopSoundLoopWater",
-                        "excluded": false
-                    },
-                    {
                         "name": "PlayBgm",
                         "excluded": false
                     }
@@ -37271,6 +37263,10 @@
                     },
                     {
                         "name": "ShowText2",
+                        "excluded": false
+                    },
+                    {
+                        "name": "Update",
                         "excluded": false
                     }
                 ]

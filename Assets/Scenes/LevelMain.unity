@@ -6318,7 +6318,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   screens:
-  - {fileID: 2218638098070180845, guid: bdb74daf76268ed4d96732fdb23623ec, type: 3}
   - {fileID: 6160914223280322920, guid: 5fa6e81763c7f764ea78cf380f9d0b98, type: 3}
   canvasParent:
   - {fileID: 1113598547}
@@ -10010,7 +10009,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: -23
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
+  m_Sprite: {fileID: 7482667652216324306, guid: 261569ec93a1b544891e645d05458809, type: 3}
   m_Color: {r: 0.4784314, g: 0.45098042, b: 0.63529414, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -10354,7 +10353,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: -23
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
+  m_Sprite: {fileID: 7482667652216324306, guid: 261569ec93a1b544891e645d05458809, type: 3}
   m_Color: {r: 0.6156863, g: 0.5176471, b: 0.7137255, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -13125,7 +13124,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   disableHand: 0
   TimeHint: 1
-  enableCountTime: 0
+  enableCountTime: 1
   timeCountHint: 1
   handCtrl: {fileID: 8503599624730501112}
   gamePlayManager: {fileID: 736123647}
@@ -15407,7 +15406,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: d9fb410ccc6577c488269b3539dd1924, type: 3}
   m_Resource: {fileID: 8300000, guid: d9fb410ccc6577c488269b3539dd1924, type: 3}
-  m_PlayOnAwake: 0
+  m_PlayOnAwake: 1
   m_Volume: 0.708
   m_Pitch: 1
   Loop: 1
