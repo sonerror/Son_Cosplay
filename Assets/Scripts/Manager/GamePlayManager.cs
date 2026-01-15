@@ -96,35 +96,18 @@ public class GamePlayManager : Singleton<GamePlayManager>
   }
 
   #region Step0
-  public List<RemoveItem> ClotherRemove = new List<RemoveItem>();
 
-  private int countCutHair = 0;
   private void OnStartStep0()
   {
-    ClotherRemove[0].SetReady();
-    ClotherRemove[1].SetReady();
-    ClotherRemove[2].SetReady();
-    for (int i = 0; i < ClotherRemove.Count; i++)
-    {
-      ClotherRemove[i].OnFinish.AddListener(OnRemoveClother);
-    }
-  }
-
-  void OnRemoveClother()
-  {
-    countCutHair++;
-    TutorialManager.Ins.IncreaseTimeHide();
-    if (countCutHair >= ClotherRemove.Count)
-    {
-
-      OnEndStep0();
-    }
+    items[0].SetReady();
+    items[0].OnFinish.AddListener(OnEndStep0);
   }
 
   private void OnEndStep0()
   {
     DoneStep();
     TryNextStep();
+    TutorialManager.Ins.IncreaseTimeHide();
     floatingItem.Show();
   }
   #endregion Step0

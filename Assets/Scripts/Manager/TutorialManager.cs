@@ -122,15 +122,8 @@ public class TutorialManager : Singleton<TutorialManager>
   }
   void PlayTut0()
   {
-    var items = gamePlayManager.ClotherRemove;
-    for (var i = 0; i < items.Count; i++)
-    {
-      if (items[i].IsReady)
-      {
-        handCtrl.ShowHandPosToPos(items[i].Tf.position, items[i].Tf.position + (items[i].Tf.position.x < 0 ? Vector3.left : Vector3.right) * 2f);
-        return;
-      }
-    }
+    var item = gamePlayManager.items[0];
+    handCtrl.ShowHandPosToPos(item.Tf.position, item.Tf.position + Vector3.right * 3f);
   }
 
   void PlayTut1()

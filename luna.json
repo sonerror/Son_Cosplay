@@ -79,12 +79,12 @@
                 "Stubs/SupersonicWisdom/"
             ],
             "msbuildMac64": "/Library/Frameworks/Mono.framework/Versions/Current/bin/msbuild",
-            "msbuildWin64": "C:/Program Files/Microsoft Visual Studio/2022/Professional/MSBuild/Current/Bin/MSBuild.exe",
+            "msbuildWin64": "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/MSBuild.exe",
             "externalSources": [],
             "externalJSLibraries": [],
             "scriptingDefines": [],
             "msbuildVersion": "17.14",
-            "monoVersion": "8.0.3",
+            "monoVersion": "9.0.2",
             "dotnetVersion": ""
         },
         "assets": {
@@ -18555,7 +18555,7 @@
                     },
                     {
                         "name": "anchoredPosition#set",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "sizeDelta#get",
@@ -42908,10 +42908,6 @@
                         "excluded": false
                     },
                     {
-                        "name": "OnRemoveClother",
-                        "excluded": false
-                    },
-                    {
                         "name": "AddEyeL",
                         "excluded": false
                     },
@@ -46545,7 +46541,7 @@
                     {
                         "maxWidth": 2048,
                         "maxHeight": 2048,
-                        "format": "png8",
+                        "format": "png32",
                         "compression": "quantSize",
                         "quality": 65,
                         "script": "",
@@ -46563,8 +46559,8 @@
                         "name": "Assets/_GAME/Levels/LvCosplayCorpseBride/Animations/Corpse_bridge/111.png"
                     },
                     {
-                        "maxWidth": 1024,
-                        "maxHeight": 1024,
+                        "maxWidth": 512,
+                        "maxHeight": 512,
                         "format": "png32",
                         "compression": "quantSize",
                         "quality": 65,
@@ -46573,8 +46569,8 @@
                         "name": "Assets/_GAME/_Costopia/__Gameplay/_Texture/BG/BG-makeup2 1.png"
                     },
                     {
-                        "maxWidth": 1024,
-                        "maxHeight": 1024,
+                        "maxWidth": 512,
+                        "maxHeight": 512,
                         "format": "png32",
                         "compression": "quantSize",
                         "quality": 65,
