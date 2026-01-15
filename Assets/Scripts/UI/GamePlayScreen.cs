@@ -7,17 +7,8 @@ public class GamePlayScreen : UIScreen
 
   void Start()
   {
-    // EventManager.StartListening("ShowBtnInstall", ShowBtnInstall);
-    // EventManager.StartListening("ShowText2", ShowText2);
-  }
-  private bool hadClick = false;
-  void Update()
-  {
-    if (!hadClick && Input.GetMouseButtonDown(0))
-    {
-      hadClick = true;
-      ShowBtnInstall();
-    }
+    EventManager.StartListening("ShowBtnInstall", ShowBtnInstall);
+    EventManager.StartListening("ShowText2", ShowText2);
   }
 
   public void ShowBtnInstall()
