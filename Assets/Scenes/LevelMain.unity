@@ -708,7 +708,7 @@ Transform:
   m_GameObject: {fileID: 133397401}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -5.49, y: -8.27, z: 0}
+  m_LocalPosition: {x: 5.507, y: -8.27, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -4762,7 +4762,7 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 747558381
+  m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 3
   m_Sprite: {fileID: 21300000, guid: b6ebb741a0aa49741a83273eb8643521, type: 3}
@@ -4834,6 +4834,8 @@ MonoBehaviour:
     distance: 1.5
     hadChecked: 0
   sizeScalePick: {x: 1.15, y: 1.15, z: 1.15}
+  eulerOnDrop: 1
+  eulerRot: {x: 0, y: 0, z: 0}
 --- !u!114 &586320567
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8444,6 +8446,8 @@ MonoBehaviour:
     distance: 2.5
     hadChecked: 0
   sizeScalePick: {x: 1.15, y: 1.15, z: 1.15}
+  eulerOnDrop: 0
+  eulerRot: {x: 0, y: 0, z: 0}
 --- !u!114 &1093836116
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10145,7 +10149,7 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 747558381
+  m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 3
   m_Sprite: {fileID: 21300000, guid: b6ebb741a0aa49741a83273eb8643521, type: 3}
@@ -10217,6 +10221,8 @@ MonoBehaviour:
     distance: 1.5
     hadChecked: 0
   sizeScalePick: {x: 1.15, y: 1.15, z: 1.15}
+  eulerOnDrop: 1
+  eulerRot: {x: 0, y: 0, z: 0}
 --- !u!114 &1290363041
 MonoBehaviour:
   m_ObjectHideFlags: 0

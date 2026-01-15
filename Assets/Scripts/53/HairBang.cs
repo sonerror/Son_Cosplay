@@ -16,12 +16,16 @@ public class HairBang : Item
 
   [SerializeField] private Vector3 sizeScalePick = Vector3.one * 1.15f;
 
+  [SerializeField] private bool eulerOnDrop = false;
+  [SerializeField] private Vector3 eulerRot = Vector3.zero;
+
   protected override void Awake()
   {
     base.Awake();
     _prePos = Tf.position;
     Angle.x = Tf.eulerAngles.z;
     _initOrder = rende.sortingOrder;
+    eulerRot = Tf.eulerAngles;
   }
   public override void MouseDown(BaseEventData eventData)
   {
@@ -95,6 +99,10 @@ public class HairBang : Item
     Tf.DOMove(_prePos, 0.3f).SetEase(Ease.OutBack).OnComplete(() =>
     {
       ChangeLayerDown();
+      if (eulerOnDrop)
+      {
+        Tf.eulerAngles = eulerRot;
+      }
     });
 
 

@@ -46543,9 +46543,9 @@
                         "name": "Assets/Fonts/ArchivoBlack-Regular SDF.asset"
                     },
                     {
-                        "maxWidth": 1024,
-                        "maxHeight": 1024,
-                        "format": "png32",
+                        "maxWidth": 2048,
+                        "maxHeight": 2048,
+                        "format": "png8",
                         "compression": "quantSize",
                         "quality": 65,
                         "script": "",
@@ -46654,6 +46654,16 @@
                         "script": "",
                         "ext": "",
                         "name": "Assets/_GAME/Levels/LvCosplaySanta/santa-papa-noel-feliz-navidad-01-127494.ogg"
+                    },
+                    {
+                        "channels": 1,
+                        "startTime": "00:00.000",
+                        "endTime": "00:16.373",
+                        "lengthInSeconds": 16.37299919128418,
+                        "bitrate": 64,
+                        "script": "",
+                        "ext": "",
+                        "name": "Assets/_GAME/_Costopia/_Audio/BGM/BGM_Gamplay_5.ogg"
                     }
                 ]
             },
