@@ -8808,6 +8808,10 @@
             {
                 "name": "BrushEyeState",
                 "excluded": false
+            },
+            {
+                "name": "FloatingItem",
+                "excluded": true
             }
         ],
         "unusedMethods": [
@@ -22903,7 +22907,7 @@
                     },
                     {
                         "name": "SetFrom$1",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "Reset",
@@ -23875,6 +23879,10 @@
                     },
                     {
                         "name": "StopSoundLoopWater",
+                        "excluded": false
+                    },
+                    {
+                        "name": "PlayBgm",
                         "excluded": false
                     }
                 ]
@@ -41859,7 +41867,7 @@
                     },
                     {
                         "name": "From$3",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "From$4",
@@ -42009,7 +42017,7 @@
                     },
                     {
                         "name": "SetFrom",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "ConvertToStartValue",
@@ -46128,6 +46136,84 @@
                         "excluded": true
                     }
                 ]
+            },
+            {
+                "className": "SimpleCurve",
+                "staticMethods": [],
+                "instanceMethods": [
+                    {
+                        "name": "ctor",
+                        "excluded": false
+                    },
+                    {
+                        "name": "Evaluate",
+                        "excluded": false
+                    }
+                ]
+            },
+            {
+                "className": "SimpleCurve.Keyframe",
+                "staticMethods": [],
+                "instanceMethods": [
+                    {
+                        "name": "getDefaultValue",
+                        "excluded": true
+                    },
+                    {
+                        "name": "$ctor1",
+                        "excluded": false
+                    },
+                    {
+                        "name": "ctor",
+                        "excluded": false
+                    },
+                    {
+                        "name": "getHashCode",
+                        "excluded": true
+                    },
+                    {
+                        "name": "equals",
+                        "excluded": true
+                    },
+                    {
+                        "name": "$clone",
+                        "excluded": true
+                    }
+                ]
+            },
+            {
+                "className": "FloatingItem1",
+                "staticMethods": [],
+                "instanceMethods": [
+                    {
+                        "name": "init",
+                        "excluded": false
+                    },
+                    {
+                        "name": "Start",
+                        "excluded": false
+                    },
+                    {
+                        "name": "StartFloating",
+                        "excluded": false
+                    },
+                    {
+                        "name": "StopFloating",
+                        "excluded": false
+                    },
+                    {
+                        "name": "Update",
+                        "excluded": false
+                    },
+                    {
+                        "name": "UpdateFloatingAnchor",
+                        "excluded": false
+                    },
+                    {
+                        "name": "Show",
+                        "excluded": false
+                    }
+                ]
             }
         ],
         "stubberDataList": [],
@@ -46457,8 +46543,8 @@
                         "name": "Assets/Fonts/ArchivoBlack-Regular SDF.asset"
                     },
                     {
-                        "maxWidth": 2048,
-                        "maxHeight": 2048,
+                        "maxWidth": 1024,
+                        "maxHeight": 1024,
                         "format": "png32",
                         "compression": "quantSize",
                         "quality": 65,

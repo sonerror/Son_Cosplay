@@ -91,6 +91,7 @@
     <Compile Include="Assets\Scripts\53\ItemDragBase.cs" />
     <Compile Include="Assets\Scripts\Manager\SoundManager.cs" />
     <Compile Include="Assets\AllIn1SpriteShader\Demo\Scripts\DemoCamera.cs" />
+    <Compile Include="Assets\Scripts\Helper\FloatingItem.cs" />
     <Compile Include="Assets\Scripts\UI\Progress.cs" />
     <Compile Include="Assets\DOTween\Modules\DOTweenModulePhysics2D.cs" />
     <Compile Include="Assets\Scripts\UI\GameChooseCharScreen.cs" />
@@ -115,6 +116,7 @@
     <Compile Include="Assets\Scripts\53\HairBang.cs" />
     <Compile Include="Assets\Scripts\Brow_Shaver.cs" />
     <Compile Include="Assets\DOTween\Modules\DOTweenModuleAudio.cs" />
+    <Compile Include="Assets\Scripts\FloatingItem.cs" />
     <Compile Include="Assets\Scripts\RemoveItem.cs" />
     <Compile Include="Assets\Scripts\54\TapButton.cs" />
     <Compile Include="Assets\Scripts\55\Scissors.cs" />
@@ -149,6 +151,7 @@
     <Compile Include="Assets\Scripts\54\Brush_Blush.cs" />
     <Compile Include="Assets\Scripts\Helper\GizmoUtility.cs" />
     <Compile Include="Assets\DOTween\Modules\DOTweenModuleSprite.cs" />
+    <Compile Include="Assets\Scripts\Helper\SimpleCurve.cs" />
     <Compile Include="Assets\Scripts\MaskGroupCustom.cs" />
     <Compile Include="Assets\Scripts\53\WaterFaucet.cs" />
     <Compile Include="Assets\Scripts\Manager\GamePlayManager.cs" />
@@ -210,6 +213,7 @@
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Masking.shader" />
     <None Include="Assets\_GAME\Levels\LvCosplayCorpseBride\Animations\Corpse_bridge  new\Corpse-bridges.atlas.txt" />
     <None Include="Assets\_GAME\Levels\LvCosplayWenesday\WedNew\Wednesday.atlas.txt" />
+    <None Include="Assets\Materials\OutlineSprite.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF Overlay.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Mobile.shader" />
     <None Include="Assets\_GAME\Levels\LvCosplayCleopatra\SpineNew\CleoPatra.atlas.txt" />

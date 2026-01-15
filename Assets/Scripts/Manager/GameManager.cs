@@ -59,6 +59,7 @@ public class GameManager : Singleton<GameManager>
     // EventManager.TriggerEvent("ShowText2");
     TutorialManager.Ins.enableCountTime = true;
     SoundManager.Ins.PlayFx(FxType.StartGame);
+    SoundManager.Ins.PlayBgm();
     DOVirtual.DelayedCall(0.2f, () =>
     {
       isPlayingGame = true;

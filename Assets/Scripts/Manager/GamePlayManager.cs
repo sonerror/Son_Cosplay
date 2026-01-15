@@ -11,7 +11,8 @@ using UnityEngine;
 public class GamePlayManager : Singleton<GamePlayManager>
 {
   public CharacterControl character;
-  public ShowObjectEffect Gr1, Gr2;
+  // public ShowObjectEffect Gr1, Gr2;
+  public FloatingItem1 floatingItem;
 
   public List<Item> items = new List<Item>();
 
@@ -124,6 +125,7 @@ public class GamePlayManager : Singleton<GamePlayManager>
   {
     DoneStep();
     TryNextStep();
+    floatingItem.Show();
   }
   #endregion Step0
 

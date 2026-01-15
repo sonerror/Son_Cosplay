@@ -38,7 +38,7 @@ public enum FxType
 public class SoundManager : Singleton<SoundManager>
 {
   public AudioClip[] audioClips;
-  public AudioSource sound1;
+  public AudioSource bgm;
   private AudioSource[] fx = new AudioSource[30];
 
   bool isMute = false;
@@ -133,7 +133,7 @@ public class SoundManager : Singleton<SoundManager>
   public void Mute()
   {
     isMute = true;
-    sound1.Stop();
+    bgm.Stop();
     for (int i = 0; i < fx.Length; i++)
     {
       if (fx[i] != null)
@@ -141,5 +141,11 @@ public class SoundManager : Singleton<SoundManager>
         fx[i].Stop();
       }
     }
+  }
+
+  public void PlayBgm()
+  {
+    if (isMute) return;
+    bgm.Play();
   }
 }
