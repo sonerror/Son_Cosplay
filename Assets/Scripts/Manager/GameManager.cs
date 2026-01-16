@@ -19,8 +19,7 @@ public class GameManager : Singleton<GameManager>
   public CharacterControl Body1, Body2;
   public ChangeScene changeScene;
 
-  public GameObject Scene1, Scene2;
-  public Animator ContentGamePlay;
+  public GameObject Scene0, Scene1, Scene2;
 
 
   private IEnumerator coroutine = null;
