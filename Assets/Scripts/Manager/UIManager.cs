@@ -4,9 +4,8 @@ using UnityEngine;
 
 public enum UIID // id of UI
 {
-  GameVideo = 0,
-  GamePlay = 1,
-  GameLoseScreen = 2,
+  GamePlay = 0,
+  GameLoseScreen = 1,
 }// remember set range of array in UIManager
 
 public class UIManager : Singleton<UIManager>
@@ -28,8 +27,8 @@ public class UIManager : Singleton<UIManager>
 
   private void Start()
   {
-    OpenUI(UIID.GameVideo);
-    // OpenUI(UIID.GamePlay);
+    // OpenUI(UIID.GameVideo);
+    OpenUI(UIID.GamePlay);
 
   }
 

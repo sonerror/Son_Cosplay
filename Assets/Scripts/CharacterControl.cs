@@ -13,50 +13,14 @@ public enum CharacterAnimID
   Angry = 2,
 }
 
-public class CharacterControl : GameUnit
+public class CharacterControl : Character
 {
-  [SerializeField] private SkeletonAnimation skeletonAnimation;
-  public SkeletonAnimation SkeletonAnimation => skeletonAnimation;
+
 
   public GameObject MouseNorBf, MouseHappyBf, MouseAngryBf;
   public GameObject MouseNorAf, MouseHappyAf, MouseAngryAf;
 
-  void Start()
-  {
-  }
-  public void TurnSlotAttachment(string slotName, string attachmentName = null)
-  {
-    skeletonAnimation.Skeleton.SetAttachment(slotName, attachmentName);
-  }
 
-  public void TurnOnSlotsAttachment(List<SlotAttachmentPair> slotAttachmentPairs)
-  {
-    foreach (SlotAttachmentPair pair in slotAttachmentPairs)
-    {
-      TurnSlotAttachment(pair.slotName, pair.attachmentName);
-    }
-  }
-
-  public void TurnOffSlotsAttachment(List<SlotAttachmentPair> slotAttachmentPairs)
-  {
-    foreach (SlotAttachmentPair pair in slotAttachmentPairs)
-    {
-      TurnSlotAttachment(pair.slotName, null);
-    }
-  }
-
-  public void SetAlphaSlotName(string slotName, float alphaSlotName)
-  {
-    var slot = skeletonAnimation.Skeleton.FindSlot(slotName);
-    if (slot != null)
-    {
-      slot.A = alphaSlotName;
-    }
-    else
-    {
-      Debug.LogWarning($"Slot {slotName} not found in skeleton.");
-    }
-  }
 
   private bool isDoneMouse = false;
 

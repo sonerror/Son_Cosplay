@@ -12,7 +12,7 @@ public class GamePlayManager : Singleton<GamePlayManager>
 {
   public CharacterControl character;
   // public ShowObjectEffect Gr1, Gr2;
-  public FloatingItem1 floatingItem;
+  // public FloatingItem1 floatingItem;
 
   public List<Item> items = new List<Item>();
 
@@ -96,35 +96,61 @@ public class GamePlayManager : Singleton<GamePlayManager>
   }
 
   #region Step0
-
+  public List<RemoveItem> ClotherRemove = new List<RemoveItem>();
+  private int countRemoveClother = 0;
   private void OnStartStep0()
   {
-    items[0].SetReady();
-    items[0].OnFinish.AddListener(OnEndStep0);
+    ClotherRemove[0].SetReady();
+    ClotherRemove[1].SetReady();
+    ClotherRemove[2].SetReady();
+    ClotherRemove[3].SetReady();
+    for (int i = 0; i < ClotherRemove.Count; i++)
+    {
+      ClotherRemove[i].OnFinish.AddListener(OnRemoveClother);
+    }
+  }
+
+  void OnRemoveClother()
+  {
+    countRemoveClother++;
+    TutorialManager.Ins.IncreaseTimeHide();
+    if (countRemoveClother >= ClotherRemove.Count)
+    {
+      OnEndStep0();
+    }
   }
 
   private void OnEndStep0()
   {
     DoneStep();
     TryNextStep();
-    TutorialManager.Ins.IncreaseTimeHide();
-    floatingItem.Show();
   }
   #endregion Step0
 
   #region Step1
+
+  public List<ControlAlphaSlot> ControlAlphaSlot = new List<ControlAlphaSlot>();
+
   private void OnStartStep1()
   {
-    var item = items[1];
-    item.SetReady();
-    item.OnFinish.AddListener(OnEndStep1);
+    for (int i = 0; i < ControlAlphaSlot.Count; i++)
+    {
+      ControlAlphaSlot[i].OnFinish.AddListener(OnFinishShowSlot);
+    }
+  }
+
+  private int countShowSlot = 0;
+  void OnFinishShowSlot()
+  {
+    countShowSlot++;
+    if (countShowSlot >= ControlAlphaSlot.Count)
+    {
+      OnEndStep1();
+    }
   }
 
   private void OnEndStep1()
   {
-    var item = items[1];
-    item.OnFinish.RemoveListener(OnEndStep1);
-
     DOVirtual.DelayedCall(1f, () =>
     {
       GameManager.Ins.ChangeSceneToGamePlay2(() =>
@@ -144,9 +170,9 @@ public class GamePlayManager : Singleton<GamePlayManager>
 
   private void OnStartStep2()
   {
-    var item = items[2];
-    item.OnFinish.AddListener(OnEndStep2);
-    item.SetReady();
+    // var item = items[2];
+    // item.OnFinish.AddListener(OnEndStep2);
+    // item.SetReady();
   }
 
   private void OnEndStep2()

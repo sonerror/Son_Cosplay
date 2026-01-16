@@ -77,10 +77,12 @@
     <Compile Include="Assets\Scripts\53\FaceTowelWithVfx.cs" />
     <Compile Include="Assets\Scripts\54\ShowSprite.cs" />
     <Compile Include="Assets\Scripts\Obj\FillCircleBar.cs" />
+    <Compile Include="Assets\Scripts\Character.cs" />
     <Compile Include="Assets\HideMouse.cs" />
     <Compile Include="Assets\DOTween\Modules\DOTweenModuleUnityVersion.cs" />
     <Compile Include="Assets\Scripts\54\Brush_BlushWithMaskGroup.cs" />
     <Compile Include="Assets\AllIn1SpriteShader\Demo\Scripts\DemoCircleExpositor.cs" />
+    <Compile Include="Assets\Scripts\ControlAlphaSlot.cs" />
     <Compile Include="Assets\Scripts\Helper\H3MonoBehaviour.cs" />
     <Compile Include="Assets\AllIn1SpriteShader\Demo\Scripts\DemoItem.cs" />
     <Compile Include="Assets\AllIn1SpriteShader\Scripts\AllIn1ShaderWindow.cs" />
@@ -91,7 +93,6 @@
     <Compile Include="Assets\Scripts\53\ItemDragBase.cs" />
     <Compile Include="Assets\Scripts\Manager\SoundManager.cs" />
     <Compile Include="Assets\AllIn1SpriteShader\Demo\Scripts\DemoCamera.cs" />
-    <Compile Include="Assets\Scripts\Helper\FloatingItem.cs" />
     <Compile Include="Assets\Scripts\UI\Progress.cs" />
     <Compile Include="Assets\DOTween\Modules\DOTweenModulePhysics2D.cs" />
     <Compile Include="Assets\Scripts\UI\GameChooseCharScreen.cs" />
