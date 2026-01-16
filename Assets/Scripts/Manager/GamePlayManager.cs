@@ -107,7 +107,6 @@ public class GamePlayManager : Singleton<GamePlayManager>
   {
     DoneStep();
     TryNextStep();
-    TutorialManager.Ins.IncreaseTimeHide();
     floatingItem.Show();
   }
   #endregion Step0
@@ -124,7 +123,7 @@ public class GamePlayManager : Singleton<GamePlayManager>
   {
     var item = items[1];
     item.OnFinish.RemoveListener(OnEndStep1);
-
+    TutorialManager.Ins.IncreaseTimeHide();
     DOVirtual.DelayedCall(1f, () =>
     {
       GameManager.Ins.ChangeSceneToGamePlay2(() =>

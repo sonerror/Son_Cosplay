@@ -2,7 +2,7 @@
     "version": "7.0.0",
     "projectId": "f42e7ff96e4545544bb6cd68f51ab634",
     "applicationID": 34683,
-    "creativeName": "Cosplaydom_v8_kvidGG",
+    "creativeName": "Cosplaydom_v9",
     "pgServer": "EU",
     "window": {
         "‐⁏": true
@@ -79,12 +79,12 @@
                 "Stubs/SupersonicWisdom/"
             ],
             "msbuildMac64": "/Library/Frameworks/Mono.framework/Versions/Current/bin/msbuild",
-            "msbuildWin64": "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/MSBuild.exe",
+            "msbuildWin64": "C:/Program Files/Microsoft Visual Studio/2022/Professional/MSBuild/Current/Bin/MSBuild.exe",
             "externalSources": [],
             "externalJSLibraries": [],
             "scriptingDefines": [],
             "msbuildVersion": "17.14",
-            "monoVersion": "9.0.2",
+            "monoVersion": "8.0.3",
             "dotnetVersion": ""
         },
         "assets": {
@@ -33803,7 +33803,7 @@
                     },
                     {
                         "name": "Clamp",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "RandomTriangle",
@@ -34615,7 +34615,7 @@
                     },
                     {
                         "name": "ClampColor",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "ClampSecondColor",
@@ -37263,10 +37263,6 @@
                     },
                     {
                         "name": "ShowText2",
-                        "excluded": false
-                    },
-                    {
-                        "name": "Update",
                         "excluded": false
                     }
                 ]
@@ -46073,7 +46069,7 @@
                     },
                     {
                         "name": "Apply",
-                        "excluded": true
+                        "excluded": false
                     }
                 ]
             },
@@ -46113,15 +46109,15 @@
                     },
                     {
                         "name": "Setup",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "Get",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "Set",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "Global",
@@ -46204,6 +46200,36 @@
                     {
                         "name": "Show",
                         "excluded": false
+                    }
+                ]
+            },
+            {
+                "className": "TurnSlotStart",
+                "staticMethods": [],
+                "instanceMethods": [
+                    {
+                        "name": "SkeletonAnimation#get",
+                        "excluded": true
+                    },
+                    {
+                        "name": "init",
+                        "excluded": false
+                    },
+                    {
+                        "name": "Start",
+                        "excluded": false
+                    },
+                    {
+                        "name": "TurnSlotAttachment",
+                        "excluded": false
+                    },
+                    {
+                        "name": "TurnOnSlotsAttachment",
+                        "excluded": true
+                    },
+                    {
+                        "name": "TurnOffSlotsAttachment",
+                        "excluded": true
                     }
                 ]
             }

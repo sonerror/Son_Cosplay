@@ -897,7 +897,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &133397402
 Transform:
   m_ObjectHideFlags: 0
@@ -1134,18 +1134,6 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 2043940111117662536}
-        m_TargetAssemblyTypeName: CharacterStart, Assembly-CSharp
-        m_MethodName: CloseEye
-        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -5279,8 +5267,8 @@ Transform:
   m_GameObject: {fileID: 578222415}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
+  m_LocalPosition: {x: 0, y: 0.08, z: 0}
+  m_LocalScale: {x: 0.25, y: 0.25, z: 0.25}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 74495803}
@@ -5329,7 +5317,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1010
-  m_Sprite: {fileID: 21300000, guid: 87d5d9a2081c95b41923495ecfcdd292, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 0a07bfce06e10114e9cc40e6c3183619, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -6926,7 +6914,7 @@ Transform:
   m_GameObject: {fileID: 725377537}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -0.45, y: -0.62, z: 0}
   m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -6976,7 +6964,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1110
-  m_Sprite: {fileID: 21300000, guid: 1b1d92f3dbb0f384790b9b9d174cdcd8, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f3b35b147eea5764bb720b5525d55a6e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -7291,7 +7279,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30b401387351fe74690a78861d6ca99d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  character: {fileID: 608521278}
+  character: {fileID: 2043940111117662536}
   floatingItem: {fileID: 133397410}
   items:
   - {fileID: 1625932812904591677}
@@ -7303,7 +7291,7 @@ MonoBehaviour:
   - {fileID: 589898745}
   - {fileID: 1556873803}
   - {fileID: 1200091169}
-  currentStep: 0
+  currentStep: 1
   slotStep2:
   - slotName: Set-P1_start-hair-band2
     attachmentName: Phase1/start-hair-band2
@@ -10745,6 +10733,7 @@ MonoBehaviour:
   isUseScaleTime: 0
   isRandomTimeOffset: 0
   timeOffset: {x: 0, y: 0}
+  isClose: 0
 --- !u!114 &1253450658
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13814,7 +13803,7 @@ GameObject:
   - component: {fileID: 1662177249}
   - component: {fileID: 1662177248}
   - component: {fileID: 1662177247}
-  - component: {fileID: 1662177250}
+  - component: {fileID: 1662177251}
   m_Layer: 0
   m_Name: Spine GameObject (CleoPatra)
   m_TagString: Untagged
@@ -13868,10 +13857,8 @@ MonoBehaviour:
   calculateTangents: 0
   maskInteraction: 1
   maskMaterials:
-    materialsMaskDisabled:
-    - {fileID: 2100000, guid: eb61998cc61488b48a7384e200f4cc7c, type: 2}
-    materialsInsideMask:
-    - {fileID: 2100000, guid: 4ec5dedc9317d56449ee3058704bdeb2, type: 2}
+    materialsMaskDisabled: []
+    materialsInsideMask: []
     materialsOutsideMask: []
   disableRenderingOnOverride: 1
   physicsPositionInheritanceFactor: {x: 1, y: 1}
@@ -13905,7 +13892,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 4ec5dedc9317d56449ee3058704bdeb2, type: 2}
+  - {fileID: 2100000, guid: eb61998cc61488b48a7384e200f4cc7c, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -13935,7 +13922,7 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1662177245}
   m_Mesh: {fileID: 0}
---- !u!114 &1662177250
+--- !u!114 &1662177251
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -13944,21 +13931,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 1662177245}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8ef43b09a619a9e4498f537780e9223e, type: 3}
+  m_Script: {fileID: 11500000, guid: abc415b5297d353428b71c4c34e77a22, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skeletonAnimation: {fileID: 0}
-  MouseNorBf: {fileID: 0}
-  MouseHappyBf: {fileID: 0}
-  MouseAngryBf: {fileID: 0}
-  MouseNorAf: {fileID: 0}
-  MouseHappyAf: {fileID: 0}
-  MouseAngryAf: {fileID: 0}
-  slotActiveStart: []
+  skeletonAnimation: {fileID: 1662177247}
+  slotActiveStart:
+  - slotName: Base_Body
+    attachmentName: Base_Body
+    skeletonDataAsset: {fileID: 11400000, guid: 12352e158dcf5474c8d298ff534cc601, type: 2}
   slotDeactiveStart: []
-  eyeFloating: {fileID: 0}
-  slotActiveStep1: []
-  slotDeactiveStep1: []
 --- !u!1 &1665048199
 GameObject:
   m_ObjectHideFlags: 0
@@ -17017,7 +16998,7 @@ AudioSource:
   m_audioClip: {fileID: 8300000, guid: d9fb410ccc6577c488269b3539dd1924, type: 3}
   m_Resource: {fileID: 8300000, guid: d9fb410ccc6577c488269b3539dd1924, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.708
+  m_Volume: 0.474
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -18668,9 +18649,6 @@ MonoBehaviour:
     attachmentName: Base_Body
     skeletonDataAsset: {fileID: 11400000, guid: 12352e158dcf5474c8d298ff534cc601, type: 2}
   slotDeactiveStart:
-  - slotName: Draw-P2_Blue_ArmL1
-    attachmentName: phase2/Blue_ArmR
-    skeletonDataAsset: {fileID: 11400000, guid: 12352e158dcf5474c8d298ff534cc601, type: 2}
   - slotName: Base-hair-start
     attachmentName: hair-start
     skeletonDataAsset: {fileID: 11400000, guid: 12352e158dcf5474c8d298ff534cc601, type: 2}
@@ -20513,6 +20491,7 @@ MonoBehaviour:
   isUseScaleTime: 0
   isRandomTimeOffset: 0
   timeOffset: {x: 0, y: 0}
+  isClose: 1
 --- !u!114 &7146844908880885828
 MonoBehaviour:
   m_ObjectHideFlags: 0

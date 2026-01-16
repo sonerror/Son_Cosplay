@@ -91,7 +91,7 @@ namespace Utilities
           );
     }
 
-    private bool isClose = false;
+    [SerializeField] private bool isClose = false;
     public void CloseEye()
     {
       isClose = true;
