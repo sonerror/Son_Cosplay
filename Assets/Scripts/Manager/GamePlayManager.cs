@@ -133,17 +133,20 @@ public class GamePlayManager : Singleton<GamePlayManager>
 
   private void OnStartStep1()
   {
+    items[1].SetReady();
     for (int i = 0; i < ControlAlphaSlot.Count; i++)
     {
       ControlAlphaSlot[i].OnFinish.AddListener(OnFinishShowSlot);
+      ControlAlphaSlot[i].SetReady(character);
     }
   }
 
   private int countShowSlot = 0;
   void OnFinishShowSlot()
   {
+    Debug.Log("OnFinishShowSlot" + countShowSlot);
     countShowSlot++;
-    if (countShowSlot >= ControlAlphaSlot.Count)
+    if (countShowSlot >= ControlAlphaSlot.Count - 1)
     {
       OnEndStep1();
     }

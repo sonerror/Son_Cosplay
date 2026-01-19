@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: c08f825f4001d014cbf7f3561f218b2f
+guid: 9623767307f564848aa4e027c49ee641
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -21,7 +21,7 @@ TextureImporter:
     heightScale: 0.25
     normalMapFilter: 0
     flipGreenChannel: 0
-  isReadable: 1
+  isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
@@ -39,7 +39,7 @@ TextureImporter:
     mipBias: 0
     wrapU: 1
     wrapV: 1
-    wrapW: 1
+    wrapW: 0
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
@@ -72,7 +72,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -94,24 +94,11 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 4
-    buildTarget: Android
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: 51
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 1
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
     buildTarget: WebGL
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -123,57 +110,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: win_pop up_effect_0
+      name: Jack_Sparrow_2 Jack_Sparrow_2_0_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 995
-        width: 7
-        height: 10
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: a62e97c3ef898c7e0800000000000000
-      internalID: -1744976637902331286
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: win_pop up_effect_1
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 622
-        height: 645
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 90bf4bf911a23f490800000000000000
-      internalID: -7713775481573278967
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Jack_Sparrow_2_0
-      rect:
-        serializedVersion: 2
-        x: 1041
-        y: 442
+        y: 131
         width: 121
-        height: 165
+        height: 34
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -182,8 +125,52 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: de2139937a7dd9e4c99eb59861b0e69a
-      internalID: -603539884
+      spriteID: a5b7e7a9f8c14f141a489d1eb118b77c
+      internalID: 1940832099
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jack_Sparrow_2 Jack_Sparrow_2_0_1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 38
+        width: 121
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77bd5abc4ada3f745bc0c6fae5387dc1
+      internalID: -1526693888
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jack_Sparrow_2 Jack_Sparrow_2_0_2
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 121
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b347c4b0cf0f5c24790872d192f3a5d7
+      internalID: -1762575911
       vertices: []
       indices: 
       edges: []
@@ -202,9 +189,9 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Jack_Sparrow_2_0: -603539884
-      win_pop up_effect_0: -1744976637902331286
-      win_pop up_effect_1: -7713775481573278967
+      Jack_Sparrow_2 Jack_Sparrow_2_0_0: 1940832099
+      Jack_Sparrow_2 Jack_Sparrow_2_0_1: -1526693888
+      Jack_Sparrow_2 Jack_Sparrow_2_0_2: -1762575911
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
