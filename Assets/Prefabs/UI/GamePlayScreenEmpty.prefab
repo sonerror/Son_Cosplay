@@ -387,8 +387,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Install
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: fdd0d2d2b930d88488e0a8a766888b2c, type: 2}
-  m_sharedMaterial: {fileID: -8992341082438601067, guid: fdd0d2d2b930d88488e0a8a766888b2c, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 7fc8ef219a9e9ca47b7f315c904393b0, type: 2}
+  m_sharedMaterial: {fileID: 6322605239898363352, guid: 7fc8ef219a9e9ca47b7f315c904393b0, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []

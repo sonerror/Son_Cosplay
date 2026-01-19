@@ -664,8 +664,16 @@
       <HintPath>Assets\Plugins\Sirenix\Assemblies\Sirenix.Utilities.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="EditorScripts">
+      <HintPath>E:\Luna\7.0.0\scripts\Editor\EditorScripts.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
     <Reference Include="Unity.VisualScripting.Antlr3.Runtime">
       <HintPath>Library\PackageCache\com.unity.visualscripting\Runtime\VisualScripting.Flow\Dependencies\NCalc\Unity.VisualScripting.Antlr3.Runtime.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="RuntimeScripts">
+      <HintPath>E:\Luna\7.0.0\scripts\Runtime\RuntimeScripts.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="DOTween">
@@ -678,14 +686,6 @@
     </Reference>
     <Reference Include="Unity.VisualScripting.TextureAssets">
       <HintPath>Library\PackageCache\com.unity.visualscripting\Editor\VisualScripting.Core\EditorAssetResources\Unity.VisualScripting.TextureAssets.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="RuntimeScripts">
-      <HintPath>E:\Luna\7.0.0\scripts\Runtime\RuntimeScripts.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="EditorScripts">
-      <HintPath>E:\Luna\7.0.0\scripts\Editor\EditorScripts.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="mscorlib">

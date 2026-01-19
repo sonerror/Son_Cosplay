@@ -8855,7 +8855,7 @@
                 "instanceMethods": [
                     {
                         "name": "$is",
-                        "excluded": true
+                        "excluded": false
                     }
                 ]
             },
@@ -21843,7 +21843,7 @@
                     },
                     {
                         "name": "missingGlyphCharacter#get",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "missingGlyphCharacter#set",
@@ -21851,7 +21851,7 @@
                     },
                     {
                         "name": "warningsDisabled#get",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "defaultFontAsset#get",
@@ -21903,7 +21903,7 @@
                     },
                     {
                         "name": "defaultSpriteAsset#get",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "defaultSpriteAssetPath#get",
@@ -22185,7 +22185,7 @@
                     },
                     {
                         "name": "spriteCharacterLookupTable#get",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "spriteCharacterLookupTable#set",
@@ -22213,7 +22213,7 @@
                     },
                     {
                         "name": "UpdateLookupTables",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "GetSpriteIndexFromHashcode",
@@ -31077,7 +31077,7 @@
                     },
                     {
                         "name": "GetSpriteCharacterFromSpriteAsset",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "GetSpriteCharacterFromSpriteAsset_Internal",
@@ -32593,7 +32593,7 @@
                     },
                     {
                         "name": "fallbackFontAssetTable#get",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "fallbackFontAssetTable#set",
@@ -32819,7 +32819,7 @@
                     },
                     {
                         "name": "hashCode#get",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "ctor",
@@ -46341,8 +46341,8 @@
                         "name": "Assets/_GAME/_Costopia/__Gameplay/_Texture/BG/BG-hair2.png"
                     },
                     {
-                        "maxWidth": 512,
-                        "maxHeight": 512,
+                        "maxWidth": 1024,
+                        "maxHeight": 1024,
                         "format": "png32",
                         "compression": "quantSize",
                         "quality": 65,
@@ -46581,8 +46581,8 @@
                         "name": "Assets/_GAME/Levels/LvCosplayCorpseBride/Animations/Corpse_bridge/111.png"
                     },
                     {
-                        "maxWidth": 512,
-                        "maxHeight": 512,
+                        "maxWidth": 1024,
+                        "maxHeight": 1024,
                         "format": "png32",
                         "compression": "quantSize",
                         "quality": 65,
@@ -46591,14 +46591,24 @@
                         "name": "Assets/_GAME/_Costopia/__Gameplay/_Texture/BG/BG-makeup2 1.png"
                     },
                     {
-                        "maxWidth": 512,
-                        "maxHeight": 512,
+                        "maxWidth": 1024,
+                        "maxHeight": 1024,
                         "format": "png32",
                         "compression": "quantSize",
                         "quality": 65,
                         "script": "",
                         "ext": "",
                         "name": "Assets/_GAME/_Costopia/__Gameplay/_Texture/BG/BG-hair-halo.png"
+                    },
+                    {
+                        "maxWidth": 1024,
+                        "maxHeight": 1024,
+                        "format": "png32",
+                        "compression": "quantSize",
+                        "quality": 65,
+                        "script": "",
+                        "ext": "",
+                        "name": "Assets/_GAME/Levels/LvCosplayCorpseBride/Textures/dress/old clothes.png"
                     }
                 ]
             },
