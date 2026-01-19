@@ -12,7 +12,7 @@ public class RemoveItem : Item
   private Vector3 _prePos;
   private int _oriOrder;
 
-  public CharacterStart characterStart;
+  public CharacterControl characterStart;
   [SerializeField] public FxType SoundFx = FxType.None;
 
   public List<SlotAttachmentPair> slotActiveClick = new List<SlotAttachmentPair>();

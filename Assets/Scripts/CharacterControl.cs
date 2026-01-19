@@ -23,6 +23,7 @@ public class CharacterControl : Character
 
 
   private bool isDoneMouse = false;
+  [SerializeField] private bool customMouseAnim = false;
 
   public void SetMouseDone()
   {
@@ -48,58 +49,60 @@ public class CharacterControl : Character
   public void SetMouseHappy()
   {
     skeletonAnimation.AnimationState.SetAnimation(0, "happy", false);
-
-    // if (isDoneMouse)
-    // {
-    //   MouseNorAf.SetActive(false);
-    //   MouseHappyAf.SetActive(true);
-    //   MouseAngryAf.SetActive(false);
-    //   return;
-    // }
-    // else
-    // {
-    //   MouseNorBf.SetActive(false);
-    //   MouseHappyBf.SetActive(true);
-    //   MouseAngryBf.SetActive(false);
-    // }
+    if (!customMouseAnim) return;
+    if (isDoneMouse)
+    {
+      MouseNorAf.SetActive(false);
+      MouseHappyAf.SetActive(true);
+      MouseAngryAf.SetActive(false);
+      return;
+    }
+    else
+    {
+      MouseNorBf.SetActive(false);
+      MouseHappyBf.SetActive(true);
+      MouseAngryBf.SetActive(false);
+    }
   }
 
   public void SetMouseIdle()
   {
     skeletonAnimation.AnimationState.SetAnimation(0, "idle", true);
+    if (!customMouseAnim) return;
 
-    // if (isDoneMouse)
-    // {
-    //   MouseNorAf.SetActive(true);
-    //   MouseHappyAf.SetActive(false);
-    //   MouseAngryAf.SetActive(false);
-    //   return;
-    // }
-    // else
-    // {
-    //   MouseNorBf.SetActive(true);
-    //   MouseAngryBf.SetActive(false);
-    //   MouseHappyBf.SetActive(false);
-    // }
+    if (isDoneMouse)
+    {
+      MouseNorAf.SetActive(true);
+      MouseHappyAf.SetActive(false);
+      MouseAngryAf.SetActive(false);
+      return;
+    }
+    else
+    {
+      MouseNorBf.SetActive(true);
+      MouseAngryBf.SetActive(false);
+      MouseHappyBf.SetActive(false);
+    }
   }
 
   public void SetMouseAngry()
   {
     skeletonAnimation.AnimationState.SetAnimation(0, "angry", false);
+    if (!customMouseAnim) return;
 
-    // if (isDoneMouse)
-    // {
-    //   MouseNorAf.SetActive(false);
-    //   MouseHappyAf.SetActive(false);
-    //   MouseAngryAf.SetActive(true);
-    //   return;
-    // }
-    // else
-    // {
-    //   MouseNorBf.SetActive(false);
-    //   MouseHappyBf.SetActive(false);
-    //   MouseAngryBf.SetActive(true);
-    // }
+    if (isDoneMouse)
+    {
+      MouseNorAf.SetActive(false);
+      MouseHappyAf.SetActive(false);
+      MouseAngryAf.SetActive(true);
+      return;
+    }
+    else
+    {
+      MouseNorBf.SetActive(false);
+      MouseHappyBf.SetActive(false);
+      MouseAngryBf.SetActive(true);
+    }
   }
 
   // private bool _isEyeClosed = false;

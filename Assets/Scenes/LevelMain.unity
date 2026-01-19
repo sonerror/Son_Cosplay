@@ -262,7 +262,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &22568961
 Transform:
   m_ObjectHideFlags: 0
@@ -319,9 +319,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 747558381
+  m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 100
   m_Sprite: {fileID: 21300000, guid: 9147ab49d59e5f34abe13aa4316705ec, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 0.41960785}
   m_FlipX: 0
@@ -1302,21 +1302,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f7e5d0ae6157169428ebf2db48d47b8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tf: {fileID: 0}
-  curveFloatingIdle:
-    keys:
-    - time: 0
-      value: 0
-    - time: 0.5
-      value: 0.3
-    - time: 1
-      value: 0
-  durationFloatingIdle: 2.41
-  curveTimeOffSet: 0.25
-  speedFloatingIdle: 0.4
-  isFloating: 0
-  floatingAnchor: {x: 0, y: 0, z: 0}
-  timeOffsetFloating: 0
 --- !u!1 &139783272
 GameObject:
   m_ObjectHideFlags: 0
@@ -4640,7 +4625,7 @@ MonoBehaviour:
   clockTimer: {fileID: 2330175927518235536}
   fillCircleBar: {fileID: 1977242223}
   isPlayingGame: 0
-  Body1: {fileID: 0}
+  Body1: {fileID: 8385880717800731279}
   Body2: {fileID: 0}
   changeScene: {fileID: 0}
   Scene0: {fileID: 0}
@@ -4670,7 +4655,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30b401387351fe74690a78861d6ca99d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  character: {fileID: 0}
+  character: {fileID: 8385880717800731279}
   items:
   - {fileID: 0}
   - {fileID: 0}
@@ -7152,7 +7137,7 @@ GameObject:
   m_Icon: {fileID: 4422084297763085224, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1145572599
 Transform:
   m_ObjectHideFlags: 0
@@ -9189,6 +9174,8 @@ GameObject:
   - component: {fileID: 1529926234}
   - component: {fileID: 1529926235}
   - component: {fileID: 1529926236}
+  - component: {fileID: 1529926237}
+  - component: {fileID: 1529926238}
   m_Layer: 0
   m_Name: PaintSpray
   m_TagString: Untagged
@@ -9285,6 +9272,148 @@ MonoBehaviour:
   curveTimeOffSet: 0.25
   speedFloatingIdle: 0.4
   isFloating: 0
+--- !u!114 &1529926237
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1529926232}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ed8d47c7284e84408303f90a3ecbc48, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IsReady: 0
+  isBlocked: 0
+  ShowEmoijOnWrong: 1
+  OnSetupReady:
+    m_PersistentCalls:
+      m_Calls: []
+  OnFinish:
+    m_PersistentCalls:
+      m_Calls: []
+  OnPickItem:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 22568960}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 679143834}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  OnDropItem:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 22568960}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 679143834}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+  triggerCollider: {fileID: 1145572600}
+  Angle: {x: 0, y: 0}
+  rende: {fileID: 2061573660}
+  acnePimpleColliders:
+  - {fileID: 735599536}
+  - {fileID: 1855550900}
+--- !u!114 &1529926238
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1529926232}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 2
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1529926237}
+          m_TargetAssemblyTypeName: FoundationBottle, Assembly-CSharp
+          m_MethodName: MouseDown
+          m_Mode: 0
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: 
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 3
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1529926237}
+          m_TargetAssemblyTypeName: FoundationBottle, Assembly-CSharp
+          m_MethodName: MouseUp
+          m_Mode: 0
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: 
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 5
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1529926237}
+          m_TargetAssemblyTypeName: FoundationBottle, Assembly-CSharp
+          m_MethodName: MouseDrag
+          m_Mode: 0
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: 
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &1531337121
 GameObject:
   m_ObjectHideFlags: 0
@@ -9511,7 +9640,7 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 747558381
+  m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: 067b01898be18394d8fb41cfc7a11bae, type: 3}
@@ -9600,7 +9729,7 @@ MonoBehaviour:
       m_Calls: []
   spriteRenderer: {fileID: 1545955110}
   DistanceCheck: 1.5
-  characterStart: {fileID: 0}
+  characterStart: {fileID: 8385880717800731279}
   SoundFx: 0
   slotActiveClick: []
   slotDeactiveClick:
@@ -11153,7 +11282,7 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 747558381
+  m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: 66e4d65c3892c6544a1cb692752d81dd, type: 3}
@@ -11242,7 +11371,7 @@ MonoBehaviour:
       m_Calls: []
   spriteRenderer: {fileID: 1668870490}
   DistanceCheck: 1.5
-  characterStart: {fileID: 0}
+  characterStart: {fileID: 8385880717800731279}
   SoundFx: 0
   slotActiveClick: []
   slotDeactiveClick:
@@ -11790,7 +11919,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 095cca77764d2774187c7b1240f1fff1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  disableHand: 0
+  disableHand: 1
   TimeHint: 1
   enableCountTime: 0
   timeCountHint: 1
@@ -12731,7 +12860,7 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 747558381
+  m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: 062f5cffefae339439136cf92f6b947a, type: 3}
@@ -12820,7 +12949,7 @@ MonoBehaviour:
       m_Calls: []
   spriteRenderer: {fileID: 1819928316}
   DistanceCheck: 1.5
-  characterStart: {fileID: 0}
+  characterStart: {fileID: 8385880717800731279}
   SoundFx: 0
   slotActiveClick: []
   slotDeactiveClick:
@@ -14297,7 +14426,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2061573658}
   - component: {fileID: 2061573660}
-  - component: {fileID: 2061573659}
   m_Layer: 0
   m_Name: Body
   m_TagString: Untagged
@@ -14320,52 +14448,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1529926234}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &2061573659
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2061573657}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_CompositeOperation: 0
-  m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 3.72, y: 4.48}
-    newSize: {x: 3.13, y: 25}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Size: {x: 3.72, y: 4.48}
-  m_EdgeRadius: 0
 --- !u!212 &2061573660
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -14407,7 +14489,7 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 747558381
+  m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 201c545cc0b6b3a488fb51fadcd74158, type: 3}
@@ -15043,7 +15125,7 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 747558381
+  m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: e9f982775a9be774d81ac6ac6858dba3, type: 3}
@@ -15132,7 +15214,7 @@ MonoBehaviour:
       m_Calls: []
   spriteRenderer: {fileID: 2088595618}
   DistanceCheck: 1.5
-  characterStart: {fileID: 0}
+  characterStart: {fileID: 8385880717800731279}
   SoundFx: 0
   slotActiveClick: []
   slotDeactiveClick:
@@ -17428,10 +17510,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 8385880717800731278}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7af107c255338e54593dd1f9f0d00ec6, type: 3}
+  m_Script: {fileID: 11500000, guid: 756528eaacc46194a9330e3bcbc308ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   skeletonAnimation: {fileID: 6582120598521423173}
+  MouseNorBf: {fileID: 0}
+  MouseHappyBf: {fileID: 0}
+  MouseAngryBf: {fileID: 0}
+  MouseNorAf: {fileID: 0}
+  MouseHappyAf: {fileID: 0}
+  MouseAngryAf: {fileID: 0}
+  customMouseAnim: 0
 --- !u!114 &8503599624730501112
 MonoBehaviour:
   m_ObjectHideFlags: 0

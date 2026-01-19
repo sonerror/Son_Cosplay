@@ -126,6 +126,7 @@
     <Compile Include="Assets\Scripts\Manager\UIManager.cs" />
     <Compile Include="Assets\Scripts\UI\GameVidScreen.cs" />
     <Compile Include="Assets\Scripts\53\FaceTowel.cs" />
+    <Compile Include="Assets\Scripts\54\PaintSpray.cs" />
     <Compile Include="Assets\Scripts\54\HideSprite.cs" />
     <Compile Include="Assets\Scripts\54\FoundationBottleWithVfx.cs" />
     <Compile Include="Assets\Scripts\SpineCtrl\LoopAnimTransformFloating.cs" />
@@ -714,16 +715,16 @@
       <HintPath>Library\PackageCache\com.unity.visualscripting\Runtime\VisualScripting.Flow\Dependencies\NCalc\Unity.VisualScripting.Antlr3.Runtime.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="RuntimeScripts">
+      <HintPath>E:\Luna\7.0.0\scripts\Runtime\RuntimeScripts.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
     <Reference Include="DOTween">
       <HintPath>Assets\DOTween\DOTween.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Sirenix.Utilities.Editor">
       <HintPath>Assets\Plugins\Sirenix\Assemblies\Sirenix.Utilities.Editor.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="RuntimeScripts">
-      <HintPath>E:\Luna\7.0.0\scripts\Runtime\RuntimeScripts.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="netstandard">
