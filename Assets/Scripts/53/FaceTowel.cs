@@ -4,12 +4,13 @@ using DG.Tweening;
 using Sirenix.OdinInspector;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.Rendering;
 
 public class FaceTowel : Item
 {
   private Vector3 _prePos;
   public Vector2 Angle = new Vector2(0, 0);
-  public Renderer rende;
+  public SortingGroup rende;
   private int _oriOrder = 0;
   [SerializeField] private bool ShowCirBar = false;
   public MaskGroupCustom maskGroup;
@@ -89,6 +90,7 @@ public class FaceTowel : Item
 
         IsReady = false;
         OnFinish?.Invoke();
+        MouseUp(null);
       }
 
     }

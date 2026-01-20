@@ -35,15 +35,14 @@ public class FoundationBottle : Item
     base.SetReady();
     for (int index = 0; index < acnePimpleColliders.Count; index++)
     {
-      int i = index; // Capture the index for the lambda
-      TriggerWithCertainCollider trigger = acnePimpleColliders[i];
+      TriggerWithCertainCollider trigger = acnePimpleColliders[index];
       trigger.gameObject.SetActive(true);
       trigger.Col.enabled = true;
-      trigger.OnTriggerEvent.AddListener(() => AddAcne(trigger, i));
+      trigger.OnTriggerEvent.AddListener(() => AddAcne(trigger));
     }
   }
   private int _currentAcneIndex = 0;
-  private void AddAcne(TriggerWithCertainCollider trigger, int index)
+  private void AddAcne(TriggerWithCertainCollider trigger)
   {
     trigger.OnTriggerEvent.RemoveAllListeners();
 
@@ -67,8 +66,11 @@ public class FoundationBottle : Item
   void OnDone()
   {
     if (!IsReady) return;
+    MouseUp(null);
     IsReady = false;
+
     OnFinish?.Invoke();
+
   }
 
   public override void MouseDown(BaseEventData eventData)
@@ -92,7 +94,6 @@ public class FoundationBottle : Item
     base.MouseUp(eventData);
 
     isDragging = false;
-
     if (triggerCollider) triggerCollider.gameObject.SetActive(false);
     Tf.DOKill();
     Tf.DOScale(Vector3.one, 0.2f);

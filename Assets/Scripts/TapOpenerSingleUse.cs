@@ -8,11 +8,11 @@ namespace HoangHH
 {
   public class TapOpenerSingleUse : Item
   {
+    [SerializeField] private Transform TfOpen;
     [SerializeField] private Collider2D col;
     [SerializeField] private SpriteRenderer sprite;
-    [SerializeField] private Vector3 Posnew;
+    [SerializeField] private Transform TargetPos;
     [SerializeField] private float TimeMove;
-    [SerializeField] private bool UseFade;
     [SerializeField] private bool DeactiveAfterUse;
     [SerializeField] public FxType SoundFx = FxType.None;
 
@@ -22,23 +22,26 @@ namespace HoangHH
       base.MouseUp(eventData);
       if (!IsReady) return;
       SetOpen();
+      SetBlockItem(true);
       SoundManager.Ins.PlayFx(SoundFx);
       IsReady = false;
     }
 
     private void SetOpen()
     {
-      Tf.DOLocalMove(Posnew, TimeMove)
+
+      TfOpen.gameObject.SetActive(true);
+      TfOpen.DOMove(TargetPos.position, TimeMove)
         .OnComplete(() =>
         {
           OnFinish?.Invoke();
           if (DeactiveAfterUse)
           {
-            gameObject.SetActive(false);
+            TfOpen.gameObject.SetActive(false);
           }
         });
 
-      if (UseFade)
+      if (sprite)
       {
         sprite.DOFade(0, TimeMove);
       }

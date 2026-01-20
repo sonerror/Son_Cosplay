@@ -17,9 +17,9 @@ public enum FxType
   AddGel = 11,
   Pick1 = 12,
   AddEye = 13,
-  Brush0 = 14,
-  Brush1 = 15,
-  OpenLid = 16,
+  OpenPack = 14,
+  Tower1 = 15,
+  Brush = 16,
   ToSon = 17,
   XitGel = 18,
 
@@ -49,6 +49,15 @@ public class SoundManager : Singleton<SoundManager>
 
       fx[(int)fxType].Play();
     }
+  }
+
+  public void PlaySoundSpray()
+  {
+    PlaySoundLoop(FxType.Spray);
+  }
+  public void StopSoundSpray()
+  {
+    StopSoundLoop(FxType.Spray);
   }
 
   public void PlayFxIfNotPlay(FxType fxType)

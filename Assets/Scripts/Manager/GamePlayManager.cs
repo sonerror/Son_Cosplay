@@ -49,6 +49,7 @@ public class GamePlayManager : Singleton<GamePlayManager>
   void DoneStep()
   {
     GameManager.Ins.PlayPositiveEmoji();
+    Debug.Log("Fx step" + currentStep);
   }
 
   void TryNextStep()
@@ -88,6 +89,9 @@ public class GamePlayManager : Singleton<GamePlayManager>
         break;
       case 7:
         OnStartStep7();
+        break;
+      case 8:
+        OnStartStep8();
         break;
       default:
         Debug.LogWarning("No more steps!");
@@ -133,7 +137,9 @@ public class GamePlayManager : Singleton<GamePlayManager>
 
   private void OnStartStep1()
   {
+    items[1].gameObject.SetActive(true);
     items[1].SetReady();
+
     for (int i = 0; i < ControlAlphaSlot.Count; i++)
     {
       ControlAlphaSlot[i].OnFinish.AddListener(OnFinishShowSlot);
@@ -146,7 +152,7 @@ public class GamePlayManager : Singleton<GamePlayManager>
   {
     Debug.Log("OnFinishShowSlot" + countShowSlot);
     countShowSlot++;
-    if (countShowSlot >= ControlAlphaSlot.Count - 1)
+    if (countShowSlot == ControlAlphaSlot.Count - 1)
     {
       OnEndStep1();
     }
@@ -154,11 +160,11 @@ public class GamePlayManager : Singleton<GamePlayManager>
 
   private void OnEndStep1()
   {
-    DOVirtual.DelayedCall(1f, () =>
+    DoneStep();
+    DOVirtual.DelayedCall(2f, () =>
     {
       GameManager.Ins.ChangeSceneToGamePlay2(() =>
       {
-        DoneStep();
         TryNextStep();
       });
     });
@@ -168,24 +174,19 @@ public class GamePlayManager : Singleton<GamePlayManager>
 
   #region Step2
 
-  [SerializeField] private List<SlotAttachmentPair> slotStep2 = new List<SlotAttachmentPair>();
-
-
   private void OnStartStep2()
   {
-    // var item = items[2];
-    // item.OnFinish.AddListener(OnEndStep2);
-    // item.SetReady();
+    var item = items[2];
+    item.OnFinish.AddListener(OnEndStep2);
+    item.SetReady();
+    item.SetBlockItem(false);
   }
 
   private void OnEndStep2()
   {
     var item = items[2];
     item.OnFinish.RemoveListener(OnEndStep2);
-    item.gameObject.SetActive(false);
-    character.TurnOnSlotsAttachment(slotStep2);
-    SoundManager.Ins.PlayFx(FxType.Drop);
-
+    item.SetBlockItem(true);
 
     DoneStep();
     TryNextStep();
@@ -208,6 +209,8 @@ public class GamePlayManager : Singleton<GamePlayManager>
     item.OnFinish.RemoveListener(OnEndStep3);
     item.IsReady = false;
 
+
+
     DoneStep();
     TryNextStep();
   }
@@ -216,38 +219,25 @@ public class GamePlayManager : Singleton<GamePlayManager>
 
   #region Step4
 
-  public void AddEyeL()
-  {
-    character.TurnSlotAttachment("Phase1-lensL", "Phase1/lens_Pupil");
-    character.TurnSlotAttachment("Base_Pupil2", null);
-  }
-
-  public void AddEyeR()
-  {
-    character.TurnSlotAttachment("Base_Pupil", null);
-    character.TurnSlotAttachment("Set-P1-lensR", "Phase1/lens_Pupil");
-  }
-
   private void OnStartStep4()
   {
-    Debug.Log("OnStartStep4");
-    items[4].OnFinish.AddListener(CheckEndStep4);
+    items[4].OnFinish.AddListener(OnEndStep4);
     items[4].SetReady();
-    items[5].OnFinish.AddListener(CheckEndStep4);
-    items[5].SetReady();
   }
-
-  void CheckEndStep4()
-  {
-    SoundManager.Ins.PlayFx(FxType.AddEye);
-    if (!items[4].IsReady && !items[5].IsReady)
-    {
-      OnEndStep4();
-    }
-  }
-
   private void OnEndStep4()
   {
+    items[4].OnFinish.RemoveListener(OnEndStep4);
+    items[4].IsReady = false;
+
+    DOVirtual.DelayedCall(0.5f, () =>
+    {
+      items[4].Tf.DOScale(Vector3.zero, 0.5f).OnComplete(() =>
+      {
+        items[4].gameObject.SetActive(false);
+      });
+    });
+
+
     DoneStep();
     TryNextStep();
   }
@@ -258,14 +248,14 @@ public class GamePlayManager : Singleton<GamePlayManager>
 
   private void OnStartStep5()
   {
-    items[6].OnFinish.AddListener(OnEndStep5);
-    items[6].SetReady();
+    items[5].OnFinish.AddListener(OnEndStep5);
+    items[5].SetReady();
   }
 
   private void OnEndStep5()
   {
-    items[6].OnFinish.RemoveListener(OnEndStep5);
-    items[6].IsReady = false;
+    items[5].OnFinish.RemoveListener(OnEndStep5);
+    items[5].IsReady = false;
 
     DoneStep();
     TryNextStep();
@@ -275,14 +265,14 @@ public class GamePlayManager : Singleton<GamePlayManager>
   #region Step6
   private void OnStartStep6()
   {
-    items[7].OnFinish.AddListener(OnEndStep6);
-    items[7].SetReady();
+    items[6].OnFinish.AddListener(OnEndStep6);
+    items[6].SetReady();
   }
 
   private void OnEndStep6()
   {
-    items[7].OnFinish.RemoveListener(OnEndStep6);
-    items[7].SetReady();
+    items[6].OnFinish.RemoveListener(OnEndStep6);
+    items[6].SetReady();
 
     DoneStep();
     TryNextStep();
@@ -295,7 +285,25 @@ public class GamePlayManager : Singleton<GamePlayManager>
     AdsManager.Ins.ShowEndGame();
   }
 
+  private void OnEndStep7()
+  {
+    items[7].OnFinish.RemoveListener(OnEndStep7);
+    items[7].IsReady = false;
+
+    DoneStep();
+    TryNextStep();
+  }
+
   #endregion Step7
+
+
+  #region Step8
+  private void OnStartStep8()
+  {
+    AdsManager.Ins.ShowEndGame();
+  }
+
+  #endregion Step8
 
 
 }

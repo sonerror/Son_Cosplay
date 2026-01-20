@@ -36,6 +36,7 @@ public class RemoveItem : Item
     if (!IsReady) { if (ShowEmoijOnWrong) GameManager.Ins.PlayNegativeEmoji(); return; }
     else
     {
+      // Tf.DOKill();
       characterStart.TurnOnSlotsAttachment(slotActiveClick);
       characterStart.TurnOffSlotsAttachment(slotDeactiveClick);
       spriteRenderer.enabled = true;
@@ -65,6 +66,8 @@ public class RemoveItem : Item
         SoundManager.Ins.PlayFx(SoundFx);
         Vector3 newPosMove = Tf.position + Vector3.down * 2f;
         OnFinish?.Invoke();
+        characterStart.TurnOnSlotsAttachment(slotActiveClick);
+        characterStart.TurnOffSlotsAttachment(slotDeactiveClick);
         Tf.DOMove(newPosMove, 0.75f).OnComplete(() =>
         {
           gameObject.SetActive(false);

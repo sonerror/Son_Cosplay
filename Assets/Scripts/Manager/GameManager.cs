@@ -33,11 +33,11 @@ public class GameManager : Singleton<GameManager>
       EventManager.TriggerEvent("ShowBtnInstall");
     }
 
-    // if (!hadClicked && Input.GetMouseButtonDown(0))
-    // {
-    //   hadClicked = true;
-    //   // StartGamePlay();
-    // }
+    if (!hadClicked && Input.GetMouseButtonDown(0))
+    {
+      hadClicked = true;
+      StartGamePlay();
+    }
   }
 
   public void ChangeSceneToGamePlay2(Action onComplete = null)
@@ -48,13 +48,15 @@ public class GameManager : Singleton<GameManager>
       Scene2.SetActive(true);
       onComplete?.Invoke();
       GamePlayManager.Ins.character = Body2;
-      emojiControl.transform.localPosition = new Vector3(2.11f, 6.17f, 0f);
+      emojiControl.transform.localPosition = new Vector3(3.23f, 8.89f, 0f);
+      emojiControl.transform.localScale = Vector3.one * 1.5f;
     });
   }
 
   public void StartGamePlay()
   {
     Scene1.SetActive(true);
+    Scene0.SetActive(false);
     // EventManager.TriggerEvent("ShowText2");
     TutorialManager.Ins.enableCountTime = true;
     SoundManager.Ins.PlayFx(FxType.StartGame);

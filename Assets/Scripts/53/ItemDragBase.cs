@@ -13,8 +13,8 @@ public class ItemDragBase : Item
   public FxType soundPick = FxType.None;
   public FxType soundMove = FxType.None;
   public FxType soundDrop = FxType.None;
-  public Renderer RenderGroup;
-  public int ValSortUp = 0;
+  public Renderer Rende;
+  public int ValSortUp = 100;
   private int _ValSortGroup = 0;
   public Vector2 Angle = Vector2.zero;
   public Vector3 SizeUp = Vector3.one * 1.15f;
@@ -34,7 +34,7 @@ public class ItemDragBase : Item
     _prePos = transform.position;
     _originalSize = transform.localScale;
 
-    _ValSortGroup = RenderGroup.sortingOrder;
+    _ValSortGroup = Rende.sortingOrder;
 
 
   }
@@ -44,6 +44,7 @@ public class ItemDragBase : Item
     if (isBlocked) return;
     if (isDragging) return;
     isDragging = true;
+    if (!IsReady) { if (ShowEmoijOnWrong) GameManager.Ins.PlayNegativeEmoji(); }
     SoundManager.Ins.PlaySoundLoop(soundMove);
     base.MouseDown(eventData);
     OnActionMouseDown();
@@ -139,14 +140,16 @@ public class ItemDragBase : Item
 
   protected void ChangeLayerUp()
   {
-    if (!RenderGroup) return;
-    RenderGroup.sortingOrder = _ValSortGroup + ValSortUp;
+
+    if (!Rende) return;
+    Rende.sortingOrder = _ValSortGroup + ValSortUp;
   }
 
   protected void ChangeLayerDown()
   {
-    if (!RenderGroup) return;
-    RenderGroup.sortingOrder = _ValSortGroup;
+
+    if (!Rende) return;
+    Rende.sortingOrder = _ValSortGroup;
   }
 
 }

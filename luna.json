@@ -1,7 +1,7 @@
 {
     "version": "7.0.0",
     "projectId": "f42e7ff96e4545544bb6cd68f51ab634",
-    "applicationID": 34683,
+    "applicationID": 27599,
     "creativeName": "Cosplaydom_v8GG",
     "pgServer": "EU",
     "window": {
@@ -79,7 +79,7 @@
                 "Stubs/SupersonicWisdom/"
             ],
             "msbuildMac64": "/Library/Frameworks/Mono.framework/Versions/Current/bin/msbuild",
-            "msbuildWin64": "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/MSBuild.exe",
+            "msbuildWin64": "C:/Program Files/Microsoft Visual Studio/2022/Professional/MSBuild/Current/Bin/MSBuild.exe",
             "externalSources": [],
             "externalJSLibraries": [],
             "scriptingDefines": [],
@@ -203,7 +203,7 @@
                 "forceIncluded": true
             }
         ],
-        "disableRuntimeAnalysisForCode": true,
+        "disableRuntimeAnalysisForCode": false,
         "disableRuntimeAnalysisForShaders": false,
         "useShadersCache": true,
         "preventUpdatingRAListWhenRAIsDisabled": false,
@@ -1694,10 +1694,6 @@
                 "excluded": true
             },
             {
-                "name": "UnityEngine.RequireComponent",
-                "excluded": true
-            },
-            {
                 "name": "UnityEngine.RootMotionData",
                 "excluded": true
             },
@@ -1894,10 +1890,6 @@
                 "excluded": true
             },
             {
-                "name": "UnityEngine.HeaderAttribute",
-                "excluded": true
-            },
-            {
                 "name": "UnityEngine.MultilineAttribute",
                 "excluded": true
             },
@@ -1927,10 +1919,6 @@
             },
             {
                 "name": "UnityEngine.SpaceAttribute",
-                "excluded": true
-            },
-            {
-                "name": "UnityEngine.TextAreaAttribute",
                 "excluded": true
             },
             {
@@ -3699,7 +3687,7 @@
             },
             {
                 "name": "UnityEngine.DisallowMultipleComponent",
-                "excluded": true
+                "excluded": false
             },
             {
                 "name": "UnityEngine.Dof",
@@ -6807,7 +6795,7 @@
             },
             {
                 "name": "TMPro.ITextPreprocessor",
-                "excluded": true
+                "excluded": false
             },
             {
                 "name": "TMPro.MarkupTag",
@@ -8810,7 +8798,11 @@
                 "excluded": false
             },
             {
-                "name": "FloatingItem",
+                "name": "pc.Debugger.Components.EditorCamera",
+                "excluded": true
+            },
+            {
+                "name": "pc.Debugger.Components.EditorGUI",
                 "excluded": true
             }
         ],
@@ -8855,7 +8847,7 @@
                 "instanceMethods": [
                     {
                         "name": "$is",
-                        "excluded": true
+                        "excluded": false
                     }
                 ]
             },
@@ -15485,7 +15477,7 @@
                     },
                     {
                         "name": "value#get",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "value#set",
@@ -18511,7 +18503,7 @@
                     },
                     {
                         "name": "anchorMax#get",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "anchorMax#set",
@@ -18519,7 +18511,7 @@
                     },
                     {
                         "name": "anchorMin#get",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "anchorMin#set",
@@ -18527,7 +18519,7 @@
                     },
                     {
                         "name": "offsetMin#get",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "offsetMin#set",
@@ -18535,7 +18527,7 @@
                     },
                     {
                         "name": "offsetMax#get",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "offsetMax#set",
@@ -18551,7 +18543,7 @@
                     },
                     {
                         "name": "anchoredPosition#get",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "anchoredPosition#set",
@@ -18559,7 +18551,7 @@
                     },
                     {
                         "name": "sizeDelta#get",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "sizeDelta#set",
@@ -19665,7 +19657,7 @@
                     },
                     {
                         "name": "type#get",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "type#set",
@@ -19673,7 +19665,7 @@
                     },
                     {
                         "name": "fillMethod#get",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "fillMethod#set",
@@ -19689,7 +19681,7 @@
                     },
                     {
                         "name": "fillOrigin#get",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "fillOrigin#set",
@@ -19697,7 +19689,7 @@
                     },
                     {
                         "name": "fillClockwise#get",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "fillClockwise#set",
@@ -19713,7 +19705,7 @@
                     },
                     {
                         "name": "preserveAspect#get",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "preserveAspect#set",
@@ -19941,7 +19933,7 @@
                     },
                     {
                         "name": "alignment#get",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "alignment#set",
@@ -19949,7 +19941,7 @@
                     },
                     {
                         "name": "text#get",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "text#set",
@@ -19957,7 +19949,7 @@
                     },
                     {
                         "name": "font#get",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "font#set",
@@ -19973,7 +19965,7 @@
                     },
                     {
                         "name": "fontStyle#get",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "fontStyle#set",
@@ -20041,7 +20033,7 @@
                     },
                     {
                         "name": "horizontalOverflow#get",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "horizontalOverflow#set",
@@ -20049,7 +20041,7 @@
                     },
                     {
                         "name": "verticalOverflow#get",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "verticalOverflow#set",
@@ -20057,7 +20049,7 @@
                     },
                     {
                         "name": "supportRichText#get",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "supportRichText#set",
@@ -21843,7 +21835,7 @@
                     },
                     {
                         "name": "missingGlyphCharacter#get",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "missingGlyphCharacter#set",
@@ -21851,7 +21843,7 @@
                     },
                     {
                         "name": "warningsDisabled#get",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "defaultFontAsset#get",
@@ -21903,7 +21895,7 @@
                     },
                     {
                         "name": "defaultSpriteAsset#get",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "defaultSpriteAssetPath#get",
@@ -22185,7 +22177,7 @@
                     },
                     {
                         "name": "spriteCharacterLookupTable#get",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "spriteCharacterLookupTable#set",
@@ -22213,7 +22205,7 @@
                     },
                     {
                         "name": "UpdateLookupTables",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "GetSpriteIndexFromHashcode",
@@ -23874,16 +23866,16 @@
                         "excluded": false
                     },
                     {
-                        "name": "PlaySoundLoopWater",
-                        "excluded": false
-                    },
-                    {
-                        "name": "StopSoundLoopWater",
-                        "excluded": false
-                    },
-                    {
                         "name": "PlayBgm",
                         "excluded": false
+                    },
+                    {
+                        "name": "PlaySoundSpray",
+                        "excluded": true
+                    },
+                    {
+                        "name": "StopSoundSpray",
+                        "excluded": true
                     }
                 ]
             },
@@ -26773,7 +26765,7 @@
                 "instanceMethods": [
                     {
                         "name": "name#get",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "dynamic#get",
@@ -29753,7 +29745,7 @@
                     },
                     {
                         "name": "fontStyle#get",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "fontStyle#set",
@@ -29793,7 +29785,7 @@
                     },
                     {
                         "name": "alignByGeometry#get",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "alignByGeometry#set",
@@ -29801,7 +29793,7 @@
                     },
                     {
                         "name": "richText#get",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "richText#set",
@@ -30085,7 +30077,7 @@
                 "instanceMethods": [
                     {
                         "name": "uiScaleMode#get",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "uiScaleMode#set",
@@ -30093,7 +30085,7 @@
                     },
                     {
                         "name": "screenMatchMode#get",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "screenMatchMode#set",
@@ -30109,7 +30101,7 @@
                     },
                     {
                         "name": "scaleFactor#get",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "scaleFactor#set",
@@ -30125,7 +30117,7 @@
                     },
                     {
                         "name": "referencePixelsPerUnit#get",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "referencePixelsPerUnit#set",
@@ -30629,7 +30621,7 @@
                     },
                     {
                         "name": "effectColor#get",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "effectColor#set",
@@ -30637,7 +30629,7 @@
                     },
                     {
                         "name": "effectDistance#get",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "effectDistance#set",
@@ -30645,7 +30637,7 @@
                     },
                     {
                         "name": "useGraphicAlpha#get",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "useGraphicAlpha#set",
@@ -31085,7 +31077,7 @@
                     },
                     {
                         "name": "GetSpriteCharacterFromSpriteAsset",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "GetSpriteCharacterFromSpriteAsset_Internal",
@@ -31517,7 +31509,7 @@
                     },
                     {
                         "name": "name#get",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "name#set",
@@ -32601,7 +32593,7 @@
                     },
                     {
                         "name": "fallbackFontAssetTable#get",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "fallbackFontAssetTable#set",
@@ -32827,7 +32819,7 @@
                     },
                     {
                         "name": "hashCode#get",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "ctor",
@@ -42522,22 +42514,6 @@
                 "staticMethods": [],
                 "instanceMethods": [
                     {
-                        "name": "Start",
-                        "excluded": false
-                    },
-                    {
-                        "name": "TurnSlotAttachment",
-                        "excluded": false
-                    },
-                    {
-                        "name": "SkeletonAnimation#get",
-                        "excluded": false
-                    },
-                    {
-                        "name": "SetAlphaSlotName",
-                        "excluded": false
-                    },
-                    {
                         "name": "init",
                         "excluded": false
                     },
@@ -42555,14 +42531,6 @@
                     },
                     {
                         "name": "SetMouseAngry",
-                        "excluded": false
-                    },
-                    {
-                        "name": "TurnOnSlotsAttachment",
-                        "excluded": false
-                    },
-                    {
-                        "name": "TurnOffSlotsAttachment",
                         "excluded": false
                     }
                 ]
@@ -42721,7 +42689,7 @@
                 "instanceMethods": [
                     {
                         "name": "radius#get",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "radius#set",
@@ -42908,16 +42876,20 @@
                         "excluded": false
                     },
                     {
-                        "name": "AddEyeL",
+                        "name": "OnRemoveClother",
                         "excluded": false
                     },
                     {
-                        "name": "AddEyeR",
-                        "excluded": false
+                        "name": "OnFinishShowSlot",
+                        "excluded": true
                     },
                     {
-                        "name": "CheckEndStep4",
-                        "excluded": false
+                        "name": "OnEndStep7",
+                        "excluded": true
+                    },
+                    {
+                        "name": "OnStartStep8",
+                        "excluded": true
                     }
                 ]
             },
@@ -43499,7 +43471,7 @@
                     },
                     {
                         "name": "$ctor1",
-                        "excluded": true
+                        "excluded": false
                     }
                 ]
             },
@@ -46036,8 +46008,8 @@
                         "excluded": false
                     },
                     {
-                        "name": "Start$1",
-                        "excluded": false
+                        "name": "Start",
+                        "excluded": true
                     }
                 ]
             },
@@ -46178,7 +46150,63 @@
                 ]
             },
             {
-                "className": "FloatingItem1",
+                "className": "ControlAlphaSlot",
+                "staticMethods": [],
+                "instanceMethods": [
+                    {
+                        "name": "init",
+                        "excluded": false
+                    },
+                    {
+                        "name": "SetReady",
+                        "excluded": true
+                    },
+                    {
+                        "name": "OnColli",
+                        "excluded": true
+                    },
+                    {
+                        "name": "InCreaseAlpha",
+                        "excluded": true
+                    },
+                    {
+                        "name": "FixedUpdate",
+                        "excluded": false
+                    },
+                    {
+                        "name": "GetTrigerColli",
+                        "excluded": true
+                    }
+                ]
+            },
+            {
+                "className": "Character",
+                "staticMethods": [],
+                "instanceMethods": [
+                    {
+                        "name": "SkeletonAnimation#get",
+                        "excluded": true
+                    },
+                    {
+                        "name": "TurnSlotAttachment",
+                        "excluded": true
+                    },
+                    {
+                        "name": "TurnOnSlotsAttachment",
+                        "excluded": true
+                    },
+                    {
+                        "name": "TurnOffSlotsAttachment",
+                        "excluded": true
+                    },
+                    {
+                        "name": "SetAlphaSlotName",
+                        "excluded": true
+                    }
+                ]
+            },
+            {
+                "className": "FloatingItem",
                 "staticMethods": [],
                 "instanceMethods": [
                     {
@@ -46187,26 +46215,68 @@
                     },
                     {
                         "name": "Start",
-                        "excluded": false
+                        "excluded": true
                     },
                     {
                         "name": "StartFloating",
-                        "excluded": false
+                        "excluded": true
                     },
                     {
                         "name": "StopFloating",
-                        "excluded": false
+                        "excluded": true
                     },
                     {
                         "name": "Update",
-                        "excluded": false
+                        "excluded": true
                     },
                     {
                         "name": "UpdateFloatingAnchor",
-                        "excluded": false
+                        "excluded": true
                     },
                     {
                         "name": "Show",
+                        "excluded": true
+                    }
+                ]
+            },
+            {
+                "className": "UnityEngine.HeaderAttribute",
+                "staticMethods": [],
+                "instanceMethods": [
+                    {
+                        "name": "ctor",
+                        "excluded": false
+                    }
+                ]
+            },
+            {
+                "className": "UnityEngine.RequireComponent",
+                "staticMethods": [],
+                "instanceMethods": [
+                    {
+                        "name": "ctor",
+                        "excluded": false
+                    },
+                    {
+                        "name": "$ctor1",
+                        "excluded": true
+                    },
+                    {
+                        "name": "$ctor2",
+                        "excluded": true
+                    }
+                ]
+            },
+            {
+                "className": "UnityEngine.TextAreaAttribute",
+                "staticMethods": [],
+                "instanceMethods": [
+                    {
+                        "name": "ctor",
+                        "excluded": true
+                    },
+                    {
+                        "name": "$ctor1",
                         "excluded": false
                     }
                 ]

@@ -773,22 +773,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   IsReady: 0
   isBlocked: 0
-  step: 0
-  OnWrong:
+  ShowEmoijOnWrong: 1
+  OnSetupReady:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 736123645}
-        m_TargetAssemblyTypeName: GamePlayManager, Assembly-CSharp
-        m_MethodName: PlayNegativeEmoji
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   OnFinish:
     m_PersistentCalls:
       m_Calls:
@@ -884,8 +872,8 @@ MonoBehaviour:
         m_CallState: 2
   Angle: {x: -73, y: 0}
   rende: {fileID: 0}
+  ShowCirBar: 0
   maskGroup: {fileID: 5651388956190235090}
-  NodeBody: {fileID: 0}
   NodeCheckPos: {fileID: 0}
 --- !u!114 &209220360
 MonoBehaviour:
@@ -1241,7 +1229,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &374657781
 Transform:
   m_ObjectHideFlags: 0
@@ -2361,22 +2349,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   IsReady: 1
   isBlocked: 0
-  step: 0
-  OnWrong:
+  ShowEmoijOnWrong: 1
+  OnSetupReady:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 736123645}
-        m_TargetAssemblyTypeName: GamePlayManager, Assembly-CSharp
-        m_MethodName: PlayNegativeEmoji
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   OnFinish:
     m_PersistentCalls:
       m_Calls:
@@ -2447,12 +2423,14 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   Angle: {x: 0, y: 0}
-  renderers:
-  - {fileID: 719093076}
+  rende: {fileID: 0}
   targetInfos:
     targetTf: {fileID: 1506287622}
     distance: 3
     hadChecked: 0
+  sizeScalePick: {x: 1.15, y: 1.15, z: 1.15}
+  eulerOnDrop: 0
+  eulerRot: {x: 0, y: 0, z: 0}
 --- !u!61 &719093081
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2683,18 +2661,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   emojiControl: {fileID: 1089206829710878596}
   clockTimer: {fileID: 0}
+  fillCircleBar: {fileID: 0}
   isPlayingGame: 0
-  playerSkeleton: {fileID: 6311963517468488243}
-  characterControl: {fileID: 0}
+  Body1: {fileID: 0}
+  Body2: {fileID: 0}
+  changeScene: {fileID: 0}
   Scene0: {fileID: 1058962775}
   Scene1: {fileID: 693319568}
-  items:
-  - {fileID: 719093080}
-  - {fileID: 1529926236}
-  - {fileID: 209220359}
-  - {fileID: 1223426434}
-  currState: 0
-  stateId: 00000000010000000200000003000000040000000500000006000000070000000800000009000000
+  Scene2: {fileID: 0}
 --- !u!114 &736123646
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7664,7 +7638,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: b076e4cf83919af4383a9b25ee16d1cc, type: 3}
   - {fileID: 8300000, guid: 2b0b1816ac4e9244f8e090fbf8c8f47d, type: 3}
   - {fileID: 8300000, guid: f35c6518578fa57429687d696bb1c5bc, type: 3}
-  sound1: {fileID: 0}
+  bgm: {fileID: 0}
 --- !u!4 &889256036
 Transform:
   m_ObjectHideFlags: 0
@@ -8352,6 +8326,7 @@ MonoBehaviour:
   timeChange: 2
   spriteShow: {fileID: 45621618}
   spriteHide: {fileID: 1080691912}
+  ItemOwner: {fileID: 0}
   fxSound: 6
   onComplete:
     m_PersistentCalls:
@@ -8642,22 +8617,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   IsReady: 0
   isBlocked: 0
-  step: 0
-  OnWrong:
+  ShowEmoijOnWrong: 1
+  OnSetupReady:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 736123645}
-        m_TargetAssemblyTypeName: GamePlayManager, Assembly-CSharp
-        m_MethodName: PlayNegativeEmoji
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   OnFinish:
     m_PersistentCalls:
       m_Calls:
@@ -9686,22 +9649,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   IsReady: 0
   isBlocked: 0
-  step: 0
-  OnWrong:
+  ShowEmoijOnWrong: 1
+  OnSetupReady:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 736123645}
-        m_TargetAssemblyTypeName: GamePlayManager, Assembly-CSharp
-        m_MethodName: PlayNegativeEmoji
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   OnFinish:
     m_PersistentCalls:
       m_Calls: []
@@ -10244,6 +10195,7 @@ MonoBehaviour:
   timeCountHint: 3
   handCtrl: {fileID: 8503599624730501112}
   gamePlayManager: {fileID: 0}
+  clock: {fileID: 0}
   tutorialNode:
   - {fileID: 2075704649}
   - {fileID: 2104112624}
@@ -22448,7 +22400,9 @@ MonoBehaviour:
   - {fileID: 1504753474}
   typeActive: 1
   distanceCheck: 0.75
-  fxSound: 100
+  FxSound: 100
+  RatingDone: 0.85
+  CurrRating: 0
 --- !u!4 &5850854736910340103
 Transform:
   m_ObjectHideFlags: 0

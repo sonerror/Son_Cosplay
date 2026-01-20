@@ -187,7 +187,6 @@
     <None Include="Assets\_GAME\Levels\LvCosplaySanta\Cha_new 1\SANTA.atlas.txt" />
     <None Include="Assets\_GAME\Core\Common\Shaders\TwoSideTexture.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface-Mobile.shader" />
-    <None Include="Assets\_GAME\Levels\LvCosplayJackSparrow\Spine\Jack_Sparrow.atlas.txt" />
     <None Include="Assets\_GAME\Levels\LvCosplayWenesday\Wed\Wednesday.atlas.txt" />
     <None Include="Assets\_GAME\_Costopia\__Gameplay\_Script\Gameplay\Shader\SpineReveal.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\SDFFunctions.hlsl" />
