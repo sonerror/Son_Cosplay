@@ -7606,10 +7606,6 @@
                 "excluded": true
             },
             {
-                "name": "CameraScaler.WorkingMode",
-                "excluded": false
-            },
-            {
                 "name": "DG.Tweening.DOTweenCYInstruction",
                 "excluded": true
             },
@@ -8795,6 +8791,10 @@
             },
             {
                 "name": "BrushEyeState",
+                "excluded": false
+            },
+            {
+                "name": "CameraScaler.WorkingMode",
                 "excluded": false
             },
             {
@@ -32886,56 +32886,6 @@
                 ]
             },
             {
-                "className": "CameraScaler",
-                "staticMethods": [],
-                "instanceMethods": [
-                    {
-                        "name": "CalcVerticalFov",
-                        "excluded": false
-                    },
-                    {
-                        "name": "HorizontalSize#get",
-                        "excluded": true
-                    },
-                    {
-                        "name": "HorizontalFov#get",
-                        "excluded": true
-                    },
-                    {
-                        "name": "CameraZoom#get",
-                        "excluded": true
-                    },
-                    {
-                        "name": "CameraZoom#set",
-                        "excluded": true
-                    },
-                    {
-                        "name": "init",
-                        "excluded": false
-                    },
-                    {
-                        "name": "Awake",
-                        "excluded": false
-                    },
-                    {
-                        "name": "Update",
-                        "excluded": false
-                    },
-                    {
-                        "name": "UpdateCamera",
-                        "excluded": false
-                    },
-                    {
-                        "name": "UpdateOrtho",
-                        "excluded": false
-                    },
-                    {
-                        "name": "UpdatePerspective",
-                        "excluded": true
-                    }
-                ]
-            },
-            {
                 "className": "GameUnit",
                 "staticMethods": [],
                 "instanceMethods": [
@@ -46278,6 +46228,56 @@
                     {
                         "name": "$ctor1",
                         "excluded": false
+                    }
+                ]
+            },
+            {
+                "className": "CameraScaler",
+                "staticMethods": [],
+                "instanceMethods": [
+                    {
+                        "name": "CalcVerticalFov",
+                        "excluded": false
+                    },
+                    {
+                        "name": "HorizontalSize#get",
+                        "excluded": true
+                    },
+                    {
+                        "name": "HorizontalFov#get",
+                        "excluded": true
+                    },
+                    {
+                        "name": "CameraZoom#get",
+                        "excluded": true
+                    },
+                    {
+                        "name": "CameraZoom#set",
+                        "excluded": true
+                    },
+                    {
+                        "name": "init",
+                        "excluded": false
+                    },
+                    {
+                        "name": "Awake",
+                        "excluded": false
+                    },
+                    {
+                        "name": "Update",
+                        "excluded": false
+                    },
+                    {
+                        "name": "UpdateCamera",
+                        "excluded": false
+                    },
+                    {
+                        "name": "UpdateOrtho",
+                        "excluded": false
+                    },
+                    {
+                        "name": "UpdatePerspective",
+                        "excluded": true
                     }
                 ]
             }
