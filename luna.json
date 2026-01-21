@@ -2,7 +2,7 @@
     "version": "7.0.0",
     "projectId": "f42e7ff96e4545544bb6cd68f51ab634",
     "applicationID": 34683,
-    "creativeName": "Cosplaydom_ver10",
+    "creativeName": "Cosplaydom_ver10GG",
     "pgServer": "EU",
     "window": {
         "‐⁏": true
@@ -42691,6 +42691,16 @@
                         "script": "",
                         "ext": "",
                         "name": "Assets/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF.asset"
+                    },
+                    {
+                        "maxWidth": 512,
+                        "maxHeight": 512,
+                        "format": "png32",
+                        "compression": "none",
+                        "quality": 65,
+                        "script": "",
+                        "ext": "",
+                        "name": "Assets/TextMesh Pro/Resources/Fonts & Materials/ChangaOne-Regular SDF.asset"
                     }
                 ]
             },
@@ -42724,6 +42734,26 @@
                         "script": "",
                         "ext": "",
                         "name": "Assets/_GAME/Levels/_OldMakeUpLevel/water_shower.ogg"
+                    },
+                    {
+                        "channels": 1,
+                        "startTime": "00:00.000",
+                        "endTime": "00:30.000",
+                        "lengthInSeconds": 30.0,
+                        "bitrate": 128,
+                        "script": "",
+                        "ext": "",
+                        "name": "Assets/_GAME/_Costopia/_Audio/SFX/sfx_shave.ogg"
+                    },
+                    {
+                        "channels": 1,
+                        "startTime": "00:00.000",
+                        "endTime": "00:17.393",
+                        "lengthInSeconds": 17.39299964904785,
+                        "bitrate": 64,
+                        "script": "",
+                        "ext": "",
+                        "name": "Assets/_GAME/_Costopia/_Audio/BGM/sfx_bgm_italy_1.ogg"
                     }
                 ]
             },
