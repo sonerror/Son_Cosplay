@@ -4,11 +4,13 @@ public class GamePlayScreen : UIScreen
 {
   public Transform btnPlay;
   public Transform Text1, Text2;
+  public GameObject IconLv;
 
   void Start()
   {
     EventManager.StartListening("ShowBtnInstall", ShowBtnInstall);
     EventManager.StartListening("ShowText2", ShowText2);
+    EventManager.StartListening("ShowIconLv", ShowIconLv);
   }
 
   public void ShowBtnInstall()
@@ -17,6 +19,11 @@ public class GamePlayScreen : UIScreen
     hadShowBtnInstall = true;
     btnPlay.gameObject.SetActive(true);
     Text2.gameObject.SetActive(false);
+  }
+
+  public void ShowIconLv()
+  {
+    IconLv.SetActive(true);
   }
 
   public void ShowText2()

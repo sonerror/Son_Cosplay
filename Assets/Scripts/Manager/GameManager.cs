@@ -57,7 +57,8 @@ public class GameManager : Singleton<GameManager>
   {
     Scene1.SetActive(true);
     Scene0.SetActive(false);
-    // EventManager.TriggerEvent("ShowText2");
+    EventManager.TriggerEvent("ShowIconLv");
+
     TutorialManager.Ins.enableCountTime = true;
     SoundManager.Ins.PlayFx(FxType.StartGame);
     SoundManager.Ins.PlayBgm();

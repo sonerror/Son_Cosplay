@@ -149,7 +149,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1738427242}
-  - {fileID: 39775003}
   - {fileID: 1075152373}
   - {fileID: 1977242224}
   - {fileID: 889256036}
@@ -589,57 +588,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1 &39775001
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 39775003}
-  - component: {fileID: 39775002}
-  m_Layer: 0
-  m_Name: Pool
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &39775002
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 39775001}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 97dc60a3040245a4495157be25720758, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  poolAmounts:
-  - type: 0
-    amount: 0
-    poolMember: {fileID: 2235139251160222517, guid: 8d18b26a80b9eea46bf5db5fb750e951, type: 3}
-  - type: 1
-    amount: 0
-    poolMember: {fileID: 2235139251160222517, guid: f965aec2e1a49c04b84cdcdfcc4a8ab9, type: 3}
---- !u!4 &39775003
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 39775001}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.18789, y: 0.8597679, z: -0.079648495}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 7177438}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &97136053
 GameObject:
   m_ObjectHideFlags: 0
@@ -1574,7 +1522,19 @@ MonoBehaviour:
   rb: {fileID: 351391282}
   onTriggerEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1980320568}
+        m_TargetAssemblyTypeName: ControlAlphaSlot, Assembly-CSharp
+        m_MethodName: InCreaseAlpha
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   disableTriggerWith: 0
   soundPlay: 100
 --- !u!50 &351391282
@@ -2448,7 +2408,19 @@ MonoBehaviour:
   rb: {fileID: 538928215}
   onTriggerEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 801252252}
+        m_TargetAssemblyTypeName: ControlAlphaSlot, Assembly-CSharp
+        m_MethodName: InCreaseAlpha
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   disableTriggerWith: 0
   soundPlay: 100
 --- !u!50 &538928215
@@ -2751,7 +2723,19 @@ MonoBehaviour:
   rb: {fileID: 575424162}
   onTriggerEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1980320568}
+        m_TargetAssemblyTypeName: ControlAlphaSlot, Assembly-CSharp
+        m_MethodName: InCreaseAlpha
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   disableTriggerWith: 0
   soundPlay: 100
 --- !u!50 &575424162
@@ -3718,7 +3702,7 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
   m_VertexColorAlwaysGammaSpace: 0
-  m_AdditionalShaderChannelsFlag: 0
+  m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
   m_SortingOrder: 0
@@ -3887,7 +3871,19 @@ MonoBehaviour:
   rb: {fileID: 735599535}
   onTriggerEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 6324880857304882186}
+        m_TargetAssemblyTypeName: ControlAlphaSlot, Assembly-CSharp
+        m_MethodName: InCreaseAlpha
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   disableTriggerWith: 0
   soundPlay: 100
 --- !u!1 &736123642
@@ -4660,7 +4656,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a3833e865a5148c40a351863debcb2a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speedLerp: 1
+  character: {fileID: 8385880717800731279}
+  speedLerp: 1.5
   slotDataList:
   - slotName: Set_Jack_armR2
     attachmentName: Set_Jack/r_arm
@@ -4927,11 +4924,6 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 2bb5ae4a87d912c489a29d7fc917067c, type: 3}
   - {fileID: 8300000, guid: 19544299ba3f72e41b570fd456700dc9, type: 3}
   - {fileID: 8300000, guid: 36969d0c73fb7754d8460ce3d897ddc4, type: 3}
-  - {fileID: 8300000, guid: 7a53d82ee0629bf48a01e9406d2991ba, type: 3}
-  - {fileID: 8300000, guid: c3a0f331cdae9f943a3824ce75c6f007, type: 3}
-  - {fileID: 8300000, guid: b076e4cf83919af4383a9b25ee16d1cc, type: 3}
-  - {fileID: 8300000, guid: bfd44dd792bbf4049873d63a6d495a33, type: 3}
-  - {fileID: 8300000, guid: 19544299ba3f72e41b570fd456700dc9, type: 3}
   bgm: {fileID: 1952709260}
 --- !u!4 &889256036
 Transform:
@@ -5584,7 +5576,19 @@ MonoBehaviour:
   rb: {fileID: 978516852}
   onTriggerEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 801252252}
+        m_TargetAssemblyTypeName: ControlAlphaSlot, Assembly-CSharp
+        m_MethodName: InCreaseAlpha
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   disableTriggerWith: 0
   soundPlay: 100
 --- !u!50 &978516852
@@ -5856,7 +5860,19 @@ MonoBehaviour:
   rb: {fileID: 1032750007}
   onTriggerEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 6560686771069424522}
+        m_TargetAssemblyTypeName: ControlAlphaSlot, Assembly-CSharp
+        m_MethodName: InCreaseAlpha
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   disableTriggerWith: 0
   soundPlay: 100
 --- !u!50 &1032750007
@@ -6923,6 +6939,7 @@ GameObject:
   - component: {fileID: 1860872916}
   - component: {fileID: 1860872912}
   - component: {fileID: 1860872919}
+  - component: {fileID: 1860872920}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -8410,7 +8427,19 @@ MonoBehaviour:
   rb: {fileID: 1521297294}
   onTriggerEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 6560686771069424522}
+        m_TargetAssemblyTypeName: ControlAlphaSlot, Assembly-CSharp
+        m_MethodName: InCreaseAlpha
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   disableTriggerWith: 0
   soundPlay: 100
 --- !u!50 &1521297294
@@ -11050,7 +11079,19 @@ MonoBehaviour:
   rb: {fileID: 1799786212}
   onTriggerEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 5031398603552173943}
+        m_TargetAssemblyTypeName: ControlAlphaSlot, Assembly-CSharp
+        m_MethodName: InCreaseAlpha
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   disableTriggerWith: 0
   soundPlay: 100
 --- !u!50 &1799786212
@@ -11685,7 +11726,19 @@ MonoBehaviour:
   rb: {fileID: 1855550901}
   onTriggerEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 6324880857304882186}
+        m_TargetAssemblyTypeName: ControlAlphaSlot, Assembly-CSharp
+        m_MethodName: InCreaseAlpha
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   disableTriggerWith: 0
   soundPlay: 100
 --- !u!50 &1855550901
@@ -11866,6 +11919,18 @@ MonoBehaviour:
   ReferenceResolution: {x: 1080, y: 1920}
   Mode: 3
   MatchWidthOrHeight: 0.5
+--- !u!114 &1860872920
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1278144988}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f126dce0535d2d48840bba2307ec5c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1879359611
 GameObject:
   m_ObjectHideFlags: 0
@@ -12235,8 +12300,8 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: d9fb410ccc6577c488269b3539dd1924, type: 3}
-  m_Resource: {fileID: 8300000, guid: d9fb410ccc6577c488269b3539dd1924, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 8c103c03eac3ad34f968c9aa52fc0109, type: 3}
+  m_Resource: {fileID: 8300000, guid: 8c103c03eac3ad34f968c9aa52fc0109, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 0.708
   m_Pitch: 1
@@ -12701,7 +12766,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a3833e865a5148c40a351863debcb2a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speedLerp: 1
+  character: {fileID: 8385880717800731279}
+  speedLerp: 1.5
   slotDataList:
   - slotName: Set_Jack_armL2
     attachmentName: Set_Jack/l_arm
@@ -13395,7 +13461,19 @@ MonoBehaviour:
   rb: {fileID: 2091544101}
   onTriggerEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 5031398603552173943}
+        m_TargetAssemblyTypeName: ControlAlphaSlot, Assembly-CSharp
+        m_MethodName: InCreaseAlpha
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   disableTriggerWith: 0
   soundPlay: 100
 --- !u!50 &2091544101
@@ -28912,6 +28990,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a3833e865a5148c40a351863debcb2a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  character: {fileID: 8385880717800731279}
   speedLerp: 1
   slotDataList:
   - slotName: Set_Jack_legR
@@ -29294,7 +29373,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a3833e865a5148c40a351863debcb2a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speedLerp: 1
+  character: {fileID: 8385880717800731279}
+  speedLerp: 1.5
   slotDataList:
   - slotName: Set_Jack_body
     attachmentName: Set_Jack/body
@@ -29335,6 +29415,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a3833e865a5148c40a351863debcb2a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  character: {fileID: 8385880717800731279}
   speedLerp: 1
   slotDataList:
   - slotName: Set_Jack_legL
@@ -29454,7 +29535,7 @@ MeshRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: -20
+  m_SortingOrder: -15
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!23 &6905123662086673467
 MeshRenderer:

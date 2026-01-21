@@ -159,7 +159,7 @@ public class TutorialManager : Singleton<TutorialManager>
 
   void PlayTut5()
   {
-    var item = gamePlayManager.items[6] as FoundationBottleWithFx;
+    var item = gamePlayManager.items[5] as FoundationBottleWithFx;
     handCtrl.ShowHandPosToPos(item.Tf.position, item.getPosTargetActive());
   }
   void PlayTut6()

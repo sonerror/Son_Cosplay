@@ -7,8 +7,7 @@ using UnityEngine.Events;
 
 public class ControlAlphaSlot : MonoBehaviour
 {
-  private Character character;
-
+  public Character character;
   [SerializeField] private float speedLerp = 0.5f;
   public List<SlotAttachmentPair> slotDataList = new List<SlotAttachmentPair>();
   public UnityEvent OnFinish;
@@ -19,7 +18,7 @@ public class ControlAlphaSlot : MonoBehaviour
   [Button]
   public void SetReady(Character character)
   {
-    this.character = character;
+    // this.character = character;
     foreach (var slotData in slotDataList)
     {
       character.TurnSlotAttachment(slotData.slotName, slotData.attachmentName);
@@ -28,11 +27,11 @@ public class ControlAlphaSlot : MonoBehaviour
       slot.A = 0f;
     }
 
-    for (int i = 0; i < trigerColi.Count; i++)
-    {
-      var trigger = trigerColi[i];
-      trigger.OnTriggerEvent.AddListener(() => OnColli(trigger));
-    }
+    // for (int i = 0; i < trigerColi.Count; i++)
+    // {
+    //   var trigger = trigerColi[i];
+    //   trigger.OnTriggerEvent.AddListener(() => OnColli(trigger));
+    // }
   }
 
   private void OnColli(TriggerWithCertainCollider obj)
