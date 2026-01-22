@@ -2,7 +2,7 @@
     "version": "7.0.0",
     "projectId": "f42e7ff96e4545544bb6cd68f51ab634",
     "applicationID": 34683,
-    "creativeName": "Cosplaydom_ver10GG",
+    "creativeName": "Cosplaydom_ver10_Aplovin",
     "pgServer": "EU",
     "window": {
         "‐⁏": true
@@ -9131,7 +9131,7 @@
                 "instanceMethods": [
                     {
                         "name": "$is",
-                        "excluded": true
+                        "excluded": false
                     }
                 ]
             },
@@ -22119,7 +22119,7 @@
                     },
                     {
                         "name": "missingGlyphCharacter#get",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "missingGlyphCharacter#set",
@@ -22127,11 +22127,11 @@
                     },
                     {
                         "name": "warningsDisabled#get",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "defaultFontAsset#get",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "defaultFontAssetPath#get",
@@ -22179,7 +22179,7 @@
                     },
                     {
                         "name": "defaultSpriteAsset#get",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "defaultSpriteAssetPath#get",
@@ -22461,7 +22461,7 @@
                     },
                     {
                         "name": "spriteCharacterLookupTable#get",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "spriteCharacterLookupTable#set",
@@ -22489,7 +22489,7 @@
                     },
                     {
                         "name": "UpdateLookupTables",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "GetSpriteIndexFromHashcode",
@@ -30735,7 +30735,7 @@
                     },
                     {
                         "name": "GetSpriteCharacterFromSpriteAsset",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "GetSpriteCharacterFromSpriteAsset_Internal",
@@ -31289,7 +31289,7 @@
                     },
                     {
                         "name": "Resize",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "Resize$1",
@@ -31569,7 +31569,7 @@
                 "instanceMethods": [
                     {
                         "name": "getDefaultValue",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "ctor",
@@ -31589,7 +31589,7 @@
                     },
                     {
                         "name": "$clone",
-                        "excluded": true
+                        "excluded": false
                     }
                 ]
             },
@@ -31843,7 +31843,7 @@
                     },
                     {
                         "name": "fallbackFontAssetTable#get",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "fallbackFontAssetTable#set",
@@ -42465,7 +42465,7 @@
                     },
                     {
                         "name": "hashCode#get",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "ctor",

@@ -15,7 +15,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &6421775547690463861
 RectTransform:
   m_ObjectHideFlags: 0
@@ -207,7 +207,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &4537837071774246510
 RectTransform:
   m_ObjectHideFlags: 0
@@ -363,7 +363,7 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2033610986384722135}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 5228f731030fa744d92969606ea4ada4, type: 2}
   m_CullingMode: 0
@@ -838,7 +838,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: Choose Your Character!
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: ddd791197cf475349a4169980a691336, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 0f43fc0653d2cc14c9eb0670f614075d, type: 2}
   m_sharedMaterial: {fileID: -3954826954806301162, guid: d07f637df9d3c56498b773da5d7f1056, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -1108,10 +1108,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Tap To Cosplay!
+  m_text: "Tap to cosplay \nCaptain Jack Shallow!"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: ddd791197cf475349a4169980a691336, type: 2}
-  m_sharedMaterial: {fileID: -7497179540835392472, guid: ddd791197cf475349a4169980a691336, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 0f43fc0653d2cc14c9eb0670f614075d, type: 2}
+  m_sharedMaterial: {fileID: 6607075751281090802, guid: 0f43fc0653d2cc14c9eb0670f614075d, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1135,8 +1135,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 100
-  m_fontSizeBase: 100
+  m_fontSize: 90
+  m_fontSizeBase: 90
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18

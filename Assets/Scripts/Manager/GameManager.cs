@@ -19,7 +19,7 @@ public class GameManager : Singleton<GameManager>
   public CharacterControl Body1, Body2;
   public ChangeScene changeScene;
 
-  public GameObject Scene0, Scene1, Scene2;
+  public GameObject Scene1, Scene2;
 
 
   private IEnumerator coroutine = null;
@@ -35,8 +35,8 @@ public class GameManager : Singleton<GameManager>
 
     if (!hadClicked && Input.GetMouseButtonDown(0))
     {
-      hadClicked = true;
-      StartGamePlay();
+      hadClicked = true; SoundManager.Ins.PlayFx(FxType.StartGame);
+      // StartGamePlay();
     }
   }
 
@@ -44,6 +44,7 @@ public class GameManager : Singleton<GameManager>
   {
     changeScene.ChangeSceneAndCall(() =>
     {
+
       Scene1.SetActive(false);
       Scene2.SetActive(true);
       onComplete?.Invoke();
@@ -56,11 +57,11 @@ public class GameManager : Singleton<GameManager>
   public void StartGamePlay()
   {
     Scene1.SetActive(true);
-    Scene0.SetActive(false);
+    // Scene0.SetActive(false);
     EventManager.TriggerEvent("ShowIconLv");
 
     TutorialManager.Ins.enableCountTime = true;
-    SoundManager.Ins.PlayFx(FxType.StartGame);
+
     SoundManager.Ins.PlayBgm();
     DOVirtual.DelayedCall(0.2f, () =>
     {
