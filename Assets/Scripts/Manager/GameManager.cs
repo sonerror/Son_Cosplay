@@ -132,18 +132,18 @@ public class GameManager : Singleton<GameManager>
     GamePlayManager.Ins.character.SetMouseHappy();
     var i = idSoundHappy % 3;
 
-    if (typeGamePlay1)
-    {
-      if (i == 0) SoundManager.Ins.PlayFx(FxType.Happy0);
-      else if (i == 1) SoundManager.Ins.PlayFx(FxType.Happy1);
-      else SoundManager.Ins.PlayFx(FxType.Happy2);
-    }
-    else
-    {
-      if (i == 0) SoundManager.Ins.PlayFx(FxType.Happy0_1);
-      else if (i == 1) SoundManager.Ins.PlayFx(FxType.Happy1_1);
-      else SoundManager.Ins.PlayFx(FxType.Happy2_1);
-    }
+    // if (typeGamePlay1)
+    // {
+    //   if (i == 0) SoundManager.Ins.PlayFx(FxType.Happy0);
+    //   else if (i == 1) SoundManager.Ins.PlayFx(FxType.Happy1);
+    //   else SoundManager.Ins.PlayFx(FxType.Happy2);
+    // }
+    // else
+    // {
+    if (i == 0) SoundManager.Ins.PlayFx(FxType.Happy0_1);
+    else if (i == 1) SoundManager.Ins.PlayFx(FxType.Happy1_1);
+    else SoundManager.Ins.PlayFx(FxType.Happy2_1);
+    // }
     idSoundHappy++;
 
     yield return new WaitForSeconds(1f);
@@ -172,18 +172,18 @@ public class GameManager : Singleton<GameManager>
     var i = idSoundAngry % 3;
 
 
-    if (typeGamePlay1)
-    {
-      if (i == 0) SoundManager.Ins.PlayFx(FxType.Angry0);
-      else if (i == 1) SoundManager.Ins.PlayFx(FxType.Angry1);
-      else SoundManager.Ins.PlayFx(FxType.Angry2);
-    }
-    else
-    {
-      if (i == 0) SoundManager.Ins.PlayFx(FxType.Angry0_1);
-      else if (i == 1) SoundManager.Ins.PlayFx(FxType.Angry1_1);
-      else SoundManager.Ins.PlayFx(FxType.Angry2_1);
-    }
+    // if (typeGamePlay1)
+    // {
+    //   if (i == 0) SoundManager.Ins.PlayFx(FxType.Angry0);
+    //   else if (i == 1) SoundManager.Ins.PlayFx(FxType.Angry1);
+    //   else SoundManager.Ins.PlayFx(FxType.Angry2);
+    // }
+    // else
+    // {
+    if (i == 0) SoundManager.Ins.PlayFx(FxType.Angry0_1);
+    else if (i == 1) SoundManager.Ins.PlayFx(FxType.Angry1_1);
+    else SoundManager.Ins.PlayFx(FxType.Angry2_1);
+    // }
     idSoundAngry++;
 
     yield return new WaitForSeconds(0.65f);
