@@ -34,10 +34,10 @@ public class GamePlayManager : Singleton<GamePlayManager>
     }
   }
 
-  // void Start()
-  // {
-  //   StartStep();
-  // }
+  void Start()
+  {
+    StartStep();
+  }
 
   public void SetStep(int step)
   {

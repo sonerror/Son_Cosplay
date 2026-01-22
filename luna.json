@@ -2,7 +2,7 @@
     "version": "7.0.0",
     "projectId": "f42e7ff96e4545544bb6cd68f51ab634",
     "applicationID": 34683,
-    "creativeName": "Cosplaydom_v7_removeHand",
+    "creativeName": "Cosplaydom_v11_wed_ap",
     "pgServer": "EU",
     "window": {
         "‐⁏": true
@@ -79,12 +79,12 @@
                 "Stubs/SupersonicWisdom/"
             ],
             "msbuildMac64": "/Library/Frameworks/Mono.framework/Versions/Current/bin/msbuild",
-            "msbuildWin64": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\MSBuild\\Current\\Bin\\MSBuild.exe",
+            "msbuildWin64": "C:/Program Files/Microsoft Visual Studio/2022/Professional/MSBuild/Current/Bin/MSBuild.exe",
             "externalSources": [],
             "externalJSLibraries": [],
             "scriptingDefines": [],
             "msbuildVersion": "17.14",
-            "monoVersion": "9.0.7",
+            "monoVersion": "8.0.3",
             "dotnetVersion": ""
         },
         "assets": {
@@ -45441,8 +45441,8 @@
                         "name": "Assets/_GAME/Levels/LvCosplayJoker/NewSpine1/Joker.png"
                     },
                     {
-                        "maxWidth": 2048,
-                        "maxHeight": 2048,
+                        "maxWidth": 2556,
+                        "maxHeight": 2556,
                         "format": "png32",
                         "compression": "quantSize",
                         "quality": 65,

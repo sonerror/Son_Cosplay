@@ -13,33 +13,32 @@ public class GameManager : Singleton<GameManager>
   public ClockTimer clockTimer;
   public FillCircleBar fillCircleBar;
   public bool isPlayingGame = false;
-  public CharacterControl Body1, Body2;
+  // public CharacterControl Body1, Body2;
   // public ChangeScene changeScene;
 
-  public GameObject Scene0, Scene1, Scene2;
-  public Animator ContentGamePlay;
+  // public GameObject Scene0, Scene1, Scene2;
+  // public Animator ContentGamePlay;
 
-  private int typeScape = 0; // 0: none, 1: landscape, 2: portrait
-  void FixedUpdate()
-  {
-    if (isPlayingGame) return;
-    var size = UIManager.Ins.GameSize;
-    if (size.x > size.y && typeScape != 1)
-    {
-      typeScape = 1;
-      // Show landscape UI
-      ContentGamePlay.transform.localScale = Vector3.one * 1.3f;
-      ContentGamePlay.SetTrigger("Land");
-    }
-    else if (size.x <= size.y && typeScape != 2)
-    {
-      typeScape = 2;
-      // Show portrait UI
-      ContentGamePlay.transform.localScale = Vector3.one * 1f;
-      ContentGamePlay.SetTrigger("Por");
-    }
-
-  }
+  // private int typeScape = 0; // 0: none, 1: landscape, 2: portrait
+  // void FixedUpdate()
+  // {
+  //   if (isPlayingGame) return;
+  //   var size = UIManager.Ins.GameSize;
+  //   if (size.x > size.y && typeScape != 1)
+  //   {
+  //     typeScape = 1;
+  //     // Show landscape UI
+  //     ContentGamePlay.transform.localScale = Vector3.one * 1.3f;
+  //     ContentGamePlay.SetTrigger("Land");
+  //   }
+  //   else if (size.x <= size.y && typeScape != 2)
+  //   {
+  //     typeScape = 2;
+  //     // Show portrait UI
+  //     ContentGamePlay.transform.localScale = Vector3.one * 1f;
+  //     ContentGamePlay.SetTrigger("Por");
+  //   }
+  // }
 
   private IEnumerator coroutine = null;
 
@@ -82,38 +81,38 @@ public class GameManager : Singleton<GameManager>
   }
 
   public bool typeGamePlay1 = true;
-  public void ChooseScene1()
-  {
-    if (isPlayingGame) return;
-    StartGamePlay();
-    Scene1.SetActive(true);
+  // public void ChooseScene1()
+  // {
+  //   if (isPlayingGame) return;
+  //   StartGamePlay();
+  //   Scene1.SetActive(true);
 
-    GamePlayManager.Ins.character = Body1;
-    GamePlayManager.Ins.SetStep(0);
-    SoundManager.Ins.PlayFx(FxType.StartGame);
-    typeGamePlay1 = true;
-    // Destroy(Scene0);
-    // Destroy(Scene2);
+  //   // GamePlayManager.Ins.character = Body1;
+  //   GamePlayManager.Ins.SetStep(0);
+  //   SoundManager.Ins.PlayFx(FxType.StartGame);
+  //   typeGamePlay1 = true;
+  //   // Destroy(Scene0);
+  //   // Destroy(Scene2);
 
-    Scene0.SetActive(false);
-    Scene2.SetActive(false);
-  }
-  public void ChooseScene2()
-  {
-    if (isPlayingGame) return;
-    StartGamePlay();
-    Scene2.SetActive(true);
+  //   Scene0.SetActive(false);
+  //   Scene2.SetActive(false);
+  // }
+  // public void ChooseScene2()
+  // {
+  //   if (isPlayingGame) return;
+  //   StartGamePlay();
+  //   Scene2.SetActive(true);
 
-    GamePlayManager.Ins.character = Body2;
-    GamePlayManager.Ins.SetStep(6);
-    SoundManager.Ins.PlayFx(FxType.WomanHey);
-    typeGamePlay1 = false;
-    // Destroy(Scene1);
-    //  Destroy(Scene0);
+  //   // GamePlayManager.Ins.character = Body2;
+  //   GamePlayManager.Ins.SetStep(6);
+  //   SoundManager.Ins.PlayFx(FxType.WomanHey);
+  //   typeGamePlay1 = false;
+  //   // Destroy(Scene1);
+  //   //  Destroy(Scene0);
 
-    Scene0.SetActive(false);
-    Scene1.SetActive(false);
-  }
+  //   Scene0.SetActive(false);
+  //   Scene1.SetActive(false);
+  // }
 
   public void PlayPositiveEmoji()
   {
