@@ -7,7 +7,7 @@ public class GameVidScreen : UIScreen
 {
   public void OnClick()
   {
-    GameManager.Ins.StartGamePlay();
+    // GameManager.Ins.StartGamePlay();
     UIManager.Ins.OpenUI(UIID.GamePlay);
     // UIManager.Ins.CloseUI(UIID.GameVideo);
   }

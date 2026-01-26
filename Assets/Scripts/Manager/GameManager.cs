@@ -28,46 +28,18 @@ public class GameManager : Singleton<GameManager>
 
   private void Update()
   {
-    if (isPlayingGame && Input.GetMouseButtonDown(0))
-    {
-      EventManager.TriggerEvent("ShowBtnInstall");
-    }
+    // if (isPlayingGame && Input.GetMouseButtonDown(0))
+    // {
+    //   EventManager.TriggerEvent("ShowBtnInstall");
+    // }
 
     if (!hadClicked && Input.GetMouseButtonDown(0))
     {
       hadClicked = true;
-      StartGamePlay();
+      // StartGamePlay();
     }
   }
 
-  public void ChangeSceneToGamePlay2(Action onComplete = null)
-  {
-    changeScene.ChangeSceneAndCall(() =>
-    {
-      Scene1.SetActive(false);
-      Scene2.SetActive(true);
-      onComplete?.Invoke();
-      GamePlayManager.Ins.character = Body2;
-      emojiControl.transform.localPosition = new Vector3(3.23f, 8.89f, 0f);
-      emojiControl.transform.localScale = Vector3.one * 1.5f;
-    });
-  }
-
-  public void StartGamePlay()
-  {
-    Scene1.SetActive(true);
-    Scene0.SetActive(false);
-    EventManager.TriggerEvent("ShowIconLv");
-
-    TutorialManager.Ins.enableCountTime = true;
-    SoundManager.Ins.PlayFx(FxType.StartGame);
-    SoundManager.Ins.PlayBgm();
-    DOVirtual.DelayedCall(0.2f, () =>
-    {
-      isPlayingGame = true;
-    });
-
-  }
 
 
   public void PlayPositiveEmoji()
@@ -85,7 +57,7 @@ public class GameManager : Singleton<GameManager>
   private IEnumerator PlayPositiveEmojiCoroutine()
   {
     emojiControl.ShowPositive();
-    GamePlayManager.Ins.character.SetMouseHappy();
+    // GamePlayManager.Ins.character.SetMouseHappy();
     var i = idSoundHappy % 3;
 
 
@@ -96,7 +68,7 @@ public class GameManager : Singleton<GameManager>
     idSoundHappy++;
 
     yield return new WaitForSeconds(1f);
-    GamePlayManager.Ins.character.SetMouseIdle();
+    // GamePlayManager.Ins.character.SetMouseIdle();
     coroutine = null;
   }
   public void PlayNegativeEmoji()
@@ -115,7 +87,7 @@ public class GameManager : Singleton<GameManager>
   private IEnumerator PlayNegativeEmojiCoroutine()
   {
     yield return new WaitForSeconds(1f);
-    GamePlayManager.Ins.character.SetMouseAngry();
+    // GamePlayManager.Ins.character.SetMouseAngry();
     emojiControl.ShowNegative();
 
     var i = idSoundAngry % 3;
@@ -126,7 +98,7 @@ public class GameManager : Singleton<GameManager>
     idSoundAngry++;
 
     yield return new WaitForSeconds(0.65f);
-    GamePlayManager.Ins.character.SetMouseIdle();
+    // GamePlayManager.Ins.character.SetMouseIdle();
     coroutine = null;
   }
 
