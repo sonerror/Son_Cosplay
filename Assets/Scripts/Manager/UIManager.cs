@@ -13,9 +13,9 @@ public class UIManager : Singleton<UIManager>
   private Transform tf;
   public Transform Tf => tf ? tf : tf = transform;
 
-  [SerializeField] List<UIScreen> screens = new List<UIScreen>();
+  [SerializeField] List<GamePlayScreen> screens = new List<GamePlayScreen>();
   public RectTransform[] canvasParent = new RectTransform[3];
-  private UIScreen[] uiActive = new UIScreen[3];
+  private GamePlayScreen[] uiActive = new GamePlayScreen[3];
 
   private Vector2 gameSize = new Vector2(1080, 1920);
   public Vector2 GameSize => gameSize;
@@ -37,19 +37,19 @@ public class UIManager : Singleton<UIManager>
     return IsLoaded(ID) && uiActive[(int)ID].gameObject.activeInHierarchy;
   }
 
-  public UIScreen GetUI(UIID ID)
+  public GamePlayScreen GetUI(UIID ID)
   {
     if (!IsLoaded(ID))
     {
       uiActive[(int)ID] =
-          Instantiate(screens[(int)ID].gameObject, canvasParent[(int)ID]).GetComponent<UIScreen>();
+          Instantiate(screens[(int)ID].gameObject, canvasParent[(int)ID]).GetComponent<GamePlayScreen>();
       uiActive[(int)ID].Resize(gameSize);
       uiActive[(int)ID].OnCreate();
     }
     return uiActive[(int)ID];
   }
 
-  public UIScreen OpenUI(UIID ID)
+  public GamePlayScreen OpenUI(UIID ID)
   {
     if (IsLoaded(ID))
     {

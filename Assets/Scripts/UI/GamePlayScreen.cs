@@ -4,7 +4,7 @@ public class GamePlayScreen : UIScreen
 {
   public Transform btnPlay;
   public Transform Text1, Text2;
-  public GameObject IconLv;
+  public GameObject IconLv, logoUI;
 
   void Start()
   {

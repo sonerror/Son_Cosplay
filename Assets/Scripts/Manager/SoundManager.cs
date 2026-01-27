@@ -29,10 +29,10 @@ public enum FxType
 
 public class SoundManager : Singleton<SoundManager>
 {
+  public AudioSource SfxSource { get; private set; }
   public AudioClip[] audioClips;
   public AudioSource bgm;
   private AudioSource[] fx = new AudioSource[30];
-
   bool isMute = false;
   public bool IsMute => isMute;
 
@@ -50,7 +50,21 @@ public class SoundManager : Singleton<SoundManager>
       fx[(int)fxType].Play();
     }
   }
-
+  public static void PlaySFX(params AudioClip[] clips)
+  {
+    if (clips != null && clips.Length > 0)
+    {
+      AudioClip c = clips[UnityEngine.Random.Range(0, clips.Length)];
+      if (c != null)
+      {
+        Instance.SfxSource.PlayOneShot(c);
+      }
+    }
+  }
+  public static void PlaySFX(AudioClip clips, float volume = 1f)
+  {
+    Instance.SfxSource.PlayOneShot(clips, volume);
+  }
   public void PlaySoundSpray()
   {
     PlaySoundLoop(FxType.Spray);
