@@ -148,7 +148,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 468105f6a3c161f468f9636c9cc9fb77
+    spriteID: 2231fe0925114864d9bec5b5c07017c4
     internalID: 1537655665
     vertices: []
     indices: 
@@ -162,7 +162,7 @@ TextureImporter:
       - key: SpriteEditor.SliceOnImport
         value: True
     nameFileIdTable:
-      eyeliner_02_0: -1018294439
+      eyeliner_02_0: 1970408157
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

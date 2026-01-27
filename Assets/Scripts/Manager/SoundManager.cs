@@ -35,6 +35,16 @@ public class SoundManager : Singleton<SoundManager>
   private AudioSource[] fx = new AudioSource[30];
   bool isMute = false;
   public bool IsMute => isMute;
+  protected override void Awake()
+  {
+    base.Awake();
+
+    if (SfxSource == null)
+    {
+      SfxSource = gameObject.AddComponent<AudioSource>();
+      SfxSource.playOnAwake = false;
+    }
+  }
 
   public void PlayFx(FxType fxType)
   {
@@ -52,19 +62,29 @@ public class SoundManager : Singleton<SoundManager>
   }
   public static void PlaySFX(params AudioClip[] clips)
   {
-    if (clips != null && clips.Length > 0)
-    {
-      AudioClip c = clips[UnityEngine.Random.Range(0, clips.Length)];
-      if (c != null)
-      {
-        Instance.SfxSource.PlayOneShot(c);
-      }
-    }
+    if (Instance == null) return;
+    if (Instance.SfxSource == null) return;
+    if (clips == null || clips.Length == 0) return;
+
+    AudioClip c = clips[UnityEngine.Random.Range(0, clips.Length)];
+    if (c == null) return;
+
+    Instance.SfxSource.clip = c;
+    Instance.SfxSource.Play();
   }
-  public static void PlaySFX(AudioClip clips, float volume = 1f)
+
+
+  public static void PlaySFX(AudioClip clip, float volume = 1f)
   {
-    Instance.SfxSource.PlayOneShot(clips, volume);
+    if (Instance == null) return;
+    if (Instance.SfxSource == null) return;
+    if (clip == null) return;
+
+    Instance.SfxSource.volume = volume;
+    Instance.SfxSource.clip = clip;
+    Instance.SfxSource.Play();
   }
+
   public void PlaySoundSpray()
   {
     PlaySoundLoop(FxType.Spray);

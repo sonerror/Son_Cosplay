@@ -4,6 +4,8 @@ using Sirenix.OdinInspector;
 using UnityEngine;
 using UnityEngine.Events;
 using Unity.VisualScripting;
+using System.Collections.Generic;
+
 namespace sonnv
 {
     public class SonThrowObject : SonMonoBehaviour
@@ -31,6 +33,8 @@ namespace sonnv
 
         [SerializeField] private UnityEvent onMouseUp;
         [SerializeField] private UnityEvent onRemoveItem;
+        public CharacterControl characterStart;
+        public List<SlotAttachmentPair> slotDeactiveClick = new List<SlotAttachmentPair>();
         private bool _canDestroy = true;
         private Sprite _initialSprite;
         private bool _isDone;
@@ -50,11 +54,13 @@ namespace sonnv
 
         public bool IsDragging => _isDragging;
         public UnityEvent onDone;
+        private int layerCurrent = 0;
         private void Awake()
         {
             _mainCamera = Camera.main;
             _scalingOnPick = GetComponent<ScalingOnPick>();
             _initialSprite = sr.sprite;
+            layerCurrent = sr.sortingOrder;
         }
 
         private void Start()
@@ -74,9 +80,17 @@ namespace sonnv
             _startPos = Tf.position;
             _startPos.z = 0;
             _isDragging = true;
-            SoundManager.PlaySFX(pickUpSound.clip, pickUpSound.volume);
+            characterStart.TurnOffSlotsAttachment(slotDeactiveClick);
+            if (pickUpSound.clip != null)
+            {
+                SoundManager.PlaySFX(pickUpSound.clip, pickUpSound.volume);
+            }
             onMouseDown.Invoke();
             if (hasAlternativeSprite) sr.sprite = alternativeSprite;
+            if (sr != null)
+            {
+                sr.sortingOrder = 30;
+            }
         }
 
         private void OnMouseDrag()
@@ -95,8 +109,13 @@ namespace sonnv
             if (!_isDragging) return;
             _isDragging = false;
             if (!_canDestroy) return;
+            if (sr != null)
+            {
+                sr.sortingOrder = layerCurrent;
+            }
             if (DistanceToInSqrVec2(_startPos) > distanceChangeToThrow)
             {
+                characterStart.TurnOffSlotsAttachment(slotDeactiveClick);
                 Tf.SetParent(null);
                 rb.bodyType = RigidbodyType2D.Dynamic;
                 rb.gravityScale = 2;
@@ -112,6 +131,8 @@ namespace sonnv
             }
             else
             {
+
+                characterStart.TurnOnSlotsAttachment(slotDeactiveClick);
                 Tf.position = _startPos;
                 if (hasAlternativeSprite) sr.sprite = _initialSprite;
                 onMouseUp.Invoke();
