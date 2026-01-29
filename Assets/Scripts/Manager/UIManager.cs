@@ -12,7 +12,9 @@ public class UIManager : Singleton<UIManager>
 {
   private Transform tf;
   public Transform Tf => tf ? tf : tf = transform;
+  [SerializeField] private Canvas screenContainer;
 
+  public Canvas ScreenContainer => screenContainer;
   [SerializeField] List<GamePlayScreen> screens = new List<GamePlayScreen>();
   public RectTransform[] canvasParent = new RectTransform[3];
   private GamePlayScreen[] uiActive = new GamePlayScreen[3];

@@ -1,8 +1,35 @@
 using System;
 using System.Collections.Generic;
+using Sirenix.OdinInspector;
+using Spine;
 using Spine.Unity;
 using UnityEngine;
+[Serializable]
+public class SlotAttachmentPairList
+{
+  public SkeletonAnimation skeletonAnimation;
 
+  [ListDrawerSettings(ShowFoldout = true, DraggableItems = true)]
+  [OnValueChanged(nameof(UpdatePairsSkeletonAsset))]
+  public List<SlotAttachmentPair> pairs = new();
+
+  // Ensure all pairs use the same SkeletonDataAsset
+  private void UpdatePairsSkeletonAsset()
+  {
+    foreach (var pair in pairs)
+    {
+      pair.skeletonDataAsset = skeletonAnimation.skeletonDataAsset;
+    }
+  }
+
+  public void TurnSlotState(bool isEnable)
+  {
+    foreach (var pair in pairs)
+    {
+      skeletonAnimation.Skeleton.SetAttachment(pair.slotName, isEnable ? pair.attachmentName : null);
+    }
+  }
+}
 public class ToggleBoneSlot : MonoBehaviour
 {
   [SerializeField] private SkeletonAnimation skeletonAnimation;

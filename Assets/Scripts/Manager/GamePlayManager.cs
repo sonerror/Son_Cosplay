@@ -1,18 +1,20 @@
 using System.Collections.Generic;
 using UnityEngine;
 using Sirenix.OdinInspector;
+using Satisgame;
+using HoangHH;
+using System;
+using System.Collections;
 
 public class GamePlayManager : Singleton<GamePlayManager>
 {
-  public List<ControlAlphaSlot> ControlAlphaSlot = new List<ControlAlphaSlot>();
-  public List<RemoveItem> ClotherRemove = new List<RemoveItem>();
+  public EmojiControl emojiControl;
+  public ClockTimer clockTimer;
   public CharacterControl character;
   public List<Item> items = new List<Item>();
-
-  [SerializeField]
-  protected int currentStep = 0;
+  [SerializeField] protected int currentStep = 0;
   public int CurrentStep => currentStep;
-
+  private IEnumerator coroutine = null;
   protected void TurnCharacterSlotAttachment(
       List<SlotAttachmentPair> slotDataList,
       bool attached)
@@ -39,7 +41,7 @@ public class GamePlayManager : Singleton<GamePlayManager>
 
   protected virtual void DoneStep()
   {
-    GameManager.Ins.PlayPositiveEmoji();
+    PlayPositiveEmoji();
     Debug.Log("Fx step" + currentStep);
   }
 
@@ -56,4 +58,59 @@ public class GamePlayManager : Singleton<GamePlayManager>
   public virtual void StartStep()
   {
   }
+  public void PlayPositiveEmoji()
+  {
+    if (coroutine != null)
+    {
+      StopCoroutine(coroutine);
+    }
+
+    coroutine = PlayPositiveEmojiCoroutine();
+    StartCoroutine(coroutine);
+  }
+
+  private int idSoundHappy = 0;
+  private IEnumerator PlayPositiveEmojiCoroutine()
+  {
+    emojiControl.ShowPositive();
+    character.SetMouseHappy();
+    var i = idSoundHappy % 3;
+    if (i == 0) SoundManager.Ins.PlayFx(FxType.Happy0);
+    else if (i == 1) SoundManager.Ins.PlayFx(FxType.Happy1);
+    else SoundManager.Ins.PlayFx(FxType.Happy2);
+    idSoundHappy++;
+    yield return new WaitForSeconds(1f);
+    character.SetMouseIdle();
+    coroutine = null;
+  }
+  public void PlayNegativeEmoji()
+  {
+    if (coroutine != null)
+    {
+      return;
+    }
+    coroutine = PlayNegativeEmojiCoroutine();
+    StartCoroutine(coroutine);
+  }
+  private int idSoundAngry = 0;
+  private IEnumerator PlayNegativeEmojiCoroutine()
+  {
+    yield return new WaitForSeconds(1f);
+    character.SetMouseAngry();
+    emojiControl.ShowNegative();
+    var i = idSoundAngry % 3;
+    if (i == 0) SoundManager.Ins.PlayFx(FxType.Angry0);
+    else if (i == 1) SoundManager.Ins.PlayFx(FxType.Angry1);
+    else SoundManager.Ins.PlayFx(FxType.Angry2);
+    idSoundAngry++;
+    yield return new WaitForSeconds(0.65f);
+    character.SetMouseIdle();
+    coroutine = null;
+  }
+
+  public void ShowClockTimer()
+  {
+    clockTimer.Show(2f);
+  }
+
 }
