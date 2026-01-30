@@ -14,10 +14,10 @@ namespace sonnv
         [SerializeField] private Direction hideDirection = Direction.Up;
         [SerializeField] private float yPositionShow = 2f;
         [SerializeField] private bool fadeSprite = true;
-        [ShowIf("fadeSprite")][SerializeField] private SpriteRenderer[] sprites;
-        [ShowIf("fadeSprite")][SerializeField] private float timeFade = 0.4f;
-        [ShowIf("fadeSprite")][SerializeField] private float delayFadeOut = 0.3f;
-        [ShowIf("fadeSprite")]
+        [SerializeField] private SpriteRenderer[] sprites;
+        [SerializeField] private float timeFade = 0.4f;
+        [SerializeField] private float delayFadeOut = 0.3f;
+        
         [SerializeField]
         private bool targetAlphaToItsBaseValue;
 

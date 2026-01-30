@@ -10,9 +10,9 @@ namespace HoangHH.UI
         [SerializeField]
         protected SkeletonAnimation skeletonAnimation;
 
-        [SerializeField] protected List<SlotAttachmentPair> disableSlot = new();
+        [SerializeField] protected List<SlotAttachmentPair> disableSlot = new List<SlotAttachmentPair>();
 
-        [SerializeField] protected List<SlotAttachmentPair> enableSlot = new();
+        [SerializeField] protected List<SlotAttachmentPair> enableSlot = new List<SlotAttachmentPair>();
 
         private void Awake()
         {

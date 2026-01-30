@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class MiniPool<T> where T : Component
 {
-    private readonly Queue<T> queueActives = new();
+    private readonly Queue<T> queueActives = new Queue<T>();
     private Transform parent;
     private T prefab;
 

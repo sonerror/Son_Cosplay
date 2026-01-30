@@ -60,6 +60,14 @@ public class SoundManager : Singleton<SoundManager>
       fx[(int)fxType].Play();
     }
   }
+  public static AudioSource PlaySfx(AudioClip clip, float volume = 1f, bool isLoop = false)
+  {
+    Instance.SfxSource.loop = isLoop;
+    Instance.SfxSource.volume = volume;
+    Instance.SfxSource.clip = clip;
+    Instance.SfxSource.Play();
+    return Instance.SfxSource;
+  }
   public static void PlaySFX(params AudioClip[] clips)
   {
     if (Instance == null) return;

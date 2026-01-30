@@ -9,9 +9,7 @@ public class SlotAttachmentPairList
 {
   public SkeletonAnimation skeletonAnimation;
 
-  [ListDrawerSettings(ShowFoldout = true, DraggableItems = true)]
-  [OnValueChanged(nameof(UpdatePairsSkeletonAsset))]
-  public List<SlotAttachmentPair> pairs = new();
+  public List<SlotAttachmentPair> pairs = new List<SlotAttachmentPair>();
 
   // Ensure all pairs use the same SkeletonDataAsset
   private void UpdatePairsSkeletonAsset()

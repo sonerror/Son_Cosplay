@@ -7,22 +7,19 @@ namespace sonnv
     [RequireComponent(typeof(SpriteRenderer), typeof(Collider2D))]
     public class SonSnapObject : SonMonoBehaviour, SonISnapObject
     {
-        [Header("References")]
         [SerializeField] protected SonSnapPoint[] snapToPosition;
         [SerializeField] protected SpriteRenderer sprite;
         [SerializeField] private Rigidbody2D rb;
         [SerializeField] protected Collider2D col;
 
-        [FoldoutGroup("Move")]
         [SerializeField]
         protected bool moveBackOnDrop = true;
 
 
 
 
-        [Header("Properties")]
         [SerializeField] private bool useUpdateToDragLerp;
-        [ShowIf("useUpdateToDragLerp")][SerializeField][Range(0f, 1f)] private float interpolateSpeed = 0.8f;
+        [SerializeField][Range(0f, 1f)] private float interpolateSpeed = 0.8f;
         [SerializeField] private bool ignoreRigidBody;
         [SerializeField] private bool attachToSnapPoint;
         [SerializeField] private Vector3 offset;
@@ -33,38 +30,34 @@ namespace sonnv
         [SerializeField] private int onSnapOrderLayer;
         [SerializeField] protected bool isRotate;
 
-        [Header("Audio")]
         [SerializeField] private AudioData onDragAudio;
         [SerializeField] private AudioData onSnapAudio;
 
-        [Header("Event")]
         [SerializeField] protected UnityEvent onSnap;
         [SerializeField] protected UnityEvent onStartDrag;
         [SerializeField] protected UnityEvent onDrop;
         [SerializeField] protected UnityEvent notSnapWhenNearSnapPoint;
 
-        [Header("Other")][SerializeField] private bool isEnableCollideWhenEnableThis;
+     [SerializeField] private bool isEnableCollideWhenEnableThis;
         [SerializeField] private bool moveBack;
-        [Header("Snap")]
         [SerializeField] private bool isChangeScaleAffterSnap = false;
-        [ShowIf("isChangeScaleAffterSnap")][SerializeField] private float scaleAffterSnap = 1;
+       [SerializeField] private float scaleAffterSnap = 1;
 
-        [FoldoutGroup("Dragging")][SerializeField] private bool rotateOnDrag;
-        [FoldoutGroup("Dragging")][ShowIf("rotateOnDrag")][SerializeField] private float onDragRotateZ = 10f;
+        [SerializeField] private bool rotateOnDrag;
+       [SerializeField] private float onDragRotateZ = 10f;
 
-        [Header("Floating")]
-        [FoldoutGroup("Floating")][SerializeField] private bool isBounceLoop = false;
-        [FoldoutGroup("Floating")][ShowIf("isBounceLoop")][SerializeField] protected AnimationCurve curveFloatingIdle = new AnimationCurve(new Keyframe(0, 0), new Keyframe(0.5f, 1), new Keyframe(1, 0));
+       [SerializeField] private bool isBounceLoop = false;
+        [SerializeField] protected AnimationCurve curveFloatingIdle = new AnimationCurve(new Keyframe(0, 0), new Keyframe(0.5f, 1), new Keyframe(1, 0));
 
-        [FoldoutGroup("Floating")][ShowIf("isBounceLoop")][SerializeField] protected float durationFloatingIdle = 2.41f;
+        [SerializeField] protected float durationFloatingIdle = 2.41f;
 
-        [FoldoutGroup("Floating")][ShowIf("isBounceLoop")][SerializeField] protected float curveTimeOffSet = 0.25f;
+       [SerializeField] protected float curveTimeOffSet = 0.25f;
 
-        [FoldoutGroup("Floating")][ShowIf("isBounceLoop")][SerializeField] protected float speedFloatingIdle = 0.1f;
-        [FoldoutGroup("Floating")][ShowIf("isBounceLoop")][SerializeField] protected bool isFloatingStart;
-        [FoldoutGroup("Floating")] protected Vector3 floatingAnchor;
-        [FoldoutGroup("Floating")] protected float timeOffsetFloating;
-        [FoldoutGroup("Floating")] protected bool isFloating;
+       [SerializeField] protected float speedFloatingIdle = 0.1f;
+       [SerializeField] protected bool isFloatingStart;
+       protected Vector3 floatingAnchor;
+       protected float timeOffsetFloating;
+        protected bool isFloating;
 
         private Camera _mainCam;
         private bool _isDragging;

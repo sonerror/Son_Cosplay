@@ -83,6 +83,23 @@ public class GamePlayManager : Singleton<GamePlayManager>
     character.SetMouseIdle();
     coroutine = null;
   }
+  public void PlayPositiveEmojiOnSnap()
+  {
+    if (coroutine != null)
+    {
+      StopCoroutine(coroutine);
+    }
+
+    coroutine = PlayHappyOnSnap();
+    StartCoroutine(coroutine);
+  }
+  private IEnumerator PlayHappyOnSnap()
+  {
+    character.SetMouseHappy();
+    yield return new WaitForSeconds(1f);
+    character.SetMouseIdle();
+    coroutine = null;
+  }
   public void PlayNegativeEmoji()
   {
     if (coroutine != null)

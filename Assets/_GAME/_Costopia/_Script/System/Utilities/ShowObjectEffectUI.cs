@@ -9,9 +9,9 @@ public class ShowObjectEffectUI : SonMonoBehaviour
     [SerializeField] private Direction hideDirection = Direction.Down;
     [SerializeField] private float yPositionShow = 2f;
     [SerializeField] private bool fadeImage = true;
-    [ShowIf("fadeImage")][SerializeField] private CanvasGroup canvasGroup;
-    [ShowIf("fadeImage")][SerializeField] private float timeFade = 0.2f;
-    [ShowIf("fadeImage")][SerializeField] private float delayFadeOut = 0.3f;
+    [SerializeField] private CanvasGroup canvasGroup;
+    [SerializeField] private float timeFade = 0.2f;
+    [SerializeField] private float delayFadeOut = 0.3f;
 
 
     [SerializeField] private float timeShow = 0.5f;

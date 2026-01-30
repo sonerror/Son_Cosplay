@@ -11,15 +11,13 @@ public class LevelMaleficent : GamePlayManager
     [SerializeField] private bool isPlayingGame = false;
     [SerializeField] private UIManager uIManager;
     [SerializeField] private GameObject objItem;
-    [SerializeField] private int currentHint = 0;
-    public int CurrentHint => currentHint;
     public bool IsPlayingGame => isPlayingGame;
     private void Update()
     {
-        if (isPlayingGame && Input.GetMouseButtonDown(0))
-        {
-            EventManager.TriggerEvent("ShowBtnInstall");
-        }
+        // if (isPlayingGame && Input.GetMouseButtonDown(0))
+        // {
+        //     EventManager.TriggerEvent("ShowBtnInstall");
+        // }
 
         if (!hadClicked && Input.GetMouseButtonDown(0))
         {
@@ -31,20 +29,21 @@ public class LevelMaleficent : GamePlayManager
     {
         GamePlayScreen uiScreen = UIManager.Ins.GetUI(0);
         uiScreen.logoUI.SetActive(false);
-        objItem.SetActive(true);
         EventManager.TriggerEvent("ShowIconLv");
-        TutorialManager.Ins.enableCountTime = true;
         SoundManager.Ins.PlayFx(FxType.StartGame);
         SoundManager.Ins.PlayBgm();
         DOVirtual.DelayedCall(0.2f, () =>
         {
             isPlayingGame = true;
+            EventManager.TriggerEvent("ShowBtnInstall");
         });
     }
     public override void StartStep()
     {
         slotOn.TurnSlotState(true);
         slotOff.TurnSlotState(false);
+        TutorialManager.Ins.enableCountTime = true;
+
         base.StartStep();
         switch (CurrentStep)
         {
@@ -69,11 +68,17 @@ public class LevelMaleficent : GamePlayManager
         for (int i = 0; i < listThrowObject.Count; i++)
         {
             SonThrowObject obj = listThrowObject[i];
-            obj.OnRemoveItem.AddListener(() =>
+
+            obj.onRemoveItem.AddListener(() =>
             {
-                countThrowObjDone++;
-                currentHint++;
-                if (countThrowObjDone >= listThrowObject.Count)
+                int removedIndex = listThrowObject.IndexOf(obj);
+                if (removedIndex < 0) return;
+
+
+                listThrowObject.RemoveAt(removedIndex);
+                TutorialManager.Ins.TutorialNode.RemoveAt(removedIndex);
+
+                if (listThrowObject.Count == 0)
                 {
                     DoneStep();
                     TryNextStep();

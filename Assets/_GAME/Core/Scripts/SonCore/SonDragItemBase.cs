@@ -7,91 +7,66 @@ namespace sonnv
 {
     public class SonDragItemBase : SonMonoBehaviour
     {
-        [FoldoutGroup("Base")]
         [SerializeField]
         private List<int> useInSteps;
 
-        [FoldoutGroup("Base")]
         [SerializeField]
         private SpriteRenderer sprite;
 
-        [FoldoutGroup("Base")]
         [SerializeField]
         private Collider2D col;
 
-        [FoldoutGroup("Base")]
         [SerializeField]
         private bool useRectTriggerZone;
-        [FoldoutGroup("Base"), HideIf("useRectTriggerZone")]
         [SerializeField]
         private Transform facePoint;
-        [FoldoutGroup("Base"), HideIf("useRectTriggerZone")]
         [SerializeField]
         private float facePointZoneRadius = 2f;
-        [FoldoutGroup("Base"), ShowIf("useRectTriggerZone")]
         [SerializeField]
         private Rect rectTriggerZone;
-        [FoldoutGroup("Base")]
         [SerializeField]
         private float checkStepAfterSecondsInZone = 1f;
 
-        [FoldoutGroup("Base")]
         [SerializeField]
         private bool forceCheckWrongStep;
 
-        [FoldoutGroup("Dragging")]
         [SerializeField]
         private bool isMoveBackOnRelease = true;
 
-        [FoldoutGroup("Dragging")]
         [SerializeField]
-        [ShowIf("isMoveBackOnRelease")]
         private float moveBackTime = 0.3f;
 
-        [FoldoutGroup("Dragging")]
         [SerializeField]
         private int sortingOrderOnDrag = 10;
 
-        [FoldoutGroup("Dragging")]
         [SerializeField]
         private int sortingOrderOnRelease = 1;
 
-        [FoldoutGroup("Dragging")]
         [SerializeField]
         private float dragSlerpSpeed = 30f;
 
-        [FoldoutGroup("Dragging")]
         [SerializeField]
-        private Vector3 dragPosOffset = new(0, 1, 0);
+        private Vector3 dragPosOffset = new Vector3(0f, 1f, 0f);
 
-        [FoldoutGroup("Dragging")]
+
         [SerializeField]
         private bool rotateOnDrag;
 
-        [FoldoutGroup("Dragging")]
-        [ShowIf("rotateOnDrag")]
         [SerializeField]
         private float onDragRotateZ = 10f;
 
-        [FoldoutGroup("Dragging")]
         [SerializeField]
         private bool scaleOnPick;
-        [FoldoutGroup("Dragging")]
         [SerializeField]
-        [ShowIf("scaleOnPick")]
         private Vector3 scaling;
 
-        [FoldoutGroup("Dragging")]
         [SerializeField]
         private AudioClip pickUpSound;
 
-        [FoldoutGroup("Event")]
         public UnityEvent onDragStart;
 
-        [FoldoutGroup("Event")]
         public UnityEvent onDragStop;
 
-        [FoldoutGroup("Event"), ShowIf("isMoveBackOnRelease")]
         public UnityEvent onMoveBackEnd;
 
         private bool _canInteract;

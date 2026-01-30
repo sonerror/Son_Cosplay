@@ -1,33 +1,52 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using Utilities;
 public class SnapObjectScrollUIController : MonoSingleton<SnapObjectScrollUIController>
 {
-    [Header("Prefab References")]
     [SerializeField] private ObjectInScroll objectInScrollPrefab;
     [SerializeField] private SnapObjectUI snapObjectUIPrefab;
 
-    [Header("Parent References")]
     [SerializeField] private Transform scrollContentParent;
     [SerializeField] private ScrollRect scrollRect;
     [SerializeField] private ShowObjectEffectUI showFx;
     [SerializeField] private Text counter;
 
-    [Header("Pool Config")]
     [SerializeField] private int initScrollObjectAmount = 10;
     [SerializeField] private int initSnapObjectAmount = 3;
 
     private MiniPool<ObjectInScroll> _scrollObjectPool;
     private MiniPool<SnapObjectUI> _snapObjectPool;
 
-    private readonly List<ObjectInScroll> _activeScrollObjects = new();
-    private readonly List<SnapObjectUI> _activeSnapObjects = new();
+    private readonly List<ObjectInScroll> _activeScrollObjects = new List<ObjectInScroll>();
+    private readonly List<SnapObjectUI> _activeSnapObjects = new List<SnapObjectUI>();
 
-    private CanvasScaler _mainScaler;
-    private CanvasScaler MainScaler => _mainScaler ??= UIManager.Ins.ScreenContainer.GetComponent<CanvasScaler>();
-    private Camera _mainCamera;
-    private Camera MainCamera => _mainCamera ??= Camera.main;
+private CanvasScaler _mainScaler;
+private CanvasScaler MainScaler
+{
+    get
+    {
+        if (_mainScaler == null)
+        {
+            _mainScaler = UIManager.Ins.ScreenContainer.GetComponent<CanvasScaler>();
+        }
+        return _mainScaler;
+    }
+}
+
+private Camera _mainCamera;
+private Camera MainCamera
+{
+    get
+    {
+        if (_mainCamera == null)
+        {
+            _mainCamera = Camera.main;
+        }
+        return _mainCamera;
+    }
+}
+
     private int _totalSpawn;
 
     #region Init

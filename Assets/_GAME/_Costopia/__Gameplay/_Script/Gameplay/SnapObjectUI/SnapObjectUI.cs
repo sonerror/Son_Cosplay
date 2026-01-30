@@ -11,27 +11,19 @@ public class SnapObjectUI : MonoBehaviour
     [Serializable]
     public class SnapObjectUIConfig
     {
-        [HorizontalGroup("Root", Width = 90)]
-        [HideLabel]
-        [PreviewField(90, ObjectFieldAlignment.Left)]
+
         public Sprite sprite;
 
-        [VerticalGroup("Root/Right")]
-        [LabelText("Scale")]
         public float customScale = 1f;
 
-        [VerticalGroup("Root/Right")]
-        [ListDrawerSettings(
-            NumberOfItemsPerPage = 5,
-            ShowFoldout = true
-        )]
+        public float detalScale = 3f;
+
+
         public List<SnapPointUI> snapPoint;
 
-        [VerticalGroup("Root/Right")]
-        [LabelText("Snap Distance")]
+
         public float distanceAcceptSnap = 2f;
 
-        [VerticalGroup("Root/Right")]
         public AudioClip snapSound;
 
         // Runtime only
@@ -62,11 +54,21 @@ public class SnapObjectUI : MonoBehaviour
     private Vector2 _targetPosition;
     private Vector2 _velocity; // cho SmoothDamp
     [SerializeField] private float followSmooth = 0.05f; // nhỏ = bám chặt, lớn = trễ hơn
-
     private bool _isSetMaterial;
     private Sequence _outlineSequence;
 
-    private RectTransform RectTransform => _rectTransform ??= GetComponent<RectTransform>();
+    private RectTransform RectTransform
+    {
+        get
+        {
+            if (_rectTransform == null)
+            {
+                _rectTransform = GetComponent<RectTransform>();
+            }
+            return _rectTransform;
+        }
+    }
+
 
     public void SetUp(ObjectInScroll objectInScroll, CanvasScaler mainScaler, Camera mainCamera)
     {
@@ -94,8 +96,13 @@ public class SnapObjectUI : MonoBehaviour
         RectTransform.anchoredPosition = _originalCenter;
         RectTransform.SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, _originalSize.x);
         RectTransform.SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical, _originalSize.y);
+        float _customScale = _objectInScroll.Config.customScale;
+        if (UIManager.Ins.IsLandscape)
+        {
+            _customScale = _objectInScroll.Config.customScale * _objectInScroll.Config.detalScale;
+        }
 
-        _targetSize = CalculateWorldProjectedSize(_mainCamera, imgObject.sprite, _objectInScroll.Config.customScale);
+        _targetSize = CalculateWorldProjectedSize(_mainCamera, imgObject.sprite, _customScale);
 
         RectTransform.DOSizeDelta(_targetSize, enlargeDuration).SetEase(Ease.OutCubic);
         FadeOutline(true);
@@ -181,6 +188,15 @@ public class SnapObjectUI : MonoBehaviour
                 _objectInScroll.DespawnSelf();
                 DespawnSelf();
                 SnapObjectScrollUIController.Instance.SnapIncrease++;
+                if (SnapObjectScrollUIController.Instance.CanShowVFX)
+                {
+                    ControllerDoneVFX.Instance.SpawnVFX(snapPoint.Tf);
+                }
+                else
+                {
+                    ControllerDoneVFX.Instance.SpawnSnapVFX(snapPoint.Tf);
+                }
+                GamePlayManager.Ins.PlayPositiveEmojiOnSnap();
             }
         }
         // --- NO SNAP ---
