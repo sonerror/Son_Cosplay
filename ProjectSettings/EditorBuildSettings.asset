@@ -17,5 +17,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/_GAME/SonGame/Level/LevelMaleficent/Level98Maleficent.unity
     guid: 2077614ff24b87c4e8c1ae1c96bbb0a4
+  - enabled: 1
+    path: Assets/_GAME/SonGame/Level/LevelWednesday/LevelWednesday.unity
+    guid: f179b2e204134f64686080ff72c8d5b1
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0

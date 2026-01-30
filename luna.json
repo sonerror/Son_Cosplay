@@ -133,12 +133,13 @@
             ]
         },
         "scenes": [
-            "Assets/_GAME/SonGame/Level/LevelMaleficent/Level98Maleficent.unity"
+            "Assets/_GAME/SonGame/Level/LevelWednesday/LevelWednesday.unity"
         ],
         "disabledScenes": [
             "Assets/Scenes/LevelMain.unity",
             "Assets/_GAME/Levels/LvCosplayKIdol/Level6.unity",
-            "Assets/_GAME/Levels/LvCosplayWenesday/Level53.unity"
+            "Assets/_GAME/Levels/LvCosplayWenesday/Level53.unity",
+            "Assets/_GAME/SonGame/Level/LevelMaleficent/Level98Maleficent.unity"
         ],
         "startupScene": 0,
         "packages": {

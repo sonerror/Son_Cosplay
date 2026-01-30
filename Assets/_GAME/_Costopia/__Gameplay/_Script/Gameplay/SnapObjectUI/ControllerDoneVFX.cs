@@ -6,8 +6,9 @@ public class ControllerDoneVFX : MonoSingleton<ControllerDoneVFX>
     [SerializeField] private SnapVFX snapVfxPrefab;
     [SerializeField] private DoneVFX vfxPrefab;
 
-    private readonly MiniPool<SnapVFX> _snapVfxPool = new();
-    private readonly MiniPool<DoneVFX> _vfxPool = new();
+    private readonly MiniPool<SnapVFX> _snapVfxPool = new MiniPool<SnapVFX>();
+    private readonly MiniPool<DoneVFX> _vfxPool = new MiniPool<DoneVFX>();
+
 
     private void Start()
     {
