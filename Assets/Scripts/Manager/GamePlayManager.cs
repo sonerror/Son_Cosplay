@@ -73,14 +73,12 @@ public class GamePlayManager : Singleton<GamePlayManager>
   private IEnumerator PlayPositiveEmojiCoroutine()
   {
     emojiControl.ShowPositive();
-    character.SetMouseHappy();
     var i = idSoundHappy % 3;
     if (i == 0) SoundManager.Ins.PlayFx(FxType.Happy0);
     else if (i == 1) SoundManager.Ins.PlayFx(FxType.Happy1);
     else SoundManager.Ins.PlayFx(FxType.Happy2);
     idSoundHappy++;
     yield return new WaitForSeconds(1f);
-    character.SetMouseIdle();
     coroutine = null;
   }
   public void PlayPositiveEmojiOnSnap()
@@ -95,9 +93,7 @@ public class GamePlayManager : Singleton<GamePlayManager>
   }
   private IEnumerator PlayHappyOnSnap()
   {
-    character.SetMouseHappy();
     yield return new WaitForSeconds(1f);
-    character.SetMouseIdle();
     coroutine = null;
   }
   public void PlayNegativeEmoji()
@@ -113,7 +109,6 @@ public class GamePlayManager : Singleton<GamePlayManager>
   private IEnumerator PlayNegativeEmojiCoroutine()
   {
     yield return new WaitForSeconds(1f);
-    character.SetMouseAngry();
     emojiControl.ShowNegative();
     var i = idSoundAngry % 3;
     if (i == 0) SoundManager.Ins.PlayFx(FxType.Angry0);
@@ -121,7 +116,6 @@ public class GamePlayManager : Singleton<GamePlayManager>
     else SoundManager.Ins.PlayFx(FxType.Angry2);
     idSoundAngry++;
     yield return new WaitForSeconds(0.65f);
-    character.SetMouseIdle();
     coroutine = null;
   }
 

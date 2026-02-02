@@ -14,6 +14,7 @@ namespace sonnv
     {
         [SerializeField] private SpriteRenderer sr;
         [SerializeField] private Collider2D col;
+        public Collider2D Col => col;
         [SerializeField] private Rigidbody2D rb;
 
         [SerializeField] private bool hasAlternativeSprite;
@@ -23,13 +24,11 @@ namespace sonnv
         [SerializeField] private AudioData pickUpSound;
         [SerializeField] private Vector3 offsetOnPick;
 
-       public UnityEvent onMouseDown;
+        public UnityEvent onMouseDown;
         public UnityEvent onMouseUp;
         public UnityEvent onRemoveItem;
         public UnityEvent onDone;
 
-        public CharacterControl characterStart;
-        public List<SlotAttachmentPair> slotDeactiveClick = new List<SlotAttachmentPair>();
 
         private bool _canDestroy = true;
         private bool _isDone;
@@ -60,7 +59,6 @@ namespace sonnv
             _startPos.z = 0;
             _isDragging = true;
 
-            characterStart.TurnOffSlotsAttachment(slotDeactiveClick);
 
             if (pickUpSound.clip != null)
                 SoundManager.PlaySFX(pickUpSound.clip, pickUpSound.volume);
@@ -97,7 +95,6 @@ namespace sonnv
 
             if (DistanceToInSqrVec2(_startPos) > distanceChangeToThrow)
             {
-                characterStart.TurnOffSlotsAttachment(slotDeactiveClick);
                 Tf.SetParent(null);
 
                 rb.bodyType = RigidbodyType2D.Dynamic;
@@ -116,7 +113,6 @@ namespace sonnv
             }
             else
             {
-                characterStart.TurnOnSlotsAttachment(slotDeactiveClick);
                 Tf.position = _startPos;
 
                 if (hasAlternativeSprite)
