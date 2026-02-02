@@ -2,7 +2,7 @@
     "version": "7.0.0",
     "projectId": "f42e7ff96e4545544bb6cd68f51ab634",
     "applicationID": 34683,
-    "creativeName": "R1_Cosplaydom_ver1",
+    "creativeName": "R1_Cosplaydom_Ver1_GG",
     "pgServer": "EU",
     "window": {
         "‐⁏": true
@@ -3083,10 +3083,6 @@
                 "excluded": true
             },
             {
-                "name": "UnityEngine.AnimationState",
-                "excluded": true
-            },
-            {
                 "name": "UnityEngine.AnimatorClipInfo",
                 "excluded": true
             },
@@ -3296,10 +3292,6 @@
             },
             {
                 "name": "UnityEngine.PropertyName",
-                "excluded": true
-            },
-            {
-                "name": "UnityEngine.Random",
                 "excluded": true
             },
             {
@@ -3683,10 +3675,6 @@
                 "excluded": true
             },
             {
-                "name": "UnityEngine.Collision2D",
-                "excluded": true
-            },
-            {
                 "name": "UnityEngine.ContactPoint",
                 "excluded": true
             },
@@ -3792,10 +3780,6 @@
             },
             {
                 "name": "Luna.Unity.DTO.UnityEngine.Components.TrailRenderer",
-                "excluded": true
-            },
-            {
-                "name": "UnityEngine.Animation",
                 "excluded": true
             },
             {
@@ -5036,7 +5020,7 @@
             },
             {
                 "name": "UnityEngine.AnimationState.FadeType",
-                "excluded": true
+                "excluded": false
             },
             {
                 "name": "UnityEngine.AnimatorCullingMode",
@@ -5832,7 +5816,7 @@
             },
             {
                 "name": "UnityEngine.ParticleSystemStopBehavior",
-                "excluded": true
+                "excluded": false
             },
             {
                 "name": "UnityEngine.ParticleSystemSubEmitterProperties",
@@ -14878,7 +14862,7 @@
                     },
                     {
                         "name": "Sample",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "Next",
@@ -14886,7 +14870,7 @@
                     },
                     {
                         "name": "Next$2",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "Next$1",
@@ -19182,7 +19166,7 @@
                     },
                     {
                         "name": "OnDidApplyAnimationProperties",
-                        "excluded": true
+                        "excluded": false
                     }
                 ]
             },
@@ -24145,6 +24129,14 @@
                     {
                         "name": "ShowClockTimer",
                         "excluded": true
+                    },
+                    {
+                        "name": "PlayPositiveEmojiOnSnap",
+                        "excluded": false
+                    },
+                    {
+                        "name": "PlayHappyOnSnap",
+                        "excluded": false
                     }
                 ]
             },
@@ -24252,6 +24244,10 @@
                     },
                     {
                         "name": "PlayFxAfterTime",
+                        "excluded": true
+                    },
+                    {
+                        "name": "PlaySfx",
                         "excluded": true
                     }
                 ]
@@ -27634,7 +27630,7 @@
                     },
                     {
                         "name": "main#get",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "emission#get",
@@ -37002,7 +36998,7 @@
                     },
                     {
                         "name": "gotoStore",
-                        "excluded": true
+                        "excluded": false
                     }
                 ]
             },
@@ -42536,7 +42532,7 @@
                     },
                     {
                         "name": "CanShowVFX#get",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "init",
@@ -44109,6 +44105,340 @@
                         "excluded": false
                     }
                 ]
+            },
+            {
+                "className": "ControllerDoneVFX",
+                "staticMethods": [],
+                "instanceMethods": [
+                    {
+                        "name": "inherits",
+                        "excluded": false
+                    },
+                    {
+                        "name": "init",
+                        "excluded": false
+                    },
+                    {
+                        "name": "Start",
+                        "excluded": false
+                    },
+                    {
+                        "name": "SpawnSnapVFX",
+                        "excluded": false
+                    },
+                    {
+                        "name": "SpawnVFX",
+                        "excluded": false
+                    }
+                ]
+            },
+            {
+                "className": "UnityEngine.AnimationState",
+                "staticMethods": [],
+                "instanceMethods": [
+                    {
+                        "name": "length#get",
+                        "excluded": false
+                    },
+                    {
+                        "name": "name#get",
+                        "excluded": true
+                    },
+                    {
+                        "name": "name#set",
+                        "excluded": true
+                    },
+                    {
+                        "name": "normalizedTime#get",
+                        "excluded": true
+                    },
+                    {
+                        "name": "normalizedTime#set",
+                        "excluded": true
+                    },
+                    {
+                        "name": "init",
+                        "excluded": false
+                    },
+                    {
+                        "name": "ctor",
+                        "excluded": true
+                    },
+                    {
+                        "name": "$ctor1",
+                        "excluded": false
+                    },
+                    {
+                        "name": "AddTime",
+                        "excluded": false
+                    },
+                    {
+                        "name": "Rewind",
+                        "excluded": false
+                    },
+                    {
+                        "name": "Stoped",
+                        "excluded": false
+                    },
+                    {
+                        "name": "Fade",
+                        "excluded": true
+                    }
+                ]
+            },
+            {
+                "className": "UnityEngine.Animation",
+                "staticMethods": [],
+                "instanceMethods": [
+                    {
+                        "name": "clip#get",
+                        "excluded": false
+                    },
+                    {
+                        "name": "clip#set",
+                        "excluded": false
+                    },
+                    {
+                        "name": "clips#get",
+                        "excluded": true
+                    },
+                    {
+                        "name": "clips#set",
+                        "excluded": false
+                    },
+                    {
+                        "name": "wrapMode#get",
+                        "excluded": false
+                    },
+                    {
+                        "name": "wrapMode#set",
+                        "excluded": false
+                    },
+                    {
+                        "name": "init",
+                        "excluded": false
+                    },
+                    {
+                        "name": "ctor",
+                        "excluded": false
+                    },
+                    {
+                        "name": "getItem",
+                        "excluded": true
+                    },
+                    {
+                        "name": "IsPlaying",
+                        "excluded": true
+                    },
+                    {
+                        "name": "GetEnumerator",
+                        "excluded": true
+                    },
+                    {
+                        "name": "AddClip",
+                        "excluded": true
+                    },
+                    {
+                        "name": "Play",
+                        "excluded": false
+                    },
+                    {
+                        "name": "Play$1",
+                        "excluded": true
+                    },
+                    {
+                        "name": "UpdateClipWrapMode",
+                        "excluded": false
+                    },
+                    {
+                        "name": "Stop",
+                        "excluded": false
+                    },
+                    {
+                        "name": "Stop$1",
+                        "excluded": true
+                    },
+                    {
+                        "name": "Rewind",
+                        "excluded": false
+                    },
+                    {
+                        "name": "AddTime",
+                        "excluded": false
+                    },
+                    {
+                        "name": "TriggerEvents",
+                        "excluded": false
+                    },
+                    {
+                        "name": "Update",
+                        "excluded": true
+                    },
+                    {
+                        "name": "Sample",
+                        "excluded": false
+                    },
+                    {
+                        "name": "OnEnable",
+                        "excluded": false
+                    },
+                    {
+                        "name": "CrossFade",
+                        "excluded": true
+                    }
+                ]
+            },
+            {
+                "className": "DoneVFX",
+                "staticMethods": [],
+                "instanceMethods": [
+                    {
+                        "name": "Show",
+                        "excluded": false
+                    },
+                    {
+                        "name": "WaitAnimEnd",
+                        "excluded": false
+                    }
+                ]
+            },
+            {
+                "className": "SnapVFX",
+                "staticMethods": [],
+                "instanceMethods": [
+                    {
+                        "name": "Show",
+                        "excluded": false
+                    },
+                    {
+                        "name": "WaitAnimEnd",
+                        "excluded": false
+                    }
+                ]
+            },
+            {
+                "className": "UnityEngine.Collision2D",
+                "staticMethods": [],
+                "instanceMethods": [
+                    {
+                        "name": "fixture#get",
+                        "excluded": true
+                    },
+                    {
+                        "name": "otherFixture#get",
+                        "excluded": true
+                    },
+                    {
+                        "name": "collider#get",
+                        "excluded": true
+                    },
+                    {
+                        "name": "otherCollider#get",
+                        "excluded": true
+                    },
+                    {
+                        "name": "rigidbody#get",
+                        "excluded": true
+                    },
+                    {
+                        "name": "otherRigidbody#get",
+                        "excluded": true
+                    },
+                    {
+                        "name": "gameObject#get",
+                        "excluded": true
+                    },
+                    {
+                        "name": "transform#get",
+                        "excluded": true
+                    },
+                    {
+                        "name": "contactCount#get",
+                        "excluded": true
+                    },
+                    {
+                        "name": "relativeVelocity#get",
+                        "excluded": true
+                    },
+                    {
+                        "name": "contacts#get",
+                        "excluded": true
+                    },
+                    {
+                        "name": "ctor",
+                        "excluded": false
+                    },
+                    {
+                        "name": "ConfigureFor",
+                        "excluded": false
+                    },
+                    {
+                        "name": "GetContact",
+                        "excluded": true
+                    },
+                    {
+                        "name": "GetContactAt",
+                        "excluded": true
+                    },
+                    {
+                        "name": "GetContacts$1",
+                        "excluded": true
+                    },
+                    {
+                        "name": "GetContacts",
+                        "excluded": true
+                    }
+                ]
+            },
+            {
+                "className": "UnityEngine.Random",
+                "staticMethods": [],
+                "instanceMethods": [
+                    {
+                        "name": "value#get",
+                        "excluded": true
+                    },
+                    {
+                        "name": "onUnitSphere#get",
+                        "excluded": true
+                    },
+                    {
+                        "name": "insideUnitSphere#get",
+                        "excluded": true
+                    },
+                    {
+                        "name": "state#get",
+                        "excluded": true
+                    },
+                    {
+                        "name": "state#set",
+                        "excluded": true
+                    },
+                    {
+                        "name": "insideUnitCircle#get",
+                        "excluded": true
+                    },
+                    {
+                        "name": "rotation#get",
+                        "excluded": true
+                    },
+                    {
+                        "name": "SpherePoint",
+                        "excluded": true
+                    },
+                    {
+                        "name": "Range$1",
+                        "excluded": true
+                    },
+                    {
+                        "name": "Range",
+                        "excluded": false
+                    },
+                    {
+                        "name": "InitState",
+                        "excluded": true
+                    }
+                ]
             }
         ],
         "stubberDataList": [],
@@ -44493,12 +44823,32 @@
                     {
                         "channels": 1,
                         "startTime": "00:00.000",
-                        "endTime": "00:17.393",
-                        "lengthInSeconds": 17.39299964904785,
+                        "endTime": "00:15.400",
+                        "lengthInSeconds": 15.399999618530274,
                         "bitrate": 128,
                         "script": "",
                         "ext": "",
                         "name": "Assets/_GAME/Levels/LvCosplayKIdol/Sound/lv173_put 2.ogg"
+                    },
+                    {
+                        "channels": 1,
+                        "startTime": "00:00.000",
+                        "endTime": "00:15.400",
+                        "lengthInSeconds": 15.399999618530274,
+                        "bitrate": 64,
+                        "script": "",
+                        "ext": "",
+                        "name": "Assets/_GAME/_Costopia/_Audio/SFX/CharacterSFX/Base_Woman/Pick1.mp3"
+                    },
+                    {
+                        "channels": 1,
+                        "startTime": "00:00.000",
+                        "endTime": "00:00.000",
+                        "lengthInSeconds": 0.0,
+                        "bitrate": 64,
+                        "script": "",
+                        "ext": "",
+                        "name": "Assets/_GAME/SonGame/Level/LevelMaleficent/Audio/Boots1.mp3"
                     }
                 ]
             },
