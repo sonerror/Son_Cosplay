@@ -456,7 +456,7 @@ MonoBehaviour:
   alternativeSprite: {fileID: 0}
   distanceChangeToThrow: 1
   pickUpSound:
-    clip: {fileID: 8300000, guid: ea572c334ae25c34192bc9304b9c5085, type: 3}
+    clip: {fileID: 8300000, guid: c32a859b767412b4c8fd79e503d7f552, type: 3}
     volume: 1
   offsetOnPick: {x: 0, y: 0, z: 0}
   onMouseDown:
@@ -2143,7 +2143,7 @@ MonoBehaviour:
   alternativeSprite: {fileID: 0}
   distanceChangeToThrow: 1
   pickUpSound:
-    clip: {fileID: 8300000, guid: ea572c334ae25c34192bc9304b9c5085, type: 3}
+    clip: {fileID: 8300000, guid: c32a859b767412b4c8fd79e503d7f552, type: 3}
     volume: 1
   offsetOnPick: {x: 0, y: 0, z: 0}
   onMouseDown:
@@ -2672,14 +2672,14 @@ MonoBehaviour:
     snapPoint:
     - {fileID: 45540980}
     distanceAcceptSnap: 10
-    snapSound: {fileID: 8300000, guid: ea572c334ae25c34192bc9304b9c5085, type: 3}
+    snapSound: {fileID: 8300000, guid: da9f7693ee29d3e4ebd6b05d1a097fcf, type: 3}
   - sprite: {fileID: 21300000, guid: 4adf72cacb7793a41babb79d1b44633b, type: 3}
     customScale: 1
     detalScale: 4
     snapPoint:
     - {fileID: 1753126515}
     distanceAcceptSnap: 10
-    snapSound: {fileID: 8300000, guid: ea572c334ae25c34192bc9304b9c5085, type: 3}
+    snapSound: {fileID: 8300000, guid: da9f7693ee29d3e4ebd6b05d1a097fcf, type: 3}
   - sprite: {fileID: 21300000, guid: 49bf9fe5602e1c0409b85e3ef47c260e, type: 3}
     customScale: 1
     detalScale: 4
@@ -2693,14 +2693,14 @@ MonoBehaviour:
     snapPoint:
     - {fileID: 516486001}
     distanceAcceptSnap: 10
-    snapSound: {fileID: 8300000, guid: ea572c334ae25c34192bc9304b9c5085, type: 3}
+    snapSound: {fileID: 8300000, guid: c0d32e2a6a070ee4988965e41c90c50b, type: 3}
   - sprite: {fileID: 21300000, guid: 6cd5f2a8682ad3342af968f21ac48d7a, type: 3}
     customScale: 1
     detalScale: 4
     snapPoint:
     - {fileID: 1253592747}
     distanceAcceptSnap: 10
-    snapSound: {fileID: 8300000, guid: ea572c334ae25c34192bc9304b9c5085, type: 3}
+    snapSound: {fileID: 8300000, guid: da9f7693ee29d3e4ebd6b05d1a097fcf, type: 3}
   - sprite: {fileID: 21300000, guid: b095bb3bddba3e34493e763275686780, type: 3}
     customScale: 1.2
     detalScale: 4
@@ -2735,14 +2735,14 @@ MonoBehaviour:
     snapPoint:
     - {fileID: 1000656923}
     distanceAcceptSnap: 10
-    snapSound: {fileID: 8300000, guid: ea572c334ae25c34192bc9304b9c5085, type: 3}
+    snapSound: {fileID: 8300000, guid: c32a859b767412b4c8fd79e503d7f552, type: 3}
   - sprite: {fileID: 21300000, guid: 8ae7efe8a99ca7c44be336ba30cf0083, type: 3}
     customScale: 1.1
     detalScale: 4
     snapPoint:
     - {fileID: 1941599445}
     distanceAcceptSnap: 10
-    snapSound: {fileID: 8300000, guid: ea572c334ae25c34192bc9304b9c5085, type: 3}
+    snapSound: {fileID: 8300000, guid: c32a859b767412b4c8fd79e503d7f552, type: 3}
   - sprite: {fileID: 21300000, guid: 8f17073ded34c9c46ba8784f730441aa, type: 3}
     customScale: 2
     detalScale: 4
@@ -5088,7 +5088,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: -19
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
+  m_Sprite: {fileID: 7482667652216324306, guid: 261569ec93a1b544891e645d05458809, type: 3}
   m_Color: {r: 0.7607844, g: 0.7254902, b: 0.909804, a: 1}
   m_FlipX: 0
   m_FlipY: 0
