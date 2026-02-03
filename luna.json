@@ -2,7 +2,7 @@
     "version": "7.0.0",
     "projectId": "f42e7ff96e4545544bb6cd68f51ab634",
     "applicationID": 34683,
-    "creativeName": "R1_Cosplaydom_ver1",
+    "creativeName": "R1_Cosplaydom_ver5",
     "pgServer": "EU",
     "window": {
         "‐⁏": true
@@ -3084,10 +3084,6 @@
                 "excluded": true
             },
             {
-                "name": "UnityEngine.AnimationState",
-                "excluded": true
-            },
-            {
                 "name": "UnityEngine.AnimatorClipInfo",
                 "excluded": true
             },
@@ -3149,10 +3145,6 @@
             },
             {
                 "name": "UnityEngine.DefaultExecutionOrder",
-                "excluded": true
-            },
-            {
-                "name": "UnityEngine.Experimental.Rendering.GraphicsFormatUtility",
                 "excluded": true
             },
             {
@@ -3241,10 +3233,6 @@
             },
             {
                 "name": "UnityEngine.LineRenderer.Parameters",
-                "excluded": true
-            },
-            {
-                "name": "UnityEngine.MipmapLimitDescriptor",
                 "excluded": true
             },
             {
@@ -3381,10 +3369,6 @@
             },
             {
                 "name": "UnityEngine.StaticBatchingUtility",
-                "excluded": true
-            },
-            {
-                "name": "UnityEngine.SystemInfo",
                 "excluded": true
             },
             {
@@ -3793,10 +3777,6 @@
             },
             {
                 "name": "Luna.Unity.DTO.UnityEngine.Components.TrailRenderer",
-                "excluded": true
-            },
-            {
-                "name": "UnityEngine.Animation",
                 "excluded": true
             },
             {
@@ -5037,7 +5017,7 @@
             },
             {
                 "name": "UnityEngine.AnimationState.FadeType",
-                "excluded": true
+                "excluded": false
             },
             {
                 "name": "UnityEngine.AnimatorCullingMode",
@@ -5833,7 +5813,7 @@
             },
             {
                 "name": "UnityEngine.ParticleSystemStopBehavior",
-                "excluded": true
+                "excluded": false
             },
             {
                 "name": "UnityEngine.ParticleSystemSubEmitterProperties",
@@ -6509,7 +6489,7 @@
             },
             {
                 "name": "UnityEngine.SpriteMeshType",
-                "excluded": true
+                "excluded": false
             },
             {
                 "name": "UnityEngine.SpritePackingMode",
@@ -6685,7 +6665,7 @@
             },
             {
                 "name": "UnityEngine.TextureWrapMode",
-                "excluded": true
+                "excluded": false
             },
             {
                 "name": "UnityEngine.Tilemaps.TileFlags",
@@ -7672,10 +7652,6 @@
                 "excluded": true
             },
             {
-                "name": "UnityEngine.UI.LayoutElement",
-                "excluded": true
-            },
-            {
                 "name": "UnityEngine.UI.ToggleGroup",
                 "excluded": true
             },
@@ -7761,7 +7737,7 @@
             },
             {
                 "name": "UnityEngine.UI.ILayoutIgnorer",
-                "excluded": true
+                "excluded": false
             },
             {
                 "name": "UnityEngine.UI.Image.FillMethod",
@@ -8420,10 +8396,6 @@
                 "excluded": true
             },
             {
-                "name": "DTPUtils",
-                "excluded": true
-            },
-            {
                 "name": "HideSprite",
                 "excluded": true
             },
@@ -8676,15 +8648,7 @@
                 "excluded": true
             },
             {
-                "name": "HoangHH.OnTransformGoToAffectZone",
-                "excluded": true
-            },
-            {
                 "name": "HoangHH.OnTransformMoveInAffectZone",
-                "excluded": true
-            },
-            {
-                "name": "HoangHH.ShowObjectEffect",
                 "excluded": true
             },
             {
@@ -8728,19 +8692,7 @@
                 "excluded": true
             },
             {
-                "name": "sonnv.SonDragItemBase",
-                "excluded": true
-            },
-            {
                 "name": "sonnv.SonEffectShowObject",
-                "excluded": true
-            },
-            {
-                "name": "sonnv.SonSnapObject",
-                "excluded": true
-            },
-            {
-                "name": "sonnv.SonSnapPoint",
                 "excluded": true
             },
             {
@@ -8989,7 +8941,7 @@
             },
             {
                 "name": "HoangHH.Direction",
-                "excluded": true
+                "excluded": false
             },
             {
                 "name": "HoangHH.ShowObjectSequence.ShowObjectSequenceItem",
@@ -9013,7 +8965,7 @@
             },
             {
                 "name": "sonnv.SonISnapObject",
-                "excluded": true
+                "excluded": false
             },
             {
                 "name": "Spine.SequenceMode",
@@ -9070,6 +9022,14 @@
             {
                 "name": "Spine.Unity.IHasSkeletonRenderer",
                 "excluded": true
+            },
+            {
+                "name": "GizmoUtility",
+                "excluded": true
+            },
+            {
+                "name": "ShakeObject",
+                "excluded": true
             }
         ],
         "unusedMethods": [
@@ -9113,7 +9073,7 @@
                 "instanceMethods": [
                     {
                         "name": "$is",
-                        "excluded": true
+                        "excluded": false
                     }
                 ]
             },
@@ -16019,7 +15979,7 @@
                     },
                     {
                         "name": "MinMaxRect",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "NormalizedToPoint",
@@ -16147,7 +16107,7 @@
                     },
                     {
                         "name": "Contains",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "equals",
@@ -17381,7 +17341,7 @@
                     },
                     {
                         "name": "filterMode#set",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "wrapMode#get",
@@ -17389,7 +17349,7 @@
                     },
                     {
                         "name": "wrapMode#set",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "wrapModeU#get",
@@ -17421,7 +17381,7 @@
                     },
                     {
                         "name": "isReadable#get",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "ctor",
@@ -17441,7 +17401,7 @@
                     },
                     {
                         "name": "ValidateFormat$2",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "ValidateFormat",
@@ -17713,7 +17673,7 @@
                     },
                     {
                         "name": "TransformPoint$1",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "TransformPoint",
@@ -17801,7 +17761,7 @@
                     },
                     {
                         "name": "SetAsFirstSibling",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "GetEnumerator",
@@ -18205,7 +18165,7 @@
                     },
                     {
                         "name": "hdr#get",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "hdr#set",
@@ -18221,7 +18181,7 @@
                     },
                     {
                         "name": "clearFlags#get",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "clearFlags#set",
@@ -18305,7 +18265,7 @@
                     },
                     {
                         "name": "targetTexture#get",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "targetTexture#set",
@@ -18317,7 +18277,7 @@
                     },
                     {
                         "name": "depth#get",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "depth#set",
@@ -18337,7 +18297,7 @@
                     },
                     {
                         "name": "rect#get",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "rect#set",
@@ -18923,7 +18883,7 @@
                     },
                     {
                         "name": "$ctor18",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "$ctor14",
@@ -18951,7 +18911,7 @@
                     },
                     {
                         "name": "$ctor11",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "$ctor1",
@@ -18979,7 +18939,7 @@
                     },
                     {
                         "name": "GetPixels",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "GetPixels$1",
@@ -18987,7 +18947,7 @@
                     },
                     {
                         "name": "GetPixels$2",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "SetPixel",
@@ -18995,7 +18955,7 @@
                     },
                     {
                         "name": "SetPixels$1",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "SetPixels",
@@ -19023,7 +18983,7 @@
                     },
                     {
                         "name": "Apply",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "ReadPixels",
@@ -19051,7 +19011,7 @@
                     },
                     {
                         "name": "ValidateFormat$4",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "ValidateFormat$3",
@@ -19703,7 +19663,7 @@
                     },
                     {
                         "name": "raycastTarget#set",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "color#get",
@@ -19731,11 +19691,11 @@
                     },
                     {
                         "name": "OnPopulateMesh",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "GetPixelAdjustedRect",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "OnSelect",
@@ -20731,7 +20691,7 @@
                     },
                     {
                         "name": "fontSharedMaterial#get",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "fontSharedMaterial#set",
@@ -20915,7 +20875,7 @@
                     },
                     {
                         "name": "isUsingBold#get",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "horizontalAlignment#get",
@@ -21043,7 +21003,7 @@
                     },
                     {
                         "name": "extraPadding#get",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "extraPadding#set",
@@ -22117,7 +22077,7 @@
                     },
                     {
                         "name": "missingGlyphCharacter#get",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "missingGlyphCharacter#set",
@@ -22125,11 +22085,11 @@
                     },
                     {
                         "name": "warningsDisabled#get",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "defaultFontAsset#get",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "defaultFontAssetPath#get",
@@ -22169,11 +22129,11 @@
                     },
                     {
                         "name": "matchMaterialPreset#get",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "defaultSpriteAsset#get",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "defaultSpriteAssetPath#get",
@@ -22451,7 +22411,7 @@
                     },
                     {
                         "name": "spriteCharacterLookupTable#get",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "spriteCharacterLookupTable#set",
@@ -22471,7 +22431,7 @@
                     },
                     {
                         "name": "UpdateLookupTables",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "GetSpriteIndexFromHashcode",
@@ -24146,6 +24106,14 @@
                     {
                         "name": "ShowClockTimer",
                         "excluded": true
+                    },
+                    {
+                        "name": "PlayPositiveEmojiOnSnap",
+                        "excluded": true
+                    },
+                    {
+                        "name": "PlayHappyOnSnap",
+                        "excluded": true
                     }
                 ]
             },
@@ -24253,6 +24221,10 @@
                     },
                     {
                         "name": "PlayFxAfterTime",
+                        "excluded": true
+                    },
+                    {
+                        "name": "PlaySfx",
                         "excluded": true
                     }
                 ]
@@ -26471,7 +26443,7 @@
                     },
                     {
                         "name": "name#get",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "name#set",
@@ -26723,11 +26695,11 @@
                     },
                     {
                         "name": "SetTexture$1",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "SetTexture",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "GetTextureScale$1",
@@ -26847,7 +26819,7 @@
                     },
                     {
                         "name": "ComputeCRC",
-                        "excluded": true
+                        "excluded": false
                     }
                 ]
             },
@@ -27235,7 +27207,7 @@
                     },
                     {
                         "name": "Create$3",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "Create$4",
@@ -27243,7 +27215,7 @@
                     },
                     {
                         "name": "Create$5",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "name#get",
@@ -27251,7 +27223,7 @@
                     },
                     {
                         "name": "pixelsPerUnit#get",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "packed#get",
@@ -27311,7 +27283,7 @@
                     },
                     {
                         "name": "pivot#get",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "associatedAlphaSplitTexture#get",
@@ -27361,15 +27333,15 @@
                     },
                     {
                         "name": "isTrigger#get",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "isTrigger#set",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "usedByEffector#get",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "usedByEffector#set",
@@ -27393,7 +27365,7 @@
                     },
                     {
                         "name": "offset#get",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "offset#set",
@@ -27635,7 +27607,7 @@
                     },
                     {
                         "name": "main#get",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "emission#get",
@@ -28919,7 +28891,7 @@
                     },
                     {
                         "name": "size#get",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "size#set",
@@ -29675,15 +29647,15 @@
                     },
                     {
                         "name": "AddTriangle",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "AddVert",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "AddVert$1",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "AddVert$2",
@@ -29695,7 +29667,7 @@
                     },
                     {
                         "name": "Clear",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "AddUIVertexQuad",
@@ -30243,7 +30215,7 @@
                     },
                     {
                         "name": "eventMask#get",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "eventMask#set",
@@ -30661,7 +30633,7 @@
                     },
                     {
                         "name": "GetSpriteCharacterFromSpriteAsset",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "GetSpriteCharacterFromSpriteAsset_Internal",
@@ -30823,7 +30795,7 @@
                     },
                     {
                         "name": "getDefaultValue",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "$ctor2",
@@ -30843,7 +30815,7 @@
                     },
                     {
                         "name": "ClearUnusedVertices",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "ClearUnusedVertices$1",
@@ -30907,7 +30879,7 @@
                 "instanceMethods": [
                     {
                         "name": "AddSubTextObject",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "fontAsset#get",
@@ -30939,7 +30911,7 @@
                     },
                     {
                         "name": "sharedMaterial#get",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "sharedMaterial#set",
@@ -30951,7 +30923,7 @@
                     },
                     {
                         "name": "fallbackMaterial#set",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "fallbackSourceMaterial#get",
@@ -30959,11 +30931,11 @@
                     },
                     {
                         "name": "fallbackSourceMaterial#set",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "materialForRendering#get",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "isDefaultMaterial#get",
@@ -30975,7 +30947,7 @@
                     },
                     {
                         "name": "padding#get",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "padding#set",
@@ -30983,7 +30955,7 @@
                     },
                     {
                         "name": "mesh#get",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "mesh#set",
@@ -30991,15 +30963,15 @@
                     },
                     {
                         "name": "textComponent#get",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "OnEnable",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "OnDisable",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "OnDestroy",
@@ -31011,11 +30983,11 @@
                     },
                     {
                         "name": "GetModifiedMaterial",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "GetPaddingForMaterial",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "GetPaddingForMaterial$1",
@@ -31031,7 +31003,7 @@
                     },
                     {
                         "name": "SetVerticesDirty",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "SetLayoutDirty",
@@ -31039,7 +31011,7 @@
                     },
                     {
                         "name": "SetMaterialDirty",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "SetPivotDirty",
@@ -31067,11 +31039,11 @@
                     },
                     {
                         "name": "UpdateMaterial",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "RecalculateClipping",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "GetMaterial",
@@ -31091,7 +31063,7 @@
                     },
                     {
                         "name": "SetSharedMaterial",
-                        "excluded": true
+                        "excluded": false
                     }
                 ]
             },
@@ -31805,7 +31777,7 @@
                     },
                     {
                         "name": "fallbackFontAssetTable#get",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "fallbackFontAssetTable#set",
@@ -34948,40 +34920,6 @@
                 ]
             },
             {
-                "className": "HoangHH.FillCircleBar",
-                "staticMethods": [],
-                "instanceMethods": [
-                    {
-                        "name": "init",
-                        "excluded": false
-                    },
-                    {
-                        "name": "Fill",
-                        "excluded": false
-                    },
-                    {
-                        "name": "Show",
-                        "excluded": false
-                    },
-                    {
-                        "name": "Hide",
-                        "excluded": false
-                    },
-                    {
-                        "name": "IsShow#get",
-                        "excluded": true
-                    },
-                    {
-                        "name": "SetUp",
-                        "excluded": true
-                    },
-                    {
-                        "name": "ReFill",
-                        "excluded": true
-                    }
-                ]
-            },
-            {
                 "className": "HoangHH.TapOpenerSingleUse",
                 "staticMethods": [],
                 "instanceMethods": [
@@ -37003,7 +36941,7 @@
                     },
                     {
                         "name": "gotoStore",
-                        "excluded": true
+                        "excluded": false
                     }
                 ]
             },
@@ -39759,11 +39697,11 @@
                     },
                     {
                         "name": "Pause",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "Play",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "PlayBackwards",
@@ -40219,7 +40157,7 @@
                     },
                     {
                         "name": "EasedValue",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "EasedValue$1",
@@ -40355,7 +40293,7 @@
                     },
                     {
                         "name": "SetLoops$1",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "SetEase$4",
@@ -40399,7 +40337,7 @@
                     },
                     {
                         "name": "OnStart",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "OnPlay",
@@ -40495,7 +40433,7 @@
                     },
                     {
                         "name": "SetRelative",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "SetRelative$1",
@@ -41117,7 +41055,7 @@
                     },
                     {
                         "name": "DOMoveY",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "DOMoveZ",
@@ -41205,7 +41143,7 @@
                     },
                     {
                         "name": "DOLocalJump",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "DOPath$1",
@@ -41387,7 +41325,7 @@
                     },
                     {
                         "name": "SetRelativeEndValue",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "GetSpeedBasedDuration",
@@ -41601,11 +41539,11 @@
                     },
                     {
                         "name": "Pause",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "Play",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "PlayBackwards",
@@ -41681,7 +41619,7 @@
                     },
                     {
                         "name": "ElapsedPercentage",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "ElapsedDirectionalPercentage",
@@ -41705,7 +41643,7 @@
                     },
                     {
                         "name": "IsPlaying",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "Loops",
@@ -41791,11 +41729,11 @@
                     },
                     {
                         "name": "GetFallbackMaterial",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "AddFallbackMaterialReference",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "RemoveFallbackMaterialReference",
@@ -41803,11 +41741,11 @@
                     },
                     {
                         "name": "CleanupFallbackMaterials",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "ReleaseFallbackMaterial",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "CopyMaterialPresetProperties",
@@ -42395,7 +42333,7 @@
                     },
                     {
                         "name": "hashCode#get",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "$ctor3",
@@ -43334,16 +43272,6 @@
                 ]
             },
             {
-                "className": "HoangHH.UI.SafeArea",
-                "staticMethods": [],
-                "instanceMethods": [
-                    {
-                        "name": "Awake",
-                        "excluded": false
-                    }
-                ]
-            },
-            {
                 "className": "sonnv.SonMonoBehaviour",
                 "staticMethods": [],
                 "instanceMethods": [
@@ -43353,7 +43281,7 @@
                     },
                     {
                         "name": "DistanceToInSqrVec2",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "DistanceToInSqrVec2$1",
@@ -43675,6 +43603,10 @@
                     },
                     {
                         "name": "OnPointerUp",
+                        "excluded": false
+                    },
+                    {
+                        "name": "Col#get",
                         "excluded": false
                     }
                 ]
@@ -44110,6 +44042,1210 @@
                         "excluded": false
                     }
                 ]
+            },
+            {
+                "className": "ControllerDoneVFX",
+                "staticMethods": [],
+                "instanceMethods": [
+                    {
+                        "name": "inherits",
+                        "excluded": false
+                    },
+                    {
+                        "name": "init",
+                        "excluded": false
+                    },
+                    {
+                        "name": "Start",
+                        "excluded": false
+                    },
+                    {
+                        "name": "SpawnSnapVFX",
+                        "excluded": false
+                    },
+                    {
+                        "name": "SpawnVFX",
+                        "excluded": true
+                    }
+                ]
+            },
+            {
+                "className": "UnityEngine.AnimationState",
+                "staticMethods": [],
+                "instanceMethods": [
+                    {
+                        "name": "length#get",
+                        "excluded": true
+                    },
+                    {
+                        "name": "name#get",
+                        "excluded": true
+                    },
+                    {
+                        "name": "name#set",
+                        "excluded": true
+                    },
+                    {
+                        "name": "normalizedTime#get",
+                        "excluded": true
+                    },
+                    {
+                        "name": "normalizedTime#set",
+                        "excluded": true
+                    },
+                    {
+                        "name": "init",
+                        "excluded": false
+                    },
+                    {
+                        "name": "ctor",
+                        "excluded": true
+                    },
+                    {
+                        "name": "$ctor1",
+                        "excluded": false
+                    },
+                    {
+                        "name": "AddTime",
+                        "excluded": true
+                    },
+                    {
+                        "name": "Rewind",
+                        "excluded": true
+                    },
+                    {
+                        "name": "Stoped",
+                        "excluded": true
+                    },
+                    {
+                        "name": "Fade",
+                        "excluded": true
+                    }
+                ]
+            },
+            {
+                "className": "UnityEngine.Experimental.Rendering.GraphicsFormatUtility",
+                "staticMethods": [],
+                "instanceMethods": [
+                    {
+                        "name": "ctor",
+                        "excluded": false
+                    },
+                    {
+                        "name": "GetGraphicsFormat$2",
+                        "excluded": false
+                    },
+                    {
+                        "name": "GetGraphicsFormat$1",
+                        "excluded": true
+                    },
+                    {
+                        "name": "GetGraphicsFormat",
+                        "excluded": true
+                    }
+                ]
+            },
+            {
+                "className": "UnityEngine.MipmapLimitDescriptor",
+                "staticMethods": [],
+                "instanceMethods": [
+                    {
+                        "name": "getDefaultValue",
+                        "excluded": false
+                    },
+                    {
+                        "name": "$ctor1",
+                        "excluded": true
+                    },
+                    {
+                        "name": "ctor",
+                        "excluded": false
+                    },
+                    {
+                        "name": "getHashCode",
+                        "excluded": true
+                    },
+                    {
+                        "name": "equals",
+                        "excluded": true
+                    },
+                    {
+                        "name": "$clone",
+                        "excluded": true
+                    }
+                ]
+            },
+            {
+                "className": "UnityEngine.SystemInfo",
+                "staticMethods": [],
+                "instanceMethods": [
+                    {
+                        "name": "batteryLevel#get",
+                        "excluded": true
+                    },
+                    {
+                        "name": "batteryStatus#get",
+                        "excluded": true
+                    },
+                    {
+                        "name": "operatingSystem#get",
+                        "excluded": true
+                    },
+                    {
+                        "name": "operatingSystemFamily#get",
+                        "excluded": true
+                    },
+                    {
+                        "name": "processorType#get",
+                        "excluded": true
+                    },
+                    {
+                        "name": "processorFrequency#get",
+                        "excluded": true
+                    },
+                    {
+                        "name": "processorCount#get",
+                        "excluded": true
+                    },
+                    {
+                        "name": "systemMemorySize#get",
+                        "excluded": true
+                    },
+                    {
+                        "name": "deviceUniqueIdentifier#get",
+                        "excluded": true
+                    },
+                    {
+                        "name": "deviceName#get",
+                        "excluded": true
+                    },
+                    {
+                        "name": "deviceModel#get",
+                        "excluded": true
+                    },
+                    {
+                        "name": "supportsAccelerometer#get",
+                        "excluded": true
+                    },
+                    {
+                        "name": "supportsGyroscope#get",
+                        "excluded": true
+                    },
+                    {
+                        "name": "supportsLocationService#get",
+                        "excluded": true
+                    },
+                    {
+                        "name": "supportsVibration#get",
+                        "excluded": true
+                    },
+                    {
+                        "name": "supportsAudio#get",
+                        "excluded": true
+                    },
+                    {
+                        "name": "deviceType#get",
+                        "excluded": true
+                    },
+                    {
+                        "name": "graphicsMemorySize#get",
+                        "excluded": true
+                    },
+                    {
+                        "name": "graphicsDeviceName#get",
+                        "excluded": true
+                    },
+                    {
+                        "name": "graphicsDeviceVendor#get",
+                        "excluded": true
+                    },
+                    {
+                        "name": "graphicsDeviceID#get",
+                        "excluded": true
+                    },
+                    {
+                        "name": "graphicsDeviceVendorID#get",
+                        "excluded": true
+                    },
+                    {
+                        "name": "graphicsDeviceType#get",
+                        "excluded": true
+                    },
+                    {
+                        "name": "graphicsUVStartsAtTop#get",
+                        "excluded": true
+                    },
+                    {
+                        "name": "graphicsDeviceVersion#get",
+                        "excluded": true
+                    },
+                    {
+                        "name": "graphicsShaderLevel#get",
+                        "excluded": true
+                    },
+                    {
+                        "name": "graphicsMultiThreaded#get",
+                        "excluded": true
+                    },
+                    {
+                        "name": "renderingThreadingMode#get",
+                        "excluded": true
+                    },
+                    {
+                        "name": "hasHiddenSurfaceRemovalOnGPU#get",
+                        "excluded": true
+                    },
+                    {
+                        "name": "hasDynamicUniformArrayIndexingInFragmentShaders#get",
+                        "excluded": true
+                    },
+                    {
+                        "name": "supportsShadows#get",
+                        "excluded": true
+                    },
+                    {
+                        "name": "supportsRawShadowDepthSampling#get",
+                        "excluded": true
+                    },
+                    {
+                        "name": "supportsMotionVectors#get",
+                        "excluded": true
+                    },
+                    {
+                        "name": "supports3DTextures#get",
+                        "excluded": true
+                    },
+                    {
+                        "name": "supports2DArrayTextures#get",
+                        "excluded": true
+                    },
+                    {
+                        "name": "supports3DRenderTextures#get",
+                        "excluded": true
+                    },
+                    {
+                        "name": "supportsCubemapArrayTextures#get",
+                        "excluded": true
+                    },
+                    {
+                        "name": "copyTextureSupport#get",
+                        "excluded": true
+                    },
+                    {
+                        "name": "supportsComputeShaders#get",
+                        "excluded": true
+                    },
+                    {
+                        "name": "supportsGeometryShaders#get",
+                        "excluded": true
+                    },
+                    {
+                        "name": "supportsTessellationShaders#get",
+                        "excluded": true
+                    },
+                    {
+                        "name": "supportsInstancing#get",
+                        "excluded": true
+                    },
+                    {
+                        "name": "supportsHardwareQuadTopology#get",
+                        "excluded": true
+                    },
+                    {
+                        "name": "supports32bitsIndexBuffer#get",
+                        "excluded": true
+                    },
+                    {
+                        "name": "supportsSparseTextures#get",
+                        "excluded": true
+                    },
+                    {
+                        "name": "supportedRenderTargetCount#get",
+                        "excluded": true
+                    },
+                    {
+                        "name": "supportsSeparatedRenderTargetsBlend#get",
+                        "excluded": true
+                    },
+                    {
+                        "name": "supportedRandomWriteTargetCount#get",
+                        "excluded": true
+                    },
+                    {
+                        "name": "supportsMultisampledTextures#get",
+                        "excluded": true
+                    },
+                    {
+                        "name": "supportsMultisampleAutoResolve#get",
+                        "excluded": true
+                    },
+                    {
+                        "name": "supportsTextureWrapMirrorOnce#get",
+                        "excluded": true
+                    },
+                    {
+                        "name": "usesReversedZBuffer#get",
+                        "excluded": true
+                    },
+                    {
+                        "name": "npotSupport#get",
+                        "excluded": true
+                    },
+                    {
+                        "name": "maxTextureSize#get",
+                        "excluded": true
+                    },
+                    {
+                        "name": "maxCubemapSize#get",
+                        "excluded": true
+                    },
+                    {
+                        "name": "maxComputeBufferInputsVertex#get",
+                        "excluded": true
+                    },
+                    {
+                        "name": "maxComputeBufferInputsFragment#get",
+                        "excluded": true
+                    },
+                    {
+                        "name": "maxComputeBufferInputsGeometry#get",
+                        "excluded": true
+                    },
+                    {
+                        "name": "maxComputeBufferInputsDomain#get",
+                        "excluded": true
+                    },
+                    {
+                        "name": "maxComputeBufferInputsHull#get",
+                        "excluded": true
+                    },
+                    {
+                        "name": "maxComputeBufferInputsCompute#get",
+                        "excluded": true
+                    },
+                    {
+                        "name": "maxComputeWorkGroupSize#get",
+                        "excluded": true
+                    },
+                    {
+                        "name": "maxComputeWorkGroupSizeX#get",
+                        "excluded": true
+                    },
+                    {
+                        "name": "maxComputeWorkGroupSizeY#get",
+                        "excluded": true
+                    },
+                    {
+                        "name": "maxComputeWorkGroupSizeZ#get",
+                        "excluded": true
+                    },
+                    {
+                        "name": "supportsAsyncCompute#get",
+                        "excluded": true
+                    },
+                    {
+                        "name": "supportsGraphicsFence#get",
+                        "excluded": true
+                    },
+                    {
+                        "name": "supportsAsyncGPUReadback#get",
+                        "excluded": true
+                    },
+                    {
+                        "name": "supportsRayTracing#get",
+                        "excluded": true
+                    },
+                    {
+                        "name": "supportsSetConstantBuffer#get",
+                        "excluded": true
+                    },
+                    {
+                        "name": "minConstantBufferOffsetAlignment#get",
+                        "excluded": true
+                    },
+                    {
+                        "name": "hasMipMaxLevel#get",
+                        "excluded": true
+                    },
+                    {
+                        "name": "supportsMipStreaming#get",
+                        "excluded": true
+                    },
+                    {
+                        "name": "usesLoadStoreActions#get",
+                        "excluded": true
+                    },
+                    {
+                        "name": "supportsRenderTextures#get",
+                        "excluded": true
+                    },
+                    {
+                        "name": "supportsRenderToCubemap#get",
+                        "excluded": true
+                    },
+                    {
+                        "name": "supportsImageEffects#get",
+                        "excluded": true
+                    },
+                    {
+                        "name": "supportsStencil#get",
+                        "excluded": true
+                    },
+                    {
+                        "name": "graphicsPixelFillrate#get",
+                        "excluded": true
+                    },
+                    {
+                        "name": "supportsVertexPrograms#get",
+                        "excluded": true
+                    },
+                    {
+                        "name": "supportsGPUFence#get",
+                        "excluded": true
+                    },
+                    {
+                        "name": "init",
+                        "excluded": false
+                    },
+                    {
+                        "name": "ctor",
+                        "excluded": false
+                    },
+                    {
+                        "name": "SupportsRenderTextureFormat",
+                        "excluded": true
+                    },
+                    {
+                        "name": "SupportsBlendingOnRenderTextureFormat",
+                        "excluded": true
+                    },
+                    {
+                        "name": "SupportsRandomWriteOnRenderTextureFormat",
+                        "excluded": true
+                    },
+                    {
+                        "name": "SupportsTextureFormat",
+                        "excluded": false
+                    },
+                    {
+                        "name": "SupportsVertexAttributeFormat",
+                        "excluded": true
+                    },
+                    {
+                        "name": "IsFormatSupported",
+                        "excluded": true
+                    },
+                    {
+                        "name": "IsFormatSupported$1",
+                        "excluded": true
+                    },
+                    {
+                        "name": "GetCompatibleFormat",
+                        "excluded": true
+                    },
+                    {
+                        "name": "GetCompatibleFormat$1",
+                        "excluded": true
+                    },
+                    {
+                        "name": "GetGraphicsFormat",
+                        "excluded": true
+                    }
+                ]
+            },
+            {
+                "className": "UnityEngine.Animation",
+                "staticMethods": [],
+                "instanceMethods": [
+                    {
+                        "name": "clip#get",
+                        "excluded": true
+                    },
+                    {
+                        "name": "clip#set",
+                        "excluded": false
+                    },
+                    {
+                        "name": "clips#get",
+                        "excluded": true
+                    },
+                    {
+                        "name": "clips#set",
+                        "excluded": false
+                    },
+                    {
+                        "name": "wrapMode#get",
+                        "excluded": false
+                    },
+                    {
+                        "name": "wrapMode#set",
+                        "excluded": false
+                    },
+                    {
+                        "name": "init",
+                        "excluded": false
+                    },
+                    {
+                        "name": "ctor",
+                        "excluded": false
+                    },
+                    {
+                        "name": "getItem",
+                        "excluded": true
+                    },
+                    {
+                        "name": "IsPlaying",
+                        "excluded": true
+                    },
+                    {
+                        "name": "GetEnumerator",
+                        "excluded": true
+                    },
+                    {
+                        "name": "AddClip",
+                        "excluded": true
+                    },
+                    {
+                        "name": "Play",
+                        "excluded": true
+                    },
+                    {
+                        "name": "Play$1",
+                        "excluded": true
+                    },
+                    {
+                        "name": "UpdateClipWrapMode",
+                        "excluded": false
+                    },
+                    {
+                        "name": "Stop",
+                        "excluded": true
+                    },
+                    {
+                        "name": "Stop$1",
+                        "excluded": true
+                    },
+                    {
+                        "name": "Rewind",
+                        "excluded": true
+                    },
+                    {
+                        "name": "AddTime",
+                        "excluded": true
+                    },
+                    {
+                        "name": "TriggerEvents",
+                        "excluded": true
+                    },
+                    {
+                        "name": "Update",
+                        "excluded": true
+                    },
+                    {
+                        "name": "Sample",
+                        "excluded": true
+                    },
+                    {
+                        "name": "OnEnable",
+                        "excluded": false
+                    },
+                    {
+                        "name": "CrossFade",
+                        "excluded": true
+                    }
+                ]
+            },
+            {
+                "className": "DoneVFX",
+                "staticMethods": [],
+                "instanceMethods": [
+                    {
+                        "name": "Show",
+                        "excluded": true
+                    },
+                    {
+                        "name": "WaitAnimEnd",
+                        "excluded": true
+                    }
+                ]
+            },
+            {
+                "className": "FillCircleBar",
+                "staticMethods": [],
+                "instanceMethods": [
+                    {
+                        "name": "IsShow#get",
+                        "excluded": true
+                    },
+                    {
+                        "name": "init",
+                        "excluded": false
+                    },
+                    {
+                        "name": "SetUp",
+                        "excluded": true
+                    },
+                    {
+                        "name": "ReFill",
+                        "excluded": true
+                    },
+                    {
+                        "name": "Fill",
+                        "excluded": false
+                    },
+                    {
+                        "name": "Show",
+                        "excluded": false
+                    },
+                    {
+                        "name": "Hide",
+                        "excluded": false
+                    }
+                ]
+            },
+            {
+                "className": "HoangHH.ShowObjectEffect",
+                "staticMethods": [],
+                "instanceMethods": [
+                    {
+                        "name": "TimeAnim#get",
+                        "excluded": true
+                    },
+                    {
+                        "name": "BaseAlphaValues#get",
+                        "excluded": true
+                    },
+                    {
+                        "name": "init",
+                        "excluded": false
+                    },
+                    {
+                        "name": "SetPositionShow",
+                        "excluded": true
+                    },
+                    {
+                        "name": "ResetStartPosition",
+                        "excluded": true
+                    },
+                    {
+                        "name": "Show$1",
+                        "excluded": false
+                    },
+                    {
+                        "name": "Show",
+                        "excluded": false
+                    },
+                    {
+                        "name": "Hide",
+                        "excluded": false
+                    },
+                    {
+                        "name": "Hide$1",
+                        "excluded": false
+                    },
+                    {
+                        "name": "Start",
+                        "excluded": false
+                    },
+                    {
+                        "name": "GetStartPosition",
+                        "excluded": false
+                    },
+                    {
+                        "name": "GetEndPosition",
+                        "excluded": false
+                    },
+                    {
+                        "name": "SetAlpha",
+                        "excluded": false
+                    },
+                    {
+                        "name": "FindSpriteRenderer",
+                        "excluded": true
+                    },
+                    {
+                        "name": "ValidateCurrentSprite",
+                        "excluded": false
+                    },
+                    {
+                        "name": "SetBaseAlpha",
+                        "excluded": true
+                    }
+                ]
+            },
+            {
+                "className": "OnTransformGoToAffectZone",
+                "staticMethods": [],
+                "instanceMethods": [
+                    {
+                        "name": "init",
+                        "excluded": false
+                    },
+                    {
+                        "name": "SetInZone",
+                        "excluded": false
+                    },
+                    {
+                        "name": "LateUpdate",
+                        "excluded": false
+                    },
+                    {
+                        "name": "GetInZoneState",
+                        "excluded": false
+                    },
+                    {
+                        "name": "OnDrawGizmosSelected",
+                        "excluded": true
+                    },
+                    {
+                        "name": "OnDisable",
+                        "excluded": false
+                    }
+                ]
+            },
+            {
+                "className": "SnapVFX",
+                "staticMethods": [],
+                "instanceMethods": [
+                    {
+                        "name": "Show",
+                        "excluded": false
+                    },
+                    {
+                        "name": "WaitAnimEnd",
+                        "excluded": false
+                    }
+                ]
+            },
+            {
+                "className": "SonDragItemBase",
+                "staticMethods": [],
+                "instanceMethods": [
+                    {
+                        "name": "DragSpeed#get",
+                        "excluded": true
+                    },
+                    {
+                        "name": "InitialPos#get",
+                        "excluded": true
+                    },
+                    {
+                        "name": "InsideFaceZone#get",
+                        "excluded": true
+                    },
+                    {
+                        "name": "init",
+                        "excluded": false
+                    },
+                    {
+                        "name": "Start",
+                        "excluded": false
+                    },
+                    {
+                        "name": "Update",
+                        "excluded": false
+                    },
+                    {
+                        "name": "AddUseInStep",
+                        "excluded": true
+                    },
+                    {
+                        "name": "RemoveUseInStep",
+                        "excluded": true
+                    },
+                    {
+                        "name": "SetForceCheckWrongStep",
+                        "excluded": true
+                    },
+                    {
+                        "name": "SetInteract",
+                        "excluded": false
+                    },
+                    {
+                        "name": "OnPointerDown",
+                        "excluded": false
+                    },
+                    {
+                        "name": "OnDrag",
+                        "excluded": false
+                    },
+                    {
+                        "name": "OnPointerUp",
+                        "excluded": false
+                    },
+                    {
+                        "name": "UpdateNextPos",
+                        "excluded": false
+                    }
+                ]
+            },
+            {
+                "className": "sonnv.SonSnapObject",
+                "staticMethods": [],
+                "instanceMethods": [
+                    {
+                        "name": "SnapPoint#get",
+                        "excluded": false
+                    },
+                    {
+                        "name": "CanMoveBack#get",
+                        "excluded": true
+                    },
+                    {
+                        "name": "IsDragging#get",
+                        "excluded": true
+                    },
+                    {
+                        "name": "OnSnap#get",
+                        "excluded": false
+                    },
+                    {
+                        "name": "Col#get",
+                        "excluded": true
+                    },
+                    {
+                        "name": "init",
+                        "excluded": false
+                    },
+                    {
+                        "name": "Awake",
+                        "excluded": false
+                    },
+                    {
+                        "name": "Start",
+                        "excluded": false
+                    },
+                    {
+                        "name": "Update",
+                        "excluded": false
+                    },
+                    {
+                        "name": "OnPointerDown",
+                        "excluded": false
+                    },
+                    {
+                        "name": "OnDrag",
+                        "excluded": false
+                    },
+                    {
+                        "name": "OnPointerUp",
+                        "excluded": false
+                    },
+                    {
+                        "name": "UpdateMousePos",
+                        "excluded": false
+                    },
+                    {
+                        "name": "OnAwake",
+                        "excluded": false
+                    },
+                    {
+                        "name": "OnStart",
+                        "excluded": false
+                    },
+                    {
+                        "name": "CanSnap",
+                        "excluded": false
+                    },
+                    {
+                        "name": "OnStartDrag",
+                        "excluded": false
+                    },
+                    {
+                        "name": "OnDrop",
+                        "excluded": false
+                    },
+                    {
+                        "name": "OnSnapObject",
+                        "excluded": false
+                    },
+                    {
+                        "name": "StartFloating",
+                        "excluded": false
+                    },
+                    {
+                        "name": "StopFloating",
+                        "excluded": false
+                    },
+                    {
+                        "name": "OnEnable",
+                        "excluded": false
+                    }
+                ]
+            },
+            {
+                "className": "sonnv.SonSnapPoint",
+                "staticMethods": [],
+                "instanceMethods": [
+                    {
+                        "name": "init",
+                        "excluded": false
+                    },
+                    {
+                        "name": "Show",
+                        "excluded": true
+                    },
+                    {
+                        "name": "OnSnap",
+                        "excluded": false
+                    },
+                    {
+                        "name": "ForceChangeSnap",
+                        "excluded": true
+                    },
+                    {
+                        "name": "ChangeCanSnap",
+                        "excluded": true
+                    }
+                ]
+            },
+            {
+                "className": "LevelWednesday",
+                "staticMethods": [],
+                "instanceMethods": [
+                    {
+                        "name": "IsPlayingGame#get",
+                        "excluded": true
+                    },
+                    {
+                        "name": "MixtureDrag#get",
+                        "excluded": true
+                    },
+                    {
+                        "name": "init",
+                        "excluded": false
+                    },
+                    {
+                        "name": "Update",
+                        "excluded": false
+                    },
+                    {
+                        "name": "StartGamePlay",
+                        "excluded": false
+                    },
+                    {
+                        "name": "StartStep",
+                        "excluded": false
+                    },
+                    {
+                        "name": "OnStartStep1",
+                        "excluded": false
+                    },
+                    {
+                        "name": "EnableMixtureTrigger",
+                        "excluded": false
+                    },
+                    {
+                        "name": "DisableMixtureTrigger",
+                        "excluded": false
+                    },
+                    {
+                        "name": "SetStateWaterFlip",
+                        "excluded": false
+                    },
+                    {
+                        "name": "TryPouringResin",
+                        "excluded": false
+                    },
+                    {
+                        "name": "TryPauseResin",
+                        "excluded": false
+                    },
+                    {
+                        "name": "TryEndPouringResin",
+                        "excluded": false
+                    },
+                    {
+                        "name": "OnStartStep2",
+                        "excluded": false
+                    },
+                    {
+                        "name": "TryEndThrowLid",
+                        "excluded": false
+                    },
+                    {
+                        "name": "ShakeHand",
+                        "excluded": false
+                    },
+                    {
+                        "name": "OnEndStep2",
+                        "excluded": false
+                    },
+                    {
+                        "name": "StartStep3",
+                        "excluded": false
+                    },
+                    {
+                        "name": "EnableAirBrushTrigger",
+                        "excluded": false
+                    },
+                    {
+                        "name": "DisableAirBrushTrigger",
+                        "excluded": false
+                    },
+                    {
+                        "name": "TryTweenFade",
+                        "excluded": false
+                    },
+                    {
+                        "name": "TryPauseTweenFade",
+                        "excluded": false
+                    },
+                    {
+                        "name": "TryEndFadeAir",
+                        "excluded": false
+                    },
+                    {
+                        "name": "OnStartStep4",
+                        "excluded": false
+                    }
+                ]
+            },
+            {
+                "className": "DTPUtils",
+                "staticMethods": [],
+                "instanceMethods": [
+                    {
+                        "name": "SetAlpha",
+                        "excluded": false
+                    },
+                    {
+                        "name": "WaitToDo",
+                        "excluded": false
+                    },
+                    {
+                        "name": "DelayToDo",
+                        "excluded": false
+                    },
+                    {
+                        "name": "WaitOneFrame",
+                        "excluded": true
+                    },
+                    {
+                        "name": "DelayOneFrame",
+                        "excluded": true
+                    },
+                    {
+                        "name": "DrawRect",
+                        "excluded": true
+                    }
+                ]
+            },
+            {
+                "className": "UnityEngine.UI.LayoutElement",
+                "staticMethods": [],
+                "instanceMethods": [
+                    {
+                        "name": "minWidth#get",
+                        "excluded": true
+                    },
+                    {
+                        "name": "minWidth#set",
+                        "excluded": true
+                    },
+                    {
+                        "name": "minHeight#get",
+                        "excluded": true
+                    },
+                    {
+                        "name": "minHeight#set",
+                        "excluded": true
+                    },
+                    {
+                        "name": "preferredWidth#get",
+                        "excluded": true
+                    },
+                    {
+                        "name": "preferredWidth#set",
+                        "excluded": true
+                    },
+                    {
+                        "name": "preferredHeight#get",
+                        "excluded": true
+                    },
+                    {
+                        "name": "preferredHeight#set",
+                        "excluded": true
+                    },
+                    {
+                        "name": "flexibleWidth#get",
+                        "excluded": true
+                    },
+                    {
+                        "name": "flexibleWidth#set",
+                        "excluded": true
+                    },
+                    {
+                        "name": "flexibleHeight#get",
+                        "excluded": true
+                    },
+                    {
+                        "name": "flexibleHeight#set",
+                        "excluded": true
+                    },
+                    {
+                        "name": "layoutPriority#get",
+                        "excluded": true
+                    },
+                    {
+                        "name": "ignoreLayout#get",
+                        "excluded": true
+                    },
+                    {
+                        "name": "ignoreLayout#set",
+                        "excluded": false
+                    },
+                    {
+                        "name": "init",
+                        "excluded": false
+                    },
+                    {
+                        "name": "OnEnable",
+                        "excluded": false
+                    },
+                    {
+                        "name": "OnDisable",
+                        "excluded": false
+                    },
+                    {
+                        "name": "OnDidApplyAnimationProperties",
+                        "excluded": true
+                    },
+                    {
+                        "name": "OnTransformParentChanged",
+                        "excluded": true
+                    },
+                    {
+                        "name": "CalculateLayoutInputHorizontal",
+                        "excluded": true
+                    },
+                    {
+                        "name": "CalculateLayoutInputVertical",
+                        "excluded": true
+                    },
+                    {
+                        "name": "SetDirty",
+                        "excluded": false
+                    }
+                ]
+            },
+            {
+                "className": "SpriteMaskFill",
+                "staticMethods": [],
+                "instanceMethods": [
+                    {
+                        "name": "init",
+                        "excluded": false
+                    },
+                    {
+                        "name": "UpdateFill",
+                        "excluded": false
+                    },
+                    {
+                        "name": "SetFill",
+                        "excluded": false
+                    }
+                ]
             }
         ],
         "stubberDataList": [],
@@ -44367,6 +45503,36 @@
                         "script": "",
                         "ext": "",
                         "name": "Assets/_GAME/SonGame/Level/LevelMaleficent/Spines/Maleficent_json/Maleficent.png"
+                    },
+                    {
+                        "maxWidth": 512,
+                        "maxHeight": 512,
+                        "format": "png32",
+                        "compression": "none",
+                        "quality": 65,
+                        "script": "",
+                        "ext": "",
+                        "name": "Assets/TextMesh Pro/Resources/Fonts & Materials/ChangaOne-Italic SDF.asset"
+                    },
+                    {
+                        "maxWidth": 256,
+                        "maxHeight": 256,
+                        "format": "png32",
+                        "compression": "quantSize",
+                        "quality": 65,
+                        "script": "",
+                        "ext": "",
+                        "name": "Assets/_GAME/SonGame/Level/LevelWednesday/_Textures/Char.png"
+                    },
+                    {
+                        "maxWidth": 256,
+                        "maxHeight": 256,
+                        "format": "png32",
+                        "compression": "quantSize",
+                        "quality": 65,
+                        "script": "",
+                        "ext": "",
+                        "name": "Assets/_GAME/SonGame/Level/LevelWednesday/_Textures/BG.jpg"
                     }
                 ]
             },
@@ -44500,6 +45666,16 @@
                         "script": "",
                         "ext": "",
                         "name": "Assets/_GAME/Levels/LvCosplayKIdol/Sound/lv173_put 2.ogg"
+                    },
+                    {
+                        "channels": 1,
+                        "startTime": "00:00.000",
+                        "endTime": "00:20.000",
+                        "lengthInSeconds": 20.0,
+                        "bitrate": 64,
+                        "script": "",
+                        "ext": "",
+                        "name": "Assets/_GAME/SonGame/Level/LevelWednesday/Audio/sfx_bgm_play_1.ogg"
                     }
                 ]
             },

@@ -11,7 +11,6 @@ public class GamePlayManager : Singleton<GamePlayManager>
   public EmojiControl emojiControl;
   public ClockTimer clockTimer;
   public CharacterControl character;
-  public List<Item> items = new List<Item>();
   [SerializeField] protected int currentStep = 0;
   public int CurrentStep => currentStep;
   private IEnumerator coroutine = null;
@@ -48,7 +47,7 @@ public class GamePlayManager : Singleton<GamePlayManager>
   protected virtual void TryNextStep()
   {
     currentStep++;
-    Debug.LogWarning("Next To" + currentStep);
+    Debug.Log("Next To" + currentStep);
     StartStep();
   }
 

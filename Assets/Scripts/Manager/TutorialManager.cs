@@ -10,7 +10,7 @@ public class TutorialManager : Singleton<TutorialManager>
     public bool enableCountTime = false;
     public float timeCountHint = 2f;
     [SerializeField] public HandCtrl handCtrl;
-    [SerializeField] private LevelMaleficent gamePlayManager;
+    [SerializeField] private LevelWednesday gamePlayManager;
     // [SerializeField] private GameObject clock;
     private int CountStepDone = 0;
     public void OnStepDone()
@@ -65,7 +65,7 @@ public class TutorialManager : Singleton<TutorialManager>
         timeCountHint -= Time.deltaTime;
         if (timeCountHint <= 0)
         {
-            ShowHint();
+            // ShowHint();
         }
     }
 
@@ -80,7 +80,7 @@ public class TutorialManager : Singleton<TutorialManager>
         {
             case 0:
                 handCtrl.gameObject.SetActive(true);
-                Tutorial();
+                Tutorial(0);
                 return;
             case 1:
                 return;
@@ -90,16 +90,11 @@ public class TutorialManager : Singleton<TutorialManager>
                 return;
         }
     }
-    private void Tutorial()
+    private void Tutorial(int indexStep)
     {
-        var obj = gamePlayManager.ListThrowObject[0];
-        var node = tutorialNode[0];
+        var obj = gamePlayManager.MixtureDrag;
+        var node = tutorialNode[indexStep];
         handCtrl.ShowHandPosToPos(obj.Tf.position, node.position);
-        if (gamePlayManager.ListThrowObject.Count <= 0)
-        {
-            handCtrl.gameObject.SetActive(false);
-            resetTimeHint();
-        }
     }
 
     void HideHint()

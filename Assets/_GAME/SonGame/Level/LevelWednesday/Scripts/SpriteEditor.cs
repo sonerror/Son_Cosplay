@@ -3,100 +3,98 @@ using UnityEngine;
 public class SpriteEditor : MonoBehaviour
 {
     public float fillAmount = 0.5f;
-
     public Color fillColor = Color.green;
-
     public Color emptyColor = Color.white;
 
     private Texture2D writableTexture;
     private Color[] originalPixels;
-    private int textureWidth;
-    private int textureHeight;
+    private int width;
+    private int height;
     private float lastFillAmount = -1f;
 
-    void Awake()
+    private SpriteRenderer spriteRenderer;
+
+    private void Awake()
+    {
+        //SetupExistingSprite();
+    }
+    public void OnSetUp()
     {
         SetupExistingSprite();
     }
     private void SetupExistingSprite()
     {
-        SpriteRenderer spriteRenderer = GetComponent<SpriteRenderer>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
+        if (spriteRenderer == null || spriteRenderer.sprite == null) return;
 
-        if (spriteRenderer.sprite == null)
-        {
-            return;
-        }
-        Texture2D sourceTexture = spriteRenderer.sprite.texture;
-        if (!sourceTexture.isReadable)
-        {
-            return;
-        }
+        Sprite currentSprite = spriteRenderer.sprite;
 
-        textureWidth = sourceTexture.width;
-        textureHeight = sourceTexture.height;
+        // CHỐT CHẶN 1: Phải dùng đúng kích thước vùng chọn của Sprite trong Texture
+        Rect rect = currentSprite.rect;
+        width = Mathf.RoundToInt(rect.width);
+        height = Mathf.RoundToInt(rect.height);
 
-        Rect spriteRect = spriteRenderer.sprite.rect;
-        Vector2 spritePivot = spriteRenderer.sprite.pivot;
-        float ppu = spriteRenderer.sprite.pixelsPerUnit;
+        // CHỐT CHẶN 2: Lấy đúng vùng pixels (Tránh lệch do Atlas)
+        originalPixels = currentSprite.texture.GetPixels(
+            Mathf.RoundToInt(rect.x),
+            Mathf.RoundToInt(rect.y),
+            width,
+            height
+        );
 
-        textureWidth = sourceTexture.width;
-        textureHeight = sourceTexture.height;
-
-        originalPixels = sourceTexture.GetPixels();
-
-        writableTexture = new Texture2D(textureWidth, textureHeight, TextureFormat.RGBA32, false);
+        // Tạo texture mới cùng kích thước chính xác
+        writableTexture = new Texture2D(width, height, TextureFormat.RGBA32, false);
         writableTexture.filterMode = FilterMode.Point;
+        writableTexture.wrapMode = TextureWrapMode.Clamp;
 
-        writableTexture.SetPixels(originalPixels);
-        writableTexture.Apply();
-
-        Vector2 normalizedPivot = new Vector2(
-            spritePivot.x / textureWidth,
-            spritePivot.y / textureHeight
-        );
-        Sprite newSprite = Sprite.Create(
+        // CHỐT CHẶN 3: Thay thế Texture nhưng GIỮ NGUYÊN Pivot của Sprite cũ
+        // Thay vì Sprite.Create phức tạp, ta tạo một Sprite đơn giản đè lên
+        spriteRenderer.sprite = Sprite.Create(
             writableTexture,
-            spriteRect,
-            normalizedPivot,
-            ppu,
+            new Rect(0, 0, width, height),
+            new Vector2(currentSprite.pivot.x / rect.width, currentSprite.pivot.y / rect.height),
+            currentSprite.pixelsPerUnit,
             0,
-            SpriteMeshType.FullRect
+            SpriteMeshType.FullRect // Bắt buộc phải là FullRect trên Luna
         );
 
-        spriteRenderer.sprite = newSprite;
         ApplyVerticalFill();
     }
 
     public void TryApplyVerticalFill()
     {
         if (Mathf.Abs(fillAmount - lastFillAmount) > 0.001f)
-        {
             ApplyVerticalFill();
-        }
     }
+
     private void ApplyVerticalFill()
     {
         if (writableTexture == null || originalPixels == null) return;
-        fillAmount = Mathf.Clamp01(fillAmount);
-        int filledRows = Mathf.RoundToInt(fillAmount * textureHeight);
-        Color[] newPixels = new Color[textureWidth * textureHeight];
-        for (int y = 0; y < textureHeight; y++)
+
+        int filledRows = Mathf.RoundToInt(Mathf.Clamp01(fillAmount) * height);
+        Color[] newPixels = new Color[width * height];
+
+        for (int y = 0; y < height; y++)
         {
-            bool isFilledRow = (y < filledRows);
-            for (int x = 0; x < textureWidth; x++)
+            bool isFilled = y < filledRows;
+            int rowOffset = y * width;
+            for (int x = 0; x < width; x++)
             {
-                int index = y * textureWidth + x;
-                Color originalPixel = originalPixels[index];
-                if (originalPixel.a < 0.001f)
+                int index = rowOffset + x;
+                Color src = originalPixels[index];
+
+                if (src.a < 0.01f)
                 {
-                    newPixels[index] = new Color(0, 0, 0, 0);
+                    newPixels[index] = Color.clear;
                     continue;
                 }
-                Color targetColor = isFilledRow ? fillColor : emptyColor;
-                targetColor.a = originalPixel.a;
+
+                Color targetColor = isFilled ? fillColor : emptyColor;
+                targetColor.a = src.a;
                 newPixels[index] = targetColor;
             }
         }
+
         writableTexture.SetPixels(newPixels);
         writableTexture.Apply();
         lastFillAmount = fillAmount;

@@ -115,7 +115,6 @@ namespace HoangHH
       });
     }
 
-    [Button]
     public void Hide()
     {
       if (!_isValidate)
@@ -190,7 +189,6 @@ namespace HoangHH
       }
     }
 
-    [Button]
     private void FindSpriteRenderer(bool includeInactive = false)
     {
       var spriteList = GetComponentsInChildren<SpriteRenderer>(includeInactive).ToList();
@@ -198,7 +196,6 @@ namespace HoangHH
       sprites = spriteList.Where(s => s.enabled && s.color.a > 0).ToArray();
     }
 
-    [Button]
     private void ValidateCurrentSprite()
     {
       // check all sprite in list, if something missing or null, remove it
