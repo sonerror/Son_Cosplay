@@ -133,12 +133,13 @@
             ]
         },
         "scenes": [
-            "Assets/_GAME/SonGame/Level/LevelMaleficent/Level98Maleficent.unity"
+            "Assets/_GAME/SonGame/Level/LevelSailorMoon/Anim/New/json/scenetest.unity"
         ],
         "disabledScenes": [
             "Assets/Scenes/LevelMain.unity",
             "Assets/_GAME/Levels/LvCosplayKIdol/Level6.unity",
             "Assets/_GAME/Levels/LvCosplayWenesday/Level53.unity",
+            "Assets/_GAME/SonGame/Level/LevelMaleficent/Level98Maleficent.unity",
             "Assets/_GAME/SonGame/Level/LevelSailorMoon/LevelSailorMoon.unity",
             "Assets/_GAME/SonGame/Level/LevelWednesday/LevelWednesday.unity"
         ],
@@ -730,10 +731,6 @@
             },
             {
                 "name": "DG.Tweening.UpdateType",
-                "excluded": false
-            },
-            {
-                "name": "CameraScaler.WorkingMode",
                 "excluded": false
             },
             {
@@ -5566,7 +5563,7 @@
             },
             {
                 "name": "UnityEngine.LightmapBakeType",
-                "excluded": true
+                "excluded": false
             },
             {
                 "name": "UnityEngine.LightmapCompression",
@@ -5594,7 +5591,7 @@
             },
             {
                 "name": "UnityEngine.LightShadows",
-                "excluded": true
+                "excluded": false
             },
             {
                 "name": "UnityEngine.LightShape",
@@ -9002,14 +8999,6 @@
             },
             {
                 "name": "ShakeObject",
-                "excluded": true
-            },
-            {
-                "name": "pc.Debugger.Components.EditorCamera",
-                "excluded": true
-            },
-            {
-                "name": "pc.Debugger.Components.EditorGUI",
                 "excluded": true
             }
         ],
@@ -18482,7 +18471,7 @@
                     },
                     {
                         "name": "ctor",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "GetUniversalAdditionalLightData",
@@ -25326,7 +25315,7 @@
                     },
                     {
                         "name": "sun#get",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "customReflection#get",
@@ -31966,56 +31955,6 @@
                     },
                     {
                         "name": "MouseDrag",
-                        "excluded": true
-                    }
-                ]
-            },
-            {
-                "className": "CameraScaler",
-                "staticMethods": [],
-                "instanceMethods": [
-                    {
-                        "name": "CalcVerticalFov",
-                        "excluded": false
-                    },
-                    {
-                        "name": "init",
-                        "excluded": false
-                    },
-                    {
-                        "name": "Awake",
-                        "excluded": false
-                    },
-                    {
-                        "name": "Update",
-                        "excluded": false
-                    },
-                    {
-                        "name": "UpdateCamera",
-                        "excluded": false
-                    },
-                    {
-                        "name": "UpdateOrtho",
-                        "excluded": false
-                    },
-                    {
-                        "name": "HorizontalSize#get",
-                        "excluded": true
-                    },
-                    {
-                        "name": "HorizontalFov#get",
-                        "excluded": true
-                    },
-                    {
-                        "name": "CameraZoom#get",
-                        "excluded": true
-                    },
-                    {
-                        "name": "CameraZoom#set",
-                        "excluded": true
-                    },
-                    {
-                        "name": "UpdatePerspective",
                         "excluded": true
                     }
                 ]
@@ -42331,16 +42270,6 @@
                 ]
             },
             {
-                "className": "ScreenShot",
-                "staticMethods": [],
-                "instanceMethods": [
-                    {
-                        "name": "Update",
-                        "excluded": false
-                    }
-                ]
-            },
-            {
                 "className": "UnityEngine.UI.ClipperRegistry",
                 "staticMethods": [],
                 "instanceMethods": [
@@ -45412,16 +45341,6 @@
                     },
                     {
                         "name": "ctor",
-                        "excluded": false
-                    }
-                ]
-            },
-            {
-                "className": "HoangHH.UI.SafeArea",
-                "staticMethods": [],
-                "instanceMethods": [
-                    {
-                        "name": "Awake",
                         "excluded": false
                     }
                 ]

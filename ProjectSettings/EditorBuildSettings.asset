@@ -23,5 +23,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/_GAME/SonGame/Level/LevelSailorMoon/LevelSailorMoon.unity
     guid: af0fba32b1d4da741bae5b65383037bc
+  - enabled: 1
+    path: Assets/_GAME/SonGame/Level/LevelSailorMoon/Anim/New/json/scenetest.unity
+    guid: f54abbeaa54d45843864889b04ea8ede
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0
