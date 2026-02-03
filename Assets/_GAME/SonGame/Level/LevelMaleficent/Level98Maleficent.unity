@@ -495,11 +495,6 @@ MonoBehaviour:
   onDone:
     m_PersistentCalls:
       m_Calls: []
-  characterStart: {fileID: 1623258414}
-  slotDeactiveClick:
-  - slotName: Set_base_shoes_R
-    attachmentName: Set_base/Set_base_shoes_R
-    skeletonDataAsset: {fileID: 11400000, guid: c5658f7b08b654b4083fbc81413ee9cc, type: 2}
 --- !u!61 &87785482
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1811,14 +1806,6 @@ MonoBehaviour:
   onDone:
     m_PersistentCalls:
       m_Calls: []
-  characterStart: {fileID: 1623258414}
-  slotDeactiveClick:
-  - slotName: Set_Base_Card
-    attachmentName: Set_base/Set_base_card
-    skeletonDataAsset: {fileID: 11400000, guid: c5658f7b08b654b4083fbc81413ee9cc, type: 2}
-  - slotName: Set_Base_String
-    attachmentName: Set_base/Set_base_string
-    skeletonDataAsset: {fileID: 11400000, guid: c5658f7b08b654b4083fbc81413ee9cc, type: 2}
 --- !u!61 &521196279
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2195,11 +2182,6 @@ MonoBehaviour:
   onDone:
     m_PersistentCalls:
       m_Calls: []
-  characterStart: {fileID: 1623258414}
-  slotDeactiveClick:
-  - slotName: Set_base_shoes_L
-    attachmentName: Set_base/Set_base_shoes_L
-    skeletonDataAsset: {fileID: 11400000, guid: c5658f7b08b654b4083fbc81413ee9cc, type: 2}
 --- !u!61 &621982302
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3481,11 +3463,6 @@ MonoBehaviour:
   onDone:
     m_PersistentCalls:
       m_Calls: []
-  characterStart: {fileID: 1623258414}
-  slotDeactiveClick:
-  - slotName: Set_Base_Dress
-    attachmentName: Set_base/Set_base_dress
-    skeletonDataAsset: {fileID: 11400000, guid: c5658f7b08b654b4083fbc81413ee9cc, type: 2}
 --- !u!61 &861111288
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5695,6 +5672,9 @@ MonoBehaviour:
   MouseNorAf: {fileID: 0}
   MouseHappyAf: {fileID: 0}
   MouseAngryAf: {fileID: 0}
+  happyName: happy
+  idleName: idle
+  angryName: angry
   customMouseAnim: 0
 --- !u!1 &1638860539
 GameObject:
@@ -6059,7 +6039,7 @@ MonoBehaviour:
   enableCountTime: 0
   timeCountHint: 1
   handCtrl: {fileID: 8503599624730501112}
-  gamePlayManager: {fileID: 736123647}
+  gamePlayManager: {fileID: 0}
   tutorialNode:
   - {fileID: 2075704649}
   - {fileID: 2104112624}
@@ -6331,11 +6311,6 @@ MonoBehaviour:
   onDone:
     m_PersistentCalls:
       m_Calls: []
-  characterStart: {fileID: 1623258414}
-  slotDeactiveClick:
-  - slotName: Set_Base_Pants
-    attachmentName: Set_base/Set_base_jean
-    skeletonDataAsset: {fileID: 11400000, guid: c5658f7b08b654b4083fbc81413ee9cc, type: 2}
 --- !u!61 &1785068595
 BoxCollider2D:
   m_ObjectHideFlags: 0

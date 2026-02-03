@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: sailor moon_SkeletonData
   m_EditorClassIdentifier: 
   atlasAssets:
-  - {fileID: 11400000, guid: b9f94c7cecb53ce4da80474c6b22585f, type: 2}
+  - {fileID: 11400000, guid: 774691952119cb144850722000dd2490, type: 2}
   scale: 0.01
-  skeletonJSON: {fileID: 4900000, guid: 3528137c8ab7ce445999185411ded4be, type: 3}
+  skeletonJSON: {fileID: 4900000, guid: 84de671c3fed0064ba423ce533a13ce8, type: 3}
   isUpgradingBlendModeMaterials: 0
   blendModeMaterials:
     requiresBlendModeMaterials: 1
@@ -23,7 +23,7 @@ MonoBehaviour:
     additiveMaterials: []
     multiplyMaterials:
     - pageName: sailor moon.png
-      material: {fileID: 2100000, guid: 2ebbc6e622cd56c4084b5950a11d95aa, type: 2}
+      material: {fileID: 2100000, guid: 74e286155fc836a44876c1a6b5447f28, type: 2}
     screenMaterials: []
   skeletonDataModifiers: []
   fromAnimation: []

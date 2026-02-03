@@ -1147,8 +1147,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Tap To Cosplay!
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: ddd791197cf475349a4169980a691336, type: 2}
-  m_sharedMaterial: {fileID: -7497179540835392472, guid: ddd791197cf475349a4169980a691336, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 24db4dabc8670364994e9e0f24aa695f, type: 2}
+  m_sharedMaterial: {fileID: 5669738352214212663, guid: 24db4dabc8670364994e9e0f24aa695f, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []

@@ -2,7 +2,7 @@
     "version": "7.0.0",
     "projectId": "f42e7ff96e4545544bb6cd68f51ab634",
     "applicationID": 34683,
-    "creativeName": "R1_Cosplaydom_ver5",
+    "creativeName": "R1_Cosplaydom_ver4",
     "pgServer": "EU",
     "window": {
         "‐⁏": true
@@ -133,13 +133,13 @@
             ]
         },
         "scenes": [
-            "Assets/_GAME/SonGame/Level/LevelSailorMoon/LevelSailorMoon.unity"
+            "Assets/_GAME/SonGame/Level/LevelMaleficent/Level98Maleficent.unity"
         ],
         "disabledScenes": [
             "Assets/Scenes/LevelMain.unity",
             "Assets/_GAME/Levels/LvCosplayKIdol/Level6.unity",
             "Assets/_GAME/Levels/LvCosplayWenesday/Level53.unity",
-            "Assets/_GAME/SonGame/Level/LevelMaleficent/Level98Maleficent.unity",
+            "Assets/_GAME/SonGame/Level/LevelSailorMoon/LevelSailorMoon.unity",
             "Assets/_GAME/SonGame/Level/LevelWednesday/LevelWednesday.unity"
         ],
         "startupScene": 0,
@@ -3570,10 +3570,6 @@
             },
             {
                 "name": "UnityEngine.Timeline.TimeFieldAttribute",
-                "excluded": true
-            },
-            {
-                "name": "UnityEngine.TooltipAttribute",
                 "excluded": true
             },
             {
@@ -8577,10 +8573,6 @@
                 "excluded": true
             },
             {
-                "name": "Spine.Unity.SpineAttributeBase",
-                "excluded": true
-            },
-            {
                 "name": "Spine.Unity.SpineAtlasRegion",
                 "excluded": true
             },
@@ -8746,10 +8738,6 @@
             },
             {
                 "name": "Spine.Unity.SpineAttachment",
-                "excluded": true
-            },
-            {
-                "name": "Spine.Unity.SpineBone",
                 "excluded": true
             },
             {
@@ -9014,6 +9002,14 @@
             },
             {
                 "name": "ShakeObject",
+                "excluded": true
+            },
+            {
+                "name": "pc.Debugger.Components.EditorCamera",
+                "excluded": true
+            },
+            {
+                "name": "pc.Debugger.Components.EditorGUI",
                 "excluded": true
             }
         ],
@@ -12626,7 +12622,7 @@
                     },
                     {
                         "name": "Count#get",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "IsReadOnly#get",
@@ -12650,11 +12646,11 @@
                     },
                     {
                         "name": "CopyTo",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "CopyTo$1",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "GetEnumerator",
@@ -12750,7 +12746,7 @@
                     },
                     {
                         "name": "ToArray",
-                        "excluded": true
+                        "excluded": false
                     }
                 ]
             },
@@ -27896,7 +27892,7 @@
                     },
                     {
                         "name": "velocity#get",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "velocity#set",
@@ -27912,7 +27908,7 @@
                     },
                     {
                         "name": "angularVelocity#get",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "angularVelocity#set",
@@ -27924,7 +27920,7 @@
                     },
                     {
                         "name": "mass#get",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "mass#set",
@@ -27932,7 +27928,7 @@
                     },
                     {
                         "name": "useAutoMass#get",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "useAutoMass#set",
@@ -27940,7 +27936,7 @@
                     },
                     {
                         "name": "inertia#get",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "inertia#set",
@@ -27948,7 +27944,7 @@
                     },
                     {
                         "name": "drag#get",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "drag#set",
@@ -27964,7 +27960,7 @@
                     },
                     {
                         "name": "angularDrag#get",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "angularDrag#set",
@@ -27980,7 +27976,7 @@
                     },
                     {
                         "name": "position#get",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "position#set",
@@ -27988,7 +27984,7 @@
                     },
                     {
                         "name": "gravityScale#get",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "gravityScale#set",
@@ -27996,7 +27992,7 @@
                     },
                     {
                         "name": "collisionDetectionMode#get",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "collisionDetectionMode#set",
@@ -28004,11 +28000,11 @@
                     },
                     {
                         "name": "simulated#get",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "bodyType#get",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "bodyType#set",
@@ -28040,7 +28036,7 @@
                     },
                     {
                         "name": "constraints#get",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "constraints#set",
@@ -28048,7 +28044,7 @@
                     },
                     {
                         "name": "centerOfMass#get",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "centerOfMass#set",
@@ -28056,7 +28052,7 @@
                     },
                     {
                         "name": "rotation#get",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "rotation#set",
@@ -29706,7 +29702,7 @@
                     },
                     {
                         "name": "sortOrderPriority#get",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "rootRaycaster#get",
@@ -34432,7 +34428,7 @@
                     },
                     {
                         "name": "Clear",
-                        "excluded": true
+                        "excluded": false
                     }
                 ]
             },
@@ -37104,7 +37100,7 @@
                     },
                     {
                         "name": "GetCurvePercent",
-                        "excluded": true
+                        "excluded": false
                     }
                 ]
             },
@@ -41830,7 +41826,7 @@
                     },
                     {
                         "name": "ctor",
-                        "excluded": true
+                        "excluded": false
                     }
                 ]
             },
@@ -45283,6 +45279,14 @@
                     {
                         "name": "TryEndPouringResin",
                         "excluded": true
+                    },
+                    {
+                        "name": "SetStateSlotGlasses",
+                        "excluded": false
+                    },
+                    {
+                        "name": "OnStartStep",
+                        "excluded": true
                     }
                 ]
             },
@@ -45371,6 +45375,54 @@
                     {
                         "name": "Global",
                         "excluded": true
+                    }
+                ]
+            },
+            {
+                "className": "UnityEngine.TooltipAttribute",
+                "staticMethods": [],
+                "instanceMethods": [
+                    {
+                        "name": "ctor",
+                        "excluded": false
+                    }
+                ]
+            },
+            {
+                "className": "Spine.Unity.SpineAttributeBase",
+                "staticMethods": [],
+                "instanceMethods": [
+                    {
+                        "name": "init",
+                        "excluded": false
+                    }
+                ]
+            },
+            {
+                "className": "Spine.Unity.SpineBone",
+                "staticMethods": [],
+                "instanceMethods": [
+                    {
+                        "name": "getBone",
+                        "excluded": true
+                    },
+                    {
+                        "name": "getBoneData",
+                        "excluded": true
+                    },
+                    {
+                        "name": "ctor",
+                        "excluded": false
+                    }
+                ]
+            },
+            {
+                "className": "HoangHH.UI.SafeArea",
+                "staticMethods": [],
+                "instanceMethods": [
+                    {
+                        "name": "Awake",
+                        "excluded": false
                     }
                 ]
             }

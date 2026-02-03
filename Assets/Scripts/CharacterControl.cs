@@ -19,7 +19,9 @@ public class CharacterControl : Character
 
   public GameObject MouseNorBf, MouseHappyBf, MouseAngryBf;
   public GameObject MouseNorAf, MouseHappyAf, MouseAngryAf;
-
+  [SerializeField] private string happyName = "happy";
+  [SerializeField] private string idleName = "idle";
+  [SerializeField] private string angryName = "angry";
 
 
   private bool isDoneMouse = false;
@@ -48,7 +50,7 @@ public class CharacterControl : Character
   }
   public void SetMouseHappy()
   {
-    skeletonAnimation.AnimationState.SetAnimation(0, "happy", false);
+    skeletonAnimation.AnimationState.SetAnimation(0, happyName, false);
     if (!customMouseAnim) return;
     if (isDoneMouse)
     {
@@ -67,7 +69,7 @@ public class CharacterControl : Character
 
   public void SetMouseIdle()
   {
-    skeletonAnimation.AnimationState.SetAnimation(0, "idle", true);
+    skeletonAnimation.AnimationState.SetAnimation(0, idleName, true);
     if (!customMouseAnim) return;
 
     if (isDoneMouse)
@@ -87,7 +89,7 @@ public class CharacterControl : Character
 
   public void SetMouseAngry()
   {
-    skeletonAnimation.AnimationState.SetAnimation(0, "angry", false);
+    skeletonAnimation.AnimationState.SetAnimation(0, angryName, false);
     if (!customMouseAnim) return;
 
     if (isDoneMouse)
