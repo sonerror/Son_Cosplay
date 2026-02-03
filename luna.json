@@ -133,13 +133,14 @@
             ]
         },
         "scenes": [
-            "Assets/_GAME/SonGame/Level/LevelWednesday/LevelWednesday.unity"
+            "Assets/_GAME/SonGame/Level/LevelSailorMoon/LevelSailorMoon.unity"
         ],
         "disabledScenes": [
             "Assets/Scenes/LevelMain.unity",
             "Assets/_GAME/Levels/LvCosplayKIdol/Level6.unity",
             "Assets/_GAME/Levels/LvCosplayWenesday/Level53.unity",
-            "Assets/_GAME/SonGame/Level/LevelMaleficent/Level98Maleficent.unity"
+            "Assets/_GAME/SonGame/Level/LevelMaleficent/Level98Maleficent.unity",
+            "Assets/_GAME/SonGame/Level/LevelWednesday/LevelWednesday.unity"
         ],
         "startupScene": 0,
         "packages": {
@@ -8884,14 +8885,6 @@
                 "excluded": true
             },
             {
-                "name": "Spine.TranslateXTimeline",
-                "excluded": true
-            },
-            {
-                "name": "Spine.TranslateYTimeline",
-                "excluded": true
-            },
-            {
                 "name": "Spine.Unity.SkeletonMecanim",
                 "excluded": true
             },
@@ -8904,15 +8897,7 @@
                 "excluded": true
             },
             {
-                "name": "Spine.PhysicsConstraintInertiaTimeline",
-                "excluded": true
-            },
-            {
                 "name": "Spine.PhysicsConstraintMassTimeline",
-                "excluded": true
-            },
-            {
-                "name": "Spine.PhysicsConstraintStrengthTimeline",
                 "excluded": true
             },
             {
@@ -24259,7 +24244,7 @@
                     },
                     {
                         "name": "Clone",
-                        "excluded": true
+                        "excluded": false
                     }
                 ]
             },
@@ -27831,7 +27816,7 @@
                     },
                     {
                         "name": "Stop",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "Stop$1",
@@ -32701,7 +32686,7 @@
                     },
                     {
                         "name": "Clone",
-                        "excluded": true
+                        "excluded": false
                     }
                 ]
             },
@@ -33475,7 +33460,7 @@
                     },
                     {
                         "name": "Skins#get",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "Skins#set",
@@ -33695,7 +33680,7 @@
                     },
                     {
                         "name": "GetAttachments",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "Clear",
@@ -34115,7 +34100,7 @@
                     },
                     {
                         "name": "CloneAtlasRegionWithMaterial",
-                        "excluded": true
+                        "excluded": false
                     }
                 ]
             },
@@ -35603,7 +35588,7 @@
                     },
                     {
                         "name": "Apply",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "Bones#get",
@@ -45244,6 +45229,148 @@
                     {
                         "name": "SetFill",
                         "excluded": false
+                    }
+                ]
+            },
+            {
+                "className": "LevelSailorMoon",
+                "staticMethods": [],
+                "instanceMethods": [
+                    {
+                        "name": "IsPlayingGame#get",
+                        "excluded": true
+                    },
+                    {
+                        "name": "MixtureDrag#get",
+                        "excluded": true
+                    },
+                    {
+                        "name": "init",
+                        "excluded": false
+                    },
+                    {
+                        "name": "Update",
+                        "excluded": false
+                    },
+                    {
+                        "name": "StartGamePlay",
+                        "excluded": false
+                    },
+                    {
+                        "name": "StartStep",
+                        "excluded": false
+                    },
+                    {
+                        "name": "OnStartStep1",
+                        "excluded": false
+                    },
+                    {
+                        "name": "EnableMixtureTrigger",
+                        "excluded": false
+                    },
+                    {
+                        "name": "DisableMixtureTrigger",
+                        "excluded": false
+                    },
+                    {
+                        "name": "TryPouringResin",
+                        "excluded": false
+                    },
+                    {
+                        "name": "TryPauseResin",
+                        "excluded": false
+                    },
+                    {
+                        "name": "TryEndPouringResin",
+                        "excluded": true
+                    }
+                ]
+            },
+            {
+                "className": "Spine.TranslateXTimeline",
+                "staticMethods": [],
+                "instanceMethods": [
+                    {
+                        "name": "BoneIndex#get",
+                        "excluded": true
+                    },
+                    {
+                        "name": "ctor",
+                        "excluded": false
+                    },
+                    {
+                        "name": "Apply",
+                        "excluded": true
+                    }
+                ]
+            },
+            {
+                "className": "Spine.TranslateYTimeline",
+                "staticMethods": [],
+                "instanceMethods": [
+                    {
+                        "name": "BoneIndex#get",
+                        "excluded": true
+                    },
+                    {
+                        "name": "ctor",
+                        "excluded": false
+                    },
+                    {
+                        "name": "Apply",
+                        "excluded": true
+                    }
+                ]
+            },
+            {
+                "className": "Spine.PhysicsConstraintInertiaTimeline",
+                "staticMethods": [],
+                "instanceMethods": [
+                    {
+                        "name": "ctor",
+                        "excluded": false
+                    },
+                    {
+                        "name": "Setup",
+                        "excluded": true
+                    },
+                    {
+                        "name": "Get",
+                        "excluded": true
+                    },
+                    {
+                        "name": "Set",
+                        "excluded": true
+                    },
+                    {
+                        "name": "Global",
+                        "excluded": true
+                    }
+                ]
+            },
+            {
+                "className": "Spine.PhysicsConstraintStrengthTimeline",
+                "staticMethods": [],
+                "instanceMethods": [
+                    {
+                        "name": "ctor",
+                        "excluded": false
+                    },
+                    {
+                        "name": "Setup",
+                        "excluded": true
+                    },
+                    {
+                        "name": "Get",
+                        "excluded": true
+                    },
+                    {
+                        "name": "Set",
+                        "excluded": true
+                    },
+                    {
+                        "name": "Global",
+                        "excluded": true
                     }
                 ]
             }

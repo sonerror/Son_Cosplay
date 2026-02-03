@@ -1,0 +1,270 @@
+sailor moon.png
+size:1196,1196
+filter:Linear,Linear
+scale:0.8
+body/Cheeck R
+bounds:806,86,73,81
+offsets:0,0,74,82
+body/angry_emoji
+bounds:1083,750,56,58
+body/armR
+bounds:934,613,147,338
+body/body old
+bounds:237,344,450,850
+body/dry lips 2
+bounds:1083,613,75,27
+rotate:90
+body/dry lips 3
+bounds:881,133,86,41
+body/dry lips 4
+bounds:689,344,58,49
+body/dry lips1
+bounds:806,2,82,31
+rotate:90
+body/earR
+bounds:1039,962,48,94
+rotate:90
+body/eye R 1
+bounds:1135,968,43,42
+body/eye R 2
+bounds:794,383,10,10
+body/eye back head
+bounds:878,269,218,62
+body/eye close R
+bounds:1083,885,75,46
+offsets:3,0,78,46
+rotate:90
+body/eyebags R
+bounds:998,191,86,76
+body/eyeline R
+bounds:1083,810,73,46
+rotate:90
+body/forearm R
+bounds:640,16,164,326
+body/freckles
+bounds:689,395,226,219
+body/hand R 1
+bounds:1039,1012,146,182
+body/hand R 2
+bounds:806,169,70,224
+offsets:0,12,70,236
+body/head new v line
+bounds:689,616,243,335
+body/leg old R
+bounds:2,4,233,1190
+offsets:12,1,245,1191
+body/old back hair
+bounds:237,5,337,401
+rotate:90
+body/old brows R
+bounds:1084,553,58,21
+rotate:90
+body/old front hair
+bounds:689,953,348,241
+body/old lips 2
+bounds:969,99,75,27
+rotate:90
+body/old lips 3
+bounds:881,90,86,41
+body/old lips 4
+bounds:1083,690,58,49
+rotate:90
+body/old lips1
+bounds:839,2,82,31
+rotate:90
+body/shadow
+bounds:917,333,165,278
+body/text 1
+bounds:1112,644,16,44
+body/text 2
+bounds:998,145,43,44
+body/text 3
+bounds:1043,141,34,48
+body/text 4
+bounds:749,344,49,43
+rotate:90
+body/text 5
+bounds:998,107,43,36
+body/text 6
+bounds:1043,110,29,29
+body/text 7
+bounds:878,342,34,51
+body/text frame
+bounds:878,176,91,118
+rotate:90
+
+sailor moon_2.png
+size:872,872
+filter:Linear,Linear
+scale:0.8
+phase_1/L tape
+bounds:764,233,75,123
+offsets:0,0,77,124
+phase_1/blended
+bounds:2,279,245,337
+offsets:28,3,301,342
+rotate:90
+phase_1/blush apply
+bounds:552,246,210,110
+phase_1/contour apply
+bounds:296,2,226,242
+rotate:90
+phase_1/eye brown
+bounds:91,9,90,34
+phase_1/eye mask
+bounds:780,142,89,69
+offsets:0,1,90,70
+rotate:90
+phase_1/eye shadow
+bounds:270,535,109,89
+offsets:0,1,112,94
+phase_1/eye with lens
+bounds:772,651,48,49
+rotate:90
+phase_1/foam cleanser
+bounds:2,526,266,343
+phase_1/foundation
+bounds:270,626,243,335
+rotate:90
+phase_1/foundation apply
+bounds:607,701,168,227
+rotate:90
+phase_1/headband
+bounds:341,230,303,209
+offsets:1,1,304,212
+rotate:90
+phase_1/highlight
+bounds:552,358,266,232
+rotate:90
+phase_1/highlight apply
+bounds:381,546,162,78
+phase_1/lips mask
+bounds:671,649,99,50
+phase_1/lips1
+bounds:780,16,86,32
+phase_1/lips2
+bounds:183,9,65,34
+phase_1/lips3
+bounds:2,2,87,41
+offsets:0,5,87,47
+phase_1/lips4
+bounds:607,645,62,54
+phase_1/mascara
+bounds:780,50,90,65
+rotate:90
+phase_1/mask
+bounds:2,45,232,292
+rotate:90
+phase_1/wrinkles
+bounds:540,12,238,216
+
+sailor moon_3.png
+size:580,580
+filter:Linear,Linear
+scale:0.8
+phase_2/R hairpin
+bounds:306,2,58,78
+rotate:90
+phase_2/back hair
+bounds:2,208,302,370
+phase_2/bang
+bounds:2,12,302,194
+phase_2/side hair
+bounds:410,115,70,178
+phase_2/tattoo L
+bounds:482,151,85,142
+phase_2/tattoo R
+bounds:306,62,102,231
+phase_2/wig cap
+bounds:306,295,283,257
+offsets:0,0,283,258
+rotate:90
+
+sailor moon_4.png
+size:1896,1896
+filter:Linear,Linear
+scale:0.8
+phase_3/L hair
+bounds:774,709,428,1182
+phase_3/L hair 2
+bounds:2,150,314,898
+rotate:90
+phase_3/L shoe
+bounds:1154,43,151,654
+phase_3/back bow
+bounds:2,830,770,1061
+phase_3/belt
+bounds:345,23,310,125
+phase_3/chokcer 1
+bounds:654,498,110,48
+rotate:90
+phase_3/chokcer 2
+bounds:1095,186,36,38
+phase_3/dress bot
+bounds:2,466,650,362
+phase_3/dress top
+bounds:1432,517,353,520
+offsets:93,0,534,520
+phase_3/dress top back
+bounds:1704,96,178,182
+rotate:90
+phase_3/front bow
+bounds:1704,276,239,185
+rotate:90
+phase_3/glove L 2
+bounds:1511,203,312,191
+rotate:90
+phase_3/glove R
+bounds:1307,131,202,384
+phase_3/glove R 2
+bounds:2,2,146,341
+rotate:90
+phase_3/glover finger holding wand
+bounds:1307,539,106,158
+phase_3/headand
+bounds:654,610,218,82
+rotate:90
+phase_3/heart2
+bounds:1787,863,174,90
+rotate:90
+phase_3/leg new R
+bounds:1204,699,226,1192
+offsets:0,1,226,1193
+phase_3/sleeve
+bounds:738,510,197,162
+offsets:10,13,207,182
+rotate:90
+phase_3/toc tron R
+bounds:902,69,155,191
+rotate:90
+phase_3/underwear after corset
+bounds:1432,1039,451,852
+phase_3/wand
+bounds:902,226,250,481
+
+sailor moon_5.png
+size:1028,1028
+filter:Linear,Linear
+scale:0.8
+setbase/L old shoe boy
+bounds:907,599,94,218
+setbase/L old shoe top
+bounds:907,819,109,206
+setbase/ao choang bot
+bounds:907,432,165,82
+rotate:90
+setbase/ao choang top
+bounds:2,9,586,362
+setbase/glasses
+bounds:758,154,267,160
+rotate:90
+setbase/old dress
+bounds:2,373,479,652
+offsets:1,0,480,652
+setbase/old shirt
+bounds:483,423,422,602
+setbase/old shirt sleve R bot
+bounds:590,85,166,336
+setbase/old shirt sleve R top
+bounds:758,2,150,232
+rotate:90
