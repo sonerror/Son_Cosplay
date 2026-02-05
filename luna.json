@@ -2,7 +2,7 @@
     "version": "7.0.0",
     "projectId": "f42e7ff96e4545544bb6cd68f51ab634",
     "applicationID": 34683,
-    "creativeName": "R1_Cosplaydom_ver4",
+    "creativeName": "R1_Cosplaydom_ver4_GG",
     "pgServer": "EU",
     "window": {
         "‐⁏": true
@@ -45584,8 +45584,8 @@
                         "name": "Assets/_GAME/SonGame/Level/LevelSailorMoon/_texture/BG.png"
                     },
                     {
-                        "maxWidth": 256,
-                        "maxHeight": 256,
+                        "maxWidth": 512,
+                        "maxHeight": 512,
                         "format": "png32",
                         "compression": "quantSize",
                         "quality": 65,
