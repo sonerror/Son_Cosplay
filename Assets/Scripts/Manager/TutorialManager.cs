@@ -10,7 +10,8 @@ public class TutorialManager : Singleton<TutorialManager>
     public bool enableCountTime = false;
     public float timeCountHint = 2f;
     [SerializeField] public HandCtrl handCtrl;
-    [SerializeField] private LevelWednesday gamePlayManager;
+    [SerializeField] private GamePlayManager gamePlayManager;
+    [SerializeField] private LevelWednesday levelBase;
     // [SerializeField] private GameObject clock;
     private int CountStepDone = 0;
     public void OnStepDone()
@@ -24,6 +25,9 @@ public class TutorialManager : Singleton<TutorialManager>
         this.resetTimeHint();
     }
     [SerializeField] private List<Transform> tutorialNode = new List<Transform>();
+    [SerializeField] private List<Transform> tfItem = new List<Transform>();
+    [SerializeField] private List<Transform> tfPosItemNail = new List<Transform>();
+    public List<Transform> TfPosItemNail => tfPosItemNail;
     public List<Transform> TutorialNode => tutorialNode;
     int countCollectFail = 0;
 
@@ -65,7 +69,7 @@ public class TutorialManager : Singleton<TutorialManager>
         timeCountHint -= Time.deltaTime;
         if (timeCountHint <= 0)
         {
-            // ShowHint();
+            ShowHint();
         }
     }
 
@@ -79,10 +83,16 @@ public class TutorialManager : Singleton<TutorialManager>
         switch (index)
         {
             case 0:
-                handCtrl.gameObject.SetActive(true);
-                Tutorial(0);
+                Tutorial(index);
                 return;
             case 1:
+                Tutorial(index);
+                return;
+            case 2:
+                Tutorial(index);
+                return;
+            case 3:
+                HandHintNail();
                 return;
             default:
                 handCtrl.gameObject.SetActive(false);
@@ -92,9 +102,25 @@ public class TutorialManager : Singleton<TutorialManager>
     }
     private void Tutorial(int indexStep)
     {
-        var obj = gamePlayManager.MixtureDrag;
-        var node = tutorialNode[indexStep];
-        handCtrl.ShowHandPosToPos(obj.Tf.position, node.position);
+        if (tfItem == null || tutorialNode == null) return;
+
+        if (indexStep < 0 ||
+            indexStep >= tfItem.Count ||
+            indexStep >= tutorialNode.Count)
+            return;
+
+        handCtrl.gameObject.SetActive(true);
+
+        handCtrl.ShowHandPosToPos(
+            tfItem[indexStep].position,
+            tutorialNode[indexStep].position
+        );
+    }
+
+    private void HandHintNail()
+    {
+        handCtrl.gameObject.SetActive(true);
+        handCtrl.ShowHandPosToPos(levelBase.ListSnapNail[0].Tf.position, TfPosItemNail[0].position);
     }
 
     void HideHint()

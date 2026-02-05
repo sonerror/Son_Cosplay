@@ -40,7 +40,7 @@ public class LevelWednesday : GamePlayManager
     public override void StartStep()
     {
         base.StartStep();
-        //TutorialManager.Ins.enableCountTime = true;
+        TutorialManager.Ins.enableCountTime = true;
         switch (CurrentStep)
         {
             case 0:
@@ -159,8 +159,10 @@ public class LevelWednesday : GamePlayManager
     }
     [SerializeField] private Transform stealInteracts;
     [SerializeField] private ShowObjectEffect lidRig;
+    [SerializeField] private AudioData sfxGlasses;
     private void ShakeHand()
     {
+        SoundManager.PlaySFX(sfxGlasses.clip, sfxGlasses.volume);
         lidRig.Hide(0.15f);
         stealInteracts.transform.DOMoveY(stealInteracts.transform.position.y + 1, 0.3f).SetEase(Ease.Linear);
         stealInteracts.transform.DOScale(1.3f, 0.5f).SetEase(Ease.OutBack).OnComplete(() =>
@@ -252,7 +254,9 @@ public class LevelWednesday : GamePlayManager
     }
     [SerializeField] private ShowObjectEffect effectStep1;
     [SerializeField] private ShowObjectEffect effectStep2;
+    [SerializeField] private AudioData sfxClear;
     [SerializeField] private List<SonSnapObject> listSnapNail;
+    public List<SonSnapObject> ListSnapNail => listSnapNail;
     private int countSnapNail = 0;
     private void OnStartStep4()
     {
@@ -266,13 +270,17 @@ public class LevelWednesday : GamePlayManager
             obj.OnSnap.AddListener(() =>
             {
                 ControllerDoneVFX.Instance.SpawnSnapVFX(obj.SnapPoint.Tf);
-                countSnapNail++;
-                if (countSnapNail >= listSnapNail.Count)
+                int removedIndex = listSnapNail.IndexOf(obj);
+                if (removedIndex < 0) return;
+                listSnapNail.RemoveAt(removedIndex);
+                TutorialManager.Ins.TfPosItemNail.RemoveAt(removedIndex);
+                if (listSnapNail.Count == 0)
                 {
+                    SoundManager.PlaySFX(sfxClear.clip, 1);
+
                     DoneStep();
                     TryNextStep();
                     AdsManager.Ins.ShowEndGame();
-
                 }
             });
         }

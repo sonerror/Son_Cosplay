@@ -692,37 +692,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1 &233471653
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 233471654}
-  m_Layer: 0
-  m_Name: posGiayPhai
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &233471654
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 233471653}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.3, y: -10.5, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1738427242}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &242449614
 GameObject:
   m_ObjectHideFlags: 0
@@ -1651,8 +1620,8 @@ MonoBehaviour:
       m_Calls: []
   isEnableCollideWhenEnableThis: 0
   moveBack: 1
-  isChangeScaleAffterSnap: 1
-  scaleAffterSnap: 0
+  isChangeScaleAffterSnap: 0
+  scaleAffterSnap: 1
   rotateOnDrag: 0
   onDragRotateZ: 10
   isBounceLoop: 0
@@ -2028,7 +1997,7 @@ MonoBehaviour:
   isEnableCollideWhenEnableThis: 0
   moveBack: 1
   isChangeScaleAffterSnap: 1
-  scaleAffterSnap: 0
+  scaleAffterSnap: 1.3
   rotateOnDrag: 0
   onDragRotateZ: 10
   isBounceLoop: 0
@@ -2483,8 +2452,8 @@ MonoBehaviour:
       m_Calls: []
   isEnableCollideWhenEnableThis: 0
   moveBack: 1
-  isChangeScaleAffterSnap: 1
-  scaleAffterSnap: 0
+  isChangeScaleAffterSnap: 0
+  scaleAffterSnap: 1
   rotateOnDrag: 0
   onDragRotateZ: 10
   isBounceLoop: 0
@@ -3480,6 +3449,7 @@ GameObject:
   - component: {fileID: 736123643}
   - component: {fileID: 736123646}
   - component: {fileID: 736123647}
+  - component: {fileID: 736123648}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -3556,6 +3526,9 @@ MonoBehaviour:
   moldLid: {fileID: 1834740415}
   stealInteracts: {fileID: 880660871}
   lidRig: {fileID: 81315182}
+  sfxGlasses:
+    clip: {fileID: 8300000, guid: a71da11439face44ca701941feb03b4f, type: 3}
+    volume: 1
   airBrushDrag: {fileID: 565445524}
   airBrushTrigger: {fileID: 792300681}
   fadingAirBrushTime: 3
@@ -3564,6 +3537,9 @@ MonoBehaviour:
   fillCircleBar: {fileID: 1977242223}
   effectStep1: {fileID: 918686342}
   effectStep2: {fileID: 7756592}
+  sfxClear:
+    clip: {fileID: 8300000, guid: 27c82ce1c17fc124985f3087fcf74bec, type: 3}
+    volume: 1
   listSnapNail:
   - {fileID: 1702622791}
   - {fileID: 1694987879}
@@ -3571,6 +3547,22 @@ MonoBehaviour:
   - {fileID: 561540657}
   - {fileID: 2008972931}
   - {fileID: 495555657}
+--- !u!114 &736123648
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 736123642}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30b401387351fe74690a78861d6ca99d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  emojiControl: {fileID: 1075152374}
+  clockTimer: {fileID: 2330175927518235536}
+  character: {fileID: 0}
+  currentStep: 0
 --- !u!1 &751887566
 GameObject:
   m_ObjectHideFlags: 0
@@ -5753,8 +5745,8 @@ MonoBehaviour:
       m_Calls: []
   isEnableCollideWhenEnableThis: 0
   moveBack: 1
-  isChangeScaleAffterSnap: 1
-  scaleAffterSnap: 0
+  isChangeScaleAffterSnap: 0
+  scaleAffterSnap: 1
   rotateOnDrag: 0
   onDragRotateZ: 10
   isBounceLoop: 0
@@ -6099,8 +6091,8 @@ MonoBehaviour:
       m_Calls: []
   isEnableCollideWhenEnableThis: 0
   moveBack: 1
-  isChangeScaleAffterSnap: 1
-  scaleAffterSnap: 0
+  isChangeScaleAffterSnap: 0
+  scaleAffterSnap: 1
   rotateOnDrag: 0
   onDragRotateZ: 10
   isBounceLoop: 0
@@ -6287,10 +6279,9 @@ Transform:
   m_Children:
   - {fileID: 7594258068145593372}
   - {fileID: 2075704649}
-  - {fileID: 2104112624}
-  - {fileID: 1805734480}
-  - {fileID: 233471654}
-  - {fileID: 1936644374}
+  - {fileID: 1784739071}
+  - {fileID: 1925633283}
+  - {fileID: 2101874982}
   m_Father: {fileID: 7177438}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1738427243
@@ -6311,13 +6302,23 @@ MonoBehaviour:
   timeCountHint: 1
   handCtrl: {fileID: 8503599624730501112}
   gamePlayManager: {fileID: 736123647}
+  levelBase: {fileID: 736123647}
   tutorialNode:
   - {fileID: 2075704649}
-  - {fileID: 2104112624}
-  - {fileID: 1805734480}
-  - {fileID: 233471654}
-  - {fileID: 1936644374}
---- !u!1 &1805734479
+  - {fileID: 2101874982}
+  - {fileID: 1784739071}
+  tfItem:
+  - {fileID: 1829356802}
+  - {fileID: 1925633283}
+  - {fileID: 565445521}
+  tfPosItemNail:
+  - {fileID: 1138524742}
+  - {fileID: 1023135602}
+  - {fileID: 1698290602}
+  - {fileID: 8214923}
+  - {fileID: 353192618}
+  - {fileID: 875470486}
+--- !u!1 &1784739070
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -6325,24 +6326,24 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1805734480}
+  - component: {fileID: 1784739071}
   m_Layer: 0
-  m_Name: posGiayTrai
+  m_Name: posAirBrush
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &1805734480
+--- !u!4 &1784739071
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1805734479}
+  m_GameObject: {fileID: 1784739070}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.9, y: -8.6, z: 0}
+  m_LocalPosition: {x: 1.2, y: -1.11, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -7101,7 +7102,7 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!1 &1936644373
+--- !u!1 &1925633282
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -7109,24 +7110,24 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1936644374}
+  - component: {fileID: 1925633283}
   m_Layer: 0
-  m_Name: posDay
+  m_Name: posDragGlassesA
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &1936644374
+--- !u!4 &1925633283
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1936644373}
+  m_GameObject: {fileID: 1925633282}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.1, y: 19.1, z: 0}
+  m_LocalPosition: {x: -0.36, y: -4.94, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -7790,8 +7791,8 @@ MonoBehaviour:
       m_Calls: []
   isEnableCollideWhenEnableThis: 0
   moveBack: 1
-  isChangeScaleAffterSnap: 1
-  scaleAffterSnap: 0
+  isChangeScaleAffterSnap: 0
+  scaleAffterSnap: 1
   rotateOnDrag: 0
   onDragRotateZ: 10
   isBounceLoop: 0
@@ -7999,7 +8000,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1738427242}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &2104112623
+--- !u!1 &2101874981
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8007,24 +8008,24 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 2104112624}
+  - component: {fileID: 2101874982}
   m_Layer: 0
-  m_Name: posQuan
+  m_Name: posDragGlassesB
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &2104112624
+--- !u!4 &2101874982
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2104112623}
+  m_GameObject: {fileID: 2101874981}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 9.6, y: -0.7, z: 0}
+  m_LocalPosition: {x: 3.68, y: -8.82, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -8360,8 +8361,8 @@ Transform:
   m_GameObject: {fileID: 8545685235850829554}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.55, y: 18.35, z: 0}
-  m_LocalScale: {x: 0.75, y: 0.75, z: 0.75}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 1678110477759679570}
