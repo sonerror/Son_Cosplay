@@ -10,7 +10,7 @@ public class TutorialManager : Singleton<TutorialManager>
     public bool enableCountTime = false;
     public float timeCountHint = 2f;
     [SerializeField] public HandCtrl handCtrl;
-    [SerializeField] private LevelWednesday gamePlayManager;
+    [SerializeField] private LevelSailorMoon gamePlayManager;
     // [SerializeField] private GameObject clock;
     private int CountStepDone = 0;
     public void OnStepDone()
@@ -24,6 +24,7 @@ public class TutorialManager : Singleton<TutorialManager>
         this.resetTimeHint();
     }
     [SerializeField] private List<Transform> tutorialNode = new List<Transform>();
+    [SerializeField] private List<Transform> tfItem = new List<Transform>();
     public List<Transform> TutorialNode => tutorialNode;
     int countCollectFail = 0;
 
@@ -65,7 +66,7 @@ public class TutorialManager : Singleton<TutorialManager>
         timeCountHint -= Time.deltaTime;
         if (timeCountHint <= 0)
         {
-            // ShowHint();
+            ShowHint();
         }
     }
 
@@ -75,14 +76,28 @@ public class TutorialManager : Singleton<TutorialManager>
 
         enableCountTime = false;
         int index = gamePlayManager.CurrentStep;
-
         switch (index)
         {
             case 0:
-                handCtrl.gameObject.SetActive(true);
-                Tutorial(0);
+                Tutorial(index);
                 return;
             case 1:
+                Tutorial(index);
+                return;
+            case 2:
+                Tutorial(index);
+                return;
+            case 3:
+                Tutorial(index);
+                return;
+            case 4:
+                Tutorial(index);
+                return;
+            case 5:
+                Tutorial(index);
+                return;
+            case 6:
+                Tutorial(index);
                 return;
             default:
                 handCtrl.gameObject.SetActive(false);
@@ -92,9 +107,11 @@ public class TutorialManager : Singleton<TutorialManager>
     }
     private void Tutorial(int indexStep)
     {
-        var obj = gamePlayManager.MixtureDrag;
+        handCtrl.gameObject.SetActive(true);
+
+        var obj = tfItem[indexStep];
         var node = tutorialNode[indexStep];
-        handCtrl.ShowHandPosToPos(obj.Tf.position, node.position);
+        handCtrl.ShowHandPosToPos(obj.position, node.position);
     }
 
     void HideHint()

@@ -11,10 +11,22 @@ public class GamePlayManager : Singleton<GamePlayManager>
   public EmojiControl emojiControl;
   public ClockTimer clockTimer;
   public CharacterControl character;
+  public FillCircleBar fillCircleBar;
   public List<Item> items = new List<Item>();
   [SerializeField] protected int currentStep = 0;
+  [SerializeField] private bool isChangeAnimHappy = true;
+  public bool IsChangeAnimHappy => isChangeAnimHappy;
   public int CurrentStep => currentStep;
   private IEnumerator coroutine = null;
+  public void SetEmissionRate(ParticleSystem particle, float rate)
+  {
+    ParticleSystem.EmissionModule emission = particle.emission;
+    emission.rateOverTime = rate;
+  }
+  public void SetStateChangeAnim(bool value)
+  {
+    isChangeAnimHappy = value;
+  }
   protected void TurnCharacterSlotAttachment(
       List<SlotAttachmentPair> slotDataList,
       bool attached)
@@ -38,14 +50,16 @@ public class GamePlayManager : Singleton<GamePlayManager>
     currentStep = step;
     StartStep();
   }
-
+  private bool isDoneStep = false;
+  public bool IsDoneStep => isDoneStep;
   protected virtual void DoneStep()
   {
     PlayPositiveEmoji();
+    isDoneStep = true;
     Debug.Log("Fx step" + currentStep);
   }
 
-  protected virtual void TryNextStep()
+  public void TryNextStep()
   {
     currentStep++;
     Debug.LogWarning("Next To" + currentStep);
@@ -57,6 +71,7 @@ public class GamePlayManager : Singleton<GamePlayManager>
 #endif
   public virtual void StartStep()
   {
+    isDoneStep = false;
   }
   public void PlayPositiveEmoji()
   {
@@ -73,7 +88,15 @@ public class GamePlayManager : Singleton<GamePlayManager>
   private IEnumerator PlayPositiveEmojiCoroutine()
   {
     emojiControl.ShowPositive();
-    character.SetMouseHappy();
+    if (isChangeAnimHappy)
+    {
+      character.SetMouseHappy();
+
+    }
+    else
+    {
+      character.SetMouseIdle();
+    }
     var i = idSoundHappy % 3;
     if (i == 0) SoundManager.Ins.PlayFx(FxType.Happy0);
     else if (i == 1) SoundManager.Ins.PlayFx(FxType.Happy1);
@@ -112,7 +135,7 @@ public class GamePlayManager : Singleton<GamePlayManager>
   private int idSoundAngry = 0;
   private IEnumerator PlayNegativeEmojiCoroutine()
   {
-    yield return new WaitForSeconds(1f);
+    yield return new WaitForSeconds(0.01f);
     character.SetMouseAngry();
     emojiControl.ShowNegative();
     var i = idSoundAngry % 3;

@@ -194,7 +194,13 @@ namespace sonnv
                 for (int i = 0; i < snapToPosition.Length; i++)
                 {
                     SonSnapPoint snapPoint = snapToPosition[i];
-
+                    if ((DistanceToInSqrVec2(snapPoint.Tf) < snapDistance))
+                    {
+                        if (!snapPoint.isSnap && !snapPoint.canSnap)
+                        {
+                            GamePlayManager.Ins.PlayNegativeEmoji();
+                        }
+                    }
                     if (!snapPoint.Tf.gameObject.activeSelf) continue;
                     if (snapPoint.isSnap || !snapPoint.canSnap) continue;
                     if (!(DistanceToInSqrVec2(snapPoint.Tf) < snapDistance)) continue;
@@ -227,6 +233,9 @@ namespace sonnv
                       {
                           onSnap.Invoke();
                       });
+
+
+
                     return;
                 }
             }
@@ -260,6 +269,7 @@ namespace sonnv
             {
                 onDrop.Invoke();
             }
+
         }
 
         /* ================= HELPERS ================= */

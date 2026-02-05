@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Collections.Generic;
 using DG.Tweening;
 using UnityEngine;
@@ -8,16 +9,21 @@ using sonnv;
 public class SonDragItemBase : SonMonoBehaviour,
     IPointerDownHandler, IDragHandler, IPointerUpHandler
 {
-    [SerializeField] private List<int> useInSteps;
+    /* ================= CONFIG ================= */
+
+    [SerializeField] private List<int> useInSteps = new List<int>();
+
     [SerializeField] private SpriteRenderer sprite;
     [SerializeField] private Collider2D col;
 
+    [Header("Face Zone")]
     [SerializeField] private bool useRectTriggerZone;
     [SerializeField] private Transform facePoint;
     [SerializeField] private float facePointZoneRadius = 2f;
     [SerializeField] private Rect rectTriggerZone;
     [SerializeField] private float checkStepAfterSecondsInZone = 1f;
 
+    [Header("Drag Behaviour")]
     [SerializeField] private bool forceCheckWrongStep;
     [SerializeField] private bool isMoveBackOnRelease = true;
     [SerializeField] private float moveBackTime = 0.3f;
@@ -28,34 +34,46 @@ public class SonDragItemBase : SonMonoBehaviour,
     [SerializeField] private float dragSlerpSpeed = 30f;
     [SerializeField] private Vector3 dragPosOffset = new Vector3(0f, 1f, 0f);
 
+    [Header("Visual")]
     [SerializeField] private bool rotateOnDrag;
     [SerializeField] private float onDragRotateZ = 10f;
 
     [SerializeField] private bool scaleOnPick;
-    [SerializeField] private Vector3 scaling;
+    [SerializeField] private Vector3 scaling = Vector3.one;
 
     [SerializeField] private AudioClip pickUpSound;
 
+    [Header("Events")]
     public UnityEvent onDragStart;
     public UnityEvent onDragStop;
     public UnityEvent onMoveBackEnd;
 
+    /* ================= STATE ================= */
+
     private bool _canInteract;
+    public bool IsDragging { get; private set; }
+
     private Vector3 _initialPos;
     private Vector3 _initScale;
     private float _initZ;
     private float _initZRot;
+
+    private Vector3 _nextPos;
 
     private Camera _mainCamera;
 
     private Tween _moveBackTween;
     private Tween _rotateTween;
 
-    private Vector3 _nextPos;
+    private Coroutine checkStepCoroutine;
 
-    public float DragSpeed => DistanceToInSqrVec2(_nextPos);
-    public bool IsDragging { get; private set; }
-    public Vector3 InitialPos => _initialPos;
+    /* ================= UNITY ================= */
+
+    private void Awake()
+    {
+        if (!sprite) sprite = GetComponentInChildren<SpriteRenderer>();
+        if (!col) col = GetComponent<Collider2D>();
+    }
 
     private void Start()
     {
@@ -83,7 +101,7 @@ public class SonDragItemBase : SonMonoBehaviour,
         }
     }
 
-    /* ================= POINTER EVENTS (LUNA) ================= */
+    /* ================= POINTER EVENTS ================= */
 
     public void OnPointerDown(PointerEventData eventData)
     {
@@ -92,16 +110,18 @@ public class SonDragItemBase : SonMonoBehaviour,
         UpdateNextPos(eventData);
 
         IsDragging = true;
-        sprite.sortingOrder = sortingOrderOnDrag;
+
+        if (sprite)
+            sprite.sortingOrder = sortingOrderOnDrag;
 
         if (pickUpSound)
             SoundManager.PlaySFX(pickUpSound);
 
-        if (_moveBackTween != null) _moveBackTween.Kill();
+        _moveBackTween?.Kill();
 
         if (rotateOnDrag)
         {
-            if (_rotateTween != null) _rotateTween.Kill();
+            _rotateTween?.Kill();
             _rotateTween = Tf.DORotate(
                 new Vector3(0, 0, onDragRotateZ),
                 moveBackTime
@@ -111,7 +131,17 @@ public class SonDragItemBase : SonMonoBehaviour,
         if (scaleOnPick)
             Tf.localScale = scaling;
 
-        onDragStart.Invoke();
+        onDragStart?.Invoke();
+
+        // Start auto-check coroutine
+        if (GamePlayManager.Ins != null &&
+            (!useInSteps.Contains(GamePlayManager.Ins.CurrentStep) || forceCheckWrongStep))
+        {
+            if (checkStepCoroutine != null)
+                StopCoroutine(checkStepCoroutine);
+
+            checkStepCoroutine = StartCoroutine(WaitCheckCurrentStep());
+        }
     }
 
     public void OnDrag(PointerEventData eventData)
@@ -122,6 +152,20 @@ public class SonDragItemBase : SonMonoBehaviour,
 
     public void OnPointerUp(PointerEventData eventData)
     {
+        ReleaseDrag();
+    }
+
+    /* ================= CORE LOGIC ================= */
+
+    private void ReleaseDrag()
+    {
+        // stop auto timer
+        if (checkStepCoroutine != null)
+        {
+            StopCoroutine(checkStepCoroutine);
+            checkStepCoroutine = null;
+        }
+
         if (!_canInteract || !IsDragging) return;
 
         IsDragging = false;
@@ -129,18 +173,29 @@ public class SonDragItemBase : SonMonoBehaviour,
 
         SetInteract(false);
 
-        if (_moveBackTween != null) _moveBackTween.Kill();
-        _moveBackTween = Tf.DOLocalMove(_initialPos, moveBackTime)
-            .OnComplete(() =>
-            {
-                sprite.sortingOrder = sortingOrderOnRelease;
-                SetInteract(true);
-                onMoveBackEnd.Invoke();
-            });
+        _moveBackTween?.Kill();
+
+        if (isMoveBackOnRelease)
+        {
+            _moveBackTween = Tf.DOLocalMove(_initialPos, moveBackTime)
+                .OnComplete(() =>
+                {
+                    if (sprite)
+                        sprite.sortingOrder = sortingOrderOnRelease;
+
+                    SetInteract(true);
+                    onMoveBackEnd?.Invoke();
+                });
+        }
+        else
+        {
+            SetInteract(true);
+            onMoveBackEnd?.Invoke();
+        }
 
         if (rotateOnDrag)
         {
-            if (_rotateTween != null) _rotateTween.Kill();
+            _rotateTween?.Kill();
             _rotateTween = Tf.DORotate(
                 new Vector3(0, 0, _initZRot),
                 moveBackTime
@@ -150,7 +205,49 @@ public class SonDragItemBase : SonMonoBehaviour,
         if (scaleOnPick)
             Tf.localScale = _initScale;
 
-        onDragStop.Invoke();
+        onDragStop?.Invoke();
+
+        // Wrong step feedback
+        if (GamePlayManager.Ins != null &&
+            (!useInSteps.Contains(GamePlayManager.Ins.CurrentStep) || forceCheckWrongStep))
+        {
+            if (InsideFaceZone)
+                GamePlayManager.Ins.PlayNegativeEmoji();
+        }
+        if (GamePlayManager.Ins != null)
+        {
+            if (GamePlayManager.Ins.IsDoneStep)
+            {
+                GamePlayManager.Ins.TryNextStep();
+            }
+        }
+    }
+
+    /* ================= COROUTINE ================= */
+
+    private IEnumerator WaitCheckCurrentStep()
+    {
+        float timer = 0f;
+
+        while (IsDragging)
+        {
+            if (InsideFaceZone)
+            {
+                timer += Time.deltaTime;
+
+                if (timer >= checkStepAfterSecondsInZone)
+                {
+                    ReleaseDrag();
+                    yield break;
+                }
+            }
+            else
+            {
+                timer = 0f;
+            }
+
+            yield return null;
+        }
     }
 
     /* ================= HELPERS ================= */
@@ -161,23 +258,6 @@ public class SonDragItemBase : SonMonoBehaviour,
         pos.z = _initZ;
         pos += dragPosOffset;
         _nextPos = pos;
-    }
-
-    public void AddUseInStep(int step)
-    {
-        if (!useInSteps.Contains(step))
-            useInSteps.Add(step);
-    }
-
-    public void RemoveUseInStep(int step)
-    {
-        if (useInSteps.Contains(step))
-            useInSteps.Remove(step);
-    }
-
-    public void SetForceCheckWrongStep(bool isCheck)
-    {
-        forceCheckWrongStep = isCheck;
     }
 
     private bool InsideFaceZone
@@ -201,4 +281,41 @@ public class SonDragItemBase : SonMonoBehaviour,
         if (changeCollider && col)
             col.enabled = canMove;
     }
+    public void AddUseInStep(int step)
+    {
+        if (!useInSteps.Contains(step))
+            useInSteps.Add(step);
+    }
+
+    public void RemoveUseInStep(int step)
+    {
+        if (useInSteps.Contains(step))
+            useInSteps.Remove(step);
+    }
+
+
+#if UNITY_EDITOR
+    [Sirenix.OdinInspector.Button]
+    private void GetRef()
+    {
+        col = GetComponent<Collider2D>();
+        sprite = GetComponent<SpriteRenderer>();
+        if (!sprite)
+            sprite = GetComponentInChildren<SpriteRenderer>();
+    }
+
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.color = Color.yellow;
+        if (useRectTriggerZone)
+        {
+            Gizmos.DrawWireCube(rectTriggerZone.center,
+                (Vector3)rectTriggerZone.size + Vector3.forward);
+        }
+        else if (facePoint && facePointZoneRadius > 0)
+        {
+            Gizmos.DrawWireSphere(facePoint.position, facePointZoneRadius);
+        }
+    }
+#endif
 }

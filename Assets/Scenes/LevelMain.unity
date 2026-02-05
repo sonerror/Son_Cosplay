@@ -3741,6 +3741,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c186914d693bd4c4ba96a5fa504d6ba4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  screenContainer: {fileID: 0}
   screens:
   - {fileID: 6160914223280322920, guid: 5fa6e81763c7f764ea78cf380f9d0b98, type: 3}
   canvasParent:
@@ -3956,6 +3957,7 @@ MonoBehaviour:
   Scene0: {fileID: 736424635}
   Scene1: {fileID: 1196139559}
   Scene2: {fileID: 693319568}
+  isChangeAnimHappy: 1
 --- !u!114 &736123646
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3980,7 +3982,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30b401387351fe74690a78861d6ca99d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  emojiControl: {fileID: 1075152374}
+  clockTimer: {fileID: 2330175927518235536}
   character: {fileID: 8385880717800731279}
+  fillCircleBar: {fileID: 1977242223}
   items:
   - {fileID: 0}
   - {fileID: 1529926237}
@@ -3991,17 +3996,7 @@ MonoBehaviour:
   - {fileID: 769038767}
   - {fileID: 1648413753}
   currentStep: 0
-  ClotherRemove:
-  - {fileID: 2088595620}
-  - {fileID: 1668870492}
-  - {fileID: 1545955112}
-  - {fileID: 1819928318}
-  ControlAlphaSlot:
-  - {fileID: 6324880857304882186}
-  - {fileID: 1980320568}
-  - {fileID: 801252252}
-  - {fileID: 6560686771069424522}
-  - {fileID: 5031398603552173943}
+  isChangeAnimHappy: 1
 --- !u!1 &736424635
 GameObject:
   m_ObjectHideFlags: 0
@@ -10604,7 +10599,7 @@ MonoBehaviour:
   enableCountTime: 0
   timeCountHint: 1
   handCtrl: {fileID: 8503599624730501112}
-  gamePlayManager: {fileID: 736123647}
+  gamePlayManager: {fileID: 0}
   tutorialNode:
   - {fileID: 2075704649}
   - {fileID: 2104112624}
@@ -29011,7 +29006,7 @@ Transform:
   m_GameObject: {fileID: 1153336887705930682}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0.70830953, w: 0.705902}
-  m_LocalPosition: {x: 0.031109503, y: 22.60351, z: 0}
+  m_LocalPosition: {x: 0.031109603, y: 22.60351, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -29822,6 +29817,9 @@ MonoBehaviour:
   MouseNorAf: {fileID: 0}
   MouseHappyAf: {fileID: 0}
   MouseAngryAf: {fileID: 0}
+  happyName: happy
+  idleName: idle
+  angryName: angry
   customMouseAnim: 0
 --- !u!114 &8503599624730501112
 MonoBehaviour:
@@ -29875,6 +29873,9 @@ MonoBehaviour:
   MouseNorAf: {fileID: 0}
   MouseHappyAf: {fileID: 0}
   MouseAngryAf: {fileID: 0}
+  happyName: happy
+  idleName: idle
+  angryName: angry
   customMouseAnim: 0
 --- !u!1 &8545685235850829554
 GameObject:

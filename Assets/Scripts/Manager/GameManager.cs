@@ -20,12 +20,15 @@ public class GameManager : Singleton<GameManager>
   public ChangeScene changeScene;
 
   public GameObject Scene0, Scene1, Scene2;
-
-
+  [SerializeField] private bool isChangeAnimHappy = true;
+  public bool IsChangeAnimHappy => isChangeAnimHappy;
   private IEnumerator coroutine = null;
 
   private bool hadClicked = false;
-
+  private void Awake()
+  {
+    isChangeAnimHappy = true;
+  }
   private void Update()
   {
     if (isPlayingGame && Input.GetMouseButtonDown(0))
@@ -85,7 +88,14 @@ public class GameManager : Singleton<GameManager>
   private IEnumerator PlayPositiveEmojiCoroutine()
   {
     emojiControl.ShowPositive();
-    GamePlayManager.Ins.character.SetMouseHappy();
+    if (isChangeAnimHappy)
+    {
+      GamePlayManager.Ins.character.SetMouseHappy();
+    }
+    else
+    {
+      GamePlayManager.Ins.character.SetMouseIdle();
+    }
     var i = idSoundHappy % 3;
 
 

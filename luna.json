@@ -133,14 +133,13 @@
             ]
         },
         "scenes": [
-            "Assets/_GAME/SonGame/Level/LevelSailorMoon/Anim/New/json/scenetest.unity"
+            "Assets/_GAME/SonGame/Level/LevelSailorMoon/LevelSailorMoon.unity"
         ],
         "disabledScenes": [
             "Assets/Scenes/LevelMain.unity",
             "Assets/_GAME/Levels/LvCosplayKIdol/Level6.unity",
             "Assets/_GAME/Levels/LvCosplayWenesday/Level53.unity",
             "Assets/_GAME/SonGame/Level/LevelMaleficent/Level98Maleficent.unity",
-            "Assets/_GAME/SonGame/Level/LevelSailorMoon/LevelSailorMoon.unity",
             "Assets/_GAME/SonGame/Level/LevelWednesday/LevelWednesday.unity"
         ],
         "startupScene": 0,
@@ -9000,6 +8999,10 @@
             {
                 "name": "ShakeObject",
                 "excluded": true
+            },
+            {
+                "name": "CameraScaler.WorkingMode",
+                "excluded": false
             }
         ],
         "unusedMethods": [
@@ -18155,7 +18158,7 @@
                     },
                     {
                         "name": "clearFlags#set",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "fieldOfView#set",
@@ -18171,7 +18174,7 @@
                     },
                     {
                         "name": "nearClipPlane#set",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "near#get",
@@ -18251,7 +18254,7 @@
                     },
                     {
                         "name": "depth#set",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "backgroundColor#get",
@@ -18287,7 +18290,7 @@
                     },
                     {
                         "name": "targetDisplay#set",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "commandBufferCount#get",
@@ -24014,6 +24017,14 @@
                     {
                         "name": "ShowClockTimer",
                         "excluded": true
+                    },
+                    {
+                        "name": "IsChangeAnimHappy#get",
+                        "excluded": true
+                    },
+                    {
+                        "name": "Awake$1",
+                        "excluded": true
                     }
                 ]
             },
@@ -24067,11 +24078,11 @@
                     },
                     {
                         "name": "PlayNegativeEmoji",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "PlayNegativeEmojiCoroutine",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "ShowClockTimer",
@@ -24084,6 +24095,22 @@
                     {
                         "name": "PlayHappyOnSnap",
                         "excluded": true
+                    },
+                    {
+                        "name": "IsChangeAnimHappy#get",
+                        "excluded": true
+                    },
+                    {
+                        "name": "SetEmissionRate",
+                        "excluded": false
+                    },
+                    {
+                        "name": "SetStateChangeAnim",
+                        "excluded": false
+                    },
+                    {
+                        "name": "IsDoneStep#get",
+                        "excluded": false
                     }
                 ]
             },
@@ -27581,59 +27608,59 @@
                     },
                     {
                         "name": "emission#get",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "colorBySpeed#get",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "colorOverLifetime#get",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "rotationBySpeed#get",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "rotationOverLifetime#get",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "shape#get",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "sizeBySpeed#get",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "sizeOverLifetime#get",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "textureSheetAnimation#get",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "velocityOverLifetime#get",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "noise#get",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "inheritVelocity#get",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "forceOverLifetime#get",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "limitVelocityOverLifetime#get",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "enableEmission#get",
@@ -28929,7 +28956,7 @@
                     },
                     {
                         "name": "renderMode#get",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "renderMode#set",
@@ -28937,7 +28964,7 @@
                     },
                     {
                         "name": "sortMode#get",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "sortMode#set",
@@ -28945,7 +28972,7 @@
                     },
                     {
                         "name": "lengthScale#get",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "lengthScale#set",
@@ -28953,7 +28980,7 @@
                     },
                     {
                         "name": "velocityScale#get",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "velocityScale#set",
@@ -28961,7 +28988,7 @@
                     },
                     {
                         "name": "cameraVelocityScale#get",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "cameraVelocityScale#set",
@@ -28969,7 +28996,7 @@
                     },
                     {
                         "name": "normalDirection#get",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "normalDirection#set",
@@ -28977,7 +29004,7 @@
                     },
                     {
                         "name": "sortingFudge#get",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "sortingFudge#set",
@@ -28985,7 +29012,7 @@
                     },
                     {
                         "name": "minParticleSize#get",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "minParticleSize#set",
@@ -28993,15 +29020,15 @@
                     },
                     {
                         "name": "maxParticleSize#get",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "maxParticleSize#set",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "pivot#get",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "pivot#set",
@@ -29009,7 +29036,7 @@
                     },
                     {
                         "name": "trailMaterial#get",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "trailMaterial#set",
@@ -36781,7 +36808,7 @@
                     },
                     {
                         "name": "EnableCol",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "ReEnable$1",
@@ -36797,7 +36824,7 @@
                     },
                     {
                         "name": "AddTriggerEvent",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "RemoveTriggerEvent",
@@ -44597,7 +44624,7 @@
                     },
                     {
                         "name": "ReFill",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "Fill",
@@ -44732,16 +44759,8 @@
                 "staticMethods": [],
                 "instanceMethods": [
                     {
-                        "name": "DragSpeed#get",
-                        "excluded": true
-                    },
-                    {
-                        "name": "InitialPos#get",
-                        "excluded": true
-                    },
-                    {
                         "name": "InsideFaceZone#get",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "init",
@@ -44757,14 +44776,10 @@
                     },
                     {
                         "name": "AddUseInStep",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "RemoveUseInStep",
-                        "excluded": true
-                    },
-                    {
-                        "name": "SetForceCheckWrongStep",
                         "excluded": true
                     },
                     {
@@ -44785,6 +44800,18 @@
                     },
                     {
                         "name": "UpdateNextPos",
+                        "excluded": false
+                    },
+                    {
+                        "name": "Awake",
+                        "excluded": false
+                    },
+                    {
+                        "name": "ReleaseDrag",
+                        "excluded": false
+                    },
+                    {
+                        "name": "WaitCheckCurrentStep",
                         "excluded": false
                     }
                 ]
@@ -44905,7 +44932,7 @@
                     },
                     {
                         "name": "ChangeCanSnap",
-                        "excluded": true
+                        "excluded": false
                     }
                 ]
             },
@@ -45166,10 +45193,6 @@
                         "excluded": true
                     },
                     {
-                        "name": "MixtureDrag#get",
-                        "excluded": true
-                    },
-                    {
                         "name": "init",
                         "excluded": false
                     },
@@ -45207,15 +45230,103 @@
                     },
                     {
                         "name": "TryEndPouringResin",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "SetStateSlotGlasses",
                         "excluded": false
                     },
                     {
-                        "name": "OnStartStep",
-                        "excluded": true
+                        "name": "Awake$1",
+                        "excluded": false
+                    },
+                    {
+                        "name": "OnStartStep2",
+                        "excluded": false
+                    },
+                    {
+                        "name": "SetStateSlotHeadBand",
+                        "excluded": false
+                    },
+                    {
+                        "name": "OnStartStep3",
+                        "excluded": false
+                    },
+                    {
+                        "name": "EnableShowerTrigger",
+                        "excluded": false
+                    },
+                    {
+                        "name": "DisableShowerTrigger",
+                        "excluded": false
+                    },
+                    {
+                        "name": "TryShower",
+                        "excluded": false
+                    },
+                    {
+                        "name": "TryPausShower",
+                        "excluded": false
+                    },
+                    {
+                        "name": "TryEndShower",
+                        "excluded": false
+                    },
+                    {
+                        "name": "OnStartStep4",
+                        "excluded": false
+                    },
+                    {
+                        "name": "ChangeAlphaCleanser",
+                        "excluded": false
+                    },
+                    {
+                        "name": "ChangeAlphaFoam",
+                        "excluded": false
+                    },
+                    {
+                        "name": "OnStartStep5",
+                        "excluded": false
+                    },
+                    {
+                        "name": "EnableWashTrigger",
+                        "excluded": false
+                    },
+                    {
+                        "name": "DisableWashTrigger",
+                        "excluded": false
+                    },
+                    {
+                        "name": "TryWash",
+                        "excluded": false
+                    },
+                    {
+                        "name": "TryPausWash",
+                        "excluded": false
+                    },
+                    {
+                        "name": "TryEndWash",
+                        "excluded": false
+                    },
+                    {
+                        "name": "OnStartStep6",
+                        "excluded": false
+                    },
+                    {
+                        "name": "TryShowerStep2",
+                        "excluded": false
+                    },
+                    {
+                        "name": "TryEndShowerStep2",
+                        "excluded": false
+                    },
+                    {
+                        "name": "OnStartStep7",
+                        "excluded": false
+                    },
+                    {
+                        "name": "OnStartStep8",
+                        "excluded": false
                     }
                 ]
             },
@@ -45344,6 +45455,66 @@
                         "excluded": false
                     }
                 ]
+            },
+            {
+                "className": "CameraScaler",
+                "staticMethods": [],
+                "instanceMethods": [
+                    {
+                        "name": "CalcVerticalFov",
+                        "excluded": false
+                    },
+                    {
+                        "name": "HorizontalSize#get",
+                        "excluded": true
+                    },
+                    {
+                        "name": "HorizontalFov#get",
+                        "excluded": true
+                    },
+                    {
+                        "name": "CameraZoom#get",
+                        "excluded": true
+                    },
+                    {
+                        "name": "CameraZoom#set",
+                        "excluded": true
+                    },
+                    {
+                        "name": "init",
+                        "excluded": false
+                    },
+                    {
+                        "name": "Awake",
+                        "excluded": false
+                    },
+                    {
+                        "name": "Update",
+                        "excluded": false
+                    },
+                    {
+                        "name": "UpdateCamera",
+                        "excluded": false
+                    },
+                    {
+                        "name": "UpdateOrtho",
+                        "excluded": false
+                    },
+                    {
+                        "name": "UpdatePerspective",
+                        "excluded": true
+                    }
+                ]
+            },
+            {
+                "className": "ScreenShot",
+                "staticMethods": [],
+                "instanceMethods": [
+                    {
+                        "name": "Update",
+                        "excluded": false
+                    }
+                ]
             }
         ],
         "stubberDataList": [],
@@ -45380,227 +45551,7 @@
                         "quality": 65,
                         "script": "",
                         "ext": "",
-                        "name": "Resources/unity_builtin_extra/Default-Particle"
-                    },
-                    {
-                        "maxWidth": 512,
-                        "maxHeight": 512,
-                        "format": "png32",
-                        "compression": "none",
-                        "quality": 65,
-                        "script": "",
-                        "ext": "",
-                        "name": "Assets/Fonts/ArchivoBlack-Regular SDF.asset"
-                    },
-                    {
-                        "maxWidth": 512,
-                        "maxHeight": 512,
-                        "format": "png32",
-                        "compression": "none",
-                        "quality": 65,
-                        "script": "",
-                        "ext": "",
-                        "name": "Assets/Fonts/Bubblegum SDF 1.asset"
-                    },
-                    {
-                        "maxWidth": 4096,
-                        "maxHeight": 4096,
-                        "format": "png32",
-                        "compression": "quantSize",
-                        "quality": 65,
-                        "script": "",
-                        "ext": "",
-                        "name": "Assets/_GAME/Levels/LvCosplayJackSparrow/jack/Jack_Sparrow.png"
-                    },
-                    {
-                        "maxWidth": 1024,
-                        "maxHeight": 1024,
-                        "format": "png32",
-                        "compression": "quantSize",
-                        "quality": 65,
-                        "script": "",
-                        "ext": "",
-                        "name": "Assets/ChatGPT Image 13_51_37 16 thg 1, 2026.png"
-                    },
-                    {
-                        "maxWidth": 1024,
-                        "maxHeight": 1024,
-                        "format": "png32",
-                        "compression": "quantSize",
-                        "quality": 65,
-                        "script": "",
-                        "ext": "",
-                        "name": "Assets/_GAME/_Costopia/__Gameplay/_Texture/BG/BG-hair3.png"
-                    },
-                    {
-                        "maxWidth": 1024,
-                        "maxHeight": 1024,
-                        "format": "png32",
-                        "compression": "quantSize",
-                        "quality": 65,
-                        "script": "",
-                        "ext": "",
-                        "name": "Assets/_GAME/Levels/LvCosplayJackSparrow/Textures/BG-makeup3.png"
-                    },
-                    {
-                        "maxWidth": 1024,
-                        "maxHeight": 1024,
-                        "format": "png32",
-                        "compression": "quantSize",
-                        "quality": 65,
-                        "script": "",
-                        "ext": "",
-                        "name": "Assets/_GAME/_Costopia/__Gameplay/_Texture/BG/BG-makeup3.png"
-                    },
-                    {
-                        "maxWidth": 1024,
-                        "maxHeight": 1024,
-                        "format": "png32",
-                        "compression": "quantSize",
-                        "quality": 65,
-                        "script": "",
-                        "ext": "",
-                        "name": "Assets/_GAME/_Costopia/__Gameplay/_Texture/BG/BG-bath3.png"
-                    },
-                    {
-                        "maxWidth": 1024,
-                        "maxHeight": 1024,
-                        "format": "png32",
-                        "compression": "quantSize",
-                        "quality": 65,
-                        "script": "",
-                        "ext": "",
-                        "name": "Assets/_GAME/_Costopia/__Gameplay/_Texture/BG/BG-cotsume.png"
-                    },
-                    {
-                        "maxWidth": 1080,
-                        "maxHeight": 1920,
-                        "format": "png32",
-                        "compression": "quantSize",
-                        "quality": 65,
-                        "script": "",
-                        "ext": "",
-                        "name": "Assets/_GAME/Levels/LvCosplayElfMystic/_Textures/2.make up/cosmetics/8_lipstick1.png"
-                    },
-                    {
-                        "maxWidth": 512,
-                        "maxHeight": 512,
-                        "format": "png32",
-                        "compression": "none",
-                        "quality": 65,
-                        "script": "",
-                        "ext": "",
-                        "name": "Assets/Fonts/ChangaOne-Regular SDF.asset"
-                    },
-                    {
-                        "maxWidth": 512,
-                        "maxHeight": 512,
-                        "format": "png32",
-                        "compression": "none",
-                        "quality": 65,
-                        "script": "",
-                        "ext": "",
-                        "name": "Assets/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF - Fallback.asset"
-                    },
-                    {
-                        "maxWidth": 512,
-                        "maxHeight": 512,
-                        "format": "png32",
-                        "compression": "none",
-                        "quality": 65,
-                        "script": "",
-                        "ext": "",
-                        "name": "Assets/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF.asset"
-                    },
-                    {
-                        "maxWidth": 512,
-                        "maxHeight": 512,
-                        "format": "png32",
-                        "compression": "none",
-                        "quality": 65,
-                        "script": "",
-                        "ext": "",
                         "name": "Assets/TextMesh Pro/Resources/Fonts & Materials/ChangaOne-Regular SDF.asset"
-                    },
-                    {
-                        "maxWidth": 512,
-                        "maxHeight": 512,
-                        "format": "png32",
-                        "compression": "quantSize",
-                        "quality": 65,
-                        "script": "",
-                        "ext": "",
-                        "name": "Assets/_GAME/SonGame/Level/LevelMaleficent/Spines/Maleficent_json/Maleficent_4.png"
-                    },
-                    {
-                        "maxWidth": 512,
-                        "maxHeight": 512,
-                        "format": "png32",
-                        "compression": "quantSize",
-                        "quality": 65,
-                        "script": "",
-                        "ext": "",
-                        "name": "Assets/_GAME/SonGame/Level/LevelMaleficent/Spines/Maleficent_json/Maleficent_6.png"
-                    },
-                    {
-                        "maxWidth": 512,
-                        "maxHeight": 512,
-                        "format": "png32",
-                        "compression": "quantSize",
-                        "quality": 65,
-                        "script": "",
-                        "ext": "",
-                        "name": "Assets/_GAME/SonGame/Level/LevelMaleficent/Spines/Maleficent_json/Maleficent_2.png"
-                    },
-                    {
-                        "maxWidth": 512,
-                        "maxHeight": 512,
-                        "format": "png32",
-                        "compression": "quantSize",
-                        "quality": 65,
-                        "script": "",
-                        "ext": "",
-                        "name": "Assets/_GAME/SonGame/Level/LevelMaleficent/Spines/Maleficent_json/Maleficent_5.png"
-                    },
-                    {
-                        "maxWidth": 512,
-                        "maxHeight": 512,
-                        "format": "png32",
-                        "compression": "quantSize",
-                        "quality": 65,
-                        "script": "",
-                        "ext": "",
-                        "name": "Assets/_GAME/SonGame/Level/LevelMaleficent/Spines/Maleficent_json/Maleficent_3.png"
-                    },
-                    {
-                        "maxWidth": 512,
-                        "maxHeight": 512,
-                        "format": "png32",
-                        "compression": "quantSize",
-                        "quality": 65,
-                        "script": "",
-                        "ext": "",
-                        "name": "Assets/_GAME/_Costopia/__Gameplay/_Texture/BG/BG-costum2.png"
-                    },
-                    {
-                        "maxWidth": 512,
-                        "maxHeight": 512,
-                        "format": "png32",
-                        "compression": "quantSize",
-                        "quality": 65,
-                        "script": "",
-                        "ext": "",
-                        "name": "Assets/_GAME/SonGame/Level/LevelMaleficent/01 Textures/background/bg1.png"
-                    },
-                    {
-                        "maxWidth": 512,
-                        "maxHeight": 512,
-                        "format": "png32",
-                        "compression": "quantSize",
-                        "quality": 65,
-                        "script": "",
-                        "ext": "",
-                        "name": "Assets/_GAME/SonGame/Level/LevelMaleficent/Spines/Maleficent_json/Maleficent.png"
                     },
                     {
                         "maxWidth": 512,
@@ -45613,14 +45564,14 @@
                         "name": "Assets/TextMesh Pro/Resources/Fonts & Materials/ChangaOne-Italic SDF.asset"
                     },
                     {
-                        "maxWidth": 256,
-                        "maxHeight": 256,
+                        "maxWidth": 2048,
+                        "maxHeight": 2048,
                         "format": "png32",
                         "compression": "quantSize",
                         "quality": 65,
                         "script": "",
                         "ext": "",
-                        "name": "Assets/_GAME/SonGame/Level/LevelWednesday/_Textures/Char.png"
+                        "name": "Assets/_GAME/SonGame/Level/LevelSailorMoon/Anim/Json/sailor moon.png"
                     },
                     {
                         "maxWidth": 256,
@@ -45630,7 +45581,347 @@
                         "quality": 65,
                         "script": "",
                         "ext": "",
-                        "name": "Assets/_GAME/SonGame/Level/LevelWednesday/_Textures/BG.jpg"
+                        "name": "Assets/_GAME/SonGame/Level/LevelSailorMoon/_texture/BG.png"
+                    },
+                    {
+                        "maxWidth": 256,
+                        "maxHeight": 256,
+                        "format": "png32",
+                        "compression": "quantSize",
+                        "quality": 65,
+                        "script": "",
+                        "ext": "",
+                        "name": "Assets/_GAME/SonGame/Level/LevelSailorMoon/_texture/demo-2.png"
+                    },
+                    {
+                        "maxWidth": 256,
+                        "maxHeight": 256,
+                        "format": "png32",
+                        "compression": "quantSize",
+                        "quality": 65,
+                        "script": "",
+                        "ext": "",
+                        "name": "Assets/Sprites/Hand_Drag.png"
+                    },
+                    {
+                        "maxWidth": 256,
+                        "maxHeight": 256,
+                        "format": "png32",
+                        "compression": "quantSize",
+                        "quality": 65,
+                        "script": "",
+                        "ext": "",
+                        "name": "Assets/Textures/logo game.png"
+                    },
+                    {
+                        "maxWidth": 256,
+                        "maxHeight": 256,
+                        "format": "png32",
+                        "compression": "quantSize",
+                        "quality": 65,
+                        "script": "",
+                        "ext": "",
+                        "name": "Assets/_GAME/_Costopia/_Texture/UI/VFX/congra_3_2.png"
+                    },
+                    {
+                        "maxWidth": 256,
+                        "maxHeight": 256,
+                        "format": "png32",
+                        "compression": "quantSize",
+                        "quality": 65,
+                        "script": "",
+                        "ext": "",
+                        "name": "Assets/_GAME/_Costopia/_Texture/UI/VFX/congra_3_1.png"
+                    },
+                    {
+                        "maxWidth": 256,
+                        "maxHeight": 256,
+                        "format": "png32",
+                        "compression": "quantSize",
+                        "quality": 65,
+                        "script": "",
+                        "ext": "",
+                        "name": "Assets/_GAME/_Costopia/_Texture/UI/VFX/congra_4_2.png"
+                    },
+                    {
+                        "maxWidth": 256,
+                        "maxHeight": 256,
+                        "format": "png32",
+                        "compression": "quantSize",
+                        "quality": 65,
+                        "script": "",
+                        "ext": "",
+                        "name": "Assets/_GAME/_Costopia/_Texture/UI/VFX/congra_4_1.png"
+                    },
+                    {
+                        "maxWidth": 256,
+                        "maxHeight": 256,
+                        "format": "png32",
+                        "compression": "quantSize",
+                        "quality": 65,
+                        "script": "",
+                        "ext": "",
+                        "name": "Assets/_GAME/_Costopia/_Texture/UI/VFX/congra_3_3.png"
+                    },
+                    {
+                        "maxWidth": 256,
+                        "maxHeight": 256,
+                        "format": "png32",
+                        "compression": "quantSize",
+                        "quality": 65,
+                        "script": "",
+                        "ext": "",
+                        "name": "Assets/_GAME/_Costopia/_Texture/UI/VFX/congra_4_3.png"
+                    },
+                    {
+                        "maxWidth": 256,
+                        "maxHeight": 256,
+                        "format": "png32",
+                        "compression": "quantSize",
+                        "quality": 65,
+                        "script": "",
+                        "ext": "",
+                        "name": "Assets/_GAME/Textures/SatisdyUI/InGame/Emoji/emoji-fail-3.png"
+                    },
+                    {
+                        "maxWidth": 256,
+                        "maxHeight": 256,
+                        "format": "png32",
+                        "compression": "quantSize",
+                        "quality": 65,
+                        "script": "",
+                        "ext": "",
+                        "name": "Assets/_GAME/_Costopia/_Texture/UI/VFX/congra_2_1.png"
+                    },
+                    {
+                        "maxWidth": 256,
+                        "maxHeight": 256,
+                        "format": "png32",
+                        "compression": "quantSize",
+                        "quality": 65,
+                        "script": "",
+                        "ext": "",
+                        "name": "Assets/_GAME/Textures/SatisdyUI/InGame/Emoji/emoji-fail-2.png"
+                    },
+                    {
+                        "maxWidth": 256,
+                        "maxHeight": 256,
+                        "format": "png32",
+                        "compression": "quantSize",
+                        "quality": 65,
+                        "script": "",
+                        "ext": "",
+                        "name": "Assets/Sprites/clock copy 1.png"
+                    },
+                    {
+                        "maxWidth": 256,
+                        "maxHeight": 256,
+                        "format": "png32",
+                        "compression": "quantSize",
+                        "quality": 65,
+                        "script": "",
+                        "ext": "",
+                        "name": "Assets/_GAME/Textures/SatisdyUI/InGame/Emoji/emoji-fail-1.png"
+                    },
+                    {
+                        "maxWidth": 256,
+                        "maxHeight": 256,
+                        "format": "png32",
+                        "compression": "quantSize",
+                        "quality": 65,
+                        "script": "",
+                        "ext": "",
+                        "name": "Assets/_GAME/Textures/SatisdyUI/InGame/Emoji/emoji-heart-2.png"
+                    },
+                    {
+                        "maxWidth": 256,
+                        "maxHeight": 256,
+                        "format": "png32",
+                        "compression": "quantSize",
+                        "quality": 65,
+                        "script": "",
+                        "ext": "",
+                        "name": "Assets/_GAME/_Costopia/_Texture/UI/VFX/congra_2_2.png"
+                    },
+                    {
+                        "maxWidth": 256,
+                        "maxHeight": 256,
+                        "format": "png32",
+                        "compression": "quantSize",
+                        "quality": 65,
+                        "script": "",
+                        "ext": "",
+                        "name": "Assets/_GAME/Textures/SatisdyUI/InGame/Emoji/emoji-heart-1.png"
+                    },
+                    {
+                        "maxWidth": 256,
+                        "maxHeight": 256,
+                        "format": "png32",
+                        "compression": "quantSize",
+                        "quality": 65,
+                        "script": "",
+                        "ext": "",
+                        "name": "Assets/_GAME/_Costopia/_Texture/UI/VFX/congra_2_3.png"
+                    },
+                    {
+                        "maxWidth": 256,
+                        "maxHeight": 256,
+                        "format": "png32",
+                        "compression": "quantSize",
+                        "quality": 65,
+                        "script": "",
+                        "ext": "",
+                        "name": "Assets/_GAME/_Costopia/_Texture/UI/VFX/congra_2_4.png"
+                    },
+                    {
+                        "maxWidth": 256,
+                        "maxHeight": 256,
+                        "format": "png32",
+                        "compression": "quantSize",
+                        "quality": 65,
+                        "script": "",
+                        "ext": "",
+                        "name": "Assets/_GAME/Textures/SatisdyUI/InGame/Emoji/emoji-heart-3.png"
+                    },
+                    {
+                        "maxWidth": 256,
+                        "maxHeight": 256,
+                        "format": "png32",
+                        "compression": "quantSize",
+                        "quality": 65,
+                        "script": "",
+                        "ext": "",
+                        "name": "Assets/_GAME/SonGame/Level/LevelSailorMoon/_texture/cleanser_0.png"
+                    },
+                    {
+                        "maxWidth": 256,
+                        "maxHeight": 256,
+                        "format": "png32",
+                        "compression": "quantSize",
+                        "quality": 65,
+                        "script": "",
+                        "ext": "",
+                        "name": "Assets/_GAME/_Costopia/_Texture/UI/VFX/fx_star_yellow.png"
+                    },
+                    {
+                        "maxWidth": 256,
+                        "maxHeight": 256,
+                        "format": "png32",
+                        "compression": "quantSize",
+                        "quality": 65,
+                        "script": "",
+                        "ext": "",
+                        "name": "Assets/_GAME/_Costopia/__Gameplay/_Texture/bar 1.png"
+                    },
+                    {
+                        "maxWidth": 256,
+                        "maxHeight": 256,
+                        "format": "png32",
+                        "compression": "quantSize",
+                        "quality": 65,
+                        "script": "",
+                        "ext": "",
+                        "name": "Assets/_GAME/Levels/_OldMakeUpLevel/bubble-3.png"
+                    },
+                    {
+                        "maxWidth": 256,
+                        "maxHeight": 256,
+                        "format": "png32",
+                        "compression": "quantSize",
+                        "quality": 65,
+                        "script": "",
+                        "ext": "",
+                        "name": "Assets/_GAME/SonGame/Level/LevelSailorMoon/_texture/cleanser_2.png"
+                    },
+                    {
+                        "maxWidth": 256,
+                        "maxHeight": 256,
+                        "format": "png32",
+                        "compression": "quantSize",
+                        "quality": 65,
+                        "script": "",
+                        "ext": "",
+                        "name": "Assets/_GAME/_Costopia/__Gameplay/_Texture/bar 2.png"
+                    },
+                    {
+                        "maxWidth": 256,
+                        "maxHeight": 256,
+                        "format": "png32",
+                        "compression": "quantSize",
+                        "quality": 65,
+                        "script": "",
+                        "ext": "",
+                        "name": "Assets/_GAME/SonGame/Level/LevelSailorMoon/_texture/cleanser_1.png"
+                    },
+                    {
+                        "maxWidth": 256,
+                        "maxHeight": 256,
+                        "format": "png32",
+                        "compression": "quantSize",
+                        "quality": 65,
+                        "script": "",
+                        "ext": "",
+                        "name": "Assets/_GAME/Levels/_OldMakeUpLevel/29/drop 1.png"
+                    },
+                    {
+                        "maxWidth": 256,
+                        "maxHeight": 256,
+                        "format": "png32",
+                        "compression": "quantSize",
+                        "quality": 65,
+                        "script": "",
+                        "ext": "",
+                        "name": "Resources/unity_builtin_extra/Default-ParticleSystem"
+                    },
+                    {
+                        "maxWidth": 256,
+                        "maxHeight": 256,
+                        "format": "png32",
+                        "compression": "quantSize",
+                        "quality": 65,
+                        "script": "",
+                        "ext": "",
+                        "name": "Assets/Sprites/Circle04.png"
+                    },
+                    {
+                        "maxWidth": 256,
+                        "maxHeight": 256,
+                        "format": "png32",
+                        "compression": "quantSize",
+                        "quality": 65,
+                        "script": "",
+                        "ext": "",
+                        "name": "Assets/Textures/slider 1.png"
+                    },
+                    {
+                        "maxWidth": 256,
+                        "maxHeight": 256,
+                        "format": "png32",
+                        "compression": "quantSize",
+                        "quality": 65,
+                        "script": "",
+                        "ext": "",
+                        "name": "Assets/Textures/Square.png"
+                    },
+                    {
+                        "maxWidth": 256,
+                        "maxHeight": 256,
+                        "format": "png32",
+                        "compression": "quantSize",
+                        "quality": 65,
+                        "script": "",
+                        "ext": "",
+                        "name": "Assets/Textures/Square 1.png"
+                    },
+                    {
+                        "maxWidth": 256,
+                        "maxHeight": 256,
+                        "format": "png32",
+                        "compression": "quantSize",
+                        "quality": 65,
+                        "script": "",
+                        "ext": "",
+                        "name": "Assets/_GAME/Textures/Texture Init/arrow-slide.png"
                     }
                 ]
             },
@@ -45774,6 +46065,16 @@
                         "script": "",
                         "ext": "",
                         "name": "Assets/_GAME/SonGame/Level/LevelWednesday/Audio/sfx_bgm_play_1.ogg"
+                    },
+                    {
+                        "channels": 1,
+                        "startTime": "00:00.000",
+                        "endTime": "00:20.000",
+                        "lengthInSeconds": 20.0,
+                        "bitrate": 64,
+                        "script": "",
+                        "ext": "",
+                        "name": "Assets/_GAME/SonGame/Level/LevelWednesday/Audio/BGM_Gamplay_4.ogg"
                     }
                 ]
             },
