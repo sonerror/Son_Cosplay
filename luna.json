@@ -45574,24 +45574,14 @@
                         "name": "Assets/_GAME/SonGame/Level/LevelSailorMoon/Anim/Json/sailor moon.png"
                     },
                     {
-                        "maxWidth": 256,
-                        "maxHeight": 256,
+                        "maxWidth": 1024,
+                        "maxHeight": 1024,
                         "format": "png32",
                         "compression": "quantSize",
                         "quality": 65,
                         "script": "",
                         "ext": "",
-                        "name": "Assets/_GAME/SonGame/Level/LevelSailorMoon/_texture/BG.png"
-                    },
-                    {
-                        "maxWidth": 512,
-                        "maxHeight": 512,
-                        "format": "png32",
-                        "compression": "quantSize",
-                        "quality": 65,
-                        "script": "",
-                        "ext": "",
-                        "name": "Assets/_GAME/SonGame/Level/LevelSailorMoon/_texture/demo-2.png"
+                        "name": "Assets/_GAME/SonGame/Level/LevelSailorMoon/_texture/CharecterSailorMoon.png"
                     },
                     {
                         "maxWidth": 256,
@@ -45601,17 +45591,7 @@
                         "quality": 65,
                         "script": "",
                         "ext": "",
-                        "name": "Assets/Sprites/Hand_Drag.png"
-                    },
-                    {
-                        "maxWidth": 256,
-                        "maxHeight": 256,
-                        "format": "png32",
-                        "compression": "quantSize",
-                        "quality": 65,
-                        "script": "",
-                        "ext": "",
-                        "name": "Assets/Textures/logo game.png"
+                        "name": "Assets/TextMesh Pro/Sprites/EmojiOne.png"
                     },
                     {
                         "maxWidth": 256,
@@ -45661,7 +45641,7 @@
                         "quality": 65,
                         "script": "",
                         "ext": "",
-                        "name": "Assets/_GAME/_Costopia/_Texture/UI/VFX/congra_3_3.png"
+                        "name": "Assets/_GAME/_Costopia/_Texture/UI/VFX/congra_4_3.png"
                     },
                     {
                         "maxWidth": 256,
@@ -45671,7 +45651,7 @@
                         "quality": 65,
                         "script": "",
                         "ext": "",
-                        "name": "Assets/_GAME/_Costopia/_Texture/UI/VFX/congra_4_3.png"
+                        "name": "Assets/_GAME/_Costopia/_Texture/UI/VFX/congra_3_3.png"
                     },
                     {
                         "maxWidth": 256,
@@ -45791,27 +45771,7 @@
                         "quality": 65,
                         "script": "",
                         "ext": "",
-                        "name": "Assets/_GAME/SonGame/Level/LevelSailorMoon/_texture/cleanser_0.png"
-                    },
-                    {
-                        "maxWidth": 256,
-                        "maxHeight": 256,
-                        "format": "png32",
-                        "compression": "quantSize",
-                        "quality": 65,
-                        "script": "",
-                        "ext": "",
                         "name": "Assets/_GAME/_Costopia/_Texture/UI/VFX/fx_star_yellow.png"
-                    },
-                    {
-                        "maxWidth": 256,
-                        "maxHeight": 256,
-                        "format": "png32",
-                        "compression": "quantSize",
-                        "quality": 65,
-                        "script": "",
-                        "ext": "",
-                        "name": "Assets/_GAME/_Costopia/__Gameplay/_Texture/bar 1.png"
                     },
                     {
                         "maxWidth": 256,

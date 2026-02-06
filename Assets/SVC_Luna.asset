@@ -382,7 +382,7 @@ MonoBehaviour:
     - _SUNDISK_SIMPLE
   _includedShaderVariants: []
   _excludedShaderVariants: []
-  version: 1076
+  version: 1093
   _shaderParsedShaders:
   - ParsedSubShaders:
     - Index: 0
