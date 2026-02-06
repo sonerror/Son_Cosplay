@@ -2,7 +2,7 @@
     "version": "7.0.0",
     "projectId": "f42e7ff96e4545544bb6cd68f51ab634",
     "applicationID": 34683,
-    "creativeName": "R1_Cosplaydom_ver4_GG",
+    "creativeName": "R1_Cosplaydom_ver7_GG",
     "pgServer": "EU",
     "window": {
         "‐⁏": true
@@ -45882,6 +45882,16 @@
                         "script": "",
                         "ext": "",
                         "name": "Assets/_GAME/Textures/Texture Init/arrow-slide.png"
+                    },
+                    {
+                        "maxWidth": 1024,
+                        "maxHeight": 1024,
+                        "format": "png32",
+                        "compression": "quantSize",
+                        "quality": 65,
+                        "script": "",
+                        "ext": "",
+                        "name": "Assets/_GAME/SonGame/Level/LevelSailorMoon/_texture/demo-2.png"
                     }
                 ]
             },
