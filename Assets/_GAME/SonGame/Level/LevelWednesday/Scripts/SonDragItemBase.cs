@@ -14,6 +14,7 @@ public class SonDragItemBase : SonMonoBehaviour,
     [SerializeField] private List<int> useInSteps = new List<int>();
 
     [SerializeField] private SpriteRenderer sprite;
+    [SerializeField] private LevelRumiAilen _level;
     [SerializeField] private Collider2D col;
 
     [Header("Face Zone")]
@@ -71,6 +72,10 @@ public class SonDragItemBase : SonMonoBehaviour,
 
     private void Awake()
     {
+        if (_level == null)
+        {
+            _level = LevelRumiAilen.Ins;
+        }
         if (!sprite) sprite = GetComponentInChildren<SpriteRenderer>();
         if (!col) col = GetComponent<Collider2D>();
     }
@@ -134,8 +139,8 @@ public class SonDragItemBase : SonMonoBehaviour,
         onDragStart?.Invoke();
 
         // Start auto-check coroutine
-        if (GamePlayManager.Ins != null &&
-            (!useInSteps.Contains(GamePlayManager.Ins.CurrentStep) || forceCheckWrongStep))
+        if (LevelRumiAilen.Ins != null &&
+            (!useInSteps.Contains(StepManager.Ins.CurrentStep) || forceCheckWrongStep))
         {
             if (checkStepCoroutine != null)
                 StopCoroutine(checkStepCoroutine);
@@ -208,17 +213,23 @@ public class SonDragItemBase : SonMonoBehaviour,
         onDragStop?.Invoke();
 
         // Wrong step feedback
-        if (GamePlayManager.Ins != null &&
-            (!useInSteps.Contains(GamePlayManager.Ins.CurrentStep) || forceCheckWrongStep))
+        if (_level != null &&
+            (!useInSteps.Contains(StepManager.Ins.CurrentStep) || forceCheckWrongStep))
         {
             if (InsideFaceZone)
-                GamePlayManager.Ins.PlayNegativeEmoji();
+                _level.PlayNegativeEmoji();
         }
-        if (GamePlayManager.Ins != null)
+        Debug.Log("Done Step 1");
+
+        if (_level != null)
         {
-            if (GamePlayManager.Ins.IsDoneStep)
+            Debug.Log("Done Step 2");
+            Debug.Log("Done Step 2 " + _level.IsDoneStep);
+
+            if (_level.IsDoneStep)
             {
-                GamePlayManager.Ins.TryNextStep();
+                Debug.Log("Done Step 3");
+                _level.TryNextStep();
             }
         }
     }

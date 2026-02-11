@@ -4,7 +4,7 @@ public class GamePlayScreen : UIScreen
 {
   public Transform btnPlay;
   public Transform Text1, Text2;
-  public GameObject IconLv, logoUI;
+  public GameObject IconLv, logoUI, imgText;
 
   void Start()
   {
@@ -19,6 +19,8 @@ public class GamePlayScreen : UIScreen
     hadShowBtnInstall = true;
     btnPlay.gameObject.SetActive(true);
     Text2.gameObject.SetActive(false);
+    imgText.gameObject.SetActive(false);
+    logoUI.gameObject.SetActive(true);
   }
 
   public void ShowIconLv()

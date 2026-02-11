@@ -32,6 +32,7 @@ public class SoundManager : Singleton<SoundManager>
   public AudioSource SfxSource { get; private set; }
   public AudioClip[] audioClips;
   public AudioSource bgm;
+  public AudioSource bgmAilen;
   private AudioSource[] fx = new AudioSource[30];
   bool isMute = false;
   public bool IsMute => isMute;
@@ -167,6 +168,7 @@ public class SoundManager : Singleton<SoundManager>
   {
     isMute = true;
     bgm.Stop();
+    bgmAilen.Stop();
     for (int i = 0; i < fx.Length; i++)
     {
       if (fx[i] != null)
@@ -180,5 +182,10 @@ public class SoundManager : Singleton<SoundManager>
   {
     if (isMute) return;
     bgm.Play();
+  }
+  public void PlayBgmAilen()
+  {
+    if (isMute) return;
+    bgmAilen.Play();
   }
 }

@@ -196,7 +196,7 @@ public class SnapObjectUI : MonoBehaviour
                 {
                     ControllerDoneVFX.Instance.SpawnSnapVFX(snapPoint.Tf);
                 }
-                GamePlayManager.Ins.PlayPositiveEmojiOnSnap();
+                LevelRumiAilen.Ins.PlayPositiveEmojiOnSnap();
             }
         }
         // --- NO SNAP ---

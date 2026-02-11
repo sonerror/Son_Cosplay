@@ -50,7 +50,7 @@ public class GameManager : Singleton<GameManager>
       Scene1.SetActive(false);
       Scene2.SetActive(true);
       onComplete?.Invoke();
-      GamePlayManager.Ins.character = Body2;
+      //GamePlayManager.Ins.SetNewCharacter(Body2);
       emojiControl.transform.localPosition = new Vector3(3.23f, 8.89f, 0f);
       emojiControl.transform.localScale = Vector3.one * 1.5f;
     });
@@ -90,11 +90,11 @@ public class GameManager : Singleton<GameManager>
     emojiControl.ShowPositive();
     if (isChangeAnimHappy)
     {
-      GamePlayManager.Ins.character.SetMouseHappy();
+      // GamePlayManager.Ins.Character.SetMouseHappy();
     }
     else
     {
-      GamePlayManager.Ins.character.SetMouseIdle();
+      //  GamePlayManager.Ins.Character.SetMouseIdle();
     }
     var i = idSoundHappy % 3;
 
@@ -106,7 +106,7 @@ public class GameManager : Singleton<GameManager>
     idSoundHappy++;
 
     yield return new WaitForSeconds(1f);
-    GamePlayManager.Ins.character.SetMouseIdle();
+    //GamePlayManager.Ins.Character.SetMouseIdle();
     coroutine = null;
   }
   public void PlayNegativeEmoji()
@@ -125,7 +125,7 @@ public class GameManager : Singleton<GameManager>
   private IEnumerator PlayNegativeEmojiCoroutine()
   {
     yield return new WaitForSeconds(1f);
-    GamePlayManager.Ins.character.SetMouseAngry();
+    //GamePlayManager.Ins.Character.SetMouseAngry();
     emojiControl.ShowNegative();
 
     var i = idSoundAngry % 3;
@@ -136,7 +136,7 @@ public class GameManager : Singleton<GameManager>
     idSoundAngry++;
 
     yield return new WaitForSeconds(0.65f);
-    GamePlayManager.Ins.character.SetMouseIdle();
+    // GamePlayManager.Ins.Character.SetMouseIdle();
     coroutine = null;
   }
 
