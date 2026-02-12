@@ -2,7 +2,7 @@
     "version": "7.0.0",
     "projectId": "f42e7ff96e4545544bb6cd68f51ab634",
     "applicationID": 34683,
-    "creativeName": "R1_Cosplaydom_ver8",
+    "creativeName": "R1_Cosplaydom_ver8_GG",
     "pgServer": "EU",
     "window": {
         "‐⁏": true
@@ -46137,6 +46137,116 @@
                         "script": "",
                         "ext": "",
                         "name": "Resources/unity_builtin_extra/Default-ParticleSystem"
+                    },
+                    {
+                        "maxWidth": 256,
+                        "maxHeight": 256,
+                        "format": "png32",
+                        "compression": "quantSize",
+                        "quality": 65,
+                        "script": "",
+                        "ext": "",
+                        "name": "Assets/_GAME/SonGame/Level/LevelVer3/Texture/rumi/dress.png"
+                    },
+                    {
+                        "maxWidth": 256,
+                        "maxHeight": 256,
+                        "format": "png32",
+                        "compression": "quantSize",
+                        "quality": 65,
+                        "script": "",
+                        "ext": "",
+                        "name": "Assets/Textures/textVS.png"
+                    },
+                    {
+                        "maxWidth": 256,
+                        "maxHeight": 256,
+                        "format": "png32",
+                        "compression": "quantSize",
+                        "quality": 65,
+                        "script": "",
+                        "ext": "",
+                        "name": "Assets/_GAME/SonGame/Level/LevelVer3/Texture/rumi/shirt.png"
+                    },
+                    {
+                        "maxWidth": 256,
+                        "maxHeight": 256,
+                        "format": "png32",
+                        "compression": "quantSize",
+                        "quality": 65,
+                        "script": "",
+                        "ext": "",
+                        "name": "Assets/_GAME/SonGame/Level/LevelVer3/Texture/Item/full_Skirt 2 copy.png"
+                    },
+                    {
+                        "maxWidth": 256,
+                        "maxHeight": 256,
+                        "format": "png32",
+                        "compression": "quantSize",
+                        "quality": 65,
+                        "script": "",
+                        "ext": "",
+                        "name": "Assets/_GAME/SonGame/Level/LevelVer3/Texture/Item/full_Outer_top copy.png"
+                    },
+                    {
+                        "maxWidth": 256,
+                        "maxHeight": 256,
+                        "format": "png32",
+                        "compression": "quantSize",
+                        "quality": 65,
+                        "script": "",
+                        "ext": "",
+                        "name": "Assets/_GAME/SonGame/Level/LevelVer3/Texture/Item/full_UFO.png"
+                    },
+                    {
+                        "maxWidth": 256,
+                        "maxHeight": 256,
+                        "format": "png32",
+                        "compression": "quantSize",
+                        "quality": 65,
+                        "script": "",
+                        "ext": "",
+                        "name": "Assets/_GAME/SonGame/Level/LevelVer3/Texture/rumi/jacket full.png"
+                    },
+                    {
+                        "maxWidth": 256,
+                        "maxHeight": 256,
+                        "format": "png32",
+                        "compression": "quantSize",
+                        "quality": 65,
+                        "script": "",
+                        "ext": "",
+                        "name": "Assets/_GAME/SonGame/Level/LevelVer3/Texture/rumi/L shoe.png"
+                    },
+                    {
+                        "maxWidth": 256,
+                        "maxHeight": 256,
+                        "format": "png32",
+                        "compression": "quantSize",
+                        "quality": 65,
+                        "script": "",
+                        "ext": "",
+                        "name": "Assets/_GAME/SonGame/Level/LevelVer3/Texture/rumi/R shoe.png"
+                    },
+                    {
+                        "maxWidth": 256,
+                        "maxHeight": 256,
+                        "format": "png32",
+                        "compression": "quantSize",
+                        "quality": 65,
+                        "script": "",
+                        "ext": "",
+                        "name": "Assets/_GAME/SonGame/Level/LevelVer3/Texture/rumi.png"
+                    },
+                    {
+                        "maxWidth": 256,
+                        "maxHeight": 256,
+                        "format": "png32",
+                        "compression": "quantSize",
+                        "quality": 65,
+                        "script": "",
+                        "ext": "",
+                        "name": "Assets/_GAME/SonGame/Level/LevelVer3/Texture/ailen.png"
                     }
                 ]
             },
@@ -46176,7 +46286,7 @@
                         "startTime": "00:00.000",
                         "endTime": "00:01.065",
                         "lengthInSeconds": 1.065000057220459,
-                        "bitrate": 128,
+                        "bitrate": 64,
                         "script": "",
                         "ext": "",
                         "name": "Assets/_GAME/_Costopia/_Audio/SFX/sfx_shave.ogg"
@@ -46196,7 +46306,7 @@
                         "startTime": "00:00.000",
                         "endTime": "00:02.026",
                         "lengthInSeconds": 2.0260000228881838,
-                        "bitrate": 128,
+                        "bitrate": 64,
                         "script": "",
                         "ext": "",
                         "name": "Assets/_GAME/_Costopia/_Audio/SFX/CharacterSFX/Base_Woman/H2.mp3"
@@ -46206,7 +46316,7 @@
                         "startTime": "00:00.000",
                         "endTime": "00:02.026",
                         "lengthInSeconds": 2.0260000228881838,
-                        "bitrate": 128,
+                        "bitrate": 64,
                         "script": "",
                         "ext": "",
                         "name": "Assets/_GAME/_Costopia/_Audio/SFX/CharacterSFX/Base_Woman/H3.mp3"
@@ -46216,7 +46326,7 @@
                         "startTime": "00:00.000",
                         "endTime": "00:02.026",
                         "lengthInSeconds": 2.0260000228881838,
-                        "bitrate": 128,
+                        "bitrate": 64,
                         "script": "",
                         "ext": "",
                         "name": "Assets/_GAME/_Costopia/_Audio/SFX/CharacterSFX/Base_Woman/sfx_man_angry_2.ogg"
@@ -46226,7 +46336,7 @@
                         "startTime": "00:00.000",
                         "endTime": "00:02.026",
                         "lengthInSeconds": 2.0260000228881838,
-                        "bitrate": 128,
+                        "bitrate": 64,
                         "script": "",
                         "ext": "",
                         "name": "Assets/_GAME/_Costopia/_Audio/SFX/CharacterSFX/Base_Woman/sfx_woman_angry_3.1.ogg"
@@ -46236,7 +46346,7 @@
                         "startTime": "00:00.000",
                         "endTime": "00:02.026",
                         "lengthInSeconds": 2.0260000228881838,
-                        "bitrate": 128,
+                        "bitrate": 64,
                         "script": "",
                         "ext": "",
                         "name": "Assets/_GAME/_Costopia/_Audio/SFX/sfx_towel 1 - Copy.ogg"
@@ -46246,7 +46356,7 @@
                         "startTime": "00:00.000",
                         "endTime": "00:02.026",
                         "lengthInSeconds": 2.0260000228881838,
-                        "bitrate": 128,
+                        "bitrate": 64,
                         "script": "",
                         "ext": "",
                         "name": "Assets/_GAME/_Costopia/_Audio/SFX/CharacterSFX/Base_Woman/H1.mp3"
@@ -46256,7 +46366,7 @@
                         "startTime": "00:00.000",
                         "endTime": "00:17.393",
                         "lengthInSeconds": 17.39299964904785,
-                        "bitrate": 128,
+                        "bitrate": 64,
                         "script": "",
                         "ext": "",
                         "name": "Assets/_GAME/Audio/Sound/Pop2.ogg"
@@ -46266,7 +46376,7 @@
                         "startTime": "00:00.000",
                         "endTime": "00:17.393",
                         "lengthInSeconds": 17.39299964904785,
-                        "bitrate": 128,
+                        "bitrate": 64,
                         "script": "",
                         "ext": "",
                         "name": "Assets/_GAME/Levels/LvCosplayKIdol/Sound/lv173_put 2.ogg"
@@ -46286,7 +46396,7 @@
                         "startTime": "00:00.000",
                         "endTime": "00:20.000",
                         "lengthInSeconds": 20.0,
-                        "bitrate": 64,
+                        "bitrate": 32,
                         "script": "",
                         "ext": "",
                         "name": "Assets/_GAME/SonGame/Level/LevelWednesday/Audio/BGM_Gamplay_4.ogg"
@@ -46296,10 +46406,160 @@
                         "startTime": "00:00.000",
                         "endTime": "00:20.000",
                         "lengthInSeconds": 20.0,
-                        "bitrate": 64,
+                        "bitrate": 32,
                         "script": "",
                         "ext": "",
                         "name": "Assets/_GAME/SonGame/Level/LevelVer3/smoother_010726.ogg"
+                    },
+                    {
+                        "channels": 1,
+                        "startTime": "00:00.000",
+                        "endTime": "00:02.026",
+                        "lengthInSeconds": 2.0260000228881838,
+                        "bitrate": 64,
+                        "script": "",
+                        "ext": "",
+                        "name": "Assets/_GAME/_Costopia/_Audio/SFX/CharacterSFX/Base_Woman/Pick1.mp3"
+                    },
+                    {
+                        "channels": 1,
+                        "startTime": "00:00.000",
+                        "endTime": "00:00.000",
+                        "lengthInSeconds": 0.0,
+                        "bitrate": 64,
+                        "script": "",
+                        "ext": "",
+                        "name": "Assets/_GAME/Levels/LvBlackmanBarber/Sounds/sfx_brush_3.ogg"
+                    },
+                    {
+                        "channels": 1,
+                        "startTime": "00:00.000",
+                        "endTime": "00:00.000",
+                        "lengthInSeconds": 0.0,
+                        "bitrate": 64,
+                        "script": "",
+                        "ext": "",
+                        "name": "Assets/_GAME/Levels/_OtherLevel/70/Audio/magic-sparkle.wav"
+                    },
+                    {
+                        "channels": 1,
+                        "startTime": "00:00.000",
+                        "endTime": "00:00.000",
+                        "lengthInSeconds": 0.0,
+                        "bitrate": 64,
+                        "script": "",
+                        "ext": "",
+                        "name": "Assets/_GAME/_Costopia/_Audio/SFX/sfx_correct_1.ogg"
+                    },
+                    {
+                        "channels": 1,
+                        "startTime": "00:00.000",
+                        "endTime": "00:00.000",
+                        "lengthInSeconds": 0.0,
+                        "bitrate": 64,
+                        "script": "",
+                        "ext": "",
+                        "name": "Assets/_GAME/SonGame/Level/LevelMaleficent/Audio/choker.mp3"
+                    },
+                    {
+                        "channels": 1,
+                        "startTime": "00:00.000",
+                        "endTime": "00:00.000",
+                        "lengthInSeconds": 0.0,
+                        "bitrate": 64,
+                        "script": "",
+                        "ext": "",
+                        "name": "Assets/_GAME/_Costopia/_Audio/SFX/CharacterSFX/Base_Woman/sfx_woman_angry_3.ogg"
+                    },
+                    {
+                        "channels": 1,
+                        "startTime": "00:00.000",
+                        "endTime": "00:00.000",
+                        "lengthInSeconds": 0.0,
+                        "bitrate": 64,
+                        "script": "",
+                        "ext": "",
+                        "name": "Assets/_GAME/_Costopia/_Audio/SFX/CharacterSFX/Base_Woman/sfx_woman_angry_1.1.ogg"
+                    },
+                    {
+                        "channels": 1,
+                        "startTime": "00:00.000",
+                        "endTime": "00:00.000",
+                        "lengthInSeconds": 0.0,
+                        "bitrate": 64,
+                        "script": "",
+                        "ext": "",
+                        "name": "Assets/_GAME/SonGame/Level/LevelMaleficent/Audio/Dress.mp3"
+                    },
+                    {
+                        "channels": 1,
+                        "startTime": "00:00.000",
+                        "endTime": "00:00.000",
+                        "lengthInSeconds": 0.0,
+                        "bitrate": 64,
+                        "script": "",
+                        "ext": "",
+                        "name": "Assets/_GAME/SonGame/Level/LevelMaleficent/Audio/Boots1.mp3"
+                    },
+                    {
+                        "channels": 1,
+                        "startTime": "00:00.000",
+                        "endTime": "00:00.000",
+                        "lengthInSeconds": 0.0,
+                        "bitrate": 64,
+                        "script": "",
+                        "ext": "",
+                        "name": "Assets/_GAME/Levels/LvCosplaySanta/Sounds/kid_smile.ogg"
+                    },
+                    {
+                        "channels": 1,
+                        "startTime": "00:00.000",
+                        "endTime": "00:00.000",
+                        "lengthInSeconds": 0.0,
+                        "bitrate": 64,
+                        "script": "",
+                        "ext": "",
+                        "name": "Assets/_GAME/_Costopia/_Audio/SFX/CharacterSFX/Base_Woman/toBrush.mp3"
+                    },
+                    {
+                        "channels": 1,
+                        "startTime": "00:00.000",
+                        "endTime": "00:00.000",
+                        "lengthInSeconds": 0.0,
+                        "bitrate": 64,
+                        "script": "",
+                        "ext": "",
+                        "name": "Assets/_GAME/_Costopia/_Audio/SFX/CharacterSFX/Base_Woman/spray.mp3"
+                    },
+                    {
+                        "channels": 1,
+                        "startTime": "00:00.000",
+                        "endTime": "00:00.000",
+                        "lengthInSeconds": 0.0,
+                        "bitrate": 64,
+                        "script": "",
+                        "ext": "",
+                        "name": "Assets/_GAME/_Costopia/_Audio/SFX/CharacterSFX/Base_Woman/AddEye.mp3"
+                    },
+                    {
+                        "channels": 1,
+                        "startTime": "00:00.000",
+                        "endTime": "00:00.000",
+                        "lengthInSeconds": 0.0,
+                        "bitrate": 64,
+                        "script": "",
+                        "ext": "",
+                        "name": "Assets/_GAME/Audio/Satisdy/SFX/sfx_pop_4.wav"
+                    },
+                    {
+                        "channels": 1,
+                        "startTime": "00:00.000",
+                        "endTime": "00:00.000",
+                        "lengthInSeconds": 0.0,
+                        "bitrate": 64,
+                        "script": "",
+                        "ext": "",
+                        "name": "Assets/_GAME/Levels/LvCosplayElfMystic/_Sounds/pickEgg.ogg"
                     }
                 ]
             },

@@ -148,13 +148,6 @@ MonoBehaviour:
   - {fileID: 21300000, guid: e62129e669ae12245a5e2a50c9397e57, type: 3}
   - {fileID: 21300000, guid: b5226f28b59f60246a5b05d0b07d7bae, type: 3}
   - {fileID: 21300000, guid: e3e6cccc85bd39a459416b813b6b5046, type: 3}
-  - {fileID: 21300000, guid: f648fe681fb8a794988e86866dbb32cb, type: 3}
-  - {fileID: 21300000, guid: e8523ad13bb21734eabf3b17fe73af7d, type: 3}
-  - {fileID: 21300000, guid: ec6d532b6cefd8a44a0a6a454869255f, type: 3}
-  - {fileID: 21300000, guid: b9d475ae3d0f1784ba381dbcc261c0b8, type: 3}
-  - {fileID: 21300000, guid: 78b1b3c51f620a54fbf2b89106554c0e, type: 3}
-  - {fileID: 21300000, guid: 0da1e986d2c5c4246b422569acb9b0ff, type: 3}
-  - {fileID: 21300000, guid: 4bb503c89bd4ebf41a89d2274e53f2a9, type: 3}
   anim: {fileID: 8911537400457804311}
   scaleBase: 1
   cameraSizeBase: 10
