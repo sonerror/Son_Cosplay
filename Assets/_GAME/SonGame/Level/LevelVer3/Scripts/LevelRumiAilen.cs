@@ -93,6 +93,7 @@ public class LevelRumiAilen : Singleton<LevelRumiAilen>
     {
         skinRumiStartOn.TurnSlotState(true);
         skinRumStartiOff.TurnSlotState(false);
+        TutorialManager.Ins.enableCountTime = true;
         isDoneStep = false;
 
         switch (StepManager.Ins.CurrentStep)
@@ -262,20 +263,6 @@ public class LevelRumiAilen : Singleton<LevelRumiAilen>
     [SerializeField] private bool isPlayingGame = false;
     [SerializeField] private UIManager uIManager;
     public bool IsPlayingGame => isPlayingGame;
-    private void Update()
-    {
-        // if (isPlayingGame && Input.GetMouseButtonDown(0))
-        // {
-        //     EventManager.TriggerEvent("ShowBtnInstall");
-        // }
-
-        // if (!hadClicked && Input.GetMouseButtonDown(0))
-        // {
-        //     hadClicked = true;
-        //     StartGamePlay();
-        // }
-
-    }
     private void Awake()
     {
     }
@@ -306,9 +293,11 @@ public class LevelRumiAilen : Singleton<LevelRumiAilen>
         {
             DOVirtual.DelayedCall(0.2f, () =>
       {
+          EventManager.TriggerEvent("ShowIconLv");
           isPlayingGame = true;
           EventManager.TriggerEvent("ShowBtnInstall");
       });
+            TutorialManager.Ins.SetStateIsTap();
             _currentCharacter = 1;
             UpdateUIRumi();
             ChangePhase(1);
@@ -318,8 +307,11 @@ public class LevelRumiAilen : Singleton<LevelRumiAilen>
             DOVirtual.DelayedCall(0.2f, () =>
       {
           isPlayingGame = true;
+          EventManager.TriggerEvent("ShowIconLv");
           EventManager.TriggerEvent("ShowBtnInstall");
       });
+            TutorialManager.Ins.SetStateIsTap();
+
             _currentCharacter = 2;
             UpdateUIAilen();
             ChangePhase(2);

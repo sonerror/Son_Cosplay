@@ -11,6 +11,7 @@ public class TutorialManager : Singleton<TutorialManager>
     public float timeCountHint = 2f;
     [SerializeField] public HandCtrl handCtrl;
     [SerializeField] private StepManager gamePlayManager;
+    [SerializeField] private Animator animHand;
     // [SerializeField] private GameObject clock;
     private int CountStepDone = 0;
     public void OnStepDone()
@@ -42,23 +43,22 @@ public class TutorialManager : Singleton<TutorialManager>
         countCollectFail = 0;
         resetTimeHint();
     }
-
+    private bool isTap = false;
     private void Update()
     {
+        if (isTap) return;
         if (Input.GetMouseButtonDown(0))
         {
-            if (handCtrl.gameObject.activeSelf)
+            if (animHand.gameObject.activeSelf)
             {
                 HideHint();
-                timeCountHint = 1.5f;
             }
             return;
         }
 
         if (Input.GetMouseButton(0)) return;
         if (!enableCountTime) return;
-        if (handCtrl.gameObject.activeSelf) return;
-        // if (clock.activeSelf) return;
+        if (animHand.gameObject.activeSelf) return;
         CalculateTimeHint();
     }
     private void CalculateTimeHint()
@@ -81,43 +81,34 @@ public class TutorialManager : Singleton<TutorialManager>
             case 0:
                 Tutorial(index);
                 return;
-            case 1:
-                Tutorial(index);
-                return;
-            case 2:
-                Tutorial(index);
-                return;
-            case 3:
-                Tutorial(index);
-                return;
-            case 4:
-                Tutorial(index);
-                return;
-            case 5:
-                Tutorial(index);
-                return;
-            case 6:
-                Tutorial(index);
-                return;
             default:
-                handCtrl.gameObject.SetActive(false);
+                animHand.gameObject.SetActive(false);
                 resetTimeHint();
                 return;
         }
     }
+
     private void Tutorial(int indexStep)
     {
-        handCtrl.gameObject.SetActive(true);
+        animHand.gameObject.SetActive(true);
+        Debug.Log(animHand.GetBool("Por"));
+        Debug.Log(animHand.GetCurrentAnimatorStateInfo(0).normalizedTime);
 
-        var obj = tfItem[indexStep];
-        var node = tutorialNode[indexStep];
-        handCtrl.ShowHandPosToPos(obj.position, node.position);
+        animHand.SetBool("Por", true);
+        // var obj = tfItem[indexStep];
+        // var node = tutorialNode[indexStep];
+        // handCtrl.ShowHandPosToPos(obj.position, node.position);
     }
-
+    public void SetStateIsTap()
+    {
+        isTap = true;
+    }
     void HideHint()
     {
         enableCountTime = true;
-        handCtrl.HideHand();
+        animHand.gameObject.SetActive(false);
+
+        // handCtrl.HideHand();
     }
 
     public void resetTimeHint()

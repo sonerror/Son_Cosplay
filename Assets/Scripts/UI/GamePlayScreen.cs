@@ -37,6 +37,7 @@ public class GamePlayScreen : UIScreen
 
   public void gotoStore()
   {
+    Debug.Log("++++++++++++++++++++++++");
     AdsManager.Ins.gotoStore();
   }
 
