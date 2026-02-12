@@ -1277,6 +1277,9 @@ MonoBehaviour:
   - slotName: cos_Outer_bow
     attachmentName: cos_Outer_bow
     skeletonDataAsset: {fileID: 11400000, guid: 96819163f6954714ea8bf215959b6111, type: 2}
+  - slotName: cos_body_dressup
+    attachmentName: cos_body
+    skeletonDataAsset: {fileID: 11400000, guid: 96819163f6954714ea8bf215959b6111, type: 2}
 --- !u!212 &241033191
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -5696,9 +5699,6 @@ MonoBehaviour:
       attachmentName: cos_leg_L
       skeletonDataAsset: {fileID: 11400000, guid: 96819163f6954714ea8bf215959b6111, type: 2}
     - slotName: cos_body
-      attachmentName: cos_body
-      skeletonDataAsset: {fileID: 11400000, guid: 96819163f6954714ea8bf215959b6111, type: 2}
-    - slotName: cos_body_dressup
       attachmentName: cos_body
       skeletonDataAsset: {fileID: 11400000, guid: 96819163f6954714ea8bf215959b6111, type: 2}
   skinAilenOff:
