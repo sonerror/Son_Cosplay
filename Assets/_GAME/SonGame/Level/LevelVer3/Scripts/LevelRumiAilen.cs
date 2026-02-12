@@ -285,7 +285,7 @@ public class LevelRumiAilen : Singleton<LevelRumiAilen>
     [SerializeField] private TapSelectItem eventSelectRumi;
     [SerializeField] private TapSelectItem eventSelectAilen;
     [SerializeField] private int _currentCharacter = 0;
-
+    public int CurrentCharacter => _currentCharacter;
     private void OnStartStep1()
     {
 
@@ -297,7 +297,7 @@ public class LevelRumiAilen : Singleton<LevelRumiAilen>
           isPlayingGame = true;
           EventManager.TriggerEvent("ShowBtnInstall");
       });
-            TutorialManager.Ins.SetStateIsTap();
+            TutorialManager.Ins.SetStateIsTap(true);
             _currentCharacter = 1;
             UpdateUIRumi();
             ChangePhase(1);
@@ -310,7 +310,7 @@ public class LevelRumiAilen : Singleton<LevelRumiAilen>
           EventManager.TriggerEvent("ShowIconLv");
           EventManager.TriggerEvent("ShowBtnInstall");
       });
-            TutorialManager.Ins.SetStateIsTap();
+            TutorialManager.Ins.SetStateIsTap(true);
 
             _currentCharacter = 2;
             UpdateUIAilen();
@@ -405,6 +405,7 @@ public class LevelRumiAilen : Singleton<LevelRumiAilen>
     {
         canBrush = true;
         EnableShowerTrigger();
+        TutorialManager.Ins.IncreaseCountHintStep1();
     }
     public void SetEmojiControl(EmojiControl newEmoji)
     {
@@ -532,6 +533,7 @@ public class LevelRumiAilen : Singleton<LevelRumiAilen>
             effectShow.Show();
             effectShow.onShowComplete.AddListener(() =>
             {
+                TutorialManager.Ins.SetStateIsTap(false);
                 SetNewEmoji(emojiControlStep1);
             });
         });
@@ -617,6 +619,7 @@ public class LevelRumiAilen : Singleton<LevelRumiAilen>
         DoneStep();
         Debug.Log(IsDoneStep + " DoneStep");
         SetStateDoneStep(true);
+        TutorialManager.Ins.SetStateIsTap(true);
         //TryNextStep();
     }
     [SerializeField] private OnTransformGoToAffectZone showerTriggerStep2;
@@ -644,6 +647,9 @@ public class LevelRumiAilen : Singleton<LevelRumiAilen>
         yield return new WaitForSeconds(0.75f);
         MoveCamera(cam, targetOrthoSizeStep1, targetLocalYStep2, durationStep1, () =>
         {
+            TutorialManager.Ins.SetStateIsTap(false);
+
+            TutorialManager.Ins.IncreaseCountHintStep1();
             SetNewEmoji(emojiControlStep2);
         });
         itemBrushDrag.AddUseInStep(StepManager.Ins.CurrentStep);

@@ -2,7 +2,7 @@
     "version": "7.0.0",
     "projectId": "f42e7ff96e4545544bb6cd68f51ab634",
     "applicationID": 34683,
-    "creativeName": "R1_Cosplaydom_ver3",
+    "creativeName": "R1_Cosplaydom_ver3_GG",
     "pgServer": "EU",
     "window": {
         "‐⁏": true
@@ -24494,6 +24494,26 @@
                     {
                         "name": "TutorialNode#get",
                         "excluded": false
+                    },
+                    {
+                        "name": "SetStateIsTap",
+                        "excluded": false
+                    },
+                    {
+                        "name": "CountHintStep1#get",
+                        "excluded": true
+                    },
+                    {
+                        "name": "CountHintStep1#set",
+                        "excluded": true
+                    },
+                    {
+                        "name": "IncreaseCountHintStep1",
+                        "excluded": false
+                    },
+                    {
+                        "name": "TutorialStep1",
+                        "excluded": false
                     }
                 ]
             },
@@ -45240,10 +45260,6 @@
                         "excluded": true
                     },
                     {
-                        "name": "Update",
-                        "excluded": false
-                    },
-                    {
                         "name": "Awake$1",
                         "excluded": false
                     },
@@ -45377,6 +45393,10 @@
                     },
                     {
                         "name": "SnapDressRumi",
+                        "excluded": false
+                    },
+                    {
+                        "name": "CurrentCharacter#get",
                         "excluded": false
                     }
                 ]
@@ -46057,6 +46077,66 @@
                         "script": "",
                         "ext": "",
                         "name": "Assets/TextMesh Pro/Resources/Fonts & Materials/ChangaOne-Regular SDF.asset"
+                    },
+                    {
+                        "maxWidth": 2048,
+                        "maxHeight": 2048,
+                        "format": "png32",
+                        "compression": "quantSize",
+                        "quality": 65,
+                        "script": "",
+                        "ext": "",
+                        "name": "Assets/_GAME/SonGame/Level/LevelVer3/Anim/Rumi/Rumi.png"
+                    },
+                    {
+                        "maxWidth": 1024,
+                        "maxHeight": 1024,
+                        "format": "png32",
+                        "compression": "quantSize",
+                        "quality": 65,
+                        "script": "",
+                        "ext": "",
+                        "name": "Assets/_GAME/SonGame/Level/LevelVer3/Anim/Aline/ailen/ailen2.png"
+                    },
+                    {
+                        "maxWidth": 256,
+                        "maxHeight": 256,
+                        "format": "png32",
+                        "compression": "quantSize",
+                        "quality": 65,
+                        "script": "",
+                        "ext": "",
+                        "name": "Assets/_GAME/SonGame/Level/LevelVer3/Texture/End_Shadow.png"
+                    },
+                    {
+                        "maxWidth": 256,
+                        "maxHeight": 256,
+                        "format": "png32",
+                        "compression": "quantSize",
+                        "quality": 65,
+                        "script": "",
+                        "ext": "",
+                        "name": "Assets/Lana Studio/Hyper Casual FX/Textures/Flare01.png"
+                    },
+                    {
+                        "maxWidth": 256,
+                        "maxHeight": 256,
+                        "format": "png32",
+                        "compression": "quantSize",
+                        "quality": 65,
+                        "script": "",
+                        "ext": "",
+                        "name": "Assets/_GAME/SonGame/Level/LevelSailorMoon/_texture/cleanser_0.png"
+                    },
+                    {
+                        "maxWidth": 256,
+                        "maxHeight": 256,
+                        "format": "png32",
+                        "compression": "quantSize",
+                        "quality": 65,
+                        "script": "",
+                        "ext": "",
+                        "name": "Resources/unity_builtin_extra/Default-ParticleSystem"
                     }
                 ]
             },
