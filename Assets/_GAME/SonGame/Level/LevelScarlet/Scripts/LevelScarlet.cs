@@ -156,6 +156,7 @@ public class LevelScarlet : Singleton<LevelScarlet>
                 OnStartStep5();
                 return;
             case 6:
+                OnStartStep6();
                 return;
             case 7:
                 return;
@@ -288,20 +289,25 @@ public class LevelScarlet : Singleton<LevelScarlet>
     [SerializeField] private List<SonThrowObject> listThrowObject;
     private void OnStartStep1()
     {
-        TutorialManager.Ins.enableCountTime = true;
         SetNewEmoji(emojiControlStep1);
         PlayPositiveEmoji();
-        MoveCamera(cam, targetOrthoSize, 1, 0.75f);
+        MoveCamera(cam, targetOrthoSize, 1, 0.75f, () =>
+        {
+            TutorialManager.Ins.enableCountTime = true;
+        });
+
         for (int i = 0; i < listThrowObject.Count; i++)
         {
             SonThrowObject obj = listThrowObject[i];
 
             obj.onRemoveItem.AddListener(() =>
             {
+                PlayPositiveEmoji();
                 int removedIndex = listThrowObject.IndexOf(obj);
                 if (removedIndex < 0) return;
                 listThrowObject.RemoveAt(removedIndex);
-                //TutorialManager.Ins.TutorialNode.RemoveAt(removedIndex);
+                TutorialManager.Ins.TutorialNode.RemoveAt(removedIndex);
+                TutorialManager.Ins.TfItem.RemoveAt(removedIndex);
                 if (listThrowObject.Count == 0)
                 {
                     DoneStep();
@@ -592,5 +598,9 @@ public class LevelScarlet : Singleton<LevelScarlet>
         DoneStep();
         AdsManager.Ins.ShowEndGame();
     }
-
+    [SerializeField] private SonDragItemBase itemDryerDrag;
+    private void OnStartStep6()
+    {
+        itemDryerDrag.AddUseInStep(StepManager.Ins.CurrentStep);
+    }
 }

@@ -11,6 +11,7 @@ public class TutorialManager : Singleton<TutorialManager>
     public bool enableCountTime = false;
     public float timeCountHint = 2f;
     [SerializeField] public HandCtrl handCtrl;
+    [SerializeField] public HandCtrl handCtrlMakeup;
     [SerializeField] private StepManager gamePlayManager;
     [SerializeField] private LevelScarlet _level;
     //[SerializeField] private Animator animHand;
@@ -29,7 +30,9 @@ public class TutorialManager : Singleton<TutorialManager>
     [SerializeField] private List<Transform> tutorialNode = new List<Transform>();
     [SerializeField] private List<Transform> tfItem = new List<Transform>();
     public List<Transform> TutorialNode => tutorialNode;
-
+    public List<Transform> TfItem => tfItem;
+    [SerializeField] private List<Transform> tfItemMakeup = new List<Transform>();
+    [SerializeField] private Transform tfFace;
     int countCollectFail = 0;
     private bool isTap = false;
 
@@ -48,6 +51,7 @@ public class TutorialManager : Singleton<TutorialManager>
         }
         if (!enableCountTime) return;
         if (handCtrl.gameObject.activeSelf) return;
+        if (handCtrlMakeup.gameObject.activeSelf) return;
         CalculateTimeHint();
     }
     private void CalculateTimeHint()
@@ -67,12 +71,24 @@ public class TutorialManager : Singleton<TutorialManager>
         {
             case 0:
                 TutorialStep1(0);
-
                 return;
             case 1:
+                TutorialStepMakeUp(0);
                 return;
             case 2:
-
+                TutorialStepMakeUp(1);
+                return;
+            case 3:
+                TutorialStepMakeUp(2);
+                return;
+            case 4:
+                TutorialStepMakeUp(3);
+                return;
+            case 5:
+                TutorialStepMakeUp(4);
+                return;
+            case 6:
+                TutorialStepMakeUp(5);
                 return;
             default:
                 resetTimeHint();
@@ -92,6 +108,14 @@ public class TutorialManager : Singleton<TutorialManager>
         var node = tutorialNode[indexStep];
         handCtrl.ShowHandPosToPos(obj.position, node.position);
     }
+    private void TutorialStepMakeUp(int indexStep)
+    {
+        if (handCtrlMakeup == null) return;
+        if (indexStep >= tfItemMakeup.Count || tfFace == null) return;
+        handCtrlMakeup.gameObject.SetActive(true);
+        var obj = tfItemMakeup[indexStep];
+        handCtrlMakeup.ShowHandPosToPos(obj.position, tfFace.position);
+    }
     public void SetStateIsTap(bool value)
     {
         isTap = value;
@@ -99,6 +123,7 @@ public class TutorialManager : Singleton<TutorialManager>
     void HideHint()
     {
         handCtrl.gameObject.SetActive(false);
+        handCtrlMakeup.gameObject.SetActive(false);
     }
     public void resetTimeHint()
     {
