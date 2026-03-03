@@ -14,7 +14,7 @@ public class SonDragItemBase : SonMonoBehaviour,
     [SerializeField] private List<int> useInSteps = new List<int>();
 
     [SerializeField] private SpriteRenderer sprite;
-    [SerializeField] private LevelRumiAilen _level;
+    [SerializeField] private LevelScarlet _level;
     [SerializeField] private Collider2D col;
 
     [Header("Face Zone")]
@@ -74,7 +74,7 @@ public class SonDragItemBase : SonMonoBehaviour,
     {
         if (_level == null)
         {
-            _level = LevelRumiAilen.Ins;
+            _level = LevelScarlet.Ins;
         }
         if (!sprite) sprite = GetComponentInChildren<SpriteRenderer>();
         if (!col) col = GetComponent<Collider2D>();
@@ -139,7 +139,7 @@ public class SonDragItemBase : SonMonoBehaviour,
         onDragStart?.Invoke();
 
         // Start auto-check coroutine
-        if (LevelRumiAilen.Ins != null &&
+        if (LevelScarlet.Ins != null &&
             (!useInSteps.Contains(StepManager.Ins.CurrentStep) || forceCheckWrongStep))
         {
             if (checkStepCoroutine != null)
@@ -159,9 +159,7 @@ public class SonDragItemBase : SonMonoBehaviour,
     {
         ReleaseDrag();
     }
-
     /* ================= CORE LOGIC ================= */
-
     private void ReleaseDrag()
     {
         // stop auto timer
@@ -170,7 +168,6 @@ public class SonDragItemBase : SonMonoBehaviour,
             StopCoroutine(checkStepCoroutine);
             checkStepCoroutine = null;
         }
-
         if (!_canInteract || !IsDragging) return;
 
         IsDragging = false;
@@ -217,18 +214,16 @@ public class SonDragItemBase : SonMonoBehaviour,
             (!useInSteps.Contains(StepManager.Ins.CurrentStep) || forceCheckWrongStep))
         {
             if (InsideFaceZone)
+            {
                 _level.PlayNegativeEmoji();
+            }
         }
-        Debug.Log("Done Step 1");
 
         if (_level != null)
         {
-            Debug.Log("Done Step 2");
-            Debug.Log("Done Step 2 " + _level.IsDoneStep);
 
             if (_level.IsDoneStep)
             {
-                Debug.Log("Done Step 3");
                 _level.TryNextStep();
             }
         }

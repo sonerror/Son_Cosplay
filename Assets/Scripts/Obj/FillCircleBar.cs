@@ -52,7 +52,7 @@ public class FillCircleBar : SonMonoBehaviour
     _isShow = true;
     gameObject.SetActive(true);
     _showTween?.Kill();
-    _showTween = Tf.DOScale(Vector3.one * 0.25f, showTime);
+    _showTween = Tf.DOScale(Vector3.one * 0.2f, showTime);
   }
 
   [Sirenix.OdinInspector.Button]

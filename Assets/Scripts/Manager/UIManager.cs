@@ -1,24 +1,21 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
-public enum UIID // id of UI
+public enum UIID
 {
     GamePlay = 0,
     GameLoseScreen = 1,
-}// remember set range of array in UIManager
+}
 
 public class UIManager : Singleton<UIManager>
 {
     private Transform tf;
     public Transform Tf => tf ? tf : tf = transform;
     [SerializeField] private Canvas screenContainer;
-
     public Canvas ScreenContainer => screenContainer;
     [SerializeField] List<GamePlayScreen> screens = new List<GamePlayScreen>();
     public RectTransform[] canvasParent = new RectTransform[3];
     private GamePlayScreen[] uiActive = new GamePlayScreen[3];
-
     private Vector2 gameSize = new Vector2(1080, 1920);
     public Vector2 GameSize => gameSize;
     private bool isLandscape;
@@ -31,9 +28,7 @@ public class UIManager : Singleton<UIManager>
 
     private void Start()
     {
-        // OpenUI(UIID.GameVideo);
         OpenUI(UIID.GamePlay);
-
     }
     private IEnumerator InitLunaOrientation()
     {
@@ -48,7 +43,6 @@ public class UIManager : Singleton<UIManager>
     {
         return IsLoaded(ID) && uiActive[(int)ID].gameObject.activeInHierarchy;
     }
-
     public GamePlayScreen GetUI(UIID ID)
     {
         if (!IsLoaded(ID))
@@ -60,13 +54,11 @@ public class UIManager : Singleton<UIManager>
         }
         return uiActive[(int)ID];
     }
-
     public GamePlayScreen OpenUI(UIID ID)
     {
         if (IsLoaded(ID))
         {
             if (uiActive[(int)ID].gameObject.activeInHierarchy) return uiActive[(int)ID];
-
             uiActive[(int)ID].gameObject.SetActive(true);
             uiActive[(int)ID].OnShow();
             return uiActive[(int)ID];
@@ -76,12 +68,10 @@ public class UIManager : Singleton<UIManager>
             return GetUI(ID);
         }
     }
-
     public bool IsLoaded(UIID ID)
     {
         return uiActive[(int)ID] != null;
     }
-
     public void CloseUI(UIID ID)
     {
         if (IsLoaded(ID))
@@ -89,7 +79,6 @@ public class UIManager : Singleton<UIManager>
             GetUI(ID).gameObject.SetActive(false);
         }
     }
-
     private void FixedUpdate()
     {
         float ratio = (float)Screen.width / (float)Screen.height;
@@ -100,7 +89,6 @@ public class UIManager : Singleton<UIManager>
             gameSize.x = widthTmp;
             gameSize.y = 1920f;
         }
-
         if (widthTmp < 1080f)
         {
             gameSize.x = 1080f;
@@ -109,7 +97,6 @@ public class UIManager : Singleton<UIManager>
         resizeAllUI();
         isLandscape = Screen.width > Screen.height;
     }
-
     private void resizeAllUI()
     {
         for (int i = 0; i < uiActive.Length; i++)
@@ -118,5 +105,4 @@ public class UIManager : Singleton<UIManager>
             uiActive[i].Resize(uiActive[i].fomatSize(gameSize));
         }
     }
-
 }
