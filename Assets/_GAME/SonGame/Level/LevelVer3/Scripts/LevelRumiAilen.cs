@@ -280,7 +280,7 @@ public class LevelRumiAilen : Singleton<LevelRumiAilen>
     }
     private void UpdateUIAilen()
     {
-        SoundManager.Ins.PlayBgmAilen();
+        //SoundManager.Ins.PlayBgmAilen();
     }
     [SerializeField] private TapSelectItem eventSelectRumi;
     [SerializeField] private TapSelectItem eventSelectAilen;

@@ -291,7 +291,7 @@ public class LevelScarlet : Singleton<LevelScarlet>
     {
         SetNewEmoji(emojiControlStep1);
         PlayPositiveEmoji();
-        MoveCamera(cam, targetOrthoSize, 1, 0.75f, () =>
+        MoveCamera(cam, targetOrthoSize, 1, 1f, () =>
         {
             TutorialManager.Ins.enableCountTime = true;
         });
@@ -302,7 +302,6 @@ public class LevelScarlet : Singleton<LevelScarlet>
 
             obj.onRemoveItem.AddListener(() =>
             {
-                PlayPositiveEmoji();
                 int removedIndex = listThrowObject.IndexOf(obj);
                 if (removedIndex < 0) return;
                 listThrowObject.RemoveAt(removedIndex);

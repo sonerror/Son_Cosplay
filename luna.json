@@ -2,7 +2,7 @@
     "version": "7.1.0",
     "projectId": "f42e7ff96e4545544bb6cd68f51ab634",
     "applicationID": 34683,
-    "creativeName": "R1_Cosplaydom_ver9",
+    "creativeName": "R1_Cosplaydom_ver6GG",
     "pgServer": "EU",
     "window": {
         "‐⁙": true
@@ -24099,10 +24099,6 @@
                         "excluded": false
                     },
                     {
-                        "name": "PlayBgmAilen",
-                        "excluded": false
-                    },
-                    {
                         "name": "PlaySfx",
                         "excluded": true
                     },
@@ -24495,6 +24491,14 @@
                     {
                         "name": "OnStepDone",
                         "excluded": true
+                    },
+                    {
+                        "name": "TfItem#get",
+                        "excluded": false
+                    },
+                    {
+                        "name": "TutorialStepMakeUp",
+                        "excluded": false
                     }
                 ]
             },
@@ -46953,6 +46957,244 @@
                         "excluded": false
                     }
                 ]
+            },
+            {
+                "className": "LevelScarlet",
+                "staticMethods": [],
+                "instanceMethods": [
+                    {
+                        "name": "inherits",
+                        "excluded": false
+                    },
+                    {
+                        "name": "EmojiControl#get",
+                        "excluded": true
+                    },
+                    {
+                        "name": "Character#get",
+                        "excluded": true
+                    },
+                    {
+                        "name": "IsChangeAnimHappy#get",
+                        "excluded": true
+                    },
+                    {
+                        "name": "IsDoneStep#get",
+                        "excluded": false
+                    },
+                    {
+                        "name": "IsPlayingGame#get",
+                        "excluded": true
+                    },
+                    {
+                        "name": "init",
+                        "excluded": false
+                    },
+                    {
+                        "name": "SetNewCharacter",
+                        "excluded": true
+                    },
+                    {
+                        "name": "SetNewEmoji",
+                        "excluded": false
+                    },
+                    {
+                        "name": "SetEmissionRate",
+                        "excluded": true
+                    },
+                    {
+                        "name": "SetStateChangeAnim",
+                        "excluded": true
+                    },
+                    {
+                        "name": "TurnCharacterSlotAttachment",
+                        "excluded": true
+                    },
+                    {
+                        "name": "Start",
+                        "excluded": false
+                    },
+                    {
+                        "name": "SetStep",
+                        "excluded": true
+                    },
+                    {
+                        "name": "SetStateDoneStep",
+                        "excluded": true
+                    },
+                    {
+                        "name": "DoneStep",
+                        "excluded": false
+                    },
+                    {
+                        "name": "Update",
+                        "excluded": false
+                    },
+                    {
+                        "name": "MoveCamera",
+                        "excluded": false
+                    },
+                    {
+                        "name": "StartGamePlay",
+                        "excluded": false
+                    },
+                    {
+                        "name": "TryNextStep",
+                        "excluded": false
+                    },
+                    {
+                        "name": "StartStep",
+                        "excluded": false
+                    },
+                    {
+                        "name": "PlayPositiveEmoji",
+                        "excluded": false
+                    },
+                    {
+                        "name": "PlayPositiveEmojiCoroutine",
+                        "excluded": false
+                    },
+                    {
+                        "name": "PlayAnimHappy",
+                        "excluded": true
+                    },
+                    {
+                        "name": "IE_PlayAnimHappy",
+                        "excluded": true
+                    },
+                    {
+                        "name": "PlayPositiveEmojiOnSnap",
+                        "excluded": true
+                    },
+                    {
+                        "name": "PlayHappyOnSnap",
+                        "excluded": true
+                    },
+                    {
+                        "name": "PlayNegativeEmoji",
+                        "excluded": true
+                    },
+                    {
+                        "name": "PlayNegativeEmojiCoroutine",
+                        "excluded": true
+                    },
+                    {
+                        "name": "ShowClockTimer",
+                        "excluded": true
+                    },
+                    {
+                        "name": "OnStartStep1",
+                        "excluded": false
+                    },
+                    {
+                        "name": "OnSetStateSlotClother",
+                        "excluded": false
+                    },
+                    {
+                        "name": "OnSetStateSlotDress",
+                        "excluded": false
+                    },
+                    {
+                        "name": "OnSetStateSlotShirt",
+                        "excluded": false
+                    },
+                    {
+                        "name": "OnSetStateSlotShoeL",
+                        "excluded": false
+                    },
+                    {
+                        "name": "OnSetStateSlotShoeR",
+                        "excluded": false
+                    },
+                    {
+                        "name": "OnStartStep2",
+                        "excluded": false
+                    },
+                    {
+                        "name": "StartStep2",
+                        "excluded": false
+                    },
+                    {
+                        "name": "EnableShowerTrigger",
+                        "excluded": false
+                    },
+                    {
+                        "name": "DisableShowerTrigger",
+                        "excluded": false
+                    },
+                    {
+                        "name": "TryShower",
+                        "excluded": false
+                    },
+                    {
+                        "name": "TryPausShower",
+                        "excluded": false
+                    },
+                    {
+                        "name": "TryEndShower",
+                        "excluded": false
+                    },
+                    {
+                        "name": "OnStartStep3",
+                        "excluded": false
+                    },
+                    {
+                        "name": "OnStartStep4",
+                        "excluded": false
+                    },
+                    {
+                        "name": "EnableBrushTrigger",
+                        "excluded": false
+                    },
+                    {
+                        "name": "DisableBrushTrigger",
+                        "excluded": false
+                    },
+                    {
+                        "name": "ChangeAlphaCleanser",
+                        "excluded": false
+                    },
+                    {
+                        "name": "TryBrush",
+                        "excluded": false
+                    },
+                    {
+                        "name": "TryPausBrush",
+                        "excluded": false
+                    },
+                    {
+                        "name": "TryEndBrush",
+                        "excluded": false
+                    },
+                    {
+                        "name": "OnStartStep5",
+                        "excluded": false
+                    },
+                    {
+                        "name": "EnableTowelTrigger",
+                        "excluded": false
+                    },
+                    {
+                        "name": "DisableTowelTrigger",
+                        "excluded": false
+                    },
+                    {
+                        "name": "TryTowel",
+                        "excluded": false
+                    },
+                    {
+                        "name": "TryPauseTowel",
+                        "excluded": false
+                    },
+                    {
+                        "name": "TryEndTowel",
+                        "excluded": false
+                    },
+                    {
+                        "name": "OnStartStep6",
+                        "excluded": false
+                    }
+                ]
             }
         ],
         "stubberDataList": [],
@@ -47062,14 +47304,24 @@
                         "name": "Resources/unity_builtin_extra/Default-ParticleSystem"
                     },
                     {
-                        "maxWidth": 1024,
-                        "maxHeight": 1024,
+                        "maxWidth": 2048,
+                        "maxHeight": 2048,
                         "format": "png32",
                         "compression": "quantSize",
                         "quality": 65,
                         "script": "",
                         "ext": "",
                         "name": "Assets/_GAME/SonGame/Level/LevelScarlet/Anim/ScarletWitch.png"
+                    },
+                    {
+                        "maxWidth": 4,
+                        "maxHeight": 4,
+                        "format": "png32",
+                        "compression": "quantSize",
+                        "quality": 65,
+                        "script": "",
+                        "ext": "",
+                        "name": "Assets/_GAME/SonGame/Level/LevelWednesday/_Textures/Hand/mixture 3.png"
                     }
                 ]
             },
