@@ -2,7 +2,7 @@
     "version": "7.1.0",
     "projectId": "f42e7ff96e4545544bb6cd68f51ab634",
     "applicationID": 34683,
-    "creativeName": "R1_Cosplaydom_ver6GG",
+    "creativeName": "R1_Cosplaydom_ver9_ZoroOnePiece",
     "pgServer": "EU",
     "window": {
         "‐⁙": true
@@ -79,11 +79,11 @@
                 "Stubs/SupersonicWisdom/"
             ],
             "msbuildMac64": "/Library/Frameworks/Mono.framework/Versions/Current/bin/msbuild",
-            "msbuildWin64": "C:/Program Files/Microsoft Visual Studio/2022/Professional/MSBuild/Current/Bin/MSBuild.exe",
+            "msbuildWin64": "C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\MSBuild\\Current\\Bin\\MSBuild.exe",
             "externalSources": [],
             "externalJSLibraries": [],
             "scriptingDefines": [],
-            "msbuildVersion": "17.9",
+            "msbuildVersion": "18.4",
             "monoVersion": "6.0.16",
             "dotnetVersion": ""
         },
@@ -8973,6 +8973,10 @@
             {
                 "name": "Luna.Unity.Analytics.Applovin",
                 "excluded": false
+            },
+            {
+                "name": "LevelZozo",
+                "excluded": true
             }
         ],
         "unusedMethods": [
