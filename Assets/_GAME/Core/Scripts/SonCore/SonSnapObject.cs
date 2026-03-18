@@ -9,6 +9,7 @@ namespace sonnv
     public class SonSnapObject : SonMonoBehaviour, SonISnapObject,
         IPointerDownHandler, IDragHandler, IPointerUpHandler
     {
+        [SerializeField] private LevelZozo _level;
         [SerializeField] protected SonSnapPoint[] snapToPosition;
         private SonSnapPoint _snapPoint;
         public SonSnapPoint SnapPoint => _snapPoint;
@@ -198,7 +199,7 @@ namespace sonnv
                     {
                         if (!snapPoint.isSnap && !snapPoint.canSnap)
                         {
-                            LevelZozo.Ins.PlayNegativeEmoji();
+                            _level.PlayNegativeEmoji();
                         }
                     }
                     if (!snapPoint.Tf.gameObject.activeSelf) continue;

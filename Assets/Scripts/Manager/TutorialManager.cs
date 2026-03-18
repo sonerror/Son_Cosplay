@@ -13,8 +13,6 @@ public class TutorialManager : Singleton<TutorialManager>
     [SerializeField] public HandCtrl handCtrl;
     [SerializeField] public HandCtrl handCtrlMakeup;
     [SerializeField] private StepManager gamePlayManager;
-    [SerializeField] private LevelScarlet _level;
-    //[SerializeField] private Animator animHand;
     [SerializeField] private int countHintStep1 = 0;
     public int CountHintStep1
     {
@@ -33,6 +31,8 @@ public class TutorialManager : Singleton<TutorialManager>
     public List<Transform> TfItem => tfItem;
     [SerializeField] private List<Transform> tfItemMakeup = new List<Transform>();
     [SerializeField] private Transform tfFace;
+    [SerializeField] private Transform tfFace2;
+    [SerializeField] private Transform tfContour;
     int countCollectFail = 0;
     private bool isTap = false;
 
@@ -59,7 +59,7 @@ public class TutorialManager : Singleton<TutorialManager>
         timeCountHint -= Time.deltaTime;
         if (timeCountHint <= 0)
         {
-            //ShowHint();
+            ShowHint();
         }
     }
     void ShowHint()
@@ -70,25 +70,32 @@ public class TutorialManager : Singleton<TutorialManager>
         switch (index)
         {
             case 0:
-                TutorialStep1(0);
+
                 return;
             case 1:
-                TutorialStepMakeUp(0);
+                TutorialStep1(0);
                 return;
             case 2:
-                TutorialStepMakeUp(1);
+                TutorialStepMakeUp(0);
                 return;
             case 3:
-                TutorialStepMakeUp(2);
+                TutorialStepMakeUp(1);
                 return;
             case 4:
-                TutorialStepMakeUp(3);
+                TutorialStepMakeUp(2);
                 return;
             case 5:
-                TutorialStepMakeUp(4);
+                TutorialStepMakeUp(3);
                 return;
             case 6:
+                TutorialStepMakeUp(4);
+                return;
+            case 7:
                 TutorialStepMakeUp(5);
+                return;
+            case 8:
+                handCtrlMakeup.gameObject.SetActive(true);
+                handCtrlMakeup.ShowHandPosToPos(tfContour.position, tfFace2.position);
                 return;
             default:
                 resetTimeHint();

@@ -51,7 +51,22 @@ public class LevelZozo : Singleton<LevelZozo>
             }
         }
     }
+#if UNITY_EDITOR
+
+      [Sirenix.OdinInspector.Button]
+       public void TurnOffSlotMouth()
+        {
+             slotMouth.TurnSlotState(false);
+        }
+
+#endif
+    public void TurnOffSlotMouthDone()
+    {
+        slotMouth.TurnSlotState(false);
+    }
     [SerializeField] private SlotAttachmentPairList slotDirtStart;
+    [SerializeField] private SlotAttachmentPairList slotMouth;
+
     protected virtual void Start()
     {
         slotDirtStart.TurnSlotState(true);
@@ -322,7 +337,9 @@ public class LevelZozo : Singleton<LevelZozo>
     private int countThrowObj = 0;
     private void OnStartStep2()
     {
+        TurnOffSlotMouthDone();
 
+        TutorialManager.Ins.enableCountTime = true;
         for (int i = 0; i < listThrowObject.Count; i++)
         {
             SonThrowObject obj = listThrowObject[i];
@@ -330,8 +347,12 @@ public class LevelZozo : Singleton<LevelZozo>
             obj.Col.enabled = true;
             obj.onRemoveItem.AddListener(() =>
             {
-                countThrowObj++;
-                if (countThrowObj >= listThrowObject.Count)
+                int removedIndex = listThrowObject.IndexOf(obj);
+                if (removedIndex < 0) return;
+                listThrowObject.RemoveAt(removedIndex);
+                TutorialManager.Ins.TutorialNode.RemoveAt(removedIndex);
+                TutorialManager.Ins.TfItem.RemoveAt(removedIndex);
+                if (listThrowObject.Count == 0)
                 {
                     DoneStep();
                     TryNextStep();
@@ -695,6 +716,7 @@ public class LevelZozo : Singleton<LevelZozo>
         faceToweTrigger.onEnterZone.RemoveListener(TryPouringResin);
         faceToweTrigger.onOutZone.RemoveListener(TryPauseResin);
         DoneStep();
+        TutorialManager.Ins.enableCountTime = false;
         //TryNextStep();
     }
     #endregion
@@ -707,6 +729,7 @@ public class LevelZozo : Singleton<LevelZozo>
         step2.Show(0.75f);
         step2.onShowComplete.AddListener(() =>
         {
+            TutorialManager.Ins.enableCountTime = true;
             AdsManager.Ins.ShowEndGame();
         });
     }

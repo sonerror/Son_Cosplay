@@ -139,7 +139,7 @@ public class SonDragItemBase : SonMonoBehaviour,
         onDragStart?.Invoke();
 
         // Start auto-check coroutine
-        if (LevelScarlet.Ins != null &&
+        if (LevelZozo.Ins != null &&
             (!useInSteps.Contains(StepManager.Ins.CurrentStep) || forceCheckWrongStep))
         {
             if (checkStepCoroutine != null)

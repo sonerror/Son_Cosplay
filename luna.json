@@ -2,7 +2,7 @@
     "version": "7.1.0",
     "projectId": "f42e7ff96e4545544bb6cd68f51ab634",
     "applicationID": 34683,
-    "creativeName": "R1_Cosplaydom_ver9_ZoroOnePiece",
+    "creativeName": "R1_Cosplaydom_ver9_ZoroOnePiece_GG",
     "pgServer": "EU",
     "window": {
         "‐⁙": true
@@ -46948,13 +46948,9 @@
                 ]
             },
             {
-                "className": "LevelScarlet",
+                "className": "LevelZozo",
                 "staticMethods": [],
                 "instanceMethods": [
-                    {
-                        "name": "inherits",
-                        "excluded": false
-                    },
                     {
                         "name": "EmojiControl#get",
                         "excluded": true
@@ -46985,15 +46981,15 @@
                     },
                     {
                         "name": "SetNewEmoji",
-                        "excluded": false
+                        "excluded": true
                     },
                     {
                         "name": "SetEmissionRate",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "SetStateChangeAnim",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "TurnCharacterSlotAttachment",
@@ -47021,7 +47017,7 @@
                     },
                     {
                         "name": "MoveCamera",
-                        "excluded": false
+                        "excluded": true
                     },
                     {
                         "name": "StartGamePlay",
@@ -47061,38 +47057,34 @@
                     },
                     {
                         "name": "PlayNegativeEmoji",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "PlayNegativeEmojiCoroutine",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "ShowClockTimer",
                         "excluded": true
                     },
                     {
+                        "name": "inherits",
+                        "excluded": false
+                    },
+                    {
                         "name": "OnStartStep1",
                         "excluded": false
                     },
                     {
-                        "name": "OnSetStateSlotClother",
+                        "name": "SetStateSlotHeadband",
                         "excluded": false
                     },
                     {
-                        "name": "OnSetStateSlotDress",
+                        "name": "SetStateSlotHEringL",
                         "excluded": false
                     },
                     {
-                        "name": "OnSetStateSlotShirt",
-                        "excluded": false
-                    },
-                    {
-                        "name": "OnSetStateSlotShoeL",
-                        "excluded": false
-                    },
-                    {
-                        "name": "OnSetStateSlotShoeR",
+                        "name": "SetStateSlotHEringR",
                         "excluded": false
                     },
                     {
@@ -47100,7 +47092,15 @@
                         "excluded": false
                     },
                     {
-                        "name": "StartStep2",
+                        "name": "OnStartStep3",
+                        "excluded": false
+                    },
+                    {
+                        "name": "SetStateSlotHeadBand",
+                        "excluded": false
+                    },
+                    {
+                        "name": "OnStartStep4",
                         "excluded": false
                     },
                     {
@@ -47124,19 +47124,7 @@
                         "excluded": false
                     },
                     {
-                        "name": "OnStartStep3",
-                        "excluded": false
-                    },
-                    {
-                        "name": "OnStartStep4",
-                        "excluded": false
-                    },
-                    {
-                        "name": "EnableBrushTrigger",
-                        "excluded": false
-                    },
-                    {
-                        "name": "DisableBrushTrigger",
+                        "name": "OnStartStep5",
                         "excluded": false
                     },
                     {
@@ -47144,166 +47132,76 @@
                         "excluded": false
                     },
                     {
-                        "name": "TryBrush",
-                        "excluded": false
-                    },
-                    {
-                        "name": "TryPausBrush",
-                        "excluded": false
-                    },
-                    {
-                        "name": "TryEndBrush",
-                        "excluded": false
-                    },
-                    {
-                        "name": "OnStartStep5",
-                        "excluded": false
-                    },
-                    {
-                        "name": "EnableTowelTrigger",
-                        "excluded": false
-                    },
-                    {
-                        "name": "DisableTowelTrigger",
-                        "excluded": false
-                    },
-                    {
-                        "name": "TryTowel",
-                        "excluded": false
-                    },
-                    {
-                        "name": "TryPauseTowel",
-                        "excluded": false
-                    },
-                    {
-                        "name": "TryEndTowel",
+                        "name": "ChangeAlphaFoam",
                         "excluded": false
                     },
                     {
                         "name": "OnStartStep6",
                         "excluded": false
-                    }
-                ]
-            },
-            {
-                "className": "LevelZozo",
-                "staticMethods": [],
-                "instanceMethods": [
-                    {
-                        "name": "EmojiControl#get",
-                        "excluded": true
                     },
                     {
-                        "name": "Character#get",
-                        "excluded": true
-                    },
-                    {
-                        "name": "IsChangeAnimHappy#get",
-                        "excluded": true
-                    },
-                    {
-                        "name": "IsDoneStep#get",
-                        "excluded": true
-                    },
-                    {
-                        "name": "IsPlayingGame#get",
-                        "excluded": true
-                    },
-                    {
-                        "name": "init",
+                        "name": "EnableWashTrigger",
                         "excluded": false
                     },
                     {
-                        "name": "SetNewCharacter",
-                        "excluded": true
-                    },
-                    {
-                        "name": "SetNewEmoji",
-                        "excluded": true
-                    },
-                    {
-                        "name": "SetEmissionRate",
-                        "excluded": true
-                    },
-                    {
-                        "name": "SetStateChangeAnim",
-                        "excluded": true
-                    },
-                    {
-                        "name": "TurnCharacterSlotAttachment",
-                        "excluded": true
-                    },
-                    {
-                        "name": "Start",
+                        "name": "DisableWashTrigger",
                         "excluded": false
                     },
                     {
-                        "name": "SetStep",
-                        "excluded": true
-                    },
-                    {
-                        "name": "SetStateDoneStep",
-                        "excluded": true
-                    },
-                    {
-                        "name": "DoneStep",
-                        "excluded": true
-                    },
-                    {
-                        "name": "Update",
+                        "name": "TryWash",
                         "excluded": false
                     },
                     {
-                        "name": "MoveCamera",
-                        "excluded": true
-                    },
-                    {
-                        "name": "StartGamePlay",
+                        "name": "TryPausWash",
                         "excluded": false
                     },
                     {
-                        "name": "TryNextStep",
-                        "excluded": true
-                    },
-                    {
-                        "name": "StartStep",
+                        "name": "TryEndWash",
                         "excluded": false
                     },
                     {
-                        "name": "PlayPositiveEmoji",
-                        "excluded": true
+                        "name": "OnStartStep7",
+                        "excluded": false
                     },
                     {
-                        "name": "PlayPositiveEmojiCoroutine",
-                        "excluded": true
+                        "name": "TryShowerStep2",
+                        "excluded": false
                     },
                     {
-                        "name": "PlayAnimHappy",
-                        "excluded": true
+                        "name": "TryEndShowerStep2",
+                        "excluded": false
                     },
                     {
-                        "name": "IE_PlayAnimHappy",
-                        "excluded": true
+                        "name": "OnStartStep8",
+                        "excluded": false
                     },
                     {
-                        "name": "PlayPositiveEmojiOnSnap",
-                        "excluded": true
+                        "name": "EnableMixtureTrigger",
+                        "excluded": false
                     },
                     {
-                        "name": "PlayHappyOnSnap",
-                        "excluded": true
+                        "name": "DisableMixtureTrigger",
+                        "excluded": false
                     },
                     {
-                        "name": "PlayNegativeEmoji",
-                        "excluded": true
+                        "name": "TryPouringResin",
+                        "excluded": false
                     },
                     {
-                        "name": "PlayNegativeEmojiCoroutine",
-                        "excluded": true
+                        "name": "TryPauseResin",
+                        "excluded": false
                     },
                     {
-                        "name": "ShowClockTimer",
-                        "excluded": true
+                        "name": "TryEndPouringResin",
+                        "excluded": false
+                    },
+                    {
+                        "name": "OnStartStep9",
+                        "excluded": false
+                    },
+                    {
+                        "name": "TurnOffSlotMouthDone",
+                        "excluded": false
                     }
                 ]
             },
@@ -47505,8 +47403,8 @@
                         "name": "Assets/_GAME/SonGame/Level/LevelWednesday/_Textures/Hand/mixture 3.png"
                     },
                     {
-                        "maxWidth": 1024,
-                        "maxHeight": 1024,
+                        "maxWidth": 2048,
+                        "maxHeight": 2048,
                         "format": "png32",
                         "compression": "quantSize",
                         "quality": 65,
@@ -47522,7 +47420,7 @@
                     "startTime": "00:00.000",
                     "endTime": "00:00.000",
                     "lengthInSeconds": 0.0,
-                    "bitrate": 64,
+                    "bitrate": 32,
                     "script": "",
                     "ext": ""
                 },
@@ -47530,9 +47428,9 @@
                     {
                         "channels": 1,
                         "startTime": "00:00.000",
-                        "endTime": "00:13.598",
-                        "lengthInSeconds": 13.597999572753907,
-                        "bitrate": 128,
+                        "endTime": "00:20.443",
+                        "lengthInSeconds": 20.44300079345703,
+                        "bitrate": 32,
                         "script": "",
                         "ext": "",
                         "name": "Assets/_GAME/_Costopia/_Audio/BGM/BGM_Gamplay_5.ogg"
@@ -47540,9 +47438,9 @@
                     {
                         "channels": 1,
                         "startTime": "00:00.000",
-                        "endTime": "00:00.000",
-                        "lengthInSeconds": 0.0,
-                        "bitrate": 128,
+                        "endTime": "00:07.856",
+                        "lengthInSeconds": 7.855999946594238,
+                        "bitrate": 32,
                         "script": "",
                         "ext": "",
                         "name": "Assets/_GAME/Levels/_OldMakeUpLevel/water_shower.ogg"
@@ -47550,9 +47448,9 @@
                     {
                         "channels": 1,
                         "startTime": "00:00.000",
-                        "endTime": "00:01.065",
-                        "lengthInSeconds": 1.065000057220459,
-                        "bitrate": 128,
+                        "endTime": "00:02.026",
+                        "lengthInSeconds": 2.0260000228881838,
+                        "bitrate": 32,
                         "script": "",
                         "ext": "",
                         "name": "Assets/_GAME/_Costopia/_Audio/SFX/sfx_shave.ogg"
@@ -47572,7 +47470,7 @@
                         "startTime": "00:00.000",
                         "endTime": "00:02.026",
                         "lengthInSeconds": 2.0260000228881838,
-                        "bitrate": 128,
+                        "bitrate": 32,
                         "script": "",
                         "ext": "",
                         "name": "Assets/_GAME/_Costopia/_Audio/SFX/CharacterSFX/Base_Woman/H2.mp3"
@@ -47582,7 +47480,7 @@
                         "startTime": "00:00.000",
                         "endTime": "00:02.026",
                         "lengthInSeconds": 2.0260000228881838,
-                        "bitrate": 128,
+                        "bitrate": 32,
                         "script": "",
                         "ext": "",
                         "name": "Assets/_GAME/_Costopia/_Audio/SFX/CharacterSFX/Base_Woman/H3.mp3"
@@ -47592,7 +47490,7 @@
                         "startTime": "00:00.000",
                         "endTime": "00:02.026",
                         "lengthInSeconds": 2.0260000228881838,
-                        "bitrate": 128,
+                        "bitrate": 32,
                         "script": "",
                         "ext": "",
                         "name": "Assets/_GAME/_Costopia/_Audio/SFX/CharacterSFX/Base_Woman/sfx_man_angry_2.ogg"
@@ -47602,7 +47500,7 @@
                         "startTime": "00:00.000",
                         "endTime": "00:02.026",
                         "lengthInSeconds": 2.0260000228881838,
-                        "bitrate": 128,
+                        "bitrate": 32,
                         "script": "",
                         "ext": "",
                         "name": "Assets/_GAME/_Costopia/_Audio/SFX/CharacterSFX/Base_Woman/sfx_woman_angry_3.1.ogg"
@@ -47612,7 +47510,7 @@
                         "startTime": "00:00.000",
                         "endTime": "00:02.026",
                         "lengthInSeconds": 2.0260000228881838,
-                        "bitrate": 128,
+                        "bitrate": 32,
                         "script": "",
                         "ext": "",
                         "name": "Assets/_GAME/_Costopia/_Audio/SFX/sfx_towel 1 - Copy.ogg"
@@ -47622,7 +47520,7 @@
                         "startTime": "00:00.000",
                         "endTime": "00:02.026",
                         "lengthInSeconds": 2.0260000228881838,
-                        "bitrate": 128,
+                        "bitrate": 32,
                         "script": "",
                         "ext": "",
                         "name": "Assets/_GAME/_Costopia/_Audio/SFX/CharacterSFX/Base_Woman/H1.mp3"
@@ -47676,6 +47574,56 @@
                         "script": "",
                         "ext": "",
                         "name": "Assets/_GAME/SonGame/Level/LevelVer3/smoother_010726.ogg"
+                    },
+                    {
+                        "channels": 1,
+                        "startTime": "00:00.000",
+                        "endTime": "00:02.026",
+                        "lengthInSeconds": 2.0260000228881838,
+                        "bitrate": 32,
+                        "script": "",
+                        "ext": "",
+                        "name": "Assets/_GAME/_Costopia/_Audio/SFX/sfx_towel 1.ogg"
+                    },
+                    {
+                        "channels": 1,
+                        "startTime": "00:00.000",
+                        "endTime": "00:02.026",
+                        "lengthInSeconds": 2.0260000228881838,
+                        "bitrate": 32,
+                        "script": "",
+                        "ext": "",
+                        "name": "Assets/_GAME/SonGame/Level/LevelSailorMoon/Sound/electric-facial-machine.ogg"
+                    },
+                    {
+                        "channels": 1,
+                        "startTime": "00:00.000",
+                        "endTime": "00:02.026",
+                        "lengthInSeconds": 2.0260000228881838,
+                        "bitrate": 32,
+                        "script": "",
+                        "ext": "",
+                        "name": "Assets/_GAME/_Costopia/_Audio/SFX/sfx_correct_1.ogg"
+                    },
+                    {
+                        "channels": 1,
+                        "startTime": "00:00.000",
+                        "endTime": "00:02.026",
+                        "lengthInSeconds": 2.0260000228881838,
+                        "bitrate": 32,
+                        "script": "",
+                        "ext": "",
+                        "name": "Assets/_GAME/Levels/LvCosplayElfMystic/_Sounds/spray.ogg"
+                    },
+                    {
+                        "channels": 1,
+                        "startTime": "00:00.000",
+                        "endTime": "00:02.026",
+                        "lengthInSeconds": 2.0260000228881838,
+                        "bitrate": 64,
+                        "script": "",
+                        "ext": "",
+                        "name": "Assets/Audios/Splat 2.mp3"
                     }
                 ]
             },
