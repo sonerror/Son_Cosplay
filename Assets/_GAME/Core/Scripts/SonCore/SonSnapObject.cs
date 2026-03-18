@@ -198,7 +198,7 @@ namespace sonnv
                     {
                         if (!snapPoint.isSnap && !snapPoint.canSnap)
                         {
-                            LevelRumiAilen.Ins.PlayNegativeEmoji();
+                            LevelZozo.Ins.PlayNegativeEmoji();
                         }
                     }
                     if (!snapPoint.Tf.gameObject.activeSelf) continue;

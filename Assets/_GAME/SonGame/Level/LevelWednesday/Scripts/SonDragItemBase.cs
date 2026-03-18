@@ -14,7 +14,7 @@ public class SonDragItemBase : SonMonoBehaviour,
     [SerializeField] private List<int> useInSteps = new List<int>();
 
     [SerializeField] private SpriteRenderer sprite;
-    [SerializeField] private LevelScarlet _level;
+    [SerializeField] private LevelZozo _level;
     [SerializeField] private Collider2D col;
 
     [Header("Face Zone")]
@@ -74,7 +74,7 @@ public class SonDragItemBase : SonMonoBehaviour,
     {
         if (_level == null)
         {
-            _level = LevelScarlet.Ins;
+            _level = LevelZozo.Ins;
         }
         if (!sprite) sprite = GetComponentInChildren<SpriteRenderer>();
         if (!col) col = GetComponent<Collider2D>();
