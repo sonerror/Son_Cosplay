@@ -133,7 +133,7 @@
             ]
         },
         "scenes": [
-            "Assets/_GAME/SonGame/Level/LevelScarlet/LevelScarlet.unity"
+            "Assets/_GAME/SonGame/Level/LevelZoro/LevelZozo.unity"
         ],
         "disabledScenes": [
             "Assets/Scenes/LevelMain.unity",
@@ -141,6 +141,7 @@
             "Assets/_GAME/Levels/LvCosplayWenesday/Level53.unity",
             "Assets/_GAME/SonGame/Level/LevelMaleficent/Level98Maleficent.unity",
             "Assets/_GAME/SonGame/Level/LevelSailorMoon/LevelSailorMoon.unity",
+            "Assets/_GAME/SonGame/Level/LevelScarlet/LevelScarlet.unity",
             "Assets/_GAME/SonGame/Level/LevelVer3/LevelVer3.unity",
             "Assets/_GAME/SonGame/Level/LevelWednesday/LevelWednesday.unity"
         ],
@@ -8843,10 +8844,6 @@
                 "excluded": true
             },
             {
-                "name": "Spine.ShearTimeline",
-                "excluded": true
-            },
-            {
                 "name": "Spine.ShearXTimeline",
                 "excluded": true
             },
@@ -8859,19 +8856,11 @@
                 "excluded": true
             },
             {
-                "name": "Spine.PhysicsConstraintDampingTimeline",
-                "excluded": true
-            },
-            {
                 "name": "Spine.PhysicsConstraintGravityTimeline",
                 "excluded": true
             },
             {
                 "name": "Spine.PhysicsConstraintMassTimeline",
-                "excluded": true
-            },
-            {
-                "name": "Spine.PhysicsConstraintWindTimeline",
                 "excluded": true
             },
             {
@@ -8973,10 +8962,6 @@
             {
                 "name": "Luna.Unity.Analytics.Applovin",
                 "excluded": false
-            },
-            {
-                "name": "LevelZozo",
-                "excluded": true
             }
         ],
         "unusedMethods": [
@@ -25300,7 +25285,7 @@
                     },
                     {
                         "name": "mixedBakeMode#get",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "ambientIntensity#get",
@@ -36848,7 +36833,7 @@
                     },
                     {
                         "name": "GetAbsoluteValue",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "GetAbsoluteValue$1",
@@ -43510,7 +43495,7 @@
                     },
                     {
                         "name": "Apply",
-                        "excluded": true
+                        "excluded": false
                     }
                 ]
             },
@@ -46822,7 +46807,7 @@
                 "instanceMethods": [
                     {
                         "name": "ctor",
-                        "excluded": true
+                        "excluded": false
                     }
                 ]
             },
@@ -47199,6 +47184,198 @@
                         "excluded": false
                     }
                 ]
+            },
+            {
+                "className": "LevelZozo",
+                "staticMethods": [],
+                "instanceMethods": [
+                    {
+                        "name": "EmojiControl#get",
+                        "excluded": true
+                    },
+                    {
+                        "name": "Character#get",
+                        "excluded": true
+                    },
+                    {
+                        "name": "IsChangeAnimHappy#get",
+                        "excluded": true
+                    },
+                    {
+                        "name": "IsDoneStep#get",
+                        "excluded": true
+                    },
+                    {
+                        "name": "IsPlayingGame#get",
+                        "excluded": true
+                    },
+                    {
+                        "name": "init",
+                        "excluded": false
+                    },
+                    {
+                        "name": "SetNewCharacter",
+                        "excluded": true
+                    },
+                    {
+                        "name": "SetNewEmoji",
+                        "excluded": true
+                    },
+                    {
+                        "name": "SetEmissionRate",
+                        "excluded": true
+                    },
+                    {
+                        "name": "SetStateChangeAnim",
+                        "excluded": true
+                    },
+                    {
+                        "name": "TurnCharacterSlotAttachment",
+                        "excluded": true
+                    },
+                    {
+                        "name": "Start",
+                        "excluded": false
+                    },
+                    {
+                        "name": "SetStep",
+                        "excluded": true
+                    },
+                    {
+                        "name": "SetStateDoneStep",
+                        "excluded": true
+                    },
+                    {
+                        "name": "DoneStep",
+                        "excluded": true
+                    },
+                    {
+                        "name": "Update",
+                        "excluded": false
+                    },
+                    {
+                        "name": "MoveCamera",
+                        "excluded": true
+                    },
+                    {
+                        "name": "StartGamePlay",
+                        "excluded": false
+                    },
+                    {
+                        "name": "TryNextStep",
+                        "excluded": true
+                    },
+                    {
+                        "name": "StartStep",
+                        "excluded": false
+                    },
+                    {
+                        "name": "PlayPositiveEmoji",
+                        "excluded": true
+                    },
+                    {
+                        "name": "PlayPositiveEmojiCoroutine",
+                        "excluded": true
+                    },
+                    {
+                        "name": "PlayAnimHappy",
+                        "excluded": true
+                    },
+                    {
+                        "name": "IE_PlayAnimHappy",
+                        "excluded": true
+                    },
+                    {
+                        "name": "PlayPositiveEmojiOnSnap",
+                        "excluded": true
+                    },
+                    {
+                        "name": "PlayHappyOnSnap",
+                        "excluded": true
+                    },
+                    {
+                        "name": "PlayNegativeEmoji",
+                        "excluded": true
+                    },
+                    {
+                        "name": "PlayNegativeEmojiCoroutine",
+                        "excluded": true
+                    },
+                    {
+                        "name": "ShowClockTimer",
+                        "excluded": true
+                    }
+                ]
+            },
+            {
+                "className": "Spine.ShearTimeline",
+                "staticMethods": [],
+                "instanceMethods": [
+                    {
+                        "name": "BoneIndex#get",
+                        "excluded": true
+                    },
+                    {
+                        "name": "ctor",
+                        "excluded": false
+                    },
+                    {
+                        "name": "Apply",
+                        "excluded": false
+                    }
+                ]
+            },
+            {
+                "className": "Spine.PhysicsConstraintDampingTimeline",
+                "staticMethods": [],
+                "instanceMethods": [
+                    {
+                        "name": "ctor",
+                        "excluded": false
+                    },
+                    {
+                        "name": "Setup",
+                        "excluded": false
+                    },
+                    {
+                        "name": "Get",
+                        "excluded": false
+                    },
+                    {
+                        "name": "Set",
+                        "excluded": false
+                    },
+                    {
+                        "name": "Global",
+                        "excluded": true
+                    }
+                ]
+            },
+            {
+                "className": "Spine.PhysicsConstraintWindTimeline",
+                "staticMethods": [],
+                "instanceMethods": [
+                    {
+                        "name": "ctor",
+                        "excluded": false
+                    },
+                    {
+                        "name": "Setup",
+                        "excluded": false
+                    },
+                    {
+                        "name": "Get",
+                        "excluded": false
+                    },
+                    {
+                        "name": "Set",
+                        "excluded": false
+                    },
+                    {
+                        "name": "Global",
+                        "excluded": true
+                    }
+                ]
             }
         ],
         "stubberDataList": [],
@@ -47326,6 +47503,16 @@
                         "script": "",
                         "ext": "",
                         "name": "Assets/_GAME/SonGame/Level/LevelWednesday/_Textures/Hand/mixture 3.png"
+                    },
+                    {
+                        "maxWidth": 1024,
+                        "maxHeight": 1024,
+                        "format": "png32",
+                        "compression": "quantSize",
+                        "quality": 65,
+                        "script": "",
+                        "ext": "",
+                        "name": "Assets/_GAME/SonGame/Level/LevelZoro/Anim/36_Zoro/Zoro_Binary/Zoro.png"
                     }
                 ]
             },

@@ -115,11 +115,11 @@ public class LevelZozo : Singleton<LevelScarlet>
         EventManager.TriggerEvent("ShowIconLv");
         SoundManager.Ins.PlayFx(FxType.StartGame);
         SoundManager.Ins.PlayBgm();
-        // transitionPhase.TransitionToPhase(0, 1);
-        // transitionPhase.onComplete.AddListener(() =>
-        // {
-        //OnStartStep1();
-        //});
+        transitionPhase.TransitionToPhase(0, 1);
+        transitionPhase.onComplete.AddListener(() =>
+        {
+            // OnStartStep1();
+        });
         DOVirtual.DelayedCall(0.2f, () =>
         {
             isPlayingGame = true;
