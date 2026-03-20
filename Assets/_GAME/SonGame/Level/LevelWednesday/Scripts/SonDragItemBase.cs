@@ -14,7 +14,7 @@ public class SonDragItemBase : SonMonoBehaviour,
     [SerializeField] private List<int> useInSteps = new List<int>();
 
     [SerializeField] private SpriteRenderer sprite;
-    [SerializeField] private LevelZozo _level;
+    [SerializeField] private LevelControl _level;
     [SerializeField] private Collider2D col;
 
     [Header("Face Zone")]
@@ -74,7 +74,7 @@ public class SonDragItemBase : SonMonoBehaviour,
     {
         if (_level == null)
         {
-            _level = LevelZozo.Ins;
+            _level = LevelControl.Ins;
         }
         if (!sprite) sprite = GetComponentInChildren<SpriteRenderer>();
         if (!col) col = GetComponent<Collider2D>();
@@ -139,7 +139,7 @@ public class SonDragItemBase : SonMonoBehaviour,
         onDragStart?.Invoke();
 
         // Start auto-check coroutine
-        if (LevelZozo.Ins != null &&
+        if (LevelControl.Ins != null &&
             (!useInSteps.Contains(StepManager.Ins.CurrentStep) || forceCheckWrongStep))
         {
             if (checkStepCoroutine != null)

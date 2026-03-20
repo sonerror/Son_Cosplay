@@ -1,12 +1,13 @@
 using DG.Tweening;
 using UnityEngine;
+using UnityEngine.Events;
 namespace sonnv
 {
     public class SonSnapPoint : SonMonoBehaviour
     {
         public bool canSnap = true;
         public bool isSnap;
-
+        [SerializeField] private UnityEvent onSnap;
         public void Show()
         {
             gameObject.SetActive(true);
@@ -17,7 +18,7 @@ namespace sonnv
 
         public virtual void OnSnap()
         {
-
+            onSnap?.Invoke();
         }
 
         public virtual void ForceChangeSnap(bool snap)

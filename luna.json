@@ -2,7 +2,7 @@
     "version": "7.1.0",
     "projectId": "f42e7ff96e4545544bb6cd68f51ab634",
     "applicationID": 34683,
-    "creativeName": "R1_Cosplaydom_ver9_ZoroOnePiece_GG",
+    "creativeName": "R1_Cosplaydom_ver7_RedQueen",
     "pgServer": "EU",
     "window": {
         "‐⁙": true
@@ -125,7 +125,11 @@
                 "Stubs/AppsFlyer",
                 "Stubs/IronSource",
                 "Stubs/Vungle",
-                "Stubs/MoreMountains.NiceVibrations"
+                "Stubs/MoreMountains.NiceVibrations",
+                "Assets/_GAME/SonGame/Level/LevelZoro/Anim/36_Zoro/Zoro_Binary/Zoro.skel.bytes",
+                "Assets/_GAME/SonGame/Level/LevelZoro/Anim/36_Zoro/Zoro_Binary/Zoro.atlas.txt",
+                "Assets/TextMesh Pro/Resources/LineBreaking Following Characters.txt",
+                "Assets/TextMesh Pro/Resources/LineBreaking Leading Characters.txt"
             ],
             "includes": [
                 "Assets/Resources/DOTweenSettings.asset",
@@ -133,7 +137,7 @@
             ]
         },
         "scenes": [
-            "Assets/_GAME/SonGame/Level/LevelZoro/LevelZozo.unity"
+            "Assets/_GAME/SonGame/Level/LevelRedQueen/LevelRedQueen.unity"
         ],
         "disabledScenes": [
             "Assets/Scenes/LevelMain.unity",
@@ -143,7 +147,8 @@
             "Assets/_GAME/SonGame/Level/LevelSailorMoon/LevelSailorMoon.unity",
             "Assets/_GAME/SonGame/Level/LevelScarlet/LevelScarlet.unity",
             "Assets/_GAME/SonGame/Level/LevelVer3/LevelVer3.unity",
-            "Assets/_GAME/SonGame/Level/LevelWednesday/LevelWednesday.unity"
+            "Assets/_GAME/SonGame/Level/LevelWednesday/LevelWednesday.unity",
+            "Assets/_GAME/SonGame/Level/LevelZoro/LevelZozo.unity"
         ],
         "startupScene": 0,
         "packages": {
@@ -8785,10 +8790,6 @@
             },
             {
                 "name": "Spine.BoundingBoxAttachment",
-                "excluded": true
-            },
-            {
-                "name": "Spine.IkConstraintTimeline",
                 "excluded": true
             },
             {
@@ -24488,6 +24489,18 @@
                     {
                         "name": "TutorialStepMakeUp",
                         "excluded": false
+                    },
+                    {
+                        "name": "ListTFLens#get",
+                        "excluded": false
+                    },
+                    {
+                        "name": "ListTFBoxLens#get",
+                        "excluded": false
+                    },
+                    {
+                        "name": "SetHintStep7",
+                        "excluded": false
                     }
                 ]
             },
@@ -33373,7 +33386,7 @@
                     },
                     {
                         "name": "IkConstraints#get",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "IkConstraints#set",
@@ -33485,7 +33498,7 @@
                     },
                     {
                         "name": "FindIkConstraint",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "toString",
@@ -46948,9 +46961,83 @@
                 ]
             },
             {
-                "className": "LevelZozo",
+                "className": "Spine.ShearTimeline",
                 "staticMethods": [],
                 "instanceMethods": [
+                    {
+                        "name": "BoneIndex#get",
+                        "excluded": true
+                    },
+                    {
+                        "name": "ctor",
+                        "excluded": false
+                    },
+                    {
+                        "name": "Apply",
+                        "excluded": false
+                    }
+                ]
+            },
+            {
+                "className": "Spine.PhysicsConstraintDampingTimeline",
+                "staticMethods": [],
+                "instanceMethods": [
+                    {
+                        "name": "ctor",
+                        "excluded": false
+                    },
+                    {
+                        "name": "Setup",
+                        "excluded": false
+                    },
+                    {
+                        "name": "Get",
+                        "excluded": false
+                    },
+                    {
+                        "name": "Set",
+                        "excluded": false
+                    },
+                    {
+                        "name": "Global",
+                        "excluded": true
+                    }
+                ]
+            },
+            {
+                "className": "Spine.PhysicsConstraintWindTimeline",
+                "staticMethods": [],
+                "instanceMethods": [
+                    {
+                        "name": "ctor",
+                        "excluded": false
+                    },
+                    {
+                        "name": "Setup",
+                        "excluded": false
+                    },
+                    {
+                        "name": "Get",
+                        "excluded": false
+                    },
+                    {
+                        "name": "Set",
+                        "excluded": false
+                    },
+                    {
+                        "name": "Global",
+                        "excluded": true
+                    }
+                ]
+            },
+            {
+                "className": "LevelControl",
+                "staticMethods": [],
+                "instanceMethods": [
+                    {
+                        "name": "inherits",
+                        "excluded": false
+                    },
                     {
                         "name": "EmojiControl#get",
                         "excluded": true
@@ -46985,7 +47072,7 @@
                     },
                     {
                         "name": "SetEmissionRate",
-                        "excluded": false
+                        "excluded": true
                     },
                     {
                         "name": "SetStateChangeAnim",
@@ -46994,6 +47081,10 @@
                     {
                         "name": "TurnCharacterSlotAttachment",
                         "excluded": true
+                    },
+                    {
+                        "name": "TurnOffSlotMouthDone",
+                        "excluded": false
                     },
                     {
                         "name": "Start",
@@ -47068,23 +47159,11 @@
                         "excluded": true
                     },
                     {
-                        "name": "inherits",
-                        "excluded": false
-                    },
-                    {
                         "name": "OnStartStep1",
                         "excluded": false
                     },
                     {
                         "name": "SetStateSlotHeadband",
-                        "excluded": false
-                    },
-                    {
-                        "name": "SetStateSlotHEringL",
-                        "excluded": false
-                    },
-                    {
-                        "name": "SetStateSlotHEringR",
                         "excluded": false
                     },
                     {
@@ -47104,27 +47183,15 @@
                         "excluded": false
                     },
                     {
-                        "name": "EnableShowerTrigger",
-                        "excluded": false
-                    },
-                    {
-                        "name": "DisableShowerTrigger",
-                        "excluded": false
-                    },
-                    {
-                        "name": "TryShower",
-                        "excluded": false
-                    },
-                    {
-                        "name": "TryPausShower",
-                        "excluded": false
-                    },
-                    {
-                        "name": "TryEndShower",
+                        "name": "SetStateSlotHair",
                         "excluded": false
                     },
                     {
                         "name": "OnStartStep5",
+                        "excluded": false
+                    },
+                    {
+                        "name": "OnStartStep",
                         "excluded": false
                     },
                     {
@@ -47160,6 +47227,30 @@
                         "excluded": false
                     },
                     {
+                        "name": "OnStartStepShower",
+                        "excluded": true
+                    },
+                    {
+                        "name": "EnableShowerTrigger",
+                        "excluded": false
+                    },
+                    {
+                        "name": "DisableShowerTrigger",
+                        "excluded": false
+                    },
+                    {
+                        "name": "TryShower",
+                        "excluded": true
+                    },
+                    {
+                        "name": "TryPausShower",
+                        "excluded": false
+                    },
+                    {
+                        "name": "TryEndShower",
+                        "excluded": true
+                    },
+                    {
                         "name": "OnStartStep7",
                         "excluded": false
                     },
@@ -47176,102 +47267,112 @@
                         "excluded": false
                     },
                     {
-                        "name": "EnableMixtureTrigger",
+                        "name": "SetStateSlotslotLensL",
                         "excluded": false
                     },
                     {
-                        "name": "DisableMixtureTrigger",
-                        "excluded": false
-                    },
-                    {
-                        "name": "TryPouringResin",
-                        "excluded": false
-                    },
-                    {
-                        "name": "TryPauseResin",
-                        "excluded": false
-                    },
-                    {
-                        "name": "TryEndPouringResin",
+                        "name": "SetStateSlotslotLensR",
                         "excluded": false
                     },
                     {
                         "name": "OnStartStep9",
-                        "excluded": false
-                    },
-                    {
-                        "name": "TurnOffSlotMouthDone",
-                        "excluded": false
+                        "excluded": true
                     }
                 ]
             },
             {
-                "className": "Spine.ShearTimeline",
+                "className": "sonnv.TapBox",
                 "staticMethods": [],
                 "instanceMethods": [
                     {
-                        "name": "BoneIndex#get",
+                        "name": "IsTapDone#get",
+                        "excluded": false
+                    },
+                    {
+                        "name": "init",
+                        "excluded": false
+                    },
+                    {
+                        "name": "Awake",
+                        "excluded": false
+                    },
+                    {
+                        "name": "OnDisable",
+                        "excluded": true
+                    },
+                    {
+                        "name": "OnDestroy",
+                        "excluded": true
+                    },
+                    {
+                        "name": "ResetTap",
+                        "excluded": false
+                    },
+                    {
+                        "name": "OnPointerDown",
+                        "excluded": false
+                    },
+                    {
+                        "name": "OnPointerUp",
+                        "excluded": false
+                    },
+                    {
+                        "name": "HandleTap",
+                        "excluded": false
+                    },
+                    {
+                        "name": "Complete",
+                        "excluded": false
+                    },
+                    {
+                        "name": "PlayScaleUp",
+                        "excluded": false
+                    },
+                    {
+                        "name": "PlayScaleDown",
+                        "excluded": false
+                    },
+                    {
+                        "name": "KillTween",
+                        "excluded": false
+                    },
+                    {
+                        "name": "PlaySfx",
+                        "excluded": false
+                    },
+                    {
+                        "name": "ChaneScale",
+                        "excluded": true
+                    }
+                ]
+            },
+            {
+                "className": "Spine.IkConstraintTimeline",
+                "staticMethods": [],
+                "instanceMethods": [
+                    {
+                        "name": "init",
+                        "excluded": false
+                    },
+                    {
+                        "name": "FrameEntries#get",
+                        "excluded": false
+                    },
+                    {
+                        "name": "IkConstraintIndex#get",
                         "excluded": true
                     },
                     {
                         "name": "ctor",
+                        "excluded": false
+                    },
+                    {
+                        "name": "SetFrame",
                         "excluded": false
                     },
                     {
                         "name": "Apply",
                         "excluded": false
-                    }
-                ]
-            },
-            {
-                "className": "Spine.PhysicsConstraintDampingTimeline",
-                "staticMethods": [],
-                "instanceMethods": [
-                    {
-                        "name": "ctor",
-                        "excluded": false
-                    },
-                    {
-                        "name": "Setup",
-                        "excluded": false
-                    },
-                    {
-                        "name": "Get",
-                        "excluded": false
-                    },
-                    {
-                        "name": "Set",
-                        "excluded": false
-                    },
-                    {
-                        "name": "Global",
-                        "excluded": true
-                    }
-                ]
-            },
-            {
-                "className": "Spine.PhysicsConstraintWindTimeline",
-                "staticMethods": [],
-                "instanceMethods": [
-                    {
-                        "name": "ctor",
-                        "excluded": false
-                    },
-                    {
-                        "name": "Setup",
-                        "excluded": false
-                    },
-                    {
-                        "name": "Get",
-                        "excluded": false
-                    },
-                    {
-                        "name": "Set",
-                        "excluded": false
-                    },
-                    {
-                        "name": "Global",
-                        "excluded": true
                     }
                 ]
             }
@@ -47411,6 +47512,26 @@
                         "script": "",
                         "ext": "",
                         "name": "Assets/_GAME/SonGame/Level/LevelZoro/Anim/36_Zoro/Zoro_Binary/Zoro.png"
+                    },
+                    {
+                        "maxWidth": 2048,
+                        "maxHeight": 2048,
+                        "format": "png32",
+                        "compression": "quantSize",
+                        "quality": 65,
+                        "script": "",
+                        "ext": "",
+                        "name": "Assets/_GAME/SonGame/Level/LevelRedQueen/Anim/red queen.png"
+                    },
+                    {
+                        "maxWidth": 256,
+                        "maxHeight": 256,
+                        "format": "png32",
+                        "compression": "quantSize",
+                        "quality": 65,
+                        "script": "",
+                        "ext": "",
+                        "name": "Assets/FX/NeatWolf/Bundle02-WaterBlood/Textures/Liquid01.png"
                     }
                 ]
             },
@@ -47458,9 +47579,9 @@
                     {
                         "channels": 1,
                         "startTime": "00:00.000",
-                        "endTime": "00:15.400",
-                        "lengthInSeconds": 15.399999618530274,
-                        "bitrate": 64,
+                        "endTime": "00:20.654",
+                        "lengthInSeconds": 20.65399932861328,
+                        "bitrate": 32,
                         "script": "",
                         "ext": "",
                         "name": "Assets/_GAME/_Costopia/_Audio/BGM/sfx_bgm_italy_1.ogg"

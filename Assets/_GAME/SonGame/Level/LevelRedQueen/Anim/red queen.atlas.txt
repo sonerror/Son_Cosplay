@@ -1,0 +1,199 @@
+red queen.png
+size:3476,3476
+filter:Linear,Linear
+scale:0.6
+FX/A of heart
+bounds:3340,700,113,142
+FX/angry_emoji
+bounds:1368,2053,42,44
+FX/x red
+bounds:1368,2216,45,49
+phase_2/hair F
+bounds:3340,576,104,122
+phase_2/hair top
+bounds:2403,222,848,493
+rotate:90
+phase_2/wig cap
+bounds:2227,1781,350,319
+phase_3/Redqueen_mouth1
+bounds:1368,2381,101,49
+rotate:90
+phase_3/Redqueen_mouth2
+bounds:2727,2855,107,58
+phase_3/Redqueen_mouth3
+bounds:2898,978,92,59
+rotate:90
+phase_3/Redqueen_mouth4
+bounds:1368,2484,92,51
+rotate:90
+phase_3/Tat1
+bounds:988,1674,19,17
+rotate:90
+phase_3/blue eye
+bounds:3278,2850,111,83
+phase_3/cleanser-cream
+bounds:143,158,182,238
+phase_3/danh nen
+bounds:3250,2611,237,221
+rotate:90
+phase_3/dirt
+bounds:2898,13,247,248
+rotate:90
+phase_3/don cam
+bounds:3278,2935,194,80
+phase_3/eyebrown
+bounds:1368,2578,113,51
+rotate:90
+phase_3/eyelash fake
+bounds:2648,3,105,61
+phase_3/eyelinner
+bounds:2262,548,97,60
+rotate:90
+phase_3/face2 makeup
+bounds:2579,1783,317,436
+rotate:90
+phase_3/foam cleanser
+bounds:393,403,200,257
+rotate:90
+phase_3/lens
+bounds:2755,3,62,61
+phase_3/ma hong
+bounds:1411,45,299,178
+phase_3/ma hong apply
+bounds:868,1452,241,118
+rotate:90
+phase_3/tao khoi
+bounds:2350,13,296,207
+phase_3/tat2
+bounds:988,1653,19,17
+rotate:90
+phase_4/L_highheels
+bounds:3250,2316,211,293
+phase_4/R_highheels
+bounds:1967,36,161,253
+rotate:90
+phase_4/Shirt
+bounds:2898,262,440,580
+phase_4/collar B
+bounds:3278,3017,455,192
+rotate:90
+phase_4/collar F
+bounds:2855,2850,622,421
+rotate:90
+phase_4/crown
+bounds:3250,2156,158,177
+rotate:90
+phase_4/dress1
+bounds:1422,1772,803,1044
+phase_4/dress_2
+bounds:2,605,845,1418
+rotate:90
+phase_4/forearm glove L
+bounds:2014,199,137,334
+rotate:90
+phase_4/forearm glove R
+bounds:1075,155,137,334
+rotate:90
+phase_4/glove L
+bounds:1712,61,162,253
+rotate:90
+phase_4/glove L holding F
+bounds:1252,1460,164,149
+rotate:90
+phase_4/glove R
+bounds:988,1456,168,262
+rotate:90
+phase_4/shock
+bounds:394,1695,613,1121
+phase_4/shoulder_L
+bounds:3148,14,246,307
+rotate:90
+phase_4/shoulder_R
+bounds:2014,338,246,307
+phase_4/staff
+bounds:2,1452,390,2020
+set_base/Basemouth1
+bounds:1368,2693,123,52
+rotate:90
+set_base/Basemouth2
+bounds:2602,2848,123,65
+set_base/Basemouth3
+bounds:1368,2099,115,44
+rotate:90
+set_base/Basemouth4
+bounds:2898,870,106,58
+rotate:90
+set_base/Shoe L
+bounds:652,425,178,445
+rotate:90
+set_base/Shoe R
+bounds:394,1457,236,472
+rotate:90
+set_base/arm L
+bounds:2,398,205,389
+rotate:90
+set_base/arm R
+bounds:393,9,153,392
+set_base/body
+bounds:2959,844,510,937
+offsets:0,0,510,1014
+set_base/close eye
+bounds:2496,2837,104,76
+set_base/ear R
+bounds:2263,2834,79,118
+rotate:90
+set_base/eye back
+bounds:3340,287,287,97
+rotate:90
+set_base/eye brown R
+bounds:1368,2267,112,47
+rotate:90
+set_base/eye lash
+bounds:2383,2834,111,79
+set_base/eyeR
+bounds:3391,2871,63,62
+set_base/forearm L
+bounds:548,93,144,412
+rotate:90
+set_base/forearmR
+bounds:962,9,144,412
+rotate:90
+set_base/hair F
+bounds:2263,2915,590,557
+set_base/hair back
+bounds:2227,2102,714,1021
+rotate:90
+set_base/hand L 1
+bounds:2648,66,154,247
+rotate:90
+set_base/hand R 1
+bounds:143,2,154,247
+rotate:90
+set_base/hat back
+bounds:1422,647,979,423
+set_base/hat top
+bounds:1009,1843,973,357
+offsets:0,13,973,370
+rotate:90
+set_base/head
+bounds:3017,1783,317,429
+rotate:90
+set_base/jean
+bounds:394,2818,654,1867
+rotate:90
+set_base/leg
+bounds:1422,1072,698,1535
+rotate:90
+set_base/shirt selve L
+bounds:1009,1626,215,394
+rotate:90
+set_base/shirt selve R
+bounds:652,239,184,421
+rotate:90
+set_base/shirt top
+bounds:1422,225,420,590
+rotate:90
+set_base/sock L
+bounds:2,67,139,329
+set_base/sock R
+bounds:1099,294,185,309

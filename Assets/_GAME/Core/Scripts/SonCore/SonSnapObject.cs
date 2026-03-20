@@ -9,7 +9,7 @@ namespace sonnv
     public class SonSnapObject : SonMonoBehaviour, SonISnapObject,
         IPointerDownHandler, IDragHandler, IPointerUpHandler
     {
-        [SerializeField] private LevelZozo _level;
+        [SerializeField] private LevelControl _level;
         [SerializeField] protected SonSnapPoint[] snapToPosition;
         private SonSnapPoint _snapPoint;
         public SonSnapPoint SnapPoint => _snapPoint;

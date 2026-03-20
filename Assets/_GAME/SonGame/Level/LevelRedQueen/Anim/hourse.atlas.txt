@@ -1,0 +1,37 @@
+hourse.png
+size:992,992
+filter:Linear,Linear
+scale:0.6
+body
+bounds:2,479,498,509
+bom ngua F xoan
+bounds:575,54,121,193
+rotate:90
+buom ngua B
+bounds:778,432,144,169
+buom ngua F 1
+bounds:847,119,118,182
+buom ngua F 2
+bounds:770,5,112,150
+rotate:90
+buom ngua F 3
+bounds:778,303,127,176
+rotate:90
+buom ngua back
+bounds:230,146,331,320
+rotate:90
+hair6
+bounds:552,177,107,293
+rotate:90
+leg B F
+bounds:502,520,228,468
+leg BB
+bounds:230,2,142,343
+rotate:90
+leg F B
+bounds:552,286,232,224
+rotate:90
+leg F F
+bounds:2,5,226,472
+tails
+bounds:732,603,210,385

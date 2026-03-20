@@ -1,13 +1,15 @@
 using DG.Tweening;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.EventSystems;
 
 namespace sonnv
 {
-    public abstract class BaseTapCollider : SonMonoBehaviour
+    public abstract class BaseTapCollider : SonMonoBehaviour, IPointerDownHandler, IPointerUpHandler
     {
         [Header("Tap Config")]
         [SerializeField] protected int targetTapCount = 1;
+        [SerializeField] protected bool isChangeScale = false;
         [SerializeField] protected float scaleMultiplier = 1.1f;
         [SerializeField] protected float scaleUpDuration = 0.1f;
         [SerializeField] protected float scaleDownDuration = 0.25f;
@@ -18,6 +20,7 @@ namespace sonnv
 
         [Header("Events")]
         public UnityEvent onCompleted;
+        public UnityEvent onTapDown;
 
         protected int currentTapCount;
         protected bool isCompleted;
@@ -55,15 +58,16 @@ namespace sonnv
 
         #endregion
 
-        #region Input
+        #region Input (Luna Web Ready)
 
-        protected virtual void OnMouseDown()
+        public void OnPointerDown(PointerEventData eventData)
         {
             if (isCompleted) return;
+            onTapDown?.Invoke();
             HandleTap();
         }
 
-        protected virtual void OnMouseUp()
+        public void OnPointerUp(PointerEventData eventData)
         {
             PlayScaleDown();
         }
@@ -91,10 +95,12 @@ namespace sonnv
 
             isCompleted = true;
             OnCompleted();
+
             if (col != null)
             {
                 col.enabled = false;
             }
+
             onCompleted?.Invoke();
         }
 
@@ -104,10 +110,14 @@ namespace sonnv
 
         protected virtual void PlayScaleUp()
         {
-            KillTween();
-            scaleTweener = transform
-                .DOScale(originalScale * scaleMultiplier, scaleUpDuration)
-                .SetEase(Ease.OutBack);
+            if (isChangeScale == false)
+            {
+                KillTween();
+                scaleTweener = transform
+                    .DOScale(originalScale * scaleMultiplier, scaleUpDuration)
+                    .SetEase(Ease.OutBack);
+
+            }
         }
 
         protected virtual void PlayScaleDown()
@@ -116,6 +126,7 @@ namespace sonnv
             scaleTweener = transform
                 .DOScale(originalScale, scaleDownDuration)
                 .SetEase(Ease.OutBack);
+
         }
 
         protected void KillTween()
@@ -140,9 +151,6 @@ namespace sonnv
 
         #endregion
 
-        #region Hooks for Child Classes
         protected abstract void OnCompleted();
-
-        #endregion
     }
 }

@@ -35,5 +35,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/_GAME/SonGame/Level/LevelZoro/LevelZozo.unity
     guid: 0bb6d38352df1064591c70d3813f253a
+  - enabled: 1
+    path: Assets/_GAME/SonGame/Level/LevelRedQueen/LevelRedQueen.unity
+    guid: ee23348906289fc408217d1066364046
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0

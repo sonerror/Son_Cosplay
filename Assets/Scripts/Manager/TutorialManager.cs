@@ -31,8 +31,7 @@ public class TutorialManager : Singleton<TutorialManager>
     public List<Transform> TfItem => tfItem;
     [SerializeField] private List<Transform> tfItemMakeup = new List<Transform>();
     [SerializeField] private Transform tfFace;
-    [SerializeField] private Transform tfFace2;
-    [SerializeField] private Transform tfContour;
+    [SerializeField] private Transform tfHair;
     int countCollectFail = 0;
     private bool isTap = false;
 
@@ -76,30 +75,49 @@ public class TutorialManager : Singleton<TutorialManager>
                 TutorialStep1(0);
                 return;
             case 2:
-                TutorialStepMakeUp(0);
+                TutorialStepMakeUp(0, tfHair);
                 return;
             case 3:
-                TutorialStepMakeUp(1);
+                TutorialStepMakeUp(1, tfHair);
                 return;
             case 4:
-                TutorialStepMakeUp(2);
+                TutorialStepMakeUp(2, tfFace);
                 return;
             case 5:
-                TutorialStepMakeUp(3);
+                TutorialStepMakeUp(3, tfFace);
                 return;
             case 6:
-                TutorialStepMakeUp(4);
+                TutorialStepMakeUp(4, tfFace);
                 return;
             case 7:
-                TutorialStepMakeUp(5);
+                SetHintStep7();
                 return;
             case 8:
-                handCtrlMakeup.gameObject.SetActive(true);
-                handCtrlMakeup.ShowHandPosToPos(tfContour.position, tfFace2.position);
+                TutorialStepMakeUp(6, tfFace);
                 return;
             default:
                 resetTimeHint();
                 return;
+        }
+    }
+
+    [SerializeField] private TapBox tapBox;
+    [SerializeField] private Transform tfBoxLens;
+    [SerializeField] private List<Transform> listTFLens = new List<Transform>();
+    [SerializeField] private List<Transform> listTFBoxLens = new List<Transform>();
+    public List<Transform> ListTFLens => listTFLens;
+    public List<Transform> ListTFBoxLens => listTFBoxLens;
+    private void SetHintStep7()
+    {
+        if (tapBox.IsTapDone == true)
+        {
+            handCtrl.gameObject.SetActive(true);
+            handCtrl.ShowHandPosToPos(listTFBoxLens[0].position, listTFLens[0].position);
+        }
+        else
+        {
+            handCtrl.gameObject.SetActive(true);
+            handCtrl.ShowHandPosToPos(tfBoxLens.position, tfBoxLens.position);
         }
     }
     private void Tutorial(int indexStep)
@@ -115,13 +133,13 @@ public class TutorialManager : Singleton<TutorialManager>
         var node = tutorialNode[indexStep];
         handCtrl.ShowHandPosToPos(obj.position, node.position);
     }
-    private void TutorialStepMakeUp(int indexStep)
+    private void TutorialStepMakeUp(int indexStep, Transform tf)
     {
         if (handCtrlMakeup == null) return;
-        if (indexStep >= tfItemMakeup.Count || tfFace == null) return;
+        if (indexStep >= tfItemMakeup.Count || tf == null) return;
         handCtrlMakeup.gameObject.SetActive(true);
         var obj = tfItemMakeup[indexStep];
-        handCtrlMakeup.ShowHandPosToPos(obj.position, tfFace.position);
+        handCtrlMakeup.ShowHandPosToPos(obj.position, tf.position);
     }
     public void SetStateIsTap(bool value)
     {
