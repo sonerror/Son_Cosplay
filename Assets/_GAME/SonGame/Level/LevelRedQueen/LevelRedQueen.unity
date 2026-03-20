@@ -2133,12 +2133,6 @@ MonoBehaviour:
     - slotName: dirt
       attachmentName: phase_3/dirt
       skeletonDataAsset: {fileID: 11400000, guid: 4d5e49057d82b5b4b82894e8eec8fe00, type: 2}
-  slotMouth:
-    skeletonAnimation: {fileID: 1117835402}
-    pairs:
-    - slotName: phase_3_2 red lip
-      attachmentName: phase_3/Redqueen_mouth3
-      skeletonDataAsset: {fileID: 11400000, guid: 4d5e49057d82b5b4b82894e8eec8fe00, type: 2}
   slotMouthStart:
     skeletonAnimation: {fileID: 305147020}
     pairs:
@@ -6354,6 +6348,7 @@ GameObject:
   - component: {fileID: 1117835403}
   - component: {fileID: 1117835402}
   - component: {fileID: 1117835405}
+  - component: {fileID: 1117835406}
   m_Layer: 0
   m_Name: CharBase
   m_TagString: Untagged
@@ -6499,6 +6494,23 @@ MonoBehaviour:
   idleName: 1.idle
   angryName: 3.sed
   customMouseAnim: 0
+--- !u!114 &1117835406
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1117835400}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee1a6b376f9598c45bdcd725addf3c1a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  skeletonAnimation: {fileID: 1117835402}
+  overrides:
+  - slotName: phase_3_2 red lip
+    attachmentName: 
+    skeletonDataAsset: {fileID: 11400000, guid: 4d5e49057d82b5b4b82894e8eec8fe00, type: 2}
 --- !u!1 &1121465965
 GameObject:
   m_ObjectHideFlags: 0
@@ -6967,7 +6979,7 @@ MonoBehaviour:
   isMoveBackOnRelease: 1
   moveBackTime: 0.3
   sortingOrderOnDrag: 40
-  sortingOrderOnRelease: 30
+  sortingOrderOnRelease: 50
   dragSlerpSpeed: 30
   dragPosOffset: {x: 0, y: 1, z: 0}
   rotateOnDrag: 0
@@ -21923,7 +21935,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 29
+  m_SortingOrder: 49
   m_Sprite: {fileID: 21300000, guid: 8e5617ca38306744286867119364b521, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

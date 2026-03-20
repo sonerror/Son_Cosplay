@@ -1,7 +1,7 @@
 {
     "version": "7.1.0",
     "projectId": "f42e7ff96e4545544bb6cd68f51ab634",
-    "applicationID": 34683,
+    "applicationID": 27599,
     "creativeName": "R1_Cosplaydom_ver7_RedQueen",
     "pgServer": "EU",
     "window": {
@@ -8962,6 +8962,10 @@
             },
             {
                 "name": "Luna.Unity.Analytics.Applovin",
+                "excluded": false
+            },
+            {
+                "name": "SpineAttachmentLocker.OverrideRuntime",
                 "excluded": false
             }
         ],
@@ -47373,6 +47377,64 @@
                     {
                         "name": "Apply",
                         "excluded": false
+                    }
+                ]
+            },
+            {
+                "className": "SpineAttachmentLocker",
+                "staticMethods": [],
+                "instanceMethods": [
+                    {
+                        "name": "init",
+                        "excluded": false
+                    },
+                    {
+                        "name": "Awake",
+                        "excluded": false
+                    },
+                    {
+                        "name": "OnEnable",
+                        "excluded": false
+                    },
+                    {
+                        "name": "OnDisable",
+                        "excluded": true
+                    },
+                    {
+                        "name": "Subscribe",
+                        "excluded": false
+                    },
+                    {
+                        "name": "OnUpdateLocal",
+                        "excluded": false
+                    },
+                    {
+                        "name": "RebuildFromSerializedList",
+                        "excluded": false
+                    },
+                    {
+                        "name": "ApplyOverrides",
+                        "excluded": false
+                    },
+                    {
+                        "name": "SetOverride$1",
+                        "excluded": true
+                    },
+                    {
+                        "name": "SetOverride",
+                        "excluded": true
+                    },
+                    {
+                        "name": "RemoveOverride$1",
+                        "excluded": true
+                    },
+                    {
+                        "name": "RemoveOverride",
+                        "excluded": true
+                    },
+                    {
+                        "name": "ClearOverrides",
+                        "excluded": true
                     }
                 ]
             }

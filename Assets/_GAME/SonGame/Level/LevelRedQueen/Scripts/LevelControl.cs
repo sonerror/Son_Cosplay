@@ -56,22 +56,18 @@ public class LevelControl : Singleton<LevelControl>
       [Sirenix.OdinInspector.Button]
        public void TurnOffSlotMouth()
         {
-             slotMouth.TurnSlotState(false);
         }
 
 #endif
     public void TurnOffSlotMouthDone()
     {
-        slotMouth.TurnSlotState(false);
     }
     [SerializeField] private SlotAttachmentPairList slotDirtStart;
-    [SerializeField] private SlotAttachmentPairList slotMouth;
     [SerializeField] private SlotAttachmentPairList slotMouthStart;
 
     protected virtual void Start()
     {
         slotDirtStart.TurnSlotState(true);
-        slotMouth.TurnSlotState(false);
         slotMouthStart.TurnSlotState(false);
         StartStep();
         Debug.Log("DOTween Version: " + DOTween.Version);
@@ -152,7 +148,6 @@ public class LevelControl : Singleton<LevelControl>
     {
         StepManager.Ins.CurrentStep++;
         StartStep();
-        slotMouth.TurnSlotState(false);
 
     }
     public virtual void StartStep()
@@ -212,9 +207,7 @@ public class LevelControl : Singleton<LevelControl>
         {
             if (isChangeAnimHappy)
             {
-                slotMouth.TurnSlotState(false);
                 character.SetMouseHappy();
-                slotMouth.TurnSlotState(false);
             }
             else
             {
@@ -229,7 +222,6 @@ public class LevelControl : Singleton<LevelControl>
         yield return new WaitForSeconds(1f);
         if (character != null)
         {
-            slotMouth.TurnSlotState(false);
             character.SetMouseIdle();
         }
         coroutine = null;
@@ -249,9 +241,7 @@ public class LevelControl : Singleton<LevelControl>
         {
             if (isChangeAnimHappy)
             {
-                slotMouth.TurnSlotState(false);
                 character.SetMouseHappy();
-                slotMouth.TurnSlotState(false);
             }
             else
             {
@@ -261,7 +251,6 @@ public class LevelControl : Singleton<LevelControl>
         yield return new WaitForSeconds(0.5f);
         if (character != null)
         {
-            slotMouth.TurnSlotState(false);
             character.SetMouseIdle();
         }
         coroutine = null;
@@ -279,14 +268,11 @@ public class LevelControl : Singleton<LevelControl>
     {
         if (character != null)
         {
-            slotMouth.TurnSlotState(false);
             character.SetMouseHappy();
-            slotMouth.TurnSlotState(false);
         }
         yield return new WaitForSeconds(1f);
         if (character != null)
         {
-            slotMouth.TurnSlotState(false);
             character.SetMouseIdle();
         }
         coroutine = null;
@@ -306,9 +292,7 @@ public class LevelControl : Singleton<LevelControl>
         yield return new WaitForSeconds(0.01f);
         if (character != null)
         {
-            slotMouth.TurnSlotState(false);
             character.SetMouseAngry();
-            slotMouth.TurnSlotState(false);
         }
         emojiControl.ShowNegative();
         var i = idSoundAngry % 3;
@@ -319,7 +303,6 @@ public class LevelControl : Singleton<LevelControl>
         yield return new WaitForSeconds(0.65f);
         if (character != null)
         {
-            slotMouth.TurnSlotState(false);
             character.SetMouseIdle();
         }
         coroutine = null;
