@@ -159,11 +159,11 @@ public class LevelControl : Singleton<LevelControl>
             case 0:
                 return;
             case 1:
+                TutorialManager.Ins.SetNewTime(0.5f);
                 OnStartStep2();
                 return;
             case 2:
                 OnStartStep3();
-
                 return;
             case 3:
                 OnStartStep4();
@@ -348,6 +348,7 @@ public class LevelControl : Singleton<LevelControl>
                 {
                     DoneStep();
                     TryNextStep();
+                    TutorialManager.Ins.SetNewTime(4f);
                 }
             });
         }
@@ -751,6 +752,7 @@ public class LevelControl : Singleton<LevelControl>
     private int countSnap = 0;
     private void OnStartStep8()
     {
+
         listSnapPointLens[0].ChangeCanSnap(true);
         listSnapPointLens[1].ChangeCanSnap(true);
         for (int i = 0; i < listSnapObjLens.Count; i++)
@@ -768,6 +770,7 @@ public class LevelControl : Singleton<LevelControl>
                     DoneStep();
                     TryNextStep();
                     AdsManager.Ins.ShowEndGame();
+                    TutorialManager.Ins.SetNewTime(0.5f);
                 }
             });
         }

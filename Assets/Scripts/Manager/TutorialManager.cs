@@ -179,4 +179,10 @@ public class TutorialManager : Singleton<TutorialManager>
         countCollectFail = 0;
         resetTimeHint();
     }
+    public void SetNewTime(float timer)
+    {
+        TimeHint = timer;
+        timeCountHint = timer;
+    }
+
 }

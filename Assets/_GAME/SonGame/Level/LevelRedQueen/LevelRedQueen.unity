@@ -16748,9 +16748,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   disableHand: 0
-  TimeHint: 4
+  TimeHint: 1
   enableCountTime: 0
-  timeCountHint: 4
+  timeCountHint: 1
   handCtrl: {fileID: 69563134}
   handCtrlMakeup: {fileID: 336361441}
   gamePlayManager: {fileID: 1121465967}
