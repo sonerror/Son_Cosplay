@@ -163,23 +163,22 @@ public class LevelControl : Singleton<LevelControl>
                 OnStartStep2();
                 return;
             case 2:
-                OnStartStep3();
+                //OnStartStep3();
                 return;
             case 3:
-                OnStartStep4();
+                // OnStartStep4();
                 return;
             case 4:
-                OnStartStep5();
+                // OnStartStep5();
                 return;
             case 5:
-                OnStartStep6();
-
+                //OnStartStep6();
                 return;
             case 6:
-                OnStartStep7();
+                // OnStartStep7();
                 return;
             case 7:
-                OnStartStep8();
+                // OnStartStep8();
                 return;
             case 8:
                 return;
@@ -354,445 +353,477 @@ public class LevelControl : Singleton<LevelControl>
         }
     }
     #endregion
-    #region Step3
-    [SerializeField] private SonSnapObject wigCapSnapObj;
-    [SerializeField] private SonSnapPoint wigCapSnapPoint;
-    private void OnStartStep3()
-    {
-        Debug.Log("Step3");
-        wigCapSnapPoint.ChangeCanSnap(true);
-        wigCapSnapObj.OnSnap.AddListener(() =>
-        {
-            SetStateSlotHeadBand();
-            DoneStep();
-            TryNextStep();
-        });
-    }
-    [SerializeField] private SlotAttachmentPairList slotWigCap;
-    [SerializeField] private SlotAttachmentPairList slotHair;
-
-    public void SetStateSlotHeadBand()
-    {
-        slotWigCap.TurnSlotState(true);
-        slotHair.TurnSlotState(false);
-    }
-    #endregion
-    #region Step4
-    [SerializeField] private SonSnapObject hairSnapObj;
-    [SerializeField] private SonSnapPoint hairSnapPoint;
-    private void OnStartStep4()
-    {
-        Debug.Log("Step4");
-
-        hairSnapPoint.ChangeCanSnap(true);
-        hairSnapObj.OnSnap.AddListener(() =>
-        {
-            SetStateSlotHair();
-            DoneStep();
-            TryNextStep();
-        });
-    }
-    [SerializeField] private SlotAttachmentPairList slotHairNew;
-
-    public void SetStateSlotHair()
-    {
-        slotWigCap.TurnSlotState(false);
-        slotHairNew.TurnSlotState(true);
-    }
-    #endregion
-    #region Step5
-    [SerializeField] private ShowObjectEffect step1;
-    [SerializeField] private ShowObjectEffect step2;
-    private void OnStartStep5()
-    {
-        step1.Hide();
-        step2.Show(0.75f);
-        step2.onShowComplete.AddListener(() =>
-        {
-            OnStartStep();
-        });
-    }
-    [SerializeField] private List<TriggerWithCertainCollider> listTriggerCleanser;
-    [SerializeField] private SonDragItemBase itemBoxCleanser;
-    [SerializeField] private AudioData vfxCleanser;
-    private int countTrigger = 0;
-    private void OnStartStep()
-    {
-        Debug.Log("Step5");
-        itemBoxCleanser.AddUseInStep(StepManager.Ins.CurrentStep);
-        for (int i = 0; i < listTriggerCleanser.Count; i++)
-        {
-            TriggerWithCertainCollider cleanser = listTriggerCleanser[i];
-            cleanser.EnableCol(true);
-            cleanser.AddTriggerEvent(() =>
-            {
-                SoundManager.PlaySFX(vfxCleanser.clip, 1);
-                countTrigger++;
-                if (countTrigger >= listTriggerCleanser.Count)
-                {
-                    DoneStep();
-                    //TryNextStep();
-                }
-            });
-        }
-    }
-    #endregion
-    #region Step6
-    [SerializeField] private SonDragItemBase itemWashMachineDrag;
-    [SerializeField] private OnTransformGoToAffectZone washTrigger;
-    [SerializeField] private float washTime = 3;
-    [SerializeField] private List<SpriteRenderer> listSpriteCleanser;
-    [SerializeField] private SpriteRenderer spriteFoamCleanser;
-
-    private void ChangeAlphaCleanser(float value)
-    {
-        value = Mathf.Clamp01(value);
-
-        foreach (SpriteRenderer sprite in listSpriteCleanser)
-        {
-            if (sprite == null) continue;
-
-            Color c = sprite.color;
-            c.a = value;
-            sprite.color = c;
-        }
-    }
-
-    private void ChangeAlphaFoam(float value)
-    {
-        if (spriteFoamCleanser == null) return;
-
-        value = Mathf.Clamp01(value);
-
-        Color c = spriteFoamCleanser.color;
-        c.a = value;
-        spriteFoamCleanser.color = c;
-    }
-
-    private void OnStartStep6()
-    {
-        itemWashMachineDrag.AddUseInStep(StepManager.Ins.CurrentStep);
-        itemWashMachineDrag.onDragStart.AddListener(EnableWashTrigger);
-        itemWashMachineDrag.onDragStop.AddListener(DisableWashTrigger);
-        washTrigger.onEnterZone.AddListener(TryWash);
-        washTrigger.onOutZone.AddListener(TryPausWash);
-        fillCircleBar.ReFill();
-    }
-
-    private void EnableWashTrigger()
-    {
-        washTrigger.enabled = true;
-    }
-
-    private void DisableWashTrigger()
-    {
-        washTrigger.enabled = false;
-    }
-
-    private Tween tweenWash;
-
-
-    private void TryWash()
-    {
-        fillCircleBar.Show();
-        if (tweenWash == null)
-        {
-            tweenWash = DOVirtual.Float(0, 1, washTime,
-                    value =>
-                    {
-
-                        fillCircleBar.Fill(value);
-                        ChangeAlphaCleanser(1 - value);
-                        ChangeAlphaFoam(value);
-                        SetStateChangeAnim(false);
-                    }).SetEase(Ease.Linear)
-                .OnComplete(() =>
-                {
-                    tweenWash = null;
-                    slotDirtStart.TurnSlotState(false);
-
-                    TryEndWash();
-                });
-        }
-        else if (!tweenWash.IsPlaying())
-        {
-            tweenWash.Play();
-        }
-    }
-
-    private void TryPausWash()
-    {
-        fillCircleBar.Hide();
-
-        if (tweenWash != null && tweenWash.IsPlaying())
-        {
-            tweenWash.Pause();
-        }
-    }
-
-    private void TryEndWash()
-    {
-        fillCircleBar.Hide();
-        ChangeAlphaCleanser(0);
-        DisableWashTrigger();
-        itemWashMachineDrag.onDragStart.RemoveListener(EnableWashTrigger);
-        itemWashMachineDrag.onDragStop.RemoveListener(DisableWashTrigger);
-        washTrigger.onEnterZone.RemoveListener(TryWash);
-        washTrigger.onOutZone.RemoveListener(TryPausWash);
-        DoneStep();
-        //TryNextStep();
-    }
-    #endregion
-
-    #region Step4
-
-    [SerializeField] private SonDragItemBase itemShowerDrag;
-    [SerializeField] private OnTransformGoToAffectZone showerTrigger;
-    [SerializeField] private float showerTime;
-    private void OnStartStepShower()
-    {
-        itemShowerDrag.AddUseInStep(StepManager.Ins.CurrentStep);
-        itemShowerDrag.onDragStart.AddListener(EnableShowerTrigger);
-        itemShowerDrag.onDragStop.AddListener(DisableShowerTrigger);
-        showerTrigger.onEnterZone.AddListener(TryShower);
-        showerTrigger.onOutZone.AddListener(TryPausShower);
-    }
-    private void EnableShowerTrigger()
-    {
-        showerTrigger.enabled = true;
-    }
-
-    private void DisableShowerTrigger()
-    {
-        showerTrigger.enabled = false;
-    }
-
-    private Tween tweenShower;
 
 
 
-    private void TryShower()
-    {
-        fillCircleBar.Show();
-        if (tweenShower == null)
-        {
-            // showerParticle.Play();
-            tweenShower = DOVirtual.Float(0, 1, showerTime,
-                    value =>
-                    {
-                        //SetEmissionRate(showerParticle, (value * 10f));
-                        fillCircleBar.Fill(value);
-                    }).SetEase(Ease.Linear)
-                .OnComplete(() =>
-                {
-                    tweenShower = null;
-                    TryEndShower();
-                });
-        }
-        else if (!tweenShower.IsPlaying())
-        {
-            tweenShower.Play();
-        }
-    }
-
-    private void TryPausShower()
-    {
-        fillCircleBar.Hide();
-
-        if (tweenShower != null && tweenShower.IsPlaying())
-        {
-            tweenShower.Pause();
-        }
-    }
-
-    private void TryEndShower()
-    {
-        fillCircleBar.Hide();
-        // SetEmissionRate(showerParticle, 10);
-        // showerParticle.Play();
-        DisableShowerTrigger();
-        itemShowerDrag.onDragStart.RemoveListener(EnableShowerTrigger);
-        itemShowerDrag.onDragStop.RemoveListener(DisableShowerTrigger);
-        showerTrigger.onEnterZone.RemoveListener(TryShower);
-        showerTrigger.onOutZone.RemoveListener(TryPausShower);
-        DoneStep();
-        //TryNextStep();
-    }
-    #endregion
-
-    #region Step7
-    private void OnStartStep7()
-    {
-        SetStateChangeAnim(true);
-        itemShowerDrag.AddUseInStep(StepManager.Ins.CurrentStep);
-        itemShowerDrag.onDragStart.AddListener(EnableShowerTrigger);
-        itemShowerDrag.onDragStop.AddListener(DisableShowerTrigger);
-        showerTrigger.onEnterZone.AddListener(TryShowerStep2);
-        showerTrigger.onOutZone.AddListener(TryPausShower);
-    }
-    private void TryShowerStep2()
-    {
-        fillCircleBar.Show();
-        if (tweenShower == null)
-        {
-            tweenShower = DOVirtual.Float(0, 1, showerTime,
-                    value =>
-                    {
-                        ChangeAlphaFoam(1 - value);
-
-                        fillCircleBar.Fill(value);
-                    }).SetEase(Ease.Linear)
-                .OnComplete(() =>
-                {
-                    tweenShower = null;
-                    TryEndShowerStep2();
-                });
-        }
-        else if (!tweenShower.IsPlaying())
-        {
-            tweenShower.Play();
-        }
-    }
-    private void TryEndShowerStep2()
-    {
-        fillCircleBar.Hide();
-        DisableShowerTrigger();
-        itemShowerDrag.onDragStart.RemoveListener(EnableShowerTrigger);
-        itemShowerDrag.onDragStop.RemoveListener(DisableShowerTrigger);
-        showerTrigger.onEnterZone.RemoveListener(TryShowerStep2);
-        showerTrigger.onOutZone.RemoveListener(TryPausShower);
-        DoneStep();
-        // TryNextStep();
-    }
-    #endregion
-
-    // [SerializeField] private SonDragItemBase faceTowelDrag;
-    // [SerializeField] private OnTransformGoToAffectZone faceToweTrigger;
-    // [SerializeField] private float faceToweTime;
 
 
-    // private void OnStartStep8()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    // #region Step3
+    // [SerializeField] private SonSnapObject wigCapSnapObj;
+    // [SerializeField] private SonSnapPoint wigCapSnapPoint;
+    // private void OnStartStep3()
     // {
-    //     faceTowelDrag.AddUseInStep(StepManager.Ins.CurrentStep);
-    //     faceTowelDrag.onDragStart.AddListener(EnableMixtureTrigger);
-    //     faceTowelDrag.onDragStop.AddListener(DisableMixtureTrigger);
-    //     faceToweTrigger.onEnterZone.AddListener(TryPouringResin);
-    //     faceToweTrigger.onOutZone.AddListener(TryPauseResin);
+    //     Debug.Log("Step3");
+    //     wigCapSnapPoint.ChangeCanSnap(true);
+    //     wigCapSnapObj.OnSnap.AddListener(() =>
+    //     {
+    //         SetStateSlotHeadBand();
+    //         DoneStep();
+    //         TryNextStep();
+    //     });
+    // }
+    // [SerializeField] private SlotAttachmentPairList slotWigCap;
+    // [SerializeField] private SlotAttachmentPairList slotHair;
+
+    // public void SetStateSlotHeadBand()
+    // {
+    //     slotWigCap.TurnSlotState(true);
+    //     slotHair.TurnSlotState(false);
+    // }
+    // #endregion
+    // #region Step4
+    // [SerializeField] private SonSnapObject hairSnapObj;
+    // [SerializeField] private SonSnapPoint hairSnapPoint;
+    // private void OnStartStep4()
+    // {
+    //     Debug.Log("Step4");
+
+    //     hairSnapPoint.ChangeCanSnap(true);
+    //     hairSnapObj.OnSnap.AddListener(() =>
+    //     {
+    //         SetStateSlotHair();
+    //         DoneStep();
+    //         TryNextStep();
+    //     });
+    // }
+    // [SerializeField] private SlotAttachmentPairList slotHairNew;
+
+    // public void SetStateSlotHair()
+    // {
+    //     slotWigCap.TurnSlotState(false);
+    //     slotHairNew.TurnSlotState(true);
+    // }
+    // #endregion
+    // #region Step5
+    // [SerializeField] private ShowObjectEffect step1;
+    // [SerializeField] private ShowObjectEffect step2;
+    // private void OnStartStep5()
+    // {
+    //     step1.Hide();
+    //     step2.Show(0.75f);
+    //     step2.onShowComplete.AddListener(() =>
+    //     {
+    //         OnStartStep();
+    //     });
+    // }
+    // [SerializeField] private List<TriggerWithCertainCollider> listTriggerCleanser;
+    // [SerializeField] private SonDragItemBase itemBoxCleanser;
+    // [SerializeField] private AudioData vfxCleanser;
+    // private int countTrigger = 0;
+    // private void OnStartStep()
+    // {
+    //     Debug.Log("Step5");
+    //     itemBoxCleanser.AddUseInStep(StepManager.Ins.CurrentStep);
+    //     for (int i = 0; i < listTriggerCleanser.Count; i++)
+    //     {
+    //         TriggerWithCertainCollider cleanser = listTriggerCleanser[i];
+    //         cleanser.EnableCol(true);
+    //         cleanser.AddTriggerEvent(() =>
+    //         {
+    //             SoundManager.PlaySFX(vfxCleanser.clip, 1);
+    //             countTrigger++;
+    //             if (countTrigger >= listTriggerCleanser.Count)
+    //             {
+    //                 DoneStep();
+    //                 //TryNextStep();
+    //             }
+    //         });
+    //     }
+    // }
+    // #endregion
+    // #region Step6
+    // [SerializeField] private SonDragItemBase itemWashMachineDrag;
+    // [SerializeField] private OnTransformGoToAffectZone washTrigger;
+    // [SerializeField] private float washTime = 3;
+    // [SerializeField] private List<SpriteRenderer> listSpriteCleanser;
+    // [SerializeField] private SpriteRenderer spriteFoamCleanser;
+
+    // private void ChangeAlphaCleanser(float value)
+    // {
+    //     value = Mathf.Clamp01(value);
+
+    //     foreach (SpriteRenderer sprite in listSpriteCleanser)
+    //     {
+    //         if (sprite == null) continue;
+
+    //         Color c = sprite.color;
+    //         c.a = value;
+    //         sprite.color = c;
+    //     }
+    // }
+
+    // private void ChangeAlphaFoam(float value)
+    // {
+    //     if (spriteFoamCleanser == null) return;
+
+    //     value = Mathf.Clamp01(value);
+
+    //     Color c = spriteFoamCleanser.color;
+    //     c.a = value;
+    //     spriteFoamCleanser.color = c;
+    // }
+
+    // private void OnStartStep6()
+    // {
+    //     itemWashMachineDrag.AddUseInStep(StepManager.Ins.CurrentStep);
+    //     itemWashMachineDrag.onDragStart.AddListener(EnableWashTrigger);
+    //     itemWashMachineDrag.onDragStop.AddListener(DisableWashTrigger);
+    //     washTrigger.onEnterZone.AddListener(TryWash);
+    //     washTrigger.onOutZone.AddListener(TryPausWash);
     //     fillCircleBar.ReFill();
     // }
 
-    // private void EnableMixtureTrigger()
+    // private void EnableWashTrigger()
     // {
-    //     faceToweTrigger.enabled = true;
+    //     washTrigger.enabled = true;
     // }
 
-    // private void DisableMixtureTrigger()
+    // private void DisableWashTrigger()
     // {
-    //     faceToweTrigger.enabled = false;
+    //     washTrigger.enabled = false;
     // }
 
-    // private Tween pouringResin;
+    // private Tween tweenWash;
 
 
-
-    // private void TryPouringResin()
+    // private void TryWash()
     // {
     //     fillCircleBar.Show();
-
-    //     if (pouringResin == null)
+    //     if (tweenWash == null)
     //     {
-    //         pouringResin = DOVirtual.Float(0, 1, faceToweTime,
+    //         tweenWash = DOVirtual.Float(0, 1, washTime,
     //                 value =>
     //                 {
-    //                     SetEmissionRate(showerParticle, 10 - value);
-    //                     fillCircleBar.Fill(value);
 
+    //                     fillCircleBar.Fill(value);
+    //                     ChangeAlphaCleanser(1 - value);
+    //                     ChangeAlphaFoam(value);
+    //                     SetStateChangeAnim(false);
     //                 }).SetEase(Ease.Linear)
     //             .OnComplete(() =>
     //             {
-    //                 pouringResin = null;
-    //                 TryEndPouringResin();
+    //                 tweenWash = null;
+    //                 slotDirtStart.TurnSlotState(false);
+
+    //                 TryEndWash();
     //             });
     //     }
-    //     else if (!pouringResin.IsPlaying())
+    //     else if (!tweenWash.IsPlaying())
     //     {
-    //         pouringResin.Play();
+    //         tweenWash.Play();
     //     }
     // }
 
-    // private void TryPauseResin()
+    // private void TryPausWash()
     // {
     //     fillCircleBar.Hide();
 
-    //     if (pouringResin != null && pouringResin.IsPlaying())
+    //     if (tweenWash != null && tweenWash.IsPlaying())
     //     {
-    //         pouringResin.Pause();
+    //         tweenWash.Pause();
     //     }
     // }
 
-    // private void TryEndPouringResin()
+    // private void TryEndWash()
     // {
-    //     DisableMixtureTrigger();
     //     fillCircleBar.Hide();
-    //     SetEmissionRate(showerParticle, 0);
-    //     showerParticle.Stop();
-    //     faceTowelDrag.onDragStart.RemoveListener(EnableMixtureTrigger);
-    //     faceTowelDrag.onDragStop.RemoveListener(DisableMixtureTrigger);
-    //     faceToweTrigger.onEnterZone.RemoveListener(TryPouringResin);
-    //     faceToweTrigger.onOutZone.RemoveListener(TryPauseResin);
+    //     ChangeAlphaCleanser(0);
+    //     DisableWashTrigger();
+    //     itemWashMachineDrag.onDragStart.RemoveListener(EnableWashTrigger);
+    //     itemWashMachineDrag.onDragStop.RemoveListener(DisableWashTrigger);
+    //     washTrigger.onEnterZone.RemoveListener(TryWash);
+    //     washTrigger.onOutZone.RemoveListener(TryPausWash);
     //     DoneStep();
-    //     TutorialManager.Ins.enableCountTime = false;
     //     //TryNextStep();
     // }
-    #region Step8
+    // #endregion
+
+    // #region Step4
+
+    // [SerializeField] private SonDragItemBase itemShowerDrag;
+    // [SerializeField] private OnTransformGoToAffectZone showerTrigger;
+    // [SerializeField] private float showerTime;
+    // private void OnStartStepShower()
+    // {
+    //     itemShowerDrag.AddUseInStep(StepManager.Ins.CurrentStep);
+    //     itemShowerDrag.onDragStart.AddListener(EnableShowerTrigger);
+    //     itemShowerDrag.onDragStop.AddListener(DisableShowerTrigger);
+    //     showerTrigger.onEnterZone.AddListener(TryShower);
+    //     showerTrigger.onOutZone.AddListener(TryPausShower);
+    // }
+    // private void EnableShowerTrigger()
+    // {
+    //     showerTrigger.enabled = true;
+    // }
+
+    // private void DisableShowerTrigger()
+    // {
+    //     showerTrigger.enabled = false;
+    // }
+
+    // private Tween tweenShower;
 
 
-    [SerializeField] private List<SonSnapPoint> listSnapPointLens;
-    [SerializeField] private List<SonSnapObject> listSnapObjLens;
-    private int countSnap = 0;
-    private void OnStartStep8()
-    {
 
-        listSnapPointLens[0].ChangeCanSnap(true);
-        listSnapPointLens[1].ChangeCanSnap(true);
-        for (int i = 0; i < listSnapObjLens.Count; i++)
-        {
-            SonSnapObject obj = listSnapObjLens[i];
-            obj.OnSnap.AddListener(() =>
-            {
-                int removedIndex = listSnapObjLens.IndexOf(obj);
-                if (removedIndex < 0) return;
-                listSnapObjLens.RemoveAt(removedIndex);
-                TutorialManager.Ins.ListTFLens.RemoveAt(removedIndex);
-                TutorialManager.Ins.ListTFBoxLens.RemoveAt(removedIndex);
-                if (listSnapObjLens.Count == 0)
-                {
-                    DoneStep();
-                    TryNextStep();
-                    AdsManager.Ins.ShowEndGame();
-                    TutorialManager.Ins.SetNewTime(0.5f);
-                }
-            });
-        }
-    }
-    [SerializeField] private SlotAttachmentPairList slotLensL;
-    [SerializeField] private SlotAttachmentPairList slotLensR;
+    // private void TryShower()
+    // {
+    //     fillCircleBar.Show();
+    //     if (tweenShower == null)
+    //     {
+    //         // showerParticle.Play();
+    //         tweenShower = DOVirtual.Float(0, 1, showerTime,
+    //                 value =>
+    //                 {
+    //                     //SetEmissionRate(showerParticle, (value * 10f));
+    //                     fillCircleBar.Fill(value);
+    //                 }).SetEase(Ease.Linear)
+    //             .OnComplete(() =>
+    //             {
+    //                 tweenShower = null;
+    //                 TryEndShower();
+    //             });
+    //     }
+    //     else if (!tweenShower.IsPlaying())
+    //     {
+    //         tweenShower.Play();
+    //     }
+    // }
 
-    public void SetStateSlotslotLensL()
-    {
-        slotLensL.TurnSlotState(true);
-    }
+    // private void TryPausShower()
+    // {
+    //     fillCircleBar.Hide();
 
-    public void SetStateSlotslotLensR()
-    {
-        slotLensR.TurnSlotState(true);
-    }
+    //     if (tweenShower != null && tweenShower.IsPlaying())
+    //     {
+    //         tweenShower.Pause();
+    //     }
+    // }
 
-    #endregion
-    #region Step9
-    private void OnStartStep9()
-    {
-        AdsManager.Ins.ShowEndGame();
-    }
-    #endregion
+    // private void TryEndShower()
+    // {
+    //     fillCircleBar.Hide();
+    //     // SetEmissionRate(showerParticle, 10);
+    //     // showerParticle.Play();
+    //     DisableShowerTrigger();
+    //     itemShowerDrag.onDragStart.RemoveListener(EnableShowerTrigger);
+    //     itemShowerDrag.onDragStop.RemoveListener(DisableShowerTrigger);
+    //     showerTrigger.onEnterZone.RemoveListener(TryShower);
+    //     showerTrigger.onOutZone.RemoveListener(TryPausShower);
+    //     DoneStep();
+    //     //TryNextStep();
+    // }
+    // #endregion
+
+    // #region Step7
+    // private void OnStartStep7()
+    // {
+    //     SetStateChangeAnim(true);
+    //     itemShowerDrag.AddUseInStep(StepManager.Ins.CurrentStep);
+    //     itemShowerDrag.onDragStart.AddListener(EnableShowerTrigger);
+    //     itemShowerDrag.onDragStop.AddListener(DisableShowerTrigger);
+    //     showerTrigger.onEnterZone.AddListener(TryShowerStep2);
+    //     showerTrigger.onOutZone.AddListener(TryPausShower);
+    // }
+    // private void TryShowerStep2()
+    // {
+    //     fillCircleBar.Show();
+    //     if (tweenShower == null)
+    //     {
+    //         tweenShower = DOVirtual.Float(0, 1, showerTime,
+    //                 value =>
+    //                 {
+    //                     ChangeAlphaFoam(1 - value);
+
+    //                     fillCircleBar.Fill(value);
+    //                 }).SetEase(Ease.Linear)
+    //             .OnComplete(() =>
+    //             {
+    //                 tweenShower = null;
+    //                 TryEndShowerStep2();
+    //             });
+    //     }
+    //     else if (!tweenShower.IsPlaying())
+    //     {
+    //         tweenShower.Play();
+    //     }
+    // }
+    // private void TryEndShowerStep2()
+    // {
+    //     fillCircleBar.Hide();
+    //     DisableShowerTrigger();
+    //     itemShowerDrag.onDragStart.RemoveListener(EnableShowerTrigger);
+    //     itemShowerDrag.onDragStop.RemoveListener(DisableShowerTrigger);
+    //     showerTrigger.onEnterZone.RemoveListener(TryShowerStep2);
+    //     showerTrigger.onOutZone.RemoveListener(TryPausShower);
+    //     DoneStep();
+    //     // TryNextStep();
+    // }
+    // #endregion
+
+    // // [SerializeField] private SonDragItemBase faceTowelDrag;
+    // // [SerializeField] private OnTransformGoToAffectZone faceToweTrigger;
+    // // [SerializeField] private float faceToweTime;
+
+
+    // // private void OnStartStep8()
+    // // {
+    // //     faceTowelDrag.AddUseInStep(StepManager.Ins.CurrentStep);
+    // //     faceTowelDrag.onDragStart.AddListener(EnableMixtureTrigger);
+    // //     faceTowelDrag.onDragStop.AddListener(DisableMixtureTrigger);
+    // //     faceToweTrigger.onEnterZone.AddListener(TryPouringResin);
+    // //     faceToweTrigger.onOutZone.AddListener(TryPauseResin);
+    // //     fillCircleBar.ReFill();
+    // // }
+
+    // // private void EnableMixtureTrigger()
+    // // {
+    // //     faceToweTrigger.enabled = true;
+    // // }
+
+    // // private void DisableMixtureTrigger()
+    // // {
+    // //     faceToweTrigger.enabled = false;
+    // // }
+
+    // // private Tween pouringResin;
+
+
+
+    // // private void TryPouringResin()
+    // // {
+    // //     fillCircleBar.Show();
+
+    // //     if (pouringResin == null)
+    // //     {
+    // //         pouringResin = DOVirtual.Float(0, 1, faceToweTime,
+    // //                 value =>
+    // //                 {
+    // //                     SetEmissionRate(showerParticle, 10 - value);
+    // //                     fillCircleBar.Fill(value);
+
+    // //                 }).SetEase(Ease.Linear)
+    // //             .OnComplete(() =>
+    // //             {
+    // //                 pouringResin = null;
+    // //                 TryEndPouringResin();
+    // //             });
+    // //     }
+    // //     else if (!pouringResin.IsPlaying())
+    // //     {
+    // //         pouringResin.Play();
+    // //     }
+    // // }
+
+    // // private void TryPauseResin()
+    // // {
+    // //     fillCircleBar.Hide();
+
+    // //     if (pouringResin != null && pouringResin.IsPlaying())
+    // //     {
+    // //         pouringResin.Pause();
+    // //     }
+    // // }
+
+    // // private void TryEndPouringResin()
+    // // {
+    // //     DisableMixtureTrigger();
+    // //     fillCircleBar.Hide();
+    // //     SetEmissionRate(showerParticle, 0);
+    // //     showerParticle.Stop();
+    // //     faceTowelDrag.onDragStart.RemoveListener(EnableMixtureTrigger);
+    // //     faceTowelDrag.onDragStop.RemoveListener(DisableMixtureTrigger);
+    // //     faceToweTrigger.onEnterZone.RemoveListener(TryPouringResin);
+    // //     faceToweTrigger.onOutZone.RemoveListener(TryPauseResin);
+    // //     DoneStep();
+    // //     TutorialManager.Ins.enableCountTime = false;
+    // //     //TryNextStep();
+    // // }
+    // #region Step8
+
+
+    // [SerializeField] private List<SonSnapPoint> listSnapPointLens;
+    // [SerializeField] private List<SonSnapObject> listSnapObjLens;
+    // private int countSnap = 0;
+    // private void OnStartStep8()
+    // {
+
+    //     listSnapPointLens[0].ChangeCanSnap(true);
+    //     listSnapPointLens[1].ChangeCanSnap(true);
+    //     for (int i = 0; i < listSnapObjLens.Count; i++)
+    //     {
+    //         SonSnapObject obj = listSnapObjLens[i];
+    //         obj.OnSnap.AddListener(() =>
+    //         {
+    //             int removedIndex = listSnapObjLens.IndexOf(obj);
+    //             if (removedIndex < 0) return;
+    //             listSnapObjLens.RemoveAt(removedIndex);
+    //             TutorialManager.Ins.ListTFLens.RemoveAt(removedIndex);
+    //             TutorialManager.Ins.ListTFBoxLens.RemoveAt(removedIndex);
+    //             if (listSnapObjLens.Count == 0)
+    //             {
+    //                 DoneStep();
+    //                 TryNextStep();
+    //                 AdsManager.Ins.ShowEndGame();
+    //                 TutorialManager.Ins.SetNewTime(0.5f);
+    //             }
+    //         });
+    //     }
+    // }
+    // [SerializeField] private SlotAttachmentPairList slotLensL;
+    // [SerializeField] private SlotAttachmentPairList slotLensR;
+
+    // public void SetStateSlotslotLensL()
+    // {
+    //     slotLensL.TurnSlotState(true);
+    // }
+
+    // public void SetStateSlotslotLensR()
+    // {
+    //     slotLensR.TurnSlotState(true);
+    // }
+
+    // #endregion
+    // #region Step9
+    // private void OnStartStep9()
+    // {
+    //     AdsManager.Ins.ShowEndGame();
+    // }
+    // #endregion
 }
