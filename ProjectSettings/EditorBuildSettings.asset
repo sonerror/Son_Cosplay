@@ -38,5 +38,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/_GAME/SonGame/Level/LevelRedQueen/LevelRedQueen.unity
     guid: ee23348906289fc408217d1066364046
+  - enabled: 1
+    path: Assets/_GAME/SonGame/Level/LevelFran/LevelFran.unity
+    guid: 8a508a3fd2323aa44b1142e688c316ee
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0

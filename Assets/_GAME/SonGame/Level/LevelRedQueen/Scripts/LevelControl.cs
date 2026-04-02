@@ -51,26 +51,9 @@ public class LevelControl : Singleton<LevelControl>
             }
         }
     }
-#if UNITY_EDITOR
-
-      [Sirenix.OdinInspector.Button]
-       public void TurnOffSlotMouth()
-        {
-        }
-
-#endif
-    public void TurnOffSlotMouthDone()
-    {
-    }
-    [SerializeField] private SlotAttachmentPairList slotDirtStart;
-    [SerializeField] private SlotAttachmentPairList slotMouthStart;
-
     protected virtual void Start()
     {
-        slotDirtStart.TurnSlotState(true);
-        slotMouthStart.TurnSlotState(false);
         StartStep();
-        Debug.Log("DOTween Version: " + DOTween.Version);
     }
 
     public virtual void SetStep(int step)
@@ -136,6 +119,7 @@ public class LevelControl : Singleton<LevelControl>
         transitionPhase.TransitionToPhase(0, 1);
         transitionPhase.onComplete.AddListener(() =>
         {
+            ZoomOutCamera();
             OnStartStep1();
         });
         DOVirtual.DelayedCall(0.2f, () =>
@@ -163,7 +147,7 @@ public class LevelControl : Singleton<LevelControl>
                 OnStartStep2();
                 return;
             case 2:
-                //OnStartStep3();
+                OnStartStep3();
                 return;
             case 3:
                 // OnStartStep4();
@@ -319,65 +303,118 @@ public class LevelControl : Singleton<LevelControl>
     }
     #endregion
     #region Step2
-    [SerializeField] private List<SonThrowObject> listThrowObject;
-    [SerializeField] private SlotAttachmentPairList slotOffHeadband;
-    public void SetStateSlotHeadband(bool value)
+
+    [SerializeField] private SlotAttachmentPairList slotQuan;
+    [SerializeField] private SlotAttachmentPairList slotAoNgan;
+    [SerializeField] private SlotAttachmentPairList slotAoDai;
+    [SerializeField] private SlotAttachmentPairList slotKinh;
+    [SerializeField] private SlotAttachmentPairList slotGiayTrai;
+    [SerializeField] private SlotAttachmentPairList slotGiayPhai;
+    [SerializeField] private SlotAttachmentPairList slotThe;
+    [SerializeField] private SlotAttachmentPairList slotTay;
+    [SerializeField] private SlotAttachmentPairList slotPhai;
+
+
+    public void SetStateSlotQuan(bool value)
     {
-        slotOffHeadband.TurnSlotState(value);
+        slotQuan.TurnSlotState(value);
     }
+    public void SetStateSlotAoNgan(bool value)
+    {
+        slotAoNgan.TurnSlotState(value);
+    }
+    public void SetStateSlotAoDai(bool value)
+    {
+        slotAoDai.TurnSlotState(value);
+    }
+    public void SetStateSlotKinh(bool value)
+    {
+        slotKinh.TurnSlotState(value);
+    }
+    public void SetStateSlotGiayTrai(bool value)
+    {
+        slotGiayTrai.TurnSlotState(value);
+    }
+    public void SetStateSlotGiayPhai(bool value)
+    {
+        slotGiayPhai.TurnSlotState(value);
+    }
+    public void SetStateSlotThe(bool value)
+    {
+        slotThe.TurnSlotState(value);
+    }
+    public void SetStateSlotTay(bool value)
+    {
+        slotTay.TurnSlotState(value);
+        slotPhai.TurnSlotState(!value);
+    }
+
+    [SerializeField] private float zoomOutTime = 0.5f;
+    [SerializeField] private float zoomOutDistance = 1f;
+    [SerializeField] private float zoomOutY = 2f;
+    public void ZoomOutCamera()
+    {
+        Vector3 pos = cam.transform.position;
+        pos.y += zoomOutY;
+        cam.transform.position = pos;
+        float targetSize = cam.orthographicSize - zoomOutDistance;
+        cam.DOOrthoSize(targetSize, zoomOutTime);
+    }
+    [SerializeField] private List<SonThrowObject> listThrowObject;
+    [SerializeField] private List<SonThrowObject> listThrowObjectStart;
+
+
+
     private int countThrowObj = 0;
     private void OnStartStep2()
     {
-        TurnOffSlotMouthDone();
-
         TutorialManager.Ins.enableCountTime = true;
+
         for (int i = 0; i < listThrowObject.Count; i++)
         {
             SonThrowObject obj = listThrowObject[i];
-            obj.enabled = true;
-            obj.Col.enabled = true;
             obj.onRemoveItem.AddListener(() =>
             {
                 int removedIndex = listThrowObject.IndexOf(obj);
                 if (removedIndex < 0) return;
                 listThrowObject.RemoveAt(removedIndex);
-                // TutorialManager.Ins.TutorialNode.RemoveAt(removedIndex);
-                //  TutorialManager.Ins.TfItem.RemoveAt(removedIndex);
+                TutorialManager.Ins.TutorialNode.RemoveAt(removedIndex);
+                TutorialManager.Ins.TfItem.RemoveAt(removedIndex);
                 if (listThrowObject.Count == 0)
                 {
+                    TutorialManager.Ins.enableCountTime = false;
                     DoneStep();
                     TryNextStep();
+                }
+                countThrowObj++;
+                if (countThrowObj == 1)
+                {
                     TutorialManager.Ins.SetNewTime(4f);
                 }
             });
         }
+        for (int i = 0; i < listThrowObjectStart.Count; i++)
+        {
+            SonThrowObject obj = listThrowObjectStart[i];
+            obj.enabled = true;
+            obj.Col.enabled = true;
+        }
+    }
+    [SerializeField] private ShowObjectEffect step2;
+    private void OnStartStep3()
+    {
+        MoveCamera(cam, (cam.orthographicSize + zoomOutDistance) - 2.25f, (cam.transform.position.y - zoomOutY), 0.75f, () =>
+        {
+            step2.Show();
+            step2.onShowComplete.AddListener(() =>
+            {
+                TutorialManager.Ins.enableCountTime = true;
+                TutorialManager.Ins.SetNewTime(0.5f);
+                AdsManager.Ins.ShowEndGame();
+            });
+        });
     }
     #endregion
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -826,4 +863,28 @@ public class LevelControl : Singleton<LevelControl>
     //     AdsManager.Ins.ShowEndGame();
     // }
     // #endregion
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }

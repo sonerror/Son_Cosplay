@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: bc2892d84514cb24f9fc03408a8bce51
+guid: a4f38dd411cb8eb40960d2bb43cd4a7a
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -45,7 +45,7 @@ TextureImporter:
   compressionQuality: 50
   spriteMode: 1
   spriteExtrude: 1
-  spriteMeshType: 0
+  spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 100
@@ -95,11 +95,11 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 4
     buildTarget: Android
-    maxTextureSize: 2048
+    maxTextureSize: 512
     resizeAlgorithm: 0
-    textureFormat: 51
+    textureFormat: 52
     textureCompression: 1
-    compressionQuality: 50
+    compressionQuality: 100
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 1
@@ -123,23 +123,45 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: eyeliner_02_0
+      name: win_pop up_effect_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
-        width: 79
-        height: 183
+        y: 995
+        width: 7
+        height: 10
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: dc6ed713a69e3064b90c9ec368e5127a
-      internalID: 579525130
+      spriteID: a62e97c3ef898c7e0800000000000000
+      internalID: -1744976637902331286
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: win_pop up_effect_1
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 0
+        width: 1441
+        height: 1620
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 90bf4bf911a23f490800000000000000
+      internalID: -7713775481573278967
       vertices: []
       indices: 
       edges: []
@@ -148,21 +170,18 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: dffdc3a5d0446844b931d0ee0433cb96
-    internalID: 1537655665
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
     vertices: []
     indices: 
     edges: []
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries:
-      - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":true,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":79.0,"y":184.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
-      - key: SpriteEditor.SliceOnImport
-        value: True
+      entries: []
     nameFileIdTable:
-      eyeliner_02_0: 1427969171
+      win_pop up_effect_0: -1744976637902331286
+      win_pop up_effect_1: -7713775481573278967
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

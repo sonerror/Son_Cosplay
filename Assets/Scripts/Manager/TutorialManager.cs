@@ -29,9 +29,9 @@ public class TutorialManager : Singleton<TutorialManager>
     [SerializeField] private List<Transform> tfItem = new List<Transform>();
     public List<Transform> TutorialNode => tutorialNode;
     public List<Transform> TfItem => tfItem;
-    [SerializeField] private List<Transform> tfItemMakeup = new List<Transform>();
-    [SerializeField] private Transform tfFace;
-    [SerializeField] private Transform tfHair;
+    [SerializeField] private Transform tf1;
+    [SerializeField] private Transform tf2;
+
     int countCollectFail = 0;
     private bool isTap = false;
 
@@ -58,7 +58,7 @@ public class TutorialManager : Singleton<TutorialManager>
         timeCountHint -= Time.deltaTime;
         if (timeCountHint <= 0)
         {
-            // ShowHint();
+            ShowHint();
         }
     }
     void ShowHint()
@@ -69,31 +69,13 @@ public class TutorialManager : Singleton<TutorialManager>
         switch (index)
         {
             case 0:
-
                 return;
             case 1:
                 TutorialStep1(0);
                 return;
             case 2:
-                TutorialStepMakeUp(0, tfHair);
-                return;
-            case 3:
-                TutorialStepMakeUp(1, tfHair);
-                return;
-            case 4:
-                TutorialStepMakeUp(2, tfFace);
-                return;
-            case 5:
-                TutorialStepMakeUp(3, tfFace);
-                return;
-            case 6:
-                TutorialStepMakeUp(4, tfFace);
-                return;
-            case 7:
-                SetHintStep7();
-                return;
-            case 8:
-                TutorialStepMakeUp(6, tfFace);
+                handCtrl.gameObject.SetActive(true);
+                handCtrl.ShowHandPosToPos(tf1.position, tf2.position);
                 return;
             default:
                 resetTimeHint();
@@ -101,25 +83,8 @@ public class TutorialManager : Singleton<TutorialManager>
         }
     }
 
-    [SerializeField] private TapBox tapBox;
-    [SerializeField] private Transform tfBoxLens;
-    [SerializeField] private List<Transform> listTFLens = new List<Transform>();
-    [SerializeField] private List<Transform> listTFBoxLens = new List<Transform>();
-    public List<Transform> ListTFLens => listTFLens;
-    public List<Transform> ListTFBoxLens => listTFBoxLens;
-    private void SetHintStep7()
-    {
-        if (tapBox.IsTapDone == true)
-        {
-            handCtrl.gameObject.SetActive(true);
-            handCtrl.ShowHandPosToPos(listTFBoxLens[0].position, listTFLens[0].position);
-        }
-        else
-        {
-            handCtrl.gameObject.SetActive(true);
-            handCtrl.ShowHandPosToPos(tfBoxLens.position, tfBoxLens.position);
-        }
-    }
+
+
     private void Tutorial(int indexStep)
     {
 
@@ -131,15 +96,7 @@ public class TutorialManager : Singleton<TutorialManager>
         handCtrl.gameObject.SetActive(true);
         var obj = tfItem[indexStep];
         var node = tutorialNode[indexStep];
-        handCtrl.ShowHandPosToPos(obj.position, node.position);
-    }
-    private void TutorialStepMakeUp(int indexStep, Transform tf)
-    {
-        if (handCtrlMakeup == null) return;
-        if (indexStep >= tfItemMakeup.Count || tf == null) return;
-        handCtrlMakeup.gameObject.SetActive(true);
-        var obj = tfItemMakeup[indexStep];
-        handCtrlMakeup.ShowHandPosToPos(obj.position, tf.position);
+        handCtrl.ShowHandPosToPos(node.position, obj.position);
     }
     public void SetStateIsTap(bool value)
     {

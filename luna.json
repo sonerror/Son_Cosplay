@@ -2,7 +2,7 @@
     "version": "7.1.0",
     "projectId": "f42e7ff96e4545544bb6cd68f51ab634",
     "applicationID": 34683,
-    "creativeName": "R1_Cosplaydom_ver7_RedQueen_GG",
+    "creativeName": "R1_Cosplaydom_ver10_Fran",
     "pgServer": "EU",
     "window": {
         "‐⁙": true
@@ -137,13 +137,14 @@
             ]
         },
         "scenes": [
-            "Assets/_GAME/SonGame/Level/LevelRedQueen/LevelRedQueen.unity"
+            "Assets/_GAME/SonGame/Level/LevelFran/LevelFran.unity"
         ],
         "disabledScenes": [
             "Assets/Scenes/LevelMain.unity",
             "Assets/_GAME/Levels/LvCosplayKIdol/Level6.unity",
             "Assets/_GAME/Levels/LvCosplayWenesday/Level53.unity",
             "Assets/_GAME/SonGame/Level/LevelMaleficent/Level98Maleficent.unity",
+            "Assets/_GAME/SonGame/Level/LevelRedQueen/LevelRedQueen.unity",
             "Assets/_GAME/SonGame/Level/LevelSailorMoon/LevelSailorMoon.unity",
             "Assets/_GAME/SonGame/Level/LevelScarlet/LevelScarlet.unity",
             "Assets/_GAME/SonGame/Level/LevelVer3/LevelVer3.unity",
@@ -1958,6 +1959,18 @@
             },
             {
                 "name": "CameraScaler.WorkingMode",
+                "excluded": false
+            },
+            {
+                "name": "Spine.SkeletonBinary.Vertices",
+                "excluded": false
+            },
+            {
+                "name": "Luna.Unity.Analytics.Applovin",
+                "excluded": false
+            },
+            {
+                "name": "SpineAttachmentLocker.OverrideRuntime",
                 "excluded": false
             },
             {
@@ -8909,10 +8922,6 @@
                 "excluded": true
             },
             {
-                "name": "Spine.SkeletonBinary.Vertices",
-                "excluded": false
-            },
-            {
                 "name": "Spine.Unity.BlendModeMaterials.TemplateMaterials",
                 "excluded": true
             },
@@ -8959,14 +8968,6 @@
             {
                 "name": "Spine.Unity.IHasSkeletonRenderer",
                 "excluded": true
-            },
-            {
-                "name": "Luna.Unity.Analytics.Applovin",
-                "excluded": false
-            },
-            {
-                "name": "SpineAttachmentLocker.OverrideRuntime",
-                "excluded": false
             }
         ],
         "unusedMethods": [
@@ -24475,6 +24476,10 @@
                         "excluded": false
                     },
                     {
+                        "name": "TfItem#get",
+                        "excluded": false
+                    },
+                    {
                         "name": "CountHintStep1#get",
                         "excluded": true
                     },
@@ -24487,23 +24492,7 @@
                         "excluded": true
                     },
                     {
-                        "name": "TfItem#get",
-                        "excluded": false
-                    },
-                    {
-                        "name": "TutorialStepMakeUp",
-                        "excluded": false
-                    },
-                    {
-                        "name": "ListTFLens#get",
-                        "excluded": false
-                    },
-                    {
-                        "name": "ListTFBoxLens#get",
-                        "excluded": false
-                    },
-                    {
-                        "name": "SetHintStep7",
+                        "name": "SetNewTime",
                         "excluded": false
                     }
                 ]
@@ -25261,6 +25250,10 @@
                         "excluded": false
                     },
                     {
+                        "name": "mixedBakeMode#get",
+                        "excluded": false
+                    },
+                    {
                         "name": "Scene#get",
                         "excluded": true
                     },
@@ -25299,10 +25292,6 @@
                     {
                         "name": "ambientMode#set",
                         "excluded": true
-                    },
-                    {
-                        "name": "mixedBakeMode#get",
-                        "excluded": false
                     },
                     {
                         "name": "ambientIntensity#get",
@@ -31931,15 +31920,23 @@
                         "excluded": false
                     },
                     {
-                        "name": "FixedUpdate",
-                        "excluded": false
-                    },
-                    {
                         "name": "OnColli",
                         "excluded": true
                     },
                     {
+                        "name": "Update",
+                        "excluded": true
+                    },
+                    {
+                        "name": "UpdateSpineAlpha",
+                        "excluded": true
+                    },
+                    {
                         "name": "GetTrigerColli",
+                        "excluded": true
+                    },
+                    {
+                        "name": "OnDestroy",
                         "excluded": true
                     }
                 ]
@@ -32597,6 +32594,10 @@
                         "excluded": false
                     },
                     {
+                        "name": "Length#set",
+                        "excluded": false
+                    },
+                    {
                         "name": "Index#get",
                         "excluded": true
                     },
@@ -32611,10 +32612,6 @@
                     {
                         "name": "Length#get",
                         "excluded": true
-                    },
-                    {
-                        "name": "Length#set",
-                        "excluded": false
                     },
                     {
                         "name": "X#get",
@@ -33353,6 +33350,14 @@
                         "excluded": false
                     },
                     {
+                        "name": "IkConstraints#get",
+                        "excluded": false
+                    },
+                    {
+                        "name": "FindIkConstraint",
+                        "excluded": false
+                    },
+                    {
                         "name": "Name#get",
                         "excluded": true
                     },
@@ -33387,10 +33392,6 @@
                     {
                         "name": "Animations#set",
                         "excluded": true
-                    },
-                    {
-                        "name": "IkConstraints#get",
-                        "excluded": false
                     },
                     {
                         "name": "IkConstraints#set",
@@ -33499,10 +33500,6 @@
                     {
                         "name": "FindEvent",
                         "excluded": true
-                    },
-                    {
-                        "name": "FindIkConstraint",
-                        "excluded": false
                     },
                     {
                         "name": "toString",
@@ -34297,16 +34294,16 @@
                         "excluded": false
                     },
                     {
+                        "name": "ReadSkeletonData",
+                        "excluded": false
+                    },
+                    {
                         "name": "CreateRuntimeInstance",
                         "excluded": true
                     },
                     {
                         "name": "CreateRuntimeInstance$1",
                         "excluded": true
-                    },
-                    {
-                        "name": "ReadSkeletonData",
-                        "excluded": false
                     },
                     {
                         "name": "ReadSkeletonData$1",
@@ -35413,12 +35410,12 @@
                         "excluded": false
                     },
                     {
-                        "name": "Bones#set",
-                        "excluded": true
-                    },
-                    {
                         "name": "Vertices#get",
                         "excluded": false
+                    },
+                    {
+                        "name": "Bones#set",
+                        "excluded": true
                     },
                     {
                         "name": "Vertices#set",
@@ -37580,7 +37577,7 @@
                     },
                     {
                         "name": "removeUpdateLocal",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "addUpdateWorld",
@@ -43507,12 +43504,12 @@
                         "excluded": false
                     },
                     {
-                        "name": "PhysicsConstraintIndex#get",
-                        "excluded": true
-                    },
-                    {
                         "name": "Apply",
                         "excluded": false
+                    },
+                    {
+                        "name": "PhysicsConstraintIndex#get",
+                        "excluded": true
                     }
                 ]
             },
@@ -46021,6 +46018,26 @@
                         "excluded": false
                     },
                     {
+                        "name": "toSingle",
+                        "excluded": false
+                    },
+                    {
+                        "name": "setViewBytes",
+                        "excluded": false
+                    },
+                    {
+                        "name": "view",
+                        "excluded": false
+                    },
+                    {
+                        "name": "getIsLittleEndian",
+                        "excluded": false
+                    },
+                    {
+                        "name": "checkArguments",
+                        "excluded": false
+                    },
+                    {
                         "name": "getBytes",
                         "excluded": true
                     },
@@ -46089,10 +46106,6 @@
                         "excluded": true
                     },
                     {
-                        "name": "toSingle",
-                        "excluded": false
-                    },
-                    {
                         "name": "toDouble",
                         "excluded": true
                     },
@@ -46129,24 +46142,8 @@
                         "excluded": true
                     },
                     {
-                        "name": "setViewBytes",
-                        "excluded": false
-                    },
-                    {
-                        "name": "view",
-                        "excluded": false
-                    },
-                    {
                         "name": "getView",
                         "excluded": true
-                    },
-                    {
-                        "name": "getIsLittleEndian",
-                        "excluded": false
-                    },
-                    {
-                        "name": "checkArguments",
-                        "excluded": false
                     }
                 ]
             },
@@ -46156,6 +46153,18 @@
                 "instanceMethods": [
                     {
                         "name": "init",
+                        "excluded": false
+                    },
+                    {
+                        "name": "Close",
+                        "excluded": false
+                    },
+                    {
+                        "name": "Dispose",
+                        "excluded": false
+                    },
+                    {
+                        "name": "Dispose$1",
                         "excluded": false
                     },
                     {
@@ -46201,18 +46210,6 @@
                     {
                         "name": "InternalCopyTo",
                         "excluded": true
-                    },
-                    {
-                        "name": "Close",
-                        "excluded": false
-                    },
-                    {
-                        "name": "Dispose",
-                        "excluded": false
-                    },
-                    {
-                        "name": "Dispose$1",
-                        "excluded": false
                     },
                     {
                         "name": "BeginRead",
@@ -46265,6 +46262,26 @@
                         "excluded": false
                     },
                     {
+                        "name": "$ctor1",
+                        "excluded": false
+                    },
+                    {
+                        "name": "$ctor2",
+                        "excluded": false
+                    },
+                    {
+                        "name": "Dispose$1",
+                        "excluded": false
+                    },
+                    {
+                        "name": "Read",
+                        "excluded": false
+                    },
+                    {
+                        "name": "ReadByte",
+                        "excluded": false
+                    },
+                    {
                         "name": "CanRead#get",
                         "excluded": true
                     },
@@ -46305,14 +46322,6 @@
                         "excluded": true
                     },
                     {
-                        "name": "$ctor1",
-                        "excluded": false
-                    },
-                    {
-                        "name": "$ctor2",
-                        "excluded": false
-                    },
-                    {
                         "name": "$ctor3",
                         "excluded": true
                     },
@@ -46327,10 +46336,6 @@
                     {
                         "name": "EnsureWriteable",
                         "excluded": true
-                    },
-                    {
-                        "name": "Dispose$1",
-                        "excluded": false
                     },
                     {
                         "name": "EnsureCapacity",
@@ -46365,14 +46370,6 @@
                         "excluded": true
                     },
                     {
-                        "name": "Read",
-                        "excluded": false
-                    },
-                    {
-                        "name": "ReadByte",
-                        "excluded": false
-                    },
-                    {
                         "name": "Seek",
                         "excluded": true
                     },
@@ -46403,6 +46400,10 @@
                 "staticMethods": [],
                 "instanceMethods": [
                     {
+                        "name": "ctor",
+                        "excluded": false
+                    },
+                    {
                         "name": "CanRead#get",
                         "excluded": true
                     },
@@ -46425,10 +46426,6 @@
                     {
                         "name": "Position#set",
                         "excluded": true
-                    },
-                    {
-                        "name": "ctor",
-                        "excluded": false
                     },
                     {
                         "name": "Dispose$1",
@@ -46489,6 +46486,14 @@
                         "excluded": false
                     },
                     {
+                        "name": "Decode$1",
+                        "excluded": false
+                    },
+                    {
+                        "name": "GetString$1",
+                        "excluded": false
+                    },
+                    {
                         "name": "Convert",
                         "excluded": true
                     },
@@ -46535,10 +46540,6 @@
                     {
                         "name": "Encode$2",
                         "excluded": true
-                    },
-                    {
-                        "name": "Decode$1",
-                        "excluded": false
                     },
                     {
                         "name": "Decode",
@@ -46599,10 +46600,6 @@
                     {
                         "name": "GetString",
                         "excluded": true
-                    },
-                    {
-                        "name": "GetString$1",
-                        "excluded": false
                     }
                 ]
             },
@@ -46641,6 +46638,14 @@
                 "staticMethods": [],
                 "instanceMethods": [
                     {
+                        "name": "$ctor1",
+                        "excluded": false
+                    },
+                    {
+                        "name": "$ctor2",
+                        "excluded": false
+                    },
+                    {
                         "name": "CodePage#get",
                         "excluded": true
                     },
@@ -46651,14 +46656,6 @@
                     {
                         "name": "ctor",
                         "excluded": true
-                    },
-                    {
-                        "name": "$ctor1",
-                        "excluded": false
-                    },
-                    {
-                        "name": "$ctor2",
-                        "excluded": false
                     },
                     {
                         "name": "Encode$3",
@@ -46683,6 +46680,14 @@
                 "staticMethods": [],
                 "instanceMethods": [
                     {
+                        "name": "$ctor1",
+                        "excluded": false
+                    },
+                    {
+                        "name": "$ctor2",
+                        "excluded": false
+                    },
+                    {
                         "name": "CodePage#get",
                         "excluded": true
                     },
@@ -46693,14 +46698,6 @@
                     {
                         "name": "ctor",
                         "excluded": true
-                    },
-                    {
-                        "name": "$ctor1",
-                        "excluded": false
-                    },
-                    {
-                        "name": "$ctor2",
-                        "excluded": false
                     },
                     {
                         "name": "ToCodePoints",
@@ -46729,6 +46726,14 @@
                 "staticMethods": [],
                 "instanceMethods": [
                     {
+                        "name": "ctor",
+                        "excluded": false
+                    },
+                    {
+                        "name": "$ctor1",
+                        "excluded": false
+                    },
+                    {
                         "name": "Escape",
                         "excluded": true
                     },
@@ -46739,14 +46744,6 @@
                     {
                         "name": "EncodingName#get",
                         "excluded": true
-                    },
-                    {
-                        "name": "ctor",
-                        "excluded": false
-                    },
-                    {
-                        "name": "$ctor1",
-                        "excluded": false
                     },
                     {
                         "name": "Encode$3",
@@ -46771,14 +46768,6 @@
                 "staticMethods": [],
                 "instanceMethods": [
                     {
-                        "name": "CodePage#get",
-                        "excluded": true
-                    },
-                    {
-                        "name": "EncodingName#get",
-                        "excluded": true
-                    },
-                    {
                         "name": "ctor",
                         "excluded": false
                     },
@@ -46791,12 +46780,20 @@
                         "excluded": false
                     },
                     {
-                        "name": "Encode$3",
+                        "name": "Decode$2",
+                        "excluded": false
+                    },
+                    {
+                        "name": "CodePage#get",
                         "excluded": true
                     },
                     {
-                        "name": "Decode$2",
-                        "excluded": false
+                        "name": "EncodingName#get",
+                        "excluded": true
+                    },
+                    {
+                        "name": "Encode$3",
+                        "excluded": true
                     },
                     {
                         "name": "GetMaxByteCount",
@@ -46849,10 +46846,6 @@
                         "excluded": false
                     },
                     {
-                        "name": "ReadSByte",
-                        "excluded": true
-                    },
-                    {
                         "name": "ReadBoolean",
                         "excluded": false
                     },
@@ -46885,6 +46878,10 @@
                         "excluded": false
                     },
                     {
+                        "name": "ReadSByte",
+                        "excluded": true
+                    },
+                    {
                         "name": "GetVersionString",
                         "excluded": true
                     },
@@ -46903,20 +46900,8 @@
                         "excluded": false
                     },
                     {
-                        "name": "GetVersionString",
-                        "excluded": true
-                    },
-                    {
                         "name": "$ctor1",
                         "excluded": false
-                    },
-                    {
-                        "name": "ctor",
-                        "excluded": true
-                    },
-                    {
-                        "name": "ReadSkeletonData",
-                        "excluded": true
                     },
                     {
                         "name": "ReadSkeletonData$1",
@@ -46929,10 +46914,6 @@
                     {
                         "name": "ReadAttachment",
                         "excluded": false
-                    },
-                    {
-                        "name": "ReadSequence",
-                        "excluded": true
                     },
                     {
                         "name": "ReadVertices",
@@ -46961,6 +46942,22 @@
                     {
                         "name": "SetBezier",
                         "excluded": false
+                    },
+                    {
+                        "name": "GetVersionString",
+                        "excluded": true
+                    },
+                    {
+                        "name": "ctor",
+                        "excluded": true
+                    },
+                    {
+                        "name": "ReadSkeletonData",
+                        "excluded": true
+                    },
+                    {
+                        "name": "ReadSequence",
+                        "excluded": true
                     }
                 ]
             },
@@ -46969,16 +46966,16 @@
                 "staticMethods": [],
                 "instanceMethods": [
                     {
-                        "name": "BoneIndex#get",
-                        "excluded": true
-                    },
-                    {
                         "name": "ctor",
                         "excluded": false
                     },
                     {
                         "name": "Apply",
                         "excluded": false
+                    },
+                    {
+                        "name": "BoneIndex#get",
+                        "excluded": true
                     }
                 ]
             },
@@ -47043,64 +47040,20 @@
                         "excluded": false
                     },
                     {
-                        "name": "EmojiControl#get",
-                        "excluded": true
-                    },
-                    {
-                        "name": "Character#get",
-                        "excluded": true
-                    },
-                    {
-                        "name": "IsChangeAnimHappy#get",
-                        "excluded": true
-                    },
-                    {
                         "name": "IsDoneStep#get",
                         "excluded": false
-                    },
-                    {
-                        "name": "IsPlayingGame#get",
-                        "excluded": true
                     },
                     {
                         "name": "init",
                         "excluded": false
                     },
                     {
-                        "name": "SetNewCharacter",
-                        "excluded": true
-                    },
-                    {
-                        "name": "SetNewEmoji",
-                        "excluded": true
-                    },
-                    {
-                        "name": "SetEmissionRate",
-                        "excluded": true
-                    },
-                    {
                         "name": "SetStateChangeAnim",
-                        "excluded": false
-                    },
-                    {
-                        "name": "TurnCharacterSlotAttachment",
-                        "excluded": true
-                    },
-                    {
-                        "name": "TurnOffSlotMouthDone",
                         "excluded": false
                     },
                     {
                         "name": "Start",
                         "excluded": false
-                    },
-                    {
-                        "name": "SetStep",
-                        "excluded": true
-                    },
-                    {
-                        "name": "SetStateDoneStep",
-                        "excluded": true
                     },
                     {
                         "name": "DoneStep",
@@ -47109,10 +47062,6 @@
                     {
                         "name": "Update",
                         "excluded": false
-                    },
-                    {
-                        "name": "MoveCamera",
-                        "excluded": true
                     },
                     {
                         "name": "StartGamePlay",
@@ -47135,6 +47084,70 @@
                         "excluded": false
                     },
                     {
+                        "name": "PlayNegativeEmoji",
+                        "excluded": false
+                    },
+                    {
+                        "name": "PlayNegativeEmojiCoroutine",
+                        "excluded": false
+                    },
+                    {
+                        "name": "OnStartStep1",
+                        "excluded": false
+                    },
+                    {
+                        "name": "OnStartStep2",
+                        "excluded": false
+                    },
+                    {
+                        "name": "OnStartStep3",
+                        "excluded": false
+                    },
+                    {
+                        "name": "EmojiControl#get",
+                        "excluded": true
+                    },
+                    {
+                        "name": "Character#get",
+                        "excluded": true
+                    },
+                    {
+                        "name": "IsChangeAnimHappy#get",
+                        "excluded": true
+                    },
+                    {
+                        "name": "IsPlayingGame#get",
+                        "excluded": true
+                    },
+                    {
+                        "name": "SetNewCharacter",
+                        "excluded": true
+                    },
+                    {
+                        "name": "SetNewEmoji",
+                        "excluded": true
+                    },
+                    {
+                        "name": "SetEmissionRate",
+                        "excluded": true
+                    },
+                    {
+                        "name": "TurnCharacterSlotAttachment",
+                        "excluded": true
+                    },
+                    {
+                        "name": "SetStep",
+                        "excluded": true
+                    },
+                    {
+                        "name": "SetStateDoneStep",
+                        "excluded": true
+                    },
+                    {
+                        "name": "MoveCamera",
+                        "excluded": false
+                    },
+                    {
                         "name": "PlayAnimHappy",
                         "excluded": true
                     },
@@ -47151,136 +47164,44 @@
                         "excluded": true
                     },
                     {
-                        "name": "PlayNegativeEmoji",
-                        "excluded": false
-                    },
-                    {
-                        "name": "PlayNegativeEmojiCoroutine",
-                        "excluded": false
-                    },
-                    {
                         "name": "ShowClockTimer",
                         "excluded": true
                     },
                     {
-                        "name": "OnStartStep1",
+                        "name": "SetStateSlotQuan",
                         "excluded": false
                     },
                     {
-                        "name": "SetStateSlotHeadband",
+                        "name": "SetStateSlotAoNgan",
                         "excluded": false
                     },
                     {
-                        "name": "OnStartStep2",
+                        "name": "SetStateSlotAoDai",
                         "excluded": false
                     },
                     {
-                        "name": "OnStartStep3",
+                        "name": "SetStateSlotKinh",
                         "excluded": false
                     },
                     {
-                        "name": "SetStateSlotHeadBand",
+                        "name": "SetStateSlotGiayTrai",
                         "excluded": false
                     },
                     {
-                        "name": "OnStartStep4",
+                        "name": "SetStateSlotGiayPhai",
                         "excluded": false
                     },
                     {
-                        "name": "SetStateSlotHair",
+                        "name": "SetStateSlotThe",
                         "excluded": false
                     },
                     {
-                        "name": "OnStartStep5",
+                        "name": "SetStateSlotTay",
                         "excluded": false
                     },
                     {
-                        "name": "OnStartStep",
+                        "name": "ZoomOutCamera",
                         "excluded": false
-                    },
-                    {
-                        "name": "ChangeAlphaCleanser",
-                        "excluded": false
-                    },
-                    {
-                        "name": "ChangeAlphaFoam",
-                        "excluded": false
-                    },
-                    {
-                        "name": "OnStartStep6",
-                        "excluded": false
-                    },
-                    {
-                        "name": "EnableWashTrigger",
-                        "excluded": false
-                    },
-                    {
-                        "name": "DisableWashTrigger",
-                        "excluded": false
-                    },
-                    {
-                        "name": "TryWash",
-                        "excluded": false
-                    },
-                    {
-                        "name": "TryPausWash",
-                        "excluded": false
-                    },
-                    {
-                        "name": "TryEndWash",
-                        "excluded": false
-                    },
-                    {
-                        "name": "OnStartStepShower",
-                        "excluded": true
-                    },
-                    {
-                        "name": "EnableShowerTrigger",
-                        "excluded": false
-                    },
-                    {
-                        "name": "DisableShowerTrigger",
-                        "excluded": false
-                    },
-                    {
-                        "name": "TryShower",
-                        "excluded": true
-                    },
-                    {
-                        "name": "TryPausShower",
-                        "excluded": false
-                    },
-                    {
-                        "name": "TryEndShower",
-                        "excluded": true
-                    },
-                    {
-                        "name": "OnStartStep7",
-                        "excluded": false
-                    },
-                    {
-                        "name": "TryShowerStep2",
-                        "excluded": false
-                    },
-                    {
-                        "name": "TryEndShowerStep2",
-                        "excluded": false
-                    },
-                    {
-                        "name": "OnStartStep8",
-                        "excluded": false
-                    },
-                    {
-                        "name": "SetStateSlotslotLensL",
-                        "excluded": false
-                    },
-                    {
-                        "name": "SetStateSlotslotLensR",
-                        "excluded": false
-                    },
-                    {
-                        "name": "OnStartStep9",
-                        "excluded": true
                     }
                 ]
             },
@@ -47299,14 +47220,6 @@
                     {
                         "name": "Awake",
                         "excluded": false
-                    },
-                    {
-                        "name": "OnDisable",
-                        "excluded": true
-                    },
-                    {
-                        "name": "OnDestroy",
-                        "excluded": true
                     },
                     {
                         "name": "ResetTap",
@@ -47345,6 +47258,14 @@
                         "excluded": false
                     },
                     {
+                        "name": "OnDisable",
+                        "excluded": true
+                    },
+                    {
+                        "name": "OnDestroy",
+                        "excluded": true
+                    },
+                    {
                         "name": "ChaneScale",
                         "excluded": true
                     }
@@ -47363,10 +47284,6 @@
                         "excluded": false
                     },
                     {
-                        "name": "IkConstraintIndex#get",
-                        "excluded": true
-                    },
-                    {
                         "name": "ctor",
                         "excluded": false
                     },
@@ -47377,6 +47294,10 @@
                     {
                         "name": "Apply",
                         "excluded": false
+                    },
+                    {
+                        "name": "IkConstraintIndex#get",
+                        "excluded": true
                     }
                 ]
             },
@@ -47397,10 +47318,6 @@
                         "excluded": false
                     },
                     {
-                        "name": "OnDisable",
-                        "excluded": true
-                    },
-                    {
                         "name": "Subscribe",
                         "excluded": false
                     },
@@ -47414,6 +47331,10 @@
                     },
                     {
                         "name": "ApplyOverrides",
+                        "excluded": false
+                    },
+                    {
+                        "name": "OnDisable",
                         "excluded": false
                     },
                     {
@@ -47594,6 +47515,16 @@
                         "script": "",
                         "ext": "",
                         "name": "Assets/FX/NeatWolf/Bundle02-WaterBlood/Textures/Liquid01.png"
+                    },
+                    {
+                        "maxWidth": 2048,
+                        "maxHeight": 2048,
+                        "format": "png32",
+                        "compression": "quantSize",
+                        "quality": 65,
+                        "script": "",
+                        "ext": "",
+                        "name": "Assets/_GAME/SonGame/Level/LevelFran/Anim/frankei and pet.png"
                     }
                 ]
             },
@@ -47807,6 +47738,16 @@
                         "script": "",
                         "ext": "",
                         "name": "Assets/Audios/Splat 2.mp3"
+                    },
+                    {
+                        "channels": 1,
+                        "startTime": "00:00.000",
+                        "endTime": "00:20.659",
+                        "lengthInSeconds": 20.659000396728517,
+                        "bitrate": 32,
+                        "script": "",
+                        "ext": "",
+                        "name": "Assets/_GAME/_Costopia/_Audio/BGM/BGM_Gameplay_1.ogg"
                     }
                 ]
             },
@@ -47851,7 +47792,7 @@
     },
     "postprocesses": {
         "ssao": {
-            "isActive": false,
+            "isActive": true,
             "samplingQuality": 1,
             "normalsQuality": 0,
             "blurQuality": 0,
