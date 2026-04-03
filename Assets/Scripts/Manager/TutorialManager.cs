@@ -29,8 +29,17 @@ public class TutorialManager : Singleton<TutorialManager>
     [SerializeField] private List<Transform> tfItem = new List<Transform>();
     public List<Transform> TutorialNode => tutorialNode;
     public List<Transform> TfItem => tfItem;
+    [SerializeField] private Transform tfSprayGreen;
+    [SerializeField] private Transform tfSprayTeal;
+    [SerializeField] private Transform tfBody;
+
+
+
+
     [SerializeField] private Transform tf1;
     [SerializeField] private Transform tf2;
+
+
 
     int countCollectFail = 0;
     private bool isTap = false;
@@ -75,7 +84,15 @@ public class TutorialManager : Singleton<TutorialManager>
                 return;
             case 2:
                 handCtrl.gameObject.SetActive(true);
-                handCtrl.ShowHandPosToPos(tf1.position, tf2.position);
+                handCtrl.ShowHandPosToPos(tfSprayGreen.position, tfBody.position);
+                return;
+            case 3:
+                handCtrl.gameObject.SetActive(true);
+                handCtrl.ShowHandPosToPos(tfSprayTeal.position, tfBody.position);
+                return;
+            case 4:
+                handCtrl.gameObject.SetActive(true);
+                handCtrl.ShowHandPosToPosToPos(tf1.position, tf2.position, tfBody.position);
                 return;
             default:
                 resetTimeHint();

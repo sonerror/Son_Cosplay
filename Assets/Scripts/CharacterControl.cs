@@ -23,7 +23,10 @@ public class CharacterControl : Character
   [SerializeField] private string idleName = "idle";
   [SerializeField] private string angryName = "angry";
 
-
+  public void SetNewNameAngry()
+  {
+    angryName = idleName;
+  }
   private bool isDoneMouse = false;
   [SerializeField] private bool customMouseAnim = false;
 

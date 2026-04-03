@@ -27,6 +27,15 @@ public class SlotAttachmentPairList
       skeletonAnimation.Skeleton.SetAttachment(pair.slotName, isEnable ? pair.attachmentName : null);
     }
   }
+  public void SetAlpha(float alpha)
+  {
+    float clamped = Mathf.Clamp01(alpha);
+    foreach (var pair in pairs)
+    {
+      var slot = skeletonAnimation.Skeleton.FindSlot(pair.slotName);
+      if (slot != null) slot.A = clamped;
+    }
+  }
 }
 public class ToggleBoneSlot : MonoBehaviour
 {

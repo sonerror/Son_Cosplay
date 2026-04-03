@@ -150,10 +150,10 @@ public class LevelControl : Singleton<LevelControl>
                 OnStartStep3();
                 return;
             case 3:
-                // OnStartStep4();
+                OnStartStep4();
                 return;
             case 4:
-                // OnStartStep5();
+                OnStartStep5();
                 return;
             case 5:
                 //OnStartStep6();
@@ -408,14 +408,197 @@ public class LevelControl : Singleton<LevelControl>
             step2.Show();
             step2.onShowComplete.AddListener(() =>
             {
-                TutorialManager.Ins.enableCountTime = true;
-                TutorialManager.Ins.SetNewTime(0.5f);
-                AdsManager.Ins.ShowEndGame();
+                StartStep3();
             });
         });
     }
     #endregion
 
+    #region Step3
+    [SerializeField] private SonDragItemBase itemSprayGreen;
+    [SerializeField] private OnTransformGoToAffectZone sprayTrigger;
+    [SerializeField] private float sprayTime = 3f;
+    [SerializeField] private SlotAttachmentPairList spraySlots;
+    private Tween _tweenSpray;
+    private void StartStep3()
+    {
+        TutorialManager.Ins.enableCountTime = true;
+        itemSprayGreen.AddUseInStep(StepManager.Ins.CurrentStep);
+        itemSprayGreen.onDragStart.AddListener(EnableSprayTrigger);
+        itemSprayGreen.onDragStop.AddListener(DisableSprayTrigger);
+        sprayTrigger.onEnterZone.AddListener(TrySpray);
+        sprayTrigger.onOutZone.AddListener(TryPauseSpray);
+
+        sprayTrigger.enabled = false;
+        fillCircleBar.ReFill();
+        foreach (var pair in spraySlots.pairs)
+        {
+            character.TurnSlotAttachment(pair.slotName, pair.attachmentName);
+            var slot = character.SkeletonAnimation.Skeleton.FindSlot(pair.slotName);
+            if (slot != null) slot.A = 0f;
+        }
+    }
+    private void EnableSprayTrigger() => sprayTrigger.enabled = true;
+    private void DisableSprayTrigger() => sprayTrigger.enabled = false;
+
+    private void SetSprayAlpha(float alpha)
+    {
+        float clamped = Mathf.Clamp01(alpha);
+        foreach (var pair in spraySlots.pairs)
+        {
+            character.TurnSlotAttachment(pair.slotName, pair.attachmentName);
+
+            var slot = character.SkeletonAnimation.Skeleton.FindSlot(pair.slotName);
+            if (slot != null) slot.A = clamped;
+        }
+    }
+    private void TrySpray()
+    {
+        fillCircleBar.Show();
+
+        if (_tweenSpray == null)
+        {
+            _tweenSpray = DOVirtual
+                .Float(0f, 1f, sprayTime, value =>
+                {
+                    fillCircleBar.Fill(value);
+                    SetSprayAlpha(value);
+                })
+                .SetEase(Ease.Linear)
+                .OnComplete(() =>
+                {
+                    _tweenSpray = null;
+                    TryEndSpray();
+                });
+        }
+        else if (!_tweenSpray.IsPlaying())
+        {
+            _tweenSpray.Play();
+        }
+    }
+    private void TryPauseSpray()
+    {
+        fillCircleBar.Hide();
+        _tweenSpray?.Pause();
+    }
+    private void TryEndSpray()
+    {
+        _tweenSpray?.Kill();
+        _tweenSpray = null;
+        fillCircleBar.Hide();
+        DisableSprayTrigger();
+        SetSprayAlpha(1f);
+        itemSprayGreen.onDragStart.RemoveListener(EnableSprayTrigger);
+        itemSprayGreen.onDragStop.RemoveListener(DisableSprayTrigger);
+        sprayTrigger.onEnterZone.RemoveListener(TrySpray);
+        sprayTrigger.onOutZone.RemoveListener(TryPauseSpray);
+        DoneStep();
+    }
+    #region Step4
+    [SerializeField] private SonDragItemBase itemSprayTeal;
+    [SerializeField] private OnTransformGoToAffectZone sprayTealTrigger;
+    [SerializeField] private float sprayTealTime = 3f;
+    [SerializeField] private SlotAttachmentPairList sprayTealSlots;
+    private Tween _tweenSprayTeal;
+
+    private void OnStartStep4()
+    {
+        itemSprayTeal.AddUseInStep(StepManager.Ins.CurrentStep);
+        itemSprayTeal.onDragStart.AddListener(EnableSprayTealTrigger);
+        itemSprayTeal.onDragStop.AddListener(DisableSprayTealTrigger);
+        sprayTealTrigger.onEnterZone.AddListener(TrySprayTeal);
+        sprayTealTrigger.onOutZone.AddListener(TryPauseSprayTeal);
+
+        sprayTealTrigger.enabled = false;
+        fillCircleBar.ReFill();
+        foreach (var pair in sprayTealSlots.pairs)
+        {
+            character.TurnSlotAttachment(pair.slotName, pair.attachmentName);
+            var slot = character.SkeletonAnimation.Skeleton.FindSlot(pair.slotName);
+            if (slot != null) slot.A = 0f;
+        }
+    }
+
+    private void EnableSprayTealTrigger() => sprayTealTrigger.enabled = true;
+    private void DisableSprayTealTrigger() => sprayTealTrigger.enabled = false;
+
+    private void SetSprayTealAlpha(float alpha)
+    {
+        float clamped = Mathf.Clamp01(alpha);
+        foreach (var pair in sprayTealSlots.pairs)
+        {
+            character.TurnSlotAttachment(pair.slotName, pair.attachmentName);
+            var slot = character.SkeletonAnimation.Skeleton.FindSlot(pair.slotName);
+            if (slot != null) slot.A = clamped;
+        }
+    }
+    [SerializeField] private SpineAttachmentLocker handL;
+    private bool isShowHand = false;
+
+    private void TrySprayTeal()
+    {
+        fillCircleBar.Show();
+        if (_tweenSprayTeal == null)
+        {
+            _tweenSprayTeal = DOVirtual
+                .Float(0f, 1f, sprayTealTime, value =>
+                {
+                    fillCircleBar.Fill(value);
+                    SetSprayTealAlpha(value);
+                    if (value >= 0.5f && isShowHand == false)
+                    {
+                        character.SetNewNameAngry();
+                        handL.gameObject.SetActive(true);
+                        isShowHand = true;
+                    }
+                })
+                .SetEase(Ease.Linear)
+                .OnComplete(() =>
+                {
+                    _tweenSprayTeal = null;
+                    TryEndSprayTeal();
+                });
+        }
+        else if (!_tweenSprayTeal.IsPlaying())
+        {
+            _tweenSprayTeal.Play();
+        }
+    }
+
+    private void TryPauseSprayTeal()
+    {
+        fillCircleBar.Hide();
+        _tweenSprayTeal?.Pause();
+    }
+
+    private void TryEndSprayTeal()
+    {
+        _tweenSprayTeal?.Kill();
+        _tweenSprayTeal = null;
+        fillCircleBar.Hide();
+        DisableSprayTealTrigger();
+        SetSprayTealAlpha(1f);
+        itemSprayTeal.onDragStart.RemoveListener(EnableSprayTealTrigger);
+        itemSprayTeal.onDragStop.RemoveListener(DisableSprayTealTrigger);
+        sprayTealTrigger.onEnterZone.RemoveListener(TrySprayTeal);
+        sprayTealTrigger.onOutZone.RemoveListener(TryPauseSprayTeal);
+        DoneStep();
+        EndGame();
+    }
+    #endregion
+
+    #endregion
+    [SerializeField] private SonDragItemBase itemBrush;
+    private void OnStartStep5()
+    {
+        itemBrush.AddUseInStep(StepManager.Ins.CurrentStep);
+        EndGame();
+    }
+    private void EndGame()
+    {
+        AdsManager.Ins.ShowEndGame();
+        TutorialManager.Ins.SetNewTime(0.5f);
+    }
 
 
 

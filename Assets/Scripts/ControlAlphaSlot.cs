@@ -1,5 +1,4 @@
 using System.Collections.Generic;
-using DG.Tweening;
 using Sirenix.OdinInspector;
 using Spine;
 using Spine.Unity;
@@ -9,103 +8,118 @@ using UnityEngine.Events;
 public class ControlAlphaSlot : MonoBehaviour
 {
   public Character character;
-  [SerializeField] private float speedLerp = 2f;
-  public List<SlotAttachmentPair> slotDataList = new List<SlotAttachmentPair>();
+
+  [SerializeField, Range(0.1f, 10f)]
+  private float speedLerp = 2f;
+
+  [SerializeField] private SlotAttachmentPairList slotDataList;
+  [SerializeField] private List<TriggerWithCertainCollider> triggerColliders = new List<TriggerWithCertainCollider>();
+
   public UnityEvent OnFinish;
 
-  private List<Slot> slotsData = new List<Slot>();
-  [SerializeField] private List<TriggerWithCertainCollider> trigerColi = new List<TriggerWithCertainCollider>();
+  private readonly List<Slot> _cachedSlots = new List<Slot>();
+  private int _triggeredCount;
+  private int _totalTriggers;
+  private float _targetAlpha;
+  private float _currentAlpha;
 
-  private int currCountCollider = 0;
-  private float targetAlpha = 0f;
-  private float currAlpha = 0f;
-  private bool isFinished = false;
+  // ─── Setup ────────────────────────────────────────────────────────────────
 
   [Button]
   public void SetReady(Character charRef)
   {
-    this.character = charRef;
-    slotsData.Clear();
+    character = charRef;
+    _cachedSlots.Clear();
 
-    foreach (var slotData in slotDataList)
+    foreach (var pair in slotDataList.pairs)
     {
-      character.TurnSlotAttachment(slotData.slotName, slotData.attachmentName);
-      var slot = character.SkeletonAnimation.Skeleton.FindSlot(slotData.slotName);
-      if (slot != null)
-      {
-        slotsData.Add(slot);
-        slot.A = 0f;
-      }
+      character.TurnSlotAttachment(pair.slotName, pair.attachmentName);
+      var slot = character.SkeletonAnimation.Skeleton.FindSlot(pair.slotName);
+      if (slot == null) continue;
+
+      _cachedSlots.Add(slot);
+      slot.A = 0f;
     }
 
-    for (int i = 0; i < trigerColi.Count; i++)
+    _totalTriggers = triggerColliders.Count;
+
+    for (int i = 0; i < _totalTriggers; i++)
     {
-      var trigger = trigerColi[i];
+      var trigger = triggerColliders[i];
+      trigger.gameObject.SetActive(true);
       trigger.OnTriggerEvent.RemoveAllListeners();
-      trigger.OnTriggerEvent.AddListener(() => OnColli(trigger));
+      trigger.OnTriggerEvent.AddListener(() => OnTriggerHit(trigger));
     }
 
-    character.SkeletonAnimation.UpdateLocal -= UpdateSpineAlpha;
+    UnsubscribeSpineUpdate();
     character.SkeletonAnimation.UpdateLocal += UpdateSpineAlpha;
 
-    currCountCollider = 0;
-    currAlpha = 0f;
-    targetAlpha = 0f;
-    isFinished = false;
+    _triggeredCount = 0;
+    _currentAlpha = 0f;
+    _targetAlpha = 0f;
+    enabled = true;
   }
 
-  private void OnColli(TriggerWithCertainCollider obj)
+  // ─── Trigger ──────────────────────────────────────────────────────────────
+
+  private void OnTriggerHit(TriggerWithCertainCollider trigger)
   {
-    obj.gameObject.SetActive(false);
-    InCreaseAlpha();
+    trigger.gameObject.SetActive(false);
+    IncreaseAlpha();
   }
 
-  public void InCreaseAlpha()
+  public void IncreaseAlpha()
   {
-    currCountCollider++;
+    if (_totalTriggers == 0) return;
 
-    if (trigerColi.Count == 0) return;
-    targetAlpha = (float)currCountCollider / trigerColi.Count;
-
-    if (targetAlpha > 1f) targetAlpha = 1f;
+    _triggeredCount = Mathf.Min(_triggeredCount + 1, _totalTriggers);
+    _targetAlpha = (float)_triggeredCount / _totalTriggers;
   }
 
-  void Update()
+  // ─── Update ───────────────────────────────────────────────────────────────
+
+  private void Update()
   {
-    if (isFinished || currAlpha >= targetAlpha) return;
+    if (_currentAlpha >= _targetAlpha) return;
 
-    currAlpha = Mathf.MoveTowards(currAlpha, targetAlpha, Time.deltaTime * speedLerp);
+    _currentAlpha = Mathf.MoveTowards(_currentAlpha, _targetAlpha, Time.deltaTime * speedLerp);
 
-    if (currAlpha >= 1f && !isFinished)
-    {
-      currAlpha = 1f;
-      isFinished = true;
-      OnFinish?.Invoke();
+    if (_currentAlpha < 1f) return;
 
-      if (character != null && character.SkeletonAnimation != null)
-        character.SkeletonAnimation.UpdateLocal -= UpdateSpineAlpha;
-
-      gameObject.SetActive(false);
-    }
+    _currentAlpha = 1f;
+    OnFinish?.Invoke();
+    Finish();
   }
 
-  private void UpdateSpineAlpha(ISkeletonAnimation animatedObject)
+  private void UpdateSpineAlpha(ISkeletonAnimation _)
   {
-    for (int i = 0; i < slotsData.Count; i++)
-    {
-      slotsData[i].A = currAlpha;
-    }
+    float alpha = _currentAlpha;
+    for (int i = 0; i < _cachedSlots.Count; i++)
+      _cachedSlots[i].A = alpha;
   }
 
-  [Button]
-  void GetTrigerColli()
+  // ─── Cleanup ──────────────────────────────────────────────────────────────
+
+  private void Finish()
   {
-    trigerColi = new List<TriggerWithCertainCollider>(GetComponentsInChildren<TriggerWithCertainCollider>(true));
+    UnsubscribeSpineUpdate();
+    enabled = false;
   }
 
-  private void OnDestroy()
+  private void UnsubscribeSpineUpdate()
   {
     if (character != null && character.SkeletonAnimation != null)
       character.SkeletonAnimation.UpdateLocal -= UpdateSpineAlpha;
+  }
+
+  private void OnDestroy() => UnsubscribeSpineUpdate();
+
+  // ─── Editor ───────────────────────────────────────────────────────────────
+
+  [Button]
+  private void FetchTriggerColliders()
+  {
+    triggerColliders = new List<TriggerWithCertainCollider>(
+        GetComponentsInChildren<TriggerWithCertainCollider>(true));
   }
 }

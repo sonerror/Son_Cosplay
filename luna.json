@@ -2,7 +2,7 @@
     "version": "7.1.0",
     "projectId": "f42e7ff96e4545544bb6cd68f51ab634",
     "applicationID": 34683,
-    "creativeName": "R1_Cosplaydom_ver10_Fran",
+    "creativeName": "R1_Cosplaydom_ver10_Fran_GG",
     "pgServer": "EU",
     "window": {
         "‐⁙": true
@@ -31916,14 +31916,6 @@
                         "excluded": false
                     },
                     {
-                        "name": "InCreaseAlpha",
-                        "excluded": false
-                    },
-                    {
-                        "name": "OnColli",
-                        "excluded": true
-                    },
-                    {
                         "name": "Update",
                         "excluded": true
                     },
@@ -31932,11 +31924,27 @@
                         "excluded": true
                     },
                     {
-                        "name": "GetTrigerColli",
+                        "name": "OnDestroy",
                         "excluded": true
                     },
                     {
-                        "name": "OnDestroy",
+                        "name": "OnTriggerHit",
+                        "excluded": true
+                    },
+                    {
+                        "name": "IncreaseAlpha",
+                        "excluded": true
+                    },
+                    {
+                        "name": "Finish",
+                        "excluded": true
+                    },
+                    {
+                        "name": "UnsubscribeSpineUpdate",
+                        "excluded": true
+                    },
+                    {
+                        "name": "FetchTriggerColliders",
                         "excluded": true
                     }
                 ]
@@ -32047,6 +32055,18 @@
                     },
                     {
                         "name": "IEShowHand",
+                        "excluded": false
+                    },
+                    {
+                        "name": "ShowHandPosToPosToPos",
+                        "excluded": false
+                    },
+                    {
+                        "name": "ShowHandThree",
+                        "excluded": false
+                    },
+                    {
+                        "name": "IEShowHandThree",
                         "excluded": false
                     }
                 ]
@@ -36780,6 +36800,10 @@
                     {
                         "name": "SetMouseDone",
                         "excluded": true
+                    },
+                    {
+                        "name": "SetNewNameAngry",
+                        "excluded": false
                     }
                 ]
             },
@@ -43224,6 +43248,10 @@
                     {
                         "name": "UpdatePairsSkeletonAsset",
                         "excluded": true
+                    },
+                    {
+                        "name": "SetAlpha",
+                        "excluded": true
                     }
                 ]
             },
@@ -47201,6 +47229,70 @@
                     },
                     {
                         "name": "ZoomOutCamera",
+                        "excluded": false
+                    },
+                    {
+                        "name": "EnableSprayTrigger",
+                        "excluded": false
+                    },
+                    {
+                        "name": "DisableSprayTrigger",
+                        "excluded": false
+                    },
+                    {
+                        "name": "SetSprayAlpha",
+                        "excluded": false
+                    },
+                    {
+                        "name": "TrySpray",
+                        "excluded": false
+                    },
+                    {
+                        "name": "TryPauseSpray",
+                        "excluded": false
+                    },
+                    {
+                        "name": "TryEndSpray",
+                        "excluded": false
+                    },
+                    {
+                        "name": "EndGame",
+                        "excluded": false
+                    },
+                    {
+                        "name": "StartStep3",
+                        "excluded": false
+                    },
+                    {
+                        "name": "OnStartStep4",
+                        "excluded": false
+                    },
+                    {
+                        "name": "EnableSprayTealTrigger",
+                        "excluded": false
+                    },
+                    {
+                        "name": "DisableSprayTealTrigger",
+                        "excluded": false
+                    },
+                    {
+                        "name": "SetSprayTealAlpha",
+                        "excluded": false
+                    },
+                    {
+                        "name": "TrySprayTeal",
+                        "excluded": false
+                    },
+                    {
+                        "name": "TryPauseSprayTeal",
+                        "excluded": false
+                    },
+                    {
+                        "name": "TryEndSprayTeal",
+                        "excluded": false
+                    },
+                    {
+                        "name": "OnStartStep5",
                         "excluded": false
                     }
                 ]
