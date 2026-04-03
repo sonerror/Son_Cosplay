@@ -119,7 +119,7 @@ public class LevelControl : Singleton<LevelControl>
         transitionPhase.TransitionToPhase(0, 1);
         transitionPhase.onComplete.AddListener(() =>
         {
-            ZoomOutCamera();
+            //ZoomOutCamera();
             OnStartStep1();
         });
         DOVirtual.DelayedCall(0.2f, () =>
@@ -368,7 +368,7 @@ public class LevelControl : Singleton<LevelControl>
     private int countThrowObj = 0;
     private void OnStartStep2()
     {
-        TutorialManager.Ins.enableCountTime = true;
+        //TutorialManager.Ins.enableCountTime = true;
 
         for (int i = 0; i < listThrowObject.Count; i++)
         {
