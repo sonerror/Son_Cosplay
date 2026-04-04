@@ -67,7 +67,7 @@ public class TutorialManager : Singleton<TutorialManager>
         timeCountHint -= Time.deltaTime;
         if (timeCountHint <= 0)
         {
-            ShowHint();
+            //ShowHint();
         }
     }
     void ShowHint()
