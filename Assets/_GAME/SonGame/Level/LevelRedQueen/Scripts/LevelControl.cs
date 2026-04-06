@@ -139,14 +139,13 @@ public class LevelControl : Singleton<LevelControl>
     }
     public virtual void StartStep()
     {
-        //TutorialManager.Ins.enableCountTime = true;
         isDoneStep = false;
         switch (StepManager.Ins.CurrentStep)
         {
             case 0:
                 return;
             case 1:
-                TutorialManager.Ins.SetNewTime(0.5f);
+                TutorialManager.Ins.SetNewTime(1f);
                 OnStartStep2();
                 return;
             case 2:
@@ -168,6 +167,7 @@ public class LevelControl : Singleton<LevelControl>
                 OnStartStep8();
                 return;
             case 8:
+                OnStartStep9();
                 return;
             default:
                 return;
@@ -356,6 +356,8 @@ public class LevelControl : Singleton<LevelControl>
         cam.DOOrthoSize(cam.orthographicSize - 5, 0.3f).OnComplete(() =>
         {
             effectStep1.Show(0.5f);
+            TutorialManager.Ins.enableCountTime = true;
+
             itemWaterFaucet.AddUseInStep(StepManager.Ins.CurrentStep);
             itemWaterFaucet.onDragStart.AddListener(EnableWaterFaucetTrigger);
             itemWaterFaucet.onDragStop.AddListener(DisableWaterFaucetTrigger);
@@ -366,8 +368,18 @@ public class LevelControl : Singleton<LevelControl>
         fillCircleBar.ReFill();
         InitSlots(waterFaucetSlots);
     }
+    private bool isTap = false;
+    private void EnableWaterFaucetTrigger()
+    {
+        if (isTap == false)
+        {
+            TutorialManager.Ins.SetNewTime(3f);
+            isTap = true;
+        }
+        waterFaucetTrigger.enabled = true;
 
-    private void EnableWaterFaucetTrigger() => waterFaucetTrigger.enabled = true;
+    }
+
     private void DisableWaterFaucetTrigger() => waterFaucetTrigger.enabled = false;
 
     private void TryWaterFaucet()
@@ -703,6 +715,8 @@ public class LevelControl : Singleton<LevelControl>
         gelTrigger.onEnterZone.RemoveListener(TryGel);
         gelTrigger.onOutZone.RemoveListener(TryPauseGel);
         DoneStep();
+        TutorialManager.Ins.enableCountTime = false;
+
     }
     #endregion
     [SerializeField] private float detalOrthographicSize = 29f;
@@ -711,19 +725,156 @@ public class LevelControl : Singleton<LevelControl>
 
     [SerializeField] private SpriteAlphaGroup BGOld;
     [SerializeField] private SpriteAlphaGroup BGNew;
+    [SerializeField] private SpriteRenderer spriteRenderer1, spriteRenderer2;
     private void OnStartStep8()
     {
         effectStep1.Hide(0.75f);
         effectStep1.onHide.AddListener(() =>
         {
+            spriteRenderer1.gameObject.SetActive(true);
+            spriteRenderer2.gameObject.SetActive(true);
             BGOld.FadeOut(timerOrThographic / 2);
             BGNew.FadeIn(timerOrThographic / 2);
-            MoveCamera(cam, cam.orthographicSize + detalOrthographicSize, -detalCamY, timerOrThographic);
+            MoveCamera(cam, cam.orthographicSize + detalOrthographicSize, -detalCamY, timerOrThographic, () =>
+            {
+                StartStep8();
+                TutorialManager.Ins.enableCountTime = true;
+
+            });
         });
     }
-    private IEnumerator IE_DelayChangeBG()
+    [SerializeField] private List<SonThrowObject> listThrowObject;
+    [SerializeField] private List<SonThrowObject> listThrowObjectStart;
+
+    [SerializeField] private SlotAttachmentPairList slotPant;
+    [SerializeField] private SlotAttachmentPairList slotCoat;
+    [SerializeField] private SlotAttachmentPairList slotShirt;
+    [SerializeField] private SlotAttachmentPairList slotShoeL;
+    [SerializeField] private SlotAttachmentPairList slotShoeR;
+    public void OnSetStateSlotPant(bool value)
     {
-        yield return new WaitForSeconds(timerOrThographic / 2);
+        slotPant.TurnSlotState(value);
+    }
+    public void OnSetStateSlotCoat(bool value)
+    {
+        slotCoat.TurnSlotState(value);
+    }
+    public void OnSetStateSlotShirt(bool value)
+    {
+        slotShirt.TurnSlotState(value);
+    }
+    public void OnSetStateSlotShoeL(bool value)
+    {
+        slotShoeL.TurnSlotState(value);
     }
 
+    public void OnSetStateSlotShoeR(bool value)
+    {
+        slotShoeR.TurnSlotState(value);
+    }
+    private void StartStep8()
+    {
+        for (int i = 0; i < listThrowObject.Count; i++)
+        {
+            SonThrowObject obj = listThrowObject[i];
+
+            obj.onRemoveItem.AddListener(() =>
+            {
+                int removedIndex = listThrowObject.IndexOf(obj);
+                if (removedIndex < 0) return;
+                listThrowObject.RemoveAt(removedIndex);
+                TutorialManager.Ins.TutorialNode.RemoveAt(removedIndex);
+                TutorialManager.Ins.TfItem.RemoveAt(removedIndex);
+                if (listThrowObject.Count == 0)
+                {
+                    TutorialManager.Ins.enableCountTime = false;
+
+                    DoneStep();
+                    TryNextStep();
+                }
+            });
+        }
+        foreach (SonThrowObject throwObj in listThrowObjectStart)
+        {
+            throwObj.enabled = true;
+            throwObj.Col.enabled = true;
+        }
+    }
+    [SerializeField] private float detalOrthographicSizeEnd = 29f;
+    [SerializeField] private float detalCamYEnd = 18f;
+    [SerializeField] private float timerOrThographicEnd = 1.25f;
+    private void OnStartStep9()
+    {
+        MoveCamera(cam, detalOrthographicSizeEnd, detalCamYEnd, timerOrThographicEnd, () =>
+           {
+               SnapObjectScrollUIController.Instance.Show();
+               LoadUI();
+               EndGame();
+
+
+           });
+    }
+    [SerializeField] private List<SnapObjectUI.SnapObjectUIConfig> dressItemSnapConfig;
+
+    private void LoadUI()
+    {
+        for (int i = 0; i < dressItemSnapConfig.Count; i++)
+        {
+            SnapObjectScrollUIController.Instance.AddData(dressItemSnapConfig[i]);
+            SnapObjectScrollUIController.Instance.ManualSetOrder(GetSequence(dressItemSnapConfig.Count, false));
+        }
+        TutorialManager.Ins.enableCountTime = true;
+        // for (int i = 0; i < dressItemSnapConfig.Count; i++)
+        // {
+        //     var item = dressItemSnapConfig[i];
+
+        //     item.onSnap += () => SnapDress(item);
+        // }
+    }
+    public Vector3 GetFirstDressItemWorldPos()
+    {
+        return SnapObjectScrollUIController.Instance.GetFirstScrollObjectWorldPos(Camera.main);
+    }
+    public Vector2 GetFirstDressItemCanvasPos()
+    {
+        return SnapObjectScrollUIController.Instance.GetFirstScrollObjectCanvasPos();
+    }
+    private int countSnapUI = 0;
+    private void SnapDress(SnapObjectUI.SnapObjectUIConfig item)
+    {
+        if (dressItemSnapConfig.Remove(item))
+        {
+            countSnapUI++;
+            item.onSnap = null;
+            item.onRelease = null;
+            item.onStartDrag = null;
+            if (dressItemSnapConfig.Count == 0)
+            {
+                DoneStep();
+                TryNextStep();
+            }
+            if (countSnapUI >= 5)
+            {
+                AdsManager.Ins.ShowEndGame();
+            }
+        }
+    }
+    private List<int> GetSequence(int count, bool random)
+    {
+        List<int> result = new List<int>(count);
+
+        for (int i = 0; i < count; i++)
+            result.Add(i);
+
+        if (!random)
+            return result;
+
+        for (int i = count - 1; i > 0; i--)
+        {
+            int randomIndex = UnityEngine.Random.Range(0, i + 1);
+            (result[i], result[randomIndex]) = (result[randomIndex], result[i]);
+        }
+
+        return result;
+    }
 }

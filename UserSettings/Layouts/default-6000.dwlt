@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1920
     height: 997
   m_ShowMode: 4
-  m_Title: Scene
+  m_Title: Console
   m_RootView: {fileID: 6}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -1050,7 +1050,7 @@ MonoBehaviour:
   m_AudioPlay: 0
   m_DebugDrawModesUseInteractiveLightBakingData: 0
   m_Position:
-    m_Target: {x: 4.03063, y: 2.277853, z: 1.008448}
+    m_Target: {x: 1.0904448, y: -20.901323, z: -0.24735156}
     speed: 2
     m_Value: {x: 729.83887, y: 1133.389, z: -0.5817954}
   m_RenderMode: 0
@@ -1102,7 +1102,7 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 6.210726
+    m_Target: 38.340023
     speed: 2
     m_Value: 1265.6597
   m_Ortho:

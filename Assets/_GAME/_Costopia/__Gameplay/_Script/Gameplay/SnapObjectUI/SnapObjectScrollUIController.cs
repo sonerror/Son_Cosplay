@@ -2,6 +2,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using Utilities;
+public class ScrollObjectInfo
+{
+    public RectTransform itemRT;
+    public Transform snapPointTf;
+}
 public class SnapObjectScrollUIController : MonoSingleton<SnapObjectScrollUIController>
 {
     [SerializeField] private ObjectInScroll objectInScrollPrefab;
@@ -14,38 +19,38 @@ public class SnapObjectScrollUIController : MonoSingleton<SnapObjectScrollUICont
 
     [SerializeField] private int initScrollObjectAmount = 10;
     [SerializeField] private int initSnapObjectAmount = 3;
-
+    public ObjectInScroll FirstScrollObject => _activeScrollObjects.Count > 0 ? _activeScrollObjects[0] : null;
     private MiniPool<ObjectInScroll> _scrollObjectPool;
     private MiniPool<SnapObjectUI> _snapObjectPool;
 
     private readonly List<ObjectInScroll> _activeScrollObjects = new List<ObjectInScroll>();
     private readonly List<SnapObjectUI> _activeSnapObjects = new List<SnapObjectUI>();
 
-private CanvasScaler _mainScaler;
-private CanvasScaler MainScaler
-{
-    get
+    private CanvasScaler _mainScaler;
+    private CanvasScaler MainScaler
     {
-        if (_mainScaler == null)
+        get
         {
-            _mainScaler = UIManager.Ins.ScreenContainer.GetComponent<CanvasScaler>();
+            if (_mainScaler == null)
+            {
+                _mainScaler = UIManager.Ins.ScreenContainer.GetComponent<CanvasScaler>();
+            }
+            return _mainScaler;
         }
-        return _mainScaler;
     }
-}
 
-private Camera _mainCamera;
-private Camera MainCamera
-{
-    get
+    private Camera _mainCamera;
+    private Camera MainCamera
     {
-        if (_mainCamera == null)
+        get
         {
-            _mainCamera = Camera.main;
+            if (_mainCamera == null)
+            {
+                _mainCamera = Camera.main;
+            }
+            return _mainCamera;
         }
-        return _mainCamera;
     }
-}
 
     private int _totalSpawn;
 
@@ -216,4 +221,49 @@ private Camera MainCamera
     public bool CanShowVFX => SnapIncrease % 3 == 0;
 
     #endregion
+
+    public Vector3 GetFirstScrollObjectWorldPos(Camera cam)
+    {
+        if (_activeScrollObjects.Count == 0) return Vector3.zero;
+
+        RectTransform rt = _activeScrollObjects[0].GetComponent<RectTransform>();
+        Vector2 screenPos = RectTransformUtility.WorldToScreenPoint(null, rt.position);
+
+        Vector3 worldPos = cam.ScreenToWorldPoint(new Vector3(screenPos.x, screenPos.y, cam.nearClipPlane));
+        worldPos.z = 0f;
+        return worldPos;
+    }
+
+    public Vector2 GetFirstScrollObjectCanvasPos()
+    {
+        if (_activeScrollObjects.Count == 0) return Vector2.zero;
+
+        RectTransform rt = _activeScrollObjects[0].GetComponent<RectTransform>();
+        RectTransform canvasRT = MainScaler.GetComponent<RectTransform>();
+
+        Vector2 screenPos = RectTransformUtility.WorldToScreenPoint(null, rt.position);
+        RectTransformUtility.ScreenPointToLocalPointInRectangle(
+            canvasRT, screenPos, null, out Vector2 canvasPos);
+
+        return canvasPos;
+    }
+    public ScrollObjectInfo GetFirstScrollObjectInfo()
+    {
+        if (_activeScrollObjects.Count == 0) return null;
+
+        ObjectInScroll first = _activeScrollObjects[0];
+        RectTransform itemRT = first.GetComponent<RectTransform>();
+
+        Transform snapPointTf = null;
+        foreach (var point in first.Config.snapPoint)
+        {
+            if (point.canSnap && !point.isSnap)
+            {
+                snapPointTf = point.transform;
+                break;
+            }
+        }
+
+        return new ScrollObjectInfo { itemRT = itemRT, snapPointTf = snapPointTf };
+    }
 }

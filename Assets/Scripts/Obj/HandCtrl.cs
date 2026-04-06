@@ -94,4 +94,39 @@ public class HandCtrl : MonoBehaviour
     if (gameObject.activeSelf)
       ShowHand();
   }
+  private RectTransform _rectTransform;
+  private RectTransform RT
+  {
+    get
+    {
+      if (_rectTransform == null) _rectTransform = GetComponent<RectTransform>();
+      return _rectTransform;
+    }
+  }
+
+  public void ShowHandCanvasToCenter(Vector2 startCanvasPos)
+  {
+    StopAllCoroutines();
+    RT.DOKill();
+    gameObject.SetActive(true);
+
+    RT.anchoredPosition = startCanvasPos;
+    animator.SetTrigger("HandDown");
+
+    RT.DOAnchorPos(Vector2.zero, 1f)
+        .SetDelay(0.75f)
+        .OnComplete(() =>
+        {
+          animator.SetTrigger("HandUp");
+        });
+
+    StartCoroutine(IEShowHandCanvasToCenter(startCanvasPos));
+  }
+
+  private IEnumerator IEShowHandCanvasToCenter(Vector2 startCanvasPos)
+  {
+    yield return DTPCache.GetWFS(3f);
+    if (gameObject.activeSelf)
+      ShowHandCanvasToCenter(startCanvasPos);
+  }
 }

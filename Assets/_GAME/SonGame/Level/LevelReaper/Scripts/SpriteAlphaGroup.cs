@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using DG.Tweening;
+using sonnv;
 using UnityEngine;
 
 public class SpriteAlphaGroup : MonoBehaviour
@@ -7,54 +8,38 @@ public class SpriteAlphaGroup : MonoBehaviour
     [SerializeField] private List<SpriteRenderer> sprites = new List<SpriteRenderer>();
     [SerializeField] private float fadeDuration = 1f;
 
-    private Tween _tween;
-
-    // ─── Public ───────────────────────────────────────────────────────────────
-
     public void FadeIn() => Fade(1f);
     public void FadeOut() => Fade(0f);
-
     public void FadeIn(float duration) => Fade(1f, duration);
     public void FadeOut(float duration) => Fade(0f, duration);
 
     public void SetAlpha(float alpha)
     {
-        _tween?.Kill();
+        DOTween.Kill(this);
         ApplyAlpha(Mathf.Clamp01(alpha));
     }
 
     public void Fade(float targetAlpha, float duration = -1f)
     {
-        _tween?.Kill();
+        DOTween.Kill(this);
 
         float dur = duration > 0f ? duration : fadeDuration;
+        float start = sprites.Count > 0 && sprites[0] != null ? sprites[0].color.a : 0f;
         float clamped = Mathf.Clamp01(targetAlpha);
-        foreach (var sr in sprites)
-        {
-            if (sr == null) continue;
-            float startAlpha = sr.color.a;
-            DOVirtual.Float(startAlpha, clamped, dur, value =>
-            {
-                if (sr == null) return;
-                Color c = sr.color;
-                c.a = value;
-                sr.color = c;
-            }).SetEase(Ease.Linear);
-        }
-    }
 
-    // ─── Private ──────────────────────────────────────────────────────────────
+        DOVirtual.Float(start, clamped, dur, ApplyAlpha)
+            .SetEase(Ease.Linear)
+            .SetTarget(this);
+    }
 
     private void ApplyAlpha(float alpha)
     {
         foreach (var sr in sprites)
         {
             if (sr == null) continue;
-            Color c = sr.color;
-            c.a = Mathf.Clamp01(alpha);
-            sr.color = c;
+            sr.color = sr.color.SetAlpha(alpha);
         }
     }
 
-    private void OnDestroy() => _tween?.Kill();
+    private void OnDestroy() => DOTween.Kill(this);
 }
