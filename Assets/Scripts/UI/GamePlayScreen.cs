@@ -19,7 +19,7 @@ public class GamePlayScreen : UIScreen
     hadShowBtnInstall = true;
     btnPlay.gameObject.SetActive(true);
     Text2.gameObject.SetActive(false);
-    imgText.gameObject.SetActive(false);
+    // imgText.gameObject.SetActive(false);
     logoUI.gameObject.SetActive(true);
   }
 

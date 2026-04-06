@@ -2,7 +2,7 @@
     "version": "7.1.0",
     "projectId": "f42e7ff96e4545544bb6cd68f51ab634",
     "applicationID": 34683,
-    "creativeName": "R1_Cosplaydom_ver11_Reaper",
+    "creativeName": "R1_Cosplaydom_ver11_Reaper_GG",
     "pgServer": "EU",
     "window": {
         "‐⁙": true
@@ -39346,7 +39346,7 @@
                     },
                     {
                         "name": "SpawnSnapVFX",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "SpawnVFX",
@@ -39536,7 +39536,7 @@
                     },
                     {
                         "name": "PlayNegativeEmojiCoroutine",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "ShowClockTimer",
@@ -40050,7 +40050,7 @@
                     },
                     {
                         "name": "CanShowVFX#get",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "init",
@@ -40090,7 +40090,7 @@
                     },
                     {
                         "name": "DespawnObjectInScroll",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "SpawnSnapObject",
@@ -40226,7 +40226,7 @@
                     },
                     {
                         "name": "Clone",
-                        "excluded": true
+                        "excluded": false
                     }
                 ]
             },
@@ -40994,7 +40994,7 @@
                     },
                     {
                         "name": "DespawnSelf",
-                        "excluded": true
+                        "excluded": false
                     }
                 ]
             },
@@ -41016,7 +41016,7 @@
                     },
                     {
                         "name": "ShowNegative",
-                        "excluded": true
+                        "excluded": false
                     }
                 ]
             },
@@ -41500,7 +41500,7 @@
                     },
                     {
                         "name": "Clone",
-                        "excluded": true
+                        "excluded": false
                     }
                 ]
             },
@@ -42318,11 +42318,11 @@
                     },
                     {
                         "name": "Slots#get",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "Skins#get",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "Skins#set",
@@ -42560,7 +42560,7 @@
                     },
                     {
                         "name": "GetAttachments",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "Clear",
@@ -42594,7 +42594,7 @@
                     },
                     {
                         "name": "Attachment#get",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "$ctor1",
@@ -42980,7 +42980,7 @@
                     },
                     {
                         "name": "CloneAtlasRegionWithMaterial",
-                        "excluded": true
+                        "excluded": false
                     }
                 ]
             },
@@ -43816,7 +43816,7 @@
                     },
                     {
                         "name": "OnSnap",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "ForceChangeSnap",
@@ -43926,11 +43926,11 @@
                 "instanceMethods": [
                     {
                         "name": "Show",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "WaitAnimEnd",
-                        "excluded": true
+                        "excluded": false
                     }
                 ]
             },
@@ -45852,7 +45852,7 @@
                     },
                     {
                         "name": "SetMouseAngry",
-                        "excluded": true
+                        "excluded": false
                     }
                 ]
             },
@@ -45882,7 +45882,7 @@
                     },
                     {
                         "name": "gotoStore",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "Resize",
@@ -45904,7 +45904,7 @@
                     },
                     {
                         "name": "OnSnap",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "SetDataAsset",
@@ -46990,14 +46990,124 @@
                 },
                 "overrides": [
                     {
-                        "maxWidth": 512,
-                        "maxHeight": 512,
+                        "maxWidth": 1024,
+                        "maxHeight": 1024,
                         "format": "png32",
-                        "compression": "none",
+                        "compression": "quantSize",
                         "quality": 65,
                         "script": "",
                         "ext": "",
-                        "name": "Assets/TextMesh Pro/Resources/Fonts & Materials/ChangaOne-Italic SDF.asset"
+                        "name": "Assets/_GAME/Levels/Datpt/LevelCosplay_Reaper/01 Textures/phase 4/Hand_L.png"
+                    },
+                    {
+                        "maxWidth": 1024,
+                        "maxHeight": 1024,
+                        "format": "png32",
+                        "compression": "quantSize",
+                        "quality": 65,
+                        "script": "",
+                        "ext": "",
+                        "name": "Assets/_GAME/Levels/Datpt/LevelCosplay_Reaper/01 Textures/phase 4/Hand_R.png"
+                    },
+                    {
+                        "maxWidth": 256,
+                        "maxHeight": 256,
+                        "format": "png32",
+                        "compression": "quantSize",
+                        "quality": 65,
+                        "script": "",
+                        "ext": "",
+                        "name": "Assets/_GAME/Levels/Datpt/LevelCosplay_Reaper/01 Textures/full_clother/full_Shoe_R.png"
+                    },
+                    {
+                        "maxWidth": 256,
+                        "maxHeight": 256,
+                        "format": "png32",
+                        "compression": "quantSize",
+                        "quality": 65,
+                        "script": "",
+                        "ext": "",
+                        "name": "Assets/_GAME/Levels/Datpt/LevelCosplay_Reaper/01 Textures/full_clother/full_Shoe_L.png"
+                    },
+                    {
+                        "maxWidth": 128,
+                        "maxHeight": 128,
+                        "format": "png32",
+                        "compression": "quantSize",
+                        "quality": 65,
+                        "script": "",
+                        "ext": "",
+                        "name": "Assets/_GAME/Levels/_OldMakeUpLevel/bubble-1.png"
+                    },
+                    {
+                        "maxWidth": 256,
+                        "maxHeight": 256,
+                        "format": "png32",
+                        "compression": "quantSize",
+                        "quality": 65,
+                        "script": "",
+                        "ext": "",
+                        "name": "Assets/_GAME/Levels/Datpt/LevelCosplay_Reaper/01 Textures/full_clother/full_base1_Shoe_L.png"
+                    },
+                    {
+                        "maxWidth": 128,
+                        "maxHeight": 128,
+                        "format": "png32",
+                        "compression": "quantSize",
+                        "quality": 65,
+                        "script": "",
+                        "ext": "",
+                        "name": "Assets/Lana Studio/Hyper Casual FX/Textures/Dust01.png"
+                    },
+                    {
+                        "maxWidth": 128,
+                        "maxHeight": 128,
+                        "format": "png32",
+                        "compression": "quantSize",
+                        "quality": 65,
+                        "script": "",
+                        "ext": "",
+                        "name": "Assets/_GAME/Textures/SatisdyUI/InGame/Emoji/emoji-heart-3.png"
+                    },
+                    {
+                        "maxWidth": 128,
+                        "maxHeight": 128,
+                        "format": "png32",
+                        "compression": "quantSize",
+                        "quality": 65,
+                        "script": "",
+                        "ext": "",
+                        "name": "Assets/_GAME/Textures/SatisdyUI/InGame/Emoji/emoji-heart-1.png"
+                    },
+                    {
+                        "maxWidth": 128,
+                        "maxHeight": 128,
+                        "format": "png32",
+                        "compression": "quantSize",
+                        "quality": 65,
+                        "script": "",
+                        "ext": "",
+                        "name": "Assets/Sprites/Hand_Drag.png"
+                    },
+                    {
+                        "maxWidth": 128,
+                        "maxHeight": 128,
+                        "format": "png32",
+                        "compression": "quantSize",
+                        "quality": 65,
+                        "script": "",
+                        "ext": "",
+                        "name": "Assets/_GAME/_Costopia/_Texture/Hand_Drag.png"
+                    },
+                    {
+                        "maxWidth": 128,
+                        "maxHeight": 128,
+                        "format": "png32",
+                        "compression": "quantSize",
+                        "quality": 65,
+                        "script": "",
+                        "ext": "",
+                        "name": "Assets/_GAME/Textures/SatisdyUI/InGame/Emoji/emoji-heart-2.png"
                     },
                     {
                         "maxWidth": 512,
@@ -47010,174 +47120,14 @@
                         "name": "Assets/TextMesh Pro/Resources/Fonts & Materials/ChangaOne-Regular SDF.asset"
                     },
                     {
-                        "maxWidth": 2048,
-                        "maxHeight": 2048,
+                        "maxWidth": 512,
+                        "maxHeight": 512,
                         "format": "png32",
-                        "compression": "quantSize",
+                        "compression": "none",
                         "quality": 65,
                         "script": "",
                         "ext": "",
-                        "name": "Assets/_GAME/SonGame/Level/LevelVer3/Anim/Rumi/Rumi.png"
-                    },
-                    {
-                        "maxWidth": 1024,
-                        "maxHeight": 1024,
-                        "format": "png32",
-                        "compression": "quantSize",
-                        "quality": 65,
-                        "script": "",
-                        "ext": "",
-                        "name": "Assets/_GAME/SonGame/Level/LevelVer3/Anim/Aline/ailen/ailen2.png"
-                    },
-                    {
-                        "maxWidth": 256,
-                        "maxHeight": 256,
-                        "format": "png32",
-                        "compression": "quantSize",
-                        "quality": 65,
-                        "script": "",
-                        "ext": "",
-                        "name": "Assets/_GAME/SonGame/Level/LevelVer3/Texture/End_Shadow.png"
-                    },
-                    {
-                        "maxWidth": 32,
-                        "maxHeight": 32,
-                        "format": "png32",
-                        "compression": "quantSize",
-                        "quality": 65,
-                        "script": "",
-                        "ext": "",
-                        "name": "Assets/Lana Studio/Hyper Casual FX/Textures/Flare01.png"
-                    },
-                    {
-                        "maxWidth": 256,
-                        "maxHeight": 256,
-                        "format": "png32",
-                        "compression": "quantSize",
-                        "quality": 65,
-                        "script": "",
-                        "ext": "",
-                        "name": "Assets/_GAME/SonGame/Level/LevelSailorMoon/_texture/cleanser_0.png"
-                    },
-                    {
-                        "maxWidth": 256,
-                        "maxHeight": 256,
-                        "format": "png32",
-                        "compression": "quantSize",
-                        "quality": 65,
-                        "script": "",
-                        "ext": "",
-                        "name": "Resources/unity_builtin_extra/Default-ParticleSystem"
-                    },
-                    {
-                        "maxWidth": 2048,
-                        "maxHeight": 2048,
-                        "format": "png32",
-                        "compression": "quantSize",
-                        "quality": 65,
-                        "script": "",
-                        "ext": "",
-                        "name": "Assets/_GAME/SonGame/Level/LevelScarlet/Anim/ScarletWitch.png"
-                    },
-                    {
-                        "maxWidth": 4,
-                        "maxHeight": 4,
-                        "format": "png32",
-                        "compression": "quantSize",
-                        "quality": 65,
-                        "script": "",
-                        "ext": "",
-                        "name": "Assets/_GAME/SonGame/Level/LevelWednesday/_Textures/Hand/mixture 3.png"
-                    },
-                    {
-                        "maxWidth": 2048,
-                        "maxHeight": 2048,
-                        "format": "png32",
-                        "compression": "quantSize",
-                        "quality": 65,
-                        "script": "",
-                        "ext": "",
-                        "name": "Assets/_GAME/SonGame/Level/LevelZoro/Anim/36_Zoro/Zoro_Binary/Zoro.png"
-                    },
-                    {
-                        "maxWidth": 2048,
-                        "maxHeight": 2048,
-                        "format": "png32",
-                        "compression": "quantSize",
-                        "quality": 65,
-                        "script": "",
-                        "ext": "",
-                        "name": "Assets/_GAME/SonGame/Level/LevelRedQueen/Anim/red queen.png"
-                    },
-                    {
-                        "maxWidth": 32,
-                        "maxHeight": 2,
-                        "format": "png32",
-                        "compression": "quantSize",
-                        "quality": 65,
-                        "script": "",
-                        "ext": "",
-                        "name": "Assets/FX/NeatWolf/Bundle02-WaterBlood/Textures/Liquid01.png"
-                    },
-                    {
-                        "maxWidth": 2048,
-                        "maxHeight": 2048,
-                        "format": "png32",
-                        "compression": "quantSize",
-                        "quality": 65,
-                        "script": "",
-                        "ext": "",
-                        "name": "Assets/_GAME/SonGame/Level/LevelFran/Anim/frankei and pet.png"
-                    },
-                    {
-                        "maxWidth": 32,
-                        "maxHeight": 32,
-                        "format": "png32",
-                        "compression": "quantSize",
-                        "quality": 65,
-                        "script": "",
-                        "ext": "",
-                        "name": "Assets/_GAME/Levels/Datpt/LevelCosplay_Reaper/01 Textures/full_clother/full_trouser2.png"
-                    },
-                    {
-                        "maxWidth": 256,
-                        "maxHeight": 256,
-                        "format": "png32",
-                        "compression": "quantSize",
-                        "quality": 65,
-                        "script": "",
-                        "ext": "",
-                        "name": "Assets/_GAME/SonGame/Level/LevelReaper/Texture/P5_background.png"
-                    },
-                    {
-                        "maxWidth": 32,
-                        "maxHeight": 32,
-                        "format": "png32",
-                        "compression": "quantSize",
-                        "quality": 65,
-                        "script": "",
-                        "ext": "",
-                        "name": "Assets/_GAME/Levels/Datpt/LevelCosplay_Reaper/01 Textures/full_clother/full_bone_body.png"
-                    },
-                    {
-                        "maxWidth": 128,
-                        "maxHeight": 128,
-                        "format": "png32",
-                        "compression": "quantSize",
-                        "quality": 65,
-                        "script": "",
-                        "ext": "",
-                        "name": "Assets/_GAME/Levels/Datpt/LevelCosplay_Reaper/01 Textures/full_clother/full_shirt.png"
-                    },
-                    {
-                        "maxWidth": 32,
-                        "maxHeight": 2,
-                        "format": "png32",
-                        "compression": "quantSize",
-                        "quality": 65,
-                        "script": "",
-                        "ext": "",
-                        "name": "Assets/_GAME/Levels/Datpt/LevelCosplay_Reaper/01 Textures/full_clother/full_skull1.png"
+                        "name": "Assets/TextMesh Pro/Resources/Fonts & Materials/ChangaOne-Italic SDF.asset"
                     },
                     {
                         "maxWidth": 4096,
@@ -47197,11 +47147,51 @@
                         "quality": 65,
                         "script": "",
                         "ext": "",
-                        "name": "Assets/_GAME/Levels/Datpt/LevelCosplay_Reaper/01 Textures/full_clother/full_mask.png"
+                        "name": "Assets/FX/NeatWolf/Bundle02-WaterBlood/Textures/Liquid01.png"
                     },
                     {
-                        "maxWidth": 32,
-                        "maxHeight": 32,
+                        "maxWidth": 128,
+                        "maxHeight": 128,
+                        "format": "png32",
+                        "compression": "quantSize",
+                        "quality": 65,
+                        "script": "",
+                        "ext": "",
+                        "name": "Assets/_GAME/SonGame/Level/LevelReaper/Texture/P5_background.png"
+                    },
+                    {
+                        "maxWidth": 256,
+                        "maxHeight": 256,
+                        "format": "png32",
+                        "compression": "quantSize",
+                        "quality": 65,
+                        "script": "",
+                        "ext": "",
+                        "name": "Assets/_GAME/Levels/Datpt/LevelCosplay_Reaper/01 Textures/full_clother/full_shirt.png"
+                    },
+                    {
+                        "maxWidth": 256,
+                        "maxHeight": 256,
+                        "format": "png32",
+                        "compression": "quantSize",
+                        "quality": 65,
+                        "script": "",
+                        "ext": "",
+                        "name": "Assets/Textures/logo game.png"
+                    },
+                    {
+                        "maxWidth": 4,
+                        "maxHeight": 4,
+                        "format": "png32",
+                        "compression": "quantSize",
+                        "quality": 65,
+                        "script": "",
+                        "ext": "",
+                        "name": "Assets/TextMesh Pro/Sprites/EmojiOne.png"
+                    },
+                    {
+                        "maxWidth": 4,
+                        "maxHeight": 4,
                         "format": "png32",
                         "compression": "quantSize",
                         "quality": 65,
@@ -47210,48 +47200,18 @@
                         "name": "Assets/_GAME/Levels/Datpt/LevelCosplay_Reaper/01 Textures/full_clother/full_trouser1.png"
                     },
                     {
-                        "maxWidth": 128,
-                        "maxHeight": 128,
+                        "maxWidth": 512,
+                        "maxHeight": 512,
                         "format": "png32",
                         "compression": "quantSize",
                         "quality": 65,
                         "script": "",
                         "ext": "",
-                        "name": "Assets/_GAME/Levels/Datpt/LevelCosplay_Reaper/01 Textures/full_clother/full_Shoe_R.png"
+                        "name": "Assets/_GAME/SonGame/Level/LevelReaper/Texture/bg change Clothes.png"
                     },
                     {
                         "maxWidth": 128,
                         "maxHeight": 128,
-                        "format": "png32",
-                        "compression": "quantSize",
-                        "quality": 65,
-                        "script": "",
-                        "ext": "",
-                        "name": "Assets/_GAME/Levels/Datpt/LevelCosplay_Reaper/01 Textures/full_clother/full_Shoe_L.png"
-                    },
-                    {
-                        "maxWidth": 32,
-                        "maxHeight": 32,
-                        "format": "png32",
-                        "compression": "quantSize",
-                        "quality": 65,
-                        "script": "",
-                        "ext": "",
-                        "name": "Assets/_GAME/Levels/Datpt/LevelCosplay_Reaper/01 Textures/full_clother/full_backcoat.png"
-                    },
-                    {
-                        "maxWidth": 128,
-                        "maxHeight": 128,
-                        "format": "png32",
-                        "compression": "quantSize",
-                        "quality": 65,
-                        "script": "",
-                        "ext": "",
-                        "name": "Assets/_GAME/Levels/Datpt/LevelCosplay_Reaper/01 Textures/full_clother/full_base1_Shoe_L.png"
-                    },
-                    {
-                        "maxWidth": 256,
-                        "maxHeight": 256,
                         "format": "png32",
                         "compression": "quantSize",
                         "quality": 65,
@@ -47260,8 +47220,8 @@
                         "name": "Assets/_GAME/Levels/Datpt/LevelCosplay_Reaper/01 Textures/full_clother/full_base1_shirt.png"
                     },
                     {
-                        "maxWidth": 256,
-                        "maxHeight": 256,
+                        "maxWidth": 128,
+                        "maxHeight": 128,
                         "format": "png32",
                         "compression": "quantSize",
                         "quality": 65,
@@ -47277,7 +47237,17 @@
                         "quality": 65,
                         "script": "",
                         "ext": "",
-                        "name": "Assets/_GAME/_Costopia/_Texture/Hand_Drag.png"
+                        "name": "Assets/_GAME/Levels/Datpt/LevelCosplay_Reaper/01 Textures/phase 1_Hair/dryer1.png"
+                    },
+                    {
+                        "maxWidth": 512,
+                        "maxHeight": 512,
+                        "format": "png32",
+                        "compression": "quantSize",
+                        "quality": 65,
+                        "script": "",
+                        "ext": "",
+                        "name": "Assets/_GAME/SonGame/Level/LevelReaper/Texture/bg costume.png"
                     },
                     {
                         "maxWidth": 256,
@@ -47287,7 +47257,37 @@
                         "quality": 65,
                         "script": "",
                         "ext": "",
-                        "name": "Assets/Sprites/Hand_Drag.png"
+                        "name": "Assets/_GAME/Levels/Datpt/LevelCosplay_Reaper/01 Textures/phase 3 minigame 1A/bg_01.png"
+                    },
+                    {
+                        "maxWidth": 256,
+                        "maxHeight": 256,
+                        "format": "png32",
+                        "compression": "quantSize",
+                        "quality": 65,
+                        "script": "",
+                        "ext": "",
+                        "name": "Assets/_GAME/Levels/Datpt/LevelCosplay_Reaper/01 Textures/full_clother/full_base1_trouser.png"
+                    },
+                    {
+                        "maxWidth": 256,
+                        "maxHeight": 256,
+                        "format": "png32",
+                        "compression": "quantSize",
+                        "quality": 65,
+                        "script": "",
+                        "ext": "",
+                        "name": "Assets/_GAME/Levels/Datpt/LevelCosplay_Reaper/01 Textures/full_clother/full_base1_tab.png"
+                    },
+                    {
+                        "maxWidth": 4,
+                        "maxHeight": 4,
+                        "format": "png32",
+                        "compression": "quantSize",
+                        "quality": 65,
+                        "script": "",
+                        "ext": "",
+                        "name": "Assets/Lana Studio/Hyper Casual FX/Textures/Flare01.png"
                     },
                     {
                         "maxWidth": 256,
@@ -47307,91 +47307,91 @@
                         "quality": 65,
                         "script": "",
                         "ext": "",
+                        "name": "Assets/_GAME/Levels/LvCosplayMaid/_Texture/1 facial/water faucet.png"
+                    },
+                    {
+                        "maxWidth": 256,
+                        "maxHeight": 256,
+                        "format": "png32",
+                        "compression": "quantSize",
+                        "quality": 65,
+                        "script": "",
+                        "ext": "",
                         "name": "Assets/_GAME/Levels/Datpt/LevelCosplay_Reaper/01 Textures/phase 1_Hair/shampoo1.png"
                     },
                     {
-                        "maxWidth": 32,
-                        "maxHeight": 2,
+                        "maxWidth": 256,
+                        "maxHeight": 256,
                         "format": "png32",
                         "compression": "quantSize",
                         "quality": 65,
                         "script": "",
                         "ext": "",
-                        "name": "Assets/_GAME/_Costopia/_Texture/UI/VFX/congra_4_3.png"
+                        "name": "Assets/_GAME/Levels/Datpt/LvCosplay_ScarletWitch/01 Textures/1. Facial/Scalp_massage_brush.png"
                     },
                     {
-                        "maxWidth": 32,
-                        "maxHeight": 32,
+                        "maxWidth": 256,
+                        "maxHeight": 256,
                         "format": "png32",
                         "compression": "quantSize",
                         "quality": 65,
                         "script": "",
                         "ext": "",
-                        "name": "Assets/_GAME/_Costopia/_Texture/UI/VFX/congra_4_2.png"
+                        "name": "Assets/_GAME/SonGame/Level/LevelMaleficent/01 Textures/2. Hair/Stand 1.png"
                     },
                     {
-                        "maxWidth": 32,
-                        "maxHeight": 32,
+                        "maxWidth": 256,
+                        "maxHeight": 256,
                         "format": "png32",
                         "compression": "quantSize",
                         "quality": 65,
                         "script": "",
                         "ext": "",
-                        "name": "Assets/_GAME/_Costopia/_Texture/UI/VFX/congra_4_1.png"
+                        "name": "Assets/Lana Studio/Hyper Casual FX/Textures/Circle02.png"
                     },
                     {
-                        "maxWidth": 32,
-                        "maxHeight": 32,
+                        "maxWidth": 4,
+                        "maxHeight": 4,
                         "format": "png32",
                         "compression": "quantSize",
                         "quality": 65,
                         "script": "",
                         "ext": "",
-                        "name": "Assets/_GAME/_Costopia/_Texture/UI/VFX/congra_3_1.png"
+                        "name": "Assets/_GAME/SonGame/Level/LevelWednesday/_Textures/Hand/mixture 3.png"
                     },
                     {
-                        "maxWidth": 32,
-                        "maxHeight": 32,
+                        "maxWidth": 256,
+                        "maxHeight": 256,
                         "format": "png32",
                         "compression": "quantSize",
                         "quality": 65,
                         "script": "",
                         "ext": "",
-                        "name": "Assets/_GAME/Levels/Datpt/LevelCosplay_Reaper/01 Textures/full_clother/full_sickle.png"
+                        "name": "Assets/_GAME/Levels/Datpt/LevelCosplay_Reaper/01 Textures/phase 3 minigame 1B/table.png"
                     },
                     {
-                        "maxWidth": 32,
-                        "maxHeight": 32,
+                        "maxWidth": 128,
+                        "maxHeight": 128,
                         "format": "png32",
                         "compression": "quantSize",
                         "quality": 65,
                         "script": "",
                         "ext": "",
-                        "name": "Assets/_GAME/_Costopia/_Texture/UI/VFX/congra_3_3.png"
+                        "name": "Assets/_GAME/Textures/SatisdyUI/InGame/Emoji/emoji-fail-3.png"
                     },
                     {
-                        "maxWidth": 32,
-                        "maxHeight": 32,
+                        "maxWidth": 128,
+                        "maxHeight": 128,
                         "format": "png32",
                         "compression": "quantSize",
                         "quality": 65,
                         "script": "",
                         "ext": "",
-                        "name": "Assets/_GAME/Levels/Datpt/LevelCosplay_Reaper/01 Textures/phase 4/Hand_R.png"
+                        "name": "Assets/_GAME/SonGame/Level/LevelMaleficent/01 Textures/2. Hair/Stand 2.png"
                     },
                     {
-                        "maxWidth": 32,
-                        "maxHeight": 32,
-                        "format": "png32",
-                        "compression": "quantSize",
-                        "quality": 65,
-                        "script": "",
-                        "ext": "",
-                        "name": "Assets/_GAME/Levels/Datpt/LevelCosplay_Reaper/01 Textures/phase 4/Hand_L.png"
-                    },
-                    {
-                        "maxWidth": 32,
-                        "maxHeight": 32,
+                        "maxWidth": 4,
+                        "maxHeight": 4,
                         "format": "png32",
                         "compression": "quantSize",
                         "quality": 65,
@@ -47407,7 +47407,17 @@
                         "quality": 65,
                         "script": "",
                         "ext": "",
-                        "name": "Assets/TextMesh Pro/Sprites/EmojiOne.png"
+                        "name": "Assets/_GAME/Textures/SatisdyUI/InGame/Emoji/emoji-fail-2.png"
+                    },
+                    {
+                        "maxWidth": 128,
+                        "maxHeight": 128,
+                        "format": "png32",
+                        "compression": "quantSize",
+                        "quality": 65,
+                        "script": "",
+                        "ext": "",
+                        "name": "Assets/_GAME/_Costopia/_Texture/UI/InGame/Outfit_Snap/outfit_ghep_2.png"
                     },
                     {
                         "maxWidth": 256,
@@ -47417,27 +47427,7 @@
                         "quality": 65,
                         "script": "",
                         "ext": "",
-                        "name": "Assets/Textures/logo game.png"
-                    },
-                    {
-                        "maxWidth": 32,
-                        "maxHeight": 32,
-                        "format": "png32",
-                        "compression": "quantSize",
-                        "quality": 65,
-                        "script": "",
-                        "ext": "",
-                        "name": "Assets/_GAME/_Costopia/_Texture/UI/VFX/congra_3_2.png"
-                    },
-                    {
-                        "maxWidth": 32,
-                        "maxHeight": 32,
-                        "format": "png32",
-                        "compression": "quantSize",
-                        "quality": 65,
-                        "script": "",
-                        "ext": "",
-                        "name": "Assets/Lana Studio/Hyper Casual FX/Textures/Circle02.png"
+                        "name": "Assets/Textures/install.png"
                     }
                 ]
             },
@@ -47655,8 +47645,8 @@
                     {
                         "channels": 1,
                         "startTime": "00:00.000",
-                        "endTime": "00:20.659",
-                        "lengthInSeconds": 20.659000396728517,
+                        "endTime": "00:10.937",
+                        "lengthInSeconds": 10.937000274658204,
                         "bitrate": 32,
                         "script": "",
                         "ext": "",
@@ -47671,6 +47661,46 @@
                         "script": "",
                         "ext": "",
                         "name": "Assets/_GAME/Levels/LvBlackmanBarber/Sounds/blow-dryer.ogg"
+                    },
+                    {
+                        "channels": 1,
+                        "startTime": "00:00.000",
+                        "endTime": "00:00.000",
+                        "lengthInSeconds": 0.0,
+                        "bitrate": 32,
+                        "script": "",
+                        "ext": "",
+                        "name": "Assets/_GAME/_Costopia/_Audio/SFX/CharacterSFX/Base_Woman/sfx_man_happy_1.ogg"
+                    },
+                    {
+                        "channels": 1,
+                        "startTime": "00:00.000",
+                        "endTime": "00:00.000",
+                        "lengthInSeconds": 0.0,
+                        "bitrate": 32,
+                        "script": "",
+                        "ext": "",
+                        "name": "Assets/_GAME/_Costopia/_Audio/SFX/CharacterSFX/Base_Woman/sfx_man_angry_3.ogg"
+                    },
+                    {
+                        "channels": 1,
+                        "startTime": "00:00.000",
+                        "endTime": "00:00.000",
+                        "lengthInSeconds": 0.0,
+                        "bitrate": 32,
+                        "script": "",
+                        "ext": "",
+                        "name": "Assets/_GAME/_Costopia/_Audio/SFX/CharacterSFX/Base_Woman/toBrush.mp3"
+                    },
+                    {
+                        "channels": 1,
+                        "startTime": "00:00.000",
+                        "endTime": "00:00.000",
+                        "lengthInSeconds": 0.0,
+                        "bitrate": 32,
+                        "script": "",
+                        "ext": "",
+                        "name": "Assets/_GAME/_Costopia/_Audio/SFX/CharacterSFX/Base_Woman/AddEye.mp3"
                     }
                 ]
             },
@@ -47687,18 +47717,18 @@
                     {
                         "data": {
                             "alphabet": " §1234567890-=qwertyuiop[]asdfghjkl;'\\`zxcvbnm,./±!@#$%^&*()_+QWERTYUIOP{}ASDFGHJKL:\"|~ZXCVBNM<>?",
-                            "size": 128,
-                            "textureWidth": 1024,
-                            "textureHeight": 1024
+                            "size": 64,
+                            "textureWidth": 512,
+                            "textureHeight": 512
                         },
                         "name": "Assets/TextMesh Pro/Resources/Fonts & Materials/ChangaOne-Italic.ttf"
                     },
                     {
                         "data": {
                             "alphabet": " §1234567890-=qwertyuiop[]asdfghjkl;'\\`zxcvbnm,./±!@#$%^&*()_+QWERTYUIOP{}ASDFGHJKL:\"|~ZXCVBNM<>?",
-                            "size": 128,
-                            "textureWidth": 1024,
-                            "textureHeight": 1024
+                            "size": 64,
+                            "textureWidth": 512,
+                            "textureHeight": 512
                         },
                         "name": "Assets/_GAME/_Costopia/_Fonts/ARLRDBD.TTF"
                     }

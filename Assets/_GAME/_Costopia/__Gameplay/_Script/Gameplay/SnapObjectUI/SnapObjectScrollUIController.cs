@@ -87,7 +87,7 @@ public class SnapObjectScrollUIController : MonoSingleton<SnapObjectScrollUICont
     private void UpdateCounterText()
     {
         int totalLeft = _totalSpawn - _activeScrollObjects.Count;
-        counter.text = $"{totalLeft}/{_totalSpawn}";
+        counter.text = $"{totalLeft}/{(_totalSpawn + 10)}";
     }
 
     private void InitPools()
