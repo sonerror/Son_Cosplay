@@ -12,6 +12,7 @@ namespace sonnv
         IDragHandler,
         IPointerUpHandler
     {
+        [SerializeField] private int layerDrag = 31;
         [SerializeField] private SpriteRenderer sr;
         [SerializeField] private Collider2D col;
         public Collider2D Col => col;
@@ -68,7 +69,7 @@ namespace sonnv
             if (hasAlternativeSprite)
                 sr.sprite = alternativeSprite;
 
-            sr.sortingOrder = 30;
+            sr.sortingOrder = layerDrag;
         }
 
         public void OnDrag(PointerEventData eventData)

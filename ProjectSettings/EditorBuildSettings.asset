@@ -44,5 +44,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/_GAME/SonGame/Level/LevelReaper/LevelReaper.unity
     guid: 83a20d866cc2dbd4b875bc5caaae7438
+  - enabled: 1
+    path: Assets/_GAME/SonGame/Level/LevelNurse/LevelNurse.unity
+    guid: 454c71365e44d2249a1fc1d9e1a1e19d
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0

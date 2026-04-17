@@ -101,7 +101,29 @@ namespace Utilities
          _startPos.z
          );
     }
+    public void OpenEye()
+    {
+      isClose = true;
+      _transform.localPosition = new Vector3(
+         _startPos.x + positionCurveMul * EvaluateCurve(curveX, 1f),
+         _startPos.y + positionCurveMul * EvaluateCurve(curveY, 1f),
+         _startPos.z
+         );
 
+    }
+    public void SetPositionLower75()
+    {
+      //isClose = true;
+      _transform.localPosition = new Vector3(
+         _startPos.x,
+         _startPos.y - _startPos.y * 0.75f,
+         _startPos.z
+     );
+    }
+    public void ResetAnim()
+    {
+      isClose = false;
+    }
     private void OnDisable()
     {
       _transform.localPosition = _startPos;

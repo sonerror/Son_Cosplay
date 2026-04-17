@@ -22,7 +22,7 @@ public enum FxType
   Brush = 16,
   ToSon = 17,
   XitGel = 18,
-
+  Comb = 19,
 
   None = 100,
 }
@@ -101,7 +101,14 @@ public class SoundManager : Singleton<SoundManager>
   {
     StopSoundLoop(FxType.Spray);
   }
-
+  public void PlaySoundComb()
+  {
+    PlaySoundLoop(FxType.AddGel);
+  }
+  public void StopSoundComb()
+  {
+    StopSoundLoop(FxType.AddGel);
+  }
   public void PlayFxIfNotPlay(FxType fxType)
   {
     if (fxType == FxType.None) return;

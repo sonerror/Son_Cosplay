@@ -2,7 +2,7 @@
     "version": "7.1.0",
     "projectId": "f42e7ff96e4545544bb6cd68f51ab634",
     "applicationID": 34683,
-    "creativeName": "R1_Cosplaydom_ver11_Reaper_GG",
+    "creativeName": "R1_Cosplaydom_ver12_nurse",
     "pgServer": "EU",
     "window": {
         "‐⁙": true
@@ -137,7 +137,7 @@
             ]
         },
         "scenes": [
-            "Assets/_GAME/SonGame/Level/LevelReaper/LevelReaper.unity"
+            "Assets/_GAME/SonGame/Level/LevelNurse/LevelNurse.unity"
         ],
         "disabledScenes": [
             "Assets/Scenes/LevelMain.unity",
@@ -145,6 +145,7 @@
             "Assets/_GAME/Levels/LvCosplayWenesday/Level53.unity",
             "Assets/_GAME/SonGame/Level/LevelFran/LevelFran.unity",
             "Assets/_GAME/SonGame/Level/LevelMaleficent/Level98Maleficent.unity",
+            "Assets/_GAME/SonGame/Level/LevelReaper/LevelReaper.unity",
             "Assets/_GAME/SonGame/Level/LevelRedQueen/LevelRedQueen.unity",
             "Assets/_GAME/SonGame/Level/LevelSailorMoon/LevelSailorMoon.unity",
             "Assets/_GAME/SonGame/Level/LevelScarlet/LevelScarlet.unity",
@@ -8611,19 +8612,7 @@
                 "excluded": true
             },
             {
-                "name": "sonnv.SonSnapObject",
-                "excluded": true
-            },
-            {
-                "name": "sonnv.SonSnapPoint",
-                "excluded": true
-            },
-            {
                 "name": "sonnv.TapBox",
-                "excluded": true
-            },
-            {
-                "name": "Spine.InheritTimeline",
                 "excluded": true
             },
             {
@@ -8739,10 +8728,6 @@
                 "excluded": true
             },
             {
-                "name": "Spine.IkConstraintTimeline",
-                "excluded": true
-            },
-            {
                 "name": "Spine.PathAttachment",
                 "excluded": true
             },
@@ -8816,14 +8801,6 @@
             },
             {
                 "name": "Spine.ShearYTimeline",
-                "excluded": true
-            },
-            {
-                "name": "Spine.TranslateXTimeline",
-                "excluded": true
-            },
-            {
-                "name": "Spine.TranslateYTimeline",
                 "excluded": true
             },
             {
@@ -8920,7 +8897,7 @@
             },
             {
                 "name": "sonnv.SonISnapObject",
-                "excluded": true
+                "excluded": false
             },
             {
                 "name": "Spine.ISlotTimeline",
@@ -39567,26 +39544,6 @@
                         "excluded": false
                     },
                     {
-                        "name": "EnableWaterFaucetTrigger",
-                        "excluded": false
-                    },
-                    {
-                        "name": "DisableWaterFaucetTrigger",
-                        "excluded": false
-                    },
-                    {
-                        "name": "TryWaterFaucet",
-                        "excluded": false
-                    },
-                    {
-                        "name": "TryPauseWaterFaucet",
-                        "excluded": false
-                    },
-                    {
-                        "name": "TryEndWaterFaucet",
-                        "excluded": false
-                    },
-                    {
                         "name": "OnStartStep3",
                         "excluded": false
                     },
@@ -39595,39 +39552,7 @@
                         "excluded": false
                     },
                     {
-                        "name": "EnableBrushHairSoapTrigger",
-                        "excluded": false
-                    },
-                    {
-                        "name": "DisableBrushHairSoapTrigger",
-                        "excluded": false
-                    },
-                    {
-                        "name": "TryBrushHairSoap",
-                        "excluded": false
-                    },
-                    {
-                        "name": "TryPauseBrushHairSoap",
-                        "excluded": false
-                    },
-                    {
-                        "name": "TryEndBrushHairSoap",
-                        "excluded": false
-                    },
-                    {
                         "name": "OnStartStep5",
-                        "excluded": false
-                    },
-                    {
-                        "name": "TryWaterFaucetStep5",
-                        "excluded": false
-                    },
-                    {
-                        "name": "TryPauseWaterFaucetStep5",
-                        "excluded": false
-                    },
-                    {
-                        "name": "TryEndWaterFaucetStep5",
                         "excluded": false
                     },
                     {
@@ -39635,47 +39560,7 @@
                         "excluded": false
                     },
                     {
-                        "name": "EnableHairDryerTrigger",
-                        "excluded": false
-                    },
-                    {
-                        "name": "DisableHairDryerTrigger",
-                        "excluded": false
-                    },
-                    {
-                        "name": "TryHairDryer",
-                        "excluded": false
-                    },
-                    {
-                        "name": "TryPauseHairDryer",
-                        "excluded": false
-                    },
-                    {
-                        "name": "TryEndHairDryer",
-                        "excluded": false
-                    },
-                    {
                         "name": "OnStartStep7",
-                        "excluded": false
-                    },
-                    {
-                        "name": "EnableGelTrigger",
-                        "excluded": false
-                    },
-                    {
-                        "name": "DisableGelTrigger",
-                        "excluded": false
-                    },
-                    {
-                        "name": "TryGel",
-                        "excluded": false
-                    },
-                    {
-                        "name": "TryPauseGel",
-                        "excluded": false
-                    },
-                    {
-                        "name": "TryEndGel",
                         "excluded": false
                     },
                     {
@@ -39683,23 +39568,7 @@
                         "excluded": false
                     },
                     {
-                        "name": "OnSetStateSlotPant",
-                        "excluded": false
-                    },
-                    {
-                        "name": "OnSetStateSlotCoat",
-                        "excluded": false
-                    },
-                    {
                         "name": "OnSetStateSlotShirt",
-                        "excluded": false
-                    },
-                    {
-                        "name": "OnSetStateSlotShoeL",
-                        "excluded": false
-                    },
-                    {
-                        "name": "OnSetStateSlotShoeR",
                         "excluded": false
                     },
                     {
@@ -39707,27 +39576,91 @@
                         "excluded": false
                     },
                     {
-                        "name": "OnStartStep9",
+                        "name": "ListSnapTieRObject#get",
+                        "excluded": true
+                    },
+                    {
+                        "name": "SetSlotStart",
                         "excluded": false
                     },
                     {
-                        "name": "LoadUI",
+                        "name": "InitSlotsDone",
+                        "excluded": true
+                    },
+                    {
+                        "name": "EnableHairCombTrigger",
                         "excluded": false
                     },
                     {
-                        "name": "GetFirstDressItemWorldPos",
-                        "excluded": true
+                        "name": "DisableHairCombTrigger",
+                        "excluded": false
                     },
                     {
-                        "name": "GetFirstDressItemCanvasPos",
-                        "excluded": true
+                        "name": "TryHairComb",
+                        "excluded": false
                     },
                     {
-                        "name": "SnapDress",
-                        "excluded": true
+                        "name": "TryPauseHairComb",
+                        "excluded": false
                     },
                     {
-                        "name": "GetSequence",
+                        "name": "TryEndHairComb",
+                        "excluded": false
+                    },
+                    {
+                        "name": "EnableSprayBottleTrigger",
+                        "excluded": false
+                    },
+                    {
+                        "name": "DisableSprayBottleTrigger",
+                        "excluded": false
+                    },
+                    {
+                        "name": "TrySprayBottle",
+                        "excluded": false
+                    },
+                    {
+                        "name": "TryPauseSprayBottle",
+                        "excluded": false
+                    },
+                    {
+                        "name": "TryEndSprayBottle",
+                        "excluded": false
+                    },
+                    {
+                        "name": "EnableHairCombTrigger2",
+                        "excluded": false
+                    },
+                    {
+                        "name": "DisableHairCombTrigger2",
+                        "excluded": false
+                    },
+                    {
+                        "name": "TryHairComb2",
+                        "excluded": false
+                    },
+                    {
+                        "name": "TryPauseHairComb2",
+                        "excluded": false
+                    },
+                    {
+                        "name": "TryEndHairComb2",
+                        "excluded": false
+                    },
+                    {
+                        "name": "SetStateSlotTieL",
+                        "excluded": false
+                    },
+                    {
+                        "name": "SetStateSlotTieR",
+                        "excluded": false
+                    },
+                    {
+                        "name": "SetStateSloEyePad",
+                        "excluded": false
+                    },
+                    {
+                        "name": "SetStateSlotHairClip",
                         "excluded": false
                     }
                 ]
@@ -40193,6 +40126,14 @@
                     {
                         "name": "PlayBgm",
                         "excluded": false
+                    },
+                    {
+                        "name": "PlaySoundComb",
+                        "excluded": false
+                    },
+                    {
+                        "name": "StopSoundComb",
+                        "excluded": false
                     }
                 ]
             },
@@ -40605,6 +40546,38 @@
                     {
                         "name": "SetNewTime",
                         "excluded": false
+                    },
+                    {
+                        "name": "IsOpenBox#get",
+                        "excluded": true
+                    },
+                    {
+                        "name": "ListTfClothes#get",
+                        "excluded": false
+                    },
+                    {
+                        "name": "ListTfTargetClothes#get",
+                        "excluded": false
+                    },
+                    {
+                        "name": "SetIsOpenBox",
+                        "excluded": false
+                    },
+                    {
+                        "name": "SetData",
+                        "excluded": false
+                    },
+                    {
+                        "name": "HintAuto$1",
+                        "excluded": false
+                    },
+                    {
+                        "name": "HintAuto",
+                        "excluded": true
+                    },
+                    {
+                        "name": "TutorialStep7",
+                        "excluded": true
                     }
                 ]
             },
@@ -40748,7 +40721,7 @@
                     },
                     {
                         "name": "DistanceToInSqrVec2",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "DistanceToInSqrVec2$1",
@@ -40927,16 +40900,6 @@
                     {
                         "name": "DistanceToInSqrVec2$1",
                         "excluded": true
-                    }
-                ]
-            },
-            {
-                "className": "HoangHH.UI.SafeArea",
-                "staticMethods": [],
-                "instanceMethods": [
-                    {
-                        "name": "Awake",
-                        "excluded": false
                     }
                 ]
             },
@@ -41834,11 +41797,11 @@
                     },
                     {
                         "name": "Sin",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "Cos",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "SinDeg",
@@ -41854,7 +41817,7 @@
                     },
                     {
                         "name": "Atan2",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "Clamp",
@@ -43591,6 +43554,18 @@
                     {
                         "name": "OnDisable",
                         "excluded": true
+                    },
+                    {
+                        "name": "OpenEye",
+                        "excluded": true
+                    },
+                    {
+                        "name": "SetPositionLower75",
+                        "excluded": false
+                    },
+                    {
+                        "name": "ResetAnim",
+                        "excluded": false
                     }
                 ]
             },
@@ -44542,7 +44517,7 @@
                     },
                     {
                         "name": "Apply",
-                        "excluded": true
+                        "excluded": false
                     }
                 ]
             },
@@ -46961,6 +46936,222 @@
                         "excluded": true
                     }
                 ]
+            },
+            {
+                "className": "sonnv.SonSnapObject",
+                "staticMethods": [],
+                "instanceMethods": [
+                    {
+                        "name": "SnapPoint#get",
+                        "excluded": true
+                    },
+                    {
+                        "name": "CanMoveBack#get",
+                        "excluded": true
+                    },
+                    {
+                        "name": "IsDragging#get",
+                        "excluded": true
+                    },
+                    {
+                        "name": "OnSnap#get",
+                        "excluded": false
+                    },
+                    {
+                        "name": "Col#get",
+                        "excluded": true
+                    },
+                    {
+                        "name": "init",
+                        "excluded": false
+                    },
+                    {
+                        "name": "Awake",
+                        "excluded": false
+                    },
+                    {
+                        "name": "Start",
+                        "excluded": false
+                    },
+                    {
+                        "name": "Update",
+                        "excluded": false
+                    },
+                    {
+                        "name": "OnPointerDown",
+                        "excluded": false
+                    },
+                    {
+                        "name": "OnDrag",
+                        "excluded": false
+                    },
+                    {
+                        "name": "OnPointerUp",
+                        "excluded": false
+                    },
+                    {
+                        "name": "UpdateMousePos",
+                        "excluded": false
+                    },
+                    {
+                        "name": "OnAwake",
+                        "excluded": false
+                    },
+                    {
+                        "name": "OnStart",
+                        "excluded": false
+                    },
+                    {
+                        "name": "CanSnap",
+                        "excluded": false
+                    },
+                    {
+                        "name": "OnStartDrag",
+                        "excluded": false
+                    },
+                    {
+                        "name": "OnDrop",
+                        "excluded": false
+                    },
+                    {
+                        "name": "OnSnapObject",
+                        "excluded": false
+                    },
+                    {
+                        "name": "StartFloating",
+                        "excluded": false
+                    },
+                    {
+                        "name": "StopFloating",
+                        "excluded": false
+                    },
+                    {
+                        "name": "OnEnable",
+                        "excluded": false
+                    }
+                ]
+            },
+            {
+                "className": "sonnv.SonSnapPoint",
+                "staticMethods": [],
+                "instanceMethods": [
+                    {
+                        "name": "init",
+                        "excluded": false
+                    },
+                    {
+                        "name": "Show",
+                        "excluded": true
+                    },
+                    {
+                        "name": "OnSnap",
+                        "excluded": false
+                    },
+                    {
+                        "name": "ForceChangeSnap",
+                        "excluded": true
+                    },
+                    {
+                        "name": "ChangeCanSnap",
+                        "excluded": false
+                    }
+                ]
+            },
+            {
+                "className": "Spine.InheritTimeline",
+                "staticMethods": [],
+                "instanceMethods": [
+                    {
+                        "name": "init",
+                        "excluded": false
+                    },
+                    {
+                        "name": "BoneIndex#get",
+                        "excluded": true
+                    },
+                    {
+                        "name": "FrameEntries#get",
+                        "excluded": false
+                    },
+                    {
+                        "name": "ctor",
+                        "excluded": false
+                    },
+                    {
+                        "name": "SetFrame",
+                        "excluded": false
+                    },
+                    {
+                        "name": "Apply",
+                        "excluded": true
+                    }
+                ]
+            },
+            {
+                "className": "Spine.IkConstraintTimeline",
+                "staticMethods": [],
+                "instanceMethods": [
+                    {
+                        "name": "init",
+                        "excluded": false
+                    },
+                    {
+                        "name": "FrameEntries#get",
+                        "excluded": false
+                    },
+                    {
+                        "name": "IkConstraintIndex#get",
+                        "excluded": true
+                    },
+                    {
+                        "name": "ctor",
+                        "excluded": false
+                    },
+                    {
+                        "name": "SetFrame",
+                        "excluded": false
+                    },
+                    {
+                        "name": "Apply",
+                        "excluded": false
+                    }
+                ]
+            },
+            {
+                "className": "Spine.TranslateXTimeline",
+                "staticMethods": [],
+                "instanceMethods": [
+                    {
+                        "name": "BoneIndex#get",
+                        "excluded": true
+                    },
+                    {
+                        "name": "ctor",
+                        "excluded": false
+                    },
+                    {
+                        "name": "Apply",
+                        "excluded": false
+                    }
+                ]
+            },
+            {
+                "className": "Spine.TranslateYTimeline",
+                "staticMethods": [],
+                "instanceMethods": [
+                    {
+                        "name": "BoneIndex#get",
+                        "excluded": true
+                    },
+                    {
+                        "name": "ctor",
+                        "excluded": false
+                    },
+                    {
+                        "name": "Apply",
+                        "excluded": false
+                    }
+                ]
             }
         ],
         "stubberDataList": [],
@@ -47240,8 +47431,8 @@
                         "name": "Assets/_GAME/Levels/Datpt/LevelCosplay_Reaper/01 Textures/phase 1_Hair/dryer1.png"
                     },
                     {
-                        "maxWidth": 512,
-                        "maxHeight": 512,
+                        "maxWidth": 1024,
+                        "maxHeight": 1024,
                         "format": "png32",
                         "compression": "quantSize",
                         "quality": 65,
@@ -47420,6 +47611,26 @@
                         "name": "Assets/_GAME/_Costopia/_Texture/UI/InGame/Outfit_Snap/outfit_ghep_2.png"
                     },
                     {
+                        "maxWidth": 512,
+                        "maxHeight": 512,
+                        "format": "png32",
+                        "compression": "quantSize",
+                        "quality": 65,
+                        "script": "",
+                        "ext": "",
+                        "name": "Assets/Textures/install.png"
+                    },
+                    {
+                        "maxWidth": 4096,
+                        "maxHeight": 4096,
+                        "format": "png32",
+                        "compression": "quantSize",
+                        "quality": 65,
+                        "script": "",
+                        "ext": "",
+                        "name": "Assets/_GAME/SonGame/Level/LevelNurse/Anim/fix/Nurse_Binary/Nurse.png"
+                    },
+                    {
                         "maxWidth": 256,
                         "maxHeight": 256,
                         "format": "png32",
@@ -47427,7 +47638,27 @@
                         "quality": 65,
                         "script": "",
                         "ext": "",
-                        "name": "Assets/Textures/install.png"
+                        "name": "Assets/_GAME/_Costopia/_Texture/UI/VFX/fx_star_yellow.png"
+                    },
+                    {
+                        "maxWidth": 1024,
+                        "maxHeight": 1024,
+                        "format": "png32",
+                        "compression": "quantSize",
+                        "quality": 65,
+                        "script": "",
+                        "ext": "",
+                        "name": "Assets/_GAME/SonGame/Level/LevelNurse/Texture/GBNurceAI.png"
+                    },
+                    {
+                        "maxWidth": 1024,
+                        "maxHeight": 1024,
+                        "format": "png32",
+                        "compression": "quantSize",
+                        "quality": 65,
+                        "script": "",
+                        "ext": "",
+                        "name": "Assets/_GAME/SonGame/Level/LevelNurse/Texture/BGNurce1.png"
                     }
                 ]
             },
@@ -47645,8 +47876,8 @@
                     {
                         "channels": 1,
                         "startTime": "00:00.000",
-                        "endTime": "00:10.937",
-                        "lengthInSeconds": 10.937000274658204,
+                        "endTime": "00:20.549",
+                        "lengthInSeconds": 20.548999786376954,
                         "bitrate": 32,
                         "script": "",
                         "ext": "",

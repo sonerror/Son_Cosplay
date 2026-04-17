@@ -3,9 +3,10 @@ using System.Collections.Generic;
 using HoangHH;
 using UnityEngine;
 using sonnv;
-
+using UnityEngine.Scripting;
 public class TutorialManager : Singleton<TutorialManager>
 {
+    [SerializeField] private bool canBlockShowHint = false;
     [SerializeField] private LevelControl levelBase;
     public bool disableHand = false;
     [SerializeField] float TimeHint = 5f;
@@ -13,7 +14,6 @@ public class TutorialManager : Singleton<TutorialManager>
     public float timeCountHint = 2f;
     [SerializeField] public HandCtrl handCtrl;
     [SerializeField] public HandCtrl handCtrlMakeup;
-    [SerializeField] public HandCanvasCtrl handCtrlCanvas;
     [SerializeField] private StepManager gamePlayManager;
     [SerializeField] private int countHintStep1 = 0;
     public int CountHintStep1
@@ -33,9 +33,16 @@ public class TutorialManager : Singleton<TutorialManager>
     public List<Transform> TfItem => tfItem;
     int countCollectFail = 0;
     private bool isTap = false;
-
+    private void Start()
+    {
+        isOpenBox = false;
+    }
     private void Update()
     {
+        if (canBlockShowHint)
+        {
+            return;
+        }
         if (Input.GetMouseButtonDown(0))
         {
             HideHint();
@@ -50,7 +57,6 @@ public class TutorialManager : Singleton<TutorialManager>
         if (!enableCountTime) return;
         if (handCtrl.gameObject.activeSelf) return;
         if (handCtrlMakeup.gameObject.activeSelf) return;
-        if (handCtrlCanvas.gameObject.activeSelf) return;
         CalculateTimeHint();
     }
     private void CalculateTimeHint()
@@ -66,19 +72,22 @@ public class TutorialManager : Singleton<TutorialManager>
     {
         isTapGel = value;
     }
-    [SerializeField] private Transform tfHair;
+    [SerializeField] private Transform tfFace;
+    private bool isOpenBox = false;
+    public bool IsOpenBox => isOpenBox;
+    public void SetIsOpenBox()
+    {
+        isOpenBox = true;
+    }
+    [SerializeField] private Transform tftfBox;
+    [SerializeField] private Transform tftfBoxThrow;
 
-    [SerializeField] private Transform tfWaterFaucet;
-    [SerializeField] private Transform tfShampoo;
-    [SerializeField] private Transform tfBrush;
-    [SerializeField] private Transform tfStand;
 
 
-    [SerializeField] private Transform tfGel;
-    [SerializeField] private Transform tfGelThrow;
-    [SerializeField] private Transform tf1;
-    [SerializeField] private Transform tf2;
-
+    [SerializeField] private List<Transform> listTfClothes = new List<Transform>();
+    [SerializeField] private List<Transform> listTfTargetClothes = new List<Transform>();
+    public List<Transform> ListTfClothes => listTfClothes;
+    public List<Transform> ListTfTargetClothes => listTfTargetClothes;
     void ShowHint()
     {
         if (disableHand) return;
@@ -89,47 +98,35 @@ public class TutorialManager : Singleton<TutorialManager>
             case 0:
                 return;
             case 1:
-                handCtrl.gameObject.SetActive(true);
-                handCtrl.ShowHandPosToPos(tfWaterFaucet.position, tfHair.position);
+                HintAuto(HintPos1, tfFace.position);
                 return;
             case 2:
-                handCtrl.gameObject.SetActive(true);
-                handCtrl.ShowHandPosToPos(tfShampoo.position, tfHair.position);
+                HintAuto(HintPos1, tfFace.position);
                 return;
             case 3:
-                handCtrl.gameObject.SetActive(true);
-                handCtrl.ShowHandPosToPos(tfBrush.position, tfHair.position);
+                HintAuto(HintPos1, tfFace.position);
                 return;
             case 4:
-                handCtrl.gameObject.SetActive(true);
-                handCtrl.ShowHandPosToPos(tfWaterFaucet.position, tfHair.position);
-                return;
-            case 5:
-                handCtrl.gameObject.SetActive(true);
-                handCtrl.ShowHandPosToPos(tfStand.position, tfHair.position);
-                return;
-            case 6:
-                if (isTapGel == false)
+                if (isOpenBox == false)
                 {
                     handCtrl.gameObject.SetActive(true);
-                    handCtrl.ShowHandPosToPos(tfGel.position, tfGelThrow.position);
+                    handCtrl.ShowHandPosToPos(tftfBox.position, tftfBoxThrow.position);
                 }
                 else
                 {
-                    handCtrl.gameObject.SetActive(true);
-                    handCtrl.ShowHandPosToPos(tfGel.position, tfHair.position);
+                    HintAuto(HintPos1, HintPos2);
                 }
+                return;
+            case 5:
+                HintAuto(HintPos1, HintPos2);
+                return;
+            case 6:
+                TutorialStep7(0);
                 return;
             case 7:
                 TutorialStep(0);
                 return;
             case 8:
-                ScrollObjectInfo info = SnapObjectScrollUIController.Instance
-                    .GetFirstScrollObjectInfo();
-                if (info == null) return;
-                if (info.itemRT == null) return;
-                if (info.snapPointTf == null) return;
-                handCtrlCanvas.Show(info.itemRT, info.snapPointTf);
                 return;
             default:
                 resetTimeHint();
@@ -137,13 +134,38 @@ public class TutorialManager : Singleton<TutorialManager>
         }
     }
 
-    private void TutorialStep(int indexStep)
+    [SerializeField] private Vector3 HintPos1 { get; set; }
+    [SerializeField] private Vector3 HintPos2 { get; set; }
+    public void SetData(Vector3? pos1 = null, Vector3? pos2 = null)
     {
-        if (handCtrlMakeup == null) return;
+        if (pos1.HasValue) HintPos1 = pos1.Value;
+        if (pos2.HasValue) HintPos2 = pos2.Value;
+    }
+    private void HintAuto(Vector3 pos1, Vector3 pos2)
+    {
+        handCtrl.gameObject.SetActive(true);
+        handCtrl.ShowHandPosToPos(pos1, pos2);
+    }
+
+    private void HintAuto() => HintAuto(HintPos1, HintPos2);
+    [Preserve]
+    public void TutorialStep7(int indexStep)
+    {
+        if (handCtrl == null) return;
         if (indexStep >= tfItem.Count || indexStep >= tutorialNode.Count) return;
-        handCtrlMakeup.gameObject.SetActive(true);
+        handCtrl.gameObject.SetActive(true);
         var obj = tfItem[indexStep];
         var node = tutorialNode[indexStep];
+        handCtrl.ShowHandPosToPos(node.position, obj.position);
+    }
+    [Preserve]
+    public void TutorialStep(int indexStep)
+    {
+        if (handCtrlMakeup == null) return;
+        if (indexStep >= listTfClothes.Count || indexStep >= listTfTargetClothes.Count) return;
+        handCtrlMakeup.gameObject.SetActive(true);
+        var obj = listTfTargetClothes[indexStep];
+        var node = listTfClothes[indexStep];
         handCtrlMakeup.ShowHandPosToPos(node.position, obj.position);
     }
     public void SetStateIsTap(bool value)
@@ -154,7 +176,6 @@ public class TutorialManager : Singleton<TutorialManager>
     {
         handCtrl.gameObject.SetActive(false);
         handCtrlMakeup.gameObject.SetActive(false);
-        handCtrlCanvas.gameObject.SetActive(false);
     }
     public void resetTimeHint()
     {
