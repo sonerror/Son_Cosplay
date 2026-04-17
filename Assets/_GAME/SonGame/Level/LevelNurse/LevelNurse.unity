@@ -313,7 +313,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: -15
-  m_Sprite: {fileID: 21300000, guid: 94d1f1f7d90def347a538f545a599692, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 6d95049e1e4d56f448286c890f963741, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 1
@@ -2257,7 +2257,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: -15
-  m_Sprite: {fileID: 21300000, guid: 94d1f1f7d90def347a538f545a599692, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 6d95049e1e4d56f448286c890f963741, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 1
   m_FlipY: 0
@@ -2743,7 +2743,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: -15
-  m_Sprite: {fileID: 21300000, guid: 94d1f1f7d90def347a538f545a599692, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 6d95049e1e4d56f448286c890f963741, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 1
   m_FlipY: 1
@@ -2956,7 +2956,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -54.0671, y: -47.9, z: 0}
-  m_LocalScale: {x: 1.2, y: 1.2, z: 1.2}
+  m_LocalScale: {x: 121.64785, y: 60.661037, z: 1.2}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1378285845}
@@ -3009,7 +3009,7 @@ SpriteRenderer:
   m_Color: {r: 0.9686275, g: 0.79215693, b: 0.63529414, a: 1}
   m_FlipX: 0
   m_FlipY: 0
-  m_DrawMode: 1
+  m_DrawMode: 0
   m_Size: {x: 91.07749, y: 55.29}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
@@ -3251,7 +3251,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: -15
-  m_Sprite: {fileID: 21300000, guid: 94d1f1f7d90def347a538f545a599692, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 6d95049e1e4d56f448286c890f963741, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 1
@@ -4694,7 +4694,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: -15
-  m_Sprite: {fileID: 21300000, guid: 94d1f1f7d90def347a538f545a599692, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 6d95049e1e4d56f448286c890f963741, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -10165,7 +10165,7 @@ MonoBehaviour:
   ignoreRigidBody: 0
   attachToSnapPoint: 0
   offset: {x: 0, y: 0, z: 0}
-  snapDistance: 5
+  snapDistance: 7
   scaleOnDrag: 1
   onDropOrderLayer: 21
   onDragOrderLayer: 40
@@ -11156,6 +11156,12 @@ MonoBehaviour:
     - slotName: Set_Base_Coat_R
       attachmentName: Set_Base/Set_Base_Coat_L
       skeletonDataAsset: {fileID: 11400000, guid: d956087b16fdac74ab1815037106a144, type: 2}
+  slotSkirt:
+    skeletonAnimation: {fileID: 367043386}
+    pairs:
+    - slotName: Set_Base_Skirt
+      attachmentName: Set_Base/Set_Base_Skirt
+      skeletonDataAsset: {fileID: 11400000, guid: d956087b16fdac74ab1815037106a144, type: 2}
 --- !u!1 &1312568265
 GameObject:
   m_ObjectHideFlags: 0
@@ -11482,7 +11488,7 @@ MonoBehaviour:
   ignoreRigidBody: 0
   attachToSnapPoint: 0
   offset: {x: 0, y: 0, z: 0}
-  snapDistance: 5
+  snapDistance: 7
   scaleOnDrag: 1
   onDropOrderLayer: 21
   onDragOrderLayer: 40
@@ -17164,7 +17170,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: -15
-  m_Sprite: {fileID: 21300000, guid: 94d1f1f7d90def347a538f545a599692, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 6d95049e1e4d56f448286c890f963741, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -17283,7 +17289,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: -15
-  m_Sprite: {fileID: 21300000, guid: 94d1f1f7d90def347a538f545a599692, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 6d95049e1e4d56f448286c890f963741, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 1
   m_FlipY: 1
@@ -17704,7 +17710,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -40.9482, y: 42.9, z: 0}
-  m_LocalScale: {x: 1.2, y: 1.2, z: 1.2}
+  m_LocalScale: {x: 92.89061, y: 60.661037, z: 1.2}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1378285845}
@@ -17757,7 +17763,7 @@ SpriteRenderer:
   m_Color: {r: 0.9843138, g: 0.882353, b: 0.8862746, a: 1}
   m_FlipX: 0
   m_FlipY: 0
-  m_DrawMode: 1
+  m_DrawMode: 0
   m_Size: {x: 69.547005, y: 55.29}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
@@ -17927,7 +17933,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: -15
-  m_Sprite: {fileID: 21300000, guid: 94d1f1f7d90def347a538f545a599692, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 6d95049e1e4d56f448286c890f963741, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 1
@@ -18621,7 +18627,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: -15
-  m_Sprite: {fileID: 21300000, guid: 94d1f1f7d90def347a538f545a599692, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 6d95049e1e4d56f448286c890f963741, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 1
@@ -18885,6 +18891,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 1308665947}
+        m_TargetAssemblyTypeName: LevelControl, Assembly-CSharp
+        m_MethodName: OnSetStateSlotSkirt
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   onMouseUp:
     m_PersistentCalls:
       m_Calls:
@@ -18899,6 +18917,18 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1308665947}
+        m_TargetAssemblyTypeName: LevelControl, Assembly-CSharp
+        m_MethodName: OnSetStateSlotSkirt
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
         m_CallState: 2
   onRemoveItem:
     m_PersistentCalls:
@@ -19735,6 +19765,10 @@ MonoBehaviour:
   - {fileID: 547364739}
   - {fileID: 460279474}
   isTapGel: 0
+  tfComb: {fileID: 9146542548351638563}
+  tfBrush: {fileID: 78905858}
+  tfHairL: {fileID: 1845434876}
+  tfHairR: {fileID: 1103177765}
   tfFace: {fileID: 1756919626}
   tftfBox: {fileID: 650053299}
   tftfBoxThrow: {fileID: 142450148}
@@ -20148,9 +20182,9 @@ SpriteMask:
   m_BackSortingLayerID: 0
   m_FrontSortingLayer: 0
   m_BackSortingLayer: 0
-  m_FrontSortingOrder: 0
-  m_BackSortingOrder: 0
-  m_IsCustomRangeActive: 0
+  m_FrontSortingOrder: 100
+  m_BackSortingOrder: -100
+  m_IsCustomRangeActive: 1
   m_SpriteSortPoint: 0
   m_MaskSource: 0
 --- !u!1 &2009000513

@@ -391,7 +391,6 @@ public class LevelControl : Singleton<LevelControl>
             itemHairComb.onDragStop.AddListener(DisableHairCombTrigger);
             hairCombTrigger.onEnterZone.AddListener(TryHairComb);
             hairCombTrigger.onOutZone.AddListener(TryPauseHairComb);
-            TutorialManager.Ins.SetData(itemHairComb.gameObject.transform.position, null);
             TutorialManager.Ins.enableCountTime = true;
         });
         hairCombTrigger.enabled = false;
@@ -467,8 +466,6 @@ public class LevelControl : Singleton<LevelControl>
 
     private void OnStartStep3()
     {
-        TutorialManager.Ins.SetData(itemSprayBottle.gameObject.transform.position, null);
-
         itemSprayBottle.AddUseInStep(StepManager.Ins.CurrentStep);
         itemSprayBottle.onDragStart.AddListener(EnableSprayBottleTrigger);
         itemSprayBottle.onDragStop.AddListener(DisableSprayBottleTrigger);
@@ -553,8 +550,6 @@ public class LevelControl : Singleton<LevelControl>
         itemHairComb.onDragStop.AddListener(DisableHairCombTrigger2);
         hairCombTrigger.onEnterZone.AddListener(TryHairComb2);
         hairCombTrigger.onOutZone.AddListener(TryPauseHairComb2);
-        TutorialManager.Ins.SetData(itemHairComb.gameObject.transform.position, null);
-
         hairCombTrigger.enabled = false;
         fillCircleBar.ReFill();
         InitSlots(hairCombSlots2);
@@ -624,8 +619,6 @@ public class LevelControl : Singleton<LevelControl>
 
     private void OnStartStep5()
     {
-        TutorialManager.Ins.SetData(snapHairLObject.gameObject.transform.position, snapHairLPoint.gameObject.transform.position);
-
         snapHairLPoint.ChangeCanSnap(true);
         snapHairLObject.OnSnap.AddListener(() =>
         {
@@ -642,8 +635,6 @@ public class LevelControl : Singleton<LevelControl>
 
     private void OnStartStep6()
     {
-        TutorialManager.Ins.SetData(snapHairRObject.gameObject.transform.position, snapHairRPoint.gameObject.transform.position);
-
         snapHairRPoint.ChangeCanSnap(true);
         snapHairRObject.OnSnap.AddListener(() =>
         {
@@ -736,10 +727,15 @@ public class LevelControl : Singleton<LevelControl>
     [SerializeField] private SonThrowObject throwObjectShirt;
 
     [SerializeField] private SlotAttachmentPairList slotShirt;
+    [SerializeField] private SlotAttachmentPairList slotSkirt;
 
     public void OnSetStateSlotShirt(bool value)
     {
         slotShirt.TurnSlotState(value);
+    }
+    public void OnSetStateSlotSkirt(bool value)
+    {
+        slotSkirt.TurnSlotState(value);
     }
     private void StartStep8()
     {

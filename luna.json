@@ -2,7 +2,7 @@
     "version": "7.1.0",
     "projectId": "f42e7ff96e4545544bb6cd68f51ab634",
     "applicationID": 34683,
-    "creativeName": "R1_Cosplaydom_ver12_nurse",
+    "creativeName": "R1_Cosplaydom_ver12_nurse_GG",
     "pgServer": "EU",
     "window": {
         "‐⁙": true
@@ -40512,10 +40512,6 @@
                         "excluded": false
                     },
                     {
-                        "name": "TutorialStep",
-                        "excluded": false
-                    },
-                    {
                         "name": "SetStateIsTap",
                         "excluded": true
                     },
@@ -40548,10 +40544,6 @@
                         "excluded": false
                     },
                     {
-                        "name": "IsOpenBox#get",
-                        "excluded": true
-                    },
-                    {
                         "name": "ListTfClothes#get",
                         "excluded": false
                     },
@@ -40562,22 +40554,6 @@
                     {
                         "name": "SetIsOpenBox",
                         "excluded": false
-                    },
-                    {
-                        "name": "SetData",
-                        "excluded": false
-                    },
-                    {
-                        "name": "HintAuto$1",
-                        "excluded": false
-                    },
-                    {
-                        "name": "HintAuto",
-                        "excluded": true
-                    },
-                    {
-                        "name": "TutorialStep7",
-                        "excluded": true
                     }
                 ]
             },
@@ -47659,6 +47635,16 @@
                         "script": "",
                         "ext": "",
                         "name": "Assets/_GAME/SonGame/Level/LevelNurse/Texture/BGNurce1.png"
+                    },
+                    {
+                        "maxWidth": 1024,
+                        "maxHeight": 1024,
+                        "format": "png32",
+                        "compression": "quantSize",
+                        "quality": 65,
+                        "script": "",
+                        "ext": "",
+                        "name": "Assets/_GAME/SonGame/Level/LevelNurse/Texture/Gemini_Generated_Image_ml0mwdml0mwdml0m copy.png"
                     }
                 ]
             },
