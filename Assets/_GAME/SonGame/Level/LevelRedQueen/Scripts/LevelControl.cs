@@ -12,7 +12,6 @@ public class LevelControl : Singleton<LevelControl>
 {
     [SerializeField] private EmojiControl emojiControl;
     public EmojiControl EmojiControl => emojiControl;
-    public ClockTimer clockTimer;
     [SerializeField] private CharacterControl character;
     public CharacterControl Character => character;
     public void SetNewCharacter(CharacterControl _char)
@@ -54,26 +53,6 @@ public class LevelControl : Singleton<LevelControl>
     }
     protected virtual void Start()
     {
-        SetSlotStart(true);
-        StartStep();
-    }
-    [SerializeField] private SlotAttachmentPairList slotHairOnStart;
-    [SerializeField] private SlotAttachmentPairList slotHairOffStart;
-
-    [SerializeField] private SlotAttachmentPairList slotHeadOnStart;
-    [SerializeField] private SlotAttachmentPairList slotHeadOffStart;
-
-    private void SetSlotStart(bool value)
-    {
-        slotHairOnStart.TurnSlotState(value);
-        slotHairOffStart.TurnSlotState(!value);
-
-        slotHeadOnStart.TurnSlotState(value);
-        slotHeadOffStart.TurnSlotState(!value);
-    }
-    public virtual void SetStep(int step)
-    {
-        StepManager.Ins.SetCurrentStep(step);
         StartStep();
     }
     private bool isDoneStep;
@@ -133,7 +112,7 @@ public class LevelControl : Singleton<LevelControl>
         SoundManager.Ins.PlayBgm();
         transitionPhase.TransitionToPhase(0, 1, () =>
         {
-            cam.orthographicSize += 5;
+            cam.orthographicSize += 6.5f;
         });
         transitionPhase.onComplete.AddListener(() =>
         {
@@ -169,16 +148,16 @@ public class LevelControl : Singleton<LevelControl>
                 OnStartStep4();
                 return;
             case 4:
-                OnStartStep6();
-                return;
-            case 5:
                 OnStartStep5();
                 return;
+            case 5:
+                //OnStartStep5();
+                return;
             case 6:
-                OnStartStep7();
+                // OnStartStep7();
                 return;
             case 7:
-                OnStartStep8();
+                //OnStartStep8();
                 return;
             case 8:
                 return;
@@ -201,10 +180,8 @@ public class LevelControl : Singleton<LevelControl>
     }
 
     private int idSoundHappy = 0;
-    [SerializeField] private LoopAnimTransformFloating eyeAnim;
     private IEnumerator PlayPositiveEmojiCoroutine()
     {
-        eyeAnim.SetPositionLower75();
 
         emojiControl.ShowPositive();
         if (character != null)
@@ -227,8 +204,6 @@ public class LevelControl : Singleton<LevelControl>
         if (character != null)
         {
             character.SetMouseIdle();
-            eyeAnim.enabled = true;
-            eyeAnim.ResetAnim();
         }
         coroutine = null;
     }
@@ -313,10 +288,7 @@ public class LevelControl : Singleton<LevelControl>
         }
         coroutine = null;
     }
-    public void ShowClockTimer()
-    {
-        clockTimer.Show(2f);
-    }
+
     #endregion
     #region Helpers
     private void InitSlots(SlotAttachmentPairList slotList)
@@ -370,143 +342,138 @@ public class LevelControl : Singleton<LevelControl>
         AdsManager.Ins.ShowEndGame();
         TutorialManager.Ins.SetNewTime(0.5f);
     }
-
     #region Step2
-    [SerializeField] private ShowObjectEffect effectStep1;
-    [SerializeField] private SonDragItemBase itemHairComb;
-    [SerializeField] private OnTransformGoToAffectZone hairCombTrigger;
-    [SerializeField] private float hairCombTime = 3f;
-    [SerializeField] private SlotAttachmentPairList hairCombSlots;
-    [SerializeField] private SlotAttachmentPairList hairAfterCombSlots;
-    private Tween _tweenHairComb;
+    [SerializeField] private List<SonThrowObject> listThrowObject;
+    [SerializeField] private SlotAttachmentPairList slotTopBase;
+    [SerializeField] private SlotAttachmentPairList slotDressBase;
+    [SerializeField] private SlotAttachmentPairList slotShoeL;
+    [SerializeField] private SlotAttachmentPairList slotShoeR;
 
+    public void OnSetStateSlotTopBase(bool value)
+    {
+        slotTopBase.TurnSlotState(value);
+    }
+    public void OnSetStateSlotDressBase(bool value)
+    {
+        slotDressBase.TurnSlotState(value);
+    }
+    public void OnSetStateSlotShoeL(bool value)
+    {
+        slotShoeL.TurnSlotState(value);
+    }
+    public void OnSetStateSlotShoeR(bool value)
+    {
+        slotShoeR.TurnSlotState(value);
+    }
     private void OnStartStep2()
     {
-        cam.DOOrthoSize(cam.orthographicSize - 5, 0.3f).OnComplete(() =>
+        for (int i = 0; i < listThrowObject.Count; i++)
         {
-            effectStep1.Show(0.625f);
-
-            itemHairComb.AddUseInStep(StepManager.Ins.CurrentStep);
-            itemHairComb.onDragStart.AddListener(EnableHairCombTrigger);
-            itemHairComb.onDragStop.AddListener(DisableHairCombTrigger);
-            hairCombTrigger.onEnterZone.AddListener(TryHairComb);
-            hairCombTrigger.onOutZone.AddListener(TryPauseHairComb);
-            TutorialManager.Ins.enableCountTime = true;
-        });
-        hairCombTrigger.enabled = false;
-        fillCircleBar.ReFill();
-    }
-
-    private bool isTapComb = false;
-    private void EnableHairCombTrigger()
-    {
-        if (isTapComb == false)
-        {
-            TutorialManager.Ins.SetNewTime(3f);
-            isTapComb = true;
-        }
-        hairCombTrigger.enabled = true;
-        TutorialManager.Ins.SetNewTime(3.5f);
-
-    }
-
-    private void DisableHairCombTrigger() => hairCombTrigger.enabled = false;
-
-    private void TryHairComb()
-    {
-        fillCircleBar.Show();
-        if (_tweenHairComb == null)
-        {
-            _tweenHairComb = DOVirtual
-                .Float(0f, 1f, hairCombTime, value =>
+            SonThrowObject obj = listThrowObject[i];
+            obj.enabled = true;
+            obj.Col.enabled = true;
+            obj.onRemoveItem.AddListener(() =>
+            {
+                int removedIndex = listThrowObject.IndexOf(obj);
+                if (removedIndex < 0) return;
+                listThrowObject.RemoveAt(removedIndex);
+                // TutorialManager.Ins.ListTfClothes.RemoveAt(removedIndex);
+                //  TutorialManager.Ins.ListTfTargetClothes.RemoveAt(removedIndex);
+                if (listThrowObject.Count == 0)
                 {
-                    fillCircleBar.Fill(value);
-                    SetSlotsAlpha(hairCombSlots, 1 - value);
-                })
-                .SetEase(Ease.Linear)
-                .OnComplete(() =>
-                {
-                    _tweenHairComb = null;
-                    TryEndHairComb();
-                });
+                    DoneStep();
+                    TryNextStep();
+                }
+            });
         }
-        else if (!_tweenHairComb.IsPlaying())
-        {
-            _tweenHairComb.Play();
-        }
-    }
-
-    private void TryPauseHairComb()
-    {
-        fillCircleBar.Hide();
-        _tweenHairComb?.Pause();
-    }
-
-    private void TryEndHairComb()
-    {
-        _tweenHairComb?.Kill();
-        _tweenHairComb = null;
-        fillCircleBar.Hide();
-        DisableHairCombTrigger();
-        SetSlotsAlpha(hairCombSlots, 0f);
-        itemHairComb.onDragStart.RemoveListener(EnableHairCombTrigger);
-        itemHairComb.onDragStop.RemoveListener(DisableHairCombTrigger);
-        hairCombTrigger.onEnterZone.RemoveListener(TryHairComb);
-        hairCombTrigger.onOutZone.RemoveListener(TryPauseHairComb);
-        DoneStep();
     }
     #endregion
     #region Step3
-    [SerializeField] private SonDragItemBase itemSprayBottle;
-    [SerializeField] private OnTransformGoToAffectZone sprayBottleTrigger;
-    [SerializeField] private float sprayBottleTime = 3f;
-    [SerializeField] private SlotAttachmentPairList sprayBottleSlots;
-    [SerializeField] private SlotAttachmentPairList hairOldSlots;
-    private Tween _tweenSprayBottle;
+    [SerializeField] private ShowObjectEffect effectStep3;
+    [SerializeField] private SonSnapObject snapObjHairClip;
 
+    [SerializeField] private SlotAttachmentPairList slotHair;
+    [SerializeField] private SlotAttachmentPairList slotHairClip;
+    public void SetStateSlotHair()
+    {
+        slotHair.TurnSlotState(false);
+        slotHairClip.TurnSlotState(true);
+    }
     private void OnStartStep3()
     {
-        itemSprayBottle.AddUseInStep(StepManager.Ins.CurrentStep);
-        itemSprayBottle.onDragStart.AddListener(EnableSprayBottleTrigger);
-        itemSprayBottle.onDragStop.AddListener(DisableSprayBottleTrigger);
-        sprayBottleTrigger.onEnterZone.AddListener(TrySprayBottle);
-        sprayBottleTrigger.onOutZone.AddListener(TryPauseSprayBottle);
+        effectStep3.Show(0.5f);
+        snapObjHairClip.OnSnap.AddListener(() =>
+        {
+            DoneStep();
+            TryNextStep();
+        });
+    }
+    #endregion
 
+    #region Step4
+    [SerializeField] private SpineBoneIKControl eyeLoop;
+    [SerializeField] private ShowObjectEffect effectStep4;
+
+    [SerializeField] private SonDragItemBase itemSprayBottle;
+    [SerializeField] private OnTransformGoToAffectZone sprayBottleTrigger;
+    [SerializeField] private float sprayBottleDuration = 3f;
+    [SerializeField] private SlotAttachmentPairList sprayBottleSlots;
+    [SerializeField] private SpineAttachmentLocker slotHandL;
+    private Tween _tweenSprayBottle;
+
+    private void OnStartStep4()
+    {
+        eyeLoop.DisableIKControl();
+        effectStep3.Hide();
+        effectStep4.Show(0.5f);
+        StartStep4();
+    }
+    private void StartStep4()
+    {
+        itemSprayBottle.AddUseInStep(StepManager.Ins.CurrentStep);
+        itemSprayBottle.onDragStart.AddListener(OnSprayBottleDragStart);
+        itemSprayBottle.onDragStop.AddListener(OnSprayBottleDragStop);
+        sprayBottleTrigger.onEnterZone.AddListener(OnSprayBottleEnterZone);
+        sprayBottleTrigger.onOutZone.AddListener(OnSprayBottleExitZone);
         sprayBottleTrigger.enabled = false;
         fillCircleBar.ReFill();
         InitSlots(sprayBottleSlots);
     }
+    private bool _hasFirstDraggedSprayBottle = false;
 
-    private bool isTapSpray = false;
-    private void EnableSprayBottleTrigger()
+    private void OnSprayBottleDragStart()
     {
-        if (isTapSpray == false)
+        if (_hasFirstDraggedSprayBottle == false)
         {
             TutorialManager.Ins.SetNewTime(3f);
-            isTapSpray = true;
+            _hasFirstDraggedSprayBottle = true;
         }
         sprayBottleTrigger.enabled = true;
     }
 
-    private void DisableSprayBottleTrigger() => sprayBottleTrigger.enabled = false;
-
-    private void TrySprayBottle()
+    private void OnSprayBottleDragStop() => sprayBottleTrigger.enabled = false;
+    private bool isSetHandL = false;
+    private void OnSprayBottleEnterZone()
     {
         fillCircleBar.Show();
         if (_tweenSprayBottle == null)
         {
             _tweenSprayBottle = DOVirtual
-                .Float(0f, 1f, sprayBottleTime, value =>
+                .Float(0f, 1f, sprayBottleDuration, value =>
                 {
                     fillCircleBar.Fill(value);
                     SetSlotsAlpha(sprayBottleSlots, value);
-                    SetSlotsAlpha(hairOldSlots, 1 - value);
+                    if (value >= 0.5f && isSetHandL == false)
+                    {
+                        slotHandL.enabled = true;
+                        isSetHandL = true;
+                    }
                 })
                 .SetEase(Ease.Linear)
                 .OnComplete(() =>
                 {
                     _tweenSprayBottle = null;
-                    TryEndSprayBottle();
+                    OnSprayBottleCompleted();
                 });
         }
         else if (!_tweenSprayBottle.IsPlaying())
@@ -515,255 +482,504 @@ public class LevelControl : Singleton<LevelControl>
         }
     }
 
-    private void TryPauseSprayBottle()
+    private void OnSprayBottleExitZone()
     {
         fillCircleBar.Hide();
         _tweenSprayBottle?.Pause();
     }
 
-    private void TryEndSprayBottle()
+    private void OnSprayBottleCompleted()
     {
         _tweenSprayBottle?.Kill();
         _tweenSprayBottle = null;
         fillCircleBar.Hide();
-        DisableSprayBottleTrigger();
+        OnSprayBottleDragStop();
         SetSlotsAlpha(sprayBottleSlots, 1f);
-        itemSprayBottle.onDragStart.RemoveListener(EnableSprayBottleTrigger);
-        itemSprayBottle.onDragStop.RemoveListener(DisableSprayBottleTrigger);
-        sprayBottleTrigger.onEnterZone.RemoveListener(TrySprayBottle);
-        sprayBottleTrigger.onOutZone.RemoveListener(TryPauseSprayBottle);
+        itemSprayBottle.onDragStart.RemoveListener(OnSprayBottleDragStart);
+        itemSprayBottle.onDragStop.RemoveListener(OnSprayBottleDragStop);
+        sprayBottleTrigger.onEnterZone.RemoveListener(OnSprayBottleEnterZone);
+        sprayBottleTrigger.onOutZone.RemoveListener(OnSprayBottleExitZone);
         DoneStep();
     }
     #endregion
-    #region Step4
-    [SerializeField] private SlotAttachmentPairList hairCombSlots2;
-    [SerializeField] private SlotAttachmentPairList hairOldCombSlots2;
-    private Tween _tweenHairComb2;
-    private bool isTapComb2 = false;
 
-    private void OnStartStep4()
+    #region Step5
+    [SerializeField] private SonDragItemBase itemSprayBottle2;
+    [SerializeField] private OnTransformGoToAffectZone sprayBottle2Trigger;
+    [SerializeField] private float sprayBottle2Duration = 3f;
+    [SerializeField] private SlotAttachmentPairList sprayBottle2Slots;
+    private Tween _tweenSprayBottle2;
+
+    private void OnStartStep5()
     {
-        TutorialManager.Ins.enableCountTime = true;
+        itemSprayBottle2.AddUseInStep(StepManager.Ins.CurrentStep);
+        itemSprayBottle2.onDragStart.AddListener(OnSprayBottle2DragStart);
+        itemSprayBottle2.onDragStop.AddListener(OnSprayBottle2DragStop);
+        sprayBottle2Trigger.onEnterZone.AddListener(OnSprayBottle2EnterZone);
+        sprayBottle2Trigger.onOutZone.AddListener(OnSprayBottle2ExitZone);
 
-        itemHairComb.AddUseInStep(StepManager.Ins.CurrentStep);
-        itemHairComb.onDragStart.AddListener(EnableHairCombTrigger2);
-        itemHairComb.onDragStop.AddListener(DisableHairCombTrigger2);
-        hairCombTrigger.onEnterZone.AddListener(TryHairComb2);
-        hairCombTrigger.onOutZone.AddListener(TryPauseHairComb2);
-        hairCombTrigger.enabled = false;
+        sprayBottle2Trigger.enabled = false;
         fillCircleBar.ReFill();
-        InitSlots(hairCombSlots2);
+        InitSlots(sprayBottle2Slots);
     }
 
-    private void EnableHairCombTrigger2()
+    private bool _hasFirstDraggedSprayBottle2 = false;
+
+    private void OnSprayBottle2DragStart()
     {
-        if (isTapComb2 == false)
+        if (_hasFirstDraggedSprayBottle2 == false)
         {
             TutorialManager.Ins.SetNewTime(3f);
-            isTapComb2 = true;
+            _hasFirstDraggedSprayBottle2 = true;
         }
-        hairCombTrigger.enabled = true;
+        sprayBottle2Trigger.enabled = true;
     }
 
-    private void DisableHairCombTrigger2() => hairCombTrigger.enabled = false;
+    private void OnSprayBottle2DragStop() => sprayBottle2Trigger.enabled = false;
 
-    private void TryHairComb2()
+    private void OnSprayBottle2EnterZone()
     {
         fillCircleBar.Show();
-        if (_tweenHairComb2 == null)
+        if (_tweenSprayBottle2 == null)
         {
-            _tweenHairComb2 = DOVirtual
-                .Float(0f, 1f, hairCombTime, value =>
+            _tweenSprayBottle2 = DOVirtual
+                .Float(0f, 1f, sprayBottle2Duration, value =>
                 {
                     fillCircleBar.Fill(value);
-                    SetSlotsAlpha(hairCombSlots2, value);
-                    SetSlotsAlpha(hairOldCombSlots2, 1 - value);
+                    SetSlotsAlpha(sprayBottle2Slots, value);
                 })
                 .SetEase(Ease.Linear)
                 .OnComplete(() =>
                 {
-                    _tweenHairComb2 = null;
-                    TryEndHairComb2();
+                    _tweenSprayBottle2 = null;
+                    OnSprayBottle2Completed();
                 });
         }
-        else if (!_tweenHairComb2.IsPlaying())
+        else if (!_tweenSprayBottle2.IsPlaying())
         {
-            _tweenHairComb2.Play();
+            _tweenSprayBottle2.Play();
         }
     }
 
-    private void TryPauseHairComb2()
+    private void OnSprayBottle2ExitZone()
     {
         fillCircleBar.Hide();
-        _tweenHairComb2?.Pause();
+        _tweenSprayBottle2?.Pause();
     }
 
-    private void TryEndHairComb2()
+    private void OnSprayBottle2Completed()
     {
-        _tweenHairComb2?.Kill();
-        _tweenHairComb2 = null;
+        eyeLoop.EnableIKControl();
+
+        _tweenSprayBottle2?.Kill();
+        _tweenSprayBottle2 = null;
         fillCircleBar.Hide();
-        DisableHairCombTrigger2();
-        SetSlotsAlpha(hairCombSlots2, 1f);
-        itemHairComb.onDragStart.RemoveListener(EnableHairCombTrigger2);
-        itemHairComb.onDragStop.RemoveListener(DisableHairCombTrigger2);
-        hairCombTrigger.onEnterZone.RemoveListener(TryHairComb2);
-        hairCombTrigger.onOutZone.RemoveListener(TryPauseHairComb2);
+        OnSprayBottle2DragStop();
+        SetSlotsAlpha(sprayBottle2Slots, 1f);
+        itemSprayBottle2.onDragStart.RemoveListener(OnSprayBottle2DragStart);
+        itemSprayBottle2.onDragStop.RemoveListener(OnSprayBottle2DragStop);
+        sprayBottle2Trigger.onEnterZone.RemoveListener(OnSprayBottle2EnterZone);
+        sprayBottle2Trigger.onOutZone.RemoveListener(OnSprayBottle2ExitZone);
         DoneStep();
     }
     #endregion
-    #region Step5
-    [SerializeField] private SonSnapObject snapHairLObject;
-    [SerializeField] private SonSnapPoint snapHairLPoint;
-    [SerializeField] private SlotAttachmentPairList hairMixL;
 
-    private void OnStartStep5()
-    {
-        snapHairLPoint.ChangeCanSnap(true);
-        snapHairLObject.OnSnap.AddListener(() =>
-        {
-            hairMixL.TurnSlotState(true);
-            DoneStep();
-            TryNextStep();
-        });
-    }
-    #endregion
-    #region Step6
-    [SerializeField] private SonSnapObject snapHairRObject;
-    [SerializeField] private SonSnapPoint snapHairRPoint;
-    [SerializeField] private SlotAttachmentPairList hairMixR;
 
-    private void OnStartStep6()
-    {
-        snapHairRPoint.ChangeCanSnap(true);
-        snapHairRObject.OnSnap.AddListener(() =>
-        {
-            hairMixR.TurnSlotState(true);
-            DoneStep();
-            TryNextStep();
-        });
-    }
 
-    #endregion
-    #region Step7
 
-    [SerializeField] private List<SonSnapObject> listSnapTieRObject;
-    public List<SonSnapObject> ListSnapTieRObject => listSnapTieRObject;
-    [SerializeField] private List<SonSnapPoint> listSnapTieRPoint;
+    // #region Step2
+    // [SerializeField] private ShowObjectEffect effectStep1;
+    // [SerializeField] private SonDragItemBase itemHairComb;
+    // [SerializeField] private OnTransformGoToAffectZone hairCombTrigger;
+    // [SerializeField] private float hairCombTime = 3f;
+    // [SerializeField] private SlotAttachmentPairList hairCombSlots;
+    // [SerializeField] private SlotAttachmentPairList hairAfterCombSlots;
+    // private Tween _tweenHairComb;
 
-    [SerializeField] private SlotAttachmentPairList hairTieL;
-    public void SetStateSlotTieL()
-    {
-        hairTieL.TurnSlotState(true);
-    }
-    [SerializeField] private SlotAttachmentPairList hairTieR;
-    public void SetStateSlotTieR()
-    {
-        hairTieR.TurnSlotState(true);
-    }
-    [SerializeField] private SlotAttachmentPairList hairEyePad;
-    public void SetStateSloEyePad()
-    {
-        hairEyePad.TurnSlotState(true);
-    }
-    [SerializeField] private SlotAttachmentPairList hairClip;
-    public void SetStateSlotHairClip()
-    {
-        hairClip.TurnSlotState(true);
-    }
+    // private void OnStartStep2()
+    // {
+    //     cam.DOOrthoSize(cam.orthographicSize - 5, 0.3f).OnComplete(() =>
+    //     {
+    //         effectStep1.Show(0.625f);
 
-    private void OnStartStep7()
-    {
-        foreach (SonSnapPoint point in listSnapTieRPoint)
-        {
-            point.ChangeCanSnap(true);
-        }
-        for (int i = 0; i < listSnapTieRObject.Count; i++)
-        {
-            SonSnapObject obj = listSnapTieRObject[i];
-            obj.OnSnap.AddListener(() =>
-            {
-                int removedIndex = listSnapTieRObject.IndexOf(obj);
-                if (removedIndex < 0) return;
-                listSnapTieRObject.RemoveAt(removedIndex);
-                TutorialManager.Ins.TutorialNode.RemoveAt(removedIndex);
-                TutorialManager.Ins.TfItem.RemoveAt(removedIndex);
-                if (listSnapTieRObject.Count == 0)
-                {
-                    TutorialManager.Ins.enableCountTime = false;
-                    DoneStep();
-                    TryNextStep();
-                }
-            });
-        }
-    }
-    #endregion
-    #region Step8
-    [SerializeField] private float detalOrthographicSize = 29f;
-    [SerializeField] private float detalCamY = 18f;
-    [SerializeField] private float timerOrThographic = 1.25f;
+    //         itemHairComb.AddUseInStep(StepManager.Ins.CurrentStep);
+    //         itemHairComb.onDragStart.AddListener(EnableHairCombTrigger);
+    //         itemHairComb.onDragStop.AddListener(DisableHairCombTrigger);
+    //         hairCombTrigger.onEnterZone.AddListener(TryHairComb);
+    //         hairCombTrigger.onOutZone.AddListener(TryPauseHairComb);
+    //         TutorialManager.Ins.enableCountTime = true;
+    //     });
+    //     hairCombTrigger.enabled = false;
+    //     fillCircleBar.ReFill();
+    // }
 
-    [SerializeField] private SpriteAlphaGroup BGOld;
-    [SerializeField] private SpriteAlphaGroup BGNew;
-    [SerializeField] private SpriteRenderer spriteRenderer1, spriteRenderer2;
-    private void OnStartStep8()
-    {
-        effectStep1.Hide(0.75f);
-        effectStep1.onHide.AddListener(() =>
-        {
-            spriteRenderer1.gameObject.SetActive(true);
-            spriteRenderer2.gameObject.SetActive(true);
-            BGOld.FadeOut(timerOrThographic / 2);
-            BGNew.FadeIn(timerOrThographic / 2);
-            MoveCamera(cam, cam.orthographicSize + detalOrthographicSize, -detalCamY, timerOrThographic, () =>
-            {
-                StartStep8();
-                TutorialManager.Ins.enableCountTime = true;
+    // private bool isTapComb = false;
+    // private void EnableHairCombTrigger()
+    // {
+    //     if (isTapComb == false)
+    //     {
+    //         TutorialManager.Ins.SetNewTime(3f);
+    //         isTapComb = true;
+    //     }
+    //     hairCombTrigger.enabled = true;
+    //     TutorialManager.Ins.SetNewTime(3.5f);
 
-            });
-        });
-    }
-    [SerializeField] private List<SonThrowObject> listThrowObject;
-    [SerializeField] private SonThrowObject throwObjectShirt;
+    // }
 
-    [SerializeField] private SlotAttachmentPairList slotShirt;
-    [SerializeField] private SlotAttachmentPairList slotSkirt;
+    // private void DisableHairCombTrigger() => hairCombTrigger.enabled = false;
 
-    public void OnSetStateSlotShirt(bool value)
-    {
-        slotShirt.TurnSlotState(value);
-    }
-    public void OnSetStateSlotSkirt(bool value)
-    {
-        slotSkirt.TurnSlotState(value);
-    }
-    private void StartStep8()
-    {
-        throwObjectShirt.enabled = true;
-        throwObjectShirt.Col.enabled = true;
+    // private void TryHairComb()
+    // {
+    //     fillCircleBar.Show();
+    //     if (_tweenHairComb == null)
+    //     {
+    //         _tweenHairComb = DOVirtual
+    //             .Float(0f, 1f, hairCombTime, value =>
+    //             {
+    //                 fillCircleBar.Fill(value);
+    //                 SetSlotsAlpha(hairCombSlots, 1 - value);
+    //             })
+    //             .SetEase(Ease.Linear)
+    //             .OnComplete(() =>
+    //             {
+    //                 _tweenHairComb = null;
+    //                 TryEndHairComb();
+    //             });
+    //     }
+    //     else if (!_tweenHairComb.IsPlaying())
+    //     {
+    //         _tweenHairComb.Play();
+    //     }
+    // }
 
-        for (int i = 0; i < listThrowObject.Count; i++)
-        {
-            SonThrowObject obj = listThrowObject[i];
+    // private void TryPauseHairComb()
+    // {
+    //     fillCircleBar.Hide();
+    //     _tweenHairComb?.Pause();
+    // }
 
-            obj.onRemoveItem.AddListener(() =>
-            {
-                int removedIndex = listThrowObject.IndexOf(obj);
-                if (removedIndex < 0) return;
-                listThrowObject.RemoveAt(removedIndex);
-                TutorialManager.Ins.ListTfClothes.RemoveAt(removedIndex);
-                TutorialManager.Ins.ListTfTargetClothes.RemoveAt(removedIndex);
-                if (listThrowObject.Count == 0)
-                {
-                    DoneStep();
-                    TryNextStep();
-                }
-                if (listThrowObject.Count == 1)
-                {
-                    EndGame();
-                }
-            });
-        }
-    }
-    #endregion
+    // private void TryEndHairComb()
+    // {
+    //     _tweenHairComb?.Kill();
+    //     _tweenHairComb = null;
+    //     fillCircleBar.Hide();
+    //     DisableHairCombTrigger();
+    //     SetSlotsAlpha(hairCombSlots, 0f);
+    //     itemHairComb.onDragStart.RemoveListener(EnableHairCombTrigger);
+    //     itemHairComb.onDragStop.RemoveListener(DisableHairCombTrigger);
+    //     hairCombTrigger.onEnterZone.RemoveListener(TryHairComb);
+    //     hairCombTrigger.onOutZone.RemoveListener(TryPauseHairComb);
+    //     DoneStep();
+    // }
+    // #endregion
+    // #region Step3
+    // [SerializeField] private SonDragItemBase itemSprayBottle;
+    // [SerializeField] private OnTransformGoToAffectZone sprayBottleTrigger;
+    // [SerializeField] private float sprayBottleTime = 3f;
+    // [SerializeField] private SlotAttachmentPairList sprayBottleSlots;
+    // [SerializeField] private SlotAttachmentPairList hairOldSlots;
+    // private Tween _tweenSprayBottle;
+
+    // private void OnStartStep3()
+    // {
+    //     itemSprayBottle.AddUseInStep(StepManager.Ins.CurrentStep);
+    //     itemSprayBottle.onDragStart.AddListener(EnableSprayBottleTrigger);
+    //     itemSprayBottle.onDragStop.AddListener(DisableSprayBottleTrigger);
+    //     sprayBottleTrigger.onEnterZone.AddListener(TrySprayBottle);
+    //     sprayBottleTrigger.onOutZone.AddListener(TryPauseSprayBottle);
+
+    //     sprayBottleTrigger.enabled = false;
+    //     fillCircleBar.ReFill();
+    //     InitSlots(sprayBottleSlots);
+    // }
+
+    // private bool isTapSpray = false;
+    // private void EnableSprayBottleTrigger()
+    // {
+    //     if (isTapSpray == false)
+    //     {
+    //         TutorialManager.Ins.SetNewTime(3f);
+    //         isTapSpray = true;
+    //     }
+    //     sprayBottleTrigger.enabled = true;
+    // }
+
+    // private void DisableSprayBottleTrigger() => sprayBottleTrigger.enabled = false;
+
+    // private void TrySprayBottle()
+    // {
+    //     fillCircleBar.Show();
+    //     if (_tweenSprayBottle == null)
+    //     {
+    //         _tweenSprayBottle = DOVirtual
+    //             .Float(0f, 1f, sprayBottleTime, value =>
+    //             {
+    //                 fillCircleBar.Fill(value);
+    //                 SetSlotsAlpha(sprayBottleSlots, value);
+    //                 SetSlotsAlpha(hairOldSlots, 1 - value);
+    //             })
+    //             .SetEase(Ease.Linear)
+    //             .OnComplete(() =>
+    //             {
+    //                 _tweenSprayBottle = null;
+    //                 TryEndSprayBottle();
+    //             });
+    //     }
+    //     else if (!_tweenSprayBottle.IsPlaying())
+    //     {
+    //         _tweenSprayBottle.Play();
+    //     }
+    // }
+
+    // private void TryPauseSprayBottle()
+    // {
+    //     fillCircleBar.Hide();
+    //     _tweenSprayBottle?.Pause();
+    // }
+
+    // private void TryEndSprayBottle()
+    // {
+    //     _tweenSprayBottle?.Kill();
+    //     _tweenSprayBottle = null;
+    //     fillCircleBar.Hide();
+    //     DisableSprayBottleTrigger();
+    //     SetSlotsAlpha(sprayBottleSlots, 1f);
+    //     itemSprayBottle.onDragStart.RemoveListener(EnableSprayBottleTrigger);
+    //     itemSprayBottle.onDragStop.RemoveListener(DisableSprayBottleTrigger);
+    //     sprayBottleTrigger.onEnterZone.RemoveListener(TrySprayBottle);
+    //     sprayBottleTrigger.onOutZone.RemoveListener(TryPauseSprayBottle);
+    //     DoneStep();
+    // }
+    // #endregion
+    // #region Step4
+    // [SerializeField] private SlotAttachmentPairList hairCombSlots2;
+    // [SerializeField] private SlotAttachmentPairList hairOldCombSlots2;
+    // private Tween _tweenHairComb2;
+    // private bool isTapComb2 = false;
+
+    // private void OnStartStep4()
+    // {
+    //     TutorialManager.Ins.enableCountTime = true;
+
+    //     itemHairComb.AddUseInStep(StepManager.Ins.CurrentStep);
+    //     itemHairComb.onDragStart.AddListener(EnableHairCombTrigger2);
+    //     itemHairComb.onDragStop.AddListener(DisableHairCombTrigger2);
+    //     hairCombTrigger.onEnterZone.AddListener(TryHairComb2);
+    //     hairCombTrigger.onOutZone.AddListener(TryPauseHairComb2);
+    //     hairCombTrigger.enabled = false;
+    //     fillCircleBar.ReFill();
+    //     InitSlots(hairCombSlots2);
+    // }
+
+    // private void EnableHairCombTrigger2()
+    // {
+    //     if (isTapComb2 == false)
+    //     {
+    //         TutorialManager.Ins.SetNewTime(3f);
+    //         isTapComb2 = true;
+    //     }
+    //     hairCombTrigger.enabled = true;
+    // }
+
+    // private void DisableHairCombTrigger2() => hairCombTrigger.enabled = false;
+
+    // private void TryHairComb2()
+    // {
+    //     fillCircleBar.Show();
+    //     if (_tweenHairComb2 == null)
+    //     {
+    //         _tweenHairComb2 = DOVirtual
+    //             .Float(0f, 1f, hairCombTime, value =>
+    //             {
+    //                 fillCircleBar.Fill(value);
+    //                 SetSlotsAlpha(hairCombSlots2, value);
+    //                 SetSlotsAlpha(hairOldCombSlots2, 1 - value);
+    //             })
+    //             .SetEase(Ease.Linear)
+    //             .OnComplete(() =>
+    //             {
+    //                 _tweenHairComb2 = null;
+    //                 TryEndHairComb2();
+    //             });
+    //     }
+    //     else if (!_tweenHairComb2.IsPlaying())
+    //     {
+    //         _tweenHairComb2.Play();
+    //     }
+    // }
+
+    // private void TryPauseHairComb2()
+    // {
+    //     fillCircleBar.Hide();
+    //     _tweenHairComb2?.Pause();
+    // }
+
+    // private void TryEndHairComb2()
+    // {
+    //     _tweenHairComb2?.Kill();
+    //     _tweenHairComb2 = null;
+    //     fillCircleBar.Hide();
+    //     DisableHairCombTrigger2();
+    //     SetSlotsAlpha(hairCombSlots2, 1f);
+    //     itemHairComb.onDragStart.RemoveListener(EnableHairCombTrigger2);
+    //     itemHairComb.onDragStop.RemoveListener(DisableHairCombTrigger2);
+    //     hairCombTrigger.onEnterZone.RemoveListener(TryHairComb2);
+    //     hairCombTrigger.onOutZone.RemoveListener(TryPauseHairComb2);
+    //     DoneStep();
+    // }
+    // #endregion
+    // #region Step5
+    // [SerializeField] private SonSnapObject snapHairLObject;
+    // [SerializeField] private SonSnapPoint snapHairLPoint;
+    // [SerializeField] private SlotAttachmentPairList hairMixL;
+
+    // private void OnStartStep5()
+    // {
+    //     snapHairLPoint.ChangeCanSnap(true);
+    //     snapHairLObject.OnSnap.AddListener(() =>
+    //     {
+    //         hairMixL.TurnSlotState(true);
+    //         DoneStep();
+    //         TryNextStep();
+    //     });
+    // }
+    // #endregion
+    // #region Step6
+    // [SerializeField] private SonSnapObject snapHairRObject;
+    // [SerializeField] private SonSnapPoint snapHairRPoint;
+    // [SerializeField] private SlotAttachmentPairList hairMixR;
+
+    // private void OnStartStep6()
+    // {
+    //     snapHairRPoint.ChangeCanSnap(true);
+    //     snapHairRObject.OnSnap.AddListener(() =>
+    //     {
+    //         hairMixR.TurnSlotState(true);
+    //         DoneStep();
+    //         TryNextStep();
+    //     });
+    // }
+
+    // #endregion
+    // #region Step7
+
+    // [SerializeField] private List<SonSnapObject> listSnapTieRObject;
+    // public List<SonSnapObject> ListSnapTieRObject => listSnapTieRObject;
+    // [SerializeField] private List<SonSnapPoint> listSnapTieRPoint;
+
+    // [SerializeField] private SlotAttachmentPairList hairTieL;
+    // public void SetStateSlotTieL()
+    // {
+    //     hairTieL.TurnSlotState(true);
+    // }
+    // [SerializeField] private SlotAttachmentPairList hairTieR;
+    // public void SetStateSlotTieR()
+    // {
+    //     hairTieR.TurnSlotState(true);
+    // }
+    // [SerializeField] private SlotAttachmentPairList hairEyePad;
+    // public void SetStateSloEyePad()
+    // {
+    //     hairEyePad.TurnSlotState(true);
+    // }
+    // [SerializeField] private SlotAttachmentPairList hairClip;
+    // public void SetStateSlotHairClip()
+    // {
+    //     hairClip.TurnSlotState(true);
+    // }
+
+    // private void OnStartStep7()
+    // {
+    //     foreach (SonSnapPoint point in listSnapTieRPoint)
+    //     {
+    //         point.ChangeCanSnap(true);
+    //     }
+    //     for (int i = 0; i < listSnapTieRObject.Count; i++)
+    //     {
+    //         SonSnapObject obj = listSnapTieRObject[i];
+    //         obj.OnSnap.AddListener(() =>
+    //         {
+    //             int removedIndex = listSnapTieRObject.IndexOf(obj);
+    //             if (removedIndex < 0) return;
+    //             listSnapTieRObject.RemoveAt(removedIndex);
+    //             TutorialManager.Ins.TutorialNode.RemoveAt(removedIndex);
+    //             TutorialManager.Ins.TfItem.RemoveAt(removedIndex);
+    //             if (listSnapTieRObject.Count == 0)
+    //             {
+    //                 TutorialManager.Ins.enableCountTime = false;
+    //                 DoneStep();
+    //                 TryNextStep();
+    //             }
+    //         });
+    //     }
+    // }
+    // #endregion
+    // #region Step8
+    // [SerializeField] private float detalOrthographicSize = 29f;
+    // [SerializeField] private float detalCamY = 18f;
+    // [SerializeField] private float timerOrThographic = 1.25f;
+
+    // [SerializeField] private SpriteAlphaGroup BGOld;
+    // [SerializeField] private SpriteAlphaGroup BGNew;
+    // [SerializeField] private SpriteRenderer spriteRenderer1, spriteRenderer2;
+    // private void OnStartStep8()
+    // {
+    //     effectStep1.Hide(0.75f);
+    //     effectStep1.onHide.AddListener(() =>
+    //     {
+    //         spriteRenderer1.gameObject.SetActive(true);
+    //         spriteRenderer2.gameObject.SetActive(true);
+    //         BGOld.FadeOut(timerOrThographic / 2);
+    //         BGNew.FadeIn(timerOrThographic / 2);
+    //         MoveCamera(cam, cam.orthographicSize + detalOrthographicSize, -detalCamY, timerOrThographic, () =>
+    //         {
+    //             StartStep8();
+    //             TutorialManager.Ins.enableCountTime = true;
+
+    //         });
+    //     });
+    // }
+    // [SerializeField] private List<SonThrowObject> listThrowObject;
+    // [SerializeField] private SonThrowObject throwObjectShirt;
+
+    // [SerializeField] private SlotAttachmentPairList slotShirt;
+    // [SerializeField] private SlotAttachmentPairList slotSkirt;
+
+    // public void OnSetStateSlotShirt(bool value)
+    // {
+    //     slotShirt.TurnSlotState(value);
+    // }
+    // public void OnSetStateSlotSkirt(bool value)
+    // {
+    //     slotSkirt.TurnSlotState(value);
+    // }
+    // private void StartStep8()
+    // {
+    //     throwObjectShirt.enabled = true;
+    //     throwObjectShirt.Col.enabled = true;
+
+    //     for (int i = 0; i < listThrowObject.Count; i++)
+    //     {
+    //         SonThrowObject obj = listThrowObject[i];
+
+    //         obj.onRemoveItem.AddListener(() =>
+    //         {
+    //             int removedIndex = listThrowObject.IndexOf(obj);
+    //             if (removedIndex < 0) return;
+    //             listThrowObject.RemoveAt(removedIndex);
+    //             TutorialManager.Ins.ListTfClothes.RemoveAt(removedIndex);
+    //             TutorialManager.Ins.ListTfTargetClothes.RemoveAt(removedIndex);
+    //             if (listThrowObject.Count == 0)
+    //             {
+    //                 DoneStep();
+    //                 TryNextStep();
+    //             }
+    //             if (listThrowObject.Count == 1)
+    //             {
+    //                 EndGame();
+    //             }
+    //         });
+    //     }
+    // }
+    // #endregion
 }
