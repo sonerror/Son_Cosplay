@@ -78,6 +78,7 @@ public class HandCtrl : MonoBehaviour
 
   void ShowHand()
   {
+    Debug.Log("Show Hint");
     transform.position = pos1;
     animator.SetTrigger("HandDown");
     transform.DOMove(pos2, 1f).SetDelay(0.75f)

@@ -10,6 +10,7 @@ namespace HoangHH
     [SerializeField] private Image timerImage;
     [SerializeField] private float showTime = 0.3f;
     [SerializeField] private float timeOut = 3f;
+    [SerializeField] private float scaleShow = 1f;
 
     public System.Action OnTimeOut;
     private Tween _showTween;
@@ -40,7 +41,7 @@ namespace HoangHH
       Tf.localScale = Vector3.zero;
       timerImage.fillAmount = 1;
       _showTween?.Kill();
-      _showTween = Tf.DOScale(Vector3.one, showTime);
+      _showTween = Tf.DOScale(Vector3.one * scaleShow, showTime);
       _isStartTimer = true;
       // sound?.Play();
     }

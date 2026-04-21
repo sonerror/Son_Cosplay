@@ -64,87 +64,65 @@ public class TutorialManager : Singleton<TutorialManager>
             ShowHint();
         }
     }
-    [SerializeField] private bool isTapGel = false;
-    public void ChangeStateIsTapGel(bool value)
-    {
-        isTapGel = value;
-    }
-    [SerializeField] private Transform tfComb;
-    [SerializeField] private Transform tfBrush;
-
-    [SerializeField] private Transform tfHairL;
-    [SerializeField] private Transform tfHairR;
-
-
-    [SerializeField] private Transform tfFace;
-    private bool isOpenBox = false;
-    public void SetIsOpenBox()
-    {
-        isOpenBox = true;
-    }
-
-
-
-
-    [SerializeField] private Transform tftfBox;
-    [SerializeField] private Transform tftfBoxThrow;
-
-
-
     [SerializeField] private List<Transform> listTfClothes = new List<Transform>();
     [SerializeField] private List<Transform> listTfTargetClothes = new List<Transform>();
     public List<Transform> ListTfClothes => listTfClothes;
     public List<Transform> ListTfTargetClothes => listTfTargetClothes;
+
+    [SerializeField] private Transform tfWigHair;
+    [SerializeField] private Transform tfHair;
+
+    [SerializeField] private Transform tfBody;
+    [SerializeField] private Transform tfSpay1;
+    [SerializeField] private Transform tfSpay2;
+
+
+    [SerializeField] private List<Transform> listTfSticker = new List<Transform>();
+    [SerializeField] private List<Transform> listTfTargetSticker = new List<Transform>();
+    public List<Transform> ListTfSticker => listTfSticker;
+    public List<Transform> ListTfTargetSticker => listTfTargetSticker;
+
+
+    [SerializeField] private Transform tfLens;
+    [SerializeField] private Transform tfEyes;
+
+
     void ShowHint()
     {
         if (disableHand) return;
         enableCountTime = false;
         int index = gamePlayManager.CurrentStep;
+        Debug.Log("index : " + index);
         switch (index)
         {
             case 0:
                 return;
             case 1:
-                handCtrl.gameObject.SetActive(true);
-                handCtrl.ShowHandPosToPos(tfComb.position, tfFace.position);
+                TutorialStepCurrent(0);
                 return;
             case 2:
                 handCtrl.gameObject.SetActive(true);
-                handCtrl.ShowHandPosToPos(tfBrush.position, tfFace.position);
+                handCtrl.ShowHandPosToPos(tfWigHair.position, tfHair.position);
                 return;
             case 3:
                 handCtrl.gameObject.SetActive(true);
-                handCtrl.ShowHandPosToPos(tfComb.position, tfFace.position);
+                handCtrl.ShowHandPosToPos(tfSpay1.position, tfBody.position);
                 return;
             case 4:
-                if (isOpenBox == false)
-                {
-                    handCtrl.gameObject.SetActive(true);
-                    handCtrl.ShowHandPosToPos(tftfBox.position, tftfBoxThrow.position);
-                }
-                else
-                {
-                    handCtrl.gameObject.SetActive(true);
-                    handCtrl.ShowHandPosToPos(tftfBox.position, tfHairR.position);
-                }
+                handCtrl.gameObject.SetActive(true);
+                handCtrl.ShowHandPosToPos(tfSpay2.position, tfBody.position);
                 return;
             case 5:
-                handCtrl.gameObject.SetActive(true);
-                handCtrl.ShowHandPosToPos(tftfBox.position, tfHairL.position);
+                TutorialStep6(0);
                 return;
             case 6:
-                if (handCtrl == null) return;
-                if (0 >= tfItem.Count || 0 >= tutorialNode.Count) return;
-                handCtrl.gameObject.SetActive(true);
-                handCtrl.ShowHandPosToPos(tutorialNode[0].position, tfItem[0].position);
                 return;
             case 7:
-                if (handCtrlMakeup == null) return;
-                if (0 >= listTfClothes.Count || 0 >= listTfTargetClothes.Count) return;
-                handCtrlMakeup.gameObject.SetActive(true);
-                handCtrlMakeup.ShowHandPosToPos(listTfClothes[0].position, listTfTargetClothes[0].position);
+                TutorialStep8(0);
                 return;
             case 8:
+                handCtrlMakeup.gameObject.SetActive(true);
+                handCtrlMakeup.ShowHandPosToPos(tfLens.position, tfEyes.position);
                 return;
             default:
                 resetTimeHint();
@@ -155,10 +133,42 @@ public class TutorialManager : Singleton<TutorialManager>
     {
         isTap = value;
     }
-    void HideHint()
+    private void HideHint()
     {
         handCtrl.gameObject.SetActive(false);
         handCtrlMakeup.gameObject.SetActive(false);
+    }
+    private void TutorialStepCurrent(int indexStep)
+    {
+        if (handCtrl == null) return;
+        if (indexStep >= listTfClothes.Count || indexStep >= listTfTargetClothes.Count) return;
+        handCtrl.gameObject.SetActive(true);
+        var tf = listTfClothes[indexStep];
+        var tfTarget = listTfTargetClothes[indexStep];
+        handCtrl.ShowHandPosToPos(tf.gameObject.transform.position, tfTarget.transform.position);
+    }
+    private void TutorialStep6(int indexStep)
+    {
+        if (handCtrl == null) return;
+        if (indexStep >= listTfSticker.Count || indexStep >= listTfTargetSticker.Count) return;
+        handCtrl.gameObject.SetActive(true);
+        var tf = listTfSticker[indexStep];
+        var tfTarget = listTfTargetSticker[indexStep];
+        handCtrl.ShowHandPosToPos(tf.gameObject.transform.position, tfTarget.transform.position);
+    }
+
+    [SerializeField] private List<Transform> listTfDragSticker = new List<Transform>();
+    [SerializeField] private List<Transform> listTfDragTargetSticker = new List<Transform>();
+    public List<Transform> ListTfDragSticker => listTfDragSticker;
+    public List<Transform> ListTfDragTargetSticker => listTfDragTargetSticker;
+    private void TutorialStep8(int indexStep)
+    {
+        if (handCtrl == null) return;
+        if (indexStep >= listTfDragSticker.Count || indexStep >= listTfDragTargetSticker.Count) return;
+        handCtrl.gameObject.SetActive(true);
+        var tf = listTfDragSticker[indexStep];
+        var tfTarget = listTfDragTargetSticker[indexStep];
+        handCtrl.ShowHandPosToPos(tf.gameObject.transform.position, tfTarget.transform.position);
     }
     public void resetTimeHint()
     {

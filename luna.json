@@ -2,7 +2,7 @@
     "version": "7.1.0",
     "projectId": "f42e7ff96e4545544bb6cd68f51ab634",
     "applicationID": 34683,
-    "creativeName": "R1_Cosplaydom_ver12_nurse_GG",
+    "creativeName": "R1_Cosplaydom_ver13_mummy_GG",
     "pgServer": "EU",
     "window": {
         "‐⁙": true
@@ -137,7 +137,7 @@
             ]
         },
         "scenes": [
-            "Assets/_GAME/SonGame/Level/LevelNurse/LevelNurse.unity"
+            "Assets/_GAME/SonGame/Level/LevelMummy/LevelMummy.unity"
         ],
         "disabledScenes": [
             "Assets/Scenes/LevelMain.unity",
@@ -145,6 +145,7 @@
             "Assets/_GAME/Levels/LvCosplayWenesday/Level53.unity",
             "Assets/_GAME/SonGame/Level/LevelFran/LevelFran.unity",
             "Assets/_GAME/SonGame/Level/LevelMaleficent/Level98Maleficent.unity",
+            "Assets/_GAME/SonGame/Level/LevelNurse/LevelNurse.unity",
             "Assets/_GAME/SonGame/Level/LevelReaper/LevelReaper.unity",
             "Assets/_GAME/SonGame/Level/LevelRedQueen/LevelRedQueen.unity",
             "Assets/_GAME/SonGame/Level/LevelSailorMoon/LevelSailorMoon.unity",
@@ -8728,10 +8729,6 @@
                 "excluded": true
             },
             {
-                "name": "Spine.PathAttachment",
-                "excluded": true
-            },
-            {
                 "name": "Spine.PathConstraintMixTimeline",
                 "excluded": true
             },
@@ -8749,10 +8746,6 @@
             },
             {
                 "name": "Spine.RGBTimeline",
-                "excluded": true
-            },
-            {
-                "name": "Spine.TransformConstraintTimeline",
                 "excluded": true
             },
             {
@@ -8949,7 +8942,7 @@
             },
             {
                 "name": "Spine.PositionMode",
-                "excluded": true
+                "excluded": false
             },
             {
                 "name": "Spine.Property",
@@ -8957,7 +8950,7 @@
             },
             {
                 "name": "Spine.RotateMode",
-                "excluded": true
+                "excluded": false
             },
             {
                 "name": "Spine.SequenceMode",
@@ -8973,7 +8966,7 @@
             },
             {
                 "name": "Spine.SpacingMode",
-                "excluded": true
+                "excluded": false
             },
             {
                 "name": "Spine.TextureFilter",
@@ -20059,7 +20052,7 @@
                     },
                     {
                         "name": "fillAmount#get",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "material#set",
@@ -39452,10 +39445,6 @@
                         "excluded": false
                     },
                     {
-                        "name": "SetStep",
-                        "excluded": true
-                    },
-                    {
                         "name": "SetStateDoneStep",
                         "excluded": true
                     },
@@ -39516,10 +39505,6 @@
                         "excluded": false
                     },
                     {
-                        "name": "ShowClockTimer",
-                        "excluded": true
-                    },
-                    {
                         "name": "InitSlots",
                         "excluded": false
                     },
@@ -39568,99 +39553,111 @@
                         "excluded": false
                     },
                     {
-                        "name": "OnSetStateSlotShirt",
-                        "excluded": false
-                    },
-                    {
-                        "name": "StartStep8",
-                        "excluded": false
-                    },
-                    {
-                        "name": "ListSnapTieRObject#get",
-                        "excluded": true
-                    },
-                    {
-                        "name": "SetSlotStart",
-                        "excluded": false
-                    },
-                    {
                         "name": "InitSlotsDone",
                         "excluded": true
                     },
                     {
-                        "name": "EnableHairCombTrigger",
+                        "name": "OnSetStateSlotTopBase",
                         "excluded": false
                     },
                     {
-                        "name": "DisableHairCombTrigger",
+                        "name": "OnSetStateSlotDressBase",
                         "excluded": false
                     },
                     {
-                        "name": "TryHairComb",
+                        "name": "OnSetStateSlotShoeL",
                         "excluded": false
                     },
                     {
-                        "name": "TryPauseHairComb",
+                        "name": "OnSetStateSlotShoeR",
                         "excluded": false
                     },
                     {
-                        "name": "TryEndHairComb",
+                        "name": "SetStateSlotHair",
                         "excluded": false
                     },
                     {
-                        "name": "EnableSprayBottleTrigger",
+                        "name": "StartStep4",
                         "excluded": false
                     },
                     {
-                        "name": "DisableSprayBottleTrigger",
+                        "name": "OnSprayBottleDragStart",
                         "excluded": false
                     },
                     {
-                        "name": "TrySprayBottle",
+                        "name": "OnSprayBottleDragStop",
                         "excluded": false
                     },
                     {
-                        "name": "TryPauseSprayBottle",
+                        "name": "OnSprayBottleEnterZone",
                         "excluded": false
                     },
                     {
-                        "name": "TryEndSprayBottle",
+                        "name": "OnSprayBottleExitZone",
                         "excluded": false
                     },
                     {
-                        "name": "EnableHairCombTrigger2",
+                        "name": "OnSprayBottleCompleted",
                         "excluded": false
                     },
                     {
-                        "name": "DisableHairCombTrigger2",
+                        "name": "OnSprayBottle2DragStart",
                         "excluded": false
                     },
                     {
-                        "name": "TryHairComb2",
+                        "name": "OnSprayBottle2DragStop",
                         "excluded": false
                     },
                     {
-                        "name": "TryPauseHairComb2",
+                        "name": "OnSprayBottle2EnterZone",
                         "excluded": false
                     },
                     {
-                        "name": "TryEndHairComb2",
+                        "name": "OnSprayBottle2ExitZone",
                         "excluded": false
                     },
                     {
-                        "name": "SetStateSlotTieL",
+                        "name": "OnSprayBottle2Completed",
                         "excluded": false
                     },
                     {
-                        "name": "SetStateSlotTieR",
+                        "name": "SetStateSlotStickerFace",
                         "excluded": false
                     },
                     {
-                        "name": "SetStateSloEyePad",
+                        "name": "SetStateSlotStickerHand",
                         "excluded": false
                     },
                     {
-                        "name": "SetStateSlotHairClip",
+                        "name": "SetStateSlotStickerLeg",
+                        "excluded": false
+                    },
+                    {
+                        "name": "IE_DelayStep7",
+                        "excluded": false
+                    },
+                    {
+                        "name": "StickerfadeSprites",
+                        "excluded": false
+                    },
+                    {
+                        "name": "OnSetStateSlotStickerFace",
+                        "excluded": false
+                    },
+                    {
+                        "name": "OnSetStateSlotStickerBody",
+                        "excluded": false
+                    },
+                    {
+                        "name": "OnSetStateSlotStickerLeg",
+                        "excluded": false
+                    },
+                    {
+                        "name": "OnStartStep9",
+                        "excluded": false
+                    },
+                    {
+                        "name": "IE_DelayStep9",
                         "excluded": false
                     }
                 ]
@@ -40504,10 +40501,6 @@
                         "excluded": false
                     },
                     {
-                        "name": "ChangeStateIsTapGel",
-                        "excluded": false
-                    },
-                    {
                         "name": "ShowHint",
                         "excluded": false
                     },
@@ -40552,7 +40545,31 @@
                         "excluded": false
                     },
                     {
-                        "name": "SetIsOpenBox",
+                        "name": "ListTfSticker#get",
+                        "excluded": false
+                    },
+                    {
+                        "name": "ListTfTargetSticker#get",
+                        "excluded": false
+                    },
+                    {
+                        "name": "ListTfDragSticker#get",
+                        "excluded": false
+                    },
+                    {
+                        "name": "ListTfDragTargetSticker#get",
+                        "excluded": false
+                    },
+                    {
+                        "name": "TutorialStepCurrent",
+                        "excluded": false
+                    },
+                    {
+                        "name": "TutorialStep6",
+                        "excluded": false
+                    },
+                    {
+                        "name": "TutorialStep8",
                         "excluded": false
                     }
                 ]
@@ -41593,7 +41610,7 @@
                 "instanceMethods": [
                     {
                         "name": "Data#get",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "Time#get",
@@ -41641,7 +41658,7 @@
                     },
                     {
                         "name": "ctor",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "toString",
@@ -41659,7 +41676,7 @@
                     },
                     {
                         "name": "ctor",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "toString",
@@ -41979,15 +41996,15 @@
                     },
                     {
                         "name": "SortPathConstraint",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "SortPathConstraintAttachment$1",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "SortPathConstraintAttachment",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "SortPhysicsConstraint",
@@ -42459,7 +42476,7 @@
                     },
                     {
                         "name": "Attachments#get",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "Bones#get",
@@ -42525,7 +42542,7 @@
                     },
                     {
                         "name": "SlotIndex#get",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "Name#get",
@@ -43431,7 +43448,7 @@
                     },
                     {
                         "name": "DisableIKControl",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "EnableIKControl",
@@ -43667,19 +43684,19 @@
                     },
                     {
                         "name": "Update",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "Show",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "Show$1",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "Hide",
-                        "excluded": true
+                        "excluded": false
                     }
                 ]
             },
@@ -44089,7 +44106,7 @@
                     },
                     {
                         "name": "NewPathAttachment",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "NewPointAttachment",
@@ -44507,7 +44524,7 @@
                     },
                     {
                         "name": "Apply",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "Bones#get",
@@ -44679,7 +44696,7 @@
                     },
                     {
                         "name": "ArraysFill",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "AddBeforePosition",
@@ -44691,7 +44708,7 @@
                     },
                     {
                         "name": "AddCurvePosition",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "Position#get",
@@ -44755,7 +44772,7 @@
                     },
                     {
                         "name": "$ctor1",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "ctor",
@@ -44767,11 +44784,11 @@
                     },
                     {
                         "name": "Update",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "ComputeWorldPositions",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "toString",
@@ -44785,7 +44802,7 @@
                 "instanceMethods": [
                     {
                         "name": "Bones#get",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "Target#get",
@@ -44869,11 +44886,11 @@
                     },
                     {
                         "name": "init",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "ctor",
-                        "excluded": true
+                        "excluded": false
                     }
                 ]
             },
@@ -46669,11 +46686,11 @@
                     },
                     {
                         "name": "ctor",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "SetFrame",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "Apply",
@@ -46935,7 +46952,7 @@
                     },
                     {
                         "name": "Col#get",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "init",
@@ -47125,6 +47142,82 @@
                     },
                     {
                         "name": "Apply",
+                        "excluded": false
+                    }
+                ]
+            },
+            {
+                "className": "Spine.PathAttachment",
+                "staticMethods": [],
+                "instanceMethods": [
+                    {
+                        "name": "Lengths#get",
+                        "excluded": true
+                    },
+                    {
+                        "name": "Lengths#set",
+                        "excluded": true
+                    },
+                    {
+                        "name": "Closed#get",
+                        "excluded": false
+                    },
+                    {
+                        "name": "Closed#set",
+                        "excluded": true
+                    },
+                    {
+                        "name": "ConstantSpeed#get",
+                        "excluded": false
+                    },
+                    {
+                        "name": "ConstantSpeed#set",
+                        "excluded": true
+                    },
+                    {
+                        "name": "$ctor1",
+                        "excluded": false
+                    },
+                    {
+                        "name": "ctor",
+                        "excluded": true
+                    },
+                    {
+                        "name": "Copy",
+                        "excluded": true
+                    }
+                ]
+            },
+            {
+                "className": "Spine.TransformConstraintTimeline",
+                "staticMethods": [],
+                "instanceMethods": [
+                    {
+                        "name": "init",
+                        "excluded": false
+                    },
+                    {
+                        "name": "FrameEntries#get",
+                        "excluded": false
+                    },
+                    {
+                        "name": "TransformConstraintIndex#get",
+                        "excluded": true
+                    },
+                    {
+                        "name": "ctor",
+                        "excluded": false
+                    },
+                    {
+                        "name": "SetFrame",
+                        "excluded": false
+                    },
+                    {
+                        "name": "Apply",
+                        "excluded": false
+                    },
+                    {
+                        "name": "GetCurveValue",
                         "excluded": false
                     }
                 ]
@@ -47645,6 +47738,36 @@
                         "script": "",
                         "ext": "",
                         "name": "Assets/_GAME/SonGame/Level/LevelNurse/Texture/Gemini_Generated_Image_ml0mwdml0mwdml0m copy.png"
+                    },
+                    {
+                        "maxWidth": 2048,
+                        "maxHeight": 2048,
+                        "format": "png32",
+                        "compression": "quantSize",
+                        "quality": 65,
+                        "script": "",
+                        "ext": "",
+                        "name": "Assets/_GAME/SonGame/Level/LevelMummy/Anim/mummy.png"
+                    },
+                    {
+                        "maxWidth": 1024,
+                        "maxHeight": 1024,
+                        "format": "png32",
+                        "compression": "quantSize",
+                        "quality": 65,
+                        "script": "",
+                        "ext": "",
+                        "name": "Assets/_GAME/SonGame/Level/LevelMummy/Texture/BG.png"
+                    },
+                    {
+                        "maxWidth": 1024,
+                        "maxHeight": 1024,
+                        "format": "png32",
+                        "compression": "quantSize",
+                        "quality": 65,
+                        "script": "",
+                        "ext": "",
+                        "name": "Assets/_GAME/SonGame/Level/LevelMummy/Texture/BG-costum-halo.png"
                     }
                 ]
             },

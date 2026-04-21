@@ -47,5 +47,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/_GAME/SonGame/Level/LevelNurse/LevelNurse.unity
     guid: 454c71365e44d2249a1fc1d9e1a1e19d
+  - enabled: 1
+    path: Assets/_GAME/SonGame/Level/LevelMummy/LevelMummy.unity
+    guid: fd0f99cfedb319a4eb83c6cb35f8a26e
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0
