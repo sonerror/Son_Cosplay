@@ -50,5 +50,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/_GAME/SonGame/Level/LevelMummy/LevelMummy.unity
     guid: fd0f99cfedb319a4eb83c6cb35f8a26e
+  - enabled: 1
+    path: Assets/_GAME/SonGame/Level/LevelSnowMiku/LevelSnowMiku.unity
+    guid: 2a7d54c50627d4e49bd6347ad0526f39
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0

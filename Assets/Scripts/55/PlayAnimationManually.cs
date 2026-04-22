@@ -10,7 +10,7 @@ namespace HoangHH
         public UnityEvent onPlayComplete;
 
         private Tween _delayWaitAnimDone;
-        
+
         public void PlayAnimation()
         {
             anim.Play();
@@ -20,7 +20,11 @@ namespace HoangHH
                 onPlayComplete?.Invoke();
             });
         }
-
+        public void StopAnim()
+        {
+            anim.Stop();
+            _delayWaitAnimDone?.Kill();
+        }
         public void PlayAnimation(float delay)
         {
             Invoke(nameof(PlayAnimation), delay);

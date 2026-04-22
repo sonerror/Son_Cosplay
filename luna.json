@@ -2,7 +2,7 @@
     "version": "7.1.0",
     "projectId": "f42e7ff96e4545544bb6cd68f51ab634",
     "applicationID": 34683,
-    "creativeName": "R1_Cosplaydom_ver13_mummy_GG",
+    "creativeName": "R1_Cosplaydom_ver14_miku_GG",
     "pgServer": "EU",
     "window": {
         "‐⁙": true
@@ -137,7 +137,7 @@
             ]
         },
         "scenes": [
-            "Assets/_GAME/SonGame/Level/LevelMummy/LevelMummy.unity"
+            "Assets/_GAME/SonGame/Level/LevelSnowMiku/LevelSnowMiku.unity"
         ],
         "disabledScenes": [
             "Assets/Scenes/LevelMain.unity",
@@ -145,6 +145,7 @@
             "Assets/_GAME/Levels/LvCosplayWenesday/Level53.unity",
             "Assets/_GAME/SonGame/Level/LevelFran/LevelFran.unity",
             "Assets/_GAME/SonGame/Level/LevelMaleficent/Level98Maleficent.unity",
+            "Assets/_GAME/SonGame/Level/LevelMummy/LevelMummy.unity",
             "Assets/_GAME/SonGame/Level/LevelNurse/LevelNurse.unity",
             "Assets/_GAME/SonGame/Level/LevelReaper/LevelReaper.unity",
             "Assets/_GAME/SonGame/Level/LevelRedQueen/LevelRedQueen.unity",
@@ -8610,10 +8611,6 @@
             },
             {
                 "name": "sonnv.SonEffectShowObject",
-                "excluded": true
-            },
-            {
-                "name": "sonnv.TapBox",
                 "excluded": true
             },
             {
@@ -17646,7 +17643,7 @@
                     },
                     {
                         "name": "localEulerAngles#set",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "eulerAngles#set",
@@ -34296,7 +34293,7 @@
                     },
                     {
                         "name": "IsActive",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "IsBackwards",
@@ -39557,26 +39554,6 @@
                         "excluded": true
                     },
                     {
-                        "name": "OnSetStateSlotTopBase",
-                        "excluded": false
-                    },
-                    {
-                        "name": "OnSetStateSlotDressBase",
-                        "excluded": false
-                    },
-                    {
-                        "name": "OnSetStateSlotShoeL",
-                        "excluded": false
-                    },
-                    {
-                        "name": "OnSetStateSlotShoeR",
-                        "excluded": false
-                    },
-                    {
-                        "name": "SetStateSlotHair",
-                        "excluded": false
-                    },
-                    {
                         "name": "StartStep4",
                         "excluded": false
                     },
@@ -39601,63 +39578,163 @@
                         "excluded": false
                     },
                     {
-                        "name": "OnSprayBottle2DragStart",
-                        "excluded": false
-                    },
-                    {
-                        "name": "OnSprayBottle2DragStop",
-                        "excluded": false
-                    },
-                    {
-                        "name": "OnSprayBottle2EnterZone",
-                        "excluded": false
-                    },
-                    {
-                        "name": "OnSprayBottle2ExitZone",
-                        "excluded": false
-                    },
-                    {
-                        "name": "OnSprayBottle2Completed",
-                        "excluded": false
-                    },
-                    {
-                        "name": "SetStateSlotStickerFace",
-                        "excluded": false
-                    },
-                    {
-                        "name": "SetStateSlotStickerHand",
-                        "excluded": false
-                    },
-                    {
-                        "name": "SetStateSlotStickerLeg",
-                        "excluded": false
-                    },
-                    {
-                        "name": "IE_DelayStep7",
-                        "excluded": false
-                    },
-                    {
-                        "name": "StickerfadeSprites",
-                        "excluded": false
-                    },
-                    {
-                        "name": "OnSetStateSlotStickerFace",
-                        "excluded": false
-                    },
-                    {
-                        "name": "OnSetStateSlotStickerBody",
-                        "excluded": false
-                    },
-                    {
-                        "name": "OnSetStateSlotStickerLeg",
-                        "excluded": false
-                    },
-                    {
                         "name": "OnStartStep9",
                         "excluded": false
                     },
                     {
-                        "name": "IE_DelayStep9",
+                        "name": "SetSlotStart",
+                        "excluded": false
+                    },
+                    {
+                        "name": "IE_DelayStep2",
+                        "excluded": false
+                    },
+                    {
+                        "name": "SetIsTrigger",
+                        "excluded": false
+                    },
+                    {
+                        "name": "StartStep3",
+                        "excluded": false
+                    },
+                    {
+                        "name": "OnBrushEyeDragStart",
+                        "excluded": false
+                    },
+                    {
+                        "name": "OnBrushEyeDragStop",
+                        "excluded": false
+                    },
+                    {
+                        "name": "UpdateFillCircleBar",
+                        "excluded": false
+                    },
+                    {
+                        "name": "OnBrushEyeEnterZoneL",
+                        "excluded": false
+                    },
+                    {
+                        "name": "OnBrushEyeExitZoneL",
+                        "excluded": false
+                    },
+                    {
+                        "name": "OnBrushEyeCompletedL",
+                        "excluded": false
+                    },
+                    {
+                        "name": "OnBrushEyeEnterZoneR",
+                        "excluded": false
+                    },
+                    {
+                        "name": "OnBrushEyeExitZoneR",
+                        "excluded": false
+                    },
+                    {
+                        "name": "OnBrushEyeCompletedR",
+                        "excluded": false
+                    },
+                    {
+                        "name": "TryFinishBrushEyeStep",
+                        "excluded": false
+                    },
+                    {
+                        "name": "OnEyeLashDragStart",
+                        "excluded": false
+                    },
+                    {
+                        "name": "OnEyeLashDragStop",
+                        "excluded": false
+                    },
+                    {
+                        "name": "UpdateEyeLashFillCircleBar",
+                        "excluded": false
+                    },
+                    {
+                        "name": "OnEyeLashEnterZoneL",
+                        "excluded": false
+                    },
+                    {
+                        "name": "OnEyeLashExitZoneL",
+                        "excluded": false
+                    },
+                    {
+                        "name": "OnEyeLashCompletedL",
+                        "excluded": false
+                    },
+                    {
+                        "name": "OnEyeLashEnterZoneR",
+                        "excluded": false
+                    },
+                    {
+                        "name": "OnEyeLashExitZoneR",
+                        "excluded": false
+                    },
+                    {
+                        "name": "OnEyeLashCompletedR",
+                        "excluded": false
+                    },
+                    {
+                        "name": "TryFinishEyeLashStep",
+                        "excluded": false
+                    },
+                    {
+                        "name": "SetIsLipStickTrigger",
+                        "excluded": true
+                    },
+                    {
+                        "name": "StartStep5",
+                        "excluded": false
+                    },
+                    {
+                        "name": "OnLipStickDragStart",
+                        "excluded": false
+                    },
+                    {
+                        "name": "OnLipStickDragStop",
+                        "excluded": false
+                    },
+                    {
+                        "name": "OnLipStickEnterZone",
+                        "excluded": false
+                    },
+                    {
+                        "name": "OnLipStickExitZone",
+                        "excluded": false
+                    },
+                    {
+                        "name": "OnLipStickCompleted",
+                        "excluded": false
+                    },
+                    {
+                        "name": "OnSetStateSlotHandBand",
+                        "excluded": false
+                    },
+                    {
+                        "name": "OnSetStateSlotHairCut",
+                        "excluded": false
+                    },
+                    {
+                        "name": "StartStep8",
+                        "excluded": false
+                    },
+                    {
+                        "name": "OnSetStateSlotHairDoneL",
+                        "excluded": false
+                    },
+                    {
+                        "name": "OnSetStateSlotHairDoneR",
+                        "excluded": false
+                    },
+                    {
+                        "name": "OnSetStateSlotDecoDoneL",
+                        "excluded": false
+                    },
+                    {
+                        "name": "OnSetStateSlotDecoDoneR",
+                        "excluded": false
+                    },
+                    {
+                        "name": "OnStartStep10",
                         "excluded": false
                     }
                 ]
@@ -40537,39 +40614,31 @@
                         "excluded": false
                     },
                     {
-                        "name": "ListTfClothes#get",
-                        "excluded": false
-                    },
-                    {
-                        "name": "ListTfTargetClothes#get",
-                        "excluded": false
-                    },
-                    {
-                        "name": "ListTfSticker#get",
-                        "excluded": false
-                    },
-                    {
-                        "name": "ListTfTargetSticker#get",
-                        "excluded": false
-                    },
-                    {
-                        "name": "ListTfDragSticker#get",
-                        "excluded": false
-                    },
-                    {
-                        "name": "ListTfDragTargetSticker#get",
-                        "excluded": false
-                    },
-                    {
-                        "name": "TutorialStepCurrent",
-                        "excluded": false
-                    },
-                    {
-                        "name": "TutorialStep6",
-                        "excluded": false
-                    },
-                    {
                         "name": "TutorialStep8",
+                        "excluded": false
+                    },
+                    {
+                        "name": "ListTfDragTie#get",
+                        "excluded": false
+                    },
+                    {
+                        "name": "ListTfDragTargetTie#get",
+                        "excluded": false
+                    },
+                    {
+                        "name": "ListTfDragAccessory#get",
+                        "excluded": false
+                    },
+                    {
+                        "name": "ListTfDragTargerAccessory#get",
+                        "excluded": false
+                    },
+                    {
+                        "name": "SetIsTriggerBox",
+                        "excluded": false
+                    },
+                    {
+                        "name": "TutorialStep9",
                         "excluded": false
                     }
                 ]
@@ -40850,15 +40919,15 @@
                     },
                     {
                         "name": "ShowHandPosToPosToPos",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "ShowHandThree",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "IEShowHandThree",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "ShowHand",
@@ -43542,15 +43611,15 @@
                     },
                     {
                         "name": "CloseEye",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "OnDisable",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "OpenEye",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "SetPositionLower75",
@@ -47221,6 +47290,112 @@
                         "excluded": false
                     }
                 ]
+            },
+            {
+                "className": "HoangHH.PlayAnimationManually",
+                "staticMethods": [],
+                "instanceMethods": [
+                    {
+                        "name": "PlayAnimation",
+                        "excluded": false
+                    },
+                    {
+                        "name": "PlayAnimation$1",
+                        "excluded": true
+                    },
+                    {
+                        "name": "StopAnim",
+                        "excluded": false
+                    }
+                ]
+            },
+            {
+                "className": "VinhLB.Transformation",
+                "staticMethods": [],
+                "instanceMethods": [
+                    {
+                        "name": "init",
+                        "excluded": false
+                    },
+                    {
+                        "name": "Awake",
+                        "excluded": false
+                    },
+                    {
+                        "name": "SetTargetLocalRotation",
+                        "excluded": true
+                    },
+                    {
+                        "name": "ResetLocalRotation",
+                        "excluded": false
+                    }
+                ]
+            },
+            {
+                "className": "sonnv.TapBox",
+                "staticMethods": [],
+                "instanceMethods": [
+                    {
+                        "name": "IsTapDone#get",
+                        "excluded": true
+                    },
+                    {
+                        "name": "init",
+                        "excluded": false
+                    },
+                    {
+                        "name": "Awake",
+                        "excluded": false
+                    },
+                    {
+                        "name": "OnDisable",
+                        "excluded": false
+                    },
+                    {
+                        "name": "OnDestroy",
+                        "excluded": true
+                    },
+                    {
+                        "name": "ResetTap",
+                        "excluded": false
+                    },
+                    {
+                        "name": "OnPointerDown",
+                        "excluded": false
+                    },
+                    {
+                        "name": "OnPointerUp",
+                        "excluded": false
+                    },
+                    {
+                        "name": "HandleTap",
+                        "excluded": false
+                    },
+                    {
+                        "name": "Complete",
+                        "excluded": false
+                    },
+                    {
+                        "name": "PlayScaleUp",
+                        "excluded": false
+                    },
+                    {
+                        "name": "PlayScaleDown",
+                        "excluded": false
+                    },
+                    {
+                        "name": "KillTween",
+                        "excluded": false
+                    },
+                    {
+                        "name": "PlaySfx",
+                        "excluded": false
+                    },
+                    {
+                        "name": "ChaneScale",
+                        "excluded": true
+                    }
+                ]
             }
         ],
         "stubberDataList": [],
@@ -47768,6 +47943,56 @@
                         "script": "",
                         "ext": "",
                         "name": "Assets/_GAME/SonGame/Level/LevelMummy/Texture/BG-costum-halo.png"
+                    },
+                    {
+                        "maxWidth": 2048,
+                        "maxHeight": 2048,
+                        "format": "png32",
+                        "compression": "quantSize",
+                        "quality": 65,
+                        "script": "",
+                        "ext": "",
+                        "name": "Assets/_GAME/SonGame/Level/LevelSnowMiku/Anim/SnowMiku1/SnowMiku.png"
+                    },
+                    {
+                        "maxWidth": 1024,
+                        "maxHeight": 1024,
+                        "format": "png32",
+                        "compression": "quantSize",
+                        "quality": 65,
+                        "script": "",
+                        "ext": "",
+                        "name": "Assets/_GAME/_Costopia/__Gameplay/_Texture/BG/BG-makeup.png"
+                    },
+                    {
+                        "maxWidth": 1024,
+                        "maxHeight": 1024,
+                        "format": "png32",
+                        "compression": "quantSize",
+                        "quality": 65,
+                        "script": "",
+                        "ext": "",
+                        "name": "Assets/_GAME/_Costopia/__Gameplay/_Texture/BG/BG-hair.png"
+                    },
+                    {
+                        "maxWidth": 1024,
+                        "maxHeight": 1024,
+                        "format": "png32",
+                        "compression": "quantSize",
+                        "quality": 65,
+                        "script": "",
+                        "ext": "",
+                        "name": "Assets/_GAME/Levels/LvCosplayMaid/_Texture/2bg.jpg"
+                    },
+                    {
+                        "maxWidth": 1024,
+                        "maxHeight": 1024,
+                        "format": "png32",
+                        "compression": "quantSize",
+                        "quality": 65,
+                        "script": "",
+                        "ext": "",
+                        "name": "Assets/_GAME/SonGame/Level/LevelSnowMiku/Texture/BG.png"
                     }
                 ]
             },

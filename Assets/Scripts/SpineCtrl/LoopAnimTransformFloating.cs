@@ -103,13 +103,8 @@ namespace Utilities
     }
     public void OpenEye()
     {
-      isClose = true;
-      _transform.localPosition = new Vector3(
-         _startPos.x + positionCurveMul * EvaluateCurve(curveX, 1f),
-         _startPos.y + positionCurveMul * EvaluateCurve(curveY, 1f),
-         _startPos.z
-         );
-
+      isClose = false;
+      ResetFloatingAnchor();
     }
     public void SetPositionLower75()
     {
