@@ -137,7 +137,7 @@
             ]
         },
         "scenes": [
-            "Assets/_GAME/SonGame/Level/LevelSnowMiku/LevelSnowMiku.unity"
+            "Assets/_GAME/SonGame/Level/LevelMalfurion/LevelMalfurion.unity"
         ],
         "disabledScenes": [
             "Assets/Scenes/LevelMain.unity",
@@ -151,6 +151,7 @@
             "Assets/_GAME/SonGame/Level/LevelRedQueen/LevelRedQueen.unity",
             "Assets/_GAME/SonGame/Level/LevelSailorMoon/LevelSailorMoon.unity",
             "Assets/_GAME/SonGame/Level/LevelScarlet/LevelScarlet.unity",
+            "Assets/_GAME/SonGame/Level/LevelSnowMiku/LevelSnowMiku.unity",
             "Assets/_GAME/SonGame/Level/LevelVer3/LevelVer3.unity",
             "Assets/_GAME/SonGame/Level/LevelWednesday/LevelWednesday.unity",
             "Assets/_GAME/SonGame/Level/LevelZoro/LevelZozo.unity"
@@ -39546,10 +39547,6 @@
                         "excluded": false
                     },
                     {
-                        "name": "OnStartStep8",
-                        "excluded": false
-                    },
-                    {
                         "name": "InitSlotsDone",
                         "excluded": true
                     },
@@ -39558,39 +39555,7 @@
                         "excluded": false
                     },
                     {
-                        "name": "OnSprayBottleDragStart",
-                        "excluded": false
-                    },
-                    {
-                        "name": "OnSprayBottleDragStop",
-                        "excluded": false
-                    },
-                    {
-                        "name": "OnSprayBottleEnterZone",
-                        "excluded": false
-                    },
-                    {
-                        "name": "OnSprayBottleExitZone",
-                        "excluded": false
-                    },
-                    {
-                        "name": "OnSprayBottleCompleted",
-                        "excluded": false
-                    },
-                    {
-                        "name": "OnStartStep9",
-                        "excluded": false
-                    },
-                    {
                         "name": "SetSlotStart",
-                        "excluded": false
-                    },
-                    {
-                        "name": "IE_DelayStep2",
-                        "excluded": false
-                    },
-                    {
-                        "name": "SetIsTrigger",
                         "excluded": false
                     },
                     {
@@ -39598,143 +39563,111 @@
                         "excluded": false
                     },
                     {
-                        "name": "OnBrushEyeDragStart",
-                        "excluded": false
-                    },
-                    {
-                        "name": "OnBrushEyeDragStop",
-                        "excluded": false
-                    },
-                    {
-                        "name": "UpdateFillCircleBar",
-                        "excluded": false
-                    },
-                    {
-                        "name": "OnBrushEyeEnterZoneL",
-                        "excluded": false
-                    },
-                    {
-                        "name": "OnBrushEyeExitZoneL",
-                        "excluded": false
-                    },
-                    {
-                        "name": "OnBrushEyeCompletedL",
-                        "excluded": false
-                    },
-                    {
-                        "name": "OnBrushEyeEnterZoneR",
-                        "excluded": false
-                    },
-                    {
-                        "name": "OnBrushEyeExitZoneR",
-                        "excluded": false
-                    },
-                    {
-                        "name": "OnBrushEyeCompletedR",
-                        "excluded": false
-                    },
-                    {
-                        "name": "TryFinishBrushEyeStep",
-                        "excluded": false
-                    },
-                    {
-                        "name": "OnEyeLashDragStart",
-                        "excluded": false
-                    },
-                    {
-                        "name": "OnEyeLashDragStop",
-                        "excluded": false
-                    },
-                    {
-                        "name": "UpdateEyeLashFillCircleBar",
-                        "excluded": false
-                    },
-                    {
-                        "name": "OnEyeLashEnterZoneL",
-                        "excluded": false
-                    },
-                    {
-                        "name": "OnEyeLashExitZoneL",
-                        "excluded": false
-                    },
-                    {
-                        "name": "OnEyeLashCompletedL",
-                        "excluded": false
-                    },
-                    {
-                        "name": "OnEyeLashEnterZoneR",
-                        "excluded": false
-                    },
-                    {
-                        "name": "OnEyeLashExitZoneR",
-                        "excluded": false
-                    },
-                    {
-                        "name": "OnEyeLashCompletedR",
-                        "excluded": false
-                    },
-                    {
-                        "name": "TryFinishEyeLashStep",
-                        "excluded": false
-                    },
-                    {
-                        "name": "SetIsLipStickTrigger",
-                        "excluded": true
-                    },
-                    {
                         "name": "StartStep5",
                         "excluded": false
                     },
                     {
-                        "name": "OnLipStickDragStart",
+                        "name": "OnSetStateSlotPant",
                         "excluded": false
                     },
                     {
-                        "name": "OnLipStickDragStop",
+                        "name": "OnSetStateSlotShirt",
                         "excluded": false
                     },
                     {
-                        "name": "OnLipStickEnterZone",
+                        "name": "OnSetStateSlotHat",
                         "excluded": false
                     },
                     {
-                        "name": "OnLipStickExitZone",
+                        "name": "OnSetStateSlotShoesL",
                         "excluded": false
                     },
                     {
-                        "name": "OnLipStickCompleted",
+                        "name": "OnSetStateSlotShoesR",
                         "excluded": false
                     },
                     {
-                        "name": "OnSetStateSlotHandBand",
+                        "name": "OnStartStepThrowClothes",
                         "excluded": false
                     },
                     {
-                        "name": "OnSetStateSlotHairCut",
+                        "name": "IE_DelayStep3",
                         "excluded": false
                     },
                     {
-                        "name": "StartStep8",
+                        "name": "OnBodyPainterDragStart",
                         "excluded": false
                     },
                     {
-                        "name": "OnSetStateSlotHairDoneL",
+                        "name": "OnBodyPainterDragStop",
                         "excluded": false
                     },
                     {
-                        "name": "OnSetStateSlotHairDoneR",
+                        "name": "OnBodyPainterEnterZone",
                         "excluded": false
                     },
                     {
-                        "name": "OnSetStateSlotDecoDoneL",
+                        "name": "OnBodyPainterExitZone",
                         "excluded": false
                     },
                     {
-                        "name": "OnSetStateSlotDecoDoneR",
+                        "name": "OnBodyPainterCompleted",
                         "excluded": false
                     },
                     {
-                        "name": "OnStartStep10",
+                        "name": "OnSetStateSlotHairBack",
+                        "excluded": false
+                    },
+                    {
+                        "name": "IE_DelayStep4",
+                        "excluded": false
+                    },
+                    {
+                        "name": "OnHairSprayDragStart",
+                        "excluded": false
+                    },
+                    {
+                        "name": "OnHairSprayDragStop",
+                        "excluded": false
+                    },
+                    {
+                        "name": "OnHairSprayEnterZone",
+                        "excluded": false
+                    },
+                    {
+                        "name": "OnHairSprayExitZone",
+                        "excluded": false
+                    },
+                    {
+                        "name": "OnHairSprayCompleted",
+                        "excluded": false
+                    },
+                    {
+                        "name": "StartStep6",
+                        "excluded": false
+                    },
+                    {
+                        "name": "OnHairGelDragStart",
+                        "excluded": false
+                    },
+                    {
+                        "name": "OnHairGelDragStop",
+                        "excluded": false
+                    },
+                    {
+                        "name": "OnHairGelEnterZone",
+                        "excluded": false
+                    },
+                    {
+                        "name": "OnHairGelExitZone",
+                        "excluded": false
+                    },
+                    {
+                        "name": "OnHairGelCompleted",
+                        "excluded": false
+                    },
+                    {
+                        "name": "IE_DelayStep7",
                         "excluded": false
                     }
                 ]
@@ -40614,31 +40547,19 @@
                         "excluded": false
                     },
                     {
-                        "name": "TutorialStep8",
-                        "excluded": false
-                    },
-                    {
-                        "name": "ListTfDragTie#get",
-                        "excluded": false
-                    },
-                    {
-                        "name": "ListTfDragTargetTie#get",
-                        "excluded": false
-                    },
-                    {
-                        "name": "ListTfDragAccessory#get",
-                        "excluded": false
-                    },
-                    {
-                        "name": "ListTfDragTargerAccessory#get",
-                        "excluded": false
-                    },
-                    {
                         "name": "SetIsTriggerBox",
                         "excluded": false
                     },
                     {
-                        "name": "TutorialStep9",
+                        "name": "ListClothes#get",
+                        "excluded": false
+                    },
+                    {
+                        "name": "ListThrowClothes#get",
+                        "excluded": false
+                    },
+                    {
+                        "name": "TutorialStep1",
                         "excluded": false
                     }
                 ]
@@ -47292,46 +47213,6 @@
                 ]
             },
             {
-                "className": "HoangHH.PlayAnimationManually",
-                "staticMethods": [],
-                "instanceMethods": [
-                    {
-                        "name": "PlayAnimation",
-                        "excluded": false
-                    },
-                    {
-                        "name": "PlayAnimation$1",
-                        "excluded": true
-                    },
-                    {
-                        "name": "StopAnim",
-                        "excluded": false
-                    }
-                ]
-            },
-            {
-                "className": "VinhLB.Transformation",
-                "staticMethods": [],
-                "instanceMethods": [
-                    {
-                        "name": "init",
-                        "excluded": false
-                    },
-                    {
-                        "name": "Awake",
-                        "excluded": false
-                    },
-                    {
-                        "name": "SetTargetLocalRotation",
-                        "excluded": true
-                    },
-                    {
-                        "name": "ResetLocalRotation",
-                        "excluded": false
-                    }
-                ]
-            },
-            {
                 "className": "sonnv.TapBox",
                 "staticMethods": [],
                 "instanceMethods": [
@@ -47993,6 +47874,36 @@
                         "script": "",
                         "ext": "",
                         "name": "Assets/_GAME/SonGame/Level/LevelSnowMiku/Texture/BG.png"
+                    },
+                    {
+                        "maxWidth": 2048,
+                        "maxHeight": 2048,
+                        "format": "png32",
+                        "compression": "quantSize",
+                        "quality": 65,
+                        "script": "",
+                        "ext": "",
+                        "name": "Assets/_GAME/SonGame/Level/LevelMalfurion/Anim/Animation_Mkt/Malfurion_Binary/Malfurion.png"
+                    },
+                    {
+                        "maxWidth": 1024,
+                        "maxHeight": 1024,
+                        "format": "png32",
+                        "compression": "quantSize",
+                        "quality": 65,
+                        "script": "",
+                        "ext": "",
+                        "name": "Assets/_GAME/SonGame/Level/LevelMalfurion/Texture/P5_background.png"
+                    },
+                    {
+                        "maxWidth": 1024,
+                        "maxHeight": 1024,
+                        "format": "png32",
+                        "compression": "quantSize",
+                        "quality": 65,
+                        "script": "",
+                        "ext": "",
+                        "name": "Assets/_GAME/SonGame/Level/LevelMalfurion/Texture/P2_background.png"
                     }
                 ]
             },

@@ -73,11 +73,32 @@ public class TutorialManager : Singleton<TutorialManager>
     [SerializeField] private List<Transform> listThrowClothes = new List<Transform>();
     public List<Transform> ListClothes => listClothes;
     public List<Transform> ListThrowClothes => listThrowClothes;
+
+    private void TutorialStep1(int indexStep)
+    {
+        if (handCtrl == null) return;
+        if (indexStep >= listClothes.Count || indexStep >= listThrowClothes.Count) return;
+        handCtrl.gameObject.SetActive(true);
+        var tf = listClothes[indexStep];
+        var tfTarget = listThrowClothes[indexStep];
+        handCtrl.ShowHandPosToPos(tf.gameObject.transform.position, tfTarget.transform.position);
+    }
     //step2
 
 
     [SerializeField] private Transform tfSprayBody;
+    //step3
     [SerializeField] private bool isTriggerBox = false;
+    [SerializeField] private Transform tfBox;
+    [SerializeField] private Transform tfTagetBox;
+
+    [SerializeField] private Transform tfHairInBox;
+    [SerializeField] private Transform tfSprayHairGold;
+    [SerializeField] private Transform tfHairColor;
+    [SerializeField] private Transform tfGel;
+    [SerializeField] private Transform tfEnd;
+    [SerializeField] private Transform tfEye;
+
 
     public void SetIsTriggerBox()
     {
@@ -95,39 +116,38 @@ public class TutorialManager : Singleton<TutorialManager>
             case 0:
                 return;
             case 1:
-
+                TutorialStep1(0);
                 return;
             case 2:
-                handCtrl.gameObject.SetActive(true);
-                handCtrl.ShowHandPosToPos(tfSprayBody.position, tfBody.position);
-                // if (isTriggerBox == false)
-                // {
-                //     handCtrl.gameObject.SetActive(true);
-                //     handCtrl.ShowHandPosToPos(tfBoxColor.position, tfBoxColor.position);
-                //     return;
-                // }
-                // else
-                // {
-                //     handCtrl.gameObject.SetActive(true);
-                //     handCtrl.ShowHandPosToPos(tfBoxColor.position, tfBoxColor.position);
-                //     return;
-                // }
+                handCtrlMakeup.gameObject.SetActive(true);
+                handCtrlMakeup.ShowHandPosToPos(tfSprayBody.position, tfBody.position);
+
                 return;
             case 3:
-                // handCtrl.gameObject.SetActive(true);
-                // handCtrl.ShowHandPosToPosToPos(tfMacara.position, tfEyeL.position, tfEyeR.position);
+                if (isTriggerBox == false)
+                {
+                    handCtrlMakeup.gameObject.SetActive(true);
+                    handCtrlMakeup.ShowHandPosToPos(tfBox.position, tfTagetBox.position);
+                    return;
+                }
+                else
+                {
+                    handCtrlMakeup.gameObject.SetActive(true);
+                    handCtrlMakeup.ShowHandPosToPos(tfHairInBox.position, tfHair.position);
+                    return;
+                }
                 return;
             case 4:
-                // handCtrl.gameObject.SetActive(true);
-                // handCtrl.ShowHandPosToPos(tfLipStick.position, tfMouth.position);
+                handCtrlMakeup.gameObject.SetActive(true);
+                handCtrlMakeup.ShowHandPosToPos(tfSprayHairGold.position, tfHairColor.position);
                 return;
             case 5:
-                // handCtrl.gameObject.SetActive(true);
-                // handCtrl.ShowHandPosToPos(tfHandBand.position, tfHandBandThrow.position);
+                handCtrlMakeup.gameObject.SetActive(true);
+                handCtrlMakeup.ShowHandPosToPos(tfGel.position, tfHairColor.position);
                 return;
             case 6:
-                // handCtrl.gameObject.SetActive(true);
-                // handCtrl.ShowHandPosToPos(tfCut.position, tfHairCut.position);
+                handCtrlMakeup.gameObject.SetActive(true);
+                handCtrlMakeup.ShowHandPosToPos(tfEnd.position, tfEye.position);
                 return;
             case 7:
                 // handCtrl.gameObject.SetActive(true);

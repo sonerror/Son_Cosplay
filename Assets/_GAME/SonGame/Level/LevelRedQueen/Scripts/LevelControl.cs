@@ -150,11 +150,10 @@ public class LevelControl : Singleton<LevelControl>
             case 0:
                 return;
             case 1:
-                TutorialManager.Ins.SetNewTime(2f);
+                TutorialManager.Ins.SetNewTime(0.5f);
                 OnStartStep2();
                 return;
             case 2:
-                TutorialManager.Ins.SetNewTime(3f);
                 OnStartStep3();
                 return;
             case 3:
@@ -399,6 +398,7 @@ public class LevelControl : Singleton<LevelControl>
         TutorialManager.Ins.enableCountTime = true;
         OnStartStepThrowClothes();
     }
+    private int countThrow = 0;
     private void OnStartStepThrowClothes()
     {
 
@@ -412,8 +412,14 @@ public class LevelControl : Singleton<LevelControl>
                 int removedIndex = listThrowClothes.IndexOf(obj);
                 if (removedIndex < 0) return;
                 listThrowClothes.RemoveAt(removedIndex);
-                // TutorialManager.Ins.ListTfDragTie.RemoveAt(removedIndex);
-                // TutorialManager.Ins.ListTfDragTargetTie.RemoveAt(removedIndex);
+                TutorialManager.Ins.ListClothes.RemoveAt(removedIndex);
+                TutorialManager.Ins.ListThrowClothes.RemoveAt(removedIndex);
+                countThrow++;
+                if (countThrow == 1)
+                {
+                    TutorialManager.Ins.SetNewTime(3f);
+
+                }
                 if (listThrowClothes.Count == 0)
                 {
                     DoneStep();
