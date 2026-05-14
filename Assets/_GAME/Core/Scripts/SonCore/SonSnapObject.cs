@@ -319,5 +319,9 @@ namespace sonnv
             if (isEnableCollideWhenEnableThis && col)
                 col.enabled = true;
         }
+        public void AddSnapEvent(UnityAction action)
+        {
+            onSnap.AddListener(action);
+        }
     }
 }

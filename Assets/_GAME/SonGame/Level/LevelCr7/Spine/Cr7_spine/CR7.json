@@ -1,6 +1,6 @@
 {
 "skeleton": {
-	"hash": "yLreTmTi50Y",
+	"hash": "6ndU3jLSvDs",
 	"spine": "4.2.43",
 	"x": -434.83,
 	"y": -11.04,
@@ -386,8 +386,8 @@
 	{ "name": "Base-Shirt", "bone": "I-body-A", "attachment": "Base-shirt" },
 	{ "name": "Base-brows", "bone": "Base-brows", "attachment": "Base-brows" },
 	{ "name": "Base-brows2", "bone": "Base-brows3", "attachment": "Base-brows" },
-	{ "name": "Base-lip", "bone": "Base-lip", "attachment": "Base-lip" },
-	{ "name": "Final-Lip", "bone": "Base-lip" },
+	{ "name": "Base-lip", "bone": "Base-lip" },
+	{ "name": "Final-Lip", "bone": "Base-lip", "attachment": "3_MakeUp_Anim/Final-Lip" },
 	{ "name": "Final-Sock", "bone": "LEG-L-lower2" },
 	{ "name": "Final-Sock2", "bone": "LEG-L-lower3" },
 	{ "name": "Base-flipflopF3", "bone": "FEET-L2", "attachment": "Base-flipflopF" },
@@ -2113,11 +2113,6 @@
 					{}
 				]
 			},
-			"Base-lip": {
-				"attachment": [
-					{}
-				]
-			},
 			"Base-pant": {
 				"attachment": [
 					{}
@@ -2155,7 +2150,6 @@
 			},
 			"Final-Lip": {
 				"attachment": [
-					{ "name": "3_MakeUp_Anim/Final-Lip" },
 					{ "time": 0.0667, "name": "3_MakeUp_Anim/Final_mouth2" },
 					{ "time": 1.2333, "name": "3_MakeUp_Anim/Final-Lip" },
 					{ "time": 2.3333, "name": "3_MakeUp_Anim/Final_mouth2" },
@@ -3796,11 +3790,6 @@
 					{}
 				]
 			},
-			"Base-lip": {
-				"attachment": [
-					{}
-				]
-			},
 			"Base-pant": {
 				"attachment": [
 					{}
@@ -4623,7 +4612,6 @@
 			},
 			"Final-Lip": {
 				"attachment": [
-					{ "name": "3_MakeUp_Anim/Final-Lip" },
 					{ "time": 0.1667, "name": "3_MakeUp_Anim/Final_mouth2" },
 					{ "time": 0.9333, "name": "3_MakeUp_Anim/Final-Lip" }
 				]

@@ -137,7 +137,7 @@
             ]
         },
         "scenes": [
-            "Assets/_GAME/SonGame/Level/LevelMalfurion/LevelMalfurion.unity"
+            "Assets/_GAME/SonGame/Level/LevelCr7/LevelCr7.unity"
         ],
         "disabledScenes": [
             "Assets/Scenes/LevelMain.unity",
@@ -145,6 +145,7 @@
             "Assets/_GAME/Levels/LvCosplayWenesday/Level53.unity",
             "Assets/_GAME/SonGame/Level/LevelFran/LevelFran.unity",
             "Assets/_GAME/SonGame/Level/LevelMaleficent/Level98Maleficent.unity",
+            "Assets/_GAME/SonGame/Level/LevelMalfurion/LevelMalfurion.unity",
             "Assets/_GAME/SonGame/Level/LevelMummy/LevelMummy.unity",
             "Assets/_GAME/SonGame/Level/LevelNurse/LevelNurse.unity",
             "Assets/_GAME/SonGame/Level/LevelReaper/LevelReaper.unity",
@@ -8267,14 +8268,6 @@
                 "excluded": true
             },
             {
-                "name": "SharpJson.JsonDecoder",
-                "excluded": true
-            },
-            {
-                "name": "SharpJson.Lexer",
-                "excluded": true
-            },
-            {
                 "name": "ShowSprite",
                 "excluded": true
             },
@@ -8315,10 +8308,6 @@
                 "excluded": true
             },
             {
-                "name": "Spine.Json",
-                "excluded": true
-            },
-            {
                 "name": "Spine.Polygon",
                 "excluded": true
             },
@@ -8328,10 +8317,6 @@
             },
             {
                 "name": "Spine.SkeletonBounds",
-                "excluded": true
-            },
-            {
-                "name": "Spine.SkeletonJson.LinkedMesh",
                 "excluded": true
             },
             {
@@ -8631,10 +8616,6 @@
                 "excluded": true
             },
             {
-                "name": "Spine.SkeletonJson",
-                "excluded": true
-            },
-            {
                 "name": "Spine.Unity.BlendModeMaterialsAsset",
                 "excluded": true
             },
@@ -8783,10 +8764,6 @@
                 "excluded": true
             },
             {
-                "name": "Spine.ShearTimeline",
-                "excluded": true
-            },
-            {
                 "name": "Spine.ShearXTimeline",
                 "excluded": true
             },
@@ -8816,10 +8793,6 @@
             },
             {
                 "name": "Spine.PhysicsConstraintStrengthTimeline",
-                "excluded": true
-            },
-            {
-                "name": "Spine.PhysicsConstraintWindTimeline",
                 "excluded": true
             },
             {
@@ -8876,7 +8849,7 @@
             },
             {
                 "name": "SharpJson.Lexer.Token",
-                "excluded": true
+                "excluded": false
             },
             {
                 "name": "sonnv.CompleteP3DTextureState",
@@ -38722,7 +38695,7 @@
                     },
                     {
                         "name": "IndexOf",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "IndexOf$1",
@@ -42096,7 +42069,7 @@
                 "instanceMethods": [
                     {
                         "name": "Scale#get",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "Scale#set",
@@ -42260,7 +42233,7 @@
                     },
                     {
                         "name": "Bones#get",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "Slots#get",
@@ -42308,7 +42281,7 @@
                     },
                     {
                         "name": "TransformConstraints#get",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "TransformConstraints#set",
@@ -42416,15 +42389,15 @@
                     },
                     {
                         "name": "FindBone",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "FindSlot",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "FindSkin",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "FindEvent",
@@ -42440,7 +42413,7 @@
                     },
                     {
                         "name": "FindTransformConstraint",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "FindPathConstraint",
@@ -42448,7 +42421,7 @@
                     },
                     {
                         "name": "FindPhysicsConstraint",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "toString",
@@ -43218,7 +43191,7 @@
                     },
                     {
                         "name": "ReadSkeletonData$2",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "IsLoaded#get",
@@ -44040,7 +44013,7 @@
                     },
                     {
                         "name": "Shrink",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "SetBezier",
@@ -47274,6 +47247,256 @@
                     },
                     {
                         "name": "ChaneScale",
+                        "excluded": true
+                    }
+                ]
+            },
+            {
+                "className": "SharpJson.JsonDecoder",
+                "staticMethods": [],
+                "instanceMethods": [
+                    {
+                        "name": "DecodeText",
+                        "excluded": true
+                    },
+                    {
+                        "name": "ctor",
+                        "excluded": false
+                    },
+                    {
+                        "name": "Decode",
+                        "excluded": false
+                    },
+                    {
+                        "name": "ParseObject",
+                        "excluded": false
+                    },
+                    {
+                        "name": "ParseArray",
+                        "excluded": false
+                    },
+                    {
+                        "name": "ParseValue",
+                        "excluded": false
+                    },
+                    {
+                        "name": "TriggerError",
+                        "excluded": true
+                    },
+                    {
+                        "name": "EvalLexer",
+                        "excluded": false
+                    }
+                ]
+            },
+            {
+                "className": "SharpJson.Lexer",
+                "staticMethods": [],
+                "instanceMethods": [
+                    {
+                        "name": "NextToken",
+                        "excluded": false
+                    },
+                    {
+                        "name": "hasError#get",
+                        "excluded": false
+                    },
+                    {
+                        "name": "init",
+                        "excluded": false
+                    },
+                    {
+                        "name": "ctor",
+                        "excluded": false
+                    },
+                    {
+                        "name": "Reset",
+                        "excluded": false
+                    },
+                    {
+                        "name": "ParseString",
+                        "excluded": false
+                    },
+                    {
+                        "name": "GetNumberString",
+                        "excluded": false
+                    },
+                    {
+                        "name": "ParseFloatNumber",
+                        "excluded": false
+                    },
+                    {
+                        "name": "ParseDoubleNumber",
+                        "excluded": true
+                    },
+                    {
+                        "name": "GetLastIndexOfNumber",
+                        "excluded": false
+                    },
+                    {
+                        "name": "SkipWhiteSpaces",
+                        "excluded": false
+                    },
+                    {
+                        "name": "LookAhead",
+                        "excluded": false
+                    }
+                ]
+            },
+            {
+                "className": "Spine.Json",
+                "staticMethods": [],
+                "instanceMethods": [
+                    {
+                        "name": "Deserialize",
+                        "excluded": false
+                    }
+                ]
+            },
+            {
+                "className": "Spine.SkeletonJson.LinkedMesh",
+                "staticMethods": [],
+                "instanceMethods": [
+                    {
+                        "name": "ctor",
+                        "excluded": true
+                    }
+                ]
+            },
+            {
+                "className": "Spine.SkeletonJson",
+                "staticMethods": [],
+                "instanceMethods": [
+                    {
+                        "name": "ReadSequence",
+                        "excluded": false
+                    },
+                    {
+                        "name": "ReadTimeline",
+                        "excluded": false
+                    },
+                    {
+                        "name": "ReadTimeline$1",
+                        "excluded": false
+                    },
+                    {
+                        "name": "ReadCurve",
+                        "excluded": false
+                    },
+                    {
+                        "name": "SetBezier",
+                        "excluded": false
+                    },
+                    {
+                        "name": "GetFloatArray",
+                        "excluded": false
+                    },
+                    {
+                        "name": "GetIntArray",
+                        "excluded": false
+                    },
+                    {
+                        "name": "GetFloat",
+                        "excluded": false
+                    },
+                    {
+                        "name": "GetInt$1",
+                        "excluded": false
+                    },
+                    {
+                        "name": "GetInt",
+                        "excluded": true
+                    },
+                    {
+                        "name": "GetBoolean",
+                        "excluded": false
+                    },
+                    {
+                        "name": "GetString",
+                        "excluded": false
+                    },
+                    {
+                        "name": "ToColor",
+                        "excluded": false
+                    },
+                    {
+                        "name": "init",
+                        "excluded": false
+                    },
+                    {
+                        "name": "$ctor1",
+                        "excluded": false
+                    },
+                    {
+                        "name": "ctor",
+                        "excluded": true
+                    },
+                    {
+                        "name": "ReadSkeletonData",
+                        "excluded": true
+                    },
+                    {
+                        "name": "ReadSkeletonData$1",
+                        "excluded": false
+                    },
+                    {
+                        "name": "ReadAttachment",
+                        "excluded": false
+                    },
+                    {
+                        "name": "ReadVertices",
+                        "excluded": false
+                    },
+                    {
+                        "name": "FindSlotIndex",
+                        "excluded": false
+                    },
+                    {
+                        "name": "ReadAnimation",
+                        "excluded": false
+                    }
+                ]
+            },
+            {
+                "className": "Spine.ShearTimeline",
+                "staticMethods": [],
+                "instanceMethods": [
+                    {
+                        "name": "BoneIndex#get",
+                        "excluded": true
+                    },
+                    {
+                        "name": "ctor",
+                        "excluded": false
+                    },
+                    {
+                        "name": "Apply",
+                        "excluded": true
+                    }
+                ]
+            },
+            {
+                "className": "Spine.PhysicsConstraintWindTimeline",
+                "staticMethods": [],
+                "instanceMethods": [
+                    {
+                        "name": "ctor",
+                        "excluded": false
+                    },
+                    {
+                        "name": "Setup",
+                        "excluded": false
+                    },
+                    {
+                        "name": "Get",
+                        "excluded": false
+                    },
+                    {
+                        "name": "Set",
+                        "excluded": false
+                    },
+                    {
+                        "name": "Global",
                         "excluded": true
                     }
                 ]

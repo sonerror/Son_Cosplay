@@ -1,26 +1,21 @@
-﻿<Project ToolsVersion="Current">
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <!-- Generated file, do not modify, your changes will be overwritten (use AssetPostprocessor.OnGeneratedCSProject) -->
   <PropertyGroup>
-    <BaseIntermediateOutputPath>Temp\obj\$(Configuration)\$(MSBuildProjectName)</BaseIntermediateOutputPath>
-    <IntermediateOutputPath>$(BaseIntermediateOutputPath)</IntermediateOutputPath>
-  </PropertyGroup>
-  <Import Project="Sdk.props" Sdk="Microsoft.NET.Sdk" />
-  <ItemGroup>
-    <ProjectCapability Include="Unity" />
-  </ItemGroup>
-  <PropertyGroup>
-    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
-    <EnableDefaultItems>false</EnableDefaultItems>
-    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
     <LangVersion>9.0</LangVersion>
-    <Configurations>Debug;Release</Configurations>
+  </PropertyGroup>
+  <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>10.0.20506</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
+    <ProjectGuid>{3931D68F-F02C-0CF5-12A5-8EC449BAF0CC}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
-    <TargetFramework>netstandard2.1</TargetFramework>
+    <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
     <BaseDirectory>.</BaseDirectory>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -44,22 +39,23 @@
     <AllowUnsafeBlocks>False</AllowUnsafeBlocks>
   </PropertyGroup>
   <PropertyGroup>
-    <NoStandardLibraries>true</NoStandardLibraries>
-    <NoStdLib>true</NoStdLib>
     <NoConfig>true</NoConfig>
-    <DisableImplicitFrameworkReferences>true</DisableImplicitFrameworkReferences>
-    <MSBuildWarningsAsMessages>MSB3277</MSBuildWarningsAsMessages>
+    <NoStdLib>true</NoStdLib>
+    <AddAdditionalExplicitAssemblyReferences>false</AddAdditionalExplicitAssemblyReferences>
+    <ImplicitlyExpandNETStandardFacades>false</ImplicitlyExpandNETStandardFacades>
+    <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <PropertyGroup>
+    <ProjectTypeGuids>{E097FAD1-6243-4DAD-9C02-E9B9EFC3FFC1};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <UnityProjectGenerator>Package</UnityProjectGenerator>
     <UnityProjectGeneratorVersion>2.0.22</UnityProjectGeneratorVersion>
-    <UnityProjectGeneratorStyle>SDK</UnityProjectGeneratorStyle>
+    <UnityProjectGeneratorStyle>Legacy</UnityProjectGeneratorStyle>
     <UnityProjectType>Game:1</UnityProjectType>
     <UnityBuildTarget>StandaloneWindows64:19</UnityBuildTarget>
     <UnityVersion>6000.0.27f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
-    <Analyzer Include="C:\Users\admin\.vscode\extensions\visualstudiotoolsforunity.vstuc-1.2.1\Analyzers\Microsoft.Unity.Analyzers.dll" />
+    <Analyzer Include="C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\6000.0.27f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.SourceGenerators.dll" />
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\6000.0.27f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.Properties.SourceGenerator.dll" />
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\6000.0.27f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.UIToolkit.SourceGenerator.dll" />
@@ -73,8 +69,11 @@
     <Compile Include="Assets\Scripts\TapOpenerSprite.cs" />
     <Compile Include="Assets\Scripts\Helper\DTPCache.cs" />
     <Compile Include="Assets\Scripts\ItemUseOnce.cs" />
+    <Compile Include="Assets\_GAME\SonGame\Level\LevelRedQueen\Scripts\LevelControl.cs" />
     <Compile Include="Assets\Scripts\Manager\EventManager.cs" />
     <Compile Include="Assets\Scripts\53\FaceTowelWithVfx.cs" />
+    <Compile Include="Assets\_GAME\SonGame\Level\LevelWednesday\Scripts\SpriteMaskFill.cs" />
+    <Compile Include="Assets\_GAME\SonGame\Level\LevelRedQueen\Scripts\TapBox.cs" />
     <Compile Include="Assets\Scripts\54\ShowSprite.cs" />
     <Compile Include="Assets\Scripts\Obj\FillCircleBar.cs" />
     <Compile Include="Assets\Scripts\Character.cs" />
@@ -84,25 +83,33 @@
     <Compile Include="Assets\DOTween\Modules\DOTweenModuleUnityVersion.cs" />
     <Compile Include="Assets\Scripts\ControlAlphaSlot.cs" />
     <Compile Include="Assets\Scripts\Helper\H3MonoBehaviour.cs" />
+    <Compile Include="Assets\_GAME\SonGame\Level\LevelReaper\Scripts\SpriteAlphaGroup.cs" />
+    <Compile Include="Assets\_GAME\SonGame\Level\LevelSailorMoon\Scripts\LevelSailorMoon.cs" />
     <Compile Include="Assets\Scripts\Helper\DTPUtils.cs" />
     <Compile Include="Assets\Scripts\53\ItemDragBase.cs" />
     <Compile Include="Assets\Scripts\Manager\SoundManager.cs" />
     <Compile Include="Assets\_GAME\_Costopia\__Gameplay\_Script\Hint\InGameHintSnapObjectUI.cs" />
     <Compile Include="Assets\_GAME\_Costopia\__Gameplay\_Script\Gameplay\SnapObjectUI\DoneVFX.cs" />
+    <Compile Include="Assets\_GAME\SonGame\Level\LevelReaper\Scripts\BounceObjectEffect.cs" />
     <Compile Include="Assets\Scripts\UI\Progress.cs" />
     <Compile Include="Assets\_GAME\Core\Scripts\SonCore\SonTransitionPhase.cs" />
     <Compile Include="Assets\DOTween\Modules\DOTweenModulePhysics2D.cs" />
     <Compile Include="Assets\Scripts\UI\GameChooseCharScreen.cs" />
     <Compile Include="Assets\DOTween\Modules\DOTweenModuleUI.cs" />
     <Compile Include="Assets\ExportSubSprites.cs" />
+    <Compile Include="Assets\_GAME\SonGame\Level\LevelScarlet\Scripts\LevelScarlet.cs" />
     <Compile Include="Assets\_GAME\Levels\_OldMakeUpLevel\EmojiControl.cs" />
     <Compile Include="Assets\_GAME\Core\Scripts\SonCore\ScalingOnPick.cs" />
     <Compile Include="Assets\_GAME\_Costopia\__Gameplay\_Script\Gameplay\MonoSingleton.cs" />
     <Compile Include="Assets\_GAME\_Costopia\__Gameplay\_Script\Gameplay\SnapObjectUI\SnapPointUI.cs" />
+    <Compile Include="Assets\Scripts\Manager\StepManager.cs" />
     <Compile Include="Assets\Scripts\Manager\GameManager.cs" />
     <Compile Include="Assets\Scripts\UI\UIUnit.cs" />
+    <Compile Include="Assets\Scripts\Obj\CanvasPosHelper.cs" />
     <Compile Include="Assets\Scripts\Pool\EffectPool.cs" />
+    <Compile Include="Assets\_GAME\SonGame\Level\LevelVer3\Scripts\ISelectableItem.cs" />
     <Compile Include="Assets\Scripts\Helper\SlotAttachmentPair.cs" />
+    <Compile Include="Assets\Scripts\SpineCtrl\SpineAttachmentLocker.cs" />
     <Compile Include="Assets\_GAME\SonGame\Level\LevelWednesday\Scripts\SpriteEditor.cs" />
     <Compile Include="Assets\Scripts\Manager\Singleton.cs" />
     <Compile Include="Assets\_GAME\Core\Scripts\SonCore\SonSnapPoint.cs" />
@@ -115,11 +122,11 @@
     <Compile Include="Assets\Scripts\Manager\TutorialManager.cs" />
     <Compile Include="Assets\FindMissingScriptsRecursively.cs" />
     <Compile Include="Assets\_GAME\Core\Scripts\SonCore\SonEffectShowObject.cs" />
-    <Compile Include="Assets\Scripts\OnTransformGoToAffectZone.cs" />
+    <Compile Include="Assets\_GAME\Core\Scripts\VinhLB\Costopia\Transformation.cs" />
+    <Compile Include="Assets\_GAME\SonGame\Level\LevelWednesday\Scripts\LevelWednesday.cs" />
     <Compile Include="Assets\_GAME\Core\Scripts\SonCore\SnapPointUIEnableSlot.cs" />
     <Compile Include="Assets\Scripts\54\Blazer.cs" />
     <Compile Include="Assets\Scripts\Obj\ChangeScene.cs" />
-    <Compile Include="Assets\_GAME\Core\Scripts\SonCore\SonDragItemBase.cs" />
     <Compile Include="Assets\Scripts\PimpleHeal.cs" />
     <Compile Include="Assets\_GAME\Core\Scripts\SonCore\SonSnapObject.cs" />
     <Compile Include="Assets\Scripts\53\HairBang.cs" />
@@ -129,6 +136,7 @@
     <Compile Include="Assets\Scripts\RemoveItem.cs" />
     <Compile Include="Assets\Scripts\54\TapButton.cs" />
     <Compile Include="Assets\Scripts\55\Scissors.cs" />
+    <Compile Include="Assets\_GAME\SonGame\Level\LevelWednesday\Scripts\SonDragItemBase.cs" />
     <Compile Include="Assets\Scripts\ItemMove.cs" />
     <Compile Include="Assets\Scripts\Pool\PoolManager.cs" />
     <Compile Include="Assets\Scripts\Manager\UIManager.cs" />
@@ -147,18 +155,23 @@
     <Compile Include="Assets\Scripts\54\SpineSlotData.cs" />
     <Compile Include="Assets\_GAME\Core\Scripts\SonCore\SonISnapObject.cs" />
     <Compile Include="Assets\Scripts\Helper\ScreenShot.cs" />
+    <Compile Include="Assets\_GAME\SonGame\Level\LevelCr7\Scripts\Pumper.cs" />
     <Compile Include="Assets\Scripts\Obj\HandCtrl.cs" />
     <Compile Include="Assets\Scripts\54\FoundationBottle.cs" />
     <Compile Include="Assets\Scripts\TriggerWithCertainCollider.cs" />
     <Compile Include="Assets\_GAME\Core\Scripts\SonCore\MatchBoxController.cs" />
+    <Compile Include="Assets\_GAME\SonGame\Level\LevelWednesday\Scripts\ShakeObject.cs" />
+    <Compile Include="Assets\Scripts\Obj\HandCanvasCtrl.cs" />
     <Compile Include="Assets\Scripts\Obj\ClockTimer.cs" />
     <Compile Include="Assets\Scripts\FadeSpriteByStep.cs" />
     <Compile Include="Assets\Scripts\SpineCtrl\SpineBoneIKControl.cs" />
+    <Compile Include="Assets\_GAME\SonGame\Level\LevelVer3\Scripts\TapSelectItem.cs" />
     <Compile Include="Assets\Scripts\SpineCtrl\ToggleBoneSlot.cs" />
     <Compile Include="Assets\Scripts\Obj\ShowObjectEffect.cs" />
     <Compile Include="Assets\Scripts\Helper\GizmoUtility.cs" />
     <Compile Include="Assets\Scripts\54\Brush_Blush.cs" />
     <Compile Include="Assets\DOTween\Modules\DOTweenModuleSprite.cs" />
+    <Compile Include="Assets\_GAME\SonGame\Level\LevelVer3\Scripts\LevelRumiAilen.cs" />
     <Compile Include="Assets\Scripts\Helper\SimpleCurve.cs" />
     <Compile Include="Assets\_GAME\_Costopia\__Gameplay\_Script\Gameplay\SnapObjectUI\ControllerDoneVFX.cs" />
     <Compile Include="Assets\_GAME\_Costopia\_Script\System\Utilities\ShowObjectEffectUI.cs" />
@@ -181,9 +194,11 @@
     <Compile Include="Assets\_GAME\Core\Scripts\SonCore\SonMonoBehaviour.cs" />
     <Compile Include="Assets\Scripts\Pool\SfxPool.cs" />
     <Compile Include="Assets\Scripts\Manager\AdsManager.cs" />
+    <Compile Include="Assets\_GAME\SonGame\Level\LevelVer3\Scripts\SelectCharacter.cs" />
     <Compile Include="Assets\Scripts\55\PlayAnimationManually.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Assets\_GAME\SonGame\Level\LevelReaper\Anim\Reaper_Binary_Mkt\Reaper_Mkt.atlas.txt" />
     <None Include="Assets\_GAME\Levels\LvCosplayHarleyQuinn\Animations\Harley_Queen_json\Harley_Queen.atlas.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
     <None Include="Assets\Spine\version.txt" />
@@ -191,35 +206,49 @@
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile-2-Pass.shader" />
     <None Include="Assets\_GAME\Levels\LvCosplayCinderella\Animations\New\Cindarella.atlas.txt" />
+    <None Include="Assets\_GAME\SonGame\Level\LevelSnowMiku\Anim\SnowMiku1\SnowMiku.atlas.txt" />
     <None Include="Assets\_GAME\Levels\LvCosplayPolice\Animations\Police_patrol_json\Police_patrol.atlas.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Mobile.cginc" />
+    <None Include="Assets\_GAME\SonGame\Level\LevelRedQueen\Anim\red queen.atlas.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF SSD.shader" />
+    <None Include="Assets\_GAME\SonGame\Level\LevelCr7\Spine\Cr7_spine\CR7animx.atlas.txt" />
+    <None Include="Assets\_GAME\SonGame\Level\LevelMalfurion\Anim\Animation_Mkt\Malfurion_Binary\Malfurion.atlas.txt" />
     <None Include="Assets\_GAME\Levels\LvCosplaySanta\Cha_new 1\SANTA.atlas.txt" />
     <None Include="Assets\_GAME\Core\Common\Shaders\TwoSideTexture.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface-Mobile.shader" />
+    <None Include="Assets\_GAME\SonGame\Level\LevelZoro\Anim\36_Zoro\Zoro_Binary\Zoro.atlas.txt" />
     <None Include="Assets\_GAME\Levels\LvCosplayWenesday\Wed\Wednesday.atlas.txt" />
+    <None Include="Assets\_GAME\SonGame\Level\LevelSailorMoon\Anim\Json\sailor moon.atlas.txt" />
     <None Include="Assets\_GAME\_Costopia\__Gameplay\_Script\Gameplay\Shader\SpineReveal.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\SDFFunctions.hlsl" />
     <None Include="Assets\_GAME\Levels\LvCosplayCleopatra\Spine\CleoPatra.atlas.txt" />
+    <None Include="Assets\_GAME\SonGame\Level\LevelCr7\Spine\anim-bombong\bombong\bombong.atlas.txt" />
     <None Include="Assets\_GAME\Core\Common\Shaders\UIAdditive.shader" />
+    <None Include="Assets\_GAME\SonGame\Level\LevelMummy\Anim\mummy.atlas.txt" />
+    <None Include="Assets\_GAME\SonGame\Level\LevelSnowMiku\Anim\Miku_Pet\Miku_Pet.atlas.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface.shader" />
     <None Include="Assets\TextMesh Pro\Sprites\EmojiOne Attribution.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Custom-Atlas.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile SSD.shader" />
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
+    <None Include="Assets\_GAME\SonGame\Level\LevelFran\Anim\frankei and pet.atlas.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Properties.cginc" />
+    <None Include="Assets\_GAME\SonGame\Level\LevelVer3\Anim\Aline\ailen\ailen2.atlas.txt" />
     <None Include="Assets\_GAME\Levels\LvCosplayJoker\Spine\Card\Joker_card.atlas.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Surface.cginc" />
     <None Include="Assets\Spines\New2\Harley_Queen.atlas.txt" />
     <None Include="Assets\_GAME\Levels\LvCosplayJoker\NewSpine1\Joker.atlas.txt" />
+    <None Include="Assets\_GAME\SonGame\Level\LevelScarlet\Anim\ScarletWitch.atlas.txt" />
     <None Include="Assets\_GAME\Levels\LvCosplayJackSparrow\jack\Jack_Sparrow.atlas.txt" />
     <None Include="Assets\_GAME\Levels\LvCosplayCinderella\Animations\Cindarella_json\Cindarella.atlas.txt" />
+    <None Include="Assets\_GAME\SonGame\Level\LevelNurse\Anim\fix\Nurse_Binary\Nurse.atlas.txt" />
     <None Include="Assets\_GAME\Levels\LvCosplayCinderella\Animations\View\Cindarella.atlas.txt" />
     <None Include="Assets\_GAME\Core\Common\Shaders\SpriteOutline.shader" />
     <None Include="Assets\_GAME\SonGame\Level\LevelMaleficent\Spines\Maleficent_json\Maleficent.atlas.txt" />
     <None Include="Assets\_GAME\Levels\LvCosplayCinderella\Animations\ViewNor\School_Girl.atlas.txt" />
+    <None Include="Assets\_GAME\SonGame\Level\LevelVer3\Anim\Rumi\Rumi.atlas.txt" />
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
     <None Include="Assets\DOTween\DOTween.dll" />
     <None Include="Assets\Spines\school_boy_38\School_Girl.atlas.txt" />
@@ -235,6 +264,7 @@
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile.shader" />
     <None Include="Assets\_GAME\Levels\LvCosplayHarleyQuinn\Animations\minigame_json\Harley_Queen_minigame.atlas.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Sprite.shader" />
+    <None Include="Assets\_GAME\SonGame\Level\LevelRedQueen\Anim\hourse.atlas.txt" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
@@ -750,11 +780,19 @@
       <Private>False</Private>
     </Reference>
     <Reference Include="RuntimeScripts">
-      <HintPath>D:\Playabale\scripts\Runtime\RuntimeScripts.dll</HintPath>
+      <HintPath>D:\Playabale\Pack\fix\scripts\Runtime\RuntimeScripts.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Mono.Cecil">
       <HintPath>Library\PackageCache\com.unity.nuget.mono-cecil\Mono.Cecil.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.Android.Types">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.27f1\Editor\Data\PlaybackEngines\AndroidPlayer\Unity.Android.Types.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.Android.Gradle">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.27f1\Editor\Data\PlaybackEngines\AndroidPlayer\Unity.Android.Gradle.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="netstandard">
@@ -1247,70 +1285,226 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="UnityEditor.UI.csproj" />
-    <ProjectReference Include="Unity.Rider.Editor.csproj" />
-    <ProjectReference Include="PsdPlugin.csproj" />
-    <ProjectReference Include="Unity.2D.Common.Editor.csproj" />
-    <ProjectReference Include="Unity.2D.Common.Path.Editor.csproj" />
-    <ProjectReference Include="Unity.2D.IK.Editor.csproj" />
-    <ProjectReference Include="Unity.2D.IK.Runtime.csproj" />
-    <ProjectReference Include="Unity.2D.SpriteShape.Runtime.csproj" />
-    <ProjectReference Include="Unity.TestTools.CodeCoverage.Editor.OpenCover.Model.csproj" />
-    <ProjectReference Include="UnityEngine.UI.csproj" />
-    <ProjectReference Include="Unity.TestTools.CodeCoverage.Editor.csproj" />
-    <ProjectReference Include="Unity.2D.Aseprite.Editor.csproj" />
-    <ProjectReference Include="Unity.Multiplayer.Center.Editor.csproj" />
-    <ProjectReference Include="Unity.PlasticSCM.Editor.csproj" />
-    <ProjectReference Include="Unity.Mathematics.Editor.csproj" />
-    <ProjectReference Include="Unity.Performance.Profile-Analyzer.Editor.csproj" />
-    <ProjectReference Include="Unity.InternalAPIEditorBridge.001.csproj" />
-    <ProjectReference Include="Unity.2D.Animation.Editor.csproj" />
-    <ProjectReference Include="Unity.Collections.csproj" />
-    <ProjectReference Include="Sirenix.OdinInspector.Modules.UnityMathematics.csproj" />
-    <ProjectReference Include="Unity.2D.PixelPerfect.Editor.csproj" />
-    <ProjectReference Include="Unity.VisualScripting.Core.csproj" />
-    <ProjectReference Include="Unity.InternalAPIEngineBridge.001.csproj" />
-    <ProjectReference Include="Unity.2D.Tilemap.Editor.csproj" />
-    <ProjectReference Include="Unity.2D.Aseprite.Common.csproj" />
-    <ProjectReference Include="Unity.2D.Animation.Runtime.csproj" />
-    <ProjectReference Include="Unity.Collections.Editor.csproj" />
-    <ProjectReference Include="Unity.2D.Tilemap.Extras.Editor.csproj" />
-    <ProjectReference Include="Unity.VisualScripting.Shared.Editor.csproj" />
-    <ProjectReference Include="Unity.VisualScripting.Core.Editor.csproj" />
-    <ProjectReference Include="Unity.Multiplayer.Center.Common.csproj" />
-    <ProjectReference Include="Unity.TestTools.CodeCoverage.Editor.OpenCover.Mono.Reflection.csproj" />
-    <ProjectReference Include="Unity.VisualScripting.Flow.Editor.csproj" />
-    <ProjectReference Include="Unity.TextMeshPro.csproj" />
-    <ProjectReference Include="spine-unity.csproj" />
-    <ProjectReference Include="Unity.EditorCoroutines.Editor.csproj" />
-    <ProjectReference Include="Unity.2D.Tilemap.Extras.csproj" />
-    <ProjectReference Include="Unity.2D.Common.Runtime.csproj" />
-    <ProjectReference Include="Unity.VisualScripting.SettingsProvider.Editor.csproj" />
-    <ProjectReference Include="Unity.VisualScripting.State.Editor.csproj" />
-    <ProjectReference Include="Unity.Mathematics.csproj" />
-    <ProjectReference Include="Unity.VisualScripting.State.csproj" />
-    <ProjectReference Include="Unity.2D.SpriteShape.Editor.csproj" />
-    <ProjectReference Include="Unity.2D.Sprite.Editor.csproj" />
-    <ProjectReference Include="Unity.2D.Psdimporter.Editor.csproj" />
-    <ProjectReference Include="Unity.TextMeshPro.Editor.csproj" />
-    <ProjectReference Include="Unity.Burst.Editor.csproj" />
-    <ProjectReference Include="spine-csharp.csproj" />
-    <ProjectReference Include="Unity.2D.PixelPerfect.csproj" />
-    <ProjectReference Include="Unity.Burst.csproj" />
-    <ProjectReference Include="Unity.VisualStudio.Editor.csproj" />
-    <ProjectReference Include="spine-unity-editor.csproj" />
-    <ProjectReference Include="Unity.VisualScripting.Flow.csproj" />
+    <ProjectReference Include="UnityEditor.UI.csproj">
+      <Project>{86857756-D824-94D2-5898-ABAC58FD2421}</Project>
+      <Name>UnityEditor.UI</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.Rider.Editor.csproj">
+      <Project>{9E8F1661-03BF-592A-9F63-79D8094E5F46}</Project>
+      <Name>Unity.Rider.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="PsdPlugin.csproj">
+      <Project>{104342EA-94FB-4130-5DDB-69528D0F328B}</Project>
+      <Name>PsdPlugin</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.2D.Common.Editor.csproj">
+      <Project>{391C9896-AC56-1A35-D3C2-6FE6D01A64EB}</Project>
+      <Name>Unity.2D.Common.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.2D.Common.Path.Editor.csproj">
+      <Project>{9A7C3767-6DB6-F056-78DA-7BC5D33B43ED}</Project>
+      <Name>Unity.2D.Common.Path.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.2D.IK.Editor.csproj">
+      <Project>{F007EE2B-5504-F98A-05BA-1547F9CC3D15}</Project>
+      <Name>Unity.2D.IK.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.2D.IK.Runtime.csproj">
+      <Project>{80AC5095-B223-7CD9-B430-A32C2848FA8B}</Project>
+      <Name>Unity.2D.IK.Runtime</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.2D.SpriteShape.Runtime.csproj">
+      <Project>{F96CCEA3-7260-BBDF-C57E-A4037159E3DD}</Project>
+      <Name>Unity.2D.SpriteShape.Runtime</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.TestTools.CodeCoverage.Editor.OpenCover.Model.csproj">
+      <Project>{7C233450-FE6C-4451-9395-4EC153571A8B}</Project>
+      <Name>Unity.TestTools.CodeCoverage.Editor.OpenCover.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="UnityEngine.UI.csproj">
+      <Project>{DF476066-54B4-EAAB-BFD7-5573458F8AD7}</Project>
+      <Name>UnityEngine.UI</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.TestTools.CodeCoverage.Editor.csproj">
+      <Project>{2AFC06C0-C07F-9B32-94DB-527FD1ECFCD0}</Project>
+      <Name>Unity.TestTools.CodeCoverage.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.2D.Aseprite.Editor.csproj">
+      <Project>{4AE22973-3A22-279D-1525-5E1B7B44F97D}</Project>
+      <Name>Unity.2D.Aseprite.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.Multiplayer.Center.Editor.csproj">
+      <Project>{EE70A79E-CDAA-9752-85FA-C19A4A43E7DE}</Project>
+      <Name>Unity.Multiplayer.Center.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.PlasticSCM.Editor.csproj">
+      <Project>{BFA5DD1D-1742-CE3A-152D-D92C26105C34}</Project>
+      <Name>Unity.PlasticSCM.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.Mathematics.Editor.csproj">
+      <Project>{9486181B-FD03-1EC6-031C-89EEF8DCE271}</Project>
+      <Name>Unity.Mathematics.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.Performance.Profile-Analyzer.Editor.csproj">
+      <Project>{B35F3D3E-FB1A-9703-E6B0-040ACF1508BA}</Project>
+      <Name>Unity.Performance.Profile-Analyzer.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.InternalAPIEditorBridge.001.csproj">
+      <Project>{02919B05-A9B4-FC06-1B8E-62E7CE95D823}</Project>
+      <Name>Unity.InternalAPIEditorBridge.001</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.2D.Animation.Editor.csproj">
+      <Project>{ACFB4714-D5A7-6E7D-DEC7-10BFAE236E61}</Project>
+      <Name>Unity.2D.Animation.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.Collections.csproj">
+      <Project>{7465CE3F-A458-1CC9-C291-3DFE2D9BC5DE}</Project>
+      <Name>Unity.Collections</Name>
+    </ProjectReference>
+    <ProjectReference Include="Sirenix.OdinInspector.Modules.UnityMathematics.csproj">
+      <Project>{8230DD03-05CF-DA93-2A18-C3018A4D8298}</Project>
+      <Name>Sirenix.OdinInspector.Modules.UnityMathematics</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.2D.PixelPerfect.Editor.csproj">
+      <Project>{89F7392D-EB39-1B48-3BC7-A081ECC64A36}</Project>
+      <Name>Unity.2D.PixelPerfect.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.VisualScripting.Core.csproj">
+      <Project>{77E0B7B1-1CB1-3DA4-5D61-EBEB25EE1C24}</Project>
+      <Name>Unity.VisualScripting.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.InternalAPIEngineBridge.001.csproj">
+      <Project>{6A6B5E17-97B4-5D07-76D4-699D550CFE49}</Project>
+      <Name>Unity.InternalAPIEngineBridge.001</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.2D.Tilemap.Editor.csproj">
+      <Project>{32079797-F681-DBF2-1F3B-5D8DF5E466A6}</Project>
+      <Name>Unity.2D.Tilemap.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.2D.Aseprite.Common.csproj">
+      <Project>{770E4454-668C-A888-BFE4-4B79F556ECD6}</Project>
+      <Name>Unity.2D.Aseprite.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.2D.Animation.Runtime.csproj">
+      <Project>{3BA91C0C-9ABB-802C-C080-94E4B457AD05}</Project>
+      <Name>Unity.2D.Animation.Runtime</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.Collections.Editor.csproj">
+      <Project>{08736913-ECA7-93F4-A094-2838E1487675}</Project>
+      <Name>Unity.Collections.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.2D.Tilemap.Extras.Editor.csproj">
+      <Project>{843A9997-EA1F-D322-89D9-100B77AF7499}</Project>
+      <Name>Unity.2D.Tilemap.Extras.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.VisualScripting.Shared.Editor.csproj">
+      <Project>{87C99889-0F75-998D-31CF-3D5001709EE3}</Project>
+      <Name>Unity.VisualScripting.Shared.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.VisualScripting.Core.Editor.csproj">
+      <Project>{98BD68C5-47F5-72C4-9EDF-880A23CEFD0A}</Project>
+      <Name>Unity.VisualScripting.Core.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.Multiplayer.Center.Common.csproj">
+      <Project>{23823DD6-8E59-5754-CD21-CE458F0199EF}</Project>
+      <Name>Unity.Multiplayer.Center.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.TestTools.CodeCoverage.Editor.OpenCover.Mono.Reflection.csproj">
+      <Project>{E54DD4A9-8D11-F229-DDDB-7BDF207C8337}</Project>
+      <Name>Unity.TestTools.CodeCoverage.Editor.OpenCover.Mono.Reflection</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.VisualScripting.Flow.Editor.csproj">
+      <Project>{A5D01587-E370-E3EA-73B5-F7114D5E9A28}</Project>
+      <Name>Unity.VisualScripting.Flow.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.TextMeshPro.csproj">
+      <Project>{E5784B92-AB90-02CE-3A05-488B276007CD}</Project>
+      <Name>Unity.TextMeshPro</Name>
+    </ProjectReference>
+    <ProjectReference Include="spine-unity.csproj">
+      <Project>{07A71B70-B661-D607-29C2-1ADD58A2A15E}</Project>
+      <Name>spine-unity</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.EditorCoroutines.Editor.csproj">
+      <Project>{6154EB83-449B-3D8F-9244-99B7E3B8F93D}</Project>
+      <Name>Unity.EditorCoroutines.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.2D.Tilemap.Extras.csproj">
+      <Project>{14422C66-6191-60D9-C3C6-B5C1E4D471FC}</Project>
+      <Name>Unity.2D.Tilemap.Extras</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.2D.Common.Runtime.csproj">
+      <Project>{97BBD070-9CBF-1F2F-64D8-457D379D6F27}</Project>
+      <Name>Unity.2D.Common.Runtime</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.VisualScripting.SettingsProvider.Editor.csproj">
+      <Project>{9728E3A1-6E5E-559B-9852-B63C232702F4}</Project>
+      <Name>Unity.VisualScripting.SettingsProvider.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.VisualScripting.State.Editor.csproj">
+      <Project>{5F22D313-A104-2766-52E3-DF69E4CC99FE}</Project>
+      <Name>Unity.VisualScripting.State.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.Mathematics.csproj">
+      <Project>{C2BA6C38-F650-9C20-C984-30D8FB312810}</Project>
+      <Name>Unity.Mathematics</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.VisualScripting.State.csproj">
+      <Project>{91570B95-CC33-271A-3586-F0966B477BCA}</Project>
+      <Name>Unity.VisualScripting.State</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.2D.SpriteShape.Editor.csproj">
+      <Project>{FE43AE73-54D3-F9EE-79F4-500B57368073}</Project>
+      <Name>Unity.2D.SpriteShape.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.2D.Sprite.Editor.csproj">
+      <Project>{640E9333-1CDA-4D4C-97E5-B3B73BEA1D90}</Project>
+      <Name>Unity.2D.Sprite.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.2D.Psdimporter.Editor.csproj">
+      <Project>{2DD85CA4-5CD6-48E8-FE08-E521FDBECE57}</Project>
+      <Name>Unity.2D.Psdimporter.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.TextMeshPro.Editor.csproj">
+      <Project>{D34092E7-6CCD-E9CD-9304-90FCC3C7E034}</Project>
+      <Name>Unity.TextMeshPro.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.Burst.Editor.csproj">
+      <Project>{5E39DAEB-9F99-4C71-2D1F-F15752976725}</Project>
+      <Name>Unity.Burst.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="spine-csharp.csproj">
+      <Project>{FEC1E947-E9F8-3A7F-B268-8AFB87E1A5A6}</Project>
+      <Name>spine-csharp</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.2D.PixelPerfect.csproj">
+      <Project>{E4F41F7F-058C-038F-BB63-CFB883D3604B}</Project>
+      <Name>Unity.2D.PixelPerfect</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.Burst.csproj">
+      <Project>{4207E3C4-E8FF-B353-5F85-B6B134A7CF58}</Project>
+      <Name>Unity.Burst</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.VisualStudio.Editor.csproj">
+      <Project>{D30EBD91-677E-55FA-7110-16788FBFAA53}</Project>
+      <Name>Unity.VisualStudio.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="spine-unity-editor.csproj">
+      <Project>{87533B2E-4448-2126-C222-D4243CBC1408}</Project>
+      <Name>spine-unity-editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.VisualScripting.Flow.csproj">
+      <Project>{BBA13375-B73F-4922-BA63-D23F9E8E81EE}</Project>
+      <Name>Unity.VisualScripting.Flow</Name>
+    </ProjectReference>
   </ItemGroup>
-  <Import Project="Sdk.targets" Sdk="Microsoft.NET.Sdk" />
-  <ItemGroup>
-    <ProjectCapability Remove="LaunchProfiles" />
-    <ProjectCapability Remove="SharedProjectReferences" />
-    <ProjectCapability Remove="ReferenceManagerSharedProjects" />
-    <ProjectCapability Remove="ProjectReferences" />
-    <ProjectCapability Remove="ReferenceManagerProjects" />
-    <ProjectCapability Remove="COMReferences" />
-    <ProjectCapability Remove="ReferenceManagerCOM" />
-    <ProjectCapability Remove="AssemblyReferences" />
-    <ProjectCapability Remove="ReferenceManagerAssemblies" />
-  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="GenerateTargetFrameworkMonikerAttribute" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
 </Project>
