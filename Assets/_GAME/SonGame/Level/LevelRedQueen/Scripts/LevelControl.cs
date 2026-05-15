@@ -128,8 +128,9 @@ public class LevelControl : Singleton<LevelControl>
         SoundManager.Ins.PlayBgm();
         transitionPhase.TransitionToPhase(0, 1, () =>
         {
+            cam.orthographicSize += targetOrthoSizeStep2;
+            cam.transform.DOLocalMoveY(targetLocalYStep2, 0.1f);
 
-            cam.orthographicSize += targetOrthoSizeStart;
         });
         transitionPhase.onComplete.AddListener(() =>
         {
@@ -156,32 +157,29 @@ public class LevelControl : Singleton<LevelControl>
             case 0:
                 return;
             case 1:
+                TutorialManager.Ins.enableCountTime = false;
+
                 TutorialManager.Ins.SetNewTime(0.5f);
                 OnStartStep2();
                 return;
             case 2:
+                TutorialManager.Ins.SetNewTime(3f);
                 OnStartStep3();
                 return;
             case 3:
                 OnStartStep4();
                 return;
             case 4:
-                //OnStartStep5();
+                OnStartStep5();
                 return;
             case 5:
-                //OnStartStep6();
+                OnStartStep6();
                 return;
             case 6:
-                //OnStartStep7();
+                OnStartStep7();
                 return;
             case 7:
-                //OnStartStep8();
-                return;
-            case 8:
-                // OnStartStep9();
-                return;
-            case 9:
-                // OnStartStep10();
+                OnStartStep8();
                 return;
             default:
                 return;
@@ -395,10 +393,8 @@ public class LevelControl : Singleton<LevelControl>
 
     private void OnStartStep2()
     {
-        MoveCamera(cam, cam.orthographicSize + targetOrthoSizeStep2, -targetLocalYStep2, timerMove, () =>
-        {
-            StartStep2();
-        });
+        StartStep2();
+
     }
     [SerializeField] private ShowObjectEffect showStep2Phase1;
     [SerializeField] private SlotAttachmentPairList slotHairStep1;
@@ -433,6 +429,7 @@ public class LevelControl : Singleton<LevelControl>
     {
         itemClipper.AddUseInStep(StepManager.Ins.CurrentStep);
         showStep2Phase1.Show(0.25f);
+        TutorialManager.Ins.enableCountTime = true;
         for (int i = 0; i < listTriggerCollider.Count; i++)
         {
             TriggerWithCertainCollider trigger = listTriggerCollider[i];
@@ -445,11 +442,17 @@ public class LevelControl : Singleton<LevelControl>
                     SetSlotsAlpha(slotHairStart, 1);
                     DoneStep();
                     //TryNextStep();
+                    TutorialManager.Ins.enableCountTime = false;
+
                 }
             });
         }
     }
-
+    IEnumerator IE_DelayShowHint()
+    {
+        yield return new WaitForSeconds(2);
+        //TutorialManager.Ins.enableCountTime = true;
+    }
     #endregion
     #region Step3
     [SerializeField] private EmojiControl emojiControlNew;
@@ -478,6 +481,7 @@ public class LevelControl : Singleton<LevelControl>
         {
             ballSnapPoint.ChangeCanSnap(true);
             ballSnap.AddSnapEvent(OnSnapBallToPumper);
+            TutorialManager.Ins.enableCountTime = true;
         });
     }
     private void StartStep3()
@@ -488,13 +492,13 @@ public class LevelControl : Singleton<LevelControl>
             StartCoroutine(IE_DelayStep3());
         });
     }
-    [SerializeField]private SpineBoneIKControl pumControl;
-    [SerializeField]private SkeletonAnimation pumperAnim;
-    [SerializeField]private string pumperAnimName;
+    [SerializeField] private SpineBoneIKControl pumControl;
+    [SerializeField] private SkeletonAnimation pumperAnim;
+    [SerializeField] private string pumperAnimName;
     private int namePumerCount;
 
-    [SerializeField]private SonSnapObject ballSnap;
-    [SerializeField]private SonSnapPoint ballSnapPoint;
+    [SerializeField] private SonSnapObject ballSnap;
+    [SerializeField] private SonSnapPoint ballSnapPoint;
     private void OnSnapBallToPumper()
     {
         pumControl.DisableIKControl();
@@ -515,14 +519,353 @@ public class LevelControl : Singleton<LevelControl>
         {
             SetDoneStep();
             TryNextStep();
+            TutorialManager.Ins.enableCountTime = false;
+
         });
     }
 
     #endregion
+    #region Step5
+    [SerializeField] private ShowObjectEffect effecrShowStep5;
+    private void OnStartStep5()
+    {
+        effecrShowStep5.Show(1f);
+        effecrShowStep5.onShowComplete.AddListener(() =>
+        {
+            TutorialManager.Ins.enableCountTime = true;
+        });
 
+        StartStep5();
+    }
+    [SerializeField] private AudioClip sfxBrush;
 
+    [SerializeField] private SonDragItemBase itemHairSpray;
+    [SerializeField] private OnTransformGoToAffectZone hairSprayTrigger;
+    [SerializeField] private float hairSprayDuration = 3f;
+    [SerializeField] private SpriteRenderer sprBall;
+    [SerializeField] private bool isTriggerColor = false;
+    [SerializeField] private GameObject ballAnim;
+    [SerializeField] private GameObject ballSd;
 
+    public void SetIsTriggerColor()
+    {
+        isTriggerColor = true;
+        OnHairSprayDragStart();
+    }
 
+    private Tween _tweenHairSpray;
+    private float _progressHairSpray = 0f;
+    private bool _isHairSprayDragging = false;
+    private void StartStep5()
+    {
+        itemHairSpray.AddUseInStep(StepManager.Ins.CurrentStep);
+        itemHairSpray.onDragStart.AddListener(OnHairSprayDragStart);
+        itemHairSpray.onDragStop.AddListener(OnHairSprayDragStop);
+        hairSprayTrigger.onEnterZone.AddListener(OnHairSprayEnterZone);
+        hairSprayTrigger.onOutZone.AddListener(OnHairSprayExitZone);
+        hairSprayTrigger.enabled = false;
+        fillCircleBar.ReFill();
+    }
+
+    private void OnHairSprayDragStart()
+    {
+        if (isTriggerColor == false) return;
+        _isHairSprayDragging = true;
+        hairSprayTrigger.enabled = true;
+    }
+
+    private void OnHairSprayDragStop()
+    {
+        if (isTriggerColor == false) return;
+        _isHairSprayDragging = false;
+        hairSprayTrigger.enabled = false;
+        _tweenHairSpray?.Pause();
+        fillCircleBar.Hide();
+    }
+    private bool isShowHairSpray = false;
+    private void OnHairSprayEnterZone()
+    {
+        if (isTriggerColor == false) return;
+        fillCircleBar.Show();
+        SoundManager.Ins.PlaySoundSpray();
+        if (_tweenHairSpray == null)
+        {
+            _tweenHairSpray = DOVirtual
+                .Float(_progressHairSpray, 1f, hairSprayDuration * (1f - _progressHairSpray), value =>
+                {
+                    _progressHairSpray = value;
+                    fillCircleBar.Fill(_progressHairSpray);
+                    SetAlpha(sprBall, value);
+                })
+                .SetEase(Ease.Linear)
+                .OnComplete(() =>
+                {
+                    _tweenHairSpray = null;
+                    OnHairSprayCompleted();
+                });
+        }
+        else if (!_tweenHairSpray.IsPlaying())
+        {
+            _tweenHairSpray.Play();
+        }
+    }
+    public void SetAlpha(SpriteRenderer spriteRenderer, float alpha)
+    {
+        if (spriteRenderer == null) return;
+        Color color = spriteRenderer.color;
+        color.a = Mathf.Clamp01(alpha);
+        spriteRenderer.color = color;
+    }
+    private void OnHairSprayExitZone()
+    {
+        if (isTriggerColor == false) return;
+        SoundManager.Ins.StopSoundSpray();
+        if (!_isHairSprayDragging) return;
+
+        _tweenHairSpray?.Pause();
+        fillCircleBar.Hide();
+    }
+
+    private void OnHairSprayCompleted()
+    {
+        if (isTriggerColor == false) return;
+        SetAlpha(sprBall, 1);
+        ballAnim.SetActive(false);
+        ballSd.SetActive(true);
+        _progressHairSpray = 1f;
+        hairSprayTrigger.enabled = false;
+        fillCircleBar.Hide();
+        hairSprayTrigger.onEnterZone.RemoveListener(OnHairSprayEnterZone);
+        hairSprayTrigger.onOutZone.RemoveListener(OnHairSprayExitZone);
+        itemHairSpray.onDragStart.RemoveListener(OnHairSprayDragStart);
+        itemHairSpray.onDragStop.RemoveListener(OnHairSprayDragStop);
+        SetDoneStep();
+    }
+    #endregion
+    #region Step6
+    [SerializeField] private ShowObjectEffect effecrBall;
+    [SerializeField] private ShowObjectEffect effecrShirtFront;
+
+    private void OnStartStep6()
+    {
+        effecrBall.Hide(0.5f);
+        effecrShirtFront.Show(1.25f);
+        StartCoroutine(IE_DelayStep6());
+    }
+    IEnumerator IE_DelayStep6()
+    {
+        yield return new WaitForSeconds(1.25f);
+        StartStepShirtFront();
+    }
+
+    [SerializeField] private SpriteRenderer sprShirtFront;
+    [SerializeField] private float shirtFrontDuration = 3f;
+    [SerializeField] private SpriteRenderer sprColorInBrush;
+    [SerializeField] private Color targetColor = Color.white;
+    private Tween _tweenShirtFront;
+    private float _progressShirtFront = 0f;
+    private bool _isShirtFrontDragging = false;
+
+    private void StartStepShirtFront()
+    {
+        sprColorInBrush.color = targetColor;
+        itemHairSpray.AddUseInStep(StepManager.Ins.CurrentStep);
+        itemHairSpray.onDragStart.AddListener(OnShirtFrontDragStart);
+        itemHairSpray.onDragStop.AddListener(OnShirtFrontDragStop);
+        hairSprayTrigger.onEnterZone.AddListener(OnShirtFrontEnterZone);
+        hairSprayTrigger.onOutZone.AddListener(OnShirtFrontExitZone);
+        hairSprayTrigger.enabled = false;
+        fillCircleBar.ReFill();
+    }
+
+    private void OnShirtFrontDragStart()
+    {
+        if (isTriggerColor == false) return;
+        _isShirtFrontDragging = true;
+        hairSprayTrigger.enabled = true;
+    }
+
+    private void OnShirtFrontDragStop()
+    {
+        if (isTriggerColor == false) return;
+        _isShirtFrontDragging = false;
+        hairSprayTrigger.enabled = false;
+        _tweenShirtFront?.Pause();
+        fillCircleBar.Hide();
+    }
+
+    private void OnShirtFrontEnterZone()
+    {
+        SoundManager.Ins.PlaySoundSpray();
+        if (isTriggerColor == false) return;
+        fillCircleBar.Show();
+
+        if (_tweenShirtFront == null)
+        {
+            _tweenShirtFront = DOVirtual
+                .Float(_progressShirtFront, 1f, shirtFrontDuration * (1f - _progressShirtFront), value =>
+                {
+                    _progressShirtFront = value;
+                    fillCircleBar.Fill(_progressShirtFront);
+                    SetAlpha(sprShirtFront, value);
+                })
+                .SetEase(Ease.Linear)
+                .OnComplete(() =>
+                {
+                    _tweenShirtFront = null;
+                    OnShirtFrontCompleted();
+                });
+        }
+        else if (!_tweenShirtFront.IsPlaying())
+        {
+            _tweenShirtFront.Play();
+        }
+    }
+
+    private void OnShirtFrontExitZone()
+    {
+        SoundManager.Ins.StopSoundSpray();
+        if (isTriggerColor == false) return;
+        if (!_isShirtFrontDragging) return;
+
+        _tweenShirtFront?.Pause();
+        fillCircleBar.Hide();
+    }
+
+    private void OnShirtFrontCompleted()
+    {
+        if (isTriggerColor == false) return;
+        SetAlpha(sprShirtFront, 1);
+        _progressShirtFront = 1f;
+        hairSprayTrigger.enabled = false;
+        fillCircleBar.Hide();
+        hairSprayTrigger.onEnterZone.RemoveListener(OnShirtFrontEnterZone);
+        hairSprayTrigger.onOutZone.RemoveListener(OnShirtFrontExitZone);
+        itemHairSpray.onDragStart.RemoveListener(OnShirtFrontDragStart);
+        itemHairSpray.onDragStop.RemoveListener(OnShirtFrontDragStop);
+        SetDoneStep();
+    }
+
+    #endregion
+
+    #region Step7
+    [SerializeField] private ShowObjectEffect effecrShirtBack;
+    private void OnStartStep7()
+    {
+        effecrShirtFront.Hide(0.5f);
+        effecrShirtBack.Show(1.25f);
+        StartCoroutine(IE_DelayStep7());
+    }
+    IEnumerator IE_DelayStep7()
+    {
+        yield return new WaitForSeconds(1.25f);
+        StartStepShirtBack();
+    }
+    [SerializeField] private SpriteRenderer sprShirtBack;
+    [SerializeField] private float shirtBackDuration = 3f;
+    [SerializeField] private Color targetColorBack = Color.white;
+    private Tween _tweenShirtBack;
+    private float _progressShirtBack = 0f;
+    private bool _isShirtBackDragging = false;
+    private void StartStepShirtBack()
+    {
+        sprColorInBrush.color = targetColorBack;
+        itemHairSpray.AddUseInStep(StepManager.Ins.CurrentStep);
+        itemHairSpray.onDragStart.AddListener(OnShirtBackDragStart);
+        itemHairSpray.onDragStop.AddListener(OnShirtBackDragStop);
+        hairSprayTrigger.onEnterZone.AddListener(OnShirtBackEnterZone);
+        hairSprayTrigger.onOutZone.AddListener(OnShirtBackExitZone);
+        hairSprayTrigger.enabled = false;
+        fillCircleBar.ReFill();
+    }
+    private void OnShirtBackDragStart()
+    {
+        if (isTriggerColor == false) return;
+        _isShirtBackDragging = true;
+        hairSprayTrigger.enabled = true;
+    }
+    private void OnShirtBackDragStop()
+    {
+        if (isTriggerColor == false) return;
+        _isShirtBackDragging = false;
+        hairSprayTrigger.enabled = false;
+        _tweenShirtBack?.Pause();
+        fillCircleBar.Hide();
+    }
+    private void OnShirtBackEnterZone()
+    {
+        SoundManager.Ins.PlaySoundSpray();
+        if (isTriggerColor == false) return;
+        fillCircleBar.Show();
+
+        if (_tweenShirtBack == null)
+        {
+            _tweenShirtBack = DOVirtual
+                .Float(_progressShirtBack, 1f, shirtBackDuration * (1f - _progressShirtBack), value =>
+                {
+                    _progressShirtBack = value;
+                    fillCircleBar.Fill(_progressShirtBack);
+                    SetAlpha(sprShirtBack, value);
+                })
+                .SetEase(Ease.Linear)
+                .OnComplete(() =>
+                {
+                    _tweenShirtBack = null;
+                    OnShirtBackCompleted();
+                });
+        }
+        else if (!_tweenShirtBack.IsPlaying())
+        {
+            _tweenShirtBack.Play();
+        }
+    }
+    private void OnShirtBackExitZone()
+    {
+        SoundManager.Ins.StopSoundSpray();
+        if (isTriggerColor == false) return;
+        if (!_isShirtBackDragging) return;
+
+        _tweenShirtBack?.Pause();
+        fillCircleBar.Hide();
+    }
+    private void OnShirtBackCompleted()
+    {
+        if (isTriggerColor == false) return;
+        TutorialManager.Ins.enableCountTime = false;
+        SetAlpha(sprShirtBack, 1);
+        _progressShirtBack = 1f;
+        hairSprayTrigger.enabled = false;
+        fillCircleBar.Hide();
+        hairSprayTrigger.onEnterZone.RemoveListener(OnShirtBackEnterZone);
+        hairSprayTrigger.onOutZone.RemoveListener(OnShirtBackExitZone);
+        itemHairSpray.onDragStart.RemoveListener(OnShirtBackDragStart);
+        itemHairSpray.onDragStop.RemoveListener(OnShirtBackDragStop);
+        SetDoneStep();
+        TutorialManager.Ins.enableCountTime = false;
+
+    }
+    #endregion
+
+    #region Step8
+    [SerializeField] private EmojiControl emojiControlOld;
+
+    private void OnStartStep8()
+    {
+        SetNewEmoji(emojiControlOld);
+        StartCoroutine(IE_DelayStep8());
+    }
+    IEnumerator IE_DelayStep8()
+    {
+        yield return new WaitForSeconds(0.5f);
+        transitionPhase.TransitionToPhase(2, 1, () =>
+        {
+        });
+        transitionPhase.onComplete.AddListener(() =>
+        {
+            EndGame();
+        });
+    }
+    #endregion
 
 
 

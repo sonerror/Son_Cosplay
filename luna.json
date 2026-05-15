@@ -2,7 +2,7 @@
     "version": "7.1.0",
     "projectId": "f42e7ff96e4545544bb6cd68f51ab634",
     "applicationID": 34683,
-    "creativeName": "R1_Cosplaydom_ver15_malfu_GG",
+    "creativeName": "R1_Cosplaydom_ver16_CR_GG",
     "pgServer": "EU",
     "window": {
         "‐⁙": true
@@ -8748,10 +8748,6 @@
                 "excluded": true
             },
             {
-                "name": "Spine.PathConstraintPositionTimeline",
-                "excluded": true
-            },
-            {
                 "name": "Spine.PathConstraintSpacingTimeline",
                 "excluded": true
             },
@@ -9713,7 +9709,7 @@
                 "instanceMethods": [
                     {
                         "name": "format",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "equals",
@@ -15799,7 +15795,7 @@
                     },
                     {
                         "name": "Exp",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "PingPong",
@@ -39397,7 +39393,7 @@
                     },
                     {
                         "name": "SetNewEmoji",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "SetEmissionRate",
@@ -39524,10 +39520,6 @@
                         "excluded": true
                     },
                     {
-                        "name": "StartStep4",
-                        "excluded": false
-                    },
-                    {
                         "name": "SetSlotStart",
                         "excluded": false
                     },
@@ -39540,59 +39532,7 @@
                         "excluded": false
                     },
                     {
-                        "name": "OnSetStateSlotPant",
-                        "excluded": false
-                    },
-                    {
-                        "name": "OnSetStateSlotShirt",
-                        "excluded": false
-                    },
-                    {
-                        "name": "OnSetStateSlotHat",
-                        "excluded": false
-                    },
-                    {
-                        "name": "OnSetStateSlotShoesL",
-                        "excluded": false
-                    },
-                    {
-                        "name": "OnSetStateSlotShoesR",
-                        "excluded": false
-                    },
-                    {
-                        "name": "OnStartStepThrowClothes",
-                        "excluded": false
-                    },
-                    {
                         "name": "IE_DelayStep3",
-                        "excluded": false
-                    },
-                    {
-                        "name": "OnBodyPainterDragStart",
-                        "excluded": false
-                    },
-                    {
-                        "name": "OnBodyPainterDragStop",
-                        "excluded": false
-                    },
-                    {
-                        "name": "OnBodyPainterEnterZone",
-                        "excluded": false
-                    },
-                    {
-                        "name": "OnBodyPainterExitZone",
-                        "excluded": false
-                    },
-                    {
-                        "name": "OnBodyPainterCompleted",
-                        "excluded": false
-                    },
-                    {
-                        "name": "OnSetStateSlotHairBack",
-                        "excluded": false
-                    },
-                    {
-                        "name": "IE_DelayStep4",
                         "excluded": false
                     },
                     {
@@ -39616,31 +39556,107 @@
                         "excluded": false
                     },
                     {
-                        "name": "StartStep6",
-                        "excluded": false
-                    },
-                    {
-                        "name": "OnHairGelDragStart",
-                        "excluded": false
-                    },
-                    {
-                        "name": "OnHairGelDragStop",
-                        "excluded": false
-                    },
-                    {
-                        "name": "OnHairGelEnterZone",
-                        "excluded": false
-                    },
-                    {
-                        "name": "OnHairGelExitZone",
-                        "excluded": false
-                    },
-                    {
-                        "name": "OnHairGelCompleted",
-                        "excluded": false
-                    },
-                    {
                         "name": "IE_DelayStep7",
+                        "excluded": false
+                    },
+                    {
+                        "name": "SetDoneStep",
+                        "excluded": false
+                    },
+                    {
+                        "name": "FadeOutSlots",
+                        "excluded": false
+                    },
+                    {
+                        "name": "HideHairStep1",
+                        "excluded": false
+                    },
+                    {
+                        "name": "HideHairStep2Right",
+                        "excluded": false
+                    },
+                    {
+                        "name": "HideHairStep2Left",
+                        "excluded": false
+                    },
+                    {
+                        "name": "StartStep2",
+                        "excluded": false
+                    },
+                    {
+                        "name": "IE_DelayShowHint",
+                        "excluded": true
+                    },
+                    {
+                        "name": "OnSnapBallToPumper",
+                        "excluded": false
+                    },
+                    {
+                        "name": "SetIsTriggerColor",
+                        "excluded": false
+                    },
+                    {
+                        "name": "SetAlpha",
+                        "excluded": false
+                    },
+                    {
+                        "name": "IE_DelayStep6",
+                        "excluded": false
+                    },
+                    {
+                        "name": "StartStepShirtFront",
+                        "excluded": false
+                    },
+                    {
+                        "name": "OnShirtFrontDragStart",
+                        "excluded": false
+                    },
+                    {
+                        "name": "OnShirtFrontDragStop",
+                        "excluded": false
+                    },
+                    {
+                        "name": "OnShirtFrontEnterZone",
+                        "excluded": false
+                    },
+                    {
+                        "name": "OnShirtFrontExitZone",
+                        "excluded": false
+                    },
+                    {
+                        "name": "OnShirtFrontCompleted",
+                        "excluded": false
+                    },
+                    {
+                        "name": "StartStepShirtBack",
+                        "excluded": false
+                    },
+                    {
+                        "name": "OnShirtBackDragStart",
+                        "excluded": false
+                    },
+                    {
+                        "name": "OnShirtBackDragStop",
+                        "excluded": false
+                    },
+                    {
+                        "name": "OnShirtBackEnterZone",
+                        "excluded": false
+                    },
+                    {
+                        "name": "OnShirtBackExitZone",
+                        "excluded": false
+                    },
+                    {
+                        "name": "OnShirtBackCompleted",
+                        "excluded": false
+                    },
+                    {
+                        "name": "OnStartStep8",
+                        "excluded": false
+                    },
+                    {
+                        "name": "IE_DelayStep8",
                         "excluded": false
                     }
                 ]
@@ -40389,7 +40405,7 @@
                     },
                     {
                         "name": "OnEvent",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "Reset",
@@ -40520,19 +40536,7 @@
                         "excluded": false
                     },
                     {
-                        "name": "SetIsTriggerBox",
-                        "excluded": false
-                    },
-                    {
-                        "name": "ListClothes#get",
-                        "excluded": false
-                    },
-                    {
-                        "name": "ListThrowClothes#get",
-                        "excluded": false
-                    },
-                    {
-                        "name": "TutorialStep1",
+                        "name": "SetStateIsTriger",
                         "excluded": false
                     }
                 ]
@@ -41251,7 +41255,7 @@
                     },
                     {
                         "name": "OnEvent",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "AssignEventSubscribersFrom",
@@ -41681,7 +41685,7 @@
                     },
                     {
                         "name": "Event",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "Drain",
@@ -42401,7 +42405,7 @@
                     },
                     {
                         "name": "FindEvent",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "FindAnimation",
@@ -42417,7 +42421,7 @@
                     },
                     {
                         "name": "FindPathConstraint",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "FindPhysicsConstraint",
@@ -43445,7 +43449,7 @@
                     },
                     {
                         "name": "FadeOut",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "FadeOut$1",
@@ -44667,7 +44671,7 @@
                     },
                     {
                         "name": "AddAfterPosition",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "AddCurvePosition",
@@ -46657,7 +46661,7 @@
                     },
                     {
                         "name": "Apply",
-                        "excluded": true
+                        "excluded": false
                     }
                 ]
             },
@@ -46983,6 +46987,10 @@
                     },
                     {
                         "name": "OnEnable",
+                        "excluded": false
+                    },
+                    {
+                        "name": "AddSnapEvent",
                         "excluded": false
                     }
                 ]
@@ -47471,7 +47479,7 @@
                     },
                     {
                         "name": "Apply",
-                        "excluded": true
+                        "excluded": false
                     }
                 ]
             },
@@ -47498,6 +47506,130 @@
                     {
                         "name": "Global",
                         "excluded": true
+                    }
+                ]
+            },
+            {
+                "className": "sonnv.Pumper",
+                "staticMethods": [],
+                "instanceMethods": [
+                    {
+                        "name": "Col#get",
+                        "excluded": false
+                    },
+                    {
+                        "name": "PumpCol#get",
+                        "excluded": true
+                    },
+                    {
+                        "name": "TargetCount#get",
+                        "excluded": true
+                    },
+                    {
+                        "name": "MaxPumpCount#get",
+                        "excluded": true
+                    },
+                    {
+                        "name": "MinY#get",
+                        "excluded": false
+                    },
+                    {
+                        "name": "MaxY#get",
+                        "excluded": false
+                    },
+                    {
+                        "name": "TargetY#get",
+                        "excluded": false
+                    },
+                    {
+                        "name": "init",
+                        "excluded": false
+                    },
+                    {
+                        "name": "SetActive",
+                        "excluded": true
+                    },
+                    {
+                        "name": "ResetPump",
+                        "excluded": true
+                    },
+                    {
+                        "name": "Awake",
+                        "excluded": false
+                    },
+                    {
+                        "name": "OnDestroy",
+                        "excluded": true
+                    },
+                    {
+                        "name": "Update",
+                        "excluded": false
+                    },
+                    {
+                        "name": "OnPointerDown",
+                        "excluded": false
+                    },
+                    {
+                        "name": "OnPointerUp",
+                        "excluded": false
+                    },
+                    {
+                        "name": "DragByScreenPosition",
+                        "excluded": false
+                    },
+                    {
+                        "name": "IsReachTarget",
+                        "excluded": false
+                    },
+                    {
+                        "name": "BeginReachTarget",
+                        "excluded": false
+                    },
+                    {
+                        "name": "IsPumpLimitReached",
+                        "excluded": false
+                    },
+                    {
+                        "name": "FinishDone",
+                        "excluded": false
+                    },
+                    {
+                        "name": "ScreenToWorld",
+                        "excluded": false
+                    },
+                    {
+                        "name": "WorldToLocal",
+                        "excluded": false
+                    },
+                    {
+                        "name": "StopDragging",
+                        "excluded": false
+                    },
+                    {
+                        "name": "ReturnToStart",
+                        "excluded": false
+                    },
+                    {
+                        "name": "ResetForNextDrag",
+                        "excluded": false
+                    }
+                ]
+            },
+            {
+                "className": "Spine.PathConstraintPositionTimeline",
+                "staticMethods": [],
+                "instanceMethods": [
+                    {
+                        "name": "PathConstraintIndex#get",
+                        "excluded": true
+                    },
+                    {
+                        "name": "ctor",
+                        "excluded": false
+                    },
+                    {
+                        "name": "Apply",
+                        "excluded": false
                     }
                 ]
             }
@@ -48127,6 +48259,26 @@
                         "script": "",
                         "ext": "",
                         "name": "Assets/_GAME/SonGame/Level/LevelMalfurion/Texture/P2_background.png"
+                    },
+                    {
+                        "maxWidth": 2048,
+                        "maxHeight": 2048,
+                        "format": "png32",
+                        "compression": "quantSize",
+                        "quality": 65,
+                        "script": "",
+                        "ext": "",
+                        "name": "Assets/_GAME/SonGame/Level/LevelCr7/Spine/Cr7_spine/CR7animx.png"
+                    },
+                    {
+                        "maxWidth": 1024,
+                        "maxHeight": 1024,
+                        "format": "png32",
+                        "compression": "quantSize",
+                        "quality": 65,
+                        "script": "",
+                        "ext": "",
+                        "name": "Assets/_GAME/SonGame/Level/LevelCr7/Spine/anim-bombong/bombong/bombong.png"
                     }
                 ]
             },

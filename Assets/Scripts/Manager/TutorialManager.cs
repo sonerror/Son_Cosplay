@@ -65,46 +65,29 @@ public class TutorialManager : Singleton<TutorialManager>
             ShowHint();
         }
     }
-    [SerializeField] private Transform tfBody;
+    //Step 1
     [SerializeField] private Transform tfHair;
-
-    //step1
-    [SerializeField] private List<Transform> listClothes = new List<Transform>();
-    [SerializeField] private List<Transform> listThrowClothes = new List<Transform>();
-    public List<Transform> ListClothes => listClothes;
-    public List<Transform> ListThrowClothes => listThrowClothes;
-
-    private void TutorialStep1(int indexStep)
-    {
-        if (handCtrl == null) return;
-        if (indexStep >= listClothes.Count || indexStep >= listThrowClothes.Count) return;
-        handCtrl.gameObject.SetActive(true);
-        var tf = listClothes[indexStep];
-        var tfTarget = listThrowClothes[indexStep];
-        handCtrl.ShowHandPosToPos(tf.gameObject.transform.position, tfTarget.transform.position);
-    }
+    [SerializeField] private Transform tfHairL;
+    [SerializeField] private Transform tfHairR;
+    [SerializeField] private Transform tfClipper;
     //step2
-
-
-    [SerializeField] private Transform tfSprayBody;
+    [SerializeField] private Transform tfBom;
+    [SerializeField] private Transform tfBall;
     //step3
-    [SerializeField] private bool isTriggerBox = false;
-    [SerializeField] private Transform tfBox;
-    [SerializeField] private Transform tfTagetBox;
-
-    [SerializeField] private Transform tfHairInBox;
-    [SerializeField] private Transform tfSprayHairGold;
-    [SerializeField] private Transform tfHairColor;
-    [SerializeField] private Transform tfGel;
-    [SerializeField] private Transform tfEnd;
-    [SerializeField] private Transform tfEye;
-
-
-    public void SetIsTriggerBox()
+    [SerializeField] private Transform tfhandBom;
+    [SerializeField] private Transform tfBomTarget;
+    //step4
+    [SerializeField] private bool isTriggerColor = false;
+    public void SetStateIsTriger()
     {
-        isTriggerBox = true;
+        isTriggerColor = true;
     }
-
+    [SerializeField] private Transform tfBrush;
+    [SerializeField] private Transform tfColor;
+    [SerializeField] private Transform tfItemStep3;
+    //step8
+    [SerializeField] private Transform tfItemInBody;
+    [SerializeField] private Transform tfItemInBodyTarget;
     void ShowHint()
     {
         if (disableHand) return;
@@ -116,42 +99,42 @@ public class TutorialManager : Singleton<TutorialManager>
             case 0:
                 return;
             case 1:
-                TutorialStep1(0);
+                handCtrl.gameObject.SetActive(true);
+                handCtrl.ShowHandPosToPosToPos(tfClipper.position, tfHairR.position, tfHairL.position);
                 return;
             case 2:
                 handCtrlMakeup.gameObject.SetActive(true);
-                handCtrlMakeup.ShowHandPosToPos(tfSprayBody.position, tfBody.position);
+                handCtrlMakeup.ShowHandPosToPos(tfBom.position, tfBall.position);
 
                 return;
             case 3:
-                if (isTriggerBox == false)
+                handCtrlMakeup.gameObject.SetActive(true);
+                handCtrlMakeup.ShowHandPosToPos(tfhandBom.position, tfBomTarget.position);
+                return;
+
+            case 4:
+                if(isTriggerColor == false)
                 {
                     handCtrlMakeup.gameObject.SetActive(true);
-                    handCtrlMakeup.ShowHandPosToPos(tfBox.position, tfTagetBox.position);
-                    return;
+                    handCtrlMakeup.ShowHandPosToPosToPos(tfBrush.position, tfColor.position, tfItemStep3.position);
                 }
                 else
                 {
                     handCtrlMakeup.gameObject.SetActive(true);
-                    handCtrlMakeup.ShowHandPosToPos(tfHairInBox.position, tfHair.position);
-                    return;
+                    handCtrlMakeup.ShowHandPosToPos(tfBrush.position, tfItemStep3.position);
                 }
-                return;
-            case 4:
-                handCtrlMakeup.gameObject.SetActive(true);
-                handCtrlMakeup.ShowHandPosToPos(tfSprayHairGold.position, tfHairColor.position);
                 return;
             case 5:
                 handCtrlMakeup.gameObject.SetActive(true);
-                handCtrlMakeup.ShowHandPosToPos(tfGel.position, tfHairColor.position);
+                handCtrlMakeup.ShowHandPosToPos(tfBrush.position, tfItemStep3.position);
                 return;
             case 6:
                 handCtrlMakeup.gameObject.SetActive(true);
-                handCtrlMakeup.ShowHandPosToPos(tfEnd.position, tfEye.position);
+                handCtrlMakeup.ShowHandPosToPos(tfBrush.position, tfItemStep3.position);
                 return;
             case 7:
-                // handCtrl.gameObject.SetActive(true);
-                // handCtrl.ShowHandPosToPos(tfSpray.position, tfHair.position);
+                handCtrlMakeup.gameObject.SetActive(true);
+                handCtrlMakeup.ShowHandPosToPos(tfItemInBody.position, tfItemInBodyTarget.position);
                 return;
             default:
                 resetTimeHint();
