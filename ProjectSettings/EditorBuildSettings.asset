@@ -59,5 +59,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/_GAME/SonGame/Level/LevelCr7/LevelCr7.unity
     guid: 5fe5b0906e48f4c4e89e5d187ad35c4e
+  - enabled: 1
+    path: Assets/_GAME/SonGame/Level/LevelValak/LevelValak.unity
+    guid: 348038a1c509f624b804a6fd75dcb8c9
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0

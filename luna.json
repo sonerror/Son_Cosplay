@@ -2,7 +2,7 @@
     "version": "7.1.0",
     "projectId": "f42e7ff96e4545544bb6cd68f51ab634",
     "applicationID": 34683,
-    "creativeName": "R1_Cosplaydom_ver16_CR_GG",
+    "creativeName": "R1_Cosplaydom_Ver18_Valak_GG",
     "pgServer": "EU",
     "window": {
         "‐⁙": true
@@ -137,12 +137,13 @@
             ]
         },
         "scenes": [
-            "Assets/_GAME/SonGame/Level/LevelCr7/LevelCr7.unity"
+            "Assets/_GAME/SonGame/Level/LevelValak/LevelValak.unity"
         ],
         "disabledScenes": [
             "Assets/Scenes/LevelMain.unity",
             "Assets/_GAME/Levels/LvCosplayKIdol/Level6.unity",
             "Assets/_GAME/Levels/LvCosplayWenesday/Level53.unity",
+            "Assets/_GAME/SonGame/Level/LevelCr7/LevelCr7.unity",
             "Assets/_GAME/SonGame/Level/LevelFran/LevelFran.unity",
             "Assets/_GAME/SonGame/Level/LevelMaleficent/Level98Maleficent.unity",
             "Assets/_GAME/SonGame/Level/LevelMalfurion/LevelMalfurion.unity",
@@ -1849,10 +1850,6 @@
             },
             {
                 "name": "System.TypeCodeValues",
-                "excluded": true
-            },
-            {
-                "name": "System.Text.StringBuilder",
                 "excluded": true
             },
             {
@@ -8312,10 +8309,6 @@
                 "excluded": true
             },
             {
-                "name": "Spine.Sequence",
-                "excluded": true
-            },
-            {
                 "name": "Spine.SkeletonBounds",
                 "excluded": true
             },
@@ -8609,10 +8602,6 @@
             },
             {
                 "name": "Spine.PhysicsConstraintResetTimeline",
-                "excluded": true
-            },
-            {
-                "name": "Spine.SequenceTimeline",
                 "excluded": true
             },
             {
@@ -8921,7 +8910,7 @@
             },
             {
                 "name": "Spine.SequenceMode",
-                "excluded": true
+                "excluded": false
             },
             {
                 "name": "Spine.Skeleton.Physics",
@@ -39508,14 +39497,6 @@
                         "excluded": false
                     },
                     {
-                        "name": "OnStartStep6",
-                        "excluded": false
-                    },
-                    {
-                        "name": "OnStartStep7",
-                        "excluded": false
-                    },
-                    {
                         "name": "InitSlotsDone",
                         "excluded": true
                     },
@@ -39528,38 +39509,6 @@
                         "excluded": false
                     },
                     {
-                        "name": "StartStep5",
-                        "excluded": false
-                    },
-                    {
-                        "name": "IE_DelayStep3",
-                        "excluded": false
-                    },
-                    {
-                        "name": "OnHairSprayDragStart",
-                        "excluded": false
-                    },
-                    {
-                        "name": "OnHairSprayDragStop",
-                        "excluded": false
-                    },
-                    {
-                        "name": "OnHairSprayEnterZone",
-                        "excluded": false
-                    },
-                    {
-                        "name": "OnHairSprayExitZone",
-                        "excluded": false
-                    },
-                    {
-                        "name": "OnHairSprayCompleted",
-                        "excluded": false
-                    },
-                    {
-                        "name": "IE_DelayStep7",
-                        "excluded": false
-                    },
-                    {
                         "name": "SetDoneStep",
                         "excluded": false
                     },
@@ -39568,95 +39517,63 @@
                         "excluded": false
                     },
                     {
-                        "name": "HideHairStep1",
+                        "name": "SetStateSlotHat",
                         "excluded": false
                     },
                     {
-                        "name": "HideHairStep2Right",
+                        "name": "SetStateSlotCoat",
                         "excluded": false
                     },
                     {
-                        "name": "HideHairStep2Left",
+                        "name": "SetStateSlotPant",
                         "excluded": false
                     },
                     {
-                        "name": "StartStep2",
+                        "name": "SetStateSlotShoeL",
                         "excluded": false
                     },
                     {
-                        "name": "IE_DelayShowHint",
-                        "excluded": true
-                    },
-                    {
-                        "name": "OnSnapBallToPumper",
+                        "name": "SetStateSlotShoeR",
                         "excluded": false
                     },
                     {
-                        "name": "SetIsTriggerColor",
+                        "name": "SetStateSlotShirt",
                         "excluded": false
                     },
                     {
-                        "name": "SetAlpha",
+                        "name": "OnBodyPainterDragStart",
                         "excluded": false
                     },
                     {
-                        "name": "IE_DelayStep6",
+                        "name": "OnBodyPainterDragStop",
                         "excluded": false
                     },
                     {
-                        "name": "StartStepShirtFront",
+                        "name": "OnBodyPainterEnterZone",
                         "excluded": false
                     },
                     {
-                        "name": "OnShirtFrontDragStart",
+                        "name": "OnBodyPainterExitZone",
                         "excluded": false
                     },
                     {
-                        "name": "OnShirtFrontDragStop",
+                        "name": "OnBodyPainterCompleted",
                         "excluded": false
                     },
                     {
-                        "name": "OnShirtFrontEnterZone",
+                        "name": "IE_DelayStep4",
                         "excluded": false
                     },
                     {
-                        "name": "OnShirtFrontExitZone",
+                        "name": "SetStateSlotEyeL",
                         "excluded": false
                     },
                     {
-                        "name": "OnShirtFrontCompleted",
+                        "name": "SetStateSlotEyeR",
                         "excluded": false
                     },
                     {
-                        "name": "StartStepShirtBack",
-                        "excluded": false
-                    },
-                    {
-                        "name": "OnShirtBackDragStart",
-                        "excluded": false
-                    },
-                    {
-                        "name": "OnShirtBackDragStop",
-                        "excluded": false
-                    },
-                    {
-                        "name": "OnShirtBackEnterZone",
-                        "excluded": false
-                    },
-                    {
-                        "name": "OnShirtBackExitZone",
-                        "excluded": false
-                    },
-                    {
-                        "name": "OnShirtBackCompleted",
-                        "excluded": false
-                    },
-                    {
-                        "name": "OnStartStep8",
-                        "excluded": false
-                    },
-                    {
-                        "name": "IE_DelayStep8",
+                        "name": "StartStep4",
                         "excluded": false
                     }
                 ]
@@ -40536,7 +40453,23 @@
                         "excluded": false
                     },
                     {
-                        "name": "SetStateIsTriger",
+                        "name": "ListClothes#get",
+                        "excluded": false
+                    },
+                    {
+                        "name": "ListThrowClothes#get",
+                        "excluded": false
+                    },
+                    {
+                        "name": "ListObjEye#get",
+                        "excluded": false
+                    },
+                    {
+                        "name": "ListPointEye#get",
+                        "excluded": false
+                    },
+                    {
+                        "name": "SetTut",
                         "excluded": false
                     }
                 ]
@@ -42631,11 +42564,11 @@
                     },
                     {
                         "name": "SequenceIndex#get",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "SequenceIndex#set",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "Deform#get",
@@ -44057,7 +43990,7 @@
                     },
                     {
                         "name": "LoadSequence",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "NewRegionAttachment",
@@ -44081,7 +44014,7 @@
                     },
                     {
                         "name": "NewClippingAttachment",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "FindRegion",
@@ -45341,7 +45274,7 @@
                     },
                     {
                         "name": "ReadSequence",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "ReadVertices",
@@ -45949,11 +45882,11 @@
                     },
                     {
                         "name": "EndSlot#set",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "$ctor1",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "ctor",
@@ -47632,6 +47565,180 @@
                         "excluded": false
                     }
                 ]
+            },
+            {
+                "className": "System.Text.StringBuilder",
+                "staticMethods": [],
+                "instanceMethods": [
+                    {
+                        "name": "ctor",
+                        "excluded": false
+                    },
+                    {
+                        "name": "getLength",
+                        "excluded": false
+                    },
+                    {
+                        "name": "setLength",
+                        "excluded": true
+                    },
+                    {
+                        "name": "getCapacity",
+                        "excluded": true
+                    },
+                    {
+                        "name": "setCapacity",
+                        "excluded": false
+                    },
+                    {
+                        "name": "toString",
+                        "excluded": false
+                    },
+                    {
+                        "name": "append",
+                        "excluded": false
+                    },
+                    {
+                        "name": "appendFormat",
+                        "excluded": true
+                    },
+                    {
+                        "name": "clear",
+                        "excluded": true
+                    },
+                    {
+                        "name": "appendLine",
+                        "excluded": true
+                    },
+                    {
+                        "name": "equals",
+                        "excluded": true
+                    },
+                    {
+                        "name": "remove",
+                        "excluded": true
+                    },
+                    {
+                        "name": "insert",
+                        "excluded": true
+                    },
+                    {
+                        "name": "replace",
+                        "excluded": true
+                    },
+                    {
+                        "name": "checkLimits",
+                        "excluded": true
+                    },
+                    {
+                        "name": "clearString",
+                        "excluded": false
+                    },
+                    {
+                        "name": "getString",
+                        "excluded": false
+                    },
+                    {
+                        "name": "getChar",
+                        "excluded": true
+                    },
+                    {
+                        "name": "setChar",
+                        "excluded": true
+                    }
+                ]
+            },
+            {
+                "className": "Spine.Sequence",
+                "staticMethods": [],
+                "instanceMethods": [
+                    {
+                        "name": "init",
+                        "excluded": false
+                    },
+                    {
+                        "name": "Start#get",
+                        "excluded": true
+                    },
+                    {
+                        "name": "Start#set",
+                        "excluded": false
+                    },
+                    {
+                        "name": "Digits#get",
+                        "excluded": true
+                    },
+                    {
+                        "name": "Digits#set",
+                        "excluded": false
+                    },
+                    {
+                        "name": "SetupIndex#get",
+                        "excluded": true
+                    },
+                    {
+                        "name": "SetupIndex#set",
+                        "excluded": false
+                    },
+                    {
+                        "name": "Regions#get",
+                        "excluded": false
+                    },
+                    {
+                        "name": "Id#get",
+                        "excluded": false
+                    },
+                    {
+                        "name": "$ctor1",
+                        "excluded": false
+                    },
+                    {
+                        "name": "ctor",
+                        "excluded": true
+                    },
+                    {
+                        "name": "Apply",
+                        "excluded": false
+                    },
+                    {
+                        "name": "GetPath",
+                        "excluded": false
+                    }
+                ]
+            },
+            {
+                "className": "Spine.SequenceTimeline",
+                "staticMethods": [],
+                "instanceMethods": [
+                    {
+                        "name": "init",
+                        "excluded": false
+                    },
+                    {
+                        "name": "FrameEntries#get",
+                        "excluded": false
+                    },
+                    {
+                        "name": "SlotIndex#get",
+                        "excluded": true
+                    },
+                    {
+                        "name": "Attachment#get",
+                        "excluded": true
+                    },
+                    {
+                        "name": "ctor",
+                        "excluded": false
+                    },
+                    {
+                        "name": "SetFrame",
+                        "excluded": false
+                    },
+                    {
+                        "name": "Apply",
+                        "excluded": false
+                    }
+                ]
             }
         ],
         "stubberDataList": [],
@@ -48279,6 +48386,16 @@
                         "script": "",
                         "ext": "",
                         "name": "Assets/_GAME/SonGame/Level/LevelCr7/Spine/anim-bombong/bombong/bombong.png"
+                    },
+                    {
+                        "maxWidth": 4096,
+                        "maxHeight": 4096,
+                        "format": "png32",
+                        "compression": "quantSize",
+                        "quality": 65,
+                        "script": "",
+                        "ext": "",
+                        "name": "Assets/_GAME/SonGame/Level/LevelValak/Spine/valak.png"
                     }
                 ]
             },
@@ -48552,6 +48669,16 @@
                         "script": "",
                         "ext": "",
                         "name": "Assets/_GAME/_Costopia/_Audio/SFX/CharacterSFX/Base_Woman/AddEye.mp3"
+                    },
+                    {
+                        "channels": 1,
+                        "startTime": "00:00.000",
+                        "endTime": "00:00.000",
+                        "lengthInSeconds": 0.0,
+                        "bitrate": 32,
+                        "script": "",
+                        "ext": "",
+                        "name": "Assets/_GAME/SonGame/Level/LevelValak/sfx_bgm_france_2.ogg"
                     }
                 ]
             },

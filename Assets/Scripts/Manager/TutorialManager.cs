@@ -66,28 +66,48 @@ public class TutorialManager : Singleton<TutorialManager>
         }
     }
     //Step 1
-    [SerializeField] private Transform tfHair;
-    [SerializeField] private Transform tfHairL;
-    [SerializeField] private Transform tfHairR;
-    [SerializeField] private Transform tfClipper;
+    //[SerializeField] private Transform tfHair;
+    //[SerializeField] private Transform tfHairL;
+    //[SerializeField] private Transform tfHairR;
+    //[SerializeField] private Transform tfClipper;
+    ////step2
+    //[SerializeField] private Transform tfBom;
+    //[SerializeField] private Transform tfBall;
+    ////step3
+    //[SerializeField] private Transform tfhandBom;
+    //[SerializeField] private Transform tfBomTarget;
+    ////step4
+    //[SerializeField] private bool isTriggerColor = false;
+    //public void SetStateIsTriger()
+    //{
+    //    isTriggerColor = true;
+    //}
+    //[SerializeField] private Transform tfBrush;
+    //[SerializeField] private Transform tfColor;
+    //[SerializeField] private Transform tfItemStep3;
+    ////step8
+    //[SerializeField] private Transform tfItemInBody;
+    //[SerializeField] private Transform tfItemInBodyTarget;
+
+    //step1
+    [SerializeField] private List<Transform> listClothes;
+    public List<Transform> ListClothes => listClothes;
+    [SerializeField] private List<Transform> listThrowClothes;
+    public List<Transform> ListThrowClothes => listThrowClothes;
     //step2
-    [SerializeField] private Transform tfBom;
-    [SerializeField] private Transform tfBall;
+    [SerializeField] private Transform tfSpray;
+    [SerializeField] private Transform tfBody;
     //step3
-    [SerializeField] private Transform tfhandBom;
-    [SerializeField] private Transform tfBomTarget;
+    [SerializeField] private List<Transform> listObjEye;
+    public List<Transform> ListObjEye => listObjEye;
+    [SerializeField] private List<Transform> listPointEye;
+    public List<Transform> ListPointEye => listPointEye;
     //step4
-    [SerializeField] private bool isTriggerColor = false;
-    public void SetStateIsTriger()
-    {
-        isTriggerColor = true;
-    }
-    [SerializeField] private Transform tfBrush;
-    [SerializeField] private Transform tfColor;
-    [SerializeField] private Transform tfItemStep3;
-    //step8
-    [SerializeField] private Transform tfItemInBody;
-    [SerializeField] private Transform tfItemInBodyTarget;
+    [SerializeField] private Transform tffoundation;
+    [SerializeField] private Transform tfHead;
+    //step5
+    [SerializeField] private Transform tfSponge;
+
     void ShowHint()
     {
         if (disableHand) return;
@@ -99,46 +119,48 @@ public class TutorialManager : Singleton<TutorialManager>
             case 0:
                 return;
             case 1:
-                handCtrl.gameObject.SetActive(true);
-                handCtrl.ShowHandPosToPosToPos(tfClipper.position, tfHairR.position, tfHairL.position);
+                SetTut();
                 return;
             case 2:
                 handCtrlMakeup.gameObject.SetActive(true);
-                handCtrlMakeup.ShowHandPosToPos(tfBom.position, tfBall.position);
+                handCtrlMakeup.ShowHandPosToPos(tfSpray.position, tfBody.position);
 
                 return;
             case 3:
-                handCtrlMakeup.gameObject.SetActive(true);
-                handCtrlMakeup.ShowHandPosToPos(tfhandBom.position, tfBomTarget.position);
+                if (listObjEye.Count >= 0 && listPointEye.Count >= 0)
+                {
+                    handCtrl.gameObject.SetActive(true);
+                    handCtrl.ShowHandPosToPos(listObjEye[0].position, listPointEye[0].position);
+                }
                 return;
 
             case 4:
-                if(isTriggerColor == false)
-                {
-                    handCtrlMakeup.gameObject.SetActive(true);
-                    handCtrlMakeup.ShowHandPosToPosToPos(tfBrush.position, tfColor.position, tfItemStep3.position);
-                }
-                else
-                {
-                    handCtrlMakeup.gameObject.SetActive(true);
-                    handCtrlMakeup.ShowHandPosToPos(tfBrush.position, tfItemStep3.position);
-                }
+                handCtrl.gameObject.SetActive(true);
+                handCtrl.ShowHandPosToPos(tffoundation.position, tfHead.position);
                 return;
             case 5:
-                handCtrlMakeup.gameObject.SetActive(true);
-                handCtrlMakeup.ShowHandPosToPos(tfBrush.position, tfItemStep3.position);
+                handCtrl.gameObject.SetActive(true);
+                handCtrl.ShowHandPosToPos(tfSponge.position, tfHead.position);
                 return;
             case 6:
-                handCtrlMakeup.gameObject.SetActive(true);
-                handCtrlMakeup.ShowHandPosToPos(tfBrush.position, tfItemStep3.position);
+                // handCtrlMakeup.gameObject.SetActive(true);
+                // handCtrlMakeup.ShowHandPosToPos(tfBrush.position, tfItemStep3.position);
                 return;
             case 7:
-                handCtrlMakeup.gameObject.SetActive(true);
-                handCtrlMakeup.ShowHandPosToPos(tfItemInBody.position, tfItemInBodyTarget.position);
+                // handCtrlMakeup.gameObject.SetActive(true);
+                // handCtrlMakeup.ShowHandPosToPos(tfItemInBody.position, tfItemInBodyTarget.position);
                 return;
             default:
                 resetTimeHint();
                 return;
+        }
+    }
+    private void SetTut()
+    {
+        if (listClothes.Count >= 0 && listThrowClothes.Count >= 0)
+        {
+            handCtrlMakeup.gameObject.SetActive(true);
+            handCtrlMakeup.ShowHandPosToPos(listClothes[0].position, listThrowClothes[0].position);
         }
     }
     public void SetStateIsTap(bool value)
