@@ -118,6 +118,7 @@
     <Compile Include="Assets\Scripts\53\WaterFace.cs" />
     <Compile Include="Assets\_GAME\_Costopia\__Gameplay\_Script\Gameplay\SnapObjectUI\SnapObjectUI.cs" />
     <Compile Include="Assets\Scripts\TapJumpOpener.cs" />
+    <Compile Include="Assets\_GAME\SonGame\Level\LevelAnnabell\BoundTransformMoveOnTouch.cs" />
     <Compile Include="Assets\Scripts\Brush_Eye.cs" />
     <Compile Include="Assets\Scripts\Manager\TutorialManager.cs" />
     <Compile Include="Assets\FindMissingScriptsRecursively.cs" />

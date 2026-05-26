@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: -777816280, guid: 808884aad41ca2547b4492d4ac69d15d, type: 3}
   m_Name: SVC_Luna
   m_EditorClassIdentifier: EditorScripts.dll::Luna.Unity.Utils.Shaders.LunaSVC
-  _svcLunaVersion: 3
+  _svcLunaVersion: 4
   _shaderVariants:
   - shaderCompilerPlatform: 9
     shader: {fileID: 66, guid: 0000000000000000f000000000000000, type: 0}
@@ -20,35 +20,32 @@ MonoBehaviour:
     passId: 0
     subShaderIndex: 0
     upToDate: 0
-    keywords: []
+    keywords:
+      "\L\u2025": []
   - shaderCompilerPlatform: 9
     shader: {fileID: 17, guid: 0000000000000000e000000000000000, type: 0}
     passType: 0
     passId: 0
     subShaderIndex: 0
     upToDate: 0
-    keywords: []
+    keywords:
+      "\L\u2025": []
   - shaderCompilerPlatform: 9
     shader: {fileID: 17, guid: 0000000000000000e000000000000000, type: 0}
     passType: 0
     passId: 1
     subShaderIndex: 0
     upToDate: 0
-    keywords: []
+    keywords:
+      "\L\u2025": []
   - shaderCompilerPlatform: 9
     shader: {fileID: 17, guid: 0000000000000000e000000000000000, type: 0}
     passType: 0
     passId: 2
     subShaderIndex: 0
     upToDate: 0
-    keywords: []
-  - shaderCompilerPlatform: 9
-    shader: {fileID: 10753, guid: 0000000000000000f000000000000000, type: 0}
-    passType: 0
-    passId: 0
-    subShaderIndex: 0
-    upToDate: 0
-    keywords: []
+    keywords:
+      "\L\u2025": []
   - shaderCompilerPlatform: 9
     shader: {fileID: 10753, guid: 0000000000000000f000000000000000, type: 0}
     passType: 0
@@ -56,14 +53,16 @@ MonoBehaviour:
     subShaderIndex: 0
     upToDate: 0
     keywords:
-    - PIXELSNAP_ON
+      "\L\u2025": []
   - shaderCompilerPlatform: 9
-    shader: {fileID: 10757, guid: 0000000000000000f000000000000000, type: 0}
+    shader: {fileID: 10753, guid: 0000000000000000f000000000000000, type: 0}
     passType: 0
     passId: 0
     subShaderIndex: 0
     upToDate: 0
-    keywords: []
+    keywords:
+      "\L\u2025":
+      - PIXELSNAP_ON
   - shaderCompilerPlatform: 9
     shader: {fileID: 10757, guid: 0000000000000000f000000000000000, type: 0}
     passType: 0
@@ -71,14 +70,16 @@ MonoBehaviour:
     subShaderIndex: 0
     upToDate: 0
     keywords:
-    - PIXELSNAP_ON
+      "\L\u2025": []
   - shaderCompilerPlatform: 9
-    shader: {fileID: 4800000, guid: 1e8a610c9e01c3648bac42585e5fc676, type: 3}
+    shader: {fileID: 10757, guid: 0000000000000000f000000000000000, type: 0}
     passType: 0
     passId: 0
     subShaderIndex: 0
     upToDate: 0
-    keywords: []
+    keywords:
+      "\L\u2025":
+      - PIXELSNAP_ON
   - shaderCompilerPlatform: 9
     shader: {fileID: 4800000, guid: 1e8a610c9e01c3648bac42585e5fc676, type: 3}
     passType: 0
@@ -86,21 +87,16 @@ MonoBehaviour:
     subShaderIndex: 0
     upToDate: 0
     keywords:
-    - _STRAIGHT_ALPHA_INPUT
+      "\L\u2025": []
   - shaderCompilerPlatform: 9
-    shader: {fileID: 10720, guid: 0000000000000000f000000000000000, type: 0}
+    shader: {fileID: 4800000, guid: 1e8a610c9e01c3648bac42585e5fc676, type: 3}
     passType: 0
     passId: 0
     subShaderIndex: 0
     upToDate: 0
-    keywords: []
-  - shaderCompilerPlatform: 9
-    shader: {fileID: 10721, guid: 0000000000000000f000000000000000, type: 0}
-    passType: 0
-    passId: 0
-    subShaderIndex: 0
-    upToDate: 0
-    keywords: []
+    keywords:
+      "\L\u2025":
+      - _STRAIGHT_ALPHA_INPUT
   - shaderCompilerPlatform: 9
     shader: {fileID: 211, guid: 0000000000000000f000000000000000, type: 0}
     passType: 8
@@ -108,14 +104,8 @@ MonoBehaviour:
     subShaderIndex: 0
     upToDate: 0
     keywords:
-    - _ALPHABLEND_ON
-  - shaderCompilerPlatform: 9
-    shader: {fileID: 211, guid: 0000000000000000f000000000000000, type: 0}
-    passType: 0
-    passId: 4
-    subShaderIndex: 0
-    upToDate: 0
-    keywords: []
+      "\L\u2025":
+      - _ALPHABLEND_ON
   - shaderCompilerPlatform: 9
     shader: {fileID: 211, guid: 0000000000000000f000000000000000, type: 0}
     passType: 0
@@ -123,28 +113,32 @@ MonoBehaviour:
     subShaderIndex: 0
     upToDate: 0
     keywords:
-    - _ALPHABLEND_ON
+      "\L\u2025": []
+  - shaderCompilerPlatform: 9
+    shader: {fileID: 211, guid: 0000000000000000f000000000000000, type: 0}
+    passType: 0
+    passId: 4
+    subShaderIndex: 0
+    upToDate: 0
+    keywords:
+      "\L\u2025":
+      - _ALPHABLEND_ON
   - shaderCompilerPlatform: 9
     shader: {fileID: 6, guid: 0000000000000000f000000000000000, type: 0}
     passType: 1
     passId: 0
     subShaderIndex: 0
     upToDate: 0
-    keywords: []
+    keywords:
+      "\L\u2025": []
   - shaderCompilerPlatform: 9
     shader: {fileID: 6, guid: 0000000000000000f000000000000000, type: 0}
     passType: 2
     passId: 1
     subShaderIndex: 0
     upToDate: 0
-    keywords: []
-  - shaderCompilerPlatform: 9
-    shader: {fileID: 4800000, guid: 68e6db2ebdc24f95958faec2be5558d6, type: 3}
-    passType: 0
-    passId: 0
-    subShaderIndex: 0
-    upToDate: 0
-    keywords: []
+    keywords:
+      "\L\u2025": []
   - shaderCompilerPlatform: 9
     shader: {fileID: 4800000, guid: 68e6db2ebdc24f95958faec2be5558d6, type: 3}
     passType: 0
@@ -152,7 +146,7 @@ MonoBehaviour:
     subShaderIndex: 0
     upToDate: 0
     keywords:
-    - UNITY_UI_ALPHACLIP
+      "\L\u2025": []
   - shaderCompilerPlatform: 9
     shader: {fileID: 4800000, guid: 68e6db2ebdc24f95958faec2be5558d6, type: 3}
     passType: 0
@@ -160,7 +154,8 @@ MonoBehaviour:
     subShaderIndex: 0
     upToDate: 0
     keywords:
-    - UNITY_UI_CLIP_RECT
+      "\L\u2025":
+      - UNITY_UI_ALPHACLIP
   - shaderCompilerPlatform: 9
     shader: {fileID: 4800000, guid: 68e6db2ebdc24f95958faec2be5558d6, type: 3}
     passType: 0
@@ -168,23 +163,18 @@ MonoBehaviour:
     subShaderIndex: 0
     upToDate: 0
     keywords:
-    - UNITY_UI_ALPHACLIP
-    - UNITY_UI_CLIP_RECT
+      "\L\u2025":
+      - UNITY_UI_CLIP_RECT
   - shaderCompilerPlatform: 9
-    shader: {fileID: 4800000, guid: fe393ace9b354375a9cb14cdbbc28be4, type: 3}
-    passType: 0
-    passId: 0
-    subShaderIndex: 0
-    upToDate: 0
-    keywords: []
-  - shaderCompilerPlatform: 9
-    shader: {fileID: 4800000, guid: fe393ace9b354375a9cb14cdbbc28be4, type: 3}
+    shader: {fileID: 4800000, guid: 68e6db2ebdc24f95958faec2be5558d6, type: 3}
     passType: 0
     passId: 0
     subShaderIndex: 0
     upToDate: 0
     keywords:
-    - UNITY_UI_ALPHACLIP
+      "\L\u2025":
+      - UNITY_UI_ALPHACLIP
+      - UNITY_UI_CLIP_RECT
   - shaderCompilerPlatform: 9
     shader: {fileID: 4800000, guid: fe393ace9b354375a9cb14cdbbc28be4, type: 3}
     passType: 0
@@ -192,7 +182,7 @@ MonoBehaviour:
     subShaderIndex: 0
     upToDate: 0
     keywords:
-    - UNITY_UI_CLIP_RECT
+      "\L\u2025": []
   - shaderCompilerPlatform: 9
     shader: {fileID: 4800000, guid: fe393ace9b354375a9cb14cdbbc28be4, type: 3}
     passType: 0
@@ -200,15 +190,27 @@ MonoBehaviour:
     subShaderIndex: 0
     upToDate: 0
     keywords:
-    - UNITY_UI_ALPHACLIP
-    - UNITY_UI_CLIP_RECT
+      "\L\u2025":
+      - UNITY_UI_ALPHACLIP
   - shaderCompilerPlatform: 9
-    shader: {fileID: 10770, guid: 0000000000000000f000000000000000, type: 0}
+    shader: {fileID: 4800000, guid: fe393ace9b354375a9cb14cdbbc28be4, type: 3}
     passType: 0
     passId: 0
     subShaderIndex: 0
     upToDate: 0
-    keywords: []
+    keywords:
+      "\L\u2025":
+      - UNITY_UI_CLIP_RECT
+  - shaderCompilerPlatform: 9
+    shader: {fileID: 4800000, guid: fe393ace9b354375a9cb14cdbbc28be4, type: 3}
+    passType: 0
+    passId: 0
+    subShaderIndex: 0
+    upToDate: 0
+    keywords:
+      "\L\u2025":
+      - UNITY_UI_ALPHACLIP
+      - UNITY_UI_CLIP_RECT
   - shaderCompilerPlatform: 9
     shader: {fileID: 10770, guid: 0000000000000000f000000000000000, type: 0}
     passType: 0
@@ -216,7 +218,7 @@ MonoBehaviour:
     subShaderIndex: 0
     upToDate: 0
     keywords:
-    - UNITY_UI_ALPHACLIP
+      "\L\u2025": []
   - shaderCompilerPlatform: 9
     shader: {fileID: 10770, guid: 0000000000000000f000000000000000, type: 0}
     passType: 0
@@ -224,7 +226,8 @@ MonoBehaviour:
     subShaderIndex: 0
     upToDate: 0
     keywords:
-    - UNITY_UI_CLIP_RECT
+      "\L\u2025":
+      - UNITY_UI_ALPHACLIP
   - shaderCompilerPlatform: 9
     shader: {fileID: 10770, guid: 0000000000000000f000000000000000, type: 0}
     passType: 0
@@ -232,15 +235,26 @@ MonoBehaviour:
     subShaderIndex: 0
     upToDate: 0
     keywords:
-    - UNITY_UI_ALPHACLIP
-    - UNITY_UI_CLIP_RECT
+      "\L\u2025":
+      - UNITY_UI_CLIP_RECT
+  - shaderCompilerPlatform: 9
+    shader: {fileID: 10770, guid: 0000000000000000f000000000000000, type: 0}
+    passType: 0
+    passId: 0
+    subShaderIndex: 0
+    upToDate: 0
+    keywords:
+      "\L\u2025":
+      - UNITY_UI_ALPHACLIP
+      - UNITY_UI_CLIP_RECT
   - shaderCompilerPlatform: 9
     shader: {fileID: 4800000, guid: cf81c85f95fe47e1a27f6ae460cf182c, type: 3}
     passType: 0
     passId: 0
     subShaderIndex: 0
     upToDate: 0
-    keywords: []
+    keywords:
+      "\L\u2025": []
   - shaderCompilerPlatform: 9
     shader: {fileID: 4800000, guid: cf81c85f95fe47e1a27f6ae460cf182c, type: 3}
     passType: 0
@@ -248,7 +262,8 @@ MonoBehaviour:
     subShaderIndex: 0
     upToDate: 0
     keywords:
-    - UNITY_UI_ALPHACLIP
+      "\L\u2025":
+      - UNITY_UI_ALPHACLIP
   - shaderCompilerPlatform: 9
     shader: {fileID: 4800000, guid: cf81c85f95fe47e1a27f6ae460cf182c, type: 3}
     passType: 0
@@ -256,7 +271,8 @@ MonoBehaviour:
     subShaderIndex: 0
     upToDate: 0
     keywords:
-    - UNITY_UI_CLIP_RECT
+      "\L\u2025":
+      - UNITY_UI_CLIP_RECT
   - shaderCompilerPlatform: 9
     shader: {fileID: 4800000, guid: cf81c85f95fe47e1a27f6ae460cf182c, type: 3}
     passType: 0
@@ -264,204 +280,13 @@ MonoBehaviour:
     subShaderIndex: 0
     upToDate: 0
     keywords:
-    - UNITY_UI_ALPHACLIP
-    - UNITY_UI_CLIP_RECT
-  _usedByLunaBuild:
-  - shaderCompilerPlatform: 5
-    shader: {fileID: 106, guid: 0000000000000000f000000000000000, type: 0}
-    passType: 0
-    passId: 0
-    subShaderIndex: 0
-    upToDate: 0
-    keywords:
-    - _SUNDISK_SIMPLE
-  - shaderCompilerPlatform: 9
-    shader: {fileID: 106, guid: 0000000000000000f000000000000000, type: 0}
-    passType: 0
-    passId: 0
-    subShaderIndex: 0
-    upToDate: 0
-    keywords:
-    - _SUNDISK_SIMPLE
-  - shaderCompilerPlatform: 5
-    shader: {fileID: 10757, guid: 0000000000000000f000000000000000, type: 0}
-    passType: 0
-    passId: 0
-    subShaderIndex: 0
-    upToDate: 0
-    keywords: []
-  - shaderCompilerPlatform: 9
-    shader: {fileID: 10757, guid: 0000000000000000f000000000000000, type: 0}
-    passType: 0
-    passId: 0
-    subShaderIndex: 0
-    upToDate: 0
-    keywords: []
-  - shaderCompilerPlatform: 5
-    shader: {fileID: 10753, guid: 0000000000000000f000000000000000, type: 0}
-    passType: 0
-    passId: 0
-    subShaderIndex: 0
-    upToDate: 0
-    keywords: []
-  - shaderCompilerPlatform: 9
-    shader: {fileID: 10753, guid: 0000000000000000f000000000000000, type: 0}
-    passType: 0
-    passId: 0
-    subShaderIndex: 0
-    upToDate: 0
-    keywords: []
-  - shaderCompilerPlatform: 5
-    shader: {fileID: 4800000, guid: 1e8a610c9e01c3648bac42585e5fc676, type: 3}
-    passType: 0
-    passId: 0
-    subShaderIndex: 0
-    upToDate: 0
-    keywords:
-    - _STRAIGHT_ALPHA_INPUT
-  - shaderCompilerPlatform: 9
-    shader: {fileID: 4800000, guid: 1e8a610c9e01c3648bac42585e5fc676, type: 3}
-    passType: 0
-    passId: 0
-    subShaderIndex: 0
-    upToDate: 0
-    keywords:
-    - _STRAIGHT_ALPHA_INPUT
-  - shaderCompilerPlatform: 5
-    shader: {fileID: 10770, guid: 0000000000000000f000000000000000, type: 0}
-    passType: 0
-    passId: 0
-    subShaderIndex: 0
-    upToDate: 0
-    keywords: []
-  - shaderCompilerPlatform: 9
-    shader: {fileID: 10770, guid: 0000000000000000f000000000000000, type: 0}
-    passType: 0
-    passId: 0
-    subShaderIndex: 0
-    upToDate: 0
-    keywords: []
-  - shaderCompilerPlatform: 5
-    shader: {fileID: 4800000, guid: 68e6db2ebdc24f95958faec2be5558d6, type: 3}
-    passType: 0
-    passId: 0
-    subShaderIndex: 0
-    upToDate: 0
-    keywords: []
-  - shaderCompilerPlatform: 9
-    shader: {fileID: 4800000, guid: 68e6db2ebdc24f95958faec2be5558d6, type: 3}
-    passType: 0
-    passId: 0
-    subShaderIndex: 0
-    upToDate: 0
-    keywords: []
-  - shaderCompilerPlatform: 5
-    shader: {fileID: 10721, guid: 0000000000000000f000000000000000, type: 0}
-    passType: 0
-    passId: 0
-    subShaderIndex: 0
-    upToDate: 0
-    keywords: []
-  - shaderCompilerPlatform: 9
-    shader: {fileID: 10721, guid: 0000000000000000f000000000000000, type: 0}
-    passType: 0
-    passId: 0
-    subShaderIndex: 0
-    upToDate: 0
-    keywords: []
-  - shaderCompilerPlatform: 5
-    shader: {fileID: 66, guid: 0000000000000000f000000000000000, type: 0}
-    passType: 0
-    passId: 0
-    subShaderIndex: 0
-    upToDate: 0
-    keywords: []
-  - shaderCompilerPlatform: 9
-    shader: {fileID: 66, guid: 0000000000000000f000000000000000, type: 0}
-    passType: 0
-    passId: 0
-    subShaderIndex: 0
-    upToDate: 0
-    keywords: []
-  - shaderCompilerPlatform: 5
-    shader: {fileID: 202, guid: 0000000000000000f000000000000000, type: 0}
-    passType: 0
-    passId: 0
-    subShaderIndex: 0
-    upToDate: 0
-    keywords: []
-  - shaderCompilerPlatform: 9
-    shader: {fileID: 202, guid: 0000000000000000f000000000000000, type: 0}
-    passType: 0
-    passId: 0
-    subShaderIndex: 0
-    upToDate: 0
-    keywords: []
-  - shaderCompilerPlatform: 5
-    shader: {fileID: 4800000, guid: 8bdcdc7ee298e594a9c20c61d25c33b6, type: 3}
-    passType: 0
-    passId: 0
-    subShaderIndex: 0
-    upToDate: 0
-    keywords:
-    - _STRAIGHT_ALPHA_INPUT
-  - shaderCompilerPlatform: 9
-    shader: {fileID: 4800000, guid: 8bdcdc7ee298e594a9c20c61d25c33b6, type: 3}
-    passType: 0
-    passId: 0
-    subShaderIndex: 0
-    upToDate: 0
-    keywords:
-    - _STRAIGHT_ALPHA_INPUT
-  - shaderCompilerPlatform: 5
-    shader: {fileID: 211, guid: 0000000000000000f000000000000000, type: 0}
-    passType: 0
-    passId: 4
-    subShaderIndex: 0
-    upToDate: 0
-    keywords:
-    - _ALPHABLEND_ON
-  - shaderCompilerPlatform: 9
-    shader: {fileID: 211, guid: 0000000000000000f000000000000000, type: 0}
-    passType: 0
-    passId: 4
-    subShaderIndex: 0
-    upToDate: 0
-    keywords:
-    - _ALPHABLEND_ON
-  - shaderCompilerPlatform: 5
-    shader: {fileID: 10720, guid: 0000000000000000f000000000000000, type: 0}
-    passType: 0
-    passId: 0
-    subShaderIndex: 0
-    upToDate: 0
-    keywords: []
-  - shaderCompilerPlatform: 9
-    shader: {fileID: 10720, guid: 0000000000000000f000000000000000, type: 0}
-    passType: 0
-    passId: 0
-    subShaderIndex: 0
-    upToDate: 0
-    keywords: []
-  - shaderCompilerPlatform: 5
-    shader: {fileID: 10770, guid: 0000000000000000f000000000000000, type: 0}
-    passType: 0
-    passId: 0
-    subShaderIndex: 0
-    upToDate: 0
-    keywords:
-    - UNITY_UI_ALPHACLIP
-  - shaderCompilerPlatform: 9
-    shader: {fileID: 10770, guid: 0000000000000000f000000000000000, type: 0}
-    passType: 0
-    passId: 0
-    subShaderIndex: 0
-    upToDate: 0
-    keywords:
-    - UNITY_UI_ALPHACLIP
+      "\L\u2025":
+      - UNITY_UI_ALPHACLIP
+      - UNITY_UI_CLIP_RECT
+  _usedByLunaBuild: []
   _includedShaderVariants: []
   _excludedShaderVariants: []
-  version: 4480
+  version: 4717
   _shaderParsedShaders:
   - ParsedSubShaders:
     - Index: 0
@@ -503,13 +328,15 @@ MonoBehaviour:
           readDepth: 0
           PassId: 0
           SubShaderIndex: 0
-          Keywords: []
+          Keywords:
+            "\L\u2025": []
           Tags: []
         DefinedKeywords:
-        - STEREO_CUBEMAP_RENDER_ON
-        - STEREO_INSTANCING_ON
-        - STEREO_MULTIVIEW_ON
-        - UNITY_SINGLE_PASS_STEREO
+          "\L\u2025":
+          - STEREO_CUBEMAP_RENDER_ON
+          - STEREO_INSTANCING_ON
+          - STEREO_MULTIVIEW_ON
+          - UNITY_SINGLE_PASS_STEREO
         KeywordGroups: []
         KeywordsMinimalCardinality: 0
         ContainsInvalidVariant: 0
@@ -520,7 +347,8 @@ MonoBehaviour:
           passId: 0
           subShaderIndex: 0
           upToDate: 0
-          keywords: []
+          keywords:
+            "\L\u2025": []
         CompilationErrors: []
         HasDepthReader: 0
         Id: 0
@@ -550,7 +378,8 @@ MonoBehaviour:
       passId: 0
       subShaderIndex: 0
       upToDate: 0
-      keywords: []
+      keywords:
+        "\L\u2025": []
   - ParsedSubShaders:
     - Index: 0
       Passes:
@@ -558,24 +387,26 @@ MonoBehaviour:
         ShaderVariants:
         - ShaderCompilerPlatform: 9
           NoShaderVariant: 0
-          VertexProgram: "\r\n                    #version 300 es\r\n                   
-            // This is a VP stub\r\n                    in vec3 _glesVertex;\r\n                   
-            uniform mat4 matrix_model;\r\n                    uniform mat4 matrix_viewProjection;\r\n                   
-            void main() {\r\n                        gl_Position = matrix_viewProjection
-            * matrix_model * vec4(_glesVertex, 1.0);\r\n                    }"
-          FragmentProgram: "\r\n                    #version 300 es\r\n                   
-            // This is a FP stub\r\n                    precision mediump float;\r\n                   
-            out vec4 fragColor;\r\n                    void main() {\r\n                       
-            fragColor = vec4(1, 0, 1, 1);\r\n                    }"
+          VertexProgram: "\n                    #version 300 es\n                   
+            // This is a VP stub\n                    in vec3 _glesVertex;\n                   
+            uniform mat4 matrix_model;\n                    uniform mat4 matrix_viewProjection;\n                   
+            void main() {\n                        gl_Position = matrix_viewProjection
+            * matrix_model * vec4(_glesVertex, 1.0);\n                    }"
+          FragmentProgram: "\n                    #version 300 es\n                   
+            // This is a FP stub\n                    precision mediump float;\n                   
+            out vec4 fragColor;\n                    void main() {\n                       
+            fragColor = vec4(1, 0, 1, 1);\n                    }"
           LOD: 0
           readDepth: 0
           PassId: 0
           SubShaderIndex: 0
-          Keywords: []
+          Keywords:
+            "\L\u2025": []
           Tags:
           - Key: LIGHTMODE
             Value: ALWAYS
-        DefinedKeywords: []
+        DefinedKeywords:
+          "\L\u2025": []
         KeywordGroups: []
         KeywordsMinimalCardinality: 0
         ContainsInvalidVariant: 0
@@ -586,7 +417,8 @@ MonoBehaviour:
           passId: 0
           subShaderIndex: 0
           upToDate: 0
-          keywords: []
+          keywords:
+            "\L\u2025": []
         CompilationErrors: []
         HasDepthReader: 0
         Id: 0
@@ -602,24 +434,26 @@ MonoBehaviour:
         ShaderVariants:
         - ShaderCompilerPlatform: 9
           NoShaderVariant: 0
-          VertexProgram: "\r\n                    #version 300 es\r\n                   
-            // This is a VP stub\r\n                    in vec3 _glesVertex;\r\n                   
-            uniform mat4 matrix_model;\r\n                    uniform mat4 matrix_viewProjection;\r\n                   
-            void main() {\r\n                        gl_Position = matrix_viewProjection
-            * matrix_model * vec4(_glesVertex, 1.0);\r\n                    }"
-          FragmentProgram: "\r\n                    #version 300 es\r\n                   
-            // This is a FP stub\r\n                    precision mediump float;\r\n                   
-            out vec4 fragColor;\r\n                    void main() {\r\n                       
-            fragColor = vec4(1, 0, 1, 1);\r\n                    }"
+          VertexProgram: "\n                    #version 300 es\n                   
+            // This is a VP stub\n                    in vec3 _glesVertex;\n                   
+            uniform mat4 matrix_model;\n                    uniform mat4 matrix_viewProjection;\n                   
+            void main() {\n                        gl_Position = matrix_viewProjection
+            * matrix_model * vec4(_glesVertex, 1.0);\n                    }"
+          FragmentProgram: "\n                    #version 300 es\n                   
+            // This is a FP stub\n                    precision mediump float;\n                   
+            out vec4 fragColor;\n                    void main() {\n                       
+            fragColor = vec4(1, 0, 1, 1);\n                    }"
           LOD: 0
           readDepth: 0
           PassId: 1
           SubShaderIndex: 0
-          Keywords: []
+          Keywords:
+            "\L\u2025": []
           Tags:
           - Key: LIGHTMODE
             Value: ALWAYS
-        DefinedKeywords: []
+        DefinedKeywords:
+          "\L\u2025": []
         KeywordGroups: []
         KeywordsMinimalCardinality: 0
         ContainsInvalidVariant: 0
@@ -630,7 +464,8 @@ MonoBehaviour:
           passId: 1
           subShaderIndex: 0
           upToDate: 0
-          keywords: []
+          keywords:
+            "\L\u2025": []
         CompilationErrors: []
         HasDepthReader: 0
         Id: 1
@@ -648,24 +483,26 @@ MonoBehaviour:
         ShaderVariants:
         - ShaderCompilerPlatform: 9
           NoShaderVariant: 0
-          VertexProgram: "\r\n                    #version 300 es\r\n                   
-            // This is a VP stub\r\n                    in vec3 _glesVertex;\r\n                   
-            uniform mat4 matrix_model;\r\n                    uniform mat4 matrix_viewProjection;\r\n                   
-            void main() {\r\n                        gl_Position = matrix_viewProjection
-            * matrix_model * vec4(_glesVertex, 1.0);\r\n                    }"
-          FragmentProgram: "\r\n                    #version 300 es\r\n                   
-            // This is a FP stub\r\n                    precision mediump float;\r\n                   
-            out vec4 fragColor;\r\n                    void main() {\r\n                       
-            fragColor = vec4(1, 0, 1, 1);\r\n                    }"
+          VertexProgram: "\n                    #version 300 es\n                   
+            // This is a VP stub\n                    in vec3 _glesVertex;\n                   
+            uniform mat4 matrix_model;\n                    uniform mat4 matrix_viewProjection;\n                   
+            void main() {\n                        gl_Position = matrix_viewProjection
+            * matrix_model * vec4(_glesVertex, 1.0);\n                    }"
+          FragmentProgram: "\n                    #version 300 es\n                   
+            // This is a FP stub\n                    precision mediump float;\n                   
+            out vec4 fragColor;\n                    void main() {\n                       
+            fragColor = vec4(1, 0, 1, 1);\n                    }"
           LOD: 0
           readDepth: 0
           PassId: 2
           SubShaderIndex: 0
-          Keywords: []
+          Keywords:
+            "\L\u2025": []
           Tags:
           - Key: LIGHTMODE
             Value: ALWAYS
-        DefinedKeywords: []
+        DefinedKeywords:
+          "\L\u2025": []
         KeywordGroups: []
         KeywordsMinimalCardinality: 0
         ContainsInvalidVariant: 0
@@ -676,7 +513,8 @@ MonoBehaviour:
           passId: 2
           subShaderIndex: 0
           upToDate: 0
-          keywords: []
+          keywords:
+            "\L\u2025": []
         CompilationErrors: []
         HasDepthReader: 0
         Id: 2
@@ -704,21 +542,24 @@ MonoBehaviour:
       passId: 0
       subShaderIndex: 0
       upToDate: 0
-      keywords: []
+      keywords:
+        "\L\u2025": []
     - shaderCompilerPlatform: 9
       shader: {fileID: 17, guid: 0000000000000000e000000000000000, type: 0}
       passType: 0
       passId: 1
       subShaderIndex: 0
       upToDate: 0
-      keywords: []
+      keywords:
+        "\L\u2025": []
     - shaderCompilerPlatform: 9
       shader: {fileID: 17, guid: 0000000000000000e000000000000000, type: 0}
       passType: 0
       passId: 2
       subShaderIndex: 0
       upToDate: 0
-      keywords: []
+      keywords:
+        "\L\u2025": []
   - ParsedSubShaders:
     - Index: 0
       Passes:
@@ -838,23 +679,25 @@ MonoBehaviour:
           readDepth: 0
           PassId: 0
           SubShaderIndex: 0
-          Keywords: []
+          Keywords:
+            "\L\u2025": []
           Tags:
           - Key: LIGHTMODE
             Value: Vertex
           - Key: RenderType
             Value: Opaque
         DefinedKeywords:
-        - FOG_EXP
-        - FOG_EXP2
-        - FOG_LINEAR
-        - POINT
-        - SPOT
-        - STEREO_CUBEMAP_RENDER_ON
-        - STEREO_INSTANCING_ON
-        - STEREO_MULTIVIEW_ON
-        - UNITY_SINGLE_PASS_STEREO
-        - _
+          "\L\u2025":
+          - FOG_EXP
+          - FOG_EXP2
+          - FOG_LINEAR
+          - POINT
+          - SPOT
+          - STEREO_CUBEMAP_RENDER_ON
+          - STEREO_INSTANCING_ON
+          - STEREO_MULTIVIEW_ON
+          - UNITY_SINGLE_PASS_STEREO
+          - _
         KeywordGroups:
         - Keywords:
           - _
@@ -876,7 +719,8 @@ MonoBehaviour:
           passId: 0
           subShaderIndex: 0
           upToDate: 0
-          keywords: []
+          keywords:
+            "\L\u2025": []
         CompilationErrors: []
         HasDepthReader: 0
         Id: 0
@@ -939,21 +783,23 @@ MonoBehaviour:
           readDepth: 0
           PassId: 1
           SubShaderIndex: 0
-          Keywords: []
+          Keywords:
+            "\L\u2025": []
           Tags:
           - Key: LIGHTMODE
             Value: VertexLM
           - Key: RenderType
             Value: Opaque
         DefinedKeywords:
-        - FOG_EXP
-        - FOG_EXP2
-        - FOG_LINEAR
-        - STEREO_CUBEMAP_RENDER_ON
-        - STEREO_INSTANCING_ON
-        - STEREO_MULTIVIEW_ON
-        - UNITY_SINGLE_PASS_STEREO
-        - __
+          "\L\u2025":
+          - FOG_EXP
+          - FOG_EXP2
+          - FOG_LINEAR
+          - STEREO_CUBEMAP_RENDER_ON
+          - STEREO_INSTANCING_ON
+          - STEREO_MULTIVIEW_ON
+          - UNITY_SINGLE_PASS_STEREO
+          - __
         KeywordGroups:
         - Keywords:
           - __
@@ -970,7 +816,8 @@ MonoBehaviour:
           passId: 1
           subShaderIndex: 0
           upToDate: 0
-          keywords: []
+          keywords:
+            "\L\u2025": []
         CompilationErrors: []
         HasDepthReader: 0
         Id: 1
@@ -989,14 +836,15 @@ MonoBehaviour:
       - Shader: {fileID: 6, guid: 0000000000000000f000000000000000, type: 0}
         ShaderVariants: []
         DefinedKeywords:
-        - INSTANCING_ON
-        - SHADOWS_CUBE
-        - SHADOWS_DEPTH
-        - STEREO_CUBEMAP_RENDER_ON
-        - STEREO_INSTANCING_ON
-        - STEREO_MULTIVIEW_ON
-        - UNITY_SINGLE_PASS_STEREO
-        - __
+          "\L\u2025":
+          - INSTANCING_ON
+          - SHADOWS_CUBE
+          - SHADOWS_DEPTH
+          - STEREO_CUBEMAP_RENDER_ON
+          - STEREO_INSTANCING_ON
+          - STEREO_MULTIVIEW_ON
+          - UNITY_SINGLE_PASS_STEREO
+          - __
         KeywordGroups:
         - Keywords:
           - __
@@ -1058,270 +906,23 @@ MonoBehaviour:
       passId: 0
       subShaderIndex: 0
       upToDate: 0
-      keywords: []
+      keywords:
+        "\L\u2025": []
     - shaderCompilerPlatform: 9
       shader: {fileID: 6, guid: 0000000000000000f000000000000000, type: 0}
       passType: 2
       passId: 1
       subShaderIndex: 0
       upToDate: 0
-      keywords: []
-  - ParsedSubShaders:
-    - Index: 0
-      Passes:
-      - Shader: {fileID: 10720, guid: 0000000000000000f000000000000000, type: 0}
-        ShaderVariants:
-        - ShaderCompilerPlatform: 9
-          NoShaderVariant: 0
-          VertexProgram: "\n#version 300 es\n\n#define HLSLCC_ENABLE_UNIFORM_BUFFERS
-            0\n#if HLSLCC_ENABLE_UNIFORM_BUFFERS\n#define UNITY_UNIFORM\n#else\n#define
-            UNITY_UNIFORM uniform\n#endif\n#define UNITY_SUPPORTS_UNIFORM_LOCATION
-            0\n#if UNITY_SUPPORTS_UNIFORM_LOCATION\n#define UNITY_LOCATION(x) layout(location
-            = x)\n#define UNITY_BINDING(x) layout(binding = x, std140)\n#else\n#define
-            UNITY_LOCATION(x)\n#define UNITY_BINDING(x) layout(std140)\n#endif\nuniform
-            \tvec4 hlslcc_mtx4x4unity_ObjectToWorld[4];\nuniform \tvec4 hlslcc_mtx4x4unity_MatrixVP[4];\nuniform
-            \tvec4 _MainTex_ST;\nin highp vec3 in_POSITION0;\nin mediump vec4 in_COLOR0;\nin
-            highp vec3 in_TEXCOORD0;\nout mediump vec4 vs_COLOR0;\nout highp vec2
-            vs_TEXCOORD0;\nvec4 u_xlat0;\nvec4 u_xlat1;\nvoid main()\n{\n    vs_COLOR0
-            = in_COLOR0;\n    vs_COLOR0 = clamp(vs_COLOR0, 0.0, 1.0);\n    vs_TEXCOORD0.xy
-            = in_TEXCOORD0.xy * _MainTex_ST.xy + _MainTex_ST.zw;\n    u_xlat0 = in_POSITION0.yyyy
-            * hlslcc_mtx4x4unity_ObjectToWorld[1];\n    u_xlat0 = hlslcc_mtx4x4unity_ObjectToWorld[0]
-            * in_POSITION0.xxxx + u_xlat0;\n    u_xlat0 = hlslcc_mtx4x4unity_ObjectToWorld[2]
-            * in_POSITION0.zzzz + u_xlat0;\n    u_xlat0 = u_xlat0 + hlslcc_mtx4x4unity_ObjectToWorld[3];\n   
-            u_xlat1 = u_xlat0.yyyy * hlslcc_mtx4x4unity_MatrixVP[1];\n    u_xlat1
-            = hlslcc_mtx4x4unity_MatrixVP[0] * u_xlat0.xxxx + u_xlat1;\n    u_xlat1
-            = hlslcc_mtx4x4unity_MatrixVP[2] * u_xlat0.zzzz + u_xlat1;\n    gl_Position
-            = hlslcc_mtx4x4unity_MatrixVP[3] * u_xlat0.wwww + u_xlat1;\n    return;\n}\n\n"
-          FragmentProgram: "\n#version 300 es\n\nprecision highp float;\nprecision
-            highp int;\n#define UNITY_SUPPORTS_UNIFORM_LOCATION 0\n#if UNITY_SUPPORTS_UNIFORM_LOCATION\n#define
-            UNITY_LOCATION(x) layout(location = x)\n#define UNITY_BINDING(x) layout(binding
-            = x, std140)\n#else\n#define UNITY_LOCATION(x)\n#define UNITY_BINDING(x)
-            layout(std140)\n#endif\nUNITY_LOCATION(0) uniform mediump sampler2D _MainTex;\nin
-            mediump  vec4 vs_COLOR0;\nin highp  vec2 vs_TEXCOORD0;\nlayout(location
-            = 0) out mediump vec4 SV_Target0;\nmediump vec4 u_xlat16_0;\nvoid main()\n{\n   
-            u_xlat16_0 = texture(_MainTex, vs_TEXCOORD0.xy);\n    SV_Target0 = u_xlat16_0
-            * vs_COLOR0;\n    return;\n}\n\n"
-          LOD: 0
-          readDepth: 0
-          PassId: 0
-          SubShaderIndex: 0
-          Keywords: []
-          Tags:
-          - Key: IGNOREPROJECTOR
-            Value: true
-          - Key: PreviewType
-            Value: Plane
-          - Key: QUEUE
-            Value: Transparent
-          - Key: RenderType
-            Value: Transparent
-        DefinedKeywords:
-        - FOG_EXP
-        - FOG_EXP2
-        - FOG_LINEAR
-        - STEREO_CUBEMAP_RENDER_ON
-        - STEREO_INSTANCING_ON
-        - STEREO_MULTIVIEW_ON
-        - UNITY_SINGLE_PASS_STEREO
-        - _
-        KeywordGroups:
-        - Keywords:
-          - _
-          - FOG_LINEAR
-          - FOG_EXP
-          - FOG_EXP2
-          hasDiscard: 1
-        KeywordsMinimalCardinality: 0
-        ContainsInvalidVariant: 0
-        VariantStructures:
-        - shaderCompilerPlatform: 9
-          shader: {fileID: 10720, guid: 0000000000000000f000000000000000, type: 0}
-          passType: 0
-          passId: 0
-          subShaderIndex: 0
-          upToDate: 0
-          keywords: []
-        CompilationErrors: []
-        HasDepthReader: 0
-        Id: 0
-        SubShaderIndex: 0
-        SerializedObjectId: 0
-        Tags:
-        - Key: IGNOREPROJECTOR
-          Value: true
-        - Key: PreviewType
-          Value: Plane
-        - Key: QUEUE
-          Value: Transparent
-        - Key: RenderType
-          Value: Transparent
-        UsePass:
-          shader: 
-          pass: 
-        GrabPassTextureName: 
-        PlatformMask: -1
-      Shader: {fileID: 10720, guid: 0000000000000000f000000000000000, type: 0}
-      Tags:
-      - Key: IGNOREPROJECTOR
-        Value: true
-      - Key: PreviewType
-        Value: Plane
-      - Key: QUEUE
-        Value: Transparent
-      - Key: RenderType
-        Value: Transparent
-    Shader: {fileID: 10720, guid: 0000000000000000f000000000000000, type: 0}
-    ShaderPath: Resources/unity_builtin_extra
-    ShaderDefinedKeywords:
-    - FOG_EXP
-    - FOG_EXP2
-    - FOG_LINEAR
-    - STEREO_CUBEMAP_RENDER_ON
-    - STEREO_INSTANCING_ON
-    - STEREO_MULTIVIEW_ON
-    - UNITY_SINGLE_PASS_STEREO
-    - _
-    fallbackShader: {fileID: 0}
-    CompilationErrors: []
-    Variants:
-    - shaderCompilerPlatform: 9
-      shader: {fileID: 10720, guid: 0000000000000000f000000000000000, type: 0}
-      passType: 0
-      passId: 0
-      subShaderIndex: 0
-      upToDate: 0
-      keywords: []
-  - ParsedSubShaders:
-    - Index: 0
-      Passes:
-      - Shader: {fileID: 10721, guid: 0000000000000000f000000000000000, type: 0}
-        ShaderVariants:
-        - ShaderCompilerPlatform: 9
-          NoShaderVariant: 0
-          VertexProgram: "\n#version 300 es\n\n#define HLSLCC_ENABLE_UNIFORM_BUFFERS
-            0\n#if HLSLCC_ENABLE_UNIFORM_BUFFERS\n#define UNITY_UNIFORM\n#else\n#define
-            UNITY_UNIFORM uniform\n#endif\n#define UNITY_SUPPORTS_UNIFORM_LOCATION
-            0\n#if UNITY_SUPPORTS_UNIFORM_LOCATION\n#define UNITY_LOCATION(x) layout(location
-            = x)\n#define UNITY_BINDING(x) layout(binding = x, std140)\n#else\n#define
-            UNITY_LOCATION(x)\n#define UNITY_BINDING(x) layout(std140)\n#endif\nuniform
-            \tvec4 hlslcc_mtx4x4unity_ObjectToWorld[4];\nuniform \tvec4 hlslcc_mtx4x4unity_MatrixVP[4];\nuniform
-            \tvec4 _MainTex_ST;\nin highp vec3 in_POSITION0;\nin mediump vec4 in_COLOR0;\nin
-            highp vec3 in_TEXCOORD0;\nout mediump vec4 vs_COLOR0;\nout highp vec2
-            vs_TEXCOORD0;\nvec4 u_xlat0;\nvec4 u_xlat1;\nvoid main()\n{\n    vs_COLOR0
-            = in_COLOR0;\n    vs_COLOR0 = clamp(vs_COLOR0, 0.0, 1.0);\n    vs_TEXCOORD0.xy
-            = in_TEXCOORD0.xy * _MainTex_ST.xy + _MainTex_ST.zw;\n    u_xlat0 = in_POSITION0.yyyy
-            * hlslcc_mtx4x4unity_ObjectToWorld[1];\n    u_xlat0 = hlslcc_mtx4x4unity_ObjectToWorld[0]
-            * in_POSITION0.xxxx + u_xlat0;\n    u_xlat0 = hlslcc_mtx4x4unity_ObjectToWorld[2]
-            * in_POSITION0.zzzz + u_xlat0;\n    u_xlat0 = u_xlat0 + hlslcc_mtx4x4unity_ObjectToWorld[3];\n   
-            u_xlat1 = u_xlat0.yyyy * hlslcc_mtx4x4unity_MatrixVP[1];\n    u_xlat1
-            = hlslcc_mtx4x4unity_MatrixVP[0] * u_xlat0.xxxx + u_xlat1;\n    u_xlat1
-            = hlslcc_mtx4x4unity_MatrixVP[2] * u_xlat0.zzzz + u_xlat1;\n    gl_Position
-            = hlslcc_mtx4x4unity_MatrixVP[3] * u_xlat0.wwww + u_xlat1;\n    return;\n}\n\n"
-          FragmentProgram: "\n#version 300 es\n\nprecision highp float;\nprecision
-            highp int;\n#define UNITY_SUPPORTS_UNIFORM_LOCATION 0\n#if UNITY_SUPPORTS_UNIFORM_LOCATION\n#define
-            UNITY_LOCATION(x) layout(location = x)\n#define UNITY_BINDING(x) layout(binding
-            = x, std140)\n#else\n#define UNITY_LOCATION(x)\n#define UNITY_BINDING(x)
-            layout(std140)\n#endif\nUNITY_LOCATION(0) uniform mediump sampler2D _MainTex;\nin
-            mediump  vec4 vs_COLOR0;\nin highp  vec2 vs_TEXCOORD0;\nlayout(location
-            = 0) out mediump vec4 SV_Target0;\nmediump vec4 u_xlat16_0;\nvoid main()\n{\n   
-            u_xlat16_0 = texture(_MainTex, vs_TEXCOORD0.xy);\n    SV_Target0 = u_xlat16_0
-            * vs_COLOR0;\n    return;\n}\n\n"
-          LOD: 0
-          readDepth: 0
-          PassId: 0
-          SubShaderIndex: 0
-          Keywords: []
-          Tags:
-          - Key: IGNOREPROJECTOR
-            Value: true
-          - Key: PreviewType
-            Value: Plane
-          - Key: QUEUE
-            Value: Transparent
-          - Key: RenderType
-            Value: Transparent
-        DefinedKeywords:
-        - FOG_EXP
-        - FOG_EXP2
-        - FOG_LINEAR
-        - STEREO_CUBEMAP_RENDER_ON
-        - STEREO_INSTANCING_ON
-        - STEREO_MULTIVIEW_ON
-        - UNITY_SINGLE_PASS_STEREO
-        - _
-        KeywordGroups:
-        - Keywords:
-          - _
-          - FOG_LINEAR
-          - FOG_EXP
-          - FOG_EXP2
-          hasDiscard: 1
-        KeywordsMinimalCardinality: 0
-        ContainsInvalidVariant: 0
-        VariantStructures:
-        - shaderCompilerPlatform: 9
-          shader: {fileID: 10721, guid: 0000000000000000f000000000000000, type: 0}
-          passType: 0
-          passId: 0
-          subShaderIndex: 0
-          upToDate: 0
-          keywords: []
-        CompilationErrors: []
-        HasDepthReader: 0
-        Id: 0
-        SubShaderIndex: 0
-        SerializedObjectId: 0
-        Tags:
-        - Key: IGNOREPROJECTOR
-          Value: true
-        - Key: PreviewType
-          Value: Plane
-        - Key: QUEUE
-          Value: Transparent
-        - Key: RenderType
-          Value: Transparent
-        UsePass:
-          shader: 
-          pass: 
-        GrabPassTextureName: 
-        PlatformMask: -1
-      Shader: {fileID: 10721, guid: 0000000000000000f000000000000000, type: 0}
-      Tags:
-      - Key: IGNOREPROJECTOR
-        Value: true
-      - Key: PreviewType
-        Value: Plane
-      - Key: QUEUE
-        Value: Transparent
-      - Key: RenderType
-        Value: Transparent
-    Shader: {fileID: 10721, guid: 0000000000000000f000000000000000, type: 0}
-    ShaderPath: Resources/unity_builtin_extra
-    ShaderDefinedKeywords:
-    - FOG_EXP
-    - FOG_EXP2
-    - FOG_LINEAR
-    - STEREO_CUBEMAP_RENDER_ON
-    - STEREO_INSTANCING_ON
-    - STEREO_MULTIVIEW_ON
-    - UNITY_SINGLE_PASS_STEREO
-    - _
-    fallbackShader: {fileID: 0}
-    CompilationErrors: []
-    Variants:
-    - shaderCompilerPlatform: 9
-      shader: {fileID: 10721, guid: 0000000000000000f000000000000000, type: 0}
-      passType: 0
-      passId: 0
-      subShaderIndex: 0
-      upToDate: 0
-      keywords: []
+      keywords:
+        "\L\u2025": []
   - ParsedSubShaders:
     - Index: 0
       Passes:
       - Shader: {fileID: 211, guid: 0000000000000000f000000000000000, type: 0}
         ShaderVariants: []
-        DefinedKeywords: []
+        DefinedKeywords:
+          "\L\u2025": []
         KeywordGroups: []
         KeywordsMinimalCardinality: 0
         ContainsInvalidVariant: 0
@@ -1397,7 +998,8 @@ MonoBehaviour:
           PassId: 1
           SubShaderIndex: 0
           Keywords:
-          - _ALPHABLEND_ON
+            "\L\u2025":
+            - _ALPHABLEND_ON
           Tags:
           - Key: IGNOREPROJECTOR
             Value: true
@@ -1412,21 +1014,22 @@ MonoBehaviour:
           - Key: SHADOWSUPPORT
             Value: true
         DefinedKeywords:
-        - INSTANCING_ON
-        - PROCEDURAL_INSTANCING_ON
-        - SHADOWS_CUBE
-        - SHADOWS_DEPTH
-        - STEREO_CUBEMAP_RENDER_ON
-        - STEREO_INSTANCING_ON
-        - STEREO_MULTIVIEW_ON
-        - UNITY_SINGLE_PASS_STEREO
-        - _ALPHABLEND_ON
-        - _ALPHAMODULATE_ON
-        - _ALPHAPREMULTIPLY_ON
-        - _ALPHATEST_ON
-        - _REQUIRE_UV2
-        - __
-        - _
+          "\L\u2025":
+          - INSTANCING_ON
+          - PROCEDURAL_INSTANCING_ON
+          - SHADOWS_CUBE
+          - SHADOWS_DEPTH
+          - STEREO_CUBEMAP_RENDER_ON
+          - STEREO_INSTANCING_ON
+          - STEREO_MULTIVIEW_ON
+          - UNITY_SINGLE_PASS_STEREO
+          - _
+          - _ALPHABLEND_ON
+          - _ALPHAMODULATE_ON
+          - _ALPHAPREMULTIPLY_ON
+          - _ALPHATEST_ON
+          - _REQUIRE_UV2
+          - __
         KeywordGroups:
         - Keywords:
           - __
@@ -1460,7 +1063,8 @@ MonoBehaviour:
           subShaderIndex: 0
           upToDate: 0
           keywords:
-          - _ALPHABLEND_ON
+            "\L\u2025":
+            - _ALPHABLEND_ON
         CompilationErrors: []
         HasDepthReader: 0
         Id: 1
@@ -1524,7 +1128,8 @@ MonoBehaviour:
           readDepth: 0
           PassId: 4
           SubShaderIndex: 0
-          Keywords: []
+          Keywords:
+            "\L\u2025": []
           Tags:
           - Key: IGNOREPROJECTOR
             Value: true
@@ -1572,7 +1177,8 @@ MonoBehaviour:
           PassId: 4
           SubShaderIndex: 0
           Keywords:
-          - _ALPHABLEND_ON
+            "\L\u2025":
+            - _ALPHABLEND_ON
           Tags:
           - Key: IGNOREPROJECTOR
             Value: true
@@ -1583,30 +1189,31 @@ MonoBehaviour:
           - Key: RenderType
             Value: Opaque
         DefinedKeywords:
-        - EFFECT_BUMP
-        - FOG_EXP
-        - FOG_EXP2
-        - FOG_LINEAR
-        - INSTANCING_ON
-        - PROCEDURAL_INSTANCING_ON
-        - SOFTPARTICLES_ON
-        - STEREO_CUBEMAP_RENDER_ON
-        - STEREO_INSTANCING_ON
-        - STEREO_MULTIVIEW_ON
-        - UNITY_SINGLE_PASS_STEREO
-        - _ALPHABLEND_ON
-        - _ALPHAMODULATE_ON
-        - _ALPHAPREMULTIPLY_ON
-        - _ALPHATEST_ON
-        - _COLORADDSUBDIFF_ON
-        - _COLORCOLOR_ON
-        - _COLOROVERLAY_ON
-        - _EMISSION
-        - _FADING_ON
-        - _NORMALMAP
-        - _REQUIRE_UV2
-        - __
-        - _
+          "\L\u2025":
+          - EFFECT_BUMP
+          - FOG_EXP
+          - FOG_EXP2
+          - FOG_LINEAR
+          - INSTANCING_ON
+          - PROCEDURAL_INSTANCING_ON
+          - SOFTPARTICLES_ON
+          - STEREO_CUBEMAP_RENDER_ON
+          - STEREO_INSTANCING_ON
+          - STEREO_MULTIVIEW_ON
+          - UNITY_SINGLE_PASS_STEREO
+          - _
+          - _ALPHABLEND_ON
+          - _ALPHAMODULATE_ON
+          - _ALPHAPREMULTIPLY_ON
+          - _ALPHATEST_ON
+          - _COLORADDSUBDIFF_ON
+          - _COLORCOLOR_ON
+          - _COLOROVERLAY_ON
+          - _EMISSION
+          - _FADING_ON
+          - _NORMALMAP
+          - _REQUIRE_UV2
+          - __
         KeywordGroups:
         - Keywords:
           - __
@@ -1648,7 +1255,8 @@ MonoBehaviour:
           passId: 4
           subShaderIndex: 0
           upToDate: 0
-          keywords: []
+          keywords:
+            "\L\u2025": []
         - shaderCompilerPlatform: 9
           shader: {fileID: 211, guid: 0000000000000000f000000000000000, type: 0}
           passType: 0
@@ -1656,7 +1264,8 @@ MonoBehaviour:
           subShaderIndex: 0
           upToDate: 0
           keywords:
-          - _ALPHABLEND_ON
+            "\L\u2025":
+            - _ALPHABLEND_ON
         CompilationErrors: []
         HasDepthReader: 0
         Id: 4
@@ -1711,8 +1320,8 @@ MonoBehaviour:
     - STEREO_INSTANCING_ON
     - STEREO_MULTIVIEW_ON
     - UNITY_SINGLE_PASS_STEREO
-    - __
     - _
+    - __
     - EFFECT_BUMP
     - SOFTPARTICLES_ON
     fallbackShader: {fileID: 6, guid: 0000000000000000f000000000000000, type: 0}
@@ -1725,14 +1334,8 @@ MonoBehaviour:
       subShaderIndex: 0
       upToDate: 0
       keywords:
-      - _ALPHABLEND_ON
-    - shaderCompilerPlatform: 9
-      shader: {fileID: 211, guid: 0000000000000000f000000000000000, type: 0}
-      passType: 0
-      passId: 4
-      subShaderIndex: 0
-      upToDate: 0
-      keywords: []
+        "\L\u2025":
+        - _ALPHABLEND_ON
     - shaderCompilerPlatform: 9
       shader: {fileID: 211, guid: 0000000000000000f000000000000000, type: 0}
       passType: 0
@@ -1740,7 +1343,16 @@ MonoBehaviour:
       subShaderIndex: 0
       upToDate: 0
       keywords:
-      - _ALPHABLEND_ON
+        "\L\u2025": []
+    - shaderCompilerPlatform: 9
+      shader: {fileID: 211, guid: 0000000000000000f000000000000000, type: 0}
+      passType: 0
+      passId: 4
+      subShaderIndex: 0
+      upToDate: 0
+      keywords:
+        "\L\u2025":
+        - _ALPHABLEND_ON
   - ParsedSubShaders:
     - Index: 0
       Passes:
@@ -1779,7 +1391,8 @@ MonoBehaviour:
           readDepth: 0
           PassId: 0
           SubShaderIndex: 0
-          Keywords: []
+          Keywords:
+            "\L\u2025": []
           Tags:
           - Key: IGNOREPROJECTOR
             Value: true
@@ -1824,7 +1437,8 @@ MonoBehaviour:
           PassId: 0
           SubShaderIndex: 0
           Keywords:
-          - _STRAIGHT_ALPHA_INPUT
+            "\L\u2025":
+            - _STRAIGHT_ALPHA_INPUT
           Tags:
           - Key: IGNOREPROJECTOR
             Value: true
@@ -1835,12 +1449,13 @@ MonoBehaviour:
           - Key: RenderType
             Value: Transparent
         DefinedKeywords:
-        - STEREO_CUBEMAP_RENDER_ON
-        - STEREO_INSTANCING_ON
-        - STEREO_MULTIVIEW_ON
-        - UNITY_SINGLE_PASS_STEREO
-        - _STRAIGHT_ALPHA_INPUT
-        - _
+          "\L\u2025":
+          - STEREO_CUBEMAP_RENDER_ON
+          - STEREO_INSTANCING_ON
+          - STEREO_MULTIVIEW_ON
+          - UNITY_SINGLE_PASS_STEREO
+          - _
+          - _STRAIGHT_ALPHA_INPUT
         KeywordGroups:
         - Keywords:
           - _
@@ -1855,7 +1470,8 @@ MonoBehaviour:
           passId: 0
           subShaderIndex: 0
           upToDate: 0
-          keywords: []
+          keywords:
+            "\L\u2025": []
         - shaderCompilerPlatform: 9
           shader: {fileID: 4800000, guid: 1e8a610c9e01c3648bac42585e5fc676, type: 3}
           passType: 0
@@ -1863,7 +1479,8 @@ MonoBehaviour:
           subShaderIndex: 0
           upToDate: 0
           keywords:
-          - _STRAIGHT_ALPHA_INPUT
+            "\L\u2025":
+            - _STRAIGHT_ALPHA_INPUT
         CompilationErrors: []
         HasDepthReader: 0
         Id: 0
@@ -1886,12 +1503,13 @@ MonoBehaviour:
       - Shader: {fileID: 4800000, guid: 1e8a610c9e01c3648bac42585e5fc676, type: 3}
         ShaderVariants: []
         DefinedKeywords:
-        - SHADOWS_CUBE
-        - SHADOWS_DEPTH
-        - STEREO_CUBEMAP_RENDER_ON
-        - STEREO_INSTANCING_ON
-        - STEREO_MULTIVIEW_ON
-        - UNITY_SINGLE_PASS_STEREO
+          "\L\u2025":
+          - SHADOWS_CUBE
+          - SHADOWS_DEPTH
+          - STEREO_CUBEMAP_RENDER_ON
+          - STEREO_INSTANCING_ON
+          - STEREO_MULTIVIEW_ON
+          - UNITY_SINGLE_PASS_STEREO
         KeywordGroups:
         - Keywords:
           - SHADOWS_DEPTH
@@ -1955,7 +1573,8 @@ MonoBehaviour:
       passId: 0
       subShaderIndex: 0
       upToDate: 0
-      keywords: []
+      keywords:
+        "\L\u2025": []
     - shaderCompilerPlatform: 9
       shader: {fileID: 4800000, guid: 1e8a610c9e01c3648bac42585e5fc676, type: 3}
       passType: 0
@@ -1963,7 +1582,8 @@ MonoBehaviour:
       subShaderIndex: 0
       upToDate: 0
       keywords:
-      - _STRAIGHT_ALPHA_INPUT
+        "\L\u2025":
+        - _STRAIGHT_ALPHA_INPUT
   - ParsedSubShaders:
     - Index: 0
       Passes:
@@ -2006,7 +1626,8 @@ MonoBehaviour:
           readDepth: 0
           PassId: 0
           SubShaderIndex: 0
-          Keywords: []
+          Keywords:
+            "\L\u2025": []
           Tags:
           - Key: CanUseSpriteAtlas
             Value: true
@@ -2061,7 +1682,8 @@ MonoBehaviour:
           PassId: 0
           SubShaderIndex: 0
           Keywords:
-          - PIXELSNAP_ON
+            "\L\u2025":
+            - PIXELSNAP_ON
           Tags:
           - Key: CanUseSpriteAtlas
             Value: true
@@ -2074,15 +1696,16 @@ MonoBehaviour:
           - Key: RenderType
             Value: Transparent
         DefinedKeywords:
-        - ETC1_EXTERNAL_ALPHA
-        - INSTANCING_ON
-        - PIXELSNAP_ON
-        - STEREO_CUBEMAP_RENDER_ON
-        - STEREO_INSTANCING_ON
-        - STEREO_MULTIVIEW_ON
-        - UNITY_SINGLE_PASS_STEREO
-        - _
-        - __
+          "\L\u2025":
+          - ETC1_EXTERNAL_ALPHA
+          - INSTANCING_ON
+          - PIXELSNAP_ON
+          - STEREO_CUBEMAP_RENDER_ON
+          - STEREO_INSTANCING_ON
+          - STEREO_MULTIVIEW_ON
+          - UNITY_SINGLE_PASS_STEREO
+          - _
+          - __
         KeywordGroups:
         - Keywords:
           - _
@@ -2105,7 +1728,8 @@ MonoBehaviour:
           passId: 0
           subShaderIndex: 0
           upToDate: 0
-          keywords: []
+          keywords:
+            "\L\u2025": []
         - shaderCompilerPlatform: 9
           shader: {fileID: 10753, guid: 0000000000000000f000000000000000, type: 0}
           passType: 0
@@ -2113,7 +1737,8 @@ MonoBehaviour:
           subShaderIndex: 0
           upToDate: 0
           keywords:
-          - PIXELSNAP_ON
+            "\L\u2025":
+            - PIXELSNAP_ON
         CompilationErrors: []
         HasDepthReader: 0
         Id: 0
@@ -2168,7 +1793,8 @@ MonoBehaviour:
       passId: 0
       subShaderIndex: 0
       upToDate: 0
-      keywords: []
+      keywords:
+        "\L\u2025": []
     - shaderCompilerPlatform: 9
       shader: {fileID: 10753, guid: 0000000000000000f000000000000000, type: 0}
       passType: 0
@@ -2176,7 +1802,8 @@ MonoBehaviour:
       subShaderIndex: 0
       upToDate: 0
       keywords:
-      - PIXELSNAP_ON
+        "\L\u2025":
+        - PIXELSNAP_ON
   - ParsedSubShaders:
     - Index: 0
       Passes:
@@ -2219,7 +1846,8 @@ MonoBehaviour:
           readDepth: 0
           PassId: 0
           SubShaderIndex: 0
-          Keywords: []
+          Keywords:
+            "\L\u2025": []
           Tags:
           - Key: CanUseSpriteAtlas
             Value: true
@@ -2273,7 +1901,8 @@ MonoBehaviour:
           PassId: 0
           SubShaderIndex: 0
           Keywords:
-          - PIXELSNAP_ON
+            "\L\u2025":
+            - PIXELSNAP_ON
           Tags:
           - Key: CanUseSpriteAtlas
             Value: true
@@ -2286,13 +1915,14 @@ MonoBehaviour:
           - Key: RenderType
             Value: Transparent
         DefinedKeywords:
-        - ETC1_EXTERNAL_ALPHA
-        - PIXELSNAP_ON
-        - STEREO_CUBEMAP_RENDER_ON
-        - STEREO_INSTANCING_ON
-        - STEREO_MULTIVIEW_ON
-        - UNITY_SINGLE_PASS_STEREO
-        - _
+          "\L\u2025":
+          - ETC1_EXTERNAL_ALPHA
+          - PIXELSNAP_ON
+          - STEREO_CUBEMAP_RENDER_ON
+          - STEREO_INSTANCING_ON
+          - STEREO_MULTIVIEW_ON
+          - UNITY_SINGLE_PASS_STEREO
+          - _
         KeywordGroups:
         - Keywords:
           - _
@@ -2311,7 +1941,8 @@ MonoBehaviour:
           passId: 0
           subShaderIndex: 0
           upToDate: 0
-          keywords: []
+          keywords:
+            "\L\u2025": []
         - shaderCompilerPlatform: 9
           shader: {fileID: 10757, guid: 0000000000000000f000000000000000, type: 0}
           passType: 0
@@ -2319,7 +1950,8 @@ MonoBehaviour:
           subShaderIndex: 0
           upToDate: 0
           keywords:
-          - PIXELSNAP_ON
+            "\L\u2025":
+            - PIXELSNAP_ON
         CompilationErrors: []
         HasDepthReader: 0
         Id: 0
@@ -2372,7 +2004,8 @@ MonoBehaviour:
       passId: 0
       subShaderIndex: 0
       upToDate: 0
-      keywords: []
+      keywords:
+        "\L\u2025": []
     - shaderCompilerPlatform: 9
       shader: {fileID: 10757, guid: 0000000000000000f000000000000000, type: 0}
       passType: 0
@@ -2380,7 +2013,8 @@ MonoBehaviour:
       subShaderIndex: 0
       upToDate: 0
       keywords:
-      - PIXELSNAP_ON
+        "\L\u2025":
+        - PIXELSNAP_ON
   - ParsedSubShaders:
     - Index: 0
       Passes:
@@ -2510,7 +2144,8 @@ MonoBehaviour:
           readDepth: 0
           PassId: 0
           SubShaderIndex: 0
-          Keywords: []
+          Keywords:
+            "\L\u2025": []
           Tags:
           - Key: IGNOREPROJECTOR
             Value: true
@@ -2645,7 +2280,8 @@ MonoBehaviour:
           PassId: 0
           SubShaderIndex: 0
           Keywords:
-          - UNITY_UI_ALPHACLIP
+            "\L\u2025":
+            - UNITY_UI_ALPHACLIP
           Tags:
           - Key: IGNOREPROJECTOR
             Value: true
@@ -2782,7 +2418,8 @@ MonoBehaviour:
           PassId: 0
           SubShaderIndex: 0
           Keywords:
-          - UNITY_UI_CLIP_RECT
+            "\L\u2025":
+            - UNITY_UI_CLIP_RECT
           Tags:
           - Key: IGNOREPROJECTOR
             Value: true
@@ -2921,8 +2558,9 @@ MonoBehaviour:
           PassId: 0
           SubShaderIndex: 0
           Keywords:
-          - UNITY_UI_ALPHACLIP
-          - UNITY_UI_CLIP_RECT
+            "\L\u2025":
+            - UNITY_UI_ALPHACLIP
+            - UNITY_UI_CLIP_RECT
           Tags:
           - Key: IGNOREPROJECTOR
             Value: true
@@ -2931,17 +2569,18 @@ MonoBehaviour:
           - Key: RenderType
             Value: Transparent
         DefinedKeywords:
-        - BEVEL_ON
-        - GLOW_ON
-        - STEREO_CUBEMAP_RENDER_ON
-        - STEREO_INSTANCING_ON
-        - STEREO_MULTIVIEW_ON
-        - UNDERLAY_INNER
-        - UNDERLAY_ON
-        - UNITY_SINGLE_PASS_STEREO
-        - UNITY_UI_ALPHACLIP
-        - UNITY_UI_CLIP_RECT
-        - __
+          "\L\u2025":
+          - BEVEL_ON
+          - GLOW_ON
+          - STEREO_CUBEMAP_RENDER_ON
+          - STEREO_INSTANCING_ON
+          - STEREO_MULTIVIEW_ON
+          - UNDERLAY_INNER
+          - UNDERLAY_ON
+          - UNITY_SINGLE_PASS_STEREO
+          - UNITY_UI_ALPHACLIP
+          - UNITY_UI_CLIP_RECT
+          - __
         KeywordGroups:
         - Keywords:
           - __
@@ -2973,7 +2612,8 @@ MonoBehaviour:
           passId: 0
           subShaderIndex: 0
           upToDate: 0
-          keywords: []
+          keywords:
+            "\L\u2025": []
         - shaderCompilerPlatform: 9
           shader: {fileID: 4800000, guid: 68e6db2ebdc24f95958faec2be5558d6, type: 3}
           passType: 0
@@ -2981,7 +2621,8 @@ MonoBehaviour:
           subShaderIndex: 0
           upToDate: 0
           keywords:
-          - UNITY_UI_ALPHACLIP
+            "\L\u2025":
+            - UNITY_UI_ALPHACLIP
         - shaderCompilerPlatform: 9
           shader: {fileID: 4800000, guid: 68e6db2ebdc24f95958faec2be5558d6, type: 3}
           passType: 0
@@ -2989,7 +2630,8 @@ MonoBehaviour:
           subShaderIndex: 0
           upToDate: 0
           keywords:
-          - UNITY_UI_CLIP_RECT
+            "\L\u2025":
+            - UNITY_UI_CLIP_RECT
         - shaderCompilerPlatform: 9
           shader: {fileID: 4800000, guid: 68e6db2ebdc24f95958faec2be5558d6, type: 3}
           passType: 0
@@ -2997,8 +2639,9 @@ MonoBehaviour:
           subShaderIndex: 0
           upToDate: 0
           keywords:
-          - UNITY_UI_ALPHACLIP
-          - UNITY_UI_CLIP_RECT
+            "\L\u2025":
+            - UNITY_UI_ALPHACLIP
+            - UNITY_UI_CLIP_RECT
         CompilationErrors: []
         HasDepthReader: 0
         Id: 0
@@ -3047,7 +2690,8 @@ MonoBehaviour:
       passId: 0
       subShaderIndex: 0
       upToDate: 0
-      keywords: []
+      keywords:
+        "\L\u2025": []
     - shaderCompilerPlatform: 9
       shader: {fileID: 4800000, guid: 68e6db2ebdc24f95958faec2be5558d6, type: 3}
       passType: 0
@@ -3055,7 +2699,8 @@ MonoBehaviour:
       subShaderIndex: 0
       upToDate: 0
       keywords:
-      - UNITY_UI_ALPHACLIP
+        "\L\u2025":
+        - UNITY_UI_ALPHACLIP
     - shaderCompilerPlatform: 9
       shader: {fileID: 4800000, guid: 68e6db2ebdc24f95958faec2be5558d6, type: 3}
       passType: 0
@@ -3063,7 +2708,8 @@ MonoBehaviour:
       subShaderIndex: 0
       upToDate: 0
       keywords:
-      - UNITY_UI_CLIP_RECT
+        "\L\u2025":
+        - UNITY_UI_CLIP_RECT
     - shaderCompilerPlatform: 9
       shader: {fileID: 4800000, guid: 68e6db2ebdc24f95958faec2be5558d6, type: 3}
       passType: 0
@@ -3071,8 +2717,9 @@ MonoBehaviour:
       subShaderIndex: 0
       upToDate: 0
       keywords:
-      - UNITY_UI_ALPHACLIP
-      - UNITY_UI_CLIP_RECT
+        "\L\u2025":
+        - UNITY_UI_ALPHACLIP
+        - UNITY_UI_CLIP_RECT
   - ParsedSubShaders:
     - Index: 0
       Passes:
@@ -3217,7 +2864,8 @@ MonoBehaviour:
           readDepth: 0
           PassId: 0
           SubShaderIndex: 0
-          Keywords: []
+          Keywords:
+            "\L\u2025": []
           Tags:
           - Key: IGNOREPROJECTOR
             Value: true
@@ -3369,7 +3017,8 @@ MonoBehaviour:
           PassId: 0
           SubShaderIndex: 0
           Keywords:
-          - UNITY_UI_ALPHACLIP
+            "\L\u2025":
+            - UNITY_UI_ALPHACLIP
           Tags:
           - Key: IGNOREPROJECTOR
             Value: true
@@ -3529,7 +3178,8 @@ MonoBehaviour:
           PassId: 0
           SubShaderIndex: 0
           Keywords:
-          - UNITY_UI_CLIP_RECT
+            "\L\u2025":
+            - UNITY_UI_CLIP_RECT
           Tags:
           - Key: IGNOREPROJECTOR
             Value: true
@@ -3693,8 +3343,9 @@ MonoBehaviour:
           PassId: 0
           SubShaderIndex: 0
           Keywords:
-          - UNITY_UI_ALPHACLIP
-          - UNITY_UI_CLIP_RECT
+            "\L\u2025":
+            - UNITY_UI_ALPHACLIP
+            - UNITY_UI_CLIP_RECT
           Tags:
           - Key: IGNOREPROJECTOR
             Value: true
@@ -3703,16 +3354,17 @@ MonoBehaviour:
           - Key: RenderType
             Value: Transparent
         DefinedKeywords:
-        - OUTLINE_ON
-        - STEREO_CUBEMAP_RENDER_ON
-        - STEREO_INSTANCING_ON
-        - STEREO_MULTIVIEW_ON
-        - UNDERLAY_INNER
-        - UNDERLAY_ON
-        - UNITY_SINGLE_PASS_STEREO
-        - UNITY_UI_ALPHACLIP
-        - UNITY_UI_CLIP_RECT
-        - __
+          "\L\u2025":
+          - OUTLINE_ON
+          - STEREO_CUBEMAP_RENDER_ON
+          - STEREO_INSTANCING_ON
+          - STEREO_MULTIVIEW_ON
+          - UNDERLAY_INNER
+          - UNDERLAY_ON
+          - UNITY_SINGLE_PASS_STEREO
+          - UNITY_UI_ALPHACLIP
+          - UNITY_UI_CLIP_RECT
+          - __
         KeywordGroups:
         - Keywords:
           - __
@@ -3740,7 +3392,8 @@ MonoBehaviour:
           passId: 0
           subShaderIndex: 0
           upToDate: 0
-          keywords: []
+          keywords:
+            "\L\u2025": []
         - shaderCompilerPlatform: 9
           shader: {fileID: 4800000, guid: fe393ace9b354375a9cb14cdbbc28be4, type: 3}
           passType: 0
@@ -3748,7 +3401,8 @@ MonoBehaviour:
           subShaderIndex: 0
           upToDate: 0
           keywords:
-          - UNITY_UI_ALPHACLIP
+            "\L\u2025":
+            - UNITY_UI_ALPHACLIP
         - shaderCompilerPlatform: 9
           shader: {fileID: 4800000, guid: fe393ace9b354375a9cb14cdbbc28be4, type: 3}
           passType: 0
@@ -3756,7 +3410,8 @@ MonoBehaviour:
           subShaderIndex: 0
           upToDate: 0
           keywords:
-          - UNITY_UI_CLIP_RECT
+            "\L\u2025":
+            - UNITY_UI_CLIP_RECT
         - shaderCompilerPlatform: 9
           shader: {fileID: 4800000, guid: fe393ace9b354375a9cb14cdbbc28be4, type: 3}
           passType: 0
@@ -3764,8 +3419,9 @@ MonoBehaviour:
           subShaderIndex: 0
           upToDate: 0
           keywords:
-          - UNITY_UI_ALPHACLIP
-          - UNITY_UI_CLIP_RECT
+            "\L\u2025":
+            - UNITY_UI_ALPHACLIP
+            - UNITY_UI_CLIP_RECT
         CompilationErrors: []
         HasDepthReader: 0
         Id: 0
@@ -3813,7 +3469,8 @@ MonoBehaviour:
       passId: 0
       subShaderIndex: 0
       upToDate: 0
-      keywords: []
+      keywords:
+        "\L\u2025": []
     - shaderCompilerPlatform: 9
       shader: {fileID: 4800000, guid: fe393ace9b354375a9cb14cdbbc28be4, type: 3}
       passType: 0
@@ -3821,7 +3478,8 @@ MonoBehaviour:
       subShaderIndex: 0
       upToDate: 0
       keywords:
-      - UNITY_UI_ALPHACLIP
+        "\L\u2025":
+        - UNITY_UI_ALPHACLIP
     - shaderCompilerPlatform: 9
       shader: {fileID: 4800000, guid: fe393ace9b354375a9cb14cdbbc28be4, type: 3}
       passType: 0
@@ -3829,7 +3487,8 @@ MonoBehaviour:
       subShaderIndex: 0
       upToDate: 0
       keywords:
-      - UNITY_UI_CLIP_RECT
+        "\L\u2025":
+        - UNITY_UI_CLIP_RECT
     - shaderCompilerPlatform: 9
       shader: {fileID: 4800000, guid: fe393ace9b354375a9cb14cdbbc28be4, type: 3}
       passType: 0
@@ -3837,8 +3496,9 @@ MonoBehaviour:
       subShaderIndex: 0
       upToDate: 0
       keywords:
-      - UNITY_UI_ALPHACLIP
-      - UNITY_UI_CLIP_RECT
+        "\L\u2025":
+        - UNITY_UI_ALPHACLIP
+        - UNITY_UI_CLIP_RECT
   - ParsedSubShaders:
     - Index: 0
       Passes:
@@ -3894,7 +3554,8 @@ MonoBehaviour:
           readDepth: 0
           PassId: 0
           SubShaderIndex: 0
-          Keywords: []
+          Keywords:
+            "\L\u2025": []
           Tags:
           - Key: CanUseSpriteAtlas
             Value: true
@@ -3960,7 +3621,8 @@ MonoBehaviour:
           PassId: 0
           SubShaderIndex: 0
           Keywords:
-          - UNITY_UI_ALPHACLIP
+            "\L\u2025":
+            - UNITY_UI_ALPHACLIP
           Tags:
           - Key: CanUseSpriteAtlas
             Value: true
@@ -4028,7 +3690,8 @@ MonoBehaviour:
           PassId: 0
           SubShaderIndex: 0
           Keywords:
-          - UNITY_UI_CLIP_RECT
+            "\L\u2025":
+            - UNITY_UI_CLIP_RECT
           Tags:
           - Key: CanUseSpriteAtlas
             Value: true
@@ -4099,8 +3762,9 @@ MonoBehaviour:
           PassId: 0
           SubShaderIndex: 0
           Keywords:
-          - UNITY_UI_ALPHACLIP
-          - UNITY_UI_CLIP_RECT
+            "\L\u2025":
+            - UNITY_UI_ALPHACLIP
+            - UNITY_UI_CLIP_RECT
           Tags:
           - Key: CanUseSpriteAtlas
             Value: true
@@ -4113,13 +3777,14 @@ MonoBehaviour:
           - Key: RenderType
             Value: Transparent
         DefinedKeywords:
-        - STEREO_CUBEMAP_RENDER_ON
-        - STEREO_INSTANCING_ON
-        - STEREO_MULTIVIEW_ON
-        - UNITY_SINGLE_PASS_STEREO
-        - UNITY_UI_ALPHACLIP
-        - UNITY_UI_CLIP_RECT
-        - __
+          "\L\u2025":
+          - STEREO_CUBEMAP_RENDER_ON
+          - STEREO_INSTANCING_ON
+          - STEREO_MULTIVIEW_ON
+          - UNITY_SINGLE_PASS_STEREO
+          - UNITY_UI_ALPHACLIP
+          - UNITY_UI_CLIP_RECT
+          - __
         KeywordGroups:
         - Keywords:
           - __
@@ -4138,7 +3803,8 @@ MonoBehaviour:
           passId: 0
           subShaderIndex: 0
           upToDate: 0
-          keywords: []
+          keywords:
+            "\L\u2025": []
         - shaderCompilerPlatform: 9
           shader: {fileID: 4800000, guid: cf81c85f95fe47e1a27f6ae460cf182c, type: 3}
           passType: 0
@@ -4146,7 +3812,8 @@ MonoBehaviour:
           subShaderIndex: 0
           upToDate: 0
           keywords:
-          - UNITY_UI_ALPHACLIP
+            "\L\u2025":
+            - UNITY_UI_ALPHACLIP
         - shaderCompilerPlatform: 9
           shader: {fileID: 4800000, guid: cf81c85f95fe47e1a27f6ae460cf182c, type: 3}
           passType: 0
@@ -4154,7 +3821,8 @@ MonoBehaviour:
           subShaderIndex: 0
           upToDate: 0
           keywords:
-          - UNITY_UI_CLIP_RECT
+            "\L\u2025":
+            - UNITY_UI_CLIP_RECT
         - shaderCompilerPlatform: 9
           shader: {fileID: 4800000, guid: cf81c85f95fe47e1a27f6ae460cf182c, type: 3}
           passType: 0
@@ -4162,8 +3830,9 @@ MonoBehaviour:
           subShaderIndex: 0
           upToDate: 0
           keywords:
-          - UNITY_UI_ALPHACLIP
-          - UNITY_UI_CLIP_RECT
+            "\L\u2025":
+            - UNITY_UI_ALPHACLIP
+            - UNITY_UI_CLIP_RECT
         CompilationErrors: []
         HasDepthReader: 0
         Id: 0
@@ -4216,7 +3885,8 @@ MonoBehaviour:
       passId: 0
       subShaderIndex: 0
       upToDate: 0
-      keywords: []
+      keywords:
+        "\L\u2025": []
     - shaderCompilerPlatform: 9
       shader: {fileID: 4800000, guid: cf81c85f95fe47e1a27f6ae460cf182c, type: 3}
       passType: 0
@@ -4224,7 +3894,8 @@ MonoBehaviour:
       subShaderIndex: 0
       upToDate: 0
       keywords:
-      - UNITY_UI_ALPHACLIP
+        "\L\u2025":
+        - UNITY_UI_ALPHACLIP
     - shaderCompilerPlatform: 9
       shader: {fileID: 4800000, guid: cf81c85f95fe47e1a27f6ae460cf182c, type: 3}
       passType: 0
@@ -4232,7 +3903,8 @@ MonoBehaviour:
       subShaderIndex: 0
       upToDate: 0
       keywords:
-      - UNITY_UI_CLIP_RECT
+        "\L\u2025":
+        - UNITY_UI_CLIP_RECT
     - shaderCompilerPlatform: 9
       shader: {fileID: 4800000, guid: cf81c85f95fe47e1a27f6ae460cf182c, type: 3}
       passType: 0
@@ -4240,8 +3912,9 @@ MonoBehaviour:
       subShaderIndex: 0
       upToDate: 0
       keywords:
-      - UNITY_UI_ALPHACLIP
-      - UNITY_UI_CLIP_RECT
+        "\L\u2025":
+        - UNITY_UI_ALPHACLIP
+        - UNITY_UI_CLIP_RECT
   - ParsedSubShaders:
     - Index: 0
       Passes:
@@ -4301,7 +3974,8 @@ MonoBehaviour:
           readDepth: 0
           PassId: 0
           SubShaderIndex: 0
-          Keywords: []
+          Keywords:
+            "\L\u2025": []
           Tags:
           - Key: CanUseSpriteAtlas
             Value: true
@@ -4370,7 +4044,8 @@ MonoBehaviour:
           PassId: 0
           SubShaderIndex: 0
           Keywords:
-          - UNITY_UI_ALPHACLIP
+            "\L\u2025":
+            - UNITY_UI_ALPHACLIP
           Tags:
           - Key: CanUseSpriteAtlas
             Value: true
@@ -4442,7 +4117,8 @@ MonoBehaviour:
           PassId: 0
           SubShaderIndex: 0
           Keywords:
-          - UNITY_UI_CLIP_RECT
+            "\L\u2025":
+            - UNITY_UI_CLIP_RECT
           Tags:
           - Key: CanUseSpriteAtlas
             Value: true
@@ -4516,8 +4192,9 @@ MonoBehaviour:
           PassId: 0
           SubShaderIndex: 0
           Keywords:
-          - UNITY_UI_ALPHACLIP
-          - UNITY_UI_CLIP_RECT
+            "\L\u2025":
+            - UNITY_UI_ALPHACLIP
+            - UNITY_UI_CLIP_RECT
           Tags:
           - Key: CanUseSpriteAtlas
             Value: true
@@ -4530,13 +4207,14 @@ MonoBehaviour:
           - Key: RenderType
             Value: Transparent
         DefinedKeywords:
-        - STEREO_CUBEMAP_RENDER_ON
-        - STEREO_INSTANCING_ON
-        - STEREO_MULTIVIEW_ON
-        - UNITY_SINGLE_PASS_STEREO
-        - UNITY_UI_ALPHACLIP
-        - UNITY_UI_CLIP_RECT
-        - _
+          "\L\u2025":
+          - STEREO_CUBEMAP_RENDER_ON
+          - STEREO_INSTANCING_ON
+          - STEREO_MULTIVIEW_ON
+          - UNITY_SINGLE_PASS_STEREO
+          - UNITY_UI_ALPHACLIP
+          - UNITY_UI_CLIP_RECT
+          - _
         KeywordGroups:
         - Keywords:
           - _
@@ -4555,7 +4233,8 @@ MonoBehaviour:
           passId: 0
           subShaderIndex: 0
           upToDate: 0
-          keywords: []
+          keywords:
+            "\L\u2025": []
         - shaderCompilerPlatform: 9
           shader: {fileID: 10770, guid: 0000000000000000f000000000000000, type: 0}
           passType: 0
@@ -4563,7 +4242,8 @@ MonoBehaviour:
           subShaderIndex: 0
           upToDate: 0
           keywords:
-          - UNITY_UI_ALPHACLIP
+            "\L\u2025":
+            - UNITY_UI_ALPHACLIP
         - shaderCompilerPlatform: 9
           shader: {fileID: 10770, guid: 0000000000000000f000000000000000, type: 0}
           passType: 0
@@ -4571,7 +4251,8 @@ MonoBehaviour:
           subShaderIndex: 0
           upToDate: 0
           keywords:
-          - UNITY_UI_CLIP_RECT
+            "\L\u2025":
+            - UNITY_UI_CLIP_RECT
         - shaderCompilerPlatform: 9
           shader: {fileID: 10770, guid: 0000000000000000f000000000000000, type: 0}
           passType: 0
@@ -4579,8 +4260,9 @@ MonoBehaviour:
           subShaderIndex: 0
           upToDate: 0
           keywords:
-          - UNITY_UI_ALPHACLIP
-          - UNITY_UI_CLIP_RECT
+            "\L\u2025":
+            - UNITY_UI_ALPHACLIP
+            - UNITY_UI_CLIP_RECT
         CompilationErrors: []
         HasDepthReader: 0
         Id: 0
@@ -4633,7 +4315,8 @@ MonoBehaviour:
       passId: 0
       subShaderIndex: 0
       upToDate: 0
-      keywords: []
+      keywords:
+        "\L\u2025": []
     - shaderCompilerPlatform: 9
       shader: {fileID: 10770, guid: 0000000000000000f000000000000000, type: 0}
       passType: 0
@@ -4641,7 +4324,8 @@ MonoBehaviour:
       subShaderIndex: 0
       upToDate: 0
       keywords:
-      - UNITY_UI_ALPHACLIP
+        "\L\u2025":
+        - UNITY_UI_ALPHACLIP
     - shaderCompilerPlatform: 9
       shader: {fileID: 10770, guid: 0000000000000000f000000000000000, type: 0}
       passType: 0
@@ -4649,7 +4333,8 @@ MonoBehaviour:
       subShaderIndex: 0
       upToDate: 0
       keywords:
-      - UNITY_UI_CLIP_RECT
+        "\L\u2025":
+        - UNITY_UI_CLIP_RECT
     - shaderCompilerPlatform: 9
       shader: {fileID: 10770, guid: 0000000000000000f000000000000000, type: 0}
       passType: 0
@@ -4657,7 +4342,8 @@ MonoBehaviour:
       subShaderIndex: 0
       upToDate: 0
       keywords:
-      - UNITY_UI_ALPHACLIP
-      - UNITY_UI_CLIP_RECT
+        "\L\u2025":
+        - UNITY_UI_ALPHACLIP
+        - UNITY_UI_CLIP_RECT
   _modifiedShaders: []
   invalidShaders: 0

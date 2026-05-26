@@ -65,49 +65,56 @@ public class TutorialManager : Singleton<TutorialManager>
             ShowHint();
         }
     }
-    //Step 1
-    //[SerializeField] private Transform tfHair;
-    //[SerializeField] private Transform tfHairL;
-    //[SerializeField] private Transform tfHairR;
-    //[SerializeField] private Transform tfClipper;
-    ////step2
-    //[SerializeField] private Transform tfBom;
-    //[SerializeField] private Transform tfBall;
-    ////step3
-    //[SerializeField] private Transform tfhandBom;
-    //[SerializeField] private Transform tfBomTarget;
-    ////step4
-    //[SerializeField] private bool isTriggerColor = false;
-    //public void SetStateIsTriger()
-    //{
-    //    isTriggerColor = true;
-    //}
-    //[SerializeField] private Transform tfBrush;
-    //[SerializeField] private Transform tfColor;
-    //[SerializeField] private Transform tfItemStep3;
-    ////step8
-    //[SerializeField] private Transform tfItemInBody;
-    //[SerializeField] private Transform tfItemInBodyTarget;
+
+
 
     //step1
-    [SerializeField] private List<Transform> listClothes;
-    public List<Transform> ListClothes => listClothes;
-    [SerializeField] private List<Transform> listThrowClothes;
-    public List<Transform> ListThrowClothes => listThrowClothes;
+    [SerializeField] private Transform tfGlass;
+    [SerializeField] private Transform tfGlassThrow;
     //step2
-    [SerializeField] private Transform tfSpray;
-    [SerializeField] private Transform tfBody;
-    //step3
     [SerializeField] private List<Transform> listObjEye;
     public List<Transform> ListObjEye => listObjEye;
     [SerializeField] private List<Transform> listPointEye;
     public List<Transform> ListPointEye => listPointEye;
+    //step3
+    [SerializeField] private Transform tfWig;
+    [SerializeField] private Transform tfWigThrow;
     //step4
-    [SerializeField] private Transform tffoundation;
     [SerializeField] private Transform tfHead;
+    [SerializeField] private Transform tfBrush;
+    [SerializeField] private Transform tfBoxCont;
     //step5
-    [SerializeField] private Transform tfSponge;
+    [SerializeField] private Transform tfBoxHighligh;
+    //step6
+    [SerializeField] private Transform tfBrush2;
+    [SerializeField] private Transform tfBoxPowdwer;
+    //step7
+    [SerializeField] private Transform tfBrush3;
+    [SerializeField] private Transform tfBoxPhan;
+    //step8
+    [SerializeField] private Transform tfEyeLiner;
+    [SerializeField] private Transform tfEye;
+    //step9
+    [SerializeField] private List<Transform> listObjEyelash;
+    public List<Transform> ListObjEyeLash => listObjEyelash;
+    [SerializeField] private List<Transform> listPointEyeLash;
+    public List<Transform> ListPointEyeLash => listPointEyeLash;
+    //step10
+    [SerializeField] private Transform tfBrushBrow;
+    [SerializeField] private Transform tfBrow;
 
+    //step11
+    [SerializeField] private Transform tfPen;
+    [SerializeField] private Transform tfPenTarget;
+    //step13
+    [SerializeField] private Transform tfLipStick;
+    [SerializeField] private Transform tfMouth;
+    //step14
+    [SerializeField] private Transform tfHair;
+    [SerializeField] private Transform tfSnapHair;
+    //step14
+    [SerializeField] private Transform tfShirt;
+    [SerializeField] private Transform tfShirtSnap;
     void ShowHint()
     {
         if (disableHand) return;
@@ -119,50 +126,73 @@ public class TutorialManager : Singleton<TutorialManager>
             case 0:
                 return;
             case 1:
-                SetTut();
+                handCtrl.gameObject.SetActive(true);
+                handCtrl.ShowHandPosToPos(tfGlass.position, tfGlassThrow.position);
                 return;
             case 2:
-                handCtrlMakeup.gameObject.SetActive(true);
-                handCtrlMakeup.ShowHandPosToPos(tfSpray.position, tfBody.position);
-
-                return;
-            case 3:
                 if (listObjEye.Count >= 0 && listPointEye.Count >= 0)
                 {
                     handCtrl.gameObject.SetActive(true);
                     handCtrl.ShowHandPosToPos(listObjEye[0].position, listPointEye[0].position);
                 }
                 return;
-
+            case 3:
+                handCtrl.gameObject.SetActive(true);
+                handCtrl.ShowHandPosToPos(tfWig.position, tfWigThrow.position);
+                return;
             case 4:
                 handCtrl.gameObject.SetActive(true);
-                handCtrl.ShowHandPosToPos(tffoundation.position, tfHead.position);
+                handCtrl.ShowHandPosToPosToPos(tfBrush.position, tfBoxCont.position, tfHead.position);
                 return;
             case 5:
                 handCtrl.gameObject.SetActive(true);
-                handCtrl.ShowHandPosToPos(tfSponge.position, tfHead.position);
+                handCtrl.ShowHandPosToPosToPos(tfBrush.position, tfBoxHighligh.position, tfHead.position);
                 return;
             case 6:
-                // handCtrlMakeup.gameObject.SetActive(true);
-                // handCtrlMakeup.ShowHandPosToPos(tfBrush.position, tfItemStep3.position);
+                handCtrl.gameObject.SetActive(true);
+                handCtrl.ShowHandPosToPosToPos(tfBrush2.position, tfBoxPowdwer.position, tfHead.position);
                 return;
             case 7:
-                // handCtrlMakeup.gameObject.SetActive(true);
-                // handCtrlMakeup.ShowHandPosToPos(tfItemInBody.position, tfItemInBodyTarget.position);
+                handCtrl.gameObject.SetActive(true);
+                handCtrl.ShowHandPosToPosToPos(tfBrush3.position, tfBoxPhan.position, tfHead.position);
+                return;
+            case 8:
+                handCtrl.gameObject.SetActive(true);
+                handCtrl.ShowHandPosToPos(tfEyeLiner.position, tfEye.position);
+                return;
+            case 9:
+                if (listObjEye.Count >= 0 && listPointEye.Count >= 0)
+                {
+                    handCtrl.gameObject.SetActive(true);
+                    handCtrl.ShowHandPosToPos(listObjEyelash[0].position, listPointEyeLash[0].position);
+                }
+                return;
+            case 10:
+                handCtrl.gameObject.SetActive(true);
+                handCtrl.ShowHandPosToPos(tfBrushBrow.position, tfBrow.position);
+                return;
+            case 11:
+                handCtrl.gameObject.SetActive(true);
+                handCtrl.ShowHandPosToPos(tfPen.position, tfPenTarget.position);
+                return;
+            case 12:
+                handCtrl.gameObject.SetActive(true);
+                handCtrl.ShowHandPosToPos(tfLipStick.position, tfMouth.position);
+                return;
+            case 13:
+                handCtrl.gameObject.SetActive(true);
+                handCtrl.ShowHandPosToPos(tfHair.position, tfSnapHair.position);
+                return;
+            case 14:
+                handCtrlMakeup.gameObject.SetActive(true);
+                handCtrlMakeup.ShowHandPosToPos(tfShirt.position, tfShirtSnap.position);
                 return;
             default:
                 resetTimeHint();
                 return;
         }
     }
-    private void SetTut()
-    {
-        if (listClothes.Count >= 0 && listThrowClothes.Count >= 0)
-        {
-            handCtrlMakeup.gameObject.SetActive(true);
-            handCtrlMakeup.ShowHandPosToPos(listClothes[0].position, listThrowClothes[0].position);
-        }
-    }
+
     public void SetStateIsTap(bool value)
     {
         isTap = value;

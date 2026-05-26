@@ -3,16 +3,28 @@
   "WorkspaceRootPath": "E:\\ABI\\Project\\Playabale\\Cosplay\\Son_Cosplay\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{3931D68F-F02C-0CF5-12A5-8EC449BAF0CC}|Assembly-CSharp.csproj|e:\\abi\\project\\playabale\\cosplay\\son_cosplay\\assets\\_game\\songame\\level\\levelredqueen\\scripts\\levelcontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{3931D68F-F02C-0CF5-12A5-8EC449BAF0CC}|Assembly-CSharp.csproj|e:\\abi\\project\\playabale\\cosplay\\son_cosplay\\assets\\scripts\\spinectrl\\spineboneikcontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3931D68F-F02C-0CF5-12A5-8EC449BAF0CC}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\spinectrl\\spineboneikcontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3931D68F-F02C-0CF5-12A5-8EC449BAF0CC}|Assembly-CSharp.csproj|e:\\abi\\project\\playabale\\cosplay\\son_cosplay\\assets\\scripts\\manager\\tutorialmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3931D68F-F02C-0CF5-12A5-8EC449BAF0CC}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\manager\\tutorialmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3931D68F-F02C-0CF5-12A5-8EC449BAF0CC}|Assembly-CSharp.csproj|E:\\ABI\\Project\\Playabale\\Cosplay\\Son_Cosplay\\assets\\_game\\songame\\level\\levelredqueen\\scripts\\levelcontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3931D68F-F02C-0CF5-12A5-8EC449BAF0CC}|Assembly-CSharp.csproj|solutionrelative:assets\\_game\\songame\\level\\levelredqueen\\scripts\\levelcontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3931D68F-F02C-0CF5-12A5-8EC449BAF0CC}|Assembly-CSharp.csproj|E:\\ABI\\Project\\Playabale\\Cosplay\\Son_Cosplay\\assets\\scripts\\helper\\camerascaler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3931D68F-F02C-0CF5-12A5-8EC449BAF0CC}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\helper\\camerascaler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3931D68F-F02C-0CF5-12A5-8EC449BAF0CC}|Assembly-CSharp.csproj|E:\\ABI\\Project\\Playabale\\Cosplay\\Son_Cosplay\\assets\\_game\\songame\\level\\levelreaper\\scripts\\spritealphagroup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3931D68F-F02C-0CF5-12A5-8EC449BAF0CC}|Assembly-CSharp.csproj|solutionrelative:assets\\_game\\songame\\level\\levelreaper\\scripts\\spritealphagroup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3931D68F-F02C-0CF5-12A5-8EC449BAF0CC}|Assembly-CSharp.csproj|E:\\ABI\\Project\\Playabale\\Cosplay\\Son_Cosplay\\assets\\scripts\\manager\\tutorialmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3931D68F-F02C-0CF5-12A5-8EC449BAF0CC}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\manager\\tutorialmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3931D68F-F02C-0CF5-12A5-8EC449BAF0CC}|Assembly-CSharp.csproj|E:\\ABI\\Project\\Playabale\\Cosplay\\Son_Cosplay\\assets\\_game\\songame\\level\\levelwednesday\\scripts\\sondragitembase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3931D68F-F02C-0CF5-12A5-8EC449BAF0CC}|Assembly-CSharp.csproj|solutionrelative:assets\\_game\\songame\\level\\levelwednesday\\scripts\\sondragitembase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3931D68F-F02C-0CF5-12A5-8EC449BAF0CC}|Assembly-CSharp.csproj|E:\\ABI\\Project\\Playabale\\Cosplay\\Son_Cosplay\\assets\\_game\\core\\scripts\\soncore\\sonsnapobject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3931D68F-F02C-0CF5-12A5-8EC449BAF0CC}|Assembly-CSharp.csproj|solutionrelative:assets\\_game\\core\\scripts\\soncore\\sonsnapobject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,44 +34,81 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "CameraScaler.cs",
-              "DocumentMoniker": "E:\\ABI\\Project\\Playabale\\Cosplay\\Son_Cosplay\\Assets\\Scripts\\Helper\\CameraScaler.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Helper\\CameraScaler.cs",
-              "ToolTip": "E:\\ABI\\Project\\Playabale\\Cosplay\\Son_Cosplay\\Assets\\Scripts\\Helper\\CameraScaler.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Helper\\CameraScaler.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAANAAAA",
+              "DocumentIndex": 0,
+              "Title": "SpineBoneIKControl.cs",
+              "DocumentMoniker": "E:\\ABI\\Project\\Playabale\\Cosplay\\Son_Cosplay\\Assets\\Scripts\\SpineCtrl\\SpineBoneIKControl.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\SpineCtrl\\SpineBoneIKControl.cs",
+              "ToolTip": "E:\\ABI\\Project\\Playabale\\Cosplay\\Son_Cosplay\\Assets\\Scripts\\SpineCtrl\\SpineBoneIKControl.cs",
+              "RelativeToolTip": "Assets\\Scripts\\SpineCtrl\\SpineBoneIKControl.cs",
+              "ViewState": "AQIAAGcAAAAAAAAAAAA0wHsAAAADAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-21T02:48:53.531Z"
+              "WhenOpened": "2026-05-26T07:55:34.106Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
+              "Title": "SpriteAlphaGroup.cs",
+              "DocumentMoniker": "E:\\ABI\\Project\\Playabale\\Cosplay\\Son_Cosplay\\Assets\\_GAME\\SonGame\\Level\\LevelReaper\\Scripts\\SpriteAlphaGroup.cs",
+              "RelativeDocumentMoniker": "Assets\\_GAME\\SonGame\\Level\\LevelReaper\\Scripts\\SpriteAlphaGroup.cs",
+              "ToolTip": "E:\\ABI\\Project\\Playabale\\Cosplay\\Son_Cosplay\\Assets\\_GAME\\SonGame\\Level\\LevelReaper\\Scripts\\SpriteAlphaGroup.cs",
+              "RelativeToolTip": "Assets\\_GAME\\SonGame\\Level\\LevelReaper\\Scripts\\SpriteAlphaGroup.cs",
+              "ViewState": "AQIAAAUAAAAAAAAAAAAxwA0AAAAmAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-26T06:58:08.686Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "SonDragItemBase.cs",
+              "DocumentMoniker": "E:\\ABI\\Project\\Playabale\\Cosplay\\Son_Cosplay\\Assets\\_GAME\\SonGame\\Level\\LevelWednesday\\Scripts\\SonDragItemBase.cs",
+              "RelativeDocumentMoniker": "Assets\\_GAME\\SonGame\\Level\\LevelWednesday\\Scripts\\SonDragItemBase.cs",
+              "ToolTip": "E:\\ABI\\Project\\Playabale\\Cosplay\\Son_Cosplay\\Assets\\_GAME\\SonGame\\Level\\LevelWednesday\\Scripts\\SonDragItemBase.cs",
+              "RelativeToolTip": "Assets\\_GAME\\SonGame\\Level\\LevelWednesday\\Scripts\\SonDragItemBase.cs",
+              "ViewState": "AQIAAMcAAAAAAAAAAAAewNkAAAAXAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-26T02:34:37.845Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "SonSnapObject.cs",
+              "DocumentMoniker": "E:\\ABI\\Project\\Playabale\\Cosplay\\Son_Cosplay\\Assets\\_GAME\\Core\\Scripts\\SonCore\\SonSnapObject.cs",
+              "RelativeDocumentMoniker": "Assets\\_GAME\\Core\\Scripts\\SonCore\\SonSnapObject.cs",
+              "ToolTip": "E:\\ABI\\Project\\Playabale\\Cosplay\\Son_Cosplay\\Assets\\_GAME\\Core\\Scripts\\SonCore\\SonSnapObject.cs",
+              "RelativeToolTip": "Assets\\_GAME\\Core\\Scripts\\SonCore\\SonSnapObject.cs",
+              "ViewState": "AQIAALcAAAAAAAAAAAAewMkAAAAjAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-26T02:31:23.39Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "LevelControl.cs",
               "DocumentMoniker": "E:\\ABI\\Project\\Playabale\\Cosplay\\Son_Cosplay\\Assets\\_GAME\\SonGame\\Level\\LevelRedQueen\\Scripts\\LevelControl.cs",
               "RelativeDocumentMoniker": "Assets\\_GAME\\SonGame\\Level\\LevelRedQueen\\Scripts\\LevelControl.cs",
               "ToolTip": "E:\\ABI\\Project\\Playabale\\Cosplay\\Son_Cosplay\\Assets\\_GAME\\SonGame\\Level\\LevelRedQueen\\Scripts\\LevelControl.cs",
               "RelativeToolTip": "Assets\\_GAME\\SonGame\\Level\\LevelRedQueen\\Scripts\\LevelControl.cs",
-              "ViewState": "AQIAAJQAAAAAAAAAAAAQwJYAAAAdAAAA",
+              "ViewState": "AQIAAEkFAAAAAAAAAAAiwEkFAAAXAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-14T08:08:57.877Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-14T08:08:57.877Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "TutorialManager.cs",
               "DocumentMoniker": "E:\\ABI\\Project\\Playabale\\Cosplay\\Son_Cosplay\\Assets\\Scripts\\Manager\\TutorialManager.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Manager\\TutorialManager.cs",
               "ToolTip": "E:\\ABI\\Project\\Playabale\\Cosplay\\Son_Cosplay\\Assets\\Scripts\\Manager\\TutorialManager.cs",
               "RelativeToolTip": "Assets\\Scripts\\Manager\\TutorialManager.cs",
-              "ViewState": "AQIAABsAAAAAAAAAAAAowI4AAABOAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAALoAAAA6AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-29T10:05:06.446Z"
+              "WhenOpened": "2026-01-29T10:05:06.446Z",
+              "EditorCaption": ""
             }
           ]
         }

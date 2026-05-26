@@ -1221,13 +1221,13 @@
       <Project>{6A6B5E17-97B4-5D07-76D4-699D550CFE49}</Project>
       <Name>Unity.InternalAPIEngineBridge.001</Name>
     </ProjectReference>
-    <ProjectReference Include="UnityEditor.UI.csproj">
-      <Project>{86857756-D824-94D2-5898-ABAC58FD2421}</Project>
-      <Name>UnityEditor.UI</Name>
-    </ProjectReference>
     <ProjectReference Include="UnityEngine.UI.csproj">
       <Project>{DF476066-54B4-EAAB-BFD7-5573458F8AD7}</Project>
       <Name>UnityEngine.UI</Name>
+    </ProjectReference>
+    <ProjectReference Include="UnityEditor.UI.csproj">
+      <Project>{86857756-D824-94D2-5898-ABAC58FD2421}</Project>
+      <Name>UnityEditor.UI</Name>
     </ProjectReference>
     <ProjectReference Include="UnityEngine.TestRunner.csproj">
       <Project>{7386F215-2182-9BC5-29CD-CCE7A9D08F04}</Project>
