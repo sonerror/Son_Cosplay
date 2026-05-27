@@ -144,46 +144,46 @@ public class TutorialManager : Singleton<TutorialManager>
                 handCtrl.gameObject.SetActive(true);
                 handCtrl.ShowHandPosToPosToPos(tfBrush.position, tfBoxCont.position, tfHead.position);
                 return;
+            //case 5:
+            //    handCtrl.gameObject.SetActive(true);
+            //    handCtrl.ShowHandPosToPosToPos(tfBrush.position, tfBoxHighligh.position, tfHead.position);
+            //    return;
+            //case 6:
+            //    handCtrl.gameObject.SetActive(true);
+            //    handCtrl.ShowHandPosToPosToPos(tfBrush2.position, tfBoxPowdwer.position, tfHead.position);
+            //    return;
             case 5:
-                handCtrl.gameObject.SetActive(true);
-                handCtrl.ShowHandPosToPosToPos(tfBrush.position, tfBoxHighligh.position, tfHead.position);
-                return;
-            case 6:
-                handCtrl.gameObject.SetActive(true);
-                handCtrl.ShowHandPosToPosToPos(tfBrush2.position, tfBoxPowdwer.position, tfHead.position);
-                return;
-            case 7:
                 handCtrl.gameObject.SetActive(true);
                 handCtrl.ShowHandPosToPosToPos(tfBrush3.position, tfBoxPhan.position, tfHead.position);
                 return;
-            case 8:
-                handCtrl.gameObject.SetActive(true);
-                handCtrl.ShowHandPosToPos(tfEyeLiner.position, tfEye.position);
-                return;
-            case 9:
+            //case 6:
+            //    handCtrl.gameObject.SetActive(true);
+            //    handCtrl.ShowHandPosToPos(tfEyeLiner.position, tfEye.position);
+            //    return;
+            case 6:
                 if (listObjEye.Count >= 0 && listPointEye.Count >= 0)
                 {
                     handCtrl.gameObject.SetActive(true);
                     handCtrl.ShowHandPosToPos(listObjEyelash[0].position, listPointEyeLash[0].position);
                 }
                 return;
-            case 10:
+            case 7:
                 handCtrl.gameObject.SetActive(true);
                 handCtrl.ShowHandPosToPos(tfBrushBrow.position, tfBrow.position);
                 return;
-            case 11:
+            case 8:
                 handCtrl.gameObject.SetActive(true);
                 handCtrl.ShowHandPosToPos(tfPen.position, tfPenTarget.position);
                 return;
-            case 12:
+            case 9:
                 handCtrl.gameObject.SetActive(true);
                 handCtrl.ShowHandPosToPos(tfLipStick.position, tfMouth.position);
                 return;
-            case 13:
+            case 10:
                 handCtrl.gameObject.SetActive(true);
                 handCtrl.ShowHandPosToPos(tfHair.position, tfSnapHair.position);
                 return;
-            case 14:
+            case 11:
                 handCtrlMakeup.gameObject.SetActive(true);
                 handCtrlMakeup.ShowHandPosToPos(tfShirt.position, tfShirtSnap.position);
                 return;

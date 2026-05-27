@@ -182,34 +182,34 @@ public class LevelControl : Singleton<LevelControl>
             case 4:
                 OnStartStep5();
                 return;
+            //case 5:
+            //    OnStartStep6();
+            //    return;
+            //case 5:
+            //    OnStartStep7();
+            //    return;
             case 5:
-                OnStartStep6();
-                return;
-            case 6:
-                OnStartStep7();
-                return;
-            case 7:
                 OnStartStep8();
                 return;
-            case 8:
-                OnStartStep9();
-                return;
-            case 9:
+            //case 6:
+            //    OnStartStep9();
+            //    return;
+            case 6:
                 OnStartStep10();
                 return;
-            case 10:
+            case 7:
                 OnStartStep11();
                 return;
-            case 11:
+            case 8:
                 OnStartStep12();
                 return;
-            case 12:
+            case 9:
                 OnStartStep13();
                 return;
-            case 13:
+            case 10:
                 OnStartStep14();
                 return;
-            case 14:
+            case 11:
                 OnStartStep15();
                 return;
             default:
@@ -561,6 +561,9 @@ public class LevelControl : Singleton<LevelControl>
         contourTrigger.enabled = false;
         fillCircleBar.ReFill();
         InitSlots(contourSlots);
+        InitSlots(highlightSlots);
+        InitSlots(powderSlots);
+
     }
 
     private void OnContourDragStart()
@@ -591,6 +594,8 @@ public class LevelControl : Singleton<LevelControl>
                 {
                     _progressContour = value;
                     SetSlotsAlpha(contourSlots, value);
+                    SetSlotsAlpha(highlightSlots, value);
+                    SetSlotsAlpha(powderSlots, value);
                     fillCircleBar.Fill(_progressContour);
                 })
                 .SetEase(Ease.Linear)
@@ -622,6 +627,8 @@ public class LevelControl : Singleton<LevelControl>
         _isContourRevealDone = false;
         contourTrigger.enabled = false;
         SetSlotsAlpha(contourSlots, 1f);
+        SetSlotsAlpha(highlightSlots, 1);
+        SetSlotsAlpha(powderSlots, 1);
         fillCircleBar.Hide();
         contourTrigger.onEnterZone.RemoveListener(OnContourEnterZone);
         contourTrigger.onOutZone.RemoveListener(OnContourExitZone);
@@ -850,6 +857,7 @@ public class LevelControl : Singleton<LevelControl>
             phanMatTrigger.enabled = false;
             fillCircleBar.ReFill();
             InitSlots(phanMatSlots);
+            InitSlots(eyelinerSlots);
         });
     }
     private void StartStep8()
@@ -900,6 +908,7 @@ public class LevelControl : Singleton<LevelControl>
                 {
                     _progressPhanMat = value;
                     SetSlotsAlpha(phanMatSlots, value);
+                    SetSlotsAlpha(eyelinerSlots, value);
                     fillCircleBar.Fill(_progressPhanMat);
                 })
                 .SetEase(Ease.Linear)
@@ -928,6 +937,8 @@ public class LevelControl : Singleton<LevelControl>
         _isPhanMatRevealDone = false;
         phanMatTrigger.enabled = false;
         SetSlotsAlpha(phanMatSlots, 1f);
+        SetSlotsAlpha(eyelinerSlots, 1f);
+
         fillCircleBar.Hide();
         phanMatTrigger.onEnterZone.RemoveListener(OnPhanMatEnterZone);
         phanMatTrigger.onOutZone.RemoveListener(OnPhanMatExitZone);
@@ -1037,7 +1048,7 @@ public class LevelControl : Singleton<LevelControl>
                 if (removedIndex < 0) return;
                 listSnapObjectEyeLash.RemoveAt(removedIndex);
                 TutorialManager.Ins.ListObjEyeLash.RemoveAt(removedIndex);
-                 TutorialManager.Ins.ListPointEyeLash.RemoveAt(removedIndex);
+                TutorialManager.Ins.ListPointEyeLash.RemoveAt(removedIndex);
                 if (listSnapObjectEyeLash.Count == 0)
                 {
                     SetDoneStep();

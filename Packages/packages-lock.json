@@ -218,7 +218,7 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.playworks.upp": {
-      "version": "file:../../../../../Pack/72/scripts",
+      "version": "file:D:/Playabale/Pack/fix/scripts",
       "depth": 0,
       "source": "local",
       "dependencies": {}

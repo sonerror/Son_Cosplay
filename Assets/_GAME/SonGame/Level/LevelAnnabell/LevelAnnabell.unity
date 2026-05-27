@@ -237,7 +237,7 @@ Transform:
   m_GameObject: {fileID: 24707801}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.50999975, y: -12.07, z: 0}
+  m_LocalPosition: {x: 2.3199997, y: -12.07, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -978,7 +978,7 @@ Transform:
   m_GameObject: {fileID: 173185172}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 4.5, y: -12.01, z: 0}
+  m_LocalPosition: {x: -3, y: -15.45, z: 0}
   m_LocalScale: {x: 0.8, y: 0.8, z: 0.8}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -3174,7 +3174,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &389397799
 Transform:
   m_ObjectHideFlags: 0
@@ -3454,7 +3454,7 @@ Transform:
   m_GameObject: {fileID: 466112791}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -11.23, z: 0}
+  m_LocalPosition: {x: 3, y: -11.23, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -3973,7 +3973,6 @@ MonoBehaviour:
   controlByTargetLocalPos: 1
   enableOnStart: 1
   transitionDuration: 0.3
-  minWeightThreshold: 0.01
 --- !u!1 &570005080
 GameObject:
   m_ObjectHideFlags: 0
@@ -3990,7 +3989,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &570005081
 Transform:
   m_ObjectHideFlags: 0
@@ -9463,7 +9462,6 @@ MonoBehaviour:
   controlByTargetLocalPos: 1
   enableOnStart: 1
   transitionDuration: 0.3
-  minWeightThreshold: 0.01
 --- !u!1 &662365383
 GameObject:
   m_ObjectHideFlags: 0
@@ -17072,7 +17070,7 @@ MeshRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!33 &906426610
 MeshFilter:
@@ -21268,7 +21266,6 @@ MonoBehaviour:
   controlByTargetLocalPos: 1
   enableOnStart: 1
   transitionDuration: 0.3
-  minWeightThreshold: 0.01
 --- !u!1 &1323270564
 GameObject:
   m_ObjectHideFlags: 0
@@ -21730,7 +21727,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1361894138
 Transform:
   m_ObjectHideFlags: 0
@@ -22432,7 +22429,7 @@ Transform:
   m_GameObject: {fileID: 1447019085}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -4, y: -12.01, z: 0}
+  m_LocalPosition: {x: -2.19, y: -12.01, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -23392,7 +23389,7 @@ Transform:
   m_GameObject: {fileID: 1645124754}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -4.5, y: -11.929999, z: 0}
+  m_LocalPosition: {x: -3, y: -11.929999, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -29514,7 +29511,7 @@ Transform:
   m_GameObject: {fileID: 1744083300}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -14.79, z: 0}
+  m_LocalPosition: {x: 3, y: -15.45, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -30481,7 +30478,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1844004666
 Transform:
   m_ObjectHideFlags: 0
@@ -31696,7 +31693,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1962445188}
-  - component: {fileID: 1962445189}
   m_Layer: 0
   m_Name: lip
   m_TagString: Untagged
@@ -31719,23 +31715,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 906426611}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1962445189
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1962445187}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ee1a6b376f9598c45bdcd725addf3c1a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  skeletonAnimation: {fileID: 0}
-  overrides:
-  - slotName: cos_lip
-    attachmentName: 
-    skeletonDataAsset: {fileID: 11400000, guid: 68913b86aa19ef74e9733da3a87cda85, type: 2}
 --- !u!1 &1966374265
 GameObject:
   m_ObjectHideFlags: 0
@@ -33235,7 +33214,6 @@ MonoBehaviour:
   controlByTargetLocalPos: 1
   enableOnStart: 1
   transitionDuration: 0.3
-  minWeightThreshold: 0.01
 --- !u!1 &2114899280
 GameObject:
   m_ObjectHideFlags: 0

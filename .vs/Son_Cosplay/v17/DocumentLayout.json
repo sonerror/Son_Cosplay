@@ -3,16 +3,16 @@
   "WorkspaceRootPath": "E:\\ABI\\Project\\Playabale\\Cosplay\\Son_Cosplay\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{3931D68F-F02C-0CF5-12A5-8EC449BAF0CC}|Assembly-CSharp.csproj|e:\\abi\\project\\playabale\\cosplay\\son_cosplay\\assets\\scripts\\spinectrl\\spineboneikcontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3931D68F-F02C-0CF5-12A5-8EC449BAF0CC}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\spinectrl\\spineboneikcontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3931D68F-F02C-0CF5-12A5-8EC449BAF0CC}|Assembly-CSharp.csproj|E:\\ABI\\Project\\Playabale\\Cosplay\\Son_Cosplay\\assets\\_game\\songame\\level\\levelredqueen\\scripts\\levelcontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3931D68F-F02C-0CF5-12A5-8EC449BAF0CC}|Assembly-CSharp.csproj|solutionrelative:assets\\_game\\songame\\level\\levelredqueen\\scripts\\levelcontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3931D68F-F02C-0CF5-12A5-8EC449BAF0CC}|Assembly-CSharp.csproj|e:\\abi\\project\\playabale\\cosplay\\son_cosplay\\assets\\scripts\\manager\\tutorialmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{3931D68F-F02C-0CF5-12A5-8EC449BAF0CC}|Assembly-CSharp.csproj|E:\\ABI\\Project\\Playabale\\Cosplay\\Son_Cosplay\\assets\\scripts\\manager\\tutorialmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3931D68F-F02C-0CF5-12A5-8EC449BAF0CC}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\manager\\tutorialmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3931D68F-F02C-0CF5-12A5-8EC449BAF0CC}|Assembly-CSharp.csproj|E:\\ABI\\Project\\Playabale\\Cosplay\\Son_Cosplay\\assets\\_game\\songame\\level\\levelredqueen\\scripts\\levelcontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3931D68F-F02C-0CF5-12A5-8EC449BAF0CC}|Assembly-CSharp.csproj|solutionrelative:assets\\_game\\songame\\level\\levelredqueen\\scripts\\levelcontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3931D68F-F02C-0CF5-12A5-8EC449BAF0CC}|Assembly-CSharp.csproj|e:\\abi\\project\\playabale\\cosplay\\son_cosplay\\assets\\scripts\\spinectrl\\spineboneikcontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3931D68F-F02C-0CF5-12A5-8EC449BAF0CC}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\spinectrl\\spineboneikcontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{3931D68F-F02C-0CF5-12A5-8EC449BAF0CC}|Assembly-CSharp.csproj|E:\\ABI\\Project\\Playabale\\Cosplay\\Son_Cosplay\\assets\\_game\\songame\\level\\levelreaper\\scripts\\spritealphagroup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -34,17 +34,17 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "SpineBoneIKControl.cs",
               "DocumentMoniker": "E:\\ABI\\Project\\Playabale\\Cosplay\\Son_Cosplay\\Assets\\Scripts\\SpineCtrl\\SpineBoneIKControl.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\SpineCtrl\\SpineBoneIKControl.cs",
               "ToolTip": "E:\\ABI\\Project\\Playabale\\Cosplay\\Son_Cosplay\\Assets\\Scripts\\SpineCtrl\\SpineBoneIKControl.cs",
               "RelativeToolTip": "Assets\\Scripts\\SpineCtrl\\SpineBoneIKControl.cs",
-              "ViewState": "AQIAAGcAAAAAAAAAAAA0wHsAAAADAAAA",
+              "ViewState": "AQIAAGgAAAAAAAAAAAAIwHsAAAADAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-05-26T07:55:34.106Z",
               "EditorCaption": ""
@@ -87,15 +87,16 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "LevelControl.cs",
               "DocumentMoniker": "E:\\ABI\\Project\\Playabale\\Cosplay\\Son_Cosplay\\Assets\\_GAME\\SonGame\\Level\\LevelRedQueen\\Scripts\\LevelControl.cs",
               "RelativeDocumentMoniker": "Assets\\_GAME\\SonGame\\Level\\LevelRedQueen\\Scripts\\LevelControl.cs",
               "ToolTip": "E:\\ABI\\Project\\Playabale\\Cosplay\\Son_Cosplay\\Assets\\_GAME\\SonGame\\Level\\LevelRedQueen\\Scripts\\LevelControl.cs",
               "RelativeToolTip": "Assets\\_GAME\\SonGame\\Level\\LevelRedQueen\\Scripts\\LevelControl.cs",
-              "ViewState": "AQIAAEkFAAAAAAAAAAAiwEkFAAAXAAAA",
+              "ViewState": "AQIAAJ8DAAAAAAAAAAASwK0DAAAdAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-14T08:08:57.877Z"
+              "WhenOpened": "2026-05-14T08:08:57.877Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -105,7 +106,7 @@
               "RelativeDocumentMoniker": "Assets\\Scripts\\Manager\\TutorialManager.cs",
               "ToolTip": "E:\\ABI\\Project\\Playabale\\Cosplay\\Son_Cosplay\\Assets\\Scripts\\Manager\\TutorialManager.cs",
               "RelativeToolTip": "Assets\\Scripts\\Manager\\TutorialManager.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAALoAAAA6AAAA",
+              "ViewState": "AQIAAH0AAAAAAAAAAAAswLkAAAAUAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-01-29T10:05:06.446Z",
               "EditorCaption": ""
